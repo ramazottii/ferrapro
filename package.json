@@ -1,0 +1,11 @@
+{
+  "name": "tedarik",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes wrangler@4.131.2 dev --port 8788",
+    "preview": "node tools/preview_site.mjs",
+    "deploy": "npx --yes wrangler@4 deploy"
+  }
+}

@@ -1,0 +1,28 @@
+﻿name = "tedarik"
+main = "src/worker.js"
+compatibility_date = "2026-08-23"
+account_id = "9f0d39ce0db57f09bc1769c9ddf0c344"
+workers_dev = true
+
+[[routes]]
+pattern = "tedarik.ferranoi.com"
+custom_domain = true
+
+[[routes]]
+pattern = "ferrapro.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.ferrapro.com"
+custom_domain = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+html_handling = "auto-trailing-slash"
+not_found_handling = "single-page-application"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "cb3d2d882810406285ed1364e4583ec3"

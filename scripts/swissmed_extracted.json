@@ -1,0 +1,1245 @@
+{
+  "raw_count": 208,
+  "unique": 177,
+  "products": [
+    {
+      "ad": "HAVLU 'LI ESPİGA FOTOSELLİ",
+      "kategori": "Hijyen",
+      "alis": 255.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "HAVLU 21 CM ESPİGA MİNİ",
+      "kategori": "Hijyen",
+      "alis": 255.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "HAVLU 21 CM ESPİGA MİNİ İÇTEN ÇEKMELİ",
+      "kategori": "Hijyen",
+      "alis": 365.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "HAVLU 21 CM ESPİGA İÇTEN ÇEKMELİ",
+      "kategori": "Hijyen",
+      "alis": 255.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "HAVLU 21 CM KIVAMLI ÇAMAŞIR SUYU 20 LT PARFÜMLÜ",
+      "kategori": "Hijyen",
+      "alis": 405.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "HAVLU 21 CM ciMRi MİNİ İÇTEN ÇEKMELİ",
+      "kategori": "Hijyen",
+      "alis": 325.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "HAVLU 6 LI ESPİGA FOTOSELLİ",
+      "kategori": "Hijyen",
+      "alis": 225.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "HAVLU 6'Ll ESPİGA MİNİ İÇTEN ÇEKMELİ",
+      "kategori": "Hijyen",
+      "alis": 365.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "JUMBO",
+      "kategori": "Hijyen",
+      "alis": 155.0,
+      "fatura_sayisi": 5,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "KAĞIT",
+      "kategori": "Hijyen",
+      "alis": 255.0,
+      "fatura_sayisi": 7,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "KAĞITLI 100'LÜ ÇATAL BIÇAK SET 100 LÜ FAiRY",
+      "kategori": "Hijyen",
+      "alis": 55.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000007"
+    },
+    {
+      "ad": "Peçete ( 1 18pkl ASPEROX SARI GÜÇ 1000 GR ASPEROX MAVİ GÜÇ 1000 GR BİNGO",
+      "kategori": "Hijyen",
+      "alis": 85.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "Peçete (IOOacff18pkl",
+      "kategori": "Hijyen",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "Peçete (l OOacff18pkl ESPİGA MİNİ İÇTEN ÇEKMELİ",
+      "kategori": "Hijyen",
+      "alis": 355.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "Peçete 100 Yapra k",
+      "kategori": "Hijyen",
+      "alis": 35.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "TUVALET FIRÇASI Bingo",
+      "kategori": "Hijyen",
+      "alis": 395.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "TUVALET KAĞIDI 12 Li TOTTOLET HİJYEN RULO",
+      "kategori": "Hijyen",
+      "alis": 25.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "TUVALET KAĞIDI 12 Ü KIVAMLI ÇAMAŞIR SUYU 20 LT PARFÜMLÜ",
+      "kategori": "Hijyen",
+      "alis": 420.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "TUVALET KAĞIDI 12Li",
+      "kategori": "Hijyen",
+      "alis": 35.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "TUVALET KAĞIDI 12Li Dispenser",
+      "kategori": "Hijyen",
+      "alis": 215.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "TUVALET KAĞIDI 12Li PARFÜMLÜ",
+      "kategori": "Hijyen",
+      "alis": 395.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "A4 FOTOKOBİ KAĞIDI 80GR. 500 LÜ Senaryo TICARIFATURA Fatura Tipi SATIS Ozelleştüme No TR1.2 ETİN e- Fatura Birim fiyat 120,00 TL 4. Sayın SWİSSMED SAĞLIK HİZMETLERİ LİMİTED ŞİRK",
+      "kategori": "Kağıt",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000046"
+    },
+    {
+      "ad": "A4 FOTOKOBİ KAĞIDI e- Fatura Birim fiyat 120,00 TL 35,00 TL 35,00 TL 285,00 TL Sayın SWİSSMED SAĞLIK HİZMETLERİ LİMİTED ŞİRK",
+      "kategori": "Kağıt",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000045"
+    },
+    {
+      "ad": "A4 FOTOKOPİ KAĞIDI 80GR. 500 LÜ NiTRiL",
+      "kategori": "Klinik",
+      "alis": 125.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000033"
+    },
+    {
+      "ad": "ELDİVEN M BEDEN",
+      "kategori": "Klinik",
+      "alis": 68.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000037"
+    },
+    {
+      "ad": "ELDİVEN MAVİ 100 2 20 20 e- Fatura Birim fiyat 215,00 TL 215,00 TL",
+      "kategori": "Klinik",
+      "alis": 430.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000024"
+    },
+    {
+      "ad": "ELDİVEN MAVİ 100 DLIX SİYAH NiTRiL",
+      "kategori": "Klinik",
+      "alis": 270.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000116"
+    },
+    {
+      "ad": "ELDİVEN MAVİ 100 FAIRY sıvı",
+      "kategori": "Klinik",
+      "alis": 85.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000026"
+    },
+    {
+      "ad": "ELDİVEN MAVİ 100 KLASOR GENİŞ MAVİ AIRWICK PARFÜM MAKİNESİ",
+      "kategori": "Klinik",
+      "alis": 225.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000033"
+    },
+    {
+      "ad": "ELDİVEN MAVİ 100 NiTRiL",
+      "kategori": "Klinik",
+      "alis": 140.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000057"
+    },
+    {
+      "ad": "ELDİVEN MAVİ 100 SİYAH NiTRiL MUAYENİ",
+      "kategori": "Klinik",
+      "alis": 215.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF62026000000005"
+    },
+    {
+      "ad": "ELDİVEN MUAYE LAT. PUDRASIZ S ŞEFFAF DOSYA 100 LÜ KLASOR GENİŞ MAVİ",
+      "kategori": "Klinik",
+      "alis": 230.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000037"
+    },
+    {
+      "ad": "ELDİVEN MUAYE NiTRiL MAVİ M",
+      "kategori": "Klinik",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000129"
+    },
+    {
+      "ad": "ELDİVEN MUAYE NiTRiL SİYAH S 20 20 20 20 e- Fatura Birim fiyat 235,00 TL 235,00 TL 235,00 TL 235,00 TL",
+      "kategori": "Klinik",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000129"
+    },
+    {
+      "ad": "ELDİVEN MUAYE- NiTRiL SİYAH M",
+      "kategori": "Klinik",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000129"
+    },
+    {
+      "ad": "ELDİVEN MUAYE. NİTRİL MAVİ M PUDRALI MUAYENE",
+      "kategori": "Klinik",
+      "alis": 215.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF62026000000013"
+    },
+    {
+      "ad": "ELDİVEN MUAYE. NİTRİL MAVİ S",
+      "kategori": "Klinik",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000129"
+    },
+    {
+      "ad": "ELDİVEN PİPETİX ROZEN PİPET 100 ADET 5 6 5 20 20 2 e- Fatura Birim fiyat 235,00 TL 270,00 TL 120,00 TL 225,00 TL 225,00 TL 50,00 TL",
+      "kategori": "Klinik",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000116"
+    },
+    {
+      "ad": "ELDİVEN] 100 LÜ 20 20 5 e- Fatura Birim fiyat 235,00 TL 235,00 TL 215,00 TL",
+      "kategori": "Klinik",
+      "alis": 470.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF62026000000013"
+    },
+    {
+      "ad": "ELDİVENİ",
+      "kategori": "Klinik",
+      "alis": 235.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF62026000000013"
+    },
+    {
+      "ad": "ELDİVENİ 20 20 40 40 e- Fatura Birim fiyat 140,00 TL 140,00 TL 140,00 TL 140,00 TL",
+      "kategori": "Klinik",
+      "alis": 560.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000057"
+    },
+    {
+      "ad": "ELDİVENİ A 4 FOTO KOBİ 80GR_ 500 LÜ ŞEFFAF DOSYA 100 LÜ",
+      "kategori": "Klinik",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF62026000000005"
+    },
+    {
+      "ad": "ELDİVENİ NiTRiL",
+      "kategori": "Klinik",
+      "alis": 215.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000024"
+    },
+    {
+      "ad": "ELDİVENİ SİYAH",
+      "kategori": "Klinik",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000035"
+    },
+    {
+      "ad": "ELDİVENİ SİYAH NiTRiL MUAYENİ",
+      "kategori": "Klinik",
+      "alis": 140.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000057"
+    },
+    {
+      "ad": "Eldiveni Small (Kofide 20pk) Siyah Nitril Muayene",
+      "kategori": "Klinik",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000013"
+    },
+    {
+      "ad": "NiTRiL",
+      "kategori": "Klinik",
+      "alis": 215.0,
+      "fatura_sayisi": 5,
+      "son_fatura": "OF62026000000005"
+    },
+    {
+      "ad": "NiTRiL MUAYENİ",
+      "kategori": "Klinik",
+      "alis": 235.0,
+      "fatura_sayisi": 3,
+      "son_fatura": "OF62026000000013"
+    },
+    {
+      "ad": "Nitril Muayene",
+      "kategori": "Klinik",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000013"
+    },
+    {
+      "ad": "PLASTİK MAGAZİNLİK ŞEFFAF DOSYA (100",
+      "kategori": "Kırtasiye",
+      "alis": 95.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000007"
+    },
+    {
+      "ad": "ARO DİLİMLİ SUCUK 500 GR",
+      "kategori": "Mutfak",
+      "alis": 455.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "CAPPY 330 ML 12 LI",
+      "kategori": "Mutfak",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "CAPPY 330 ML 12 LI ŞEFTALİ CA?PY 330 ML. KUTU KARIŞIK 12'Li",
+      "kategori": "Mutfak",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "CAPPY 330 ML _ KUTU VİŞNE 234) CA?PY 330 ML 12 LI ŞEFTALİ",
+      "kategori": "Mutfak",
+      "alis": 48.95,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "CAPPY 330 ML- KUTU VİŞNE 12'Li",
+      "kategori": "Mutfak",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "CAPPY 330 ML- KUTU VİŞNE 12'Li RED3ULL ENERJİ İÇECEĞİ 250 ML 24 LÜ BEYPAZARI 200 ML SADE SODA 24'LÜ SIRMA",
+      "kategori": "Mutfak",
+      "alis": 710.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "CAPPY 330 ML. KUTU KARIŞIK 12'Lj REDBULL ENERJİ İÇECEĞİ 250 ML 24 LÜ",
+      "kategori": "Mutfak",
+      "alis": 245.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000056"
+    },
+    {
+      "ad": "CAPPY 330 ML. KUTU VİŞNE 12Li CA?PY 330 ML. KUTU KARIŞIK 12'Li REDBULL ENERJİ İÇECEĞİ 250 ML 24 LÜ BALKÜPÜ Küp Ş",
+      "kategori": "Mutfak",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000030"
+    },
+    {
+      "ad": "CAPPY 330 ML. KUTU ŞEFTALİ 12Li CA?PY 330 ML _ KUTU VİŞNE 12'Li LİPTON ICE TEA 330ML ŞEFTALİ 3 3 3 2 2 2 2 e- Fatura Birim fiyat 95,00 TL 55,00 TL 69,00 TL 335,00 TL 98,00 TL 349,00 TL 1 60,00 TL 275,00 TL 225,00 TL 315,00 TL 445,00 TL 445,00 TL 445,00 TL 650,00 TL",
+      "kategori": "Mutfak",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000017"
+    },
+    {
+      "ad": "COCA COLA 250 ML 24 4 3 e- Fatura Birim fiyat 245,00 TL 285,00 TL 285,00 TL 425,00 TL 425,00 TL 425,00 TL ı -450,00 TL 690,00 TL",
+      "kategori": "Mutfak",
+      "alis": 285.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000056"
+    },
+    {
+      "ad": "COCA COLA 250 ML 24 BALKÜ?Ü KÜ? Ş",
+      "kategori": "Mutfak",
+      "alis": 200.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "COCA COLA 250 ML 24 LİPTON EARL GREY DEMLİK",
+      "kategori": "Mutfak",
+      "alis": 725.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000026"
+    },
+    {
+      "ad": "DANET DANA FÜME 2 2 5 5 2 2 2 2 10 10 2 e- Fatura Birim fiyat 35,00 TL 55,00 TL 300,00 TL 80,00 TL 65,00 TL 55,00 TL 400,00 TL 325,00 TL 280,00 TL 65,00 TL 135,00 TL 70,00 TL 70,00 TL 55,00 TL 415,00 TL",
+      "kategori": "Mutfak",
+      "alis": 400.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000007"
+    },
+    {
+      "ad": "DANET DANA FÜME KABURGA 70 GR",
+      "kategori": "Mutfak",
+      "alis": 55.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "DANET DANA FÜME KABURGA 70 GR. (6)",
+      "kategori": "Mutfak",
+      "alis": 125.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "DANET DANA FÜME KABURGA 70 GR. (6) MARMARA BİRLİK ZEYTİN EZMESİ 340 GR ZEYTİN SİYAH SÜPER KG BEŞLER DANA SUCUK DILjMLj 500 GR.(I')",
+      "kategori": "Mutfak",
+      "alis": 155.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000010"
+    },
+    {
+      "ad": "DANET DANA JAMBON DİLİMLİ 50",
+      "kategori": "Mutfak",
+      "alis": 335.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000010"
+    },
+    {
+      "ad": "DANET DANA JAMBON DİLİMLİ 50 NAMET 7/24 HİNDİ FÜME 60 (18') BEŞLER DANA SUCUK DİLİMLİ 500",
+      "kategori": "Mutfak",
+      "alis": 55.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000007"
+    },
+    {
+      "ad": "DANET DANA KAVURMA DİLİM 100 ÇOKOKREM FINDIK KREMASI 400G BARİLLA İTHAL SOS PESTO GENOVESE",
+      "kategori": "Mutfak",
+      "alis": 55.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "DANET HİNDİ FÜME DİLİMLİ 60 GR",
+      "kategori": "Mutfak",
+      "alis": 55.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "DANET HİNDİ FÜME DİLİMLİ 60 KAYTÜRK DANA DİLİMLİ SUCUK 500 GR",
+      "kategori": "Mutfak",
+      "alis": 325.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "DOĞUŞ TOST KAŞAR 1000 GR DİLİMLİ",
+      "kategori": "Mutfak",
+      "alis": 325.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "DOĞUŞ TOST KAŞAR 1000 GR DİLİMLİ BEYAZ PEYNİR MARMARAB. ZEYTİN EZME 340G SA",
+      "kategori": "Mutfak",
+      "alis": 325.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "EKER 1000 GR NESCAFE GOLD 200 GR TOST PEYNİRİ DİLİMLİ I KG BEYAZ PEYNİR MARMARA BİRLİK ZEYTİN EZMESİ 340 GR ÇİM LABNE PEYNİR",
+      "kategori": "Mutfak",
+      "alis": 80.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000007"
+    },
+    {
+      "ad": "EL DİLİM TOST PEYN.170 DLM] ı",
+      "kategori": "Mutfak",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "ELDİVEN FOTO KOBİ 80GR. 500 LÜ KRAF A4 ZARF BADEM SÜTÜ 1000 ML KLASOR GENİŞ MAVİ TİGRA CLASSİC KLASÖR DAR MAVİ",
+      "kategori": "Mutfak",
+      "alis": 195.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000013"
+    },
+    {
+      "ad": "KAHVERENGİ Fresh Breafh Ağız Bakım Suyu",
+      "kategori": "Mutfak",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000029"
+    },
+    {
+      "ad": "METRO CHEF LABNE PEYNİR",
+      "kategori": "Mutfak",
+      "alis": 10.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "PINAR HİNDİ FÜME AÇ BİTİR 60 GR. (18') AŞIKBABA KAVURMA ı OOG DİLİMLİ",
+      "kategori": "Mutfak",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000010"
+    },
+    {
+      "ad": "PINAR HİNDİ FÜME AÇ BİTİR 60 GR. (18') BAŞYAZICI İNAN DANA DİLİMLİ SUCUK 500GR (1 BARİLLA İTHAL SOS PESTO GENOVESE",
+      "kategori": "Mutfak",
+      "alis": 63.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "PINAR LABNE PEYNİR 120*20G",
+      "kategori": "Mutfak",
+      "alis": 310.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "PINAR LAKTOZSUZ SÜT 1000 ML",
+      "kategori": "Mutfak",
+      "alis": 125.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "PINAR LAKTOZSUZ SÜT 1000 ML LİPTON EARLY GREY DEMLİK",
+      "kategori": "Mutfak",
+      "alis": 475.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "PINAR SÜT 1000 ML 12 Li BEYPAZARI 200 ML SADE SODA 24'LÜ",
+      "kategori": "Mutfak",
+      "alis": 65.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "SIRMAKEŞ SU 0,33 LT 12Li",
+      "kategori": "Mutfak",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "SIRMAKEŞ SU 05 LT 12",
+      "kategori": "Mutfak",
+      "alis": 49.75,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "SIRMAKEŞ SU 05 LT 12 BEYPAZARI 200 ML SADE SODA 24'LÜ REDBULL ENERJİ İÇECEĞİ 250 ML 24 LÜ PİPETİX ROZEN PİPET 100 ADET SIRMA",
+      "kategori": "Mutfak",
+      "alis": 70.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000128"
+    },
+    {
+      "ad": "SIRMAKEŞ SU 05 LT 12 BEYPAZARI 200 ML SADE SODA 24'LÜ ZEYTİNYAĞI SIZMA ı LT KIVAMLI CAMASIRSUYU 5 2 3 3 15 5 10 3 2 2 30 2 2 e- Fatura Birim fiyat 349,00 TL 65,00 TL 335,00 TL 565,00 TL 55,00 TL 75,00 TL 235,00 TL 35,00 TL 91 TL 1 60,00 TL 65,00 TL 245,00 TL 365,00 TL",
+      "kategori": "Mutfak",
+      "alis": 565.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000040"
+    },
+    {
+      "ad": "SÜTAŞ LAKTOKSUZ SÜT 1000 ML BEYAZ PEYNİR",
+      "kategori": "Mutfak",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "TEREMYAĞ KASE MARGARİN 500G",
+      "kategori": "Mutfak",
+      "alis": 85.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "TEREMYAĞ KASE MARGARİN 500G BEŞLER Bi LOKMA DANA JAMBON BEŞLER Bi LOKMA HİNDİ FÜME 55 BEŞLER DANA SUCUK DİLİMLİ 500",
+      "kategori": "Mutfak",
+      "alis": 10.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "YUMURTA 30'LU 53-62 G BİLİ BİLİ",
+      "kategori": "Mutfak",
+      "alis": 335.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF72026000000040"
+    },
+    {
+      "ad": "YUMURTA 30'LU 53-62 G BİLİ BİLİ RESTO SOSU NESCAFE GOLD 200 GR 5 3 2 2 12 10 10 12 2 2 2 e- Fatura Birim fiyat 349,00 TL 335,00 TL 1 60,00 TL 155,00 TL 70,00 TL 46,00 TL 235,00 TL 185,00 TL 1 10,00 TL 325,00 TL 535,00 TL 1 65,00 TL 185,00 TL 420,00 TL",
+      "kategori": "Mutfak",
+      "alis": 70.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000010"
+    },
+    {
+      "ad": "YUMURTA 30'LU 53-62 G BİLİ BİLİ ÇİM SÜT 1000 ML. LAKTOZSUZ (12') ÇİM SÜT 1000 ML 12 Ü",
+      "kategori": "Mutfak",
+      "alis": 190.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "YUMURTA 30'LlJ 53-62 G BİLİ BİLİ CHEDAR PEYNİR ÜLKER ÇOKOKREM 400 GR Stick S",
+      "kategori": "Mutfak",
+      "alis": 335.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000059"
+    },
+    {
+      "ad": "YUMURTA 30'LlJ 53-62 G BİLİ BİLİ PİPET 100 LÜ",
+      "kategori": "Mutfak",
+      "alis": 10.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "YUMURTA 30'LlJ 53-62 G BİLİ BİLİ ÇİM SÜT 1000 ML _ LAKTOZSUZ (12') NiLKY BADEM SÜTÜ IL CHEDAR PEYNİR 3 5 2 3 2 2 10 15 5 3 2 24 4 e- Fatura Birim fiyat 335,00 TL 349,00 TL 92,00 TL 85,00 TL 185,00 TL 98,00 TL 75,00 TL 55,00 TL 265,00 TL 55,00 TL 1 60,00 TL 65,00 TL 1 65,00 TL 65,00 TL",
+      "kategori": "Mutfak",
+      "alis": 335.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000040"
+    },
+    {
+      "ad": "içiM LABNE PEYNİR 144*20G MARMARA BİRLİK ZEYTİN EZMESİ 340 GR",
+      "kategori": "Mutfak",
+      "alis": 65.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000040"
+    },
+    {
+      "ad": "içiM SÜT 1000 ML 12 Ü SAMOA KESE KAĞIDI S",
+      "kategori": "Mutfak",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000004"
+    },
+    {
+      "ad": "içiM Ş.LABNE PEYNİR 180 GR NAMET DANA JAMBON 50 GR",
+      "kategori": "Mutfak",
+      "alis": 310.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "içiM Ş.LABNE PEYNİR 180 GR TEREM KASE 250 GR. (32') PESTO SOSU ÜLKER ÇOKOKREM 400 GR",
+      "kategori": "Mutfak",
+      "alis": 355.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "ÇAY 100 LÜ",
+      "kategori": "Mutfak",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "ÇAY 100 LÜ Mick S",
+      "kategori": "Mutfak",
+      "alis": 98.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000017"
+    },
+    {
+      "ad": "ÇAY 1000 GR",
+      "kategori": "Mutfak",
+      "alis": 345.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000030"
+    },
+    {
+      "ad": "ÇAY 1000 GR IRMAK TOZ Ş",
+      "kategori": "Mutfak",
+      "alis": 75.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "ÇAY 1000 GR KARALİ KARADENİZ",
+      "kategori": "Mutfak",
+      "alis": 155.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "ÇAY 1000 GR LİPTON EARL GREY DEMLİK",
+      "kategori": "Mutfak",
+      "alis": 69.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000017"
+    },
+    {
+      "ad": "ÇAY 40 GR",
+      "kategori": "Mutfak",
+      "alis": 250.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000030"
+    },
+    {
+      "ad": "ÇAY 40 GR BALKÜPÜ KÜ? Ş",
+      "kategori": "Mutfak",
+      "alis": 75.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "ÇAYKUR TURİST",
+      "kategori": "Mutfak",
+      "alis": 210.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "ÇAYKUR TİRYAKİ 1000 GR",
+      "kategori": "Mutfak",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "ÖZLEM DANA FÜME KABURGA 120 G",
+      "kategori": "Mutfak",
+      "alis": 70.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "ÜNAL BEYAZ PEYNİR 450 GR-DİLİMLİ KLASİK (l ğ) (121",
+      "kategori": "Mutfak",
+      "alis": 280.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000014"
+    },
+    {
+      "ad": "ÜNAL BEYAZ PEYNİR 450 GR-DİLİMLİ KLASİK (l ğ) (121 CHEDAR PEYNİR ÇİM Ş_LABNE PEYNİR 180 GR",
+      "kategori": "Mutfak",
+      "alis": 349.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000010"
+    },
+    {
+      "ad": "ÜNAL BEYAZ PEYNİR 450 GR.DİLİMLİ KLASİK (121 Stick S",
+      "kategori": "Mutfak",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "ÜNAL BEYAZ PEYNİR 450 GR_DİLİMLİ KLASİK (l SUCUK DANA IC KANGAL-ÇATAL SUCUK 450 GR FINE LİFE HİNDİ FÜME 100G DL BEŞLER Bi LOKMA DANA JAMBON KAVURMA 100 GR DİLİMLİ",
+      "kategori": "Mutfak",
+      "alis": 349.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000040"
+    },
+    {
+      "ad": "ÜNAL BEYAZ PEYNİR 450 GR_DİLİMLİ KLASİK (l ÇOKOKREM FINDIK KREMASI 400G TOST PEYNİRİ 1 12 DİLİM KG (K6) CHEDAR PEYNİR",
+      "kategori": "Mutfak",
+      "alis": 95.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000017"
+    },
+    {
+      "ad": "BULAŞIK 650 ML. LİMON (20') KIVAMLI ÇAMAŞIRSUYU 810 GR BALKÜPÜ KÜP Ş",
+      "kategori": "Swissmed",
+      "alis": 300.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000007"
+    },
+    {
+      "ad": "BULAŞIK DET. 650ML KIVAMLI ÇAMAŞIRSUYU 810 GR",
+      "kategori": "Swissmed",
+      "alis": 90.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000026"
+    },
+    {
+      "ad": "BULAŞIK MAKİNASI TUZU GÜRGEN SAP 1,20 MT",
+      "kategori": "Swissmed",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000057"
+    },
+    {
+      "ad": "BULAŞIK MAKİNE TABL",
+      "kategori": "Swissmed",
+      "alis": 255.0,
+      "fatura_sayisi": 4,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "BULAŞIK SÜNGERİ",
+      "kategori": "Swissmed",
+      "alis": 799.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "BULAŞIK SÜNGERİ 20 20 3 5 7 6 60 75 3 3 3 e- Fatura Birim fiyat 255,00 TL 255,00 TL 455,00 TL 405,00 TL 210,00 TL 355,00 TL 35,00 TL 20,00 TL 345,00 TL 225,00 TL 295,00 TL 15,00 TL Fatura Tarihi",
+      "kategori": "Swissmed",
+      "alis": 273.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "BULAŞIK TELİ FINISH",
+      "kategori": "Swissmed",
+      "alis": 435.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000057"
+    },
+    {
+      "ad": "Bulaşık Tabl",
+      "kategori": "Swissmed",
+      "alis": 99.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "CAM 190 GR. (121",
+      "kategori": "Swissmed",
+      "alis": 65.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "CAM 190 GR. (121 MARMARA BİRLİK ZEYTİN EZMESİ 340 GR",
+      "kategori": "Swissmed",
+      "alis": 335.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "DOĞUŞ DEMLİK",
+      "kategori": "Swissmed",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000090"
+    },
+    {
+      "ad": "DOĞUŞ EARLY GREY DEMLİK 100 LÜ 2 3 2 10 10 2 2 24 2 2 e- Fatura Birim fiyat 310,00 TL 325,00 TL 1 10,00 TL 125,00 TL 65,00 TL 45,00 TL 535,00 TL 1 75,00 TL 55,00 TL 58,00 TL 690,00 TL 210,00 TL 275,00 TL 245,00 TL",
+      "kategori": "Swissmed",
+      "alis": 535.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000020"
+    },
+    {
+      "ad": "DOĞUŞ KARADENİZ",
+      "kategori": "Swissmed",
+      "alis": 55.0,
+      "fatura_sayisi": 2,
+      "son_fatura": "OF52026000000017"
+    },
+    {
+      "ad": "EKER 1000 3 5 15 15 3 10 10 4 3 4 2 5 e- Fatura Birim fiyat 335,00 TL 425,00 TL 75,00 TL 55,00 TL 495,00 TL 235,00 TL 235,00 TL 155,00 TL 75,00 TL 65,00 TL 1 75,00 TL 155,00 TL 105,00 TL 345,00 TL 59,00 TL",
+      "kategori": "Swissmed",
+      "alis": 75.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000059"
+    },
+    {
+      "ad": "EKER 1000 GR 3 5 15 18 10 4 4 3 2 12 2 3 5 e- Fatura Birim fiyat 355,00 TL 475,00 TL 74,00 TL 60,00 TL 210,00 TL 155,00 TL 75,00 TL 1 60,00 TL 63,00 TL 245,00 TL 365,00 TL 425,00 TL 65,00 TL",
+      "kategori": "Swissmed",
+      "alis": 60.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "EKER 1000 GR KARAL) KARADENİZ",
+      "kategori": "Swissmed",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000030"
+    },
+    {
+      "ad": "EKER 1000 GR SARIGÜZ",
+      "kategori": "Swissmed",
+      "alis": 210.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "EKER SÜZME YOGURT 900 5 3 3 4 20 20 2 5 10 2 3 e- Fatura Birim fiyat 325,00 TL 310,00 TL 1 10,00 TL 125,00 TL 55,00 TL 65,00 TL 45,00 TL 535,00 TL 1 70,00 TL 235,00 TL 95,00 TL 135,00 TL 1 60,00 TL",
+      "kategori": "Swissmed",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF22026000000006"
+    },
+    {
+      "ad": "EKER ı KG- 3 15 3 3 3 5 3 e- Fatura Birim fiyat 425,00 TL 425,00 TL 425,00 TL 63,00 TL 335,00 TL 55,00 TL 495,00 TL 1 60,00 TL 75,00 TL 425,00 TL 185,00 TL 335,00 TL 55,00 TL",
+      "kategori": "Swissmed",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000028"
+    },
+    {
+      "ad": "ETİ 10 END siYAH KROM",
+      "kategori": "Swissmed",
+      "alis": 335.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "ETİ 20 20 15 5 5 10 3 6 4 2 e- Fatura Birim fiyat 225,00 TL 225,00 TL 325,00 TL 420,00 TL 405,00 TL 135,00 TL 255,00 TL 355,00 TL 185,00 TL 15,00 TL 799,00 TL 85,00 TL 245,00 TL",
+      "kategori": "Swissmed",
+      "alis": 900.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "ETİ 50 LI",
+      "kategori": "Swissmed",
+      "alis": 365.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "ETİ 50 LI BİNGO ÇAMAŞIR",
+      "kategori": "Swissmed",
+      "alis": 355.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "ETİ 50 LI FİLELİ SÜNGER",
+      "kategori": "Swissmed",
+      "alis": 15.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "ETİ 50 LI Miss LADY SÜNGER SİHİRLİ 3'LÜ 136') ZEYTİNYAĞI SIZMA 2 LT -",
+      "kategori": "Swissmed",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "ETİ 55%0 Dispenser",
+      "kategori": "Swissmed",
+      "alis": 85.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "ETİ 55%0 EROS MATİK 10 KG. CANLI RENKLER NELSi KİREÇ VE PAS SÖKÜCÜ 5 KG BİNGO",
+      "kategori": "Swissmed",
+      "alis": 225.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "ETİ 80xl 10 END SİYAH ORTA BOY",
+      "kategori": "Swissmed",
+      "alis": 210.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "ETİ 80xı 10 END SİYAH ORTA BOY",
+      "kategori": "Swissmed",
+      "alis": 345.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "ETİ KÜÇÜKBAKKALKÖY MAH FIRIN CAD N029/2 Ataşehir, İstanbul — Türkiye Vergi NO 7310564457 (KOZYATAĞI) Fatura Numarası 0*2026000000045 Fatura Tarihi I I _06_2026- 1",
+      "kategori": "Swissmed",
+      "alis": 35.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000045"
+    },
+    {
+      "ad": "ETİ KÜÇÜKBAKKALKÖY MAH FIRIN CAD N029/2 Ataşehir, İstanbul — Türkiye Vergi NO 7310564457 (KOZYATAĞI) Fatura Numarası 072026000000046 Fatura Tarihi - 23:08:27",
+      "kategori": "Swissmed",
+      "alis": 120.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000046"
+    },
+    {
+      "ad": "ETİ PAS PAS UCU NEMLİ MOR 50 CM 3 15 15 10 10 100 6 3 3 2 10 10 e- Fatura Birim fiyat 235,00 TL 255,00 TL 255,00 TL 365,00 TL 215,00 TL 35,00 TL 155,00 TL 335,00 TL 395,00 TL 99,00 TL 235,00 TL 195,00 TL 55,00 TL 65,00 TL",
+      "kategori": "Swissmed",
+      "alis": 65.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "KARTON BARDAK 12 OZ DOUBLE MUAYENE",
+      "kategori": "Swissmed",
+      "alis": 5.75,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000035"
+    },
+    {
+      "ad": "KOMİLİ",
+      "kategori": "Swissmed",
+      "alis": 85.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "Kagit 40*60 PİPET",
+      "kategori": "Swissmed",
+      "alis": 35.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000007"
+    },
+    {
+      "ad": "MEYVELİ SODA 24",
+      "kategori": "Swissmed",
+      "alis": 710.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "MEYVELİ SODA 24 40 2 3 2 e- Fatura Birim fiyat 70,00 TL 235,00 TL I _350,OO TL 55,00 TL 275,00 TL",
+      "kategori": "Swissmed",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000128"
+    },
+    {
+      "ad": "PLASTİK BARDAK 3000 Li Dispenser",
+      "kategori": "Swissmed",
+      "alis": 65.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "PLASTİK BARDAK 3000 Li MİKROFİBER",
+      "kategori": "Swissmed",
+      "alis": 65.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "PLASTİK SANDALYE",
+      "kategori": "Swissmed",
+      "alis": 690.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000029"
+    },
+    {
+      "ad": "POŞET",
+      "kategori": "Swissmed",
+      "alis": 74.0,
+      "fatura_sayisi": 4,
+      "son_fatura": "OF72026000000071"
+    },
+    {
+      "ad": "eker 1 -0001i",
+      "kategori": "Swissmed",
+      "alis": 675.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000005"
+    },
+    {
+      "ad": "eker 1.0001i",
+      "kategori": "Swissmed",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF42026000000004"
+    },
+    {
+      "ad": "eker 1.0001i CA?PY 330 ML 12 LI KARIŞIK",
+      "kategori": "Swissmed",
+      "alis": 349.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000017"
+    },
+    {
+      "ad": "eker ı _OOOli BALKÜPÜ Küp Ş",
+      "kategori": "Swissmed",
+      "alis": 425.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF72026000000059"
+    },
+    {
+      "ad": "eti 50'Ii EROS MATİK 10 KG. CANLI RENKLER ASPEROX MAVİ GÜÇ 1000 GR FINISH",
+      "kategori": "Swissmed",
+      "alis": 235.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "BEZİ CALGON ÇAMAŞIR MAKİNE TEMİZLEYİCİ 15 20 100 50 10 3 2 3 2 3 40 4 e- Fatura Birim fiyat 255,00 TL 255,00 TL 50,00 TL 25,00 TL 15,00 TL 210,00 TL 85,00 TL 85,00 TL 255,00 TL 45,00 TL 930,00 TL 1 65,00 TL 625,00 TL 30,00 TL 85,00 TL",
+      "kategori": "Temizlik",
+      "alis": 625.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "BULAŞIK MAKİNA TEMİZLEYjCj",
+      "kategori": "Temizlik",
+      "alis": 195.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "CAM TEMİZLEME MADDESİ 500 ML BİNGO",
+      "kategori": "Temizlik",
+      "alis": 295.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "DETERJANI 10 KG",
+      "kategori": "Temizlik",
+      "alis": 185.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "DETERJANI 20 PEROS MATİK 10 KG. CANLI RENKLER",
+      "kategori": "Temizlik",
+      "alis": 485.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF52026000000057"
+    },
+    {
+      "ad": "DOMESTOS 3,2 LT",
+      "kategori": "Temizlik",
+      "alis": 930.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000006"
+    },
+    {
+      "ad": "DOMESTOS 3,2 LT FİLELİ SÜNGER",
+      "kategori": "Temizlik",
+      "alis": 15.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "DOMESTOS 3.2 KG DAĞ ESİNTİSİ TEMİZLİK S",
+      "kategori": "Temizlik",
+      "alis": 55.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000033"
+    },
+    {
+      "ad": "DOMESTOS 3.2 LT- ÇAM FERAH PEROS MATİK 10 KG. CANLI RENKLER Miss LADY SÜNGER SİHİRLİ 3'LÜ 136') 20 20 6 3 4 4 5 2 2 e- Fatura Birim fiyat 255,00 TL 255,00 TL 365,00 TL 395,00 TL 690,00 TL 1 65,00 TL 45,00 TL 295,00 TL 185,00 TL 365,00 TL 45,00 TL Fatura Tarihi",
+      "kategori": "Temizlik",
+      "alis": 45.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "MEYVSIZMA Z.YAĞI 2 ASPEROX SARI GÜÇ 1000 GR TEMİZLİK S",
+      "kategori": "Temizlik",
+      "alis": 245.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "SABUNU 5 KG BİNGO",
+      "kategori": "Temizlik",
+      "alis": 135.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    },
+    {
+      "ad": "YÜZEY TEMİZLEME MADDESİ 20 Dispenser",
+      "kategori": "Temizlik",
+      "alis": 210.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF12026000000018"
+    },
+    {
+      "ad": "YÜZEY TEMİZLEME MADDESİ 20 KG",
+      "kategori": "Temizlik",
+      "alis": 690.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF02026000000109"
+    },
+    {
+      "ad": "YÜZEY TEMİZLEME MADDESİ 20 KG KÖPÜK",
+      "kategori": "Temizlik",
+      "alis": 405.0,
+      "fatura_sayisi": 1,
+      "son_fatura": "OF32026000000014"
+    }
+  ]
+}

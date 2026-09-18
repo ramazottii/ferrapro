@@ -1,0 +1,20 @@
+# Yalnızca izole yerel test. wrangler deploy bu dosyayı kullanmaz.
+name = "tedarik-local-vitrin"
+main = "../src/worker.js"
+compatibility_date = "2026-08-23"
+workers_dev = false
+
+[[routes]]
+pattern = "ferrapro.com"
+custom_domain = true
+
+[assets]
+directory = "../public"
+binding = "ASSETS"
+run_worker_first = true
+html_handling = "auto-trailing-slash"
+not_found_handling = "single-page-application"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "cb3d2d882810406285ed1364e4583ec3"

@@ -1,0 +1,237 @@
+/** Selçuk saha menüsü — fatura tekrarı + bizim koli. Gıda/domates yok. */
+
+function kalem(ad, birim, biz, sinyal, stok, extra = {}) {
+  return { ad, birim, biz, sinyal, stok, ...extra };
+}
+
+/** Kapıda “ne satıyorsunuz?” — tek bakış. */
+export function selcukBakis() {
+  return [
+    {
+      ad: "Hijyen kâğıt",
+      kalemler: [
+        "Tuvalet kağıdı (mini jumbo / 24’lü / 32’li)",
+        "Z kat havlu",
+        "Fotoselli havlu 21 cm",
+        "İçten çekmeli havlu",
+        "Rulo kâğıt havlu 8–12’li",
+        "Dispenser peçete",
+        "Kutu mendil",
+        "Islak havlu",
+      ],
+    },
+    {
+      ad: "Çöp poşeti",
+      kalemler: ["Mini 40×50", "Orta 55×60", "Büyük 65×80", "Jumbo 80×110", "Battal 75×90", "Tıbbi atık"],
+    },
+    {
+      ad: "Temizlik sıvıları",
+      kalemler: [
+        "Sıvı el sabunu",
+        "Asperox",
+        "Domestos / çamaşır suyu",
+        "Yüzey temizleyici",
+        "Cif",
+        "Porçöz (kireç)",
+        "Toz / kapsül deterjan",
+        "Bulaşık deterjanı",
+        "Oda kokusu",
+      ],
+    },
+    {
+      ad: "İçecek",
+      kalemler: ["Su (bardak / 0,5 L)", "Soda", "Çay (demlik / bardak poşet)", "Çekirdek / filtre kahve", "Türk kahvesi", "Nescafe", "Coffee mate", "Küp şeker"],
+    },
+    {
+      ad: "Ambalaj",
+      kalemler: ["Streç 30 cm", "Koli bandı", "Kraft çanta", "Kese kağıdı", "Kasa poşeti", "Buzdolabı poşeti"],
+    },
+    {
+      ad: "Kırtasiye",
+      kalemler: ["A4 80 g", "Klasör", "Poşet dosya", "Kalem / tükenmez", "Zımba + tel", "Not kâğıdı", "Pil AA"],
+    },
+    {
+      ad: "PC sarf",
+      kalemler: ["Mouse", "Klavye", "Power bank", "Toner / kartuş", "USB bellek", "HDMI / USB kablo"],
+    },
+    {
+      ad: "Klinik sarf",
+      kalemler: ["Cerrahi maske", "Muayene eldiveni", "Masa örtüsü", "Klozet örtüsü", "Tıbbi atık kova/poşet"],
+    },
+    {
+      ad: "Dispenser",
+      kalemler: ["Z havlu kutusu", "Fotoselli makine", "Mini jumbo", "Sabun dispenser", "Peçete dispenser"],
+    },
+    {
+      ad: "Mutfak / ikram",
+      kalemler: ["Karton bardak 4–7–8 oz", "Bulaşık süngeri", "Çatal-bıçak set", "Mikrofiber bez", "Mop"],
+    },
+  ];
+}
+
+export function selcukMenu() {
+  return [
+    {
+      id: "hijyen",
+      ad: "Hijyen kâğıt",
+      soru: "Rulo mu dispenser refill mi? Ev tipi Selpak 8’li görürsen profesyonel Z/jumbo’ya çek.",
+      urunler: [
+        kalem("Z kat havlu 200’lü×12", "koli 12 paket", "Hazel Soft Z 200’lü×12 — alış 290 ₺", "Klinik Z makine refill; Focus/Selpak Z de faturalarda", "cekirdek", { onlar: "Focus / Selpak Prof. Touch Z 200", alis: 290 }),
+        kalem("Z kat havlu 150’li×12", "koli 12 paket", "Hazel Soft Z 150’li×12 — alış 230 ₺", "Daha ucuz Z refill", "cekirdek", { onlar: "Focus Essence Z 150", alis: 230 }),
+        kalem("Z kat havlu 100’lü×12", "koli 12 paket", "Hazel Soft Z 100’lü×12 — alış 160 ₺", "Eko Z", "cekirdek", { alis: 160 }),
+        kalem("Fotoselli havlu 21 cm 2,5 kg", "koli 6", "Hazel 195 ₺ / Espiga 296 ₺", "Ofispanda Espiga 21 cm fotoselli 225 ₺", "cekirdek", { onlar: "Espiga fotoselli 21 cm", alis: 195 }),
+        kalem("Fotoselli havlu 21 cm 3–3,5 kg", "koli 6", "Hazel 3 kg 234 ₺ · 3,5 kg 273 ₺", "Daha uzun rulo, az değişim", "cekirdek", { alis: 234 }),
+        kalem("İçten çekmeli havlu 21 cm 2,5 kg", "koli 6", "Hazel 195 ₺ / Espiga 296 ₺", "Ofispanda Espiga içten çekmeli 6’lı 225 ₺", "cekirdek", { onlar: "Espiga içten çekmeli 6’lı", alis: 195 }),
+        kalem("Mini jumbo tuvalet 2,5 kg", "koli 12", "Hazel Soft 10,5 cm 2,5 kg — 195 ₺", "Hasta tuvaleti profesyonel", "cekirdek", { onlar: "Focus jumbo mini ~92 m", alis: 195 }),
+        kalem("Mini jumbo tuvalet 3–3,5 kg", "koli 12", "Hazel 3 kg 234 ₺ · 3,5 kg 273 ₺", "Yoğun klinik", "cekirdek", { alis: 234 }),
+        kalem("Dispenser peçete 17×21", "koli 18 paket", "Hazel 150’li 165 ₺ · 200’lü 230 ₺", "Ofispanda dispenser peçete 18×200 155 ₺", "cekirdek", { onlar: "Ofispanda 18×200 / Focus Optimum 100’lü", alis: 165 }),
+        kalem("Rulo kâğıt havlu 8’li / 12’li", "koli", "Belinno Prof. havlu 6×4 Hazel 215 ₺ veya Selpak siparişe", "Selpak 8’li yağ emici 17 tekrar, 12’li 13 tekrar", "siparis", { onlar: "Selpak 8’li 7905508 / 12’li 7903842" }),
+        kalem("Tuvalet kağıdı 24’lü / 32’li ev tipi", "koli 3", "Hazel Belinno Economy 32×3 410 ₺", "Selpak TK 32 Extra 10 tekrar, Papia 32’li 4 tekrar", "cekirdek", { onlar: "Selpak Extra 32’li / Papia 32", alis: 410 }),
+        kalem("Kutu mendil 80’li", "koli 24", "Selpak Prof. Extra 80 — siparişe", "Selpak 7906621 15 tekrar", "siparis", { onlar: "Selpak Prof. Extra 80’li" }),
+        kalem("Islak havlu 90–100’lü", "koli 24 paket", "Polente Extra Soft koli 24 — 750 ₺", "Sleepy 49 + Freshmaker 36 + Komili 16 tekrar", "cekirdek", { onlar: "Sleepy / Freshmaker / Komili 90–100", alis: 750 }),
+        kalem("Yüzey temizlik havlusu 100’lü", "koli", "Siparişe — Sleepy YTH muadili", "Sleepy YTH beyaz sabun 49 tekrar", "siparis", { onlar: "Sleepy YTH 100’lü klasik" }),
+        kalem("Sıvı el sabunu 5 L", "bidon", "Siparişe — Powermax 5 kg beyaz", "Powermax 5 kg 16 tekrar", "siparis", { onlar: "Powermax 5 kg sıvı el sabunu" }),
+        kalem("Sıvı el sabunu 1,5 L / 3,6 L", "adet", "Siparişe — Activex 1,5 L / Saloon 3,6 L", "Activex 12 tekrar, Saloon 5 tekrar", "siparis", { onlar: "Activex SS 1500 ml / Saloon 3,6 L" }),
+      ],
+    },
+    {
+      id: "dispenser",
+      ad: "Dispenser",
+      soru: "Makine markası ve model fotoğrafı. Yanlış refill = iade. Makine hediyesi ancak refill kilidi varsa.",
+      urunler: [
+        kalem("Z kat havlu dispenser", "adet", "Siparişe — Hazel/Espiga Z uyumlu kutu", "Tuvalet kapısı; refill Z 150 veya 200", "siparis", { onlar: "Selpak / Focus Z kutu" }),
+        kalem("Fotoselli havlu makinesi 21 cm", "adet", "Siparişe — 21 cm rulo uyumlu", "Ofispanda fotoselli satışı var; makine tipi netleştir", "siparis", { onlar: "Espiga 21 cm fotoselli sistem" }),
+        kalem("İçten çekmeli havlu makinesi 21 cm", "adet", "Siparişe — 21 cm içten çekmeli", "Fotoselli ile karıştırma", "siparis", { onlar: "Espiga içten çekmeli 6’lı sistem" }),
+        kalem("Mini jumbo tuvalet dispenser", "adet", "Siparişe — 10,5 cm mini jumbo", "Ev tipi rulo asılıysa jumbo’ya geçiş fırsatı", "siparis"),
+        kalem("İçten çekmeli tuvalet dispenser", "adet", "Siparişe — cimri 11,5 / 13,5 cm", "Hazel mini cimri / büyük cimri refill", "siparis"),
+        kalem("Sıvı sabun dispenser", "adet", "Siparişe — 1 L / 5 L uyum", "Powermax 5 L bidon + duvar makinesi", "siparis", { onlar: "Activex / Saloon şişe veya bidon" }),
+        kalem("Peçete dispenser", "adet", "Siparişe — 17×21 veya V kat", "Bekleme ve mutfak tezgâhı", "siparis", { onlar: "Focus / Belinno peçete kutu" }),
+        kalem("Klozet kapak örtüsü dispenser", "adet", "Polente örtü 250’li ile birlikte", "Hasta tuvaleti olan klinikler", "siparis"),
+      ],
+    },
+    {
+      id: "cop",
+      ad: "Çöp / atık",
+      soru: "Boyut: lavabo 40×50, oda 55×60, mutfak 65×80, depo 80×110. Gramajı sor — 300 ile 700 aynı iş değil.",
+      urunler: [
+        kalem("Jumbo 80×110 300 gr siyah", "koli 20 paket", "Espiga STK.777 — alış 409 ₺", "Ofispanda 400 gr satırının eko karşılığı", "cekirdek", { onlar: "Ofispanda 80×110 400 gr 25 ₺/adet", alis: 409 }),
+        kalem("Jumbo 80×110 400 gr siyah", "koli 20 paket", "Espiga STL011 — alış 545 ₺", "Ofispanda 400 gr", "cekirdek", { onlar: "Endüstriyel 80×110 400 gr", alis: 545 }),
+        kalem("Jumbo 80×110 700 gr siyah", "koli 10 paket", "Espiga STK/704 477 ₺ / Polente 572 ₺", "Ofispanda 700 gr 45 ₺/paket", "cekirdek", { onlar: "Jumbo 80×110 700 gr", alis: 477 }),
+        kalem("Battal 75×90", "koli 20 paket", "Vural 140 gr 335 ₺ / Polente 280 gr 458 ₺", "Büyük mutfak çöpü", "cekirdek", { alis: 335 }),
+        kalem("Büyük 65×80 / 65×90", "koli 50 paket", "Vural 65×90 70 gr siyah — 421 ₺", "Oda + mutfak", "cekirdek", { onlar: "Koroplast büyük 65×80", alis: 421 }),
+        kalem("Orta 55×60", "koli 50 paket", "Vural 70 gr siyah — 421 ₺", "Muayene odası çöpü", "cekirdek", { onlar: "Koroplast eko 55×60", alis: 421 }),
+        kalem("Mini 40×50", "koli 50 paket", "Ecoplus 80 gr şeffaf — 818 ₺", "Lavabo ve ünite yanı", "cekirdek", { onlar: "Koroplast mini 45×50", alis: 818 }),
+        kalem("Tıbbi atık poşeti / kova 5 L", "adet", "Siparişe — Ofispanda kova 35 ₺", "Kırmızı poşet ayrı mı?", "siparis", { onlar: "Tıbbi atık kovası 5 L" }),
+      ],
+    },
+    {
+      id: "temizlik",
+      ad: "Temizlik",
+      soru: "Marka kilitli mi? Domestos/Asperox yazıyorsa muadil teklif etmeden önce sor.",
+      urunler: [
+        kalem("Asperox sarı güç 1 L", "koli 12", "Siparişe — Peros Asperox 1 L", "Gider 33 tekrar + Ofispanda 65 ₺", "siparis", { onlar: "Peros Asperox sarı 1000 ml" }),
+        kalem("Asperox mavi güç 1 L", "koli 12", "Siparişe", "Gider 12 tekrar", "siparis", { onlar: "Peros Asperox mavi 1000 ml" }),
+        kalem("Domestos 3,2 L çam / dağ", "koli 4", "Siparişe", "Çam ferah 36+25 tekrar, dağ 21 tekrar", "siparis", { onlar: "Domestos 3,2 L" }),
+        kalem("Kıvamlı çamaşır suyu 20 kg", "bidon", "Siparişe — Ofispanda 345 ₺", "Tesis ölçeği", "siparis", { onlar: "Kıvamlı çamaşır suyu 20 kg" }),
+        kalem("Yüzey temizleyici 20 kg / 5 kg", "bidon", "Siparişe — Powermax 20 kg 12 tekrar, Ofispanda 20 kg 345 ₺", "Parfümlü yüzey", "siparis", { onlar: "Powermax 20 kg / parfümlü 20 kg" }),
+        kalem("Bingo Fresh 2,5 kg yüzey", "adet", "Siparişe", "Manolya 18 tekrar + diğer kokular", "siparis", { onlar: "Bingo Fresh 2,5 kg" }),
+        kalem("Porçöz pas-kireç 1 L", "koli 18", "Siparişe", "17 tekrar — klinik lavabo", "siparis", { onlar: "Porçöz 1000 gr" }),
+        kalem("Porçöz sprey 750 ml", "koli 12", "Siparişe", "13 tekrar", "siparis"),
+        kalem("Cif krem 750 ml amonyak", "adet", "Siparişe", "14 tekrar", "siparis"),
+        kalem("Cif jel / sprey hijyen 750 ml", "adet", "Siparişe", "Jel 10 tekrar, sprey banyo 4 tekrar", "siparis"),
+        kalem("Bingo kapsül çamaşır 50’li", "koli 5", "Siparişe", "Gider 50 tekrar — en sık kimyasal", "siparis", { onlar: "Bingo Kapsül Pro 50’li" }),
+        kalem("Toz deterjan 10 kg", "çuval", "Siparişe — Peros Matik 10 kg / Bingo 10 kg", "Peros 25 tekrar, Ofispanda Bingo 10 kg 320 ₺", "siparis"),
+        kalem("Pril / bulaşık 4 kg", "adet", "Siparişe — Pril 4 kg limon", "26 tekrar; mutfak personeli", "siparis"),
+        kalem("Airwick / oda parfümü 500 ml", "adet", "Siparişe", "Airwick 15 tekrar, Glade 5, Powermax 5 L 6 tekrar", "siparis"),
+        kalem("Mikrofiber bez 40×40", "adet", "Siparişe — Ofispanda 20 ₺", "Ünite silme", "siparis"),
+        kalem("Mikrofiber cam bezi", "adet", "Siparişe — Ofispanda 25 ₺", "Bekleme camı", "siparis"),
+        kalem("Nemli mop 50 cm", "adet", "Siparişe — Ofispanda 55 ₺", "Ofispanda ekstra nemli + nemli", "siparis"),
+        kalem("Faraşlı süpürge takım", "adet", "Siparişe — Ofispanda 90 ₺", "Depo / koridor", "siparis"),
+        kalem("Krom tuvalet fırçası", "adet", "Siparişe — Ofispanda 75 ₺", "Hasta tuvaleti", "siparis"),
+      ],
+    },
+    {
+      id: "klinik",
+      ad: "Klinik sarf",
+      soru: "Eldiven beden (S/M/L), maske tipi, masa örtüsü eni. Lateks mi nitril mi?",
+      urunler: [
+        kalem("Cerrahi maske 50’li", "kutu", "Siparişe — 3 katlı cerrahi", "Resepsiyon ve personel günlük sarf", "siparis"),
+        kalem("FFP2 / N95 maske", "kutu", "Siparişe — sterilizasyon / aerosol", "Diş ünitesi sor", "siparis"),
+        kalem("Pudrasız muayene eldiveni 100’lü", "kutu", "Siparişe — Ofispanda siyah pudrasız 115 ₺", "Ofispanda + gider Dolphin latex L", "siparis", { onlar: "Siyah pudrasız 100’lü / Dolphin latex L" }),
+        kalem("Eldiven beden seti S–M–L", "kutu", "Siparişe — üç beden not al", "Tek beden siparişi iade demektir", "siparis"),
+        kalem("Muayene masa örtüsü 50 m 50×24", "koli 6", "Espiga STK/322 — 697 ₺ · Polente 801 ₺", "Diş ünitesi", "cekirdek", { alis: 697 }),
+        kalem("Muayene masa örtüsü 40 m", "koli 6", "Espiga STK/741 — 557 ₺", "Daha kısa rulo", "cekirdek", { alis: 557 }),
+        kalem("Lamineli masa örtüsü 40 m", "koli 12", "Espiga STK/534 — 1.222 ₺", "Sıvı bariyer isteyen ünite", "cekirdek", { alis: 1222 }),
+        kalem("Klozet kapak örtüsü 250’li×10", "koli 10", "Polente STK/901 — 1.655 ₺", "Hasta tuvaleti", "siparis", { alis: 1655 }),
+        kalem("Tıbbi atık kovası 5 L", "adet", "Siparişe — Ofispanda 35 ₺", "Kırmızı poşet uyumu", "siparis"),
+        kalem("İş eldiveni (temizlik personeli)", "çift", "Siparişe — Beybi PN-3", "Gider 6 tekrar", "siparis", { onlar: "Beybi iş eldiveni" }),
+        kalem("Bulaşık / ev tipi eldiven", "çift", "Siparişe — Vileda M / Beybi", "Gider 2 tekrar", "siparis"),
+      ],
+    },
+    {
+      id: "kirtasiye",
+      ad: "Kırtasiye",
+      soru: "A4 marka kilitli mi? Yazıcı modeli notu toner için sonra.",
+      urunler: [
+        kalem("A4 fotokopi 80 g 500’lü", "paket", "Siparişe — Ofispanda 105 ₺", "Her klinikte döner", "siparis", { onlar: "A4 80 g 500’lü" }),
+        kalem("A4 koli (5 paket)", "koli 5", "Siparişe — paket fiyatı × 5", "Aylık cilt netleştir", "siparis"),
+        kalem("Klasör geniş mavi", "adet", "Siparişe — Esselte 9940-35 59 ₺", "Ofispanda teklif", "siparis", { onlar: "Esselte 9940-35 geniş mavi" }),
+        kalem("Klasör dar mavi", "adet", "Siparişe — Esselte 9945-35 59 ₺", "Ofispanda teklif", "siparis", { onlar: "Esselte 9945-35 dar mavi" }),
+        kalem("Poşet dosya 100’lü 40 mic", "paket", "Siparişe — Aro 40 mc 100’lü", "Gider 1+ tekrar, hasta dosyası", "siparis"),
+        kalem("Kalem pil AA kartela 20’li", "koli", "Siparişe — Duracell 20’li 437 ₺ bandı", "Duracell 14 tekrar, Panasonic 5 tekrar", "siparis", { onlar: "Duracell kartela 20’li" }),
+        kalem("AA 4’lü yedek", "paket", "Siparişe — Duracell 4’lü", "Kumanda, terazi, fare", "siparis"),
+        kalem("Tükenmez / jel kalem", "kutu", "Siparişe — resepsiyon kalemi", "Hasta formu, randevu", "siparis"),
+        kalem("Zımba + zımba teli", "adet", "Siparişe", "Dosya birleştirme", "siparis"),
+        kalem("Küp not / yapışkan not", "adet", "Siparişe", "Sekreter masası", "siparis"),
+      ],
+    },
+    {
+      id: "pc",
+      ad: "PC sarf",
+      soru: "Yazıcı marka-model mutlaka yaz. Yanlış toner = iade.",
+      urunler: [
+        kalem("Mouse", "adet", "Siparişe — kablolu / wireless", "Resepsiyon ve hekim PC", "siparis"),
+        kalem("Klavye", "adet", "Siparişe — TR Q", "Aynı siparişte mouse ile", "siparis"),
+        kalem("Toner / kartuş", "adet", "Siparişe — model eşleşmeli", "HP / Canon / Brother not al", "siparis"),
+        kalem("USB bellek", "adet", "Siparişe", "Görüntü / tetkik kopyası", "siparis"),
+        kalem("HDMI / USB kablo", "adet", "Siparişe", "Ekran ve yazıcı", "siparis"),
+        kalem("Power bank", "adet", "Siparişe — kapasite (mAh) sor", "Resepsiyon / saha telefonu", "siparis"),
+      ],
+    },
+    {
+      id: "ambalaj",
+      ad: "Ambalaj",
+      soru: "Streç eni 30 cm mi? Koli bandı şeffaf mı kahverengi mi?",
+      urunler: [
+        kalem("Streç 30 cm", "adet", "Siparişe — Ofispanda 90 ₺ / Koroplast 30 cm×15 m", "Ofispanda + gider 2 tekrar", "siparis", { onlar: "Streç 30 cm" }),
+        kalem("Koli bandı 45×100", "adet", "Siparişe — 12,92 ₺ bandı / Vege 45×40 6’lı", "Gider 2 tekrar", "siparis"),
+        kalem("Kraft çanta", "adet", "Siparişe — Ofispanda 3,05 ₺", "Hasta çıkış poşeti", "siparis"),
+        kalem("Kese kağıdı", "adet", "Siparişe — Samua 85 ₺", "Ofispanda teklif", "siparis"),
+        kalem("Kasa poşeti 30×60", "adet", "Siparişe — 0,42 ₺/adet", "Gider 10 tekrar", "siparis"),
+        kalem("Buzdolabı poşeti orta", "paket", "Siparişe — Koroplast / Miss Lady", "Gider 5+ tekrar — personel mutfağı", "siparis"),
+      ],
+    },
+    {
+      id: "mutfak",
+      ad: "Mutfak / ikram",
+      soru: "Bekleme ikramı var mı? Bardak 4 oz espresso mı 7 oz su/kahve mi?",
+      urunler: [
+        kalem("Karton bardak 4 oz", "koli 2000", "Bencup 4 oz — alış 865 ₺", "Türk kahvesi", "cekirdek", { alis: 865 }),
+        kalem("Karton bardak 7 oz", "koli 3000", "Bencup 7 oz — alış 1.370 ₺", "Su / filtre kahve", "cekirdek", { alis: 1370 }),
+        kalem("Karton bardak 8 oz", "koli 2000", "Bencup 8 oz — alış 1.665 ₺", "Büyük ikram", "cekirdek", { alis: 1665 }),
+        kalem("Bardak su 200 cc / 0,5 L", "koli", "Siparişe — Sırmakeş 200 cc 32 tekrar, 0,5 L Ofispanda 45 ₺", "Bekleme suyu", "siparis", { onlar: "Sırmakeş bardak su / 0,5 L 12’li" }),
+        kalem("Soda 24’lü", "koli", "Siparişe — Sırma limon 34 tekrar, Beypazarı Ofispanda 175 ₺", "İkram dolabı", "siparis"),
+        kalem("Çay demlik / bardak poşet", "koli", "Siparişe — Lipton / Çaykur / Doğuş", "Demlik poşet faturalarda yüksek tekrar", "siparis", { onlar: "Lipton demlik 100’lü / Çaykur" }),
+        kalem("Çekirdek / filtre kahve", "kg / 250–500 g", "Siparişe — Jacobs / Tchibo bandı giderlerde var", "Makine tipi: çekirdek mi filtre mi", "siparis", { onlar: "Jacobs Monarch 500 g / Tchibo" }),
+        kalem("Nescafe Gold 200 g", "koli 12", "Siparişe — depoda tutulmaz", "89 tekrar — en sık ikram", "siparis", { onlar: "Nescafe Gold 200 g poşet" }),
+        kalem("Coffee mate 500 g", "koli 12", "Siparişe", "66 tekrar", "siparis", { onlar: "Nestle Coffee Mate 500 g" }),
+        kalem("Küp şeker 1 kg", "koli 20", "Siparişe — Balküpü Gold 60 tekrar", "İkram tepsisi", "siparis"),
+        kalem("Türk kahvesi Mehmet Efendi", "adet", "Siparişe — 100 g Ofispanda 67,5 ₺ / 500 g 47 tekrar", "4 oz bardak ile", "siparis"),
+        kalem("Sıvı bulaşık 20 L", "bidon", "Siparişe — Ofispanda 345 ₺", "Personel eviyesi", "siparis"),
+        kalem("Fairy 650 ml", "adet", "Siparişe — Ofispanda 47,5 ₺", "Küçük klinik", "siparis"),
+        kalem("Bulaşık süngeri / tel", "adet", "Siparişe — Scotch-Brite 8,5 ₺ / tel 25 ₺", "Ofispanda", "siparis"),
+        kalem("Çatal bıçak set 100’lü", "adet", "Siparişe — Ofispanda 250 ₺", "İkramlı bekleme", "siparis"),
+      ],
+    },
+  ];
+}

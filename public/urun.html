@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FerraPro · Ürün</title>
+  <meta name="theme-color" content="#0B1E38" />
+  <link rel="icon" href="/logo/ferrapro-hex.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css?v=45" />
+</head>
+<body>
+  <div class="bar">
+    <span>İstanbul saha teslim</span>
+    <a href="/sepet">Sepetim</a>
+  </div>
+  <header class="head">
+    <a class="logo" href="/">
+      <img src="/logo/ferrapro-hex.png" alt="" />
+      <span><b>FER</b><i>RA</i><b>PRO</b></span>
+    </a>
+    <form class="seek" role="search">
+      <input id="q" type="search" placeholder="Ürün ara" />
+    </form>
+    <a class="bag" href="/sepet">Sepetim <b data-bag>0</b></a>
+  </header>
+  <div class="rail">
+    <button class="rail-btn" id="chip-prev" type="button">‹</button>
+    <div class="chips" id="chips"></div>
+    <button class="rail-btn" id="chip-next" type="button">›</button>
+  </div>
+  <section class="detail" id="urun"></section>
+  <footer class="foot">
+    <img src="/logo/ferrapro-hex.png" alt="" />
+    FerraPro · İstanbul
+  </footer>
+  <script src="/vitrin.js?v=20"></script>
+</body>
+</html>

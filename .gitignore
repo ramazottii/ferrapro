@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.local
+tmp-passwords.txt
+*.log
+tmp-invoices/
+scripts/__pycache__/
+scripts/extract_log.txt

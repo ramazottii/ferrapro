@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ferranoi · Panel</title>
+  <meta name="theme-color" content="#2a1845" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/app.css?v=21" />
+</head>
+<body>
+  <div id="login" class="login-wrap hidden">
+    <form id="login-form" class="login-card">
+      <div class="brand-mark">FR</div>
+      <h1>Ferranoi</h1>
+      <p class="sub">ayfer / ramazan / selcuk = panel · sunum = satış kataloğu</p>
+      <label>Kullanıcı <input name="username" autocomplete="username" required placeholder="ayfer / ramazan / selcuk / sunum" /></label>
+      <label>Parola <input name="password" type="password" autocomplete="current-password" required /></label>
+      <button type="submit">Giriş</button>
+      <p id="login-err" class="err"></p>
+    </form>
+  </div>
+
+  <div id="app" class="layout hidden">
+    <aside class="side">
+      <div class="side-brand">
+        <div class="brand-mark sm">FR</div>
+        <div>
+          <strong>Ferranoi</strong>
+          <span>Ortak panel</span>
+        </div>
+      </div>
+      <nav id="nav">
+        <div class="nav-group" id="nav-tedarik">
+          <div class="nav-label">Tedarik</div>
+          <a href="#/tedarik" data-nav="tedarik">Panel</a>
+          <a href="#/selcuk" data-nav="selcuk" data-saha="1">Selçuk</a>
+          <a href="#/klinik-not" data-nav="klinik-not" data-saha="1">Klinik notu</a>
+          <a href="#/vitrin" data-nav="vitrin" data-saha="1">Vitrin talepleri</a>
+          <a href="#/urunler" data-nav="urunler" data-saha="1">Ürün Zekâsı</a>
+          <a href="#/kiyaslama" data-nav="kiyaslama" data-saha="1">Kıyaslama</a>
+          <a href="#/sik" data-nav="sik" data-saha="1">Sık kullanılan</a>
+          <a href="#/maliyet" data-nav="maliyet">Maliyet</a>
+          <a href="#/cariler" data-nav="cariler">Cariler</a>
+          <a href="#/siparisler" data-nav="siparisler">Siparişler</a>
+          <a href="#/sevkiyat" data-nav="sevkiyat">Sevkiyat</a>
+          <a href="#/faturalar" data-nav="faturalar">Faturalar</a>
+          <a href="#/kasa" data-nav="kasa">Kasa</a>
+        </div>
+        <div class="nav-group" id="nav-mimari">
+          <div class="nav-label">Dekorasyon / Mimari</div>
+          <a href="#/mimari" data-nav="mimari">Panel</a>
+          <a href="#/projeler" data-nav="projeler">Projeler</a>
+          <a href="#/musteriler" data-nav="musteriler">Müşteriler</a>
+          <a href="#/teklifler" data-nav="teklifler">Teklifler</a>
+          <a href="#/santiye" data-nav="santiye">Şantiye</a>
+          <a href="#/kesif" data-nav="kesif">Keşif / Malzeme</a>
+          <a href="#/mim-faturalar" data-nav="mim-faturalar">Tahsilat</a>
+          <a href="#/mim-notlar" data-nav="mim-notlar">Notlar</a>
+        </div>
+      </nav>
+      <div class="side-user">
+        <div id="who">—</div>
+        <button type="button" id="logout">Çıkış</button>
+      </div>
+    </aside>
+    <main>
+      <header class="top">
+        <h1 id="page-title">Panel</h1>
+      </header>
+      <div id="main" class="main"></div>
+    </main>
+  </div>
+
+  <div id="sunum" class="sunum hidden">
+    <header class="sunum-top">
+      <div class="sunum-brand">
+        <div class="brand-mark sm">FR</div>
+        <div>
+          <strong>Ferranoi</strong>
+          <span>Tedarik ürün kataloğu</span>
+        </div>
+      </div>
+      <div class="sunum-meta">
+        <span id="sunum-count">0 kalem</span>
+        <button type="button" id="sunum-list" class="btn sunum-cta">Seçilenler <b id="pick-count">0</b></button>
+        <button type="button" id="sunum-logout" class="btn-ghost sunum-btn">Çıkış</button>
+      </div>
+    </header>
+
+    <div class="sunum-shell">
+      <section class="sunum-intro">
+        <div>
+          <p class="eyebrow">Ferranoi Tedarik</p>
+          <h1>Ürün kataloğu</h1>
+          <p class="lead">Ofis, klinik ve hijyen sarf malzemeleri — paket boyları ve satış birimleri net.</p>
+        </div>
+        <ul class="sunum-facts">
+          <li>Tek tedarikçi</li>
+          <li>Düzenli sevkiyat</li>
+          <li>Teklif listesi anında</li>
+        </ul>
+      </section>
+
+      <div class="sunum-bar">
+        <input id="sunum-q" placeholder="Ürün, ebat veya kategori ara…" />
+        <div id="sunum-cats" class="sunum-cats"></div>
+      </div>
+
+      <div class="sunum-table-wrap">
+        <table class="sunum-table">
+          <thead>
+            <tr>
+              <th class="col-check"></th>
+              <th>Kategori</th>
+              <th>Ürün</th>
+              <th>Boy / Ebat / Adet</th>
+              <th>Birim</th>
+            </tr>
+          </thead>
+          <tbody id="sunum-grid"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside id="sunum-drawer" class="sunum-drawer hidden">
+      <div class="drawer-head">
+        <h2>Teklif listesi</h2>
+        <button type="button" id="drawer-close" class="btn-ghost sunum-btn">Kapat</button>
+      </div>
+      <ul id="pick-list" class="pick-list"></ul>
+      <p class="drawer-hint">Seçilen kalemleri kopyalayıp müşteriye / WhatsApp’a iletebilirsiniz.</p>
+      <button type="button" id="pick-copy" class="btn">Listeyi kopyala</button>
+      <button type="button" id="pick-clear" class="btn-ghost sunum-btn" style="margin-top:8px;width:100%">Temizle</button>
+    </aside>
+  </div>
+  <script src="/app.js?v=22"></script>
+</body>
+</html>
