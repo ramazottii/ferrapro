@@ -424,7 +424,7 @@ async function login(request, env) {
     password === env.RAMAZAN_PASSWORD
   ) {
     user = { id: 2, name: "Ramazan", role: "ortak" };
-  } else if (username === "selcuk" && password && password === (env.SELCUK_PASSWORD || "1234")) {
+  } else if (username === "selcuk" && password && password === env.SELCUK_PASSWORD) {
     user = { id: 4, name: "Selçuk", role: "saha" };
   } else if (username === "sunum" && password && password === env.SUNUM_PASSWORD) {
     user = { id: 3, name: "Sunum", role: "sunum" };

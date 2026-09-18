@@ -102,10 +102,11 @@ function header(active) {
   const items = [
     ["/urunler", "Ürünler"],
     ["/hakkimizda", "Hakkımızda"],
-    ["/referanslar", "Referanslar"],
+    ["/sektorler", "Sektörler"],
+    ["/iletisim", "İletişim"],
   ];
   const links = items
-    .map(([href, label]) => `<a href="${href}" class="${active === href ? "is-on" : ""}">${label}</a>`)
+    .map(([href, label]) => `<a href="${href}" ${active === href ? 'aria-current="page"' : ""} class="${active === href ? "is-on" : ""}">${label}</a>`)
     .join("");
   const ctaOn = active === "/siparis" ? " is-on" : "";
   const gHidden = gKeep ? `<input type="hidden" name="g" value="${kacisAttr(gKeep)}" />` : "";
@@ -131,6 +132,9 @@ function footer() {
       <a class="foot-mail" href="tel:+905325891436">0532 589 14 36</a>
     </p>
     <nav>
+      <a href="/sektorler">Sektörler</a>
+      <a href="/referanslar">Referanslar</a>
+      <a href="/iletisim">İletişim ve sorular</a>
       <a href="/kvkk">KVKK</a>
       <a href="/siparis">Teklif Al</a>
     </nav>
@@ -181,12 +185,13 @@ function bindTrust() {
   const root = document.querySelector(".trust");
   if (!root) return;
   const btn = root.querySelector(".trust-toggle");
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduced) {
-    root.classList.add("is-static");
-    if (btn) btn.hidden = true;
-    return;
-  }
+  const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const syncMotion = () => {
+    root.classList.toggle("is-static", motion.matches);
+    if (btn) btn.hidden = motion.matches;
+  };
+  syncMotion();
+  motion.addEventListener("change", syncMotion);
   if (!btn) return;
   const setPaused = (paused) => {
     root.classList.toggle("is-paused", paused);
@@ -460,7 +465,7 @@ if (liste) {
           panel.replaceChildren();
         }
 
-        function ac(tip, items, btn) {
+        function ac(tip, items, btn, moveFocus = false) {
           const ayni = btn.getAttribute("aria-expanded") === "true";
           kapat();
           if (ayni) {
@@ -494,9 +499,23 @@ if (liste) {
             li.append(metin, aksiyon);
             eb.append(li);
           });
-          panel.replaceChildren(bas, eb);
+          const close = document.createElement("button");
+          close.type = "button";
+          close.className = "btn ghost option-close";
+          close.textContent = "Seçenekleri kapat";
+          close.addEventListener("click", () => {
+            kapat();
+            history.replaceState(null, "", katalogYol({ g: grup, q: qHam }));
+            btn.focus();
+          });
+          panel.replaceChildren(bas, close, eb);
           panel.hidden = false;
           history.replaceState(null, "", katalogYol({ g: grup, q: qHam, a: tip.id }));
+          if (moveFocus) {
+            bas.tabIndex = -1;
+            bas.focus({ preventScroll: true });
+            panel.scrollIntoView({ block: "start", behavior: "instant" });
+          }
         }
 
         sirali.forEach(({ tip, items }) => {
@@ -516,7 +535,7 @@ if (liste) {
           btn.setAttribute("aria-expanded", "false");
           btn.setAttribute("aria-controls", "panel-" + gr.g);
           btn.textContent = "Seçenekleri göster";
-          btn.addEventListener("click", () => ac(tip, items, btn));
+          btn.addEventListener("click", () => ac(tip, items, btn, true));
           const src = grupFoto(tip.id);
           if (src) {
             const pic = document.createElement("span");

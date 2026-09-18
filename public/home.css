@@ -1,13 +1,14 @@
 .home { overflow-x: clip; }
 
 .home .hero {
-  padding: 36px 0 28px;
-  background: var(--white);
+  padding: 60px 0;
+  background: var(--navy);
+  color: var(--white);
 }
 .home .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: 40px 56px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  gap: 40px;
   align-items: center;
 }
 .home .hero-kicker {
@@ -16,16 +17,16 @@
   font-weight: 650;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #8cddda;
 }
 .home .hero h1 {
   margin: 0 0 16px;
-  max-width: 16ch;
-  font-size: clamp(1.85rem, 3.1vw, 2.7rem);
+  max-width: none;
+  font-size: clamp(2rem, 3vw, 2.65rem);
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 1.14;
-  color: var(--navy);
+  color: var(--white);
 }
 .home .hero-br {
   display: block;
@@ -34,7 +35,7 @@
   margin: 0 0 22px;
   max-width: 38ch;
   font-size: 1.05rem;
-  color: var(--mute);
+  color: #d1dce5;
   line-height: 1.55;
 }
 .home .hero-actions {
@@ -46,8 +47,11 @@
 .home .hero-region {
   margin: 0;
   font-size: 0.88rem;
-  color: var(--mute);
+  color: #bacbd8;
 }
+.home .hero .btn { min-height: 48px; display: inline-flex; align-items: center; }
+.home .hero .btn.ghost { color: white; border-color: #718393; background: transparent; }
+.home .hero .btn.ghost:hover { background: #253b51; }
 .home .hero-visual {
   position: relative;
   min-width: 0;
@@ -61,19 +65,12 @@
 .home .hero-frame img {
   display: block;
   width: 100%;
-  height: min(52vh, 460px);
-  object-fit: cover;
-  object-position: 58% 50%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  object-position: center;
 }
-.home .hero-frame::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 6px;
-  height: 38%;
-  background: var(--accent);
-}
+.home .hero-frame figcaption { padding: 14px 0 0; color: #d1dce5; font-size: .8rem; letter-spacing: .04em; }
 
 .home .trust {
   background: var(--mist);
@@ -119,12 +116,14 @@
 .home .trust-viewport {
   overflow: hidden;
   min-height: 56px;
+  width: min(660px, calc(100% - 40px));
+  margin: 0 auto;
 }
 .home .trust-move {
   display: flex;
-  width: max-content;
+  width: 100%;
   gap: 0;
-  animation: home-trust 42s linear infinite;
+  animation: home-trust 50s linear infinite;
 }
 .home .trust:hover .trust-move,
 .home .trust:focus-within .trust-move,
@@ -134,11 +133,18 @@
 .home .trust-set {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 0;
+  flex: 0 0 100%;
   list-style: none;
   margin: 0;
-  padding: 0 16px 0 0;
+  padding: 0;
 }
+.home .trust-set li { flex: 0 0 33.333333%; display: flex; justify-content: center; }
+.home .trust-viewport:focus-within .trust-move { animation: none; transform: none; }
+.home .trust-viewport:focus-within .trust-set[aria-hidden="true"] { display: none; }
+.home .trust-viewport:focus-within .trust-set:first-child { flex-basis: 100%; flex-wrap: wrap; }
+.home .trust-viewport:focus-within .trust-set li { flex: 1 0 150px; }
+.home .trust-viewport a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .home .trust-set a,
 .home .trust-item {
   display: flex;
@@ -185,7 +191,7 @@
 
 @keyframes home-trust {
   from { transform: translateX(0); }
-  to { transform: translateX(-33.333%); }
+  to { transform: translateX(-100%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -201,17 +207,21 @@
 }
 
 .home .cats {
-  padding: 48px 0 56px;
+  padding: 76px 0;
   background: var(--white);
 }
 .home .cats h2 {
-  margin: 0 0 22px;
-  font-size: 0.78rem;
+  margin: 0;
+  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  text-transform: none;
   color: var(--navy);
 }
+.home .cats-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 30px; }
+.home .cats-heading > p { color: var(--mute); font-size: .95rem; margin: 0; }
+.home .section-kicker { color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: .75rem; font-weight: 700; margin: 0 0 10px; }
+.home .image-note { color: var(--mute); font-size: .78rem; margin: 20px 0 0; }
 .home .cat-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -248,7 +258,8 @@
 }
 .home .cat-grid img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   display: block;
   background: var(--mist);
@@ -323,7 +334,7 @@
   width: 28px;
   height: 28px;
   border: 1px solid rgb(255 255 255 / 0.28);
-  color: var(--accent);
+  color: #8cddda;
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -360,7 +371,7 @@
   .home .hero-copy { order: 1; }
   .home .hero-visual { order: 2; }
   .home .hero h1 { max-width: none; }
-  .home .hero-frame img { height: min(38vh, 280px); }
+  .home .hero-frame img { height: auto; }
   .home .path ol { grid-template-columns: 1fr; gap: 18px; }
   .home .path h2 { max-width: none; }
 }
@@ -369,7 +380,8 @@
   .home .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home .cat-grid li,
   .home .cat-grid li:nth-child(n + 5) { grid-column: auto; }
-  .home .hero { padding: 24px 0 20px; }
+  .home .hero { padding: 32px 0; }
+  .home .cats-heading { flex-direction: column; align-items: start; gap: 12px; }
   .home .cats { padding: 36px 0 44px; }
   .home .path { padding: 40px 0; }
 }
@@ -377,6 +389,18 @@
 @media (max-width: 520px) {
   .home .hero-br { display: inline; }
   .home .cat-grid { grid-template-columns: 1fr; }
+  .home .trust-set { flex-basis: 150%; }
+  .home .trust-move { animation-name: home-trust-mobile; }
+  .home .trust-logo { width: 138px; flex-basis: 138px; }
+}
+@keyframes home-trust-mobile { from { transform: translateX(0); } to { transform: translateX(-150%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .home .trust-move { animation: none; }
+  .home .trust-set:first-child { flex-basis: 100%; gap: 16px 0; }
+  .home .trust-set li { flex: 1 0 150px; }
+  .home .cat-grid a { transition: none; }
+  .home .cat-grid a:hover { transform: none; }
 }
 
 @media (max-width: 360px) {
