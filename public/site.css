@@ -9,6 +9,10 @@
   --white: #ffffff;
   --font: "DM Sans", system-ui, sans-serif;
 }
+.interest-status { position: fixed; z-index: 50; bottom: 16px; left: 50%; transform: translateX(-50%); width: min(560px,calc(100% - 32px)); background: var(--navy); color: white; box-shadow: 0 6px 30px #0003; padding: 18px 22px; margin: 0; font-size: .9rem; pointer-events: none; }
+.interest-status:empty { display: none; }
+[data-interest-count] { display: inline-block; min-width: 1.3em; margin-left: 3px; border-radius: 3px; background: #ffffff26; }
+@media(max-width: 520px) { .head .btn-head { font-size: .72rem; padding: 10px 8px; } }
 /* Shared business discovery and purchasing guidance. */
 .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .09em; font-size: .75rem; font-weight: 700; }
 .business-paths { padding: 56px 0; background: var(--navy); color: white; }

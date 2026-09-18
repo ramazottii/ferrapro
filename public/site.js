@@ -119,7 +119,7 @@ function header(active) {
       ${gHidden}
       <input id="q" type="search" name="q" placeholder="Ürün ara" value="${qVal}" />
     </form>
-    <a class="btn btn-head${ctaOn}" href="/siparis">Teklif Al</a>
+    <a class="btn btn-head${ctaOn}" href="/siparis">Teklif Listem <span data-interest-count>0</span></a>
   </div>`;
 }
 
@@ -219,14 +219,21 @@ const ALTLAR = {
   ],
   Temizlik: [
     { id: "cop", ad: "Çöp Poşeti", test: (t) => t.includes("çöp") },
-    { id: "sivi", ad: "Sıvı ve Deterjan", test: (t) => /sabun|çamaşır|deterjan|yüzey|güç|kireç|sprey|krem|jel|kapsül|parfüm|bidon|dağ esintisi/.test(t) },
+    { id: "sabun", ad: "El Sabunları", test: (t) => /sabun/.test(t) },
+    { id: "camasir-suyu", ad: "Çamaşır Suları", test: (t) => /çamaşır suyu/.test(t) },
+    { id: "camasir", ad: "Çamaşır Deterjanları", test: (t) => /çamaşır|toz deterjan/.test(t) },
+    { id: "yuzey", ad: "Yüzey Temizleyicileri", test: (t) => /yüzey/.test(t) },
+    { id: "kirec", ad: "Kireç ve Pas Çözücüler", test: (t) => /kireç|pas-/.test(t) },
+    { id: "koku", ad: "Ortam Kokuları", test: (t) => /oda parfüm/.test(t) },
+    { id: "bulasik-temizlik", ad: "Bulaşık Temizliği", test: (t) => /bulaşık/.test(t) },
+    { id: "sivi", ad: "Diğer Temizlik Ürünleri", test: (t) => !/bez|mop|süpürge|fırça/.test(t) },
     { id: "arac", ad: "Bez ve Mop", test: (t) => /bez|mop|süpürge|fırça/.test(t) },
   ],
   Mutfak: [
     { id: "bardak", ad: "Karton Bardak", test: (t) => /karton bardak/.test(t) || (t.includes("bardak") && t.includes("oz")) },
     { id: "kase", ad: "Çorba Kasesi", test: (t) => /kase|kâse/.test(t) },
-    { id: "icecek", ad: "İçecek", test: (t) => /su |soda|ice tea|çay |süt |enerji|330 ml|250 ml 24/.test(t) },
-    { id: "kahve", ad: "Kahve ve Çay", test: (t) => /kahve|coffee|şeker|gold 200|filtre/.test(t) },
+    { id: "icecek", ad: "İçecek", test: (t) => /su |soda|ice tea|süt |enerji|330 ml|250 ml 24/.test(t) },
+    { id: "kahve", ad: "Kahve ve Çay", test: (t) => /kahve|çay|coffee|şeker|gold 200|filtre/.test(t) },
     { id: "bulasik", ad: "Bulaşık", test: (t) => /bulaşık|çatal/.test(t) },
   ],
   Sağlık: [
@@ -294,280 +301,6 @@ function grupFoto(tipId) {
   return GRUP_FOTO[tipId] || "";
 }
 
-const liste = document.getElementById("liste");
-if (liste) {
-  const params = new URLSearchParams(location.search);
-  const qHam = (params.get("q") || "").trim();
-  const needle = qHam.toLocaleLowerCase("tr");
-  const grup = gecerliG(params.get("g") || "");
-  let acik = (params.get("a") || "").trim();
-  const baslik = document.getElementById("baslik");
-  const katNav = document.getElementById("kat-nav");
-  const katSec = document.getElementById("kat-sec");
-  const katMeta = document.getElementById("kat-meta");
-
-  function kurKategori() {
-    if (katNav) {
-      katNav.replaceChildren();
-      const tum = document.createElement("a");
-      tum.href = katalogYol({ q: qHam });
-      tum.textContent = "Tümü";
-      if (!grup) {
-        tum.className = "is-on";
-        tum.setAttribute("aria-current", "page");
-      }
-      katNav.append(tum);
-      GRUPLAR.forEach((x) => {
-        const a = document.createElement("a");
-        a.href = katalogYol({ g: x.g, q: qHam });
-        a.textContent = x.ad;
-        if (grup === x.g) {
-          a.className = "is-on";
-          a.setAttribute("aria-current", "page");
-        }
-        katNav.append(a);
-      });
-    }
-    if (katSec) {
-      katSec.replaceChildren();
-      const o0 = document.createElement("option");
-      o0.value = "";
-      o0.textContent = "Tüm kategoriler";
-      katSec.append(o0);
-      GRUPLAR.forEach((x) => {
-        const o = document.createElement("option");
-        o.value = x.g;
-        o.textContent = x.ad;
-        katSec.append(o);
-      });
-      katSec.value = grup;
-      katSec.addEventListener("change", () => {
-        location.assign(katalogYol({ g: gecerliG(katSec.value), q: qHam }));
-      });
-    }
-  }
-  kurKategori();
-
-  fetch("/katalog.json")
-    .then((r) => r.json())
-    .then((data) => {
-      const want = grupAnahtar(grup);
-      let urunler = data.urunler || [];
-      if (want.length) urunler = urunler.filter((u) => want.includes(u.kategori));
-      if (needle) {
-        urunler = urunler.filter((u) =>
-          `${u.satir || ""} ${u.ad || ""} ${u.kategori}`.toLocaleLowerCase("tr").includes(needle),
-        );
-      }
-      const goster = grup ? GRUPLAR.filter((x) => x.g === grup) : GRUPLAR;
-      if (baslik) {
-        const found = GRUPLAR.find((x) => x.g === grup);
-        baslik.textContent = found ? found.ad : "Ürünler";
-      }
-
-      const grupSay = [];
-      goster.forEach((gr) => {
-        const keys = grupAnahtar(gr.g);
-        const hits = urunler.filter((u) => keys.includes(u.kategori));
-        if (!hits.length) return;
-        const buckets = new Map();
-        hits.forEach((u) => {
-          const tip = altBul(gr.g, u.satir || u.ad);
-          if (!buckets.has(tip.id)) buckets.set(tip.id, { tip, items: [] });
-          buckets.get(tip.id).items.push(u);
-        });
-        const sirali = [];
-        (ALTLAR[gr.g] || []).forEach((k) => {
-          if (buckets.has(k.id)) sirali.push(buckets.get(k.id));
-        });
-        if (buckets.has("diger")) sirali.push(buckets.get("diger"));
-        grupSay.push({ gr, sirali, buckets });
-      });
-
-      if (katMeta) {
-        katMeta.replaceChildren();
-        const parca = [];
-        if (grup) {
-          const found = GRUPLAR.find((x) => x.g === grup);
-          if (found) parca.push(found.ad);
-        }
-        if (qHam) parca.push("arama: " + qHam);
-        const n = grupSay.reduce((acc, x) => acc + x.sirali.length, 0);
-        parca.push(n + " ürün grubu");
-        const bilgi = document.createElement("span");
-        bilgi.textContent = parca.join(" · ");
-        katMeta.append(bilgi);
-        if (grup || qHam) {
-          const temiz = document.createElement("a");
-          temiz.href = "/urunler";
-          temiz.className = "cat-clear";
-          temiz.textContent = "Filtreleri temizle";
-          katMeta.append(temiz);
-        }
-      }
-
-      liste.replaceChildren();
-
-      if (!grupSay.length) {
-        const bos = document.createElement("div");
-        bos.className = "cat-empty";
-        const p = document.createElement("p");
-        p.textContent = "Bu süzgeçle eşleşen ürün yok.";
-        bos.append(p);
-        const actions = document.createElement("p");
-        actions.className = "cat-empty-actions";
-        const ara = document.createElement("button");
-        ara.type = "button";
-        ara.className = "btn ghost";
-        ara.textContent = "Aramayı değiştir";
-        ara.addEventListener("click", () => {
-          const qEl = document.getElementById("q");
-          if (qEl) {
-            qEl.focus();
-            if (typeof qEl.select === "function") qEl.select();
-          }
-        });
-        const temiz = document.createElement("a");
-        temiz.className = "btn ghost";
-        temiz.href = "/urunler";
-        temiz.textContent = "Filtreleri temizle";
-        const teklif = document.createElement("a");
-        teklif.className = "btn";
-        teklif.href = "/siparis";
-        teklif.textContent = "Genel teklif iste";
-        actions.append(ara, temiz, teklif);
-        bos.append(actions);
-        liste.append(bos);
-        return;
-      }
-
-      grupSay.forEach(({ gr, sirali, buckets }) => {
-        const art = document.createElement("article");
-        art.className = "grup";
-        if (!grup) {
-          const h2 = document.createElement("h2");
-          h2.textContent = gr.ad;
-          art.append(h2);
-        }
-        const ul = document.createElement("ul");
-        ul.className = "karel";
-        const panel = document.createElement("div");
-        panel.className = "secenekler";
-        panel.hidden = true;
-
-        function kapat() {
-          ul.querySelectorAll(".kart-ac").forEach((btn) => {
-            btn.setAttribute("aria-expanded", "false");
-            btn.textContent = "Seçenekleri göster";
-            btn.closest("li")?.classList.remove("is-on");
-          });
-          panel.hidden = true;
-          panel.replaceChildren();
-        }
-
-        function ac(tip, items, btn, moveFocus = false) {
-          const ayni = btn.getAttribute("aria-expanded") === "true";
-          kapat();
-          if (ayni) {
-            history.replaceState(null, "", katalogYol({ g: grup, q: qHam }));
-            return;
-          }
-          btn.setAttribute("aria-expanded", "true");
-          btn.textContent = "Seçenekleri gizle";
-          btn.closest("li")?.classList.add("is-on");
-          const bas = document.createElement("h3");
-          bas.id = "sec-" + gr.g + "-" + tip.id;
-          bas.textContent = tip.ad + " · " + items.length + " seçenek";
-          panel.setAttribute("aria-labelledby", bas.id);
-          const eb = document.createElement("ul");
-          items.forEach((u) => {
-            const satir = u.satir || u.ad || "";
-            const li = document.createElement("li");
-            li.className = "opt";
-            const metin = document.createElement("div");
-            metin.className = "opt-bits";
-            satirParcalar(satir, tip.ad).forEach((parca) => {
-              const span = document.createElement("span");
-              span.className = "opt-bit";
-              span.textContent = parca;
-              metin.append(span);
-            });
-            const aksiyon = document.createElement("a");
-            aksiyon.className = "btn ghost opt-teklif";
-            aksiyon.href = teklifHref(gr.g, satir);
-            aksiyon.textContent = "Bu ürün için teklif iste";
-            li.append(metin, aksiyon);
-            eb.append(li);
-          });
-          const close = document.createElement("button");
-          close.type = "button";
-          close.className = "btn ghost option-close";
-          close.textContent = "Seçenekleri kapat";
-          close.addEventListener("click", () => {
-            kapat();
-            history.replaceState(null, "", katalogYol({ g: grup, q: qHam }));
-            btn.focus();
-          });
-          panel.replaceChildren(bas, close, eb);
-          panel.hidden = false;
-          history.replaceState(null, "", katalogYol({ g: grup, q: qHam, a: tip.id }));
-          if (moveFocus) {
-            bas.tabIndex = -1;
-            bas.focus({ preventScroll: true });
-            panel.scrollIntoView({ block: "start", behavior: "instant" });
-          }
-        }
-
-        sirali.forEach(({ tip, items }) => {
-          const li = document.createElement("li");
-          const txt = document.createElement("span");
-          txt.className = "txt";
-          txt.textContent = tip.ad;
-          const say = document.createElement("span");
-          say.className = "say";
-          say.textContent = items.length + " seçenek";
-          const govde = document.createElement("div");
-          govde.className = "kart-govde";
-          govde.append(txt, say);
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "kart-ac";
-          btn.setAttribute("aria-expanded", "false");
-          btn.setAttribute("aria-controls", "panel-" + gr.g);
-          btn.textContent = "Seçenekleri göster";
-          btn.addEventListener("click", () => ac(tip, items, btn, true));
-          const src = grupFoto(tip.id);
-          if (src) {
-            const pic = document.createElement("span");
-            pic.className = "pic";
-            const img = document.createElement("img");
-            img.src = src;
-            img.alt = "";
-            pic.append(img);
-            li.append(pic, govde, btn);
-          } else {
-            li.classList.add("is-metin");
-            li.append(govde, btn);
-          }
-          ul.append(li);
-        });
-
-        panel.id = "panel-" + gr.g;
-        art.append(ul, panel);
-        liste.append(art);
-
-        if (acik) {
-          const secili = buckets.get(acik);
-          if (secili) {
-            const idx = sirali.findIndex((x) => x.tip.id === acik);
-            const btn = ul.querySelectorAll(".kart-ac")[idx];
-            if (btn) ac(secili.tip, secili.items, btn);
-          }
-        }
-      });
-    });
-}
-
 const form = document.getElementById("siparis-form");
 if (form) {
   const wa = document.getElementById("wa");
@@ -594,7 +327,7 @@ if (form) {
     const msg = document.getElementById("msg");
     const btn = form.querySelector("[type=submit]");
     const ilce = String(form.elements.ilce ? form.elements.ilce.value : "").trim();
-    const ihtiyac = String(form.elements.not.value || "").trim();
+    const ihtiyac = [window.FerraInterest?.summary(), String(form.elements.not.value || "").trim()].filter(Boolean).join("\n\n");
     const body = {
       firma: form.elements.firma.value,
       yetkili: form.elements.yetkili.value,
@@ -632,8 +365,9 @@ if (form) {
         throw new Error(sunucu || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.");
       }
       form.reset();
+      window.FerraInterest?.clear();
       msg.className = "note is-ok";
-      msg.textContent = "Teklif talebiniz alındı.";
+      msg.textContent = "Talebiniz alındı. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.";
     } catch (err) {
       msg.className = "note is-hata";
       msg.textContent = err.message || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.";

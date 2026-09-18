@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/site.css?v=63" />
-  <link rel="stylesheet" href="/inner.css?v=63" />
+  <link rel="stylesheet" href="/site.css?v=64" />
+  <link rel="stylesheet" href="/inner.css?v=64" />
   <link rel="canonical" href="https://ferrapro.com/siparis" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="tr_TR" />
@@ -25,9 +25,10 @@
   <header class="head" data-head="/siparis"></header>
   <main><section class="page-banner"><div class="wrap">
       <a class="breadcrumb" href="/">Ana sayfa</a><span class="breadcrumb-divider"> / </span><span class="breadcrumb-current">Teklif talebi</span>
-      <h1>İşletmeniz için teklif isteyin</h1><p>Ürünleri ve miktarları paylaşın; ihtiyacınıza uygun seçenekleri birlikte değerlendirelim.</p>
+      <h1>İşletmeniz için teklif isteyin</h1><p>İlgilendiğiniz ürünleri seçin veya yalnızca iletişim bilgilerinizi bırakın. İhtiyacınızı birlikte netleştirelim.</p>
     </div></section><div class="wrap page quote-layout"><div class="quote-main">
     <p id="wa-wrap" hidden><a class="btn" id="wa" href="#">WhatsApp</a></p>
+    <section id="interest-review" aria-label="İlgilendiğiniz ürünler"></section>
     <form class="form" id="siparis-form"><h2 class="full form-title">Teklif talebiniz</h2>
       <p class="full form-hint">Zorunlu alanlar yıldız (*) ile işaretlidir.</p>
       <label>
@@ -43,7 +44,7 @@
         <input name="tel" type="tel" inputmode="tel" required autocomplete="tel" />
       </label>
       <label>
-        <span class="etiket">Ürün kategorisi</span>
+        <span class="etiket">Görüşmek istediğiniz kategori (isteğe bağlı)</span>
         <select name="grup">
           <option value="">Seçin</option>
           <option value="Hijyen">Temizlik Kâğıt Ürünleri</option>
@@ -60,12 +61,12 @@
         <input name="ilce" maxlength="80" autocomplete="address-level2" />
       </label>
       <label class="full">
-        <span class="etiket">İhtiyaç duyduğunuz ürünler ve miktarlar&nbsp;<span class="gerekli" aria-hidden="true">*</span></span>
-        <textarea name="not" rows="6" required placeholder="Örnek: Z kat havlu, 10 koli. Tercih ettiğiniz ölçü veya ambalajı da belirtebilirsiniz."></textarea>
+        <span class="etiket">Eklemek istediğiniz not (isteğe bağlı)</span>
+        <textarea name="not" rows="4" placeholder="Örnek: Z kat havlu, 10 koli. Tercih ettiğiniz ölçü veya ambalajı da belirtebilirsiniz."></textarea>
       </label>
       <p class="full form-kvkk">Kişisel verileriniz <a href="/kvkk">KVKK aydınlatma metni</a> kapsamında işlenir.</p>
       <div class="full">
-        <button class="btn" type="submit">Teklif Talebi Gönder</button>
+        <button class="btn" type="submit">Teklif ve Görüşme Talebi Gönder</button>
         <p id="msg" class="note" role="status"></p>
       </div>
     </form></div><aside class="contact-panel"><p class="eyebrow">Birlikte netleştirelim</p>
@@ -75,6 +76,8 @@
 <div class="contact-details"><span>İletişim</span><a href="tel:+905325891436">0532 589 14 36</a><a href="mailto:info@ferrapro.com">info@ferrapro.com</a><p>Ataşehir / İstanbul</p></div></aside></div>
   </main>
   <footer class="foot" data-foot></footer>
-  <script src="/site.js?v=63"></script>
+  <script src="/interest.js?v=64"></script>
+  <script src="/site.js?v=64"></script>
+  <script>FerraInterest.mount();</script>
 </body>
 </html>

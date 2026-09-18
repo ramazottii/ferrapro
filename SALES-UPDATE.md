@@ -1,5 +1,7 @@
 # Ferrapro satış odaklı güncelleme
 
+> Bu dosya önceki çalışmanın tarihsel notudur. Güncel GitHub/yayın durumu ve sonraki katalog çalışması için docs/HANDOFF.md dosyasını okuyun. Aşağıdaki "yayın yapılmadı" ifadeleri bu notun ilk yazıldığı aşamayı anlatır; tasarım daha sonra yayımlandı.
+
 ## Yapılanlar
 
 - Ana sayfada işletme türüne göre altı başlangıç yolu.

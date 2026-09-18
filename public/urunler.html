@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/site.css?v=63" />
-  <link rel="stylesheet" href="/inner.css?v=63" />
+  <link rel="stylesheet" href="/site.css?v=64" />
+  <link rel="stylesheet" href="/inner.css?v=64" />
   <link rel="canonical" href="https://ferrapro.com/urunler" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="tr_TR" />
@@ -24,16 +24,19 @@
   <header class="head" data-head="/urunler"></header>
   <main><section class="page-banner"><div class="wrap">
       <a class="breadcrumb" href="/">Ana sayfa</a><span class="breadcrumb-divider"> / </span><span class="breadcrumb-current">Ürünler</span>
-      <h1 id="baslik">Ürünler</h1><p>İşletmenizin ihtiyaçlarına uygun ürünleri bulun. Seçenekleri inceleyin, miktarınızı belirterek teklif isteyin.</p>
+      <h1 id="baslik">Ürünler</h1><p>İşletmenizin ihtiyaçlarına uygun ürünleri bulun. Seçenekleri inceleyin, ilgilendiğiniz ürünleri seçerek görüşme talebi bırakın.</p>
     </div></section><div class="wrap page catalog catalog-layout">
     <aside class="cat-tools"><h2 class="filter-title">Kategoriler</h2>
       <label class="cat-select" for="kat-sec">Kategori</label>
       <select id="kat-sec"></select>
       <nav class="cat-nav" id="kat-nav" aria-label="Ürün kategorileri"></nav>
-      </aside><div class="catalog-results"><p class="cat-meta" id="kat-meta" role="status"></p><div id="liste"></div>
+      </aside><div class="catalog-results"><nav id="catalog-crumbs" aria-label="Kategori yolu"></nav><div id="catalog-intro"></div><p class="cat-meta" id="kat-meta" role="status"></p><div id="liste"><p role="status">Kategoriler yükleniyor…</p></div><noscript>Ürünleri görüntülemek için JavaScript gereklidir. <a href="/iletisim">İletişime geçin</a>.</noscript>
     <div class="catalog-cta"><h2>Aradığınız ürünü bulamadınız mı?</h2><p>İhtiyacınızı teklif formunda bize iletin.</p><a class="btn" href="/siparis">Genel teklif iste</a></div></div></div>
   </main>
   <footer class="foot" data-foot></footer>
-  <script src="/site.js?v=63"></script>
+  <script src="/interest.js?v=64"></script>
+  <script src="/site.js?v=64"></script>
+  <script>FerraInterest.mount();</script>
+<script src="/catalog-ui.js?v=64"></script>
 </body>
 </html>
