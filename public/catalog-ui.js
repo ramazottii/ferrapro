@@ -99,7 +99,7 @@
     const needle=query.toLocaleLowerCase('tr');
     const results=[];
     (current?[current]:groups).forEach(g=>g.subs.filter(s=>!selected||s.id===selected.id).forEach(s=>s.items.forEach(item=>{
-      if(!needle || `${item.satir} ${g.ad} ${s.ad}`.toLocaleLowerCase('tr').includes(needle))results.push({g,s,item});
+      if(!needle || `${item.satir || item.ad || ''} ${g.ad}`.toLocaleLowerCase('tr').includes(needle))results.push({g,s,item});
     })));
     info.textContent=results.length+' ürün seçeneği'+(query?' · Arama: '+query:'');
     if(query)info.append(link('Aramayı temizle',url(group,selected?.id||'',''),'cat-clear'));
