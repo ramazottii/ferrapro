@@ -65,3 +65,12 @@ AGENTS.md ve .cursor/rules/ferrapro.mdc her oturumda bu kapsamı hatırlatır.
 - npm run check başarılı: katalog ve izole teklif akışı. Altı rota (ana sayfa, katalog, sabun alt grubu, form, iletişim, sektörler) x 360/768/1440: yatay taşma yok, bir H1, tamamlanmış yüklemelerde kırık görsel yok; telefonlar yeni numara. Mobil menü açılması ve hero animasyonu sonunda opacity=1 tarayıcıda doğrulandı.
 - Canlıya yayın YAPILMADI. Yerel önizleme 8793 portunda. Yeni sürüm PR #1 dalında incelenebilir.
 - Şirket/veri sorumlusu bilgileri ve posta kutusu doğrulaması hâlâ bekliyor. Üretim KV üzerinde gerçek talep gönderilmedi. Panel ve kimlik doğrulama kodu değiştirilmedi.
+
+## 20 Eylül 2026 — canlı yayın
+
+Kullanıcının "canlıda görelim" talimatıyla 4ca12c6 sürümü yayımlandı.
+Cloudflare sürümü: 5767c793-be99-42d9-acfb-74ade8ceb114.
+Önceki sürüm: 033b09ca-f0f1-4cb1-bfb1-70c42ba3f66f.
+Yukarıdaki "henüz yayımlanmadı" notları artık tarihsel durumdur; katalog, teklif listesi, yeni tasarım ve telefon canlıdadır.
+Yayın öncesi npm run check geçti; önceki yayın commit'iyle Worker ve panel farkı yok.
+Canlı ferrapro.com tarayıcıda açıldı; yeni hero, v65 kaynaklar ve 0530 716 18 77 telefon bağlantısı doğrulandı. Gerçek talep gönderilmedi.
