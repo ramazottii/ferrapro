@@ -42,7 +42,7 @@ Temizlikdeposu.com'un ana kategori → alt grup → ürün mantığı örnek al�
 ## Bilinen durum / kalan işler
 
 1. Şirket ünvanı ve veri sorumlusu bilgileri kesinleşmedi. KVKK metni tamamlanmış değildir. Hukuki bilgi uydurmayın.
-2. info@ferrapro.com posta kutusunun işlerliği henüz doğrulanmadı. Telefon 0532 589 14 36; konum Ataşehir/İstanbul. WhatsApp onaylanmadığı için kapalı.
+2. info@ferrapro.com posta kutusunun işlerliği henüz doğrulanmadı. Telefon 0530 716 18 77; konum Ataşehir/İstanbul. WhatsApp onaylanmadığı için kapalı.
 3. Önceki çalışmada ortak Worker'daki Selçuk varsayılan parola geri dönüşü kaldırılıp yayımlandı. Cloudflare'da SELCUK_PASSWORD yok; yeni Selçuk girişi bu yüzden kapalı. Kullanıcı Ferranoi panelinin kapsam dışı olduğunu belirtti. Bu sorun çözülmedi; panel şifresini veya kodunu bu görev kapsamında değiştirmeyin, sabit parolayı geri koymayın.
 4. Ürün görselleri kategorileri temsil eder. Bazı mevcut ürün satırları (ör. yalnızca hacim/koku içerenler) yetersiz isimlidir; gerçek bilgilerle katalog kalitesi ayrıca geliştirilmeli.
 5. Excel/PDF/fotoğraf yükleme, hesaplar ve kayıtlı müşteri listeleri eklenmedi.
@@ -53,3 +53,15 @@ Temizlikdeposu.com'un ana kategori → alt grup → ürün mantığı örnek al�
 Repo kökünü açın, önce git status kontrol edin. README'deki dalı alın.
 AGENTS.md ve .cursor/rules/ferrapro.mdc her oturumda bu kapsamı hatırlatır.
 İstek örneği: "AGENTS.md ve docs/HANDOFF.md oku. codex/visual-refresh dalındaki güncel katalog ve teklif akışını incele. Ferranoi paneline dokunmadan Ferrapro için [istenen iş] üzerinde çalış. Testleri çalıştır ve devam notlarını güncelle."
+
+
+## 19 Eylül 2026 — kurumsal görünüm ve hareket
+
+- Kullanıcı yeni irtibat numarasını 0530 716 18 77 olarak bildirdi. Halka açık sayfalar, meta açıklamaları ve tel bağlantıları güncellendi.
+- Wix önizlemesinden görsel yön alındı; Wix kodu veya görselleri aktarılmadı. Mevcut temsili görseller kullanıldı.
+- Sıcak kırık beyaz / lacivert / koyu turuncu paleti, büyük hero başlığı, çerçeveli geniş ürün görseli, üç sütun eşit kategori kartları, iç sayfa kartlarında gölge ve yuvarlatma uygulandı.
+- IntersectionObserver ile bir kez çalışan bölüm girişleri; düğme/kart hover geçişleri. İçerik JS olmadan görünür; reduced-motion tercihinde animasyon ve smooth scroll kapalı.
+- Ürün/miktar paylaşımını zorunlu gibi gösteren ana sayfa adımı düzeltildi.
+- npm run check başarılı: katalog ve izole teklif akışı. Altı rota (ana sayfa, katalog, sabun alt grubu, form, iletişim, sektörler) x 360/768/1440: yatay taşma yok, bir H1, tamamlanmış yüklemelerde kırık görsel yok; telefonlar yeni numara. Mobil menü açılması ve hero animasyonu sonunda opacity=1 tarayıcıda doğrulandı.
+- Canlıya yayın YAPILMADI. Yerel önizleme 8793 portunda. Yeni sürüm PR #1 dalında incelenebilir.
+- Şirket/veri sorumlusu bilgileri ve posta kutusu doğrulaması hâlâ bekliyor. Üretim KV üzerinde gerçek talep gönderilmedi. Panel ve kimlik doğrulama kodu değiştirilmedi.

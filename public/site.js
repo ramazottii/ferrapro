@@ -129,7 +129,7 @@ function footer() {
       <strong>FerraPro</strong>
       <span>Ataşehir / İstanbul</span>
       <a class="foot-mail" href="mailto:info@ferrapro.com">info@ferrapro.com</a>
-      <a class="foot-mail" href="tel:+905325891436">0532 589 14 36</a>
+      <a class="foot-mail" href="tel:+905307161877">0530 716 18 77</a>
     </p>
     <nav>
       <a href="/sektorler">Sektörler</a>
@@ -376,3 +376,15 @@ if (form) {
     }
   });
 }
+
+// Progressive enhancement: content remains visible without JS or motion support.
+(() => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) {
+      entry.target.classList.add('motion-enter');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: .08 });
+  document.querySelectorAll('.hero-copy, .hero-visual, .cats-heading, .cat-grid li, .sales-heading, .business-grid a, .path li, .close .wrap, .contact-method, .sector-card').forEach(el => observer.observe(el));
+})();
