@@ -82,3 +82,9 @@ Canlı ferrapro.com tarayıcıda açıldı; yeni hero, v65 kaynaklar ve 0530 716
 - Yeni kayıtlar marka/SKU/eldeki stok iddiası taşımaz; tedarik koşulları teklif sırasında teyit edilir. Kategori açıklaması bunu belirtir. Özel fiyat/maliyet kaynağı değişmedi.
 - Açık alt kategori kimliği eklendi: kalemlik/kalemtıraş gibi sözcüklerin yanlış gruba gitmesi önlendi. Eski alt grup URL kimlikleri korundu.
 - npm run check geçti; minimum çeşit, benzersizlik ve 11 alt grup testleri eklendi. Tarayıcıda 104 seçenek/11 alt grup doğrulandı.
+
+## 20 Eylül — kırtasiye kataloğu canlı yayını
+Kullanıcının "canlıya alalım" talimatıyla 130f19b yayımlandı.
+Cloudflare sürümü: 1bda7980-a6f3-489f-b34d-47a43ca367fb.
+Önceki sürüm: 5767c793-be99-42d9-acfb-74ade8ceb114.
+Yayın öncesi npm run check başarılı; Worker/panel farkı yok. Canlı kırtasiye sayfasında 11 alt grup ve 104 seçenek tarayıcıda doğrulandı. Önceki bölümdeki "henüz canlı değil" ifadesi artık tarihsel durumdur.
