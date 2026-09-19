@@ -9,7 +9,7 @@
   const meta = {
     Hijyen: ['hijyen', 'Havlu, tuvalet kâğıdı ve peçete seçenekleri.'],
     Temizlik: ['temizlik', 'Kullanım alanınıza göre temizlik ürünleri ve yardımcı malzemeler.'],
-    Kırtasiye: ['ofis', 'Kâğıt, dosyalama ve günlük ofis ihtiyaçları.'],
+    Kırtasiye: ['ofis', 'Kalemler, kâğıtlar, dosyalama, masaüstü gereçleri ve sunum malzemeleri.'],
     Mutfak: ['mutfak', 'Servis, içecek, ikram ve bulaşık ihtiyaçları.'],
     Ambalaj: ['ambalaj', 'Paketleme, taşıma ve saklama ürünleri.'],
     PC: ['bilgisayar', 'Yazıcı ve bilgisayar için sarf malzemeleri.'],
@@ -27,7 +27,7 @@
       const items=data.urunler.filter(u=>grupAnahtar(g.g).includes(u.kategori));
       const buckets=new Map();
       items.forEach(item=>{
-        const tip=altBul(g.g,item.satir||item.ad);
+        const tip=altBul(g.g,item.satir||item.ad,item.alt);
         if(!buckets.has(tip.id))buckets.set(tip.id,{...tip,items:[]});
         buckets.get(tip.id).items.push(item);
       });
@@ -63,9 +63,10 @@
     intro.append(el('p',current?meta[group][1]:'İhtiyacınız olan alanı seçin. Alt grupları keşfedin veya ürün adıyla arayın.'));
     if(current) {
       const ask=el('div',null,'category-inquiry');
-      ask.append(el('p','Hangi ürünü seçeceğinizden emin değil misiniz? Bu grubun tamamı için görüşme talebi bırakabilirsiniz.'),add(current.ad,selected?.ad||'Genel ihtiyaç','Bu grup için görüşelim'));
+      ask.append(el('p','Toplu ürün ve sarf ihtiyaçlarınızı tek talepte iletebilirsiniz. Marka, ambalaj ve tedarik koşulları teklif aşamasında netleştirilir.'),add(current.ad,selected?.ad||'Genel ihtiyaç','Bu grup için görüşelim'));
       intro.append(ask);
     }
+    
     const info=document.getElementById('kat-meta');
     root.replaceChildren();
     if(!group&&!query) {
@@ -90,7 +91,7 @@
         const a=link('',url(group,s.id),'subcategory-card');
         const image=grupFoto(s.id);
         if(image){const img=el('img');img.src=image;img.alt='';img.loading='lazy';a.append(img);}
-        a.append(el('h2',s.ad),el('span',s.items.length+' seçenek'),el('b','Ürünleri incele →'));grid.append(a);
+        a.append(el('h2',s.ad),el('span',s.aciklama || ''),el('span',s.items.length+' seçenek'),el('b','Ürünleri incele →'));grid.append(a);
       });
       root.append(grid);
       if(sub)info.append(el('span',' · Önceki alt grup bulunamadı; güncel gruplardan seçim yapabilirsiniz.'));

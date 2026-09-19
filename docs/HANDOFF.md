@@ -74,3 +74,11 @@ Cloudflare sürümü: 5767c793-be99-42d9-acfb-74ade8ceb114.
 Yukarıdaki "henüz yayımlanmadı" notları artık tarihsel durumdur; katalog, teklif listesi, yeni tasarım ve telefon canlıdadır.
 Yayın öncesi npm run check geçti; önceki yayın commit'iyle Worker ve panel farkı yok.
 Canlı ferrapro.com tarayıcıda açıldı; yeni hero, v65 kaynaklar ve 0530 716 18 77 telefon bağlantısı doğrulandı. Gerçek talep gönderilmedi.
+
+
+## 20 Eylül — kırtasiye kapsam düzeltmesi (henüz canlı değil)
+- Avansas kategori araştırması: docs/catalog-research-2026-09-20.md.
+- 12 birleşik/tekrarlı kırtasiye satırı yerine 104 benzersiz teklif talep türü, 11 alt grup. Toplam 353 halka açık satır.
+- Yeni kayıtlar marka/SKU/eldeki stok iddiası taşımaz; tedarik koşulları teklif sırasında teyit edilir. Kategori açıklaması bunu belirtir. Özel fiyat/maliyet kaynağı değişmedi.
+- Açık alt kategori kimliği eklendi: kalemlik/kalemtıraş gibi sözcüklerin yanlış gruba gitmesi önlendi. Eski alt grup URL kimlikleri korundu.
+- npm run check geçti; minimum çeşit, benzersizlik ve 11 alt grup testleri eklendi. Tarayıcıda 104 seçenek/11 alt grup doğrulandı.

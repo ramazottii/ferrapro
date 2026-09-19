@@ -7,7 +7,7 @@ const context=vm.createContext({
   document:{querySelectorAll:()=>[],querySelector:()=>null,getElementById:()=>null},
 });
 vm.runInContext(script,context);
-const classify=(group,text)=>vm.runInContext(`altBul(${JSON.stringify(group)},${JSON.stringify(text)}).id`,context);
+const classify=(group,text,alt)=>vm.runInContext(`altBul(${JSON.stringify(group)},${JSON.stringify(text)},${JSON.stringify(alt)}).id`,context);
 assert.equal(classify('Temizlik','Doğal Güç Mop Beyaz 1×50'),'arac');
 assert.equal(classify('Temizlik','Sıvı el sabunu 5 L'),'sabun');
 assert.equal(classify('Temizlik','Kıvamlı çamaşır suyu 20 kg'),'camasir-suyu');
@@ -15,7 +15,14 @@ assert.equal(classify('Temizlik','Çamaşır Deterjanı 10 kg'),'camasir');
 assert.equal(classify('Mutfak','Çay 1 kg'),'kahve');
 assert.equal(classify('Mutfak','Ice Tea Şeftali 330 ml'),'icecek');
 const data=JSON.parse(readFileSync(new URL('../public/katalog.json',import.meta.url),'utf8'));
-for(const row of data.urunler) assert.notEqual(classify(row.kategori,row.satir),'diger',row.satir);
+for(const row of data.urunler) assert.notEqual(classify(row.kategori,row.satir,row.alt),'diger',row.satir);
+
+const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
+assert.ok(stationery.length >= 50);
+assert.equal(new Set(stationery.map(r=>r.satir)).size,stationery.length);
+assert.equal(new Set(stationery.map(r=>r.alt)).size,11);
+assert.equal(classify('Kırtasiye','Kalemtıraş','kesim'),'kesim');
+assert.equal(classify('Kırtasiye','Kalemlik','masaustu'),'masaustu');
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

@@ -3,7 +3,7 @@ const WA = ""; /* 90xxxxxxxxxx — numara gelince dolar */
 const GRUPLAR = [
   { g: "Hijyen", ad: "Temizlik Kâğıt Ürünleri" },
   { g: "Temizlik", ad: "Temizlik Ürünleri" },
-  { g: "Kırtasiye", ad: "Kırtasiye Ürünleri" },
+  { g: "Kırtasiye", ad: "Kırtasiye ve Ofis Malzemeleri" },
   { g: "Mutfak", ad: "Mutfak / İkram" },
   { g: "Ambalaj", ad: "Ambalaj" },
   { g: "PC", ad: "Bilgisayar ve Yazıcı Sarf Malzemeleri" },
@@ -244,13 +244,17 @@ const ALTLAR = {
     { id: "atik", ad: "Tıbbi Atık", test: (t) => /atık/.test(t) },
   ],
   Kırtasiye: [
-    { id: "a4", ad: "A4 Kağıt", test: (t) => /a4|fotokopi/.test(t) },
-    { id: "klasor", ad: "Klasör", test: (t) => t.includes("klasör") },
-    { id: "dosya", ad: "Poşet Dosya", test: (t) => /dosya/.test(t) },
-    { id: "pil", ad: "Pil", test: (t) => /pil|\baa\b/.test(t) },
-    { id: "kalem", ad: "Kalem", test: (t) => t.includes("kalem") },
-    { id: "zimba", ad: "Zımba", test: (t) => t.includes("zımba") },
-    { id: "not", ad: "Not", test: (t) => t.includes("not") },
+    { id: "a4", ad: "Fotokopi ve Özel Kâğıtlar", aciklama: "Ebat, gramaj ve paket adedine göre teklif.", test: (t) => ["a4 fotokopi kâğıdı", "a3 fotokopi kâğıdı", "renkli fotokopi kâğıdı", "gramajlı baskı kâğıdı", "fotoğraf kâğıdı", "plotter kâğıdı", "sürekli form kâğıdı", "karbon kâğıdı", "termal pos rulosu"].includes(t) },
+    { id: "kalem", ad: "Kalemler ve Yazı Gereçleri", aciklama: "Uç tipi, çizgi kalınlığı ve renk tercihinize göre teklif.", test: (t) => ["tükenmez kalem", "jel kalem", "roller kalem", "kurşun kalem", "versatil uçlu kalem", "fosforlu kalem", "permanent marker", "beyaz tahta kalemi", "asetat kalemi", "fineliner kalem", "imza kalemi", "dolma kalem", "kalem ucu", "kalem mürekkebi"].includes(t) },
+    { id: "klasor", ad: "Klasör ve Arşivleme", aciklama: "Belge formatı, sırt genişliği ve arşiv ihtiyacına göre seçenekler.", test: (t) => ["geniş klasör", "dar klasör", "halkalı klasör", "karton klasör", "arşiv kutusu", "klasör sırt etiketi"].includes(t) },
+    { id: "dosya", ad: "Dosyalar ve Evrak Düzeni", aciklama: "Belge boyutu, kapasite ve kapama tipine göre seçenekler.", test: (t) => ["poşet dosya", "telli dosya", "sıkıştırmalı dosya", "askılı dosya", "körüklü dosya", "çıtçıtlı dosya", "sunum dosyası", "imza dosyası", "dosya ayracı", "sekreterlik", "proje dosyası"].includes(t) },
+    { id: "not", ad: "Defter, Ajanda ve Notlar", aciklama: "Ebat, sayfa düzeni ve yaprak sayısına göre seçenekler.", test: (t) => ["spiralli defter", "sert kapaklı defter", "bloknot", "küp not kâğıdı", "yapışkanlı not kâğıdı", "sayfa işaretleyici", "tarihsiz ajanda", "tarihli ajanda", "fihrist", "ticari defter", "masa takvimi"].includes(t) },
+    { id: "zimba", ad: "Zımba, Delgeç ve Sabitleme", aciklama: "Kapasite, ölçü ve kullanım sıklığına göre seçenekler.", test: (t) => ["masaüstü zımba makinesi", "arşiv tipi zımba makinesi", "zımba teli", "zımba sökücü", "delgeç", "ataş", "evrak mandalı", "raptiye", "harita çivisi", "paket lastiği"].includes(t) },
+    { id: "masaustu", ad: "Masaüstü Düzenleyiciler", aciklama: "Ölçü, malzeme ve masa düzenine göre seçenekler.", test: (t) => ["kalemlik", "evrak rafı", "magazinlik", "kartvizitlik", "masaüstü organizer", "hesap makinesi", "kaşe", "istampa", "istampa mürekkebi"].includes(t) },
+    { id: "kesim", ad: "Kesim, Yapıştırma ve Düzeltme", aciklama: "Ölçü, uygulama yüzeyi ve kullanım amacına göre seçenekler.", test: (t) => ["ofis makası", "maket bıçağı", "maket bıçağı yedeği", "cetvel", "şeffaf ofis bandı", "çift taraflı bant", "bant kesici", "stick yapıştırıcı", "sıvı yapıştırıcı", "silgi", "kalemtıraş", "şerit düzeltici", "sıvı düzeltici"].includes(t) },
+    { id: "sunum", ad: "Sunum ve Planlama", aciklama: "Ebat ve mevcut ekipmanla uyumluluğa göre seçenekler.", test: (t) => ["beyaz yazı tahtası", "mantar pano", "flipchart", "flipchart kâğıdı", "tahta silgisi", "pano mıknatısı", "laminasyon filmi", "cilt kapağı", "cilt spirali"].includes(t) },
+    { id: "zarf", ad: "Zarflar ve Etiketler", aciklama: "Ebat, malzeme ve baskı ihtiyacına göre seçenekler.", test: (t) => ["diplomat zarf", "torba zarf", "hava kabarcıklı zarf", "mektup zarf", "adres etiketi", "barkod etiketi", "raf etiketi", "nokta etiketi"].includes(t) },
+    { id: "pil", ad: "Piller", aciklama: "Cihazın pil kodu ve paket adedine göre teklif.", test: (t) => ["aa kalem pil", "aaa ince kalem pil", "düğme pil", "9v pil"].includes(t) },
   ],
   Ambalaj: [
     { id: "strec", ad: "Streç", test: (t) => t.includes("streç") },
@@ -269,7 +273,9 @@ const ALTLAR = {
   ],
 };
 
-function altBul(kat, satir) {
+function altBul(kat, satir, explicitId) {
+  const explicit = (ALTLAR[kat] || []).find(x => x.id === explicitId);
+  if (explicit) return explicit;
   const t = String(satir || "").toLocaleLowerCase("tr");
   const kurallar = ALTLAR[kat] || [];
   for (const k of kurallar) if (k.test(t)) return k;
