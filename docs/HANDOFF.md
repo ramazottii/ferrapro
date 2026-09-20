@@ -279,6 +279,13 @@ Kullanıcı Asperox sarı/mavi sprey ve bulaşık makinesi ürün görsellerini 
 Cloudflare sürümü: dc9a8150-4534-4d51-8836-5c80c13e4fb7.
 Önceki sürüm: cf4ae515-2099-4ead-833b-509b1e628fce.
 
+## 20 Eylül — Sarı Güç 1000 gr kartı kaldırıldı
+Diğer Temizlik Ürünleri’ndeki son sıradaki Sarı Güç 1000 gr · Adet satırı çıkarıldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 0f8d814f-1dc3-4f16-bf51-60d7d9561bc3.
+Önceki sürüm: dc9a8150-4534-4d51-8836-5c80c13e4fb7.
+
 
 
 
