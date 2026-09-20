@@ -1370,14 +1370,6 @@
     },
     {
       "kategori": "Kırtasiye",
-      "satir": "Arşiv Tipi Zımba Makinesi",
-      "alt": "zimba",
-      "talepTuru": true,
-      "gorsel": "/img/products/zimba.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
       "satir": "Zımba Teli",
       "alt": "zimba",
       "talepTuru": true,
@@ -1501,7 +1493,7 @@
       "satir": "Istampa",
       "alt": "masaustu",
       "talepTuru": true,
-      "gorsel": "/img/products/stamp.webp",
+      "gorsel": "/img/products/stamppad.webp",
       "gorselTuru": "temsili"
     },
     {

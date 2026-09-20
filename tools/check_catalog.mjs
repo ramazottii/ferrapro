@@ -192,6 +192,10 @@ assert.ok(data.urunler.some(r=>r.satir==='Ajandalar'&&r.gorsel.endsWith('planner
 assert.ok(data.urunler.some(r=>r.satir==='Bloknot'&&r.gorsel.endsWith('notepad.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Yapışkanlı Not Kâğıdı'&&r.gorsel.endsWith('stickynotes.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Ticari Defter'&&r.gorsel.endsWith('ledger.webp')));
+assert.equal(data.urunler.filter(r=>r.satir==='Arşiv Tipi Zımba Makinesi').length,0);
+const zimba=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='zimba');
+assert.equal(zimba.length,9);
+assert.ok(data.urunler.some(r=>r.satir==='Istampa'&&r.gorsel.endsWith('stamppad.webp')));
 
 
 

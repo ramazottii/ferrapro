@@ -342,6 +342,13 @@ Tarihsiz/tarihli ajanda ve fihrist kartları tek “Ajandalar” talebine indirg
 Cloudflare sürümü: b7f74a31-d0e3-4360-bb9f-56758fa817c9.
 Önceki sürüm: dfd15936-2107-4df1-b889-74349e9039f8.
 
+## 20 Eylül — Zımba sadeleştirme ve ıstampa görseli
+Arşiv tipi zımba kartı kaldırıldı. Masaüstü düzenleyicilerde Istampa, kaşeden ayrı temsili mürekkep yastığı görseli aldı. npm run check: 510 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 125d5e34-95f5-4ec1-a26f-7dd6319c2892.
+Önceki sürüm: b7f74a31-d0e3-4360-bb9f-56758fa817c9.
+
 
 
 
