@@ -96,37 +96,37 @@
     {
       "kategori": "Hijyen",
       "satir": "Havlu 2'li×12 · 100 yaprak · 21,5gr × 2 kat · 12,30 m · koli 12",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Havlu 6'lı×4 · 100 yaprak · 21,5gr × 2 kat · 12,30 m · koli 4",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "3 Katlı Havlu 3'lü×8 · 85 yaprak · 17,5gr × 3 kat · 10,46 m · koli 8",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "3 Katlı Havlu 6'lı×4 · 85 yaprak · 17,5gr × 3 kat · 10,46 m · koli 4",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Dev Havlu 1'li×6 · 750 yaprak · 23gr × 2 kat · 93 m · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Dev Havlu 300 yaprak 1'li×6 · 300 yaprak · 21,5gr × 2 kat · 36 m · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -192,19 +192,19 @@
     {
       "kategori": "Hijyen",
       "satir": "Havlu 6'lı×4 · 90 yaprak · 19gr × 2 kat · 10,80 m · koli 4",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Havlu 8'li×3 · 90 yaprak · 19gr × 2 kat · 10,80 m · koli 3",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Havlu 12'li×4 · 90 yaprak · 19gr × 2 kat · 10,80 m · koli 4",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -246,13 +246,13 @@
     {
       "kategori": "Hijyen",
       "satir": "Islak Havlu · 100'lü · 1 kat · koli 24 paket",
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/tissue.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Beyaz 6'lı Havlu · 90 yaprak · 10 m · 2 kat · 6'lı × koli 4",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -702,7 +702,7 @@
     {
       "kategori": "Hijyen",
       "satir": "Havlu 6×4 · koli 24 adet",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -714,25 +714,25 @@
     {
       "kategori": "Hijyen",
       "satir": "Havlu 8'li · 80 yaprak · 17,66gr × 3 kat · 10,48 m · koli 3×8",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Havlu 8'li · 85 yaprak · 17gr × 2 kat · 10,20 m · koli 3×8",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Havlu 8×3 · 80 yaprak · 22gr × 2 kat · 9,60 m · koli 3×8",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Havlu 8 · 100 yaprak · 45,5gr × 2 kat · 12,5 m · koli 3×8",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -972,13 +972,13 @@
     {
       "kategori": "Temizlik",
       "satir": "Kıvamlı çamaşır suyu 20 kg · bidon",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Yüzey temizleyici 20 kg / 5 kg · bidon",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -990,13 +990,13 @@
     {
       "kategori": "Temizlik",
       "satir": "pas-kireç 1 L · koli 18",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "krem 750 ml amonyak · adet",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1008,14 +1008,14 @@
     {
       "kategori": "Temizlik",
       "satir": "kapsül çamaşır 50’li · koli 5",
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/detergent.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Toz deterjan 10 kg · çuval",
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/detergent.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -1050,8 +1050,8 @@
     {
       "kategori": "Temizlik",
       "satir": "Faraşlı süpürge takım · adet",
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/brush.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -1110,20 +1110,20 @@
     {
       "kategori": "Sağlık",
       "satir": "Tıbbi atık kovası 5 L · adet",
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bin.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "İş eldiveni (temizlik personeli) · çift",
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/gloves.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Bulaşık / ev tipi eldiven · çift",
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/gloves.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
@@ -1140,8 +1140,8 @@
     {
       "kategori": "PC",
       "satir": "Toner / kartuş · adet",
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/toner.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
@@ -1224,8 +1224,8 @@
     {
       "kategori": "Mutfak",
       "satir": "Soda 24’lü · koli",
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -1248,8 +1248,8 @@
     {
       "kategori": "Mutfak",
       "satir": "Coffee mate 500 g · koli 12",
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/coffee.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -1290,8 +1290,8 @@
     {
       "kategori": "Temizlik",
       "satir": "Çamaşır Deterjanı 10 kg · adet",
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/detergent.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -1368,7 +1368,7 @@
     {
       "kategori": "Temizlik",
       "satir": "Parfümlü Yüzey Temizleme Maddesi 20 kg · adet",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1380,14 +1380,14 @@
     {
       "kategori": "Temizlik",
       "satir": "Kıvamlı Çamaşır Suyu 20 kg · adet",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Maden Soda 24'lü · koli",
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -1410,20 +1410,20 @@
     {
       "kategori": "Mutfak",
       "satir": "Soda Limonlu 24'lü · koli",
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Süt 1000 ml Laktozsuz 12'li · koli",
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Enerji İçeceği 250 ml 24'lü · adet",
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -1434,7 +1434,7 @@
     {
       "kategori": "Temizlik",
       "satir": "Çamaşır Suyu 20 L · 20 litre bidon",
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2170,8 +2170,8 @@
       "satir": "Pano mıknatısı",
       "alt": "sunum",
       "talepTuru": true,
-      "gorsel": "/img/collection/ofis.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/clips.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Kırtasiye",
@@ -2194,8 +2194,8 @@
       "satir": "Cilt spirali",
       "alt": "sunum",
       "talepTuru": true,
-      "gorsel": "/img/collection/ofis.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/lamination.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Kırtasiye",
@@ -2322,32 +2322,32 @@
       "satir": "Jumbo tuvalet kâğıdı dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten çekmeli tuvalet kâğıdı dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Masaüstü peçete dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Klozet örtüsü dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
@@ -2378,7 +2378,7 @@
       "satir": "Tek kullanımlık el kurulama havlusu",
       "alt": "mendil",
       "talepTuru": true,
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2386,24 +2386,24 @@
       "satir": "Islak mendil",
       "alt": "islak",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/tissue.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Tekli paket ıslak mendil",
       "alt": "islak",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/tissue.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Yüzey temizleme mendili",
       "alt": "islak",
       "talepTuru": true,
-      "gorsel": "/img/collection/hijyen.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/tissue.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
@@ -2450,7 +2450,7 @@
       "satir": "Mavi rulo havlu",
       "alt": "havlu",
       "talepTuru": true,
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2458,7 +2458,7 @@
       "satir": "Mutfak rulo havlu",
       "alt": "havlu",
       "talepTuru": true,
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2482,23 +2482,23 @@
       "satir": "Sıvı sabun dispenseri",
       "alt": "sabun",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Köpük sabun dispenseri",
       "alt": "sabun",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Genel yüzey temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2514,7 +2514,7 @@
       "satir": "Ahşap yüzey temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2522,7 +2522,7 @@
       "satir": "Seramik yüzey temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2530,7 +2530,7 @@
       "satir": "Paslanmaz çelik yüzey temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2538,7 +2538,7 @@
       "satir": "Zemin bakım ürünü",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2562,8 +2562,8 @@
       "satir": "Toz çamaşır deterjanı",
       "alt": "camasir",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/detergent.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -2586,7 +2586,7 @@
       "satir": "Kıvamlı çamaşır suyu",
       "alt": "camasir-suyu",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2594,7 +2594,7 @@
       "satir": "Sıvı çamaşır suyu",
       "alt": "camasir-suyu",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/cleaner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2658,8 +2658,8 @@
       "satir": "Bulaşık makinesi tuzu",
       "alt": "bulasik-temizlik",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/detergent.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -2754,8 +2754,8 @@
       "satir": "Faraşlı süpürge",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/brush.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -2778,16 +2778,16 @@
       "satir": "Cam çekçeği",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/mop.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Yer çekçeği",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/collection/temizlik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/mop.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -2954,8 +2954,8 @@
       "satir": "Kahve kreması",
       "alt": "kahve",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/coffee.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -2978,40 +2978,40 @@
       "satir": "Maden suyu",
       "alt": "icecek",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Meyveli maden suyu",
       "alt": "icecek",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Meyve suyu",
       "alt": "icecek",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Soğuk çay",
       "alt": "icecek",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/tea.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Süt",
       "alt": "icecek",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/water.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -3042,32 +3042,32 @@
       "satir": "Sıcak içecek bardak kapağı",
       "alt": "bardak",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bardak.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Soğuk içecek bardak kapağı",
       "alt": "bardak",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bardak.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Bardak kılıfı",
       "alt": "bardak",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bardak.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Bardak taşıyıcı",
       "alt": "bardak",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bardak.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -3154,8 +3154,8 @@
       "satir": "Kâğıt pipet",
       "alt": "servis",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/cutlery.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -3178,40 +3178,40 @@
       "satir": "Servis tepsisi",
       "alt": "servis",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bowl.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Masa örtüsü",
       "alt": "servis",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/masa.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Amerikan servis kâğıdı",
       "alt": "servis",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/masa.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Alüminyum folyo",
       "alt": "saklama",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/strec.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
       "satir": "Pişirme kâğıdı",
       "alt": "saklama",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/strec.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -3242,8 +3242,8 @@
       "satir": "Kahve filtre kâğıdı",
       "alt": "saklama",
       "talepTuru": true,
-      "gorsel": "/img/collection/mutfak.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/coffee.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Mutfak",
@@ -3370,8 +3370,8 @@
       "satir": "Streç sarma aparatı",
       "alt": "strec",
       "talepTuru": true,
-      "gorsel": "/img/collection/ambalaj.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/strec.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Ambalaj",
@@ -3434,8 +3434,8 @@
       "satir": "Köpük ambalaj şiltesi",
       "alt": "koruma",
       "talepTuru": true,
-      "gorsel": "/img/collection/ambalaj.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bubble.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Ambalaj",
@@ -3530,8 +3530,8 @@
       "satir": "Kargo poşeti",
       "alt": "kasa",
       "talepTuru": true,
-      "gorsel": "/img/collection/ambalaj.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/kasa.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Ambalaj",
@@ -3562,8 +3562,8 @@
       "satir": "Güvenlik bantlı poşet",
       "alt": "kasa",
       "talepTuru": true,
-      "gorsel": "/img/collection/ambalaj.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/kasa.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Ambalaj",
@@ -3698,23 +3698,23 @@
       "satir": "Siyah mürekkep kartuşu",
       "alt": "toner",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/toner.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "Renkli mürekkep kartuşu",
       "alt": "toner",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/toner.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "Tanklı yazıcı mürekkebi",
       "alt": "toner",
       "talepTuru": true,
-      "gorsel": "/img/products/inkbottle.webp",
+      "gorsel": "/img/products/usb.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -3754,7 +3754,7 @@
       "satir": "USB-A USB-C kablo",
       "alt": "usb",
       "talepTuru": true,
-      "gorsel": "/img/products/cable.webp",
+      "gorsel": "/img/products/usb.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -3762,7 +3762,7 @@
       "satir": "USB-C USB-C kablo",
       "alt": "usb",
       "talepTuru": true,
-      "gorsel": "/img/products/cable.webp",
+      "gorsel": "/img/products/usb.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -3770,7 +3770,7 @@
       "satir": "Yazıcı USB kablosu",
       "alt": "usb",
       "talepTuru": true,
-      "gorsel": "/img/products/cable.webp",
+      "gorsel": "/img/products/usb.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -3818,7 +3818,7 @@
       "satir": "USB uzatma kablosu",
       "alt": "usb",
       "talepTuru": true,
-      "gorsel": "/img/products/cable.webp",
+      "gorsel": "/img/products/usb.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -3850,16 +3850,16 @@
       "satir": "Çoklu priz",
       "alt": "power",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/charger.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "Akım korumalı priz",
       "alt": "power",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/charger.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
@@ -3898,7 +3898,7 @@
       "satir": "Kart okuyucu",
       "alt": "depolama",
       "talepTuru": true,
-      "gorsel": "/img/products/cable.webp",
+      "gorsel": "/img/products/drive.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -3906,32 +3906,32 @@
       "satir": "Kablolu kulaklık",
       "alt": "toplanti",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/presenter.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "Mikrofonlu kulaklık",
       "alt": "toplanti",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/presenter.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "Web kamera",
       "alt": "toplanti",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/mouse.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "USB mikrofon",
       "alt": "toplanti",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/presenter.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
@@ -3962,16 +3962,16 @@
       "satir": "Dizüstü bilgisayar standı",
       "alt": "bakim",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/organizer.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
       "satir": "Monitör yükseltici",
       "alt": "bakim",
       "talepTuru": true,
-      "gorsel": "/img/collection/bilgisayar.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/organizer.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
@@ -4042,32 +4042,32 @@
       "satir": "Tek kullanımlık galoş",
       "alt": "maske",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/cap.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Tek kullanımlık önlük",
       "alt": "maske",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/cap.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Ziyaretçi önlüğü",
       "alt": "maske",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/cap.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Koruyucu yüz siperi",
       "alt": "maske",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/mask.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
@@ -4090,32 +4090,32 @@
       "satir": "Tek kullanımlık yastık kılıfı",
       "alt": "masa",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/masa.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Hasta önlüğü",
       "alt": "masa",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/cap.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Kesici delici atık kutusu",
       "alt": "atik",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bin.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Tıbbi atık kovası",
       "alt": "atik",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bin.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
@@ -4154,56 +4154,56 @@
       "satir": "Flaster",
       "alt": "bakim",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bandage.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Yara bandı",
       "alt": "bakim",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/bandage.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Dil basacağı",
       "alt": "bakim",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/cotton.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Eldiven kutusu tutucu",
       "alt": "duzen",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/organizer.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Maske kutusu tutucu",
       "alt": "duzen",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/organizer.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Tek kullanımlık bardak dispenseri",
       "alt": "duzen",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/dispenser.webp",
+      "gorselTuru": "temsili"
     },
     {
       "kategori": "Sağlık",
       "satir": "Muayene örtüsü tutucu",
       "alt": "duzen",
       "talepTuru": true,
-      "gorsel": "/img/collection/saglik.webp",
-      "gorselTuru": "kategori"
+      "gorsel": "/img/products/organizer.webp",
+      "gorselTuru": "temsili"
     }
   ]
 }

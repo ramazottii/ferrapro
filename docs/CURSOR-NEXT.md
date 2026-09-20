@@ -15,8 +15,15 @@ Ferrapro kurumsal B2B tedarik ve görüşme sitesi. Sipariş, ödeme, sepet veya
 
 ## Öncelik sırasıyla kalan işler
 
+### Durum — 20 Eylül akşam (Cursor, yeni üretim yok)
+585 kayıt; 91 WebP. Kategori görseli kalan kart 0. Bekleyen liste boş. 41 eksik anahtar mevcut en yakın aileye bağlandı; hazır dosyalar yeniden üretilmedi.
+
+Kabul edilen ölçü/aksesuar tekrarları: tuvalet, z kat, jumbo, peçete, fotosel; tükenmez-jel-roller-imza; zımba+tel+sökücü; koli bandı ebatları.
+
+Hâlâ ayrı fotoğraf gereken türler: marker alt türleri; soda/süt/meyve suyu/enerji; galoş-önlük-bone; kulaklık-mikrofon; ABD tipi şarj ucu. Bunlar yeni üretim izni olmadan kapanmaz.
+
 ### Kullanıcının ek görevi: eksik ve tekrar eden görseller
-20 Eylül 2026 sayımı: 585 kayıt; 508 kayıtta 91 farklı temsili ürün görseli kullanılıyor. 91 görselin 69'u birden fazla kayıtta, 22'si yalnız bir kayıtta. Tekrar kullanılan 69 görsel 486 kaydı kapsıyor. Kalan 77 kayıtta kategori görseli var; bunlar 41 farklı eksik imageKey değerine karşılık geliyor.
+20 Eylül 2026 ilk sayım: 585 kayıt; 508 kayıtta 91 farklı temsili ürün görseli. Sonraki Cursor turunda kategori görseli 0'a indi; tekrarlar ölçü varyantı olarak kabul edilenler dışında duruyor.
 
 En çok tekrar: fotosel.webp 45, detergent.webp 33, cop.webp 27, tuvalet.webp 25, pecete.webp 25, zkat.webp 22, jumbo.webp 13, cable.webp 11 kayıt.
 

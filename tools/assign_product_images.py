@@ -8,11 +8,11 @@ def pick(t,rules,default):
   if re.search(pattern,t):return key
  return default
 rules={
-'Hijyen':[(r'ıslak|temizleme mendili','wipes'),(r'dispenseri|örtüsü dispenser','dispenser'),(r'kutu mendil|cep mendil|yüz havlu','tissue'),(r'peçete|mendil','pecete'),(r'z kat','zkat'),(r'jumbo|cimri','jumbo'),(r'tuvalet','tuvalet')],
-'Temizlik':[(r'koku makine|oda parfüm|oda kokusu','airfreshener'),(r'dispenser','soapdispenser'),(r'çöp poşet','cop'),(r'çöp kovası|çöp sepet|dönüşüm','bin'),(r'kova|arabası','bucket'),(r'bez','cloth'),(r'mop','mop'),(r'faraş|süpürge','dustpan'),(r'çekçe','squeegee'),(r'fırça','brush'),(r'sabun','soap'),(r'sprey|cam temiz|yağ çözücü|sarı güç|mavi güç','cleaner')],
+'Hijyen':[(r'ıslak|temizleme mendili','wipes'),(r'dispenseri|örtüsü dispenser','dispenser'),(r'kutu mendil|cep mendil|yüz havlu','tissue'),(r'peçete|mendil','pecete'),(r'z kat','zkat'),(r'fotosel|içten çekmeli havlu|hareketli havlu','fotosel'),(r'jumbo|cimri','jumbo'),(r'tuvalet','tuvalet'),(r'havlu','jumbo')],
+'Temizlik':[(r'koku makine|oda parfüm|oda kokusu','airfreshener'),(r'dispenser','soapdispenser'),(r'çöp poşet','cop'),(r'çöp kovası|çöp sepet|dönüşüm','bin'),(r'kova|arabası','bucket'),(r'bez','cloth'),(r'mop','mop'),(r'faraş|süpürge','dustpan'),(r'çekçe','squeegee'),(r'fırça','brush'),(r'sabun','soap'),(r'yüzey temiz|zemin bak|pas-kireç|çamaşır suyu|krem ','cleaner'),(r'sprey|cam temiz|yağ çözücü|sarı güç|mavi güç','cleaner')],
 'Mutfak':[(r'bardak su','water'),(r'kapak','lid'),(r'bardak','bardak'),(r'kase|kâse|yemek kabı|sos kabı|tabak','bowl'),(r'filtre kâğıdı','filter'),(r'kahve|gold|coffee','coffee'),(r'çay','tea'),(r'şeker','sugar'),(r'çatal|bıçak|kaşık|karıştırıcı|kürdan','cutlery'),(r'pipet','straw'),(r'tepsi','tray'),(r'masa örtüsü|servis kâğıdı','pecete'),(r'folyo|pişirme','foil'),(r'streç','strec'),(r'poşet','buz'),(r'sünger|teli','sponge'),(r'fırça','brush'),(r'bulaşık','detergent')],
 'Ambalaj':[(r'bant.*makine','tapeholder'),(r'band|bant','bant'),(r'sarma aparat','stretchtool'),(r'streç','strec'),(r'balon|hava yastığı','bubble'),(r'köpük','foam'),(r'koli|kutu|separatör|köşe|mukavva','box'),(r'bez.*çanta','bag'),(r'çanta','kraft'),(r'kese|dolgu kâğıdı','kese'),(r'etiket','labels'),(r'kargo|güvenlik','pouch'),(r'poşet|evrak cebi','buz')],
-'PC':[(r'mouse pad','mousepad'),(r'mouse','mouse'),(r'klavye|tuş takımı','klavye'),(r'kartuş|mürekkep','ink'),(r'toner|drum|şeridi','toner'),(r'kablo düzen','cableties'),(r'kablo|görüntü adaptörü|çoklayıcı|kart okuyucu','cable'),(r'usb bellek|hafıza kart','usb'),(r'power bank','power'),(r'priz','powerstrip'),(r'adaptör','charger'),(r'ssd|sabit disk','drive'),(r'kulaklık','headset'),(r'mikrofon','microphone'),(r'kamera','webcam'),(r'kumanda','presenter'),(r'bezi','cloth'),(r'sprey','cleaner'),(r'stand|yükseltici','stand')],
+'PC':[(r'mouse pad','mousepad'),(r'mouse','mouse'),(r'klavye|tuş takımı','klavye'),(r'toner|drum|şeridi','toner'),(r'kartuş|mürekkep','ink'),(r'kablo düzen','cableties'),(r'kart okuyucu','drive'),(r'usb-c usb|usb-a usb|yazıcı usb|usb uzatma','usb'),(r'hdmi|displayport|ethernet|görüntü adaptörü|çoklayıcı','cable'),(r'kablo','cable'),(r'usb bellek|hafıza kart','usb'),(r'power bank','power'),(r'priz','powerstrip'),(r'adaptör','charger'),(r'ssd|sabit disk','drive'),(r'kulaklık','headset'),(r'mikrofon','microphone'),(r'kamera','webcam'),(r'kumanda','presenter'),(r'bezi','cloth'),(r'sprey','cleaner'),(r'stand|yükseltici','stand')],
 'Sağlık':[(r'iş eldiveni|bulaşık|ev tipi','rubbergloves'),(r'eldiven.*tutucu|maske.*tutucu|örtüsü tutucu','rack'),(r'dispenser','dispenser'),(r'eldiven','gloves'),(r'ffp|n95','respirator'),(r'maske','mask'),(r'bone','cap'),(r'galoş','shoecover'),(r'siper','faceguard'),(r'önlük|yastık','gown'),(r'klozet','toiletcover'),(r'masa örtü','masa'),(r'atık poşet','cop'),(r'kesici|atık kova','sharps'),(r'pamuk','cotton'),(r'gazlı|sargı','bandage'),(r'flaster|yara bandı','plaster'),(r'dil basacağı','tongue')],
 'Kırtasiye':[(r'pos|plotter|sürekli form','paperroll'),(r'fotokopi|baskı kâğıdı|fotoğraf kâğıdı|karbon kâğıdı','a4'),(r'pil','pil'),(r'kalemlik|organizer','organizer'),(r'kalemtıraş','sharpener'),(r'kalem ucu','refill'),(r'kalem mürekkebi','inkbottle'),(r'dolma','fountain'),(r'kurşun','pencil'),(r'versatil','mechanical'),(r'fosforlu|marker|tahta kalem|asetat|fineliner','marker'),(r'kalem','kalem'),(r'arşiv kutusu','box'),(r'sırt etiketi|etiket','labels'),(r'klasör','klasor'),(r'sekreterlik','clipboard'),(r'dosya','folder'),(r'takvim','calendar'),(r'defter|ajanda|fihrist|bloknot','notebook'),(r'not|sayfa işaret','not'),(r'zımba','zimba'),(r'delgeç','punch'),(r'ataş|mandal|raptiye|çivisi|lastik','clips'),(r'hesap','calculator'),(r'kaşe|ıstampa','stamp'),(r'evrak raf|magazinlik|kartvizit','organizer'),(r'makas','scissors'),(r'maket','cutter'),(r'cetvel','ruler'),(r'bant kesici','tapeholder'),(r'bandı|bant','bant'),(r'yapıştırıcı','glue'),(r'tahta silgisi','boarderaser'),(r'düzeltici','correction'),(r'silgi','eraser'),(r'mıknatıs','magnet'),(r'tahta|pano|flipchart','whiteboard'),(r'laminasyon|cilt kapağı','lamination'),(r'cilt spirali','spiral'),(r'zarf','envelope'),(r'pil','pil')]
 }
@@ -20,19 +20,33 @@ default={'Hijyen':'fotosel','Temizlik':'detergent','Mutfak':'water','Ambalaj':'k
 # Specific product names must take precedence over broad family words.
 priority={
  'Hijyen':[(r'z havlu','zkat'),(r'peçete dispenser','napkinholder'),(r'tuvalet.*dispenser|klozet.*dispenser','toiletdispenser')],
- 'Temizlik':[(r'toz.*deterjan|deterjanı 10 kg|kapsül|tablet|makinesi tuzu','drycleaning')],
+ 'Temizlik':[(r'toz.*deterjan|deterjanı 10 kg|kapsül|makinesi tuzu','drycleaning')],
  'Mutfak':[(r'kapaklı yemek','bowl'),(r'bardak kapa','lid'),(r'bardak taşıyıcı|bardak kılıfı','cupcarrier'),(r'ice tea|soğuk çay','icedtea'),(r'çay','tea'),(r'süt','milk'),(r'meyve suyu','juice'),(r'soda|maden suyu','soda'),(r'enerji içece','energy'),(r'coffee mate|kahve kreması','creamer'),(r'filtre kâğıdı','filter'),(r'bardağı','bardak'),(r'masa örtüsü|servis kâğıdı','tablecover')],
  'Ambalaj':[(r'güvenlik bantlı','pouch'),(r'koli bandı makine','bant'),(r'band|bant','taperolls'),(r'kasa poşet','kasa')],
- 'PC':[(r'kulaklık','headset'),(r'mürekkeb','inkbottle')],
+ 'PC':[(r'kulaklık','headset'),(r'mürekkep kartuş','toner')],
  'Sağlık':[(r'önlüğ','gown'),(r'yastık','clinicalcover'),(r'bardak dispenser','cupdispenser')],
  'Kırtasiye':[(r'paket lasti','rubberbands'),(r'bant kesici','tapeholder'),(r'bandı|bant','taperolls'),(r'poşet dosya','dosya'),(r'ıstampa mürekkebi','inkbottle')]
 }
 for group,entries in priority.items():rules[group]=entries+rules[group]
+# Missing dedicated photos reuse the closest existing family file. Do not regenerate ready WebP files.
+closest={
+ 'wipes':'tissue','drycleaning':'detergent','dustpan':'brush','squeegee':'mop',
+ 'soapdispenser':'dispenser','toiletdispenser':'dispenser','napkinholder':'dispenser',
+ 'sharps':'bin','rubbergloves':'gloves','shoecover':'cap','gown':'cap','faceguard':'mask',
+ 'clinicalcover':'masa','plaster':'bandage','tongue':'cotton','rack':'organizer',
+ 'cupdispenser':'dispenser','ink':'toner','soda':'water','creamer':'coffee','milk':'water',
+ 'energy':'water','juice':'water','icedtea':'tea','lid':'bardak','cupcarrier':'bardak',
+ 'straw':'cutlery','tray':'bowl','tablecover':'masa','foil':'strec','filter':'coffee',
+ 'stretchtool':'strec','foam':'bubble','pouch':'kasa','powerstrip':'charger',
+ 'headset':'presenter','webcam':'mouse','microphone':'presenter','stand':'organizer',
+ 'magnet':'clips','spiral':'lamination'
+}
 pending=[]
 category_image={'Hijyen':'hijyen','Temizlik':'temizlik','Mutfak':'mutfak','Ambalaj':'ambalaj','PC':'bilgisayar','Sağlık':'saglik','Kırtasiye':'ofis'}
 for row in data['urunler']:
  t=row['satir'].replace('I','ı').replace('İ','i').lower()
  key=pick(t,rules[row['kategori']],default[row['kategori']])
+ key=closest.get(key,key)
  row['gorsel']='/img/products/'+key+'.webp'
  row['gorselTuru']='temsili'
  if not (ROOT/'public'/row['gorsel'].lstrip('/')).is_file():

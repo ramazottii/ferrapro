@@ -103,3 +103,12 @@ Kullanıcı hazır sürümün canlıya alınmasını, yeni üretimin durmasını
 Cloudflare sürümü: 43ed425e-799a-4556-ba8a-a48fee41b395.
 Önceki sürüm: 1bda7980-a6f3-489f-b34d-47a43ca367fb.
 103 yeni/değişen statik dosya yüklendi. Panel/Worker kod farkı yok. GitHub codex/visual-refresh dalına gönderildi.
+
+## 20 Eylül — eksik görselleri mevcut dosyalarla bağlama (yeni üretim yok)
+Cursor, hazır WebP dosyalarını yeniden üretmeden 41 eksik aileyi en yakın mevcut ürüne bağladı.
+- 585 kaydın tümü `temsili`; kategori görseli kalan kart 0. `docs/product-images-pending.json` boş.
+- 91 mevcut dosya korundu. Havlu ruloları jumbo; fotoselli/içten çekmeli/hareketli havlu fotosel; yüzey ve çamaşır suyu cleaner; USB kablolar usb; toner/kartuş toner.
+- Kabul edilen varyant tekrarları: tuvalet, z kat, jumbo, peçete ve fotosel ölçüleri; tükenmez/jel/roller/imza kalem ailesi; zımba makinesi + tel + sökücü; koli bandı ebatları.
+- Hâlâ ayrı fotoğraf isteyen türler (üretim kapalı): fosforlu / tahta / permanent marker; soda-süt-meyve suyu-enerji (şu an su/çay/kahve ailesi); galoş-önlük-bone; kulaklık-mikrofon; ABD tipi şarj ucu.
+- npm run check geçti. Bu turda canlı yayın yok.
+
