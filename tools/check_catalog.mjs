@@ -90,6 +90,13 @@ assert.ok(data.urunler.some(r=>r.satir==='Kireç Çözücü'&&r.gorsel.endsWith(
 assert.ok(data.urunler.some(r=>r.satir==='Pas Sökücü'&&r.gorsel.endsWith('cifpas.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Banyo Temizleyici'&&r.gorsel.endsWith('cifbanyo.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Klozet Temizleyici'&&r.gorsel.endsWith('cifklozet.webp')));
+const koku=data.urunler.filter(r=>r.alt==='koku'||/oda parfüm/i.test(r.satir));
+assert.equal(koku.length,4);
+assert.equal(new Set(koku.map(r=>r.gorsel)).size,4);
+assert.ok(data.urunler.some(r=>r.satir==='Oda Kokusu Spreyi'&&r.gorsel.endsWith('odaspray.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Otomatik Koku Makinesi'&&r.gorsel.endsWith('airfreshener.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Koku Makinesi Yedeği'&&r.gorsel.endsWith('kokuyedek.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Oda Parfümü 500 ml')&&r.gorsel.endsWith('odaparfum.webp')));
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

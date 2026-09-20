@@ -612,7 +612,7 @@
     {
       "kategori": "Temizlik",
       "satir": "Oda Parfümü 500 ml · Adet",
-      "gorsel": "/img/products/airfreshener.webp",
+      "gorsel": "/img/products/odaparfum.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2315,7 +2315,7 @@
       "satir": "Oda Kokusu Spreyi",
       "alt": "koku",
       "talepTuru": true,
-      "gorsel": "/img/products/airfreshener.webp",
+      "gorsel": "/img/products/odaspray.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2331,7 +2331,7 @@
       "satir": "Koku Makinesi Yedeği",
       "alt": "koku",
       "talepTuru": true,
-      "gorsel": "/img/products/airfreshener.webp",
+      "gorsel": "/img/products/kokuyedek.webp",
       "gorselTuru": "temsili"
     },
     {

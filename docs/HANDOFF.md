@@ -261,6 +261,17 @@ Cloudflare sürümü: a1c06f1d-3118-4db8-876c-365b7aa0dab0.
 ## 20 Eylül — Kireç ve pas çözücüler Cif krem kutusu
 Kullanıcı Cif kutusu silüeti istedi. Dört kart aynı kısa krem kutu formunu sarı, turuncu, pembe ve yeşil kapaklarla kullanıyor.
 
+### Yayın tamamlandı
+Cloudflare sürümü: 3e122c07-63a6-4abd-9a8d-7177e7b29e5c.
+Önceki sürüm: a1c06f1d-3118-4db8-876c-365b7aa0dab0.
+
+## 20 Eylül — Ortam kokuları ayrı görseller
+Dört kart aynı duvar makinesi fotoğrafını kullanıyordu. Spreye aerosol kutu, 500 ml parfüme pompa şişe, yedeğe kartuş; otomatik makine mevcut krem duvar ünitesinde kaldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: cf4ae515-2099-4ead-833b-509b1e628fce.
+Önceki sürüm: 3e122c07-63a6-4abd-9a8d-7177e7b29e5c.
+
 
 
 
