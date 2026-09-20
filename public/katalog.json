@@ -1685,7 +1685,7 @@
       "satir": "Diplomat Zarf",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/envelope.webp",
+      "gorsel": "/img/products/diplomat.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1693,7 +1693,7 @@
       "satir": "Torba Zarf",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/envelope.webp",
+      "gorsel": "/img/products/pouchenv.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1701,7 +1701,7 @@
       "satir": "Hava Kabarcıklı Zarf",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/bubblemailer.webp",
+      "gorsel": "/img/products/kraftmailer.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1709,7 +1709,7 @@
       "satir": "Mektup Zarf",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/envelope.webp",
+      "gorsel": "/img/products/letterenv.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1717,7 +1717,7 @@
       "satir": "Adres Etiketi",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/addresslabels.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1725,7 +1725,7 @@
       "satir": "Barkod Etiketi",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/barcodelabels.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1733,7 +1733,7 @@
       "satir": "Raf Etiketi",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/shelflabels.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1741,7 +1741,7 @@
       "satir": "Nokta Etiketi",
       "alt": "zarf",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/dotlabels.webp",
       "gorselTuru": "temsili"
     },
     {

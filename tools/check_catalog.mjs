@@ -147,7 +147,7 @@ assert.equal(data.urunler.filter(r=>r.satir.startsWith('Tıbbi Atık Kovası 5 L
 assert.ok(data.urunler.some(r=>r.satir==='Mantar Pano'&&r.gorsel.endsWith('corkboard.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Askılı Dosya'&&r.gorsel.endsWith('hangingfile.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Düğme Pil'&&r.gorsel.endsWith('buttonbatt.webp')));
-assert.ok(data.urunler.some(r=>r.satir==='Hava Kabarcıklı Zarf'&&r.gorsel.endsWith('bubblemailer.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Hava Kabarcıklı Zarf'&&r.gorsel.endsWith('kraftmailer.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Zımba Sökücü'&&r.gorsel.endsWith('stapleremover.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Cilt Spirali'&&r.gorsel.endsWith('bindcoil.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Sayfa Işaretleyici'&&r.gorsel.endsWith('pageflags.webp')));
@@ -204,6 +204,16 @@ assert.ok(data.urunler.some(r=>r.satir==='Sıvı Yapıştırıcı'&&r.gorsel.end
 assert.ok(data.urunler.some(r=>r.satir==='Sıvı Düzeltici'&&r.gorsel.endsWith('liquidcorrector.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Stick Yapıştırıcı'&&r.gorsel.endsWith('glue.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Şerit Düzeltici'&&r.gorsel.endsWith('correction.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Diplomat Zarf'&&r.gorsel.endsWith('diplomat.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Torba Zarf'&&r.gorsel.endsWith('pouchenv.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Mektup Zarf'&&r.gorsel.endsWith('letterenv.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Adres Etiketi'&&r.gorsel.endsWith('addresslabels.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Barkod Etiketi'&&r.gorsel.endsWith('barcodelabels.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Raf Etiketi'&&r.gorsel.endsWith('shelflabels.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Nokta Etiketi'&&r.gorsel.endsWith('dotlabels.webp')));
+const zarf=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='zarf');
+assert.equal(zarf.length,8);
+assert.equal(new Set(zarf.map(r=>r.gorsel)).size,8);
 
 
 

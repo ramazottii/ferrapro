@@ -356,6 +356,13 @@ Maket bıçağı yedeği yalnızca yedek bıçak gösteriyor. Şeffaf ofis band�
 Cloudflare sürümü: 46731fea-7637-4654-92f4-159edea87ad1.
 Önceki sürüm: 125d5e34-95f5-4ec1-a26f-7dd6319c2892.
 
+## 20 Eylül — Zarf ve etiket görselleri
+Diplomat, torba, hava kabarcıklı ve mektup zarfı ayrı temsili görseller aldı. Adres, barkod, raf ve nokta etiketleri de birbirinden ayrıldı. npm run check: 510 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c08d741f-8b33-40d2-acd1-359f18c27373.
+Önceki sürüm: 46731fea-7637-4654-92f4-159edea87ad1.
+
 
 
 
