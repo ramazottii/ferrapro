@@ -1234,22 +1234,6 @@
     },
     {
       "kategori": "Kırtasiye",
-      "satir": "Telli Dosya",
-      "alt": "dosya",
-      "talepTuru": true,
-      "gorsel": "/img/products/tellifile.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
-      "satir": "Sıkıştırmalı Dosya",
-      "alt": "dosya",
-      "talepTuru": true,
-      "gorsel": "/img/products/fastenerfile.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
       "satir": "Askılı Dosya",
       "alt": "dosya",
       "talepTuru": true,
@@ -1302,14 +1286,6 @@
       "alt": "dosya",
       "talepTuru": true,
       "gorsel": "/img/products/clipboard.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
-      "satir": "Proje Dosyası",
-      "alt": "dosya",
-      "talepTuru": true,
-      "gorsel": "/img/products/fastenerfile.webp",
       "gorselTuru": "temsili"
     },
     {

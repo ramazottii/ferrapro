@@ -328,6 +328,13 @@ Karton klasör kaldırıldı. Dar/geniş klasör sırt farkı, halkalı klasör,
 Cloudflare sürümü: b0d3e873-0e2b-4294-a252-fb2f0ff9c947.
 Önceki sürüm: e6fa70ed-ba51-49af-96f2-fd4766cd091f.
 
+## 20 Eylül — Dosya sekmesi sadeleştirildi
+Dosyalar ve Evrak Düzeni’nden telli, sıkıştırmalı ve proje dosyası kartları kaldırıldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: dfd15936-2107-4df1-b889-74349e9039f8.
+Önceki sürüm: b0d3e873-0e2b-4294-a252-fb2f0ff9c947.
+
 
 
 

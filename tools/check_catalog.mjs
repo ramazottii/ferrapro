@@ -179,7 +179,11 @@ assert.ok(data.urunler.some(r=>r.satir==='Geniş Klasör'&&r.gorsel.endsWith('wi
 assert.ok(data.urunler.some(r=>r.satir==='Dar Klasör'&&r.gorsel.endsWith('narrowbinder.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Halkalı Klasör'&&r.gorsel.endsWith('ringbinder.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Arşiv Kutusu'&&r.gorsel.endsWith('archivebox.webp')));
-assert.ok(data.urunler.some(r=>r.satir==='Telli Dosya'&&r.gorsel.endsWith('tellifile.webp')));
+assert.equal(data.urunler.filter(r=>r.satir==='Telli Dosya').length,0);
+assert.equal(data.urunler.filter(r=>r.satir==='Sıkıştırmalı Dosya').length,0);
+assert.equal(data.urunler.filter(r=>r.satir==='Proje Dosyası').length,0);
+const dosya=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='dosya');
+assert.equal(dosya.length,8);
 
 
 
