@@ -202,6 +202,16 @@ Kullanıcı 6’lıda dev rulo formu, 12’lide fazla adet gördüğünü işare
 Cloudflare sürümü: ff50fd1c-4357-43cb-a88b-33ac5871776c.
 Önceki sürüm: b4ce027d-4a52-47e4-8ee1-6790ba3c49d2.
 
+## 20 Eylül — Dispenser görselleri türe göre ayrıldı
+Kullanıcı yedi aparat kartının aynı fotoğrafı kullandığını işaretledi. Her ada ayrı temsili dispenser görseli bağlandı: Z kat, sensörlü, içten çekmeli havlu, jumbo tuvalet, içten çekmeli tuvalet, masaüstü peçete, klozet örtüsü.
+
+### Yayın tamamlandı
+Cloudflare sürümü: e8395ac8-882c-4235-886d-25aca49932d0.
+Önceki sürüm: ff50fd1c-4357-43cb-a88b-33ac5871776c.
+
+
+
+
 
 
 

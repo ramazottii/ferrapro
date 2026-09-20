@@ -1884,7 +1884,7 @@
       "satir": "Z kat havlu dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/zfolddisp.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1892,7 +1892,7 @@
       "satir": "Sensörlü havlu dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/sensordisp.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1900,7 +1900,7 @@
       "satir": "İçten çekmeli havlu dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/centertowel.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1908,7 +1908,7 @@
       "satir": "Jumbo tuvalet kâğıdı dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/jumbotpdisp.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1916,7 +1916,7 @@
       "satir": "İçten çekmeli tuvalet kâğıdı dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/pulltpdisp.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1924,7 +1924,7 @@
       "satir": "Masaüstü peçete dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/napkindisp.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1932,7 +1932,7 @@
       "satir": "Klozet örtüsü dispenseri",
       "alt": "dispenser",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/seatcoverdisp.webp",
       "gorselTuru": "temsili"
     },
     {

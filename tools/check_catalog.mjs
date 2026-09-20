@@ -36,6 +36,7 @@ assert.equal(classify('Hijyen','Peçete 100’lü','pecete'),'pecete');
 assert.equal(classify('Hijyen','Z peçete','pecete'),'pecete');
 assert.equal(classify('Hijyen','Renkli peçete','pecete'),'pecete');
 assert.equal(classify('Hijyen','Z kat havlu dispenseri','dispenser'),'dispenser');
+assert.equal(classify('Hijyen','Masaüstü peçete dispenseri','dispenser'),'dispenser');
 assert.equal(classify('Hijyen','Rulo havlu 6’lı','havlu'),'havlu');
 assert.equal(classify('Hijyen','Dev rulo havlu','havlu'),'havlu');
 assert.equal(vm.runInContext('MARKA_TERCIHLERI.havlu.join(",")',context),'Solo,Selpak,Papia,Familia,Focus,Forest,Rulopak');
