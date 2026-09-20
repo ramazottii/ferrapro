@@ -18,9 +18,23 @@
   const el = (tag, text, cls) => { const n=document.createElement(tag); if(text)n.textContent=text; if(cls)n.className=cls; return n; };
   const link = (text, href, cls) => { const n=el('a',text,cls); n.href=href; return n; };
   const url = (g='', a='', q=query) => katalogYol({g,a,q});
-  const add = (g, name, label='Teklif listeme ekle') => {
+  const brandPicker = (subId) => {
+    const brands = MARKA_TERCIHLERI[subId];
+    if (!brands?.length) return null;
+    const wrap = el('label', null, 'brand-choice');
+    wrap.append(el('span', 'Marka tercihi'));
+    const select = el('select');
+    select.append(new Option('Fark etmez', 'Fark etmez'));
+    brands.forEach((brand) => select.append(new Option(brand, brand)));
+    wrap.append(select, el('small', 'İstediğiniz markayı tedarik ederiz.'));
+    return wrap;
+  };
+  const add = (g, name, label='Teklif listeme ekle', brandSelect) => {
     const button=el('button',label,'btn ghost'); button.type='button';
-    button.addEventListener('click',()=>FerraInterest.add(g,name)); return button;
+    button.addEventListener('click',()=>{
+      FerraInterest.add(g, brandSelect ? markaTercihSatir(name, brandSelect.value) : name);
+    });
+    return button;
   };
   fetch('/katalog.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).then(data=>{
     const groups = GRUPLAR.map(g=>{
@@ -64,7 +78,10 @@
     intro.append(el('p','Fotoğraflar ürün türlerini temsil eder. Marka, model, ambalaj ve tedarik uygunluğu teklif sırasında netleştirilir.','catalog-image-note'));
     if(current) {
       const ask=el('div',null,'category-inquiry');
-      ask.append(el('p','Toplu ürün ve sarf ihtiyaçlarınızı tek talepte iletebilirsiniz. Marka, ambalaj ve tedarik koşulları teklif aşamasında netleştirilir.'),add(current.ad,selected?.ad||'Genel ihtiyaç','Bu grup için görüşelim'));
+      const groupBrand=selected ? brandPicker(selected.id) : null;
+      ask.append(el('p','Toplu ürün ve sarf ihtiyaçlarınızı tek talepte iletebilirsiniz. Marka, ambalaj ve tedarik koşulları teklif aşamasında netleştirilir.'));
+      if(groupBrand) ask.append(groupBrand);
+      ask.append(add(current.ad,selected?.ad||'Genel ihtiyaç','Bu grup için görüşelim',groupBrand?.querySelector('select')));
       intro.append(ask);
     }
 
@@ -121,7 +138,9 @@
       const parts=(item.satir||item.ad).split(' · ');
       body.append(link(g.ad+' / '+s.ad,url(g.g,s.id,''),'product-path'),el('h2',parts[0]));
       if(parts.length>1)body.append(el('p',parts.slice(1).join(' · '),'product-spec'));
-      row.append(figure,body,add(g.ad,item.satir||item.ad));list.append(row);
+      const picker=brandPicker(s.id);
+      if(picker)body.append(picker);
+      row.append(figure,body,add(g.ad,item.satir||item.ad,'Teklif listeme ekle',picker?.querySelector('select')));list.append(row);
     });root.append(list);
   }).catch(()=>{
     root.replaceChildren(el('p','Katalog şu anda yüklenemedi. Lütfen yeniden deneyin veya bizimle iletişime geçin.','cat-empty'),link('İletişime geçin','/iletisim','btn'));

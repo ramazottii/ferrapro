@@ -287,6 +287,16 @@ const ALTLAR = {
   ],
 };
 
+const MARKA_TERCIHLERI = {
+  islak: ["Espiga", "Sleepy", "Selpak"],
+};
+
+function markaTercihSatir(name, brand) {
+  const clean = String(brand || "").trim();
+  if (!clean || /^fark etmez$/i.test(clean)) return `${name} · Marka tercihi: fark etmez`;
+  return `${name} · Marka tercihi: ${clean}`;
+}
+
 function altBul(kat, satir, explicitId) {
   const explicit = (ALTLAR[kat] || []).find(x => x.id === explicitId);
   if (explicit) return explicit;

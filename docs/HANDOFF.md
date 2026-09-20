@@ -128,5 +128,16 @@ Kullanıcı canlı menüde kutu mendil görsellerini ve yanlış satırları iş
 Kullanıcı canlı menüden bakarken adf443db-8c5c-4c14-b788-75480cac1bdb yayımlandı.
 Önceki sürüm: 440132a5-8333-4fe9-aecb-7c71ef1ff1de.
 
+## 20 Eylül — Islak Havlu marka tercihi
+Kullanıcı Espiga / Sleepy / Selpak sergileyip müşterinin seçtiği markayı tedarik etme modelini istedi. Ofispanda görselleri kopyalanmadı; marka logosu veya ambalaj fotoğrafı eklenmedi.
+- Islak Havlu ürün kartlarında ve grup talebinde isteğe bağlı marka seçimi: Espiga, Sleepy, Selpak, Fark etmez.
+- Seçim teklif listesine `Marka tercihi: …` olarak yazılır. Stok veya yetkili bayi iddiası yok.
+- npm run check geçti; Worker/panel kod farkı yok. 11 statik dosya yüklendi.
+
+### Yayın tamamlandı
+Kullanıcının canlıya alma talimatıyla yayımlandı.
+Cloudflare sürümü: 3107e420-5f9a-424a-a665-1cca615dc4f5.
+Önceki sürüm: adf443db-8c5c-4c14-b788-75480cac1bdb.
+
 
 

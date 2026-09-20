@@ -178,6 +178,11 @@
 .product-copy { padding:18px 18px 8px; flex:1; }
 .inner .product-option h2 { font-weight:650; font-size:1rem; line-height:1.45; margin:10px 0; overflow-wrap:anywhere; }
 .product-spec { font-size:.8rem; line-height:1.6; color:var(--mute); }
+.brand-choice { display:block; margin:8px 0 0; font-size:.78rem; color:var(--ink); }
+.brand-choice span { display:block; margin-bottom:6px; font-weight:600; }
+.brand-choice select { display:block; width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); background:white; font:inherit; }
+.brand-choice small { display:block; margin-top:6px; color:var(--mute); font-size:.72rem; line-height:1.45; }
+.category-inquiry .brand-choice { margin:0 0 14px; max-width:280px; }
 .product-option > button { margin:10px 18px 18px; min-height:44px; white-space:normal; }
 .subcategory-card { overflow:hidden; padding:0 0 20px; border-top:1px solid var(--line); border-radius:10px; background:white; }
 .subcategory-card img { width:100%; height:auto; aspect-ratio:1.65; object-fit:contain; background:#f8f5ef; mix-blend-mode:normal; margin:0 0 18px; }

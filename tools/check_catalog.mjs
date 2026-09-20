@@ -29,6 +29,9 @@ assert.equal(new Set(stationery.map(r=>r.satir)).size,stationery.length);
 assert.equal(new Set(stationery.map(r=>r.alt)).size,11);
 assert.equal(classify('Hijyen','Islak havlu 90’lı','islak'),'islak');
 assert.equal(classify('Hijyen','Yüzey temizlik havlusu','islak'),'islak');
+assert.equal(vm.runInContext('MARKA_TERCIHLERI.islak.join(",")',context),'Espiga,Sleepy,Selpak');
+assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90’lı')},${JSON.stringify('Espiga')})`,context),'Islak havlu 90’lı · Marka tercihi: Espiga');
+assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90’lı')},${JSON.stringify('Fark etmez')})`,context),'Islak havlu 90’lı · Marka tercihi: fark etmez');
 assert.equal(classify('Kırtasiye','Kalemlik','masaustu'),'masaustu');
 
 // Exercise the real public form handler without network or private customer data.
