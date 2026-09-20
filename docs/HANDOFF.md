@@ -188,6 +188,15 @@ Kullanıcı ölçü kalabalığını kaldırttı. Grupta 6’lı, 8’li, 12’l
 Cloudflare sürümü: 04d91898-da0c-406b-a6e4-a3fdbdb4f0b2.
 Önceki sürüm: 7a678562-30a7-40f5-83ea-8dffe8bdb06c.
 
+## 20 Eylül — Rulo havlu 6/8 görsel adedi
+Kullanıcı 6’lı ve 8’li kartlarda rulo sayısının yanlış göründüğünü işaretledi. Görseller 3+3 ve 4+4 dizilime çekildi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b4ce027d-4a52-47e4-8ee1-6790ba3c49d2.
+Önceki sürüm: 04d91898-da0c-406b-a6e4-a3fdbdb4f0b2.
+
+
+
 
 
 
