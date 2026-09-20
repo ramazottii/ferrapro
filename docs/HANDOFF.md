@@ -160,5 +160,12 @@ Kullanıcı üç kartın birbirine ve 100’lü yığına benzediğini işaretle
 Cloudflare sürümü: cc155a74-d5d8-462a-9958-c8ec00600391.
 Önceki sürüm: d96560ec-a12b-4535-8c3c-d28f61983bae.
 
+## 20 Eylül — Peçete görsellerinde krem fon
+Kullanıcı kartlarda beyaz/krem karışık zemin gördü. 100’lü, desenli, Z ve garson görselleri aynı krem stüdyo zeminine çekildi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 712042b6-9d7c-4755-bb79-118266850d4b.
+Önceki sürüm: cc155a74-d5d8-462a-9958-c8ec00600391.
+
 
 
