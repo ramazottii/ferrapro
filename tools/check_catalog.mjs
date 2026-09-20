@@ -196,6 +196,14 @@ assert.equal(data.urunler.filter(r=>r.satir==='Arşiv Tipi Zımba Makinesi').len
 const zimba=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='zimba');
 assert.equal(zimba.length,9);
 assert.ok(data.urunler.some(r=>r.satir==='Istampa'&&r.gorsel.endsWith('stamppad.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Maket Bıçağı Yedeği'&&r.gorsel.endsWith('cutterblades.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Maket Bıçağı'&&r.gorsel.endsWith('cutter.webp')));
+assert.ok(data.urunler.some(r=>r.kategori==='Kırtasiye'&&r.satir==='Şeffaf Ofis Bandı'&&r.gorsel.endsWith('cleartape.webp')));
+assert.ok(data.urunler.some(r=>r.kategori==='Kırtasiye'&&r.satir==='Çift Taraflı Bant'&&r.gorsel.endsWith('doublesided.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Sıvı Yapıştırıcı'&&r.gorsel.endsWith('liquidglue.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Sıvı Düzeltici'&&r.gorsel.endsWith('liquidcorrector.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Stick Yapıştırıcı'&&r.gorsel.endsWith('glue.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Şerit Düzeltici'&&r.gorsel.endsWith('correction.webp')));
 
 
 

@@ -1525,7 +1525,7 @@
       "satir": "Maket Bıçağı Yedeği",
       "alt": "kesim",
       "talepTuru": true,
-      "gorsel": "/img/products/cutter.webp",
+      "gorsel": "/img/products/cutterblades.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1541,7 +1541,7 @@
       "satir": "Şeffaf Ofis Bandı",
       "alt": "kesim",
       "talepTuru": true,
-      "gorsel": "/img/products/taperolls.webp",
+      "gorsel": "/img/products/cleartape.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1549,7 +1549,7 @@
       "satir": "Çift Taraflı Bant",
       "alt": "kesim",
       "talepTuru": true,
-      "gorsel": "/img/products/taperolls.webp",
+      "gorsel": "/img/products/doublesided.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1573,7 +1573,7 @@
       "satir": "Sıvı Yapıştırıcı",
       "alt": "kesim",
       "talepTuru": true,
-      "gorsel": "/img/products/glue.webp",
+      "gorsel": "/img/products/liquidglue.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1605,7 +1605,7 @@
       "satir": "Sıvı Düzeltici",
       "alt": "kesim",
       "talepTuru": true,
-      "gorsel": "/img/products/correction.webp",
+      "gorsel": "/img/products/liquidcorrector.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2765,7 +2765,7 @@
       "satir": "Çift Taraflı Bant",
       "alt": "bant",
       "talepTuru": true,
-      "gorsel": "/img/products/taperolls.webp",
+      "gorsel": "/img/products/doublesided.webp",
       "gorselTuru": "temsili"
     },
     {
