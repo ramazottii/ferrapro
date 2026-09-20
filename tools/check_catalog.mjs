@@ -24,7 +24,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:80,Temizlik:90,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:80,Temizlik:90,Mutfak:50,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -214,6 +214,18 @@ assert.ok(data.urunler.some(r=>r.satir==='Nokta Etiketi'&&r.gorsel.endsWith('dot
 const zarf=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='zarf');
 assert.equal(zarf.length,8);
 assert.equal(new Set(zarf.map(r=>r.gorsel)).size,8);
+assert.ok(data.urunler.some(r=>r.satir==='AA Kalem Pil'&&r.gorsel.endsWith('aa.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='AAA Ince Kalem Pil'&&r.gorsel.endsWith('aaa.webp')));
+const mutfak=data.urunler.filter(r=>r.kategori==='Mutfak');
+assert.equal(mutfak.length,53);
+assert.ok(mutfak.every(r=>r.talepTuru&&r.alt));
+assert.equal(new Set(mutfak.map(r=>r.gorsel)).size,53);
+assert.ok(data.urunler.some(r=>r.satir==='Karton Bardak'&&r.gorsel.endsWith('papercup.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Çift Duvarlı Karton Bardak'&&r.gorsel.endsWith('doublewall.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Soğuk Çay'&&r.gorsel.endsWith('icedtea.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Süt'&&r.gorsel.endsWith('milkcarton.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Bulaşık Makinesi Tableti'&&r.gorsel.endsWith('dishtablet.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Kahve Filtre Kâğıdı'&&r.gorsel.endsWith('filterpaper.webp')));
 
 
 
