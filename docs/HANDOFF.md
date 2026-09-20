@@ -174,6 +174,11 @@ Kullanıcı sekmeyi tamamen kaldırttı. Ölçülü Z kat havlu satırları halk
 Cloudflare sürümü: 16fc58d8-ebea-4ce3-8c8e-2f96f9e0bb78.
 Önceki sürüm: 712042b6-9d7c-4755-bb79-118266850d4b.
 
+## 20 Eylül — Mini Jumbo ve tuvalet görselleri krem fon
+Kullanıcı Mini Jumbo, içten çekmeli tuvalet ve tuvalet kâğıdı kartlarında krem zemin istedi.
+
+
+
 
 
 
