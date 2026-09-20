@@ -258,6 +258,10 @@ Kullanıcı kartların aynı fotoğrafı paylaştığını işaretledi. Cam mavi
 Cloudflare sürümü: a1c06f1d-3118-4db8-876c-365b7aa0dab0.
 Önceki sürüm: 158cb139-766e-444d-9705-6d0ce959679a.
 
+## 20 Eylül — Kireç ve pas çözücüler Cif krem kutusu
+Kullanıcı Cif kutusu silüeti istedi. Dört kart aynı kısa krem kutu formunu sarı, turuncu, pembe ve yeşil kapaklarla kullanıyor.
+
+
 
 
 

@@ -82,6 +82,14 @@ const yuzey=data.urunler.filter(r=>r.kategori==='Temizlik'&&(r.alt==='yuzey'||/y
 assert.equal(new Set(yuzey.map(r=>r.gorsel)).size,yuzey.length);
 assert.ok(data.urunler.some(r=>r.satir==='Cam Temizleyici'&&r.gorsel.endsWith('cleaner.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Arap Sabunu'&&r.gorsel.endsWith('arapsoap.webp')));
+const kirec=data.urunler.filter(r=>r.alt==='kirec'||/^Kireç Çözücü$|^Pas Sökücü$|^Banyo Temizleyici$|^Klozet Temizleyici$/.test(r.satir));
+assert.equal(kirec.length,4);
+assert.equal(new Set(kirec.map(r=>r.gorsel)).size,4);
+assert.ok(kirec.every(r=>!r.gorsel.endsWith('detergent.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Kireç Çözücü'&&r.gorsel.endsWith('cifkirec.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Pas Sökücü'&&r.gorsel.endsWith('cifpas.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Banyo Temizleyici'&&r.gorsel.endsWith('cifbanyo.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Klozet Temizleyici'&&r.gorsel.endsWith('cifklozet.webp')));
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {
