@@ -247,6 +247,18 @@ Cloudflare sürümü: 66234d18-8e34-4181-89b9-d2e54df0b49a.
 ## 20 Eylül — Yinelenen toz deterjan kartı kaldırıldı
 Kullanıcı bidon görselli “Toz Deterjan 10 kg” kartını çıkardı. Toz çamaşır deterjanı 10 kg çuval görseli duruyor.
 
+### Yayın tamamlandı
+Cloudflare sürümü: 158cb139-766e-444d-9705-6d0ce959679a.
+Önceki sürüm: 66234d18-8e34-4181-89b9-d2e54df0b49a.
+
+## 20 Eylül — Yüzey temizleyici görselleri ayrıldı
+Kullanıcı kartların aynı fotoğrafı paylaştığını işaretledi. Cam mavi sprey kaldı; genel, ahşap, seramik, paslanmaz, zemin, arap sabunu ve bidon satırlarına ayrı krem görseller bağlandı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: a1c06f1d-3118-4db8-876c-365b7aa0dab0.
+Önceki sürüm: 158cb139-766e-444d-9705-6d0ce959679a.
+
+
 
 
 

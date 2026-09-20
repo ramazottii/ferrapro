@@ -78,6 +78,10 @@ assert.ok(data.urunler.some(r=>r.satir.startsWith('Kapsül Çamaşır Deterjanı
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Çamaşır Yumuşatıcısı 5 L')&&r.gorsel.endsWith('softener.webp')));
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Çamaşır Leke Çıkarıcı')&&r.gorsel.endsWith('stainrem.webp')));
 assert.equal(data.urunler.filter(r=>r.satir.startsWith('Toz Deterjan 10 kg')).length,0);
+const yuzey=data.urunler.filter(r=>r.kategori==='Temizlik'&&(r.alt==='yuzey'||/yüzey/i.test(r.satir)));
+assert.equal(new Set(yuzey.map(r=>r.gorsel)).size,yuzey.length);
+assert.ok(data.urunler.some(r=>r.satir==='Cam Temizleyici'&&r.gorsel.endsWith('cleaner.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Arap Sabunu'&&r.gorsel.endsWith('arapsoap.webp')));
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

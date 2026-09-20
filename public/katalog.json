@@ -566,14 +566,16 @@
     {
       "kategori": "Temizlik",
       "satir": "Yüzey Temizleyici 20 kg / 5 kg · Bidon",
-      "gorsel": "/img/products/cleaner.webp",
-      "gorselTuru": "temsili"
+      "gorsel": "/img/products/surfbidon.webp",
+      "gorselTuru": "temsili",
+      "alt": "yuzey"
     },
     {
       "kategori": "Temizlik",
       "satir": "Fresh 2,5 kg Yüzey · Adet",
-      "gorsel": "/img/products/detergent.webp",
-      "gorselTuru": "temsili"
+      "gorsel": "/img/products/surffresh.webp",
+      "gorselTuru": "temsili",
+      "alt": "yuzey"
     },
     {
       "kategori": "Temizlik",
@@ -954,8 +956,9 @@
     {
       "kategori": "Temizlik",
       "satir": "Parfümlü Yüzey Temizleme Maddesi 20 kg · Adet",
-      "gorsel": "/img/products/cleaner.webp",
-      "gorselTuru": "temsili"
+      "gorsel": "/img/products/surfperfume.webp",
+      "gorselTuru": "temsili",
+      "alt": "yuzey"
     },
     {
       "kategori": "Temizlik",
@@ -1976,7 +1979,7 @@
       "satir": "Genel Yüzey Temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/surfgen.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1992,7 +1995,7 @@
       "satir": "Ahşap Yüzey Temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/woodclean.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2000,7 +2003,7 @@
       "satir": "Seramik Yüzey Temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/ceramicclean.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2008,7 +2011,7 @@
       "satir": "Paslanmaz Çelik Yüzey Temizleyici",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/steelclean.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2016,7 +2019,7 @@
       "satir": "Zemin Bakım Ürünü",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/floorcare.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2024,7 +2027,7 @@
       "satir": "Arap Sabunu",
       "alt": "yuzey",
       "talepTuru": true,
-      "gorsel": "/img/products/soap.webp",
+      "gorsel": "/img/products/arapsoap.webp",
       "gorselTuru": "temsili"
     },
     {
