@@ -557,9 +557,11 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Kıvamlı Çamaşır Suyu 20 kg · Bidon",
-      "gorsel": "/img/products/cleaner.webp",
-      "gorselTuru": "temsili"
+      "satir": "Kıvamlı Çamaşır Suyu 20 kg · 20 kg Bidon",
+      "gorsel": "/img/products/thickbleach20.webp",
+      "gorselTuru": "temsili",
+      "alt": "camasir-suyu",
+      "talepTuru": true
     },
     {
       "kategori": "Temizlik",
@@ -965,9 +967,11 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Kıvamlı Çamaşır Suyu 20 kg · Adet",
-      "gorsel": "/img/products/cleaner.webp",
-      "gorselTuru": "temsili"
+      "satir": "Kıvamlı Çamaşır Suyu 4 kg · 4 kg Bidon",
+      "gorsel": "/img/products/thickbleach4.webp",
+      "gorselTuru": "temsili",
+      "alt": "camasir-suyu",
+      "talepTuru": true
     },
     {
       "kategori": "Mutfak",
@@ -1019,9 +1023,11 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Çamaşır Suyu 20 L · 20 Litre Bidon",
-      "gorsel": "/img/products/cleaner.webp",
-      "gorselTuru": "temsili"
+      "satir": "Sıvı Çamaşır Suyu 20 L · 20 Litre Bidon",
+      "gorsel": "/img/products/bleach20l.webp",
+      "gorselTuru": "temsili",
+      "alt": "camasir-suyu",
+      "talepTuru": true
     },
     {
       "kategori": "Temizlik",
@@ -2057,18 +2063,18 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Kıvamlı Çamaşır Suyu",
+      "satir": "Sıvı Çamaşır Suyu 1 L · 1 Litre Şişe",
       "alt": "camasir-suyu",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/bleach1l.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
-      "satir": "Sıvı Çamaşır Suyu",
+      "satir": "Sıvı Çamaşır Suyu 5 L · 5 Litre Bidon",
       "alt": "camasir-suyu",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/bleach5l.webp",
       "gorselTuru": "temsili"
     },
     {

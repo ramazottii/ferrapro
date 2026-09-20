@@ -58,6 +58,15 @@ assert.ok(data.urunler.some(r=>r.satir==='Köpük Sabun Dispenseri'&&r.gorsel.en
 assert.equal(data.urunler.filter(r=>r.satir==='Sıvı el sabunu').length,0);
 assert.equal(vm.runInContext('urunAdiYazi("Sıvı el sabunu 1 L · 1 litre pompalı şişe")',context),'Sıvı El Sabunu 1 L · 1 Litre Pompalı Şişe');
 for (const row of data.urunler) assert.equal(row.satir, vm.runInContext(`urunAdiYazi(${JSON.stringify(row.satir)})`,context), row.satir);
+const bleach=data.urunler.filter(r=>/çamaşır suyu/i.test(r.satir));
+assert.equal(bleach.length,5);
+assert.ok(bleach.every(r=>classify(r.kategori,r.satir,r.alt)==='camasir-suyu'));
+assert.ok(bleach.every(r=>!r.gorsel.endsWith('cleaner.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Suyu 1 L')&&r.gorsel.endsWith('bleach1l.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Suyu 5 L')&&r.gorsel.endsWith('bleach5l.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Suyu 20 L')&&r.gorsel.endsWith('bleach20l.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Kıvamlı Çamaşır Suyu 4 kg')&&r.gorsel.endsWith('thickbleach4.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Kıvamlı Çamaşır Suyu 20 kg')&&r.gorsel.endsWith('thickbleach20.webp')));
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

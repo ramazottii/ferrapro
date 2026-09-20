@@ -20,7 +20,7 @@ families = [
  ('Temizlik','sabun','El Sabunları','Sıvı El Sabunu 1 L|Köpük El Sabunu 1 L|Sıvı Sabun Dispenseri|Köpük Sabun Dispenseri'),
  ('Temizlik','yuzey','Yüzey Temizleyicileri','Genel Yüzey Temizleyici|Cam Temizleyici|Ahşap Yüzey Temizleyici|Seramik Yüzey Temizleyici|Paslanmaz Çelik Yüzey Temizleyici|Zemin Bakım Ürünü|Arap Sabunu'),
  ('Temizlik','camasir','Çamaşır Deterjanları','Sıvı Çamaşır Deterjanı|Toz Çamaşır Deterjanı|Çamaşır Yumuşatıcısı|Çamaşır Leke Çıkarıcı'),
- ('Temizlik','camasir-suyu','Çamaşır Suları','Kıvamlı Çamaşır Suyu|Sıvı Çamaşır Suyu'),
+ ('Temizlik','camasir-suyu','Çamaşır Suları','Sıvı Çamaşır Suyu 1 L|Sıvı Çamaşır Suyu 5 L|Sıvı Çamaşır Suyu 20 L|Kıvamlı Çamaşır Suyu 4 kg|Kıvamlı Çamaşır Suyu 20 kg'),
  ('Temizlik','kirec','Kireç ve Pas Çözücüler','Kireç Çözücü|Pas Sökücü|Banyo Temizleyici|Klozet Temizleyici'),
  ('Temizlik','bulasik-temizlik','Bulaşık Temizliği','Elde Bulaşık Deterjanı|Makine Bulaşık Deterjanı|Bulaşık Makinesi Parlatıcısı|Bulaşık Makinesi Tuzu|Yağ Çözücü'),
  ('Temizlik','arac','Bez ve Mop','Mikrofiber Temizlik Bezi|Cam Bezi|Toz Bezi|Islak Mop|Nemli Mop|Mop Yedeği|Mop Aparatı|Mop Sapı'),

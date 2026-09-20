@@ -230,6 +230,14 @@ Kullanıcı küçük harfli ürün yazımlarını acemi buldu. Tüm katalog sat�
 Cloudflare sürümü: 3307fe88-efa0-41b6-a1e9-881eb236624a.
 Önceki sürüm: fa9037ee-56ab-4eea-ad99-993821db0faa.
 
+## 20 Eylül — Çamaşır suları sadeleştirildi
+Kullanıcı sekmenin mavi sprey görseli ve tekrarlayan 20 kg satırlarıyla bozulduğunu işaretledi. Beş tür kaldı: sıvı 1 L / 5 L / 20 L ve kıvamlı 4 kg / 20 kg; krem fonda çamaşır suyu bidonları bağlandı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 891fa2ac-1ce4-4f79-a16d-16cd783fdfb5.
+Önceki sürüm: 3307fe88-efa0-41b6-a1e9-881eb236624a.
+
+
 
 
 
