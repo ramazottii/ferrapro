@@ -195,6 +195,15 @@ Kullanıcı 6’lı ve 8’li kartlarda rulo sayısının yanlış göründüğ�
 Cloudflare sürümü: b4ce027d-4a52-47e4-8ee1-6790ba3c49d2.
 Önceki sürüm: 04d91898-da0c-406b-a6e4-a3fdbdb4f0b2.
 
+## 20 Eylül — Rulo 6’lı / 12’li görsel düzeltmesi
+Kullanıcı 6’lıda dev rulo formu, 12’lide fazla adet gördüğünü işaretledi. 6’lı ince mutfak rulosu 3+3; 12’li dört-dört-dört.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ff50fd1c-4357-43cb-a88b-33ac5871776c.
+Önceki sürüm: b4ce027d-4a52-47e4-8ee1-6790ba3c49d2.
+
+
+
 
 
 
