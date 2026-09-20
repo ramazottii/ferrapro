@@ -10,6 +10,9 @@ vm.runInContext(script,context);
 const classify=(group,text,alt)=>vm.runInContext(`altBul(${JSON.stringify(group)},${JSON.stringify(text)},${JSON.stringify(alt)}).id`,context);
 assert.equal(classify('Temizlik','Doğal Güç Mop Beyaz 1×50'),'arac');
 assert.equal(classify('Temizlik','Sıvı el sabunu 5 L'),'sabun');
+assert.equal(classify('Temizlik','Sıvı el sabunu 1 L'),'sabun');
+assert.equal(classify('Temizlik','Köpük el sabunu 1 L'),'sabun');
+assert.equal(classify('Temizlik','Sıvı sabun dispenseri'),'sabun');
 assert.equal(classify('Temizlik','Kıvamlı çamaşır suyu 20 kg'),'camasir-suyu');
 assert.equal(classify('Temizlik','Çamaşır Deterjanı 10 kg'),'camasir');
 assert.equal(classify('Mutfak','Çay 1 kg'),'kahve');
@@ -47,6 +50,12 @@ for (const row of data.urunler.filter(r=>/çöp poşet/i.test(r.satir))) {
   else if (/şeffaf/i.test(row.satir)) assert.match(row.gorsel,/copclear\.webp$/);
   else if (/siyah/i.test(row.satir)) assert.match(row.gorsel,/copblack\.webp$/);
 }
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı el sabunu 5 L')&&r.gorsel.endsWith('soap5l.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı el sabunu 1 L')&&r.gorsel.endsWith('soap.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Köpük el sabunu')&&r.gorsel.endsWith('foamsoap.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Sıvı sabun dispenseri'&&r.gorsel.endsWith('soapdisp.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Köpük sabun dispenseri'&&r.gorsel.endsWith('foamdisp.webp')));
+assert.equal(data.urunler.filter(r=>r.satir==='Sıvı el sabunu').length,0);
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

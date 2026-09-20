@@ -1026,7 +1026,7 @@
     {
       "kategori": "Temizlik",
       "satir": "Sıvı el sabunu 5 L · 5 litre bidon",
-      "gorsel": "/img/products/soap.webp",
+      "gorsel": "/img/products/soap5l.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1937,7 +1937,7 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Sıvı el sabunu",
+      "satir": "Sıvı el sabunu 1 L · 1 litre pompalı şişe",
       "alt": "sabun",
       "talepTuru": true,
       "gorsel": "/img/products/soap.webp",
@@ -1945,10 +1945,10 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Köpük el sabunu",
+      "satir": "Köpük el sabunu 1 L · 1 litre pompalı şişe",
       "alt": "sabun",
       "talepTuru": true,
-      "gorsel": "/img/products/soap.webp",
+      "gorsel": "/img/products/foamsoap.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1956,7 +1956,7 @@
       "satir": "Sıvı sabun dispenseri",
       "alt": "sabun",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/soapdisp.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1964,7 +1964,7 @@
       "satir": "Köpük sabun dispenseri",
       "alt": "sabun",
       "talepTuru": true,
-      "gorsel": "/img/products/dispenser.webp",
+      "gorsel": "/img/products/foamdisp.webp",
       "gorselTuru": "temsili"
     },
     {

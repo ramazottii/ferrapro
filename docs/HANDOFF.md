@@ -216,6 +216,14 @@ Kullanıcı Mendil ve Yüz Havluları başlığını kapattı. Çöp poşetinde 
 Cloudflare sürümü: 83770996-833f-4095-ac9e-84a4994d0bb1.
 Önceki sürüm: e8395ac8-882c-4235-886d-25aca49932d0.
 
+## 20 Eylül — El sabunları ölçü ve dispenser görselleri
+Kullanıcı ölçüsüz sıvı sabunu ve kâğıt dispenser fotoğraflarını işaretledi. 1 L sıvı ve 1 L köpük satırları ayrıldı; 5 L bidon, köpük şişe ve duvar tipi sıvı/köpük dispenser görselleri krem fonda bağlandı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: fa9037ee-56ab-4eea-ad99-993821db0faa.
+Önceki sürüm: 83770996-833f-4095-ac9e-84a4994d0bb1.
+
+
 
 
 

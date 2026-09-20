@@ -14,7 +14,7 @@ families = [
  ('Hijyen','islak','Islak Havlu','Islak havlu 90’lı|Islak havlu koli|Yüzey temizlik havlusu'),
  ('Hijyen','pecete','Peçete','Peçete 100’lü|Peçete 200’lü|Renkli peçete|Desenli peçete|Z peçete|Kokteyl peçetesi|Garson katlama peçete|Dispenser peçete'),
  ('Hijyen','havlu','Rulo Havlu','Rulo havlu 6’lı|Rulo havlu 8’li|Rulo havlu 12’li|Dev rulo havlu'),
- ('Temizlik','sabun','El Sabunları','Sıvı el sabunu|Köpük el sabunu|Sıvı sabun dispenseri|Köpük sabun dispenseri'),
+ ('Temizlik','sabun','El Sabunları','Sıvı el sabunu 1 L|Köpük el sabunu 1 L|Sıvı sabun dispenseri|Köpük sabun dispenseri'),
  ('Temizlik','yuzey','Yüzey Temizleyicileri','Genel yüzey temizleyici|Cam temizleyici|Ahşap yüzey temizleyici|Seramik yüzey temizleyici|Paslanmaz çelik yüzey temizleyici|Zemin bakım ürünü|Arap sabunu'),
  ('Temizlik','camasir','Çamaşır Deterjanları','Sıvı çamaşır deterjanı|Toz çamaşır deterjanı|Çamaşır yumuşatıcısı|Çamaşır leke çıkarıcı'),
  ('Temizlik','camasir-suyu','Çamaşır Suları','Kıvamlı çamaşır suyu|Sıvı çamaşır suyu'),
