@@ -595,9 +595,11 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Kapsül Çamaşır 50’li · Koli 5",
-      "gorsel": "/img/products/detergent.webp",
-      "gorselTuru": "temsili"
+      "satir": "Kapsül Çamaşır Deterjanı",
+      "gorsel": "/img/products/washcaps.webp",
+      "gorselTuru": "temsili",
+      "alt": "camasir",
+      "talepTuru": true
     },
     {
       "kategori": "Temizlik",
@@ -877,9 +879,11 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Çamaşır Deterjanı 10 kg · Adet",
-      "gorsel": "/img/products/detergent.webp",
-      "gorselTuru": "temsili"
+      "satir": "Toz Çamaşır Deterjanı 10 kg · 10 kg Çuval",
+      "gorsel": "/img/products/washpowder.webp",
+      "gorselTuru": "temsili",
+      "alt": "camasir",
+      "talepTuru": true
     },
     {
       "kategori": "Temizlik",
@@ -2031,26 +2035,26 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Sıvı Çamaşır Deterjanı",
+      "satir": "Sıvı Çamaşır Deterjanı 3 L · 3 Litre Şişe",
       "alt": "camasir",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/washliq3.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
-      "satir": "Toz Çamaşır Deterjanı",
+      "satir": "Sıvı Çamaşır Deterjanı 5 L · 5 Litre Bidon",
       "alt": "camasir",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/washliq5.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
-      "satir": "Çamaşır Yumuşatıcısı",
+      "satir": "Çamaşır Yumuşatıcısı 5 L · 5 Litre Bidon",
       "alt": "camasir",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/softener.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2058,7 +2062,7 @@
       "satir": "Çamaşır Leke Çıkarıcı",
       "alt": "camasir",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/stainrem.webp",
       "gorselTuru": "temsili"
     },
     {

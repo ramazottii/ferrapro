@@ -67,6 +67,16 @@ assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Suyu 5 L')&
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Suyu 20 L')&&r.gorsel.endsWith('bleach20l.webp')));
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Kıvamlı Çamaşır Suyu 4 kg')&&r.gorsel.endsWith('thickbleach4.webp')));
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Kıvamlı Çamaşır Suyu 20 kg')&&r.gorsel.endsWith('thickbleach20.webp')));
+const wash=data.urunler.filter(r=>/çamaşır/i.test(r.satir)&&!/çamaşır suyu/i.test(r.satir));
+assert.equal(wash.length,6);
+assert.ok(wash.every(r=>classify(r.kategori,r.satir,r.alt)==='camasir'));
+assert.ok(wash.every(r=>!r.gorsel.endsWith('detergent.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Toz Çamaşır Deterjanı 10 kg')&&r.gorsel.endsWith('washpowder.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Deterjanı 3 L')&&r.gorsel.endsWith('washliq3.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Deterjanı 5 L')&&r.gorsel.endsWith('washliq5.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Kapsül Çamaşır Deterjanı')&&r.gorsel.endsWith('washcaps.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Çamaşır Yumuşatıcısı 5 L')&&r.gorsel.endsWith('softener.webp')));
+assert.ok(data.urunler.some(r=>r.satir.startsWith('Çamaşır Leke Çıkarıcı')&&r.gorsel.endsWith('stainrem.webp')));
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

@@ -237,6 +237,14 @@ Kullanıcı sekmenin mavi sprey görseli ve tekrarlayan 20 kg satırlarıyla boz
 Cloudflare sürümü: 891fa2ac-1ce4-4f79-a16d-16cd783fdfb5.
 Önceki sürüm: 3307fe88-efa0-41b6-a1e9-881eb236624a.
 
+## 20 Eylül — Çamaşır deterjanları türe göre ayrıldı
+Kullanıcı sekmenin aynı bidon fotoğrafıyla durduğunu işaretledi. Toz 10 kg, sıvı 3 L / 5 L, kapsül, yumuşatıcı 5 L ve leke çıkarıcı ayrı krem görsellere bağlandı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 66234d18-8e34-4181-89b9-d2e54df0b49a.
+Önceki sürüm: 891fa2ac-1ce4-4f79-a16d-16cd783fdfb5.
+
+
 
 
 

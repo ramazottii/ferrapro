@@ -19,7 +19,7 @@ families = [
  ('Hijyen','havlu','Rulo Havlu','Rulo Havlu 6’lı|Rulo Havlu 8’li|Rulo Havlu 12’li|Dev Rulo Havlu'),
  ('Temizlik','sabun','El Sabunları','Sıvı El Sabunu 1 L|Köpük El Sabunu 1 L|Sıvı Sabun Dispenseri|Köpük Sabun Dispenseri'),
  ('Temizlik','yuzey','Yüzey Temizleyicileri','Genel Yüzey Temizleyici|Cam Temizleyici|Ahşap Yüzey Temizleyici|Seramik Yüzey Temizleyici|Paslanmaz Çelik Yüzey Temizleyici|Zemin Bakım Ürünü|Arap Sabunu'),
- ('Temizlik','camasir','Çamaşır Deterjanları','Sıvı Çamaşır Deterjanı|Toz Çamaşır Deterjanı|Çamaşır Yumuşatıcısı|Çamaşır Leke Çıkarıcı'),
+ ('Temizlik','camasir','Çamaşır Deterjanları','Toz Çamaşır Deterjanı 10 kg|Sıvı Çamaşır Deterjanı 3 L|Sıvı Çamaşır Deterjanı 5 L|Kapsül Çamaşır Deterjanı|Çamaşır Yumuşatıcısı 5 L|Çamaşır Leke Çıkarıcı'),
  ('Temizlik','camasir-suyu','Çamaşır Suları','Sıvı Çamaşır Suyu 1 L|Sıvı Çamaşır Suyu 5 L|Sıvı Çamaşır Suyu 20 L|Kıvamlı Çamaşır Suyu 4 kg|Kıvamlı Çamaşır Suyu 20 kg'),
  ('Temizlik','kirec','Kireç ve Pas Çözücüler','Kireç Çözücü|Pas Sökücü|Banyo Temizleyici|Klozet Temizleyici'),
  ('Temizlik','bulasik-temizlik','Bulaşık Temizliği','Elde Bulaşık Deterjanı|Makine Bulaşık Deterjanı|Bulaşık Makinesi Parlatıcısı|Bulaşık Makinesi Tuzu|Yağ Çözücü'),
