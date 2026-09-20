@@ -148,5 +148,10 @@ Kullanıcı ölçü detayını ve aynı peçete fotoğrafının tekrarını işa
 - cm/gr/koli ölçü satırları çıkarıldı. Her türe ayrı temsili görsel bağlandı.
 - npm run check geçti. Hijyen 125 kayıt.
 
+### Yayın tamamlandı
+Kullanıcının canlıya alma talimatıyla 34a890a yayımlandı.
+Cloudflare sürümü: d96560ec-a12b-4535-8c3c-d28f61983bae.
+Önceki sürüm: 3107e420-5f9a-424a-a665-1cca615dc4f5.
+
 
 
