@@ -335,6 +335,13 @@ Dosyalar ve Evrak Düzeni’nden telli, sıkıştırmalı ve proje dosyası kart
 Cloudflare sürümü: dfd15936-2107-4df1-b889-74349e9039f8.
 Önceki sürüm: b0d3e873-0e2b-4294-a252-fb2f0ff9c947.
 
+## 20 Eylül — Defter sekmesi görselleri ve ajanda birleştirme
+Tarihsiz/tarihli ajanda ve fihrist kartları tek “Ajandalar” talebine indirgendi. Spiralli defter, bloknot, yapışkanlı not kâğıdı ve ticari defter ayrı temsili görseller aldı. npm run check: 511 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b7f74a31-d0e3-4360-bb9f-56758fa817c9.
+Önceki sürüm: dfd15936-2107-4df1-b889-74349e9039f8.
+
 
 
 

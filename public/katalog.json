@@ -1293,7 +1293,7 @@
       "satir": "Spiralli Defter",
       "alt": "not",
       "talepTuru": true,
-      "gorsel": "/img/products/notebook.webp",
+      "gorsel": "/img/products/spiralnb.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1309,7 +1309,7 @@
       "satir": "Bloknot",
       "alt": "not",
       "talepTuru": true,
-      "gorsel": "/img/products/notebook.webp",
+      "gorsel": "/img/products/notepad.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1325,7 +1325,7 @@
       "satir": "Yapışkanlı Not Kâğıdı",
       "alt": "not",
       "talepTuru": true,
-      "gorsel": "/img/products/not.webp",
+      "gorsel": "/img/products/stickynotes.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1338,26 +1338,10 @@
     },
     {
       "kategori": "Kırtasiye",
-      "satir": "Tarihsiz Ajanda",
+      "satir": "Ajandalar",
       "alt": "not",
       "talepTuru": true,
-      "gorsel": "/img/products/hardcover.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
-      "satir": "Tarihli Ajanda",
-      "alt": "not",
-      "talepTuru": true,
-      "gorsel": "/img/products/hardcover.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
-      "satir": "Fihrist",
-      "alt": "not",
-      "talepTuru": true,
-      "gorsel": "/img/products/hardcover.webp",
+      "gorsel": "/img/products/planner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1365,7 +1349,7 @@
       "satir": "Ticari Defter",
       "alt": "not",
       "talepTuru": true,
-      "gorsel": "/img/products/hardcover.webp",
+      "gorsel": "/img/products/ledger.webp",
       "gorselTuru": "temsili"
     },
     {

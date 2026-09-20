@@ -184,6 +184,14 @@ assert.equal(data.urunler.filter(r=>r.satir==='Sıkıştırmalı Dosya').length,
 assert.equal(data.urunler.filter(r=>r.satir==='Proje Dosyası').length,0);
 const dosya=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='dosya');
 assert.equal(dosya.length,8);
+assert.equal(data.urunler.filter(r=>r.satir==='Tarihsiz Ajanda'||r.satir==='Tarihli Ajanda'||r.satir==='Fihrist').length,0);
+const defter=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='not');
+assert.equal(defter.length,9);
+assert.ok(data.urunler.some(r=>r.satir==='Spiralli Defter'&&r.gorsel.endsWith('spiralnb.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Ajandalar'&&r.gorsel.endsWith('planner.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Bloknot'&&r.gorsel.endsWith('notepad.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Yapışkanlı Not Kâğıdı'&&r.gorsel.endsWith('stickynotes.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Ticari Defter'&&r.gorsel.endsWith('ledger.webp')));
 
 
 
