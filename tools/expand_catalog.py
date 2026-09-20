@@ -11,7 +11,6 @@ data = json.loads(path.read_text(encoding='utf-8'))
 # group, subgroup id, title, product names; images assigned separately and validated.
 families = [
  ('Hijyen','dispenser','Dispenser ve Aparatlar','Z kat havlu dispenseri|Sensörlü havlu dispenseri|İçten çekmeli havlu dispenseri|Jumbo tuvalet kâğıdı dispenseri|İçten çekmeli tuvalet kâğıdı dispenseri|Masaüstü peçete dispenseri|Klozet örtüsü dispenseri'),
- ('Hijyen','mendil','Mendil ve Yüz Havluları','Kutu mendil|Cep mendili|Yüz havlusu|Tek kullanımlık el kurulama havlusu'),
  ('Hijyen','islak','Islak Havlu','Islak havlu 90’lı|Islak havlu koli|Yüzey temizlik havlusu'),
  ('Hijyen','pecete','Peçete','Peçete 100’lü|Peçete 200’lü|Renkli peçete|Desenli peçete|Z peçete|Kokteyl peçetesi|Garson katlama peçete|Dispenser peçete'),
  ('Hijyen','havlu','Rulo Havlu','Rulo havlu 6’lı|Rulo havlu 8’li|Rulo havlu 12’li|Dev rulo havlu'),

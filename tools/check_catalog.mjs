@@ -40,6 +40,13 @@ assert.equal(classify('Hijyen','Masaüstü peçete dispenseri','dispenser'),'dis
 assert.equal(classify('Hijyen','Rulo havlu 6’lı','havlu'),'havlu');
 assert.equal(classify('Hijyen','Dev rulo havlu','havlu'),'havlu');
 assert.equal(vm.runInContext('MARKA_TERCIHLERI.havlu.join(",")',context),'Solo,Selpak,Papia,Familia,Focus,Forest,Rulopak');
+assert.ok(!vm.runInContext('ALTLAR.Hijyen.map(x=>x.id).join(",")',context).split(',').includes('mendil'));
+assert.equal(data.urunler.filter(r=>r.alt==='mendil').length,0);
+for (const row of data.urunler.filter(r=>/çöp poşet/i.test(r.satir))) {
+  if (/mavi/i.test(row.satir)) assert.match(row.gorsel,/copblue\.webp$/);
+  else if (/şeffaf/i.test(row.satir)) assert.match(row.gorsel,/copclear\.webp$/);
+  else if (/siyah/i.test(row.satir)) assert.match(row.gorsel,/copblack\.webp$/);
+}
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

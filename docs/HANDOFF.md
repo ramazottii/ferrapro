@@ -209,6 +209,14 @@ Kullanıcı yedi aparat kartının aynı fotoğrafı kullandığını işaretled
 Cloudflare sürümü: e8395ac8-882c-4235-886d-25aca49932d0.
 Önceki sürüm: ff50fd1c-4357-43cb-a88b-33ac5871776c.
 
+## 20 Eylül — Mendil sekmesi kaldırıldı, çöp poşeti rengi adı izler
+Kullanıcı Mendil ve Yüz Havluları başlığını kapattı. Çöp poşetinde mavi adı siyah görsele düşüyordu; krem fonda mavi / siyah / şeffaf rulo görselleri ada bağlandı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 83770996-833f-4095-ac9e-84a4994d0bb1.
+Önceki sürüm: e8395ac8-882c-4235-886d-25aca49932d0.
+
+
 
 
 

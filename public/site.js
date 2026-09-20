@@ -207,7 +207,7 @@ bindTrust();
 const ALTLAR = {
   Hijyen: [
     { id: "islak", ad: "Islak Havlu", test: (t) => t.includes("ıslak") || /yüzey temizlik havlu/.test(t) },
-    { id: "pecete", ad: "Peçete", test: (t) => /peçete|mendil/.test(t) },
+    { id: "pecete", ad: "Peçete", test: (t) => /peçete/.test(t) },
     { id: "fotosel", ad: "Fotoselli Havlu", test: (t) => t.includes("fotosel") },
     { id: "hareketli", ad: "Hareketli Havlu", test: (t) => t.includes("hareketli") },
     { id: "icten-havlu", ad: "İçten Çekmeli Havlu", test: (t) => /içten çekmeli/.test(t) && !/tuvalet/.test(t) },
@@ -216,7 +216,6 @@ const ALTLAR = {
     { id: "tuvalet", ad: "Tuvalet Kağıtları", test: (t) => t.includes("tuvalet") },
     { id: "havlu", ad: "Rulo Havlu", test: (t) => t.includes("havlu") },
     { id: "dispenser", ad: "Dispenser ve Aparatlar", test: () => false },
-    { id: "mendil", ad: "Mendil ve Yüz Havluları", test: () => false },
   ],
   Temizlik: [
     { id: "cop", ad: "Çöp Poşeti", test: (t) => t.includes("çöp") },
