@@ -1189,7 +1189,7 @@
       "satir": "Geniş Klasör",
       "alt": "klasor",
       "talepTuru": true,
-      "gorsel": "/img/products/klasor.webp",
+      "gorsel": "/img/products/widebinder.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1197,7 +1197,7 @@
       "satir": "Dar Klasör",
       "alt": "klasor",
       "talepTuru": true,
-      "gorsel": "/img/products/klasor.webp",
+      "gorsel": "/img/products/narrowbinder.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1205,15 +1205,7 @@
       "satir": "Halkalı Klasör",
       "alt": "klasor",
       "talepTuru": true,
-      "gorsel": "/img/products/klasor.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Kırtasiye",
-      "satir": "Karton Klasör",
-      "alt": "klasor",
-      "talepTuru": true,
-      "gorsel": "/img/products/klasor.webp",
+      "gorsel": "/img/products/ringbinder.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1221,7 +1213,7 @@
       "satir": "Arşiv Kutusu",
       "alt": "klasor",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/archivebox.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1245,7 +1237,7 @@
       "satir": "Telli Dosya",
       "alt": "dosya",
       "talepTuru": true,
-      "gorsel": "/img/products/fastenerfile.webp",
+      "gorsel": "/img/products/tellifile.webp",
       "gorselTuru": "temsili"
     },
     {

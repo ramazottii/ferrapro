@@ -321,6 +321,13 @@ Jel, roller, beyaz tahta, asetat ve imza kalemi referans silüetlerine göre ayr
 Cloudflare sürümü: e6fa70ed-ba51-49af-96f2-fd4766cd091f.
 Önceki sürüm: e05b2ef8-5465-4be8-b654-48ec3fd3c49c.
 
+## 20 Eylül — Klasör ve arşiv görselleri
+Karton klasör kaldırıldı. Dar/geniş klasör sırt farkı, halkalı klasör, telli dosya ve premium arşiv kutusu ayrı görseller aldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b0d3e873-0e2b-4294-a252-fb2f0ff9c947.
+Önceki sürüm: e6fa70ed-ba51-49af-96f2-fd4766cd091f.
+
 
 
 

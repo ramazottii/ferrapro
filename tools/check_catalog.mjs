@@ -172,6 +172,14 @@ assert.ok(data.urunler.some(r=>r.satir==='Roller Kalem'&&r.gorsel.endsWith('roll
 assert.ok(data.urunler.some(r=>r.satir==='Beyaz Tahta Kalemi'&&r.gorsel.endsWith('boardmarker.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Asetat Kalemi'&&r.gorsel.endsWith('acetatepen.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='İmza Kalemi'&&r.gorsel.endsWith('signpen.webp')));
+assert.equal(data.urunler.filter(r=>r.satir==='Karton Klasör').length,0);
+const klasor=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='klasor');
+assert.equal(klasor.length,5);
+assert.ok(data.urunler.some(r=>r.satir==='Geniş Klasör'&&r.gorsel.endsWith('widebinder.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Dar Klasör'&&r.gorsel.endsWith('narrowbinder.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Halkalı Klasör'&&r.gorsel.endsWith('ringbinder.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Arşiv Kutusu'&&r.gorsel.endsWith('archivebox.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Telli Dosya'&&r.gorsel.endsWith('tellifile.webp')));
 
 
 
