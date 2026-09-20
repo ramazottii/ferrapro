@@ -167,5 +167,14 @@ Kullanıcı kartlarda beyaz/krem karışık zemin gördü. 100’lü, desenli, Z
 Cloudflare sürümü: 712042b6-9d7c-4755-bb79-118266850d4b.
 Önceki sürüm: cc155a74-d5d8-462a-9958-c8ec00600391.
 
+## 20 Eylül — Z Kat Havlu sekmesi kaldırıldı
+Kullanıcı sekmeyi tamamen kaldırttı. Ölçülü Z kat havlu satırları halka açık katalogdan çıktı. Dispenser grubundaki “Z kat havlu dispenseri” duruyor. Fotoselli havlu görseli krem stüdyo zeminine alındı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 16fc58d8-ebea-4ce3-8c8e-2f96f9e0bb78.
+Önceki sürüm: 712042b6-9d7c-4755-bb79-118266850d4b.
+
+
+
 
 

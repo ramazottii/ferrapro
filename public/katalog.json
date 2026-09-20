@@ -53,30 +53,6 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Z Kat Dispenser Havlu 200 yaprak · 200×201 cm · 17gr × 2 kat · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Kat Dispenser Havlu 20×24 cm 200'lü×12 · 200 yaprak · 17gr × 2 kat · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Kat Dispenser Havlu 20×24 cm 150'li×12 · 150 yaprak · 17gr × 2 kat · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Kat Dispenser Havlu 150 yaprak · 200×201 cm · 17gr × 2 kat · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "Tuvalet Kağıdı 32'li×3 · 140 yaprak · 17gr × 3 kat · 17,22 m · koli 3",
       "gorsel": "/img/products/tuvalet.webp",
       "gorselTuru": "temsili"
@@ -132,7 +108,7 @@
     {
       "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21,2 cm × 68 m × 6 · 22gr × 2 kat · 68 m · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -174,7 +150,7 @@
     {
       "kategori": "Hijyen",
       "satir": "Mini Hareketli Havlu 21,2 cm × 59 m × 6 · 22gr × 2 kat · 59 m · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -215,86 +191,50 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Dispenser Z Katlı Havlu 200'lü×20 · 23 g/m² × 2 kat · 23×22,5 cm · koli 20",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Katlı Havlu 200'lü×12 · 23 g/m² × 2 kat · 23×22,5 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Katlı Havlu 200'lü×20 · 20 g/m² × 2 kat · 21,7×21,7 cm · koli 20",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Katlı Havlu 200'lü×12 · 20 g/m² × 2 kat · 21,7×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Katlı Havlu 200'lü×12 · 17 g/m² × 2 kat · 21×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Katlı Havlu 150'li×12 · 17 g/m² × 2 kat · 21×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu Özel Üretim 8 kg / 133 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu 6 kg / 100 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu 5 kg / 82 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu 4 kg / 66 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "25 cm Fotoselli Havlu 6 kg / 82 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 6 kg / 100 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 5 kg / 80 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 4 kg / 65 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -347,68 +287,38 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Dispenser Z Havlu 200'lü×12 · 16 g/m² × 2 kat · 22,6×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Havlu 200'lü×12 · 16 g/m² × 2 kat · 20×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Havlu 150'li×12 · 16 g/m² × 2 kat · 20×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Havlu 115'li×12 · 16 g/m² × 2 kat · 20×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Z Havlu 100'lü×12 · 16 g/m² × 2 kat · 20×21,7 cm · koli 12",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu 3,5 kg / 58 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu 3 kg / 50 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "21 cm Fotoselli Havlu 2,5 kg / 41,66 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 3,5 kg / 58 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 3 kg / 50 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 2,5 kg / 41,66 m · 2 kat · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -426,61 +336,61 @@
     {
       "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21 cm 2,5 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21 cm 3 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21 cm 3,5 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21 cm 4 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21 cm 5 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 21 cm 2,5 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 21 cm 3 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 21 cm 3,5 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 21 cm 4 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 21 cm 5 kg · koli 6",
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -529,30 +439,6 @@
       "kategori": "Hijyen",
       "satir": "Büyük Cimri Tuvalet Kağıdı 13,5 cm 4 kg · koli 6",
       "gorsel": "/img/products/jumbo.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Katlama Havlu 20,5×21 cm 100'lü×12 · koli 12 paket",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Katlama Havlu 20,5×21 cm 120'li×12 · koli 12 paket",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Katlama Havlu 20,5×21 cm 150'li×12 · koli 12 paket",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Katlama Havlu 20,5×21 cm 200'lü×12 · koli 12 paket",
-      "gorsel": "/img/products/zkat.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -625,18 +511,6 @@
       "kategori": "Hijyen",
       "satir": "Tuvalet Kağıdı 24'lü · 150 yaprak · 31gr × 2 kat · 18 m · koli 3×24",
       "gorsel": "/img/products/tuvalet.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Katlı Dispenser Havlu · 200 yaprak · 36gr × 2 kat · koli 12×200",
-      "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Z Katlı Dispenser Havlu · 200 yaprak · 46gr × 2 kat · koli 20×200",
-      "gorsel": "/img/products/zkat.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2238,7 +2112,7 @@
       "satir": "Yüz havlusu",
       "alt": "mendil",
       "talepTuru": true,
-      "gorsel": "/img/products/zkat.webp",
+      "gorsel": "/img/products/tissue.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2254,7 +2128,7 @@
       "satir": "Endüstriyel silme kâğıdı",
       "alt": "havlu",
       "talepTuru": true,
-      "gorsel": "/img/products/fotosel.webp",
+      "gorsel": "/img/products/fotosel2.webp",
       "gorselTuru": "temsili"
     },
     {

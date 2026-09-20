@@ -21,7 +21,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:120,Temizlik:100,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:100,Temizlik:100,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -35,6 +35,8 @@ assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90�
 assert.equal(classify('Hijyen','Peçete 100’lü','pecete'),'pecete');
 assert.equal(classify('Hijyen','Z peçete','pecete'),'pecete');
 assert.equal(classify('Hijyen','Renkli peçete','pecete'),'pecete');
+assert.equal(classify('Hijyen','Z kat havlu dispenseri','dispenser'),'dispenser');
+assert.equal(vm.runInContext('ALTLAR.Hijyen.some(x=>x.id==="zkat")',context),false);
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {
