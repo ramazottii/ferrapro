@@ -2187,7 +2187,7 @@
       "satir": "Faraşlı Süpürge",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/products/brush.webp",
+      "gorsel": "/img/products/dustpan.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2203,7 +2203,7 @@
       "satir": "Yer Fırçası",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/products/brush.webp",
+      "gorsel": "/img/products/floorbrush.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2211,7 +2211,7 @@
       "satir": "Cam Çekçeği",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/windowsqueegee.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2219,7 +2219,7 @@
       "satir": "Yer Çekçeği",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/floorsqueegee.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2227,7 +2227,7 @@
       "satir": "Temizlik Arabası",
       "alt": "ekipman",
       "talepTuru": true,
-      "gorsel": "/img/products/bucket.webp",
+      "gorsel": "/img/products/janitorcart.webp",
       "gorselTuru": "temsili"
     },
     {

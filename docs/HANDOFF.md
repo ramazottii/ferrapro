@@ -286,6 +286,13 @@ Mikrofiber, cam bezi, mop çeşitleri, kova/set ve tuvalet fırçası markasız 
 Cloudflare sürümü: ec7b714d-d7be-4bfd-89b9-2c011f0dd6d6.
 Önceki sürüm: dc9a8150-4534-4d51-8836-5c80c13e4fb7.
 
+## 20 Eylül — Temizlik ekipmanları görselleri
+Faraşlı süpürge ve yer fırçası tuvalet fırçası, çekçekler düz mop, temizlik arabası kova fotoğrafını kullanıyordu. Beş karta ayrı krem stüdyo görseli bağlandı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c09336da-0072-4abe-bdba-3ac583fdda05.
+Önceki sürüm: ec7b714d-d7be-4bfd-89b9-2c011f0dd6d6.
+
 
 
 

@@ -123,6 +123,16 @@ assert.ok(data.urunler.some(r=>r.satir==='Temizlik Kovası'&&r.alt==='arac'&&r.g
 assert.ok(data.urunler.some(r=>r.satir==='Presli Temizlik Kovası'&&r.alt==='arac'&&r.gorsel.endsWith('wringerbucket.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Tuvalet Fırçası'&&r.alt==='arac'&&r.gorsel.endsWith('toiletbrush.webp')));
 assert.equal(data.urunler.filter(r=>r.satir.startsWith('Krom Tuvalet Fırçası')||r.satir.startsWith('Doğal Güç Mop')).length,0);
+const ekip=data.urunler.filter(r=>r.alt==='ekipman');
+assert.equal(ekip.length,5);
+assert.equal(new Set(ekip.map(r=>r.gorsel)).size,5);
+assert.ok(ekip.every(r=>!/\/(brush|mop|bucket)\.webp$/.test(r.gorsel)));
+assert.ok(data.urunler.some(r=>r.satir==='Faraşlı Süpürge'&&r.gorsel.endsWith('dustpan.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Yer Fırçası'&&r.gorsel.endsWith('floorbrush.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Cam Çekçeği'&&r.gorsel.endsWith('windowsqueegee.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Yer Çekçeği'&&r.gorsel.endsWith('floorsqueegee.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Temizlik Arabası'&&r.gorsel.endsWith('janitorcart.webp')));
+
 
 
 // Exercise the real public form handler without network or private customer data.
