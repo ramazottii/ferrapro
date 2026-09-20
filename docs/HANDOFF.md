@@ -244,6 +244,10 @@ Kullanıcı sekmenin aynı bidon fotoğrafıyla durduğunu işaretledi. Toz 10 k
 Cloudflare sürümü: 66234d18-8e34-4181-89b9-d2e54df0b49a.
 Önceki sürüm: 891fa2ac-1ce4-4f79-a16d-16cd783fdfb5.
 
+## 20 Eylül — Yinelenen toz deterjan kartı kaldırıldı
+Kullanıcı bidon görselli “Toz Deterjan 10 kg” kartını çıkardı. Toz çamaşır deterjanı 10 kg çuval görseli duruyor.
+
+
 
 
 

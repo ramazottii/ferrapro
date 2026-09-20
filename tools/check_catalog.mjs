@@ -24,7 +24,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:80,Temizlik:100,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:80,Temizlik:99,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -77,6 +77,7 @@ assert.ok(data.urunler.some(r=>r.satir.startsWith('Sıvı Çamaşır Deterjanı 
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Kapsül Çamaşır Deterjanı')&&r.gorsel.endsWith('washcaps.webp')));
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Çamaşır Yumuşatıcısı 5 L')&&r.gorsel.endsWith('softener.webp')));
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Çamaşır Leke Çıkarıcı')&&r.gorsel.endsWith('stainrem.webp')));
+assert.equal(data.urunler.filter(r=>r.satir.startsWith('Toz Deterjan 10 kg')).length,0);
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {
