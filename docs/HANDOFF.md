@@ -314,6 +314,13 @@ A3, gramajlı, plotter rulo, sürekli form ve karbon kâğıdı referans silüet
 Cloudflare sürümü: e05b2ef8-5465-4be8-b654-48ec3fd3c49c.
 Önceki sürüm: 2ccc22a2-600e-46de-b5a6-ef96bb771695.
 
+## 20 Eylül — Kalem görselleri
+Jel, roller, beyaz tahta, asetat ve imza kalemi referans silüetlerine göre ayrıldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: e6fa70ed-ba51-49af-96f2-fd4766cd091f.
+Önceki sürüm: e05b2ef8-5465-4be8-b654-48ec3fd3c49c.
+
 
 
 

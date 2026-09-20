@@ -167,6 +167,11 @@ assert.ok(data.urunler.some(r=>r.satir==='Sürekli Form Kâğıdı'&&r.gorsel.en
 assert.ok(data.urunler.some(r=>r.satir==='Karbon Kâğıdı'&&r.gorsel.endsWith('carbonpaper.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='A4 Fotokopi Kâğıdı'&&r.gorsel.endsWith('a4.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Termal POS Rulosu'&&r.gorsel.endsWith('paperroll.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Jel Kalem'&&r.gorsel.endsWith('gelpen.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Roller Kalem'&&r.gorsel.endsWith('rollerpen.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Beyaz Tahta Kalemi'&&r.gorsel.endsWith('boardmarker.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Asetat Kalemi'&&r.gorsel.endsWith('acetatepen.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='İmza Kalemi'&&r.gorsel.endsWith('signpen.webp')));
 
 
 

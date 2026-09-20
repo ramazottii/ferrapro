@@ -1085,7 +1085,7 @@
       "satir": "Jel Kalem",
       "alt": "kalem",
       "talepTuru": true,
-      "gorsel": "/img/products/kalem.webp",
+      "gorsel": "/img/products/gelpen.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1093,7 +1093,7 @@
       "satir": "Roller Kalem",
       "alt": "kalem",
       "talepTuru": true,
-      "gorsel": "/img/products/kalem.webp",
+      "gorsel": "/img/products/rollerpen.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1133,7 +1133,7 @@
       "satir": "Beyaz Tahta Kalemi",
       "alt": "kalem",
       "talepTuru": true,
-      "gorsel": "/img/products/wbmarker.webp",
+      "gorsel": "/img/products/boardmarker.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1141,7 +1141,7 @@
       "satir": "Asetat Kalemi",
       "alt": "kalem",
       "talepTuru": true,
-      "gorsel": "/img/products/wbmarker.webp",
+      "gorsel": "/img/products/acetatepen.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1157,7 +1157,7 @@
       "satir": "İmza Kalemi",
       "alt": "kalem",
       "talepTuru": true,
-      "gorsel": "/img/products/kalem.webp",
+      "gorsel": "/img/products/signpen.webp",
       "gorselTuru": "temsili"
     },
     {
