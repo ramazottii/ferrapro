@@ -130,7 +130,7 @@ Kullanıcı canlı menüden bakarken adf443db-8c5c-4c14-b788-75480cac1bdb yayım
 
 ## 20 Eylül — Islak Havlu marka tercihi
 Kullanıcı Espiga / Sleepy / Selpak sergileyip müşterinin seçtiği markayı tedarik etme modelini istedi. Ofispanda görselleri kopyalanmadı; marka logosu veya ambalaj fotoğrafı eklenmedi.
-- Islak Havlu ürün kartlarında ve grup talebinde isteğe bağlı marka seçimi: Espiga, Sleepy, Selpak, Fark etmez.
+- Islak Havlu ürün kartlarında ve grup talebinde isteğe bağlı marka seçimi: Espiga, Polente, Sleepy, Selpak, Freshmaker, Papilion, Deep Fresh, Komili, Fark etmez.
 - Seçim teklif listesine `Marka tercihi: …` olarak yazılır. Stok veya yetkili bayi iddiası yok.
 - npm run check geçti; Worker/panel kod farkı yok. 11 statik dosya yüklendi.
 
@@ -138,6 +138,15 @@ Kullanıcı Espiga / Sleepy / Selpak sergileyip müşterinin seçtiği markayı 
 Kullanıcının canlıya alma talimatıyla yayımlandı.
 Cloudflare sürümü: 3107e420-5f9a-424a-a665-1cca615dc4f5.
 Önceki sürüm: adf443db-8c5c-4c14-b788-75480cac1bdb.
+
+## 20 Eylül — Islak Havlu marka listesi genişletildi
+Kullanıcı piyasadaki diğer bilinen markaları ekletti: Polente, Freshmaker, Papilion, Deep Fresh, Komili. Stok/bayi iddiası yok; seçim teklif notuna yazılır.
+
+## 20 Eylül — Peçete grubu sadeleştirildi
+Kullanıcı ölçü detayını ve aynı peçete fotoğrafının tekrarını işaretledi.
+- Grupta çeşit türleri: Peçete 100’lü, Peçete 200’lü, Renkli peçete, Desenli peçete, Z peçete, Kokteyl peçetesi, Garson katlama peçete, Dispenser peçete.
+- cm/gr/koli ölçü satırları çıkarıldı. Her türe ayrı temsili görsel bağlandı.
+- npm run check geçti. Hijyen 125 kayıt.
 
 
 

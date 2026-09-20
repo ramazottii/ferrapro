@@ -13,7 +13,7 @@ families = [
  ('Hijyen','dispenser','Dispenser ve Aparatlar','Z kat havlu dispenseri|Sensörlü havlu dispenseri|İçten çekmeli havlu dispenseri|Jumbo tuvalet kâğıdı dispenseri|İçten çekmeli tuvalet kâğıdı dispenseri|Masaüstü peçete dispenseri|Klozet örtüsü dispenseri'),
  ('Hijyen','mendil','Mendil ve Yüz Havluları','Kutu mendil|Cep mendili|Yüz havlusu|Tek kullanımlık el kurulama havlusu'),
  ('Hijyen','islak','Islak Havlu','Islak havlu 90’lı|Islak havlu koli|Yüzey temizlik havlusu'),
- ('Hijyen','pecete','Peçete','Kokteyl peçetesi|Servis peçetesi|Dispenser peçete|Garson katlama peçete'),
+ ('Hijyen','pecete','Peçete','Peçete 100’lü|Peçete 200’lü|Renkli peçete|Desenli peçete|Z peçete|Kokteyl peçetesi|Garson katlama peçete|Dispenser peçete'),
  ('Hijyen','havlu','Rulo Havlu','Endüstriyel silme kâğıdı|Mavi rulo havlu|Mutfak rulo havlu'),
  ('Temizlik','sabun','El Sabunları','Sıvı el sabunu|Köpük el sabunu|Sıvı sabun dispenseri|Köpük sabun dispenseri'),
  ('Temizlik','yuzey','Yüzey Temizleyicileri','Genel yüzey temizleyici|Cam temizleyici|Ahşap yüzey temizleyici|Seramik yüzey temizleyici|Paslanmaz çelik yüzey temizleyici|Zemin bakım ürünü|Arap sabunu'),

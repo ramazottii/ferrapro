@@ -21,7 +21,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:140,Temizlik:100,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:120,Temizlik:100,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -29,10 +29,12 @@ assert.equal(new Set(stationery.map(r=>r.satir)).size,stationery.length);
 assert.equal(new Set(stationery.map(r=>r.alt)).size,11);
 assert.equal(classify('Hijyen','Islak havlu 90’lı','islak'),'islak');
 assert.equal(classify('Hijyen','Yüzey temizlik havlusu','islak'),'islak');
-assert.equal(vm.runInContext('MARKA_TERCIHLERI.islak.join(",")',context),'Espiga,Sleepy,Selpak');
+assert.equal(vm.runInContext('MARKA_TERCIHLERI.islak.join(",")',context),'Espiga,Polente,Sleepy,Selpak,Freshmaker,Papilion,Deep Fresh,Komili');
 assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90’lı')},${JSON.stringify('Espiga')})`,context),'Islak havlu 90’lı · Marka tercihi: Espiga');
 assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90’lı')},${JSON.stringify('Fark etmez')})`,context),'Islak havlu 90’lı · Marka tercihi: fark etmez');
-assert.equal(classify('Kırtasiye','Kalemlik','masaustu'),'masaustu');
+assert.equal(classify('Hijyen','Peçete 100’lü','pecete'),'pecete');
+assert.equal(classify('Hijyen','Z peçete','pecete'),'pecete');
+assert.equal(classify('Hijyen','Renkli peçete','pecete'),'pecete');
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

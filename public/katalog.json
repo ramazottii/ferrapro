@@ -131,12 +131,6 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Peçete 100'lü×24 (30×30 cm) · 100 yaprak · 24gr · 1 kat · koli 24",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "Hareketli Havlu 21,2 cm × 68 m × 6 · 22gr × 2 kat · 68 m · koli 6",
       "gorsel": "/img/products/fotosel.webp",
       "gorselTuru": "temsili"
@@ -145,36 +139,6 @@
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Tuvalet Kağıdı 13,7 cm × 200 m × 6 · 17gr × 2 kat · 200 m · koli 6",
       "gorsel": "/img/products/tuvalet.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Peçete 200'lü×18 (24,5×26,5 cm) · 200 yaprak · 17gr · 1 kat · koli 18",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Peçete 23×24,5 100'lü×32 · 100 yaprak · 17gr · 1 kat · koli 32",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "1 Kat Peçete 30×30 cm 200'lü×12 · 200 yaprak · 24gr · 1 kat · koli 12",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "3 Katlı Mendil (10×10)×24 · 15gr × 3 kat · koli 24",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 300'lü · 300 yaprak · 17gr · 1 kat · koli 12",
-      "gorsel": "/img/products/pecete.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -334,18 +298,6 @@
       "gorselTuru": "temsili"
     },
     {
-      "kategori": "Hijyen",
-      "satir": "Garson Katlama Peçete 30×33 cm · 2 kat · 50'li · koli 24",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "V Katlama Dispenser Peçete 11×19 cm · 2 kat · 250'li · koli 24",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
       "kategori": "Sağlık",
       "satir": "Muayene Masa Örtüsü 50 m (50×24 cm) · 2 kat · koli 6",
       "gorsel": "/img/products/masa.webp",
@@ -457,18 +409,6 @@
       "kategori": "Hijyen",
       "satir": "İçten Çekmeli Havlu 2,5 kg / 41,66 m · 2 kat · koli 6",
       "gorsel": "/img/products/fotosel.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 17×21 cm · 1 kat · 150'li · koli 18",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Garson Katlama Peçete · 2 katlama · 50'li · koli 24",
-      "gorsel": "/img/products/pecete.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -617,60 +557,6 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 17×21 100'lü×18 · koli 18 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 17×21 120'li×18 · koli 18 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 17×21 150'li×18 · koli 18 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 17×21 200'lü×18 · koli 18 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser Peçete 11×18 200'lü×18 · koli 18 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Peçete 21×24 cm 60'lı×50 · koli 50 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Peçete 21×24 cm 100'lü×32 · koli 32 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Peçete 30×30 cm 100'lü×24 · koli 24 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Peçete Garson Katlama 30×30 cm 100'lü×12 · koli 12 paket",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "Tuvalet Kağıdı 16×3 · koli 48 adet",
       "gorsel": "/img/products/tuvalet.webp",
       "gorselTuru": "temsili"
@@ -743,12 +629,6 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Dispenser Peçete · 250 adet · 18gr × 1 kat · koli 18×250",
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "Z Katlı Dispenser Havlu · 200 yaprak · 36gr × 2 kat · koli 12×200",
       "gorsel": "/img/products/zkat.webp",
       "gorselTuru": "temsili"
@@ -757,12 +637,6 @@
       "kategori": "Hijyen",
       "satir": "Z Katlı Dispenser Havlu · 200 yaprak · 46gr × 2 kat · koli 20×200",
       "gorsel": "/img/products/zkat.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Mendil 60'lı · 60 adet · 43gr × 1 kat · koli 24×60",
-      "gorsel": "/img/products/pecete.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2373,38 +2247,6 @@
       "alt": "mendil",
       "talepTuru": true,
       "gorsel": "/img/products/jumbo.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Kokteyl peçetesi",
-      "alt": "pecete",
-      "talepTuru": true,
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Servis peçetesi",
-      "alt": "pecete",
-      "talepTuru": true,
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Dispenser peçete",
-      "alt": "pecete",
-      "talepTuru": true,
-      "gorsel": "/img/products/pecete.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Garson katlama peçete",
-      "alt": "pecete",
-      "talepTuru": true,
-      "gorsel": "/img/products/pecete.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -4197,6 +4039,70 @@
       "alt": "islak",
       "talepTuru": true,
       "gorsel": "/img/products/surfacewipes.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Peçete 100’lü",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/pecete.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Peçete 200’lü",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/napkin200.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Renkli peçete",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/napkincolor.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Desenli peçete",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/napkinprint.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Z peçete",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/znapkin.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Kokteyl peçetesi",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/cocktailnapkin.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Garson katlama peçete",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/dinnernapkin.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Dispenser peçete",
+      "alt": "pecete",
+      "talepTuru": true,
+      "gorsel": "/img/products/dispensernapkin.webp",
       "gorselTuru": "temsili"
     }
   ]
