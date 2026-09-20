@@ -14,6 +14,19 @@ Ferrapro kurumsal B2B tedarik ve görüşme sitesi. Sipariş, ödeme, sepet veya
 - Açık alt kategori kimlikleri, eski URL uyumluluğu, belirsiz satırların ayrı inceleme dosyasına taşınması.
 
 ## Öncelik sırasıyla kalan işler
+
+### Kullanıcının ek görevi: eksik ve tekrar eden görseller
+20 Eylül 2026 sayımı: 585 kayıt; 508 kayıtta 91 farklı temsili ürün görseli kullanılıyor. 91 görselin 69'u birden fazla kayıtta, 22'si yalnız bir kayıtta. Tekrar kullanılan 69 görsel 486 kaydı kapsıyor. Kalan 77 kayıtta kategori görseli var; bunlar 41 farklı eksik imageKey değerine karşılık geliyor.
+
+En çok tekrar: fotosel.webp 45, detergent.webp 33, cop.webp 27, tuvalet.webp 25, pecete.webp 25, zkat.webp 22, jumbo.webp 13, cable.webp 11 kayıt.
+
+Görev:
+- Önce product-images-pending.json içindeki 41 eksik görsel ailesini tamamla.
+- Ardından aynı görseli kullanan kayıtları ürün türüne göre incele. Aynı ürünün yalnız ölçü/ambalaj varyantları ortak görsel kullanabilir. Farklı ürün türlerini aynı fotoğrafla göstermeyi düzelt: jel/roller/tükenmez, fosforlu/tahta/permanent kalem; deterjan türleri; kablo ve bağlantı türleri öncelikli.
+- Her kayda sırf benzersiz olsun diye yeni görsel üretme. Hazır ve uygun görselleri koru; kullanım bütçesi için küçük partilerle ilerle. 41 eksik aileyi tamamlamak, tüm tekrar sorununu tek başına çözmez.
+- Her partide ürün-görsel eşleşmesini görsel olarak kontrol et, eşleştirme betiğini ve bekleyen listesini güncelle. npm run check ve ilgili mobil/masaüstü kontrolünü yap.
+- Tamamlanma ölçütü: kategori görseliyle kalan ürün kartı sıfır; farklı ürün türlerine yanlış ortak fotoğraf ataması kalmamış; tüm dosyalar yerel ve yükleniyor. Kabul edilen varyant tekrarlarını kısa gerekçeyle raporla. Güncel eksik aile/kayıt ve tekrar sayısını HANDOFF'a yaz.
+
 1. docs/product-images-pending.json içindeki imageKey değerlerini benzersizleştir. Yalnız eksik anahtarlar için uygun görsel edin/üret. İzinli üretici fotoğrafı varsa tercih et; Avansas görsellerini izinsiz kopyalama veya hotlink yapma. Üretim istemleri docs/product-image-prompts.json içinde. Kullanım bütçesini koru: önce küçük parti, kontrol, sonra devam.
 2. Görselleri public/img/products/KEY.webp olarak en fazla 640px, WebP yaklaşık kalite84 kaydet. tools/assign_product_images.py çalıştır; bekleyen liste otomatik küçülür. Python Pillow yalnız sıkıştırma için kullanıldı. tools/generated-image-paths.local.json makineye özeldir, repoda yok. Hazır WebP'ler doğrudan kullanılabilir.
 3. Mevcut eşleşmeleri iyileştir: roller/jel kalem aynı tükenmez fotoğrafını; farklı marker türleri fosforlu kalemi; bazı dosyalar çıtçıtlı dosyayı; zımba teli/sökücü zımba makinesini; cetvel/pano/etiket varyantları ortak aile fotoğrafını kullanıyor. Bunları gerçek tür bazında ayır. Şarj adaptörü görselinde ABD tipi uç var; Türkiye/Avrupa tipiyle değiştir. Sağlık, içecek, dispenser ve ambalaj eşleşmelerini özellikle incele. Temsili etiketi alakasız görseli haklı çıkarmaz.
