@@ -546,13 +546,13 @@
     {
       "kategori": "Temizlik",
       "satir": "Sarı Güç 1 L · Koli 12",
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/sariguc.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Mavi Güç 1 L · Koli 12",
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/maviguc.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -602,12 +602,6 @@
       "gorselTuru": "temsili",
       "alt": "camasir",
       "talepTuru": true
-    },
-    {
-      "kategori": "Temizlik",
-      "satir": "Bulaşık 4 kg · Adet",
-      "gorsel": "/img/products/detergent.webp",
-      "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
@@ -884,7 +878,7 @@
     {
       "kategori": "Temizlik",
       "satir": "Sarı Güç 1000 gr · Adet",
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/sariguc.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2115,7 +2109,7 @@
       "satir": "Elde Bulaşık Deterjanı",
       "alt": "bulasik-temizlik",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/dishhand.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2123,7 +2117,7 @@
       "satir": "Makine Bulaşık Deterjanı",
       "alt": "bulasik-temizlik",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/dishmachine.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2131,7 +2125,7 @@
       "satir": "Bulaşık Makinesi Parlatıcısı",
       "alt": "bulasik-temizlik",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/dishrinse.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2139,7 +2133,7 @@
       "satir": "Bulaşık Makinesi Tuzu",
       "alt": "bulasik-temizlik",
       "talepTuru": true,
-      "gorsel": "/img/products/detergent.webp",
+      "gorsel": "/img/products/dishsalt.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2147,7 +2141,7 @@
       "satir": "Yağ Çözücü",
       "alt": "bulasik-temizlik",
       "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
+      "gorsel": "/img/products/degreaser.webp",
       "gorselTuru": "temsili"
     },
     {

@@ -24,7 +24,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:80,Temizlik:99,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:80,Temizlik:98,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -97,6 +97,17 @@ assert.ok(data.urunler.some(r=>r.satir==='Oda Kokusu Spreyi'&&r.gorsel.endsWith(
 assert.ok(data.urunler.some(r=>r.satir==='Otomatik Koku Makinesi'&&r.gorsel.endsWith('airfreshener.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Koku Makinesi Yedeği'&&r.gorsel.endsWith('kokuyedek.webp')));
 assert.ok(data.urunler.some(r=>r.satir.startsWith('Oda Parfümü 500 ml')&&r.gorsel.endsWith('odaparfum.webp')));
+assert.ok(data.urunler.filter(r=>/sarı güç/i.test(r.satir)).every(r=>r.gorsel.endsWith('sariguc.webp')));
+assert.ok(data.urunler.filter(r=>/mavi güç/i.test(r.satir)).every(r=>r.gorsel.endsWith('maviguc.webp')));
+assert.equal(data.urunler.filter(r=>r.satir.startsWith('Bulaşık 4 kg')).length,0);
+const dish=data.urunler.filter(r=>r.kategori==='Temizlik'&&(r.alt==='bulasik-temizlik'||/bulaşık/.test(r.satir)));
+assert.equal(dish.length,5);
+assert.equal(new Set(dish.map(r=>r.gorsel)).size,5);
+assert.ok(data.urunler.some(r=>r.satir==='Elde Bulaşık Deterjanı'&&r.gorsel.endsWith('dishhand.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Makine Bulaşık Deterjanı'&&r.gorsel.endsWith('dishmachine.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Bulaşık Makinesi Parlatıcısı'&&r.gorsel.endsWith('dishrinse.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Bulaşık Makinesi Tuzu'&&r.gorsel.endsWith('dishsalt.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Yağ Çözücü'&&r.gorsel.endsWith('degreaser.webp')));
 
 // Exercise the real public form handler without network or private customer data.
 async function checkSubmission(ok) {

@@ -272,6 +272,13 @@ Dört kart aynı duvar makinesi fotoğrafını kullanıyordu. Spreye aerosol kut
 Cloudflare sürümü: cf4ae515-2099-4ead-833b-509b1e628fce.
 Önceki sürüm: 3e122c07-63a6-4abd-9a8d-7177e7b29e5c.
 
+## 20 Eylül — Bulaşık ve sarı/mavi güç görselleri
+Kullanıcı Asperox sarı/mavi sprey ve bulaşık makinesi ürün görsellerini referans verdi; markasız krem stüdyo fotoğrafları bağlandı. Artık SKU olan Bulaşık 4 kg kartı kaldırıldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: dc9a8150-4534-4d51-8836-5c80c13e4fb7.
+Önceki sürüm: cf4ae515-2099-4ead-833b-509b1e628fce.
+
 
 
 
