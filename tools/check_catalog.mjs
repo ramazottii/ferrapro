@@ -132,6 +132,26 @@ assert.ok(data.urunler.some(r=>r.satir==='Yer Fırçası'&&r.gorsel.endsWith('fl
 assert.ok(data.urunler.some(r=>r.satir==='Cam Çekçeği'&&r.gorsel.endsWith('windowsqueegee.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Yer Çekçeği'&&r.gorsel.endsWith('floorsqueegee.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Temizlik Arabası'&&r.gorsel.endsWith('janitorcart.webp')));
+const atik=data.urunler.filter(r=>r.alt==='atik-yonetimi');
+assert.equal(atik.length,4);
+assert.equal(new Set(atik.map(r=>r.gorsel)).size,4);
+assert.ok(data.urunler.some(r=>r.satir==='Pedallı Çöp Kovası'&&r.gorsel.endsWith('bin.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Ofis Çöp Sepeti'&&r.gorsel.endsWith('officebasket.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Geri Dönüşüm Kutusu'&&r.gorsel.endsWith('recyclebin.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Çöp Kovası Kapağı'&&r.gorsel.endsWith('binlid.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Mantar Pano'&&r.gorsel.endsWith('corkboard.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Askılı Dosya'&&r.gorsel.endsWith('hangingfile.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Düğme Pil'&&r.gorsel.endsWith('buttonbatt.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Hava Kabarcıklı Zarf'&&r.gorsel.endsWith('bubblemailer.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Zımba Sökücü'&&r.gorsel.endsWith('stapleremover.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Cilt Spirali'&&r.gorsel.endsWith('bindcoil.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Sayfa Işaretleyici'&&r.gorsel.endsWith('pageflags.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Dosya Ayracı'&&r.gorsel.endsWith('filetabs.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Sunum Dosyası'&&r.gorsel.endsWith('displaybook.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Ataş'&&r.gorsel.endsWith('paperclips.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Evrak Mandalı'&&r.gorsel.endsWith('binderclips.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Kalemlik'&&r.gorsel.endsWith('pencup.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Evrak Rafı'&&r.gorsel.endsWith('papertray.webp')));
 
 
 

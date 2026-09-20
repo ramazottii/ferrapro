@@ -293,6 +293,13 @@ Faraşlı süpürge ve yer fırçası tuvalet fırçası, çekçekler düz mop, 
 Cloudflare sürümü: c09336da-0072-4abe-bdba-3ac583fdda05.
 Önceki sürüm: ec7b714d-d7be-4bfd-89b9-2c011f0dd6d6.
 
+## 20 Eylül — Atık yönetimi ve kırtasiye görselleri
+Atık yönetiminde dört kart aynı pedal kovayı kullanıyordu. Pedal kova, açık sepet, geri dönüşüm ünitesi ve kapak ayrıldı. Kırtasiyede yanlış türler (mantar pano, askılı dosya, düğme/9V pil, kabarcıklı zarf, zımba sökücü, cilt spirali, flipchart, renkli kâğıt vb.) kendi silüetine alındı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 07c9d8b9-2ecd-4c30-841c-1359d29c557d.
+Önceki sürüm: c09336da-0072-4abe-bdba-3ac583fdda05.
+
 
 
 
