@@ -27,7 +27,8 @@ const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
 assert.equal(new Set(stationery.map(r=>r.satir)).size,stationery.length);
 assert.equal(new Set(stationery.map(r=>r.alt)).size,11);
-assert.equal(classify('Kırtasiye','Kalemtıraş','kesim'),'kesim');
+assert.equal(classify('Hijyen','Islak havlu 90’lı','islak'),'islak');
+assert.equal(classify('Hijyen','Yüzey temizlik havlusu','islak'),'islak');
 assert.equal(classify('Kırtasiye','Kalemlik','masaustu'),'masaustu');
 
 // Exercise the real public form handler without network or private customer data.

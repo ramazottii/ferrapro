@@ -12,7 +12,7 @@ data = json.loads(path.read_text(encoding='utf-8'))
 families = [
  ('Hijyen','dispenser','Dispenser ve Aparatlar','Z kat havlu dispenseri|Sensörlü havlu dispenseri|İçten çekmeli havlu dispenseri|Jumbo tuvalet kâğıdı dispenseri|İçten çekmeli tuvalet kâğıdı dispenseri|Masaüstü peçete dispenseri|Klozet örtüsü dispenseri'),
  ('Hijyen','mendil','Mendil ve Yüz Havluları','Kutu mendil|Cep mendili|Yüz havlusu|Tek kullanımlık el kurulama havlusu'),
- ('Hijyen','islak','Islak Havlu','Islak mendil|Tekli paket ıslak mendil|Yüzey temizleme mendili'),
+ ('Hijyen','islak','Islak Havlu','Islak havlu 90’lı|Islak havlu koli|Yüzey temizlik havlusu'),
  ('Hijyen','pecete','Peçete','Kokteyl peçetesi|Servis peçetesi|Dispenser peçete|Garson katlama peçete'),
  ('Hijyen','havlu','Rulo Havlu','Endüstriyel silme kâğıdı|Mavi rulo havlu|Mutfak rulo havlu'),
  ('Temizlik','sabun','El Sabunları','Sıvı el sabunu|Köpük el sabunu|Sıvı sabun dispenseri|Köpük sabun dispenseri'),

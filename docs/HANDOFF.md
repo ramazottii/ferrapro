@@ -118,3 +118,15 @@ Cloudflare sürümü: 440132a5-8333-4fe9-aecb-7c71ef1ff1de.
 Önceki sürüm: 43ed425e-799a-4556-ba8a-a48fee41b395.
 katalog.json ve statik varlıklar yüklendi. Panel/Worker kod farkı yok. GitHub `codex/visual-refresh` dalına gönderildi.
 
+## 20 Eylül — Islak Havlu düzeltmesi
+Kullanıcı canlı menüde kutu mendil görsellerini ve yanlış satırları işaretledi.
+- Grupta yalnızca: Islak havlu 90’lı, Islak havlu koli, Yüzey temizlik havlusu.
+- Yeni temsili görseller: wipes.webp, wipescarton.webp, surfacewipes.webp. Kutu mendil görseli bu grupta kullanılmıyor.
+- Mendil satırları bu başlıktan çıkarıldı. npm run check geçti.
+
+### Yayın tamamlandı
+Kullanıcı canlı menüden bakarken adf443db-8c5c-4c14-b788-75480cac1bdb yayımlandı.
+Önceki sürüm: 440132a5-8333-4fe9-aecb-7c71ef1ff1de.
+
+
+

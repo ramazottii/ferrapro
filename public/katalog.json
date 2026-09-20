@@ -245,12 +245,6 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Islak Havlu · 100'lü · 1 kat · koli 24 paket",
-      "gorsel": "/img/products/tissue.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "Beyaz 6'lı Havlu · 90 yaprak · 10 m · 2 kat · 6'lı × koli 4",
       "gorsel": "/img/products/jumbo.webp",
       "gorselTuru": "temsili"
@@ -2383,30 +2377,6 @@
     },
     {
       "kategori": "Hijyen",
-      "satir": "Islak mendil",
-      "alt": "islak",
-      "talepTuru": true,
-      "gorsel": "/img/products/tissue.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Tekli paket ıslak mendil",
-      "alt": "islak",
-      "talepTuru": true,
-      "gorsel": "/img/products/tissue.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
-      "satir": "Yüzey temizleme mendili",
-      "alt": "islak",
-      "talepTuru": true,
-      "gorsel": "/img/products/tissue.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Hijyen",
       "satir": "Kokteyl peçetesi",
       "alt": "pecete",
       "talepTuru": true,
@@ -4203,6 +4173,30 @@
       "alt": "duzen",
       "talepTuru": true,
       "gorsel": "/img/products/organizer.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Islak havlu 90’lı",
+      "alt": "islak",
+      "talepTuru": true,
+      "gorsel": "/img/products/wipes.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Islak havlu koli",
+      "alt": "islak",
+      "talepTuru": true,
+      "gorsel": "/img/products/wipescarton.webp",
+      "gorselTuru": "temsili"
+    },
+    {
+      "kategori": "Hijyen",
+      "satir": "Yüzey temizlik havlusu",
+      "alt": "islak",
+      "talepTuru": true,
+      "gorsel": "/img/products/surfacewipes.webp",
       "gorselTuru": "temsili"
     }
   ]

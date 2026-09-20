@@ -206,7 +206,7 @@ bindTrust();
 
 const ALTLAR = {
   Hijyen: [
-    { id: "islak", ad: "Islak Havlu", test: (t) => t.includes("ıslak") },
+    { id: "islak", ad: "Islak Havlu", test: (t) => t.includes("ıslak") || /yüzey temizlik havlu/.test(t) },
     { id: "pecete", ad: "Peçete", test: (t) => /peçete|mendil/.test(t) },
     { id: "zkat", ad: "Z Kat Havlu", test: (t) => /z kat/.test(t) },
     { id: "fotosel", ad: "Fotoselli Havlu", test: (t) => t.includes("fotosel") },
