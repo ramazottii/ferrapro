@@ -359,12 +359,6 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Doğal Güç Mop Beyaz 1×50 · 50 Adet · Koli 12",
-      "gorsel": "/img/products/mop.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Temizlik",
       "satir": "Çöp Poşeti Battal 75×90 Mavi · 10'lu Rulo · 275 gr · Koli 20 Paket",
       "gorsel": "/img/products/copblue.webp",
       "gorselTuru": "temsili"
@@ -610,36 +604,6 @@
       "gorselTuru": "temsili"
     },
     {
-      "kategori": "Temizlik",
-      "satir": "Mikrofiber Bez 40×40 · Adet",
-      "gorsel": "/img/products/cloth.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Temizlik",
-      "satir": "Mikrofiber Cam Bezi · Adet",
-      "gorsel": "/img/products/cloth.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Temizlik",
-      "satir": "Nemli Mop 50 cm · Adet",
-      "gorsel": "/img/products/mop.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Temizlik",
-      "satir": "Faraşlı Süpürge Takım · Adet",
-      "gorsel": "/img/products/brush.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Temizlik",
-      "satir": "Krom Tuvalet Fırçası · Adet",
-      "gorsel": "/img/products/brush.webp",
-      "gorselTuru": "temsili"
-    },
-    {
       "kategori": "Sağlık",
       "satir": "Cerrahi Maske 50’li · Kutu",
       "gorsel": "/img/products/mask.webp",
@@ -877,8 +841,8 @@
     },
     {
       "kategori": "Temizlik",
-      "satir": "Mikrofiber Temizlik Bezi 40×40 · Adet",
-      "gorsel": "/img/products/cloth.webp",
+      "satir": "Sarı Güç 1000 gr · Adet",
+      "gorsel": "/img/products/sariguc.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2151,7 +2115,7 @@
       "satir": "Cam Bezi",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/cloth.webp",
+      "gorsel": "/img/products/camcloth.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2159,7 +2123,7 @@
       "satir": "Toz Bezi",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/cloth.webp",
+      "gorsel": "/img/products/dustcloth.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2167,7 +2131,7 @@
       "satir": "Islak Mop",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/wetmop.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2175,7 +2139,7 @@
       "satir": "Nemli Mop",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/dampmop.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2183,7 +2147,7 @@
       "satir": "Mop Yedeği",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/moprefill.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2191,7 +2155,7 @@
       "satir": "Mop Aparatı",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/mopframe.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2199,23 +2163,23 @@
       "satir": "Mop Sapı",
       "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/mop.webp",
+      "gorsel": "/img/products/mophandle.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Temizlik Kovası",
-      "alt": "ekipman",
+      "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/bucket.webp",
+      "gorsel": "/img/products/mopbucket.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Temizlik",
       "satir": "Presli Temizlik Kovası",
-      "alt": "ekipman",
+      "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/bucket.webp",
+      "gorsel": "/img/products/wringerbucket.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2229,9 +2193,9 @@
     {
       "kategori": "Temizlik",
       "satir": "Tuvalet Fırçası",
-      "alt": "ekipman",
+      "alt": "arac",
       "talepTuru": true,
-      "gorsel": "/img/products/brush.webp",
+      "gorsel": "/img/products/toiletbrush.webp",
       "gorselTuru": "temsili"
     },
     {
