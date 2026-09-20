@@ -1013,7 +1013,7 @@
       "satir": "A3 Fotokopi Kâğıdı",
       "alt": "a4",
       "talepTuru": true,
-      "gorsel": "/img/products/a4.webp",
+      "gorsel": "/img/products/a3ream.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1029,7 +1029,7 @@
       "satir": "Gramajlı Baskı Kâğıdı",
       "alt": "a4",
       "talepTuru": true,
-      "gorsel": "/img/products/a4.webp",
+      "gorsel": "/img/products/gramaj.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1045,7 +1045,7 @@
       "satir": "Plotter Kâğıdı",
       "alt": "a4",
       "talepTuru": true,
-      "gorsel": "/img/products/plotter.webp",
+      "gorsel": "/img/products/plotterrolls.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1053,7 +1053,7 @@
       "satir": "Sürekli Form Kâğıdı",
       "alt": "a4",
       "talepTuru": true,
-      "gorsel": "/img/products/paperroll.webp",
+      "gorsel": "/img/products/contform.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -1061,7 +1061,7 @@
       "satir": "Karbon Kâğıdı",
       "alt": "a4",
       "talepTuru": true,
-      "gorsel": "/img/products/a4.webp",
+      "gorsel": "/img/products/carbonpaper.webp",
       "gorselTuru": "temsili"
     },
     {

@@ -157,6 +157,16 @@ assert.ok(data.urunler.some(r=>r.satir==='Ataş'&&r.gorsel.endsWith('paperclips.
 assert.ok(data.urunler.some(r=>r.satir==='Evrak Mandalı'&&r.gorsel.endsWith('binderclips.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Kalemlik'&&r.gorsel.endsWith('pencup.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Evrak Rafı'&&r.gorsel.endsWith('papertray.webp')));
+const kagit=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='a4');
+assert.equal(kagit.length,9);
+assert.equal(new Set(kagit.map(r=>r.gorsel)).size,9);
+assert.ok(data.urunler.some(r=>r.satir==='A3 Fotokopi Kâğıdı'&&r.gorsel.endsWith('a3ream.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Gramajlı Baskı Kâğıdı'&&r.gorsel.endsWith('gramaj.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Plotter Kâğıdı'&&r.gorsel.endsWith('plotterrolls.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Sürekli Form Kâğıdı'&&r.gorsel.endsWith('contform.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Karbon Kâğıdı'&&r.gorsel.endsWith('carbonpaper.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='A4 Fotokopi Kâğıdı'&&r.gorsel.endsWith('a4.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='Termal POS Rulosu'&&r.gorsel.endsWith('paperroll.webp')));
 
 
 

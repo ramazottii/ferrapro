@@ -307,6 +307,13 @@ Cloudflare sürümü: 07c9d8b9-2ecd-4c30-841c-1359d29c557d.
 Cloudflare sürümü: 2ccc22a2-600e-46de-b5a6-ef96bb771695.
 Önceki sürüm: 07c9d8b9-2ecd-4c30-841c-1359d29c557d.
 
+## 20 Eylül — Fotokopi ve özel kâğıt görselleri
+A3, gramajlı, plotter rulo, sürekli form ve karbon kâğıdı referans silüetlerine göre ayrıldı; A4 ream ve POS rulosu yerinde kaldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: e05b2ef8-5465-4be8-b654-48ec3fd3c49c.
+Önceki sürüm: 2ccc22a2-600e-46de-b5a6-ef96bb771695.
+
 
 
 
