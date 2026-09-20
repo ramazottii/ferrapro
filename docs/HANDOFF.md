@@ -177,6 +177,19 @@ Cloudflare sürümü: 16fc58d8-ebea-4ce3-8c8e-2f96f9e0bb78.
 ## 20 Eylül — Mini Jumbo ve tuvalet görselleri krem fon
 Kullanıcı Mini Jumbo, içten çekmeli tuvalet ve tuvalet kâğıdı kartlarında krem zemin istedi.
 
+### Yayın tamamlandı
+Cloudflare sürümü: 7a678562-30a7-40f5-83ea-8dffe8bdb06c.
+Önceki sürüm: 16fc58d8-ebea-4ce3-8c8e-2f96f9e0bb78.
+
+## 20 Eylül — Rulo Havlu sadeleştirildi
+Kullanıcı ölçü kalabalığını kaldırttı. Grupta 6’lı, 8’li, 12’li ve dev rulo; krem zeminde paket görselleri. Marka tercihi: Solo, Selpak, Papia, Familia, Focus, Forest, Rulopak.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 04d91898-da0c-406b-a6e4-a3fdbdb4f0b2.
+Önceki sürüm: 7a678562-30a7-40f5-83ea-8dffe8bdb06c.
+
+
+
 
 
 

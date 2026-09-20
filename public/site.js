@@ -288,6 +288,7 @@ const ALTLAR = {
 
 const MARKA_TERCIHLERI = {
   islak: ["Espiga", "Polente", "Sleepy", "Selpak", "Freshmaker", "Papilion", "Deep Fresh", "Komili"],
+  havlu: ["Solo", "Selpak", "Papia", "Familia", "Focus", "Forest", "Rulopak"],
 };
 
 function markaTercihSatir(name, brand) {
