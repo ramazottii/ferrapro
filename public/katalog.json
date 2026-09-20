@@ -4078,7 +4078,7 @@
       "satir": "Z peçete",
       "alt": "pecete",
       "talepTuru": true,
-      "gorsel": "/img/products/znapkin.webp",
+      "gorsel": "/img/products/zfoldnapkin.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -4094,7 +4094,7 @@
       "satir": "Garson katlama peçete",
       "alt": "pecete",
       "talepTuru": true,
-      "gorsel": "/img/products/dinnernapkin.webp",
+      "gorsel": "/img/products/garsonnapkin.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -4102,7 +4102,7 @@
       "satir": "Dispenser peçete",
       "alt": "pecete",
       "talepTuru": true,
-      "gorsel": "/img/products/dispensernapkin.webp",
+      "gorsel": "/img/products/vfoldnapkin.webp",
       "gorselTuru": "temsili"
     }
   ]

@@ -19,7 +19,7 @@ rules={
 default={'Hijyen':'fotosel','Temizlik':'detergent','Mutfak':'water','Ambalaj':'kese','PC':'usb','Sağlık':'masa','Kırtasiye':'a4'}
 # Specific product names must take precedence over broad family words.
 priority={
- 'Hijyen':[(r'z havlu','zkat'),(r'peçete dispenser','napkinholder'),(r'tuvalet.*dispenser|klozet.*dispenser','toiletdispenser'),(r'ıslak havlu koli','wipescarton'),(r'yüzey temizlik havlu','surfacewipes'),(r'z peçete','znapkin'),(r'renkli peçete','napkincolor'),(r'desenli peçete','napkinprint'),(r'kokteyl peçete','cocktailnapkin'),(r'garson katlama','dinnernapkin'),(r'dispenser peçete','dispensernapkin'),(r'peçete 200','napkin200'),(r'peçete 100','pecete')],
+ 'Hijyen':[(r'z havlu','zkat'),(r'peçete dispenser','napkinholder'),(r'tuvalet.*dispenser|klozet.*dispenser','toiletdispenser'),(r'ıslak havlu koli','wipescarton'),(r'yüzey temizlik havlu','surfacewipes'),(r'z peçete','zfoldnapkin'),(r'renkli peçete','napkincolor'),(r'desenli peçete','napkinprint'),(r'kokteyl peçete','cocktailnapkin'),(r'garson katlama','garsonnapkin'),(r'dispenser peçete','vfoldnapkin'),(r'peçete 200','napkin200'),(r'peçete 100','pecete')],
  'Temizlik':[(r'toz.*deterjan|deterjanı 10 kg|kapsül|makinesi tuzu','drycleaning')],
  'Mutfak':[(r'kapaklı yemek','bowl'),(r'bardak kapa','lid'),(r'bardak taşıyıcı|bardak kılıfı','cupcarrier'),(r'ice tea|soğuk çay','icedtea'),(r'çay','tea'),(r'süt','milk'),(r'meyve suyu','juice'),(r'soda|maden suyu','soda'),(r'enerji içece','energy'),(r'coffee mate|kahve kreması','creamer'),(r'filtre kâğıdı','filter'),(r'bardağı','bardak'),(r'masa örtüsü|servis kâğıdı','tablecover')],
  'Ambalaj':[(r'güvenlik bantlı','pouch'),(r'koli bandı makine','bant'),(r'band|bant','taperolls'),(r'kasa poşet','kasa')],
