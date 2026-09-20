@@ -653,12 +653,6 @@
     },
     {
       "kategori": "Sağlık",
-      "satir": "Tıbbi Atık Kovası 5 L · Adet",
-      "gorsel": "/img/products/bin.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Sağlık",
       "satir": "İş Eldiveni (temizlik Personeli) · Çift",
       "gorsel": "/img/products/gloves.webp",
       "gorselTuru": "temsili"
@@ -2252,14 +2246,6 @@
       "alt": "atik-yonetimi",
       "talepTuru": true,
       "gorsel": "/img/products/recyclebin.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Temizlik",
-      "satir": "Çöp Kovası Kapağı",
-      "alt": "atik-yonetimi",
-      "talepTuru": true,
-      "gorsel": "/img/products/binlid.webp",
       "gorselTuru": "temsili"
     },
     {

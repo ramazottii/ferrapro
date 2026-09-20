@@ -300,6 +300,13 @@ Atık yönetiminde dört kart aynı pedal kovayı kullanıyordu. Pedal kova, aç
 Cloudflare sürümü: 07c9d8b9-2ecd-4c30-841c-1359d29c557d.
 Önceki sürüm: c09336da-0072-4abe-bdba-3ac583fdda05.
 
+## 20 Eylül — Atık kapağı kaldırıldı
+Çöp kovası kapağı kartı silindi. Tıbbi atık kovası ve poşet Sağlık → Tıbbi Atık altında kalır (kesici-delici kutu ile); ofis çöpü Temizlik → Atık Yönetimi’ndedir.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2ccc22a2-600e-46de-b5a6-ef96bb771695.
+Önceki sürüm: 07c9d8b9-2ecd-4c30-841c-1359d29c557d.
+
 
 
 

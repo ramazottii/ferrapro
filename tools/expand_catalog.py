@@ -25,7 +25,7 @@ families = [
  ('Temizlik','bulasik-temizlik','Bulaşık Temizliği','Elde Bulaşık Deterjanı|Makine Bulaşık Deterjanı|Bulaşık Makinesi Parlatıcısı|Bulaşık Makinesi Tuzu|Yağ Çözücü'),
  ('Temizlik','arac','Bez ve Mop','Mikrofiber Temizlik Bezi|Cam Bezi|Toz Bezi|Islak Mop|Nemli Mop|Mop Yedeği|Mop Aparatı|Mop Sapı|Temizlik Kovası|Presli Temizlik Kovası|Tuvalet Fırçası'),
  ('Temizlik','ekipman','Temizlik Ekipmanları','Faraşlı Süpürge|Yer Fırçası|Cam Çekçeği|Yer Çekçeği|Temizlik Arabası'),
- ('Temizlik','atik-yonetimi','Atık Yönetimi','Pedallı Çöp Kovası|Ofis Çöp Sepeti|Geri Dönüşüm Kutusu|Çöp Kovası Kapağı'),
+ ('Temizlik','atik-yonetimi','Atık Yönetimi','Pedallı Çöp Kovası|Ofis Çöp Sepeti|Geri Dönüşüm Kutusu'),
  ('Temizlik','koku','Ortam Kokuları','Oda Kokusu Spreyi|Otomatik Koku Makinesi|Koku Makinesi Yedeği'),
  ('Mutfak','kahve','Kahve ve Çay','Çekirdek Kahve|Filtre Kahve|Türk Kahvesi|Çözünebilir Kahve|Kapsül Kahve|Dökme Siyah Çay|Demlik Poşet Çay|Bardak Poşet Çay|Bitki Çayı|Küp Şeker|Stick Şeker|Toz Şeker|Kahve Kreması'),
  ('Mutfak','icecek','İçecekler','Şişe Su|Bardak Su|Maden Suyu|Meyveli Maden Suyu|Meyve Suyu|Soğuk Çay|Süt'),
