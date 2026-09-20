@@ -88,3 +88,12 @@ Kullanıcının "canlıya alalım" talimatıyla 130f19b yayımlandı.
 Cloudflare sürümü: 1bda7980-a6f3-489f-b34d-47a43ca367fb.
 Önceki sürüm: 5767c793-be99-42d9-acfb-74ade8ceb114.
 Yayın öncesi npm run check başarılı; Worker/panel farkı yok. Canlı kırtasiye sayfasında 11 alt grup ve 104 seçenek tarayıcıda doğrulandı. Önceki bölümdeki "henüz canlı değil" ifadesi artık tarihsel durumdur.
+
+## 20 Eylül — tüm kategoriler ve ürün görselleri
+Kullanıcı hazır sürümün canlıya alınmasını, yeni üretimin durmasını ve Cursor devam raporunu istedi.
+- 585 kayıt; 91 WebP ürün ailesi görseli. 508 satır ürün ailesi, 77 satır açıkça etiketlenmiş kategori görseli kullanıyor. 41 eksik görsel anahtarı var.
+- Devam raporu: docs/CURSOR-NEXT.md. Makine tarafından okunabilir eksikler: docs/product-images-pending.json. Araştırma: docs/catalog-research-all.md. İstemler: docs/product-image-prompts.json.
+- npm run check başarılı: tüm kayıtlar sınıflanıyor, tüm görsel dosyaları mevcut, form ve izole Worker akışı başarılı. Worker/panel farkı yok.
+- 1440px ve 360px kırtasiye ürün kartlarında yatay taşma/kırık yüklenmiş görsel yok; mobil tek sütun doğrulandı. Tüm görsellerin tek tek kalite denetimi bitmedi; raporda açıkça belirtildi.
+- Ürün seçimi/miktar zorunlu değil. Gerçek müşteri talebi gönderilmedi. Yeni görsel üretimi kullanıcı talebiyle durduruldu.
+- Yayın sonucu aşağıya eklenecek.

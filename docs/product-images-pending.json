@@ -1,0 +1,387 @@
+[
+  {
+    "kategori": "Hijyen",
+    "satir": "Islak Havlu · 100'lü · 1 kat · koli 24 paket",
+    "imageKey": "wipes"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "kapsül çamaşır 50’li · koli 5",
+    "imageKey": "drycleaning"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Toz deterjan 10 kg · çuval",
+    "imageKey": "drycleaning"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Faraşlı süpürge takım · adet",
+    "imageKey": "dustpan"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Tıbbi atık kovası 5 L · adet",
+    "imageKey": "sharps"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "İş eldiveni (temizlik personeli) · çift",
+    "imageKey": "rubbergloves"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Bulaşık / ev tipi eldiven · çift",
+    "imageKey": "rubbergloves"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Toner / kartuş · adet",
+    "imageKey": "ink"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Soda 24’lü · koli",
+    "imageKey": "soda"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Coffee mate 500 g · koli 12",
+    "imageKey": "creamer"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Çamaşır Deterjanı 10 kg · adet",
+    "imageKey": "drycleaning"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Maden Soda 24'lü · koli",
+    "imageKey": "soda"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Soda Limonlu 24'lü · koli",
+    "imageKey": "soda"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Süt 1000 ml Laktozsuz 12'li · koli",
+    "imageKey": "milk"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Enerji İçeceği 250 ml 24'lü · adet",
+    "imageKey": "energy"
+  },
+  {
+    "kategori": "Kırtasiye",
+    "satir": "Pano mıknatısı",
+    "imageKey": "magnet"
+  },
+  {
+    "kategori": "Kırtasiye",
+    "satir": "Cilt spirali",
+    "imageKey": "spiral"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "Jumbo tuvalet kâğıdı dispenseri",
+    "imageKey": "toiletdispenser"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "İçten çekmeli tuvalet kâğıdı dispenseri",
+    "imageKey": "toiletdispenser"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "Masaüstü peçete dispenseri",
+    "imageKey": "napkinholder"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "Klozet örtüsü dispenseri",
+    "imageKey": "toiletdispenser"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "Islak mendil",
+    "imageKey": "wipes"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "Tekli paket ıslak mendil",
+    "imageKey": "wipes"
+  },
+  {
+    "kategori": "Hijyen",
+    "satir": "Yüzey temizleme mendili",
+    "imageKey": "wipes"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Sıvı sabun dispenseri",
+    "imageKey": "soapdispenser"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Köpük sabun dispenseri",
+    "imageKey": "soapdispenser"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Toz çamaşır deterjanı",
+    "imageKey": "drycleaning"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Bulaşık makinesi tuzu",
+    "imageKey": "drycleaning"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Faraşlı süpürge",
+    "imageKey": "dustpan"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Cam çekçeği",
+    "imageKey": "squeegee"
+  },
+  {
+    "kategori": "Temizlik",
+    "satir": "Yer çekçeği",
+    "imageKey": "squeegee"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Kahve kreması",
+    "imageKey": "creamer"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Maden suyu",
+    "imageKey": "soda"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Meyveli maden suyu",
+    "imageKey": "soda"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Meyve suyu",
+    "imageKey": "juice"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Soğuk çay",
+    "imageKey": "icedtea"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Süt",
+    "imageKey": "milk"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Sıcak içecek bardak kapağı",
+    "imageKey": "lid"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Soğuk içecek bardak kapağı",
+    "imageKey": "lid"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Bardak kılıfı",
+    "imageKey": "cupcarrier"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Bardak taşıyıcı",
+    "imageKey": "cupcarrier"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Kâğıt pipet",
+    "imageKey": "straw"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Servis tepsisi",
+    "imageKey": "tray"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Masa örtüsü",
+    "imageKey": "tablecover"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Amerikan servis kâğıdı",
+    "imageKey": "tablecover"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Alüminyum folyo",
+    "imageKey": "foil"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Pişirme kâğıdı",
+    "imageKey": "foil"
+  },
+  {
+    "kategori": "Mutfak",
+    "satir": "Kahve filtre kâğıdı",
+    "imageKey": "filter"
+  },
+  {
+    "kategori": "Ambalaj",
+    "satir": "Streç sarma aparatı",
+    "imageKey": "stretchtool"
+  },
+  {
+    "kategori": "Ambalaj",
+    "satir": "Köpük ambalaj şiltesi",
+    "imageKey": "foam"
+  },
+  {
+    "kategori": "Ambalaj",
+    "satir": "Kargo poşeti",
+    "imageKey": "pouch"
+  },
+  {
+    "kategori": "Ambalaj",
+    "satir": "Güvenlik bantlı poşet",
+    "imageKey": "pouch"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Siyah mürekkep kartuşu",
+    "imageKey": "ink"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Renkli mürekkep kartuşu",
+    "imageKey": "ink"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Çoklu priz",
+    "imageKey": "powerstrip"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Akım korumalı priz",
+    "imageKey": "powerstrip"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Kablolu kulaklık",
+    "imageKey": "headset"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Mikrofonlu kulaklık",
+    "imageKey": "headset"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Web kamera",
+    "imageKey": "webcam"
+  },
+  {
+    "kategori": "PC",
+    "satir": "USB mikrofon",
+    "imageKey": "microphone"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Dizüstü bilgisayar standı",
+    "imageKey": "stand"
+  },
+  {
+    "kategori": "PC",
+    "satir": "Monitör yükseltici",
+    "imageKey": "stand"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Tek kullanımlık galoş",
+    "imageKey": "shoecover"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Tek kullanımlık önlük",
+    "imageKey": "gown"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Ziyaretçi önlüğü",
+    "imageKey": "gown"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Koruyucu yüz siperi",
+    "imageKey": "faceguard"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Tek kullanımlık yastık kılıfı",
+    "imageKey": "clinicalcover"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Hasta önlüğü",
+    "imageKey": "gown"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Kesici delici atık kutusu",
+    "imageKey": "sharps"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Tıbbi atık kovası",
+    "imageKey": "sharps"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Flaster",
+    "imageKey": "plaster"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Yara bandı",
+    "imageKey": "plaster"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Dil basacağı",
+    "imageKey": "tongue"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Eldiven kutusu tutucu",
+    "imageKey": "rack"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Maske kutusu tutucu",
+    "imageKey": "rack"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Tek kullanımlık bardak dispenseri",
+    "imageKey": "cupdispenser"
+  },
+  {
+    "kategori": "Sağlık",
+    "satir": "Muayene örtüsü tutucu",
+    "imageKey": "rack"
+  }
+]

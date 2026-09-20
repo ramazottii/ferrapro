@@ -216,6 +216,8 @@ const ALTLAR = {
     { id: "icten-tuvalet", ad: "İçten Çekmeli Tuvalet", test: (t) => /içten çekmeli tuvalet/.test(t) },
     { id: "tuvalet", ad: "Tuvalet Kağıtları", test: (t) => t.includes("tuvalet") },
     { id: "havlu", ad: "Rulo Havlu", test: (t) => t.includes("havlu") },
+    { id: "dispenser", ad: "Dispenser ve Aparatlar", test: () => false },
+    { id: "mendil", ad: "Mendil ve Yüz Havluları", test: () => false },
   ],
   Temizlik: [
     { id: "cop", ad: "Çöp Poşeti", test: (t) => t.includes("çöp") },
@@ -228,6 +230,8 @@ const ALTLAR = {
     { id: "bulasik-temizlik", ad: "Bulaşık Temizliği", test: (t) => /bulaşık/.test(t) },
     { id: "sivi", ad: "Diğer Temizlik Ürünleri", test: (t) => !/bez|mop|süpürge|fırça/.test(t) },
     { id: "arac", ad: "Bez ve Mop", test: (t) => /bez|mop|süpürge|fırça/.test(t) },
+    { id: "ekipman", ad: "Temizlik Ekipmanları", test: () => false },
+    { id: "atik-yonetimi", ad: "Atık Yönetimi", test: () => false },
   ],
   Mutfak: [
     { id: "bardak", ad: "Karton Bardak", test: (t) => /karton bardak/.test(t) || (t.includes("bardak") && t.includes("oz")) },
@@ -235,6 +239,8 @@ const ALTLAR = {
     { id: "icecek", ad: "İçecek", test: (t) => /su |soda|ice tea|süt |enerji|330 ml|250 ml 24/.test(t) },
     { id: "kahve", ad: "Kahve ve Çay", test: (t) => /kahve|çay|coffee|şeker|gold 200|filtre/.test(t) },
     { id: "bulasik", ad: "Bulaşık", test: (t) => /bulaşık|çatal/.test(t) },
+    { id: "servis", ad: "Servis ve İkram Gereçleri", test: () => false },
+    { id: "saklama", ad: "Hazırlık ve Saklama", test: () => false },
   ],
   Sağlık: [
     { id: "masa", ad: "Muayene Masa Örtüsü", test: (t) => /masa örtü/.test(t) },
@@ -242,6 +248,8 @@ const ALTLAR = {
     { id: "maske", ad: "Maske", test: (t) => t.includes("maske") },
     { id: "eldiven", ad: "Eldiven", test: (t) => t.includes("eldiven") },
     { id: "atik", ad: "Tıbbi Atık", test: (t) => /atık/.test(t) },
+    { id: "bakim", ad: "Bakım Sarf Malzemeleri", test: () => false },
+    { id: "duzen", ad: "Klinik Düzen ve Dispenser", test: () => false },
   ],
   Kırtasiye: [
     { id: "a4", ad: "Fotokopi ve Özel Kâğıtlar", aciklama: "Ebat, gramaj ve paket adedine göre teklif.", test: (t) => ["a4 fotokopi kâğıdı", "a3 fotokopi kâğıdı", "renkli fotokopi kâğıdı", "gramajlı baskı kâğıdı", "fotoğraf kâğıdı", "plotter kâğıdı", "sürekli form kâğıdı", "karbon kâğıdı", "termal pos rulosu"].includes(t) },
@@ -263,6 +271,9 @@ const ALTLAR = {
     { id: "kese", ad: "Kese Kağıdı", test: (t) => t.includes("kese") },
     { id: "kasa", ad: "Kasa Poşeti", test: (t) => t.includes("kasa") },
     { id: "buz", ad: "Buzdolabı Poşeti", test: (t) => t.includes("buzdolabı") },
+    { id: "koli", ad: "Koli ve Kutular", test: () => false },
+    { id: "koruma", ad: "Koruyucu Ambalaj", test: () => false },
+    { id: "etiket", ad: "Etiket ve Sevkiyat", test: () => false },
   ],
   PC: [
     { id: "mouse", ad: "Mouse", test: (t) => t.includes("mouse") },
@@ -270,6 +281,9 @@ const ALTLAR = {
     { id: "toner", ad: "Toner / Kartuş", test: (t) => /toner|kartuş/.test(t) },
     { id: "usb", ad: "USB / Kablo", test: (t) => /usb|hdmi|kablo/.test(t) },
     { id: "power", ad: "Power Bank", test: (t) => t.includes("power") },
+    { id: "depolama", ad: "Veri Depolama", test: () => false },
+    { id: "toplanti", ad: "Toplantı Aksesuarları", test: () => false },
+    { id: "bakim", ad: "Ekran ve Çalışma Alanı", test: () => false },
   ],
 };
 

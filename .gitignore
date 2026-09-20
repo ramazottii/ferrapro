@@ -8,3 +8,6 @@ tmp-passwords.txt
 tmp-invoices/
 scripts/__pycache__/
 scripts/extract_log.txt
+tools/*.local.json
+tools/__pycache__/
+public/image-check.html

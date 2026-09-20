@@ -61,12 +61,13 @@
     if(selected)crumbs.append(el('span',' / '),el('span',selected.ad));
     const intro=document.getElementById('catalog-intro');
     intro.append(el('p',current?meta[group][1]:'İhtiyacınız olan alanı seçin. Alt grupları keşfedin veya ürün adıyla arayın.'));
+    intro.append(el('p','Fotoğraflar ürün türlerini temsil eder. Marka, model, ambalaj ve tedarik uygunluğu teklif sırasında netleştirilir.','catalog-image-note'));
     if(current) {
       const ask=el('div',null,'category-inquiry');
       ask.append(el('p','Toplu ürün ve sarf ihtiyaçlarınızı tek talepte iletebilirsiniz. Marka, ambalaj ve tedarik koşulları teklif aşamasında netleştirilir.'),add(current.ad,selected?.ad||'Genel ihtiyaç','Bu grup için görüşelim'));
       intro.append(ask);
     }
-    
+
     const info=document.getElementById('kat-meta');
     root.replaceChildren();
     if(!group&&!query) {
@@ -89,7 +90,7 @@
       const grid=el('div',null,'subcategory-grid');
       current.subs.forEach(s=>{
         const a=link('',url(group,s.id),'subcategory-card');
-        const image=grupFoto(s.id);
+        const image=s.items[0]?.gorsel || grupFoto(s.id);
         if(image){const img=el('img');img.src=image;img.alt='';img.loading='lazy';a.append(img);}
         a.append(el('h2',s.ad),el('span',s.aciklama || ''),el('span',s.items.length+' seçenek'),el('b','Ürünleri incele →'));grid.append(a);
       });
@@ -112,9 +113,15 @@
     if(!results.length)root.append(el('p','Eşleşen ürün bulunamadı. Aramayı değiştirebilir veya genel görüşme talebi bırakabilirsiniz.','cat-empty'));
     const list=el('div',null,'product-options');
     results.forEach(({g,s,item})=>{
-      const row=el('article',null,'product-option'); const body=el('div');
-      body.append(link(g.ad+' / '+s.ad,url(g.g,s.id,''),'product-path'),el('h2',item.satir||item.ad));
-      row.append(body,add(g.ad,item.satir||item.ad));list.append(row);
+      const row=el('article',null,'product-option'); const body=el('div',null,'product-copy');
+      const figure=el('figure',null,'product-photo');
+      const image=el('img');image.src=item.gorsel;image.alt=(item.satir||item.ad).split(' · ')[0]+' — temsili ürün görseli';image.width=480;image.height=480;image.loading='lazy';image.decoding='async';
+      if(item.gorselTuru==='kategori')image.alt=g.ad+' — kategori görseli';
+      figure.append(image,el('figcaption',item.gorselTuru==='kategori'?'Kategori görseli':'Temsili görsel'));
+      const parts=(item.satir||item.ad).split(' · ');
+      body.append(link(g.ad+' / '+s.ad,url(g.g,s.id,''),'product-path'),el('h2',parts[0]));
+      if(parts.length>1)body.append(el('p',parts.slice(1).join(' · '),'product-spec'));
+      row.append(figure,body,add(g.ad,item.satir||item.ad));list.append(row);
     });root.append(list);
   }).catch(()=>{
     root.replaceChildren(el('p','Katalog şu anda yüklenemedi. Lütfen yeniden deneyin veya bizimle iletişime geçin.','cat-empty'),link('İletişime geçin','/iletisim','btn'));

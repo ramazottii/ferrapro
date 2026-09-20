@@ -43,3 +43,6 @@ npx --yes wrangler@4.131.2 deploy
 ```
 
 Bu komut ferrapro.com, www.ferrapro.com ve tedarik.ferranoi.com alan adlarının bağlı olduğu aynı Worker'ı yayımlar. Panel etkisini incelemeden çalıştırmayın. Secret'lar Cloudflare ortamında tutulur, repoya eklenmez.
+
+## Cursor ile kalan katalog işi
+Güncel öncelik listesi: [docs/CURSOR-NEXT.md](docs/CURSOR-NEXT.md). Görsel eşleştirme: `python tools/assign_product_images.py`; eksik görseller `docs/product-images-pending.json` dosyasına yazılır. Hazır WebP görselleri yeniden üretmeyin.

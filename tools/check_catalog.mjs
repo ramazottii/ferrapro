@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import vm from 'node:vm';
 
 const script=readFileSync(new URL('../public/site.js',import.meta.url),'utf8');
@@ -16,6 +16,12 @@ assert.equal(classify('Mutfak','Çay 1 kg'),'kahve');
 assert.equal(classify('Mutfak','Ice Tea Şeftali 330 ml'),'icecek');
 const data=JSON.parse(readFileSync(new URL('../public/katalog.json',import.meta.url),'utf8'));
 for(const row of data.urunler) assert.notEqual(classify(row.kategori,row.satir,row.alt),'diger',row.satir);
+for(const row of data.urunler){
+  assert.match(row.gorsel,/^\/img\/[a-z0-9/-]+\.webp$/);
+  assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
+  assert.ok(['temsili','kategori'].includes(row.gorselTuru));
+}
+for(const [group,min] of Object.entries({Hijyen:140,Temizlik:100,Mutfak:90,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
