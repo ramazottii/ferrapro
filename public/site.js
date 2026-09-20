@@ -305,6 +305,21 @@ function altBul(kat, satir, explicitId) {
   return { id: "diger", ad: "Diğer", test: () => true };
 }
 
+const BIRIM_KELIME = /^(gr|g|kg|ml|mm|cm|m|lt|oz|cl)$/i;
+function urunKelime(word) {
+  if (!word) return word;
+  if (BIRIM_KELIME.test(word)) return word.toLocaleLowerCase("en-US");
+  if (/^[A-Z0-9][A-Z0-9+\-\/]*$/.test(word) && /[A-Z]/.test(word) && word.length > 1) return word;
+  if (/^\d/.test(word)) return word;
+  return word.charAt(0).toLocaleUpperCase("tr") + word.slice(1).toLocaleLowerCase("tr");
+}
+function urunAdiYazi(satir) {
+  return String(satir || "")
+    .split(" · ")
+    .map((part) => part.split(/(\s+)/).map((tok) => /^\s+$/.test(tok) ? tok : urunKelime(tok)).join(""))
+    .join(" · ");
+}
+
 function ebatYazi(satir, altAd) {
   let s = String(satir || "");
   const aday = [altAd, altAd.replace(/ları$|leri$/i, ""), altAd.replace(/ Kağıtları$/i, " Kağıdı")];

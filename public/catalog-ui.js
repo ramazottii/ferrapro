@@ -32,7 +32,8 @@
   const add = (g, name, label='Teklif listeme ekle', brandSelect) => {
     const button=el('button',label,'btn ghost'); button.type='button';
     button.addEventListener('click',()=>{
-      FerraInterest.add(g, brandSelect ? markaTercihSatir(name, brandSelect.value) : name);
+      const titled = urunAdiYazi(name);
+      FerraInterest.add(g, brandSelect ? markaTercihSatir(titled, brandSelect.value) : titled);
     });
     return button;
   };
@@ -132,10 +133,11 @@
     results.forEach(({g,s,item})=>{
       const row=el('article',null,'product-option'); const body=el('div',null,'product-copy');
       const figure=el('figure',null,'product-photo');
-      const image=el('img');image.src=item.gorsel;image.alt=(item.satir||item.ad).split(' · ')[0]+' — temsili ürün görseli';image.width=480;image.height=480;image.loading='lazy';image.decoding='async';
+      const titled=urunAdiYazi(item.satir||item.ad);
+      const image=el('img');image.src=item.gorsel;image.alt=titled.split(' · ')[0]+' — temsili ürün görseli';image.width=480;image.height=480;image.loading='lazy';image.decoding='async';
       if(item.gorselTuru==='kategori')image.alt=g.ad+' — kategori görseli';
       figure.append(image,el('figcaption',item.gorselTuru==='kategori'?'Kategori görseli':'Temsili görsel'));
-      const parts=(item.satir||item.ad).split(' · ');
+      const parts=titled.split(' · ');
       body.append(link(g.ad+' / '+s.ad,url(g.g,s.id,''),'product-path'),el('h2',parts[0]));
       if(parts.length>1)body.append(el('p',parts.slice(1).join(' · '),'product-spec'));
       const picker=brandPicker(s.id);

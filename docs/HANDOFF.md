@@ -223,6 +223,14 @@ Kullanıcı ölçüsüz sıvı sabunu ve kâğıt dispenser fotoğraflarını i�
 Cloudflare sürümü: fa9037ee-56ab-4eea-ad99-993821db0faa.
 Önceki sürüm: 83770996-833f-4095-ac9e-84a4994d0bb1.
 
+## 20 Eylül — Ürün adları başlık düzeni
+Kullanıcı küçük harfli ürün yazımlarını acemi buldu. Tüm katalog satırları ve kart başlıkları Türkçe kelime başı büyük harfe alındı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 3307fe88-efa0-41b6-a1e9-881eb236624a.
+Önceki sürüm: fa9037ee-56ab-4eea-ad99-993821db0faa.
+
+
 
 
 

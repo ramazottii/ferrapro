@@ -3,63 +3,66 @@ Sources and image provenance are documented in docs/catalog-research-all.md.
 Does not read private prices, supplier or customer records.
 """
 import json
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from title_catalog_names import urun_adi_yazi
 
 ROOT = Path(__file__).resolve().parent.parent
 path = ROOT / 'public/katalog.json'
 data = json.loads(path.read_text(encoding='utf-8'))
 # group, subgroup id, title, product names; images assigned separately and validated.
 families = [
- ('Hijyen','dispenser','Dispenser ve Aparatlar','Z kat havlu dispenseri|Sensörlü havlu dispenseri|İçten çekmeli havlu dispenseri|Jumbo tuvalet kâğıdı dispenseri|İçten çekmeli tuvalet kâğıdı dispenseri|Masaüstü peçete dispenseri|Klozet örtüsü dispenseri'),
- ('Hijyen','islak','Islak Havlu','Islak havlu 90’lı|Islak havlu koli|Yüzey temizlik havlusu'),
- ('Hijyen','pecete','Peçete','Peçete 100’lü|Peçete 200’lü|Renkli peçete|Desenli peçete|Z peçete|Kokteyl peçetesi|Garson katlama peçete|Dispenser peçete'),
- ('Hijyen','havlu','Rulo Havlu','Rulo havlu 6’lı|Rulo havlu 8’li|Rulo havlu 12’li|Dev rulo havlu'),
- ('Temizlik','sabun','El Sabunları','Sıvı el sabunu 1 L|Köpük el sabunu 1 L|Sıvı sabun dispenseri|Köpük sabun dispenseri'),
- ('Temizlik','yuzey','Yüzey Temizleyicileri','Genel yüzey temizleyici|Cam temizleyici|Ahşap yüzey temizleyici|Seramik yüzey temizleyici|Paslanmaz çelik yüzey temizleyici|Zemin bakım ürünü|Arap sabunu'),
- ('Temizlik','camasir','Çamaşır Deterjanları','Sıvı çamaşır deterjanı|Toz çamaşır deterjanı|Çamaşır yumuşatıcısı|Çamaşır leke çıkarıcı'),
- ('Temizlik','camasir-suyu','Çamaşır Suları','Kıvamlı çamaşır suyu|Sıvı çamaşır suyu'),
- ('Temizlik','kirec','Kireç ve Pas Çözücüler','Kireç çözücü|Pas sökücü|Banyo temizleyici|Klozet temizleyici'),
- ('Temizlik','bulasik-temizlik','Bulaşık Temizliği','Elde bulaşık deterjanı|Makine bulaşık deterjanı|Bulaşık makinesi parlatıcısı|Bulaşık makinesi tuzu|Yağ çözücü'),
- ('Temizlik','arac','Bez ve Mop','Mikrofiber temizlik bezi|Cam bezi|Toz bezi|Islak mop|Nemli mop|Mop yedeği|Mop aparatı|Mop sapı'),
- ('Temizlik','ekipman','Temizlik Ekipmanları','Temizlik kovası|Presli temizlik kovası|Faraşlı süpürge|Tuvalet fırçası|Yer fırçası|Cam çekçeği|Yer çekçeği|Temizlik arabası'),
- ('Temizlik','atik-yonetimi','Atık Yönetimi','Pedallı çöp kovası|Ofis çöp sepeti|Geri dönüşüm kutusu|Çöp kovası kapağı'),
- ('Temizlik','koku','Ortam Kokuları','Oda kokusu spreyi|Otomatik koku makinesi|Koku makinesi yedeği'),
- ('Mutfak','kahve','Kahve ve Çay','Çekirdek kahve|Filtre kahve|Türk kahvesi|Çözünebilir kahve|Kapsül kahve|Dökme siyah çay|Demlik poşet çay|Bardak poşet çay|Bitki çayı|Küp şeker|Stick şeker|Toz şeker|Kahve kreması'),
- ('Mutfak','icecek','İçecekler','Şişe su|Bardak su|Maden suyu|Meyveli maden suyu|Meyve suyu|Soğuk çay|Süt'),
- ('Mutfak','bardak','Bardak ve Kapaklar','Karton bardak|Çift duvarlı karton bardak|Soğuk içecek bardağı|Sıcak içecek bardak kapağı|Soğuk içecek bardak kapağı|Bardak kılıfı|Bardak taşıyıcı'),
- ('Mutfak','kase','Kase ve Yemek Kapları','Karton çorba kasesi|Kraft salata kasesi|Kapaklı yemek kabı|Sos kabı|Alüminyum yemek kabı'),
- ('Mutfak','servis','Servis ve İkram Gereçleri','Ahşap çatal|Ahşap bıçak|Ahşap kaşık|Çatal bıçak seti|Ahşap karıştırıcı|Kâğıt pipet|Kürdan|Karton tabak|Servis tepsisi|Masa örtüsü|Amerikan servis kâğıdı'),
- ('Mutfak','saklama','Hazırlık ve Saklama','Alüminyum folyo|Pişirme kâğıdı|Gıda streç filmi|Buzdolabı poşeti|Kilitli gıda poşeti|Kahve filtre kâğıdı'),
- ('Mutfak','bulasik','Bulaşık Gereçleri','Bulaşık süngeri|Bulaşık teli|Bulaşık fırçası|Bulaşık makinesi tableti'),
- ('Ambalaj','koli','Koli ve Kutular','Tek oluklu koli|Çift oluklu koli|Kargo kutusu|Arşiv taşıma kolisi|Kilitli karton kutu|Karton separatör|Köşe koruyucu'),
- ('Ambalaj','strec','Streç ve Sarma','El tipi palet streç filmi|Makine tipi streç film|Mini streç film|Siyah streç film|Streç sarma aparatı'),
- ('Ambalaj','bant','Bant ve Kapatma','Şeffaf koli bandı|Kahverengi koli bandı|Kraft kâğıt bant|Çift taraflı bant|Maskeleme bandı|Koli bandı makinesi'),
- ('Ambalaj','koruma','Koruyucu Ambalaj','Balonlu naylon|Köpük ambalaj şiltesi|Hava yastığı ambalaj|Kraft dolgu kâğıdı|Oluklu mukavva rulo'),
- ('Ambalaj','kraft','Çanta ve Taşıma','Kraft çanta|Düz saplı kâğıt çanta|Büküm saplı kâğıt çanta|Bez taşıma çantası'),
- ('Ambalaj','kese','Kese ve Gıda Ambalajı','Kese kâğıdı|Yağlı kese kâğıdı|Pencereli kese kâğıdı|Kraft paket servis çantası'),
- ('Ambalaj','kasa','Poşetler','Kargo poşeti|Kilitli poşet|Şeffaf ambalaj poşeti|Kasa poşeti|Güvenlik bantlı poşet'),
- ('Ambalaj','etiket','Etiket ve Sevkiyat','Kargo etiketi|Termal barkod etiketi|Kırılabilir uyarı etiketi|Sevkiyat evrak cebi|Palet etiketi'),
- ('PC','mouse','Mouse ve Aksesuarları','Kablolu mouse|Kablosuz mouse|Ergonomik mouse|Mouse pad|Bilek destekli mouse pad'),
- ('PC','klavye','Klavye ve Setler','Kablolu klavye|Kablosuz klavye|Klavye mouse seti|Sayısal tuş takımı'),
- ('PC','toner','Yazıcı Sarf Malzemeleri','Siyah lazer toner|Renkli lazer toner|Siyah mürekkep kartuşu|Renkli mürekkep kartuşu|Tanklı yazıcı mürekkebi|Yazıcı drum ünitesi|Atık toner kutusu|Nokta vuruşlu yazıcı şeridi'),
- ('PC','usb','Kablo ve Bağlantı','USB bellek|USB-A USB-C kablo|USB-C USB-C kablo|Yazıcı USB kablosu|HDMI kablo|DisplayPort kablo|Ethernet kablosu|USB çoklayıcı|USB-C görüntü adaptörü|USB uzatma kablosu'),
- ('PC','power','Güç ve Şarj','Power bank|USB şarj adaptörü|Dizüstü bilgisayar adaptörü|Çoklu priz|Akım korumalı priz'),
- ('PC','depolama','Veri Depolama','Harici SSD|Harici sabit disk|SD hafıza kartı|MicroSD hafıza kartı|Kart okuyucu'),
- ('PC','toplanti','Toplantı Aksesuarları','Kablolu kulaklık|Mikrofonlu kulaklık|Web kamera|USB mikrofon|Sunum kumandası'),
- ('PC','bakim','Ekran ve Çalışma Alanı','Ekran temizleme bezi|Ekran temizleme spreyi|Dizüstü bilgisayar standı|Monitör yükseltici|Kablo düzenleyici'),
- ('Sağlık','eldiven','Eldivenler','Nitril muayene eldiveni|Lateks muayene eldiveni|Vinil muayene eldiveni|Pudrasız muayene eldiveni'),
- ('Sağlık','maske','Maske ve Koruyucu Sarf','Üç katlı maske|FFP2 maske|Tek kullanımlık bone|Tek kullanımlık galoş|Tek kullanımlık önlük|Ziyaretçi önlüğü|Koruyucu yüz siperi'),
- ('Sağlık','masa','Muayene Alanı Örtüleri','Muayene masa örtüsü|Lamineli muayene masa örtüsü|Tek kullanımlık yastık kılıfı|Hasta önlüğü'),
- ('Sağlık','atik','Atık Toplama','Kesici delici atık kutusu|Tıbbi atık kovası|Tıbbi atık poşeti'),
- ('Sağlık','bakim','Bakım Sarf Malzemeleri','Pamuk|Gazlı bez|Sargı bezi|Flaster|Yara bandı|Dil basacağı'),
- ('Sağlık','duzen','Klinik Düzen ve Dispenser','Eldiven kutusu tutucu|Maske kutusu tutucu|Tek kullanımlık bardak dispenseri|Muayene örtüsü tutucu'),
+ ('Hijyen','dispenser','Dispenser ve Aparatlar','Z Kat Havlu Dispenseri|Sensörlü Havlu Dispenseri|İçten Çekmeli Havlu Dispenseri|Jumbo Tuvalet Kâğıdı Dispenseri|İçten Çekmeli Tuvalet Kâğıdı Dispenseri|Masaüstü Peçete Dispenseri|Klozet Örtüsü Dispenseri'),
+ ('Hijyen','islak','Islak Havlu','Islak Havlu 90’lı|Islak Havlu Koli|Yüzey Temizlik Havlusu'),
+ ('Hijyen','pecete','Peçete','Peçete 100’lü|Peçete 200’lü|Renkli Peçete|Desenli Peçete|Z Peçete|Kokteyl Peçetesi|Garson Katlama Peçete|Dispenser Peçete'),
+ ('Hijyen','havlu','Rulo Havlu','Rulo Havlu 6’lı|Rulo Havlu 8’li|Rulo Havlu 12’li|Dev Rulo Havlu'),
+ ('Temizlik','sabun','El Sabunları','Sıvı El Sabunu 1 L|Köpük El Sabunu 1 L|Sıvı Sabun Dispenseri|Köpük Sabun Dispenseri'),
+ ('Temizlik','yuzey','Yüzey Temizleyicileri','Genel Yüzey Temizleyici|Cam Temizleyici|Ahşap Yüzey Temizleyici|Seramik Yüzey Temizleyici|Paslanmaz Çelik Yüzey Temizleyici|Zemin Bakım Ürünü|Arap Sabunu'),
+ ('Temizlik','camasir','Çamaşır Deterjanları','Sıvı Çamaşır Deterjanı|Toz Çamaşır Deterjanı|Çamaşır Yumuşatıcısı|Çamaşır Leke Çıkarıcı'),
+ ('Temizlik','camasir-suyu','Çamaşır Suları','Kıvamlı Çamaşır Suyu|Sıvı Çamaşır Suyu'),
+ ('Temizlik','kirec','Kireç ve Pas Çözücüler','Kireç Çözücü|Pas Sökücü|Banyo Temizleyici|Klozet Temizleyici'),
+ ('Temizlik','bulasik-temizlik','Bulaşık Temizliği','Elde Bulaşık Deterjanı|Makine Bulaşık Deterjanı|Bulaşık Makinesi Parlatıcısı|Bulaşık Makinesi Tuzu|Yağ Çözücü'),
+ ('Temizlik','arac','Bez ve Mop','Mikrofiber Temizlik Bezi|Cam Bezi|Toz Bezi|Islak Mop|Nemli Mop|Mop Yedeği|Mop Aparatı|Mop Sapı'),
+ ('Temizlik','ekipman','Temizlik Ekipmanları','Temizlik Kovası|Presli Temizlik Kovası|Faraşlı Süpürge|Tuvalet Fırçası|Yer Fırçası|Cam Çekçeği|Yer Çekçeği|Temizlik Arabası'),
+ ('Temizlik','atik-yonetimi','Atık Yönetimi','Pedallı Çöp Kovası|Ofis Çöp Sepeti|Geri Dönüşüm Kutusu|Çöp Kovası Kapağı'),
+ ('Temizlik','koku','Ortam Kokuları','Oda Kokusu Spreyi|Otomatik Koku Makinesi|Koku Makinesi Yedeği'),
+ ('Mutfak','kahve','Kahve ve Çay','Çekirdek Kahve|Filtre Kahve|Türk Kahvesi|Çözünebilir Kahve|Kapsül Kahve|Dökme Siyah Çay|Demlik Poşet Çay|Bardak Poşet Çay|Bitki Çayı|Küp Şeker|Stick Şeker|Toz Şeker|Kahve Kreması'),
+ ('Mutfak','icecek','İçecekler','Şişe Su|Bardak Su|Maden Suyu|Meyveli Maden Suyu|Meyve Suyu|Soğuk Çay|Süt'),
+ ('Mutfak','bardak','Bardak ve Kapaklar','Karton Bardak|Çift Duvarlı Karton Bardak|Soğuk Içecek Bardağı|Sıcak Içecek Bardak Kapağı|Soğuk Içecek Bardak Kapağı|Bardak Kılıfı|Bardak Taşıyıcı'),
+ ('Mutfak','kase','Kase ve Yemek Kapları','Karton Çorba Kasesi|Kraft Salata Kasesi|Kapaklı Yemek Kabı|Sos Kabı|Alüminyum Yemek Kabı'),
+ ('Mutfak','servis','Servis ve İkram Gereçleri','Ahşap Çatal|Ahşap Bıçak|Ahşap Kaşık|Çatal Bıçak Seti|Ahşap Karıştırıcı|Kâğıt Pipet|Kürdan|Karton Tabak|Servis Tepsisi|Masa Örtüsü|Amerikan Servis Kâğıdı'),
+ ('Mutfak','saklama','Hazırlık ve Saklama','Alüminyum Folyo|Pişirme Kâğıdı|Gıda Streç Filmi|Buzdolabı Poşeti|Kilitli Gıda Poşeti|Kahve Filtre Kâğıdı'),
+ ('Mutfak','bulasik','Bulaşık Gereçleri','Bulaşık Süngeri|Bulaşık Teli|Bulaşık Fırçası|Bulaşık Makinesi Tableti'),
+ ('Ambalaj','koli','Koli ve Kutular','Tek Oluklu Koli|Çift Oluklu Koli|Kargo Kutusu|Arşiv Taşıma Kolisi|Kilitli Karton Kutu|Karton Separatör|Köşe Koruyucu'),
+ ('Ambalaj','strec','Streç ve Sarma','El Tipi Palet Streç Filmi|Makine Tipi Streç Film|Mini Streç Film|Siyah Streç Film|Streç Sarma Aparatı'),
+ ('Ambalaj','bant','Bant ve Kapatma','Şeffaf Koli Bandı|Kahverengi Koli Bandı|Kraft Kâğıt Bant|Çift Taraflı Bant|Maskeleme Bandı|Koli Bandı Makinesi'),
+ ('Ambalaj','koruma','Koruyucu Ambalaj','Balonlu Naylon|Köpük Ambalaj Şiltesi|Hava Yastığı Ambalaj|Kraft Dolgu Kâğıdı|Oluklu Mukavva Rulo'),
+ ('Ambalaj','kraft','Çanta ve Taşıma','Kraft Çanta|Düz Saplı Kâğıt Çanta|Büküm Saplı Kâğıt Çanta|Bez Taşıma Çantası'),
+ ('Ambalaj','kese','Kese ve Gıda Ambalajı','Kese Kâğıdı|Yağlı Kese Kâğıdı|Pencereli Kese Kâğıdı|Kraft Paket Servis Çantası'),
+ ('Ambalaj','kasa','Poşetler','Kargo Poşeti|Kilitli Poşet|Şeffaf Ambalaj Poşeti|Kasa Poşeti|Güvenlik Bantlı Poşet'),
+ ('Ambalaj','etiket','Etiket ve Sevkiyat','Kargo Etiketi|Termal Barkod Etiketi|Kırılabilir Uyarı Etiketi|Sevkiyat Evrak Cebi|Palet Etiketi'),
+ ('PC','mouse','Mouse ve Aksesuarları','Kablolu Mouse|Kablosuz Mouse|Ergonomik Mouse|Mouse Pad|Bilek Destekli Mouse Pad'),
+ ('PC','klavye','Klavye ve Setler','Kablolu Klavye|Kablosuz Klavye|Klavye Mouse Seti|Sayısal Tuş Takımı'),
+ ('PC','toner','Yazıcı Sarf Malzemeleri','Siyah Lazer Toner|Renkli Lazer Toner|Siyah Mürekkep Kartuşu|Renkli Mürekkep Kartuşu|Tanklı Yazıcı Mürekkebi|Yazıcı Drum Ünitesi|Atık Toner Kutusu|Nokta Vuruşlu Yazıcı Şeridi'),
+ ('PC','usb','Kablo ve Bağlantı','USB Bellek|USB-A USB-C Kablo|USB-C USB-C Kablo|Yazıcı USB Kablosu|HDMI Kablo|Displayport Kablo|Ethernet Kablosu|USB Çoklayıcı|USB-C Görüntü Adaptörü|USB Uzatma Kablosu'),
+ ('PC','power','Güç ve Şarj','Power Bank|USB Şarj Adaptörü|Dizüstü Bilgisayar Adaptörü|Çoklu Priz|Akım Korumalı Priz'),
+ ('PC','depolama','Veri Depolama','Harici SSD|Harici Sabit Disk|SD Hafıza Kartı|Microsd Hafıza Kartı|Kart Okuyucu'),
+ ('PC','toplanti','Toplantı Aksesuarları','Kablolu Kulaklık|Mikrofonlu Kulaklık|Web Kamera|USB Mikrofon|Sunum Kumandası'),
+ ('PC','bakim','Ekran ve Çalışma Alanı','Ekran Temizleme Bezi|Ekran Temizleme Spreyi|Dizüstü Bilgisayar Standı|Monitör Yükseltici|Kablo Düzenleyici'),
+ ('Sağlık','eldiven','Eldivenler','Nitril Muayene Eldiveni|Lateks Muayene Eldiveni|Vinil Muayene Eldiveni|Pudrasız Muayene Eldiveni'),
+ ('Sağlık','maske','Maske ve Koruyucu Sarf','Üç Katlı Maske|FFP2 Maske|Tek Kullanımlık Bone|Tek Kullanımlık Galoş|Tek Kullanımlık Önlük|Ziyaretçi Önlüğü|Koruyucu Yüz Siperi'),
+ ('Sağlık','masa','Muayene Alanı Örtüleri','Muayene Masa Örtüsü|Lamineli Muayene Masa Örtüsü|Tek Kullanımlık Yastık Kılıfı|Hasta Önlüğü'),
+ ('Sağlık','atik','Atık Toplama','Kesici Delici Atık Kutusu|Tıbbi Atık Kovası|Tıbbi Atık Poşeti'),
+ ('Sağlık','bakim','Bakım Sarf Malzemeleri','Pamuk|Gazlı Bez|Sargı Bezi|Flaster|Yara Bandı|Dil Basacağı'),
+ ('Sağlık','duzen','Klinik Düzen ve Dispenser','Eldiven Kutusu Tutucu|Maske Kutusu Tutucu|Tek Kullanımlık Bardak Dispenseri|Muayene Örtüsü Tutucu'),
 ]
 
 seen={(r['kategori'],r['satir'].casefold()) for r in data['urunler']}
 for group,sub,title,names in families:
     for name in names.split('|'):
         if (group,name.casefold()) not in seen:
-            data['urunler'].append(dict(kategori=group,satir=name,alt=sub,talepTuru=True))
+            data['urunler'].append(dict(kategori=group,satir=urun_adi_yazi(name),alt=sub,talepTuru=True))
             seen.add((group,name.casefold()))
 
 # Explicitly incomplete source rows are kept in a review file rather than guessed.
