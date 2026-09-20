@@ -97,3 +97,9 @@ Kullanıcı hazır sürümün canlıya alınmasını, yeni üretimin durmasını
 - 1440px ve 360px kırtasiye ürün kartlarında yatay taşma/kırık yüklenmiş görsel yok; mobil tek sütun doğrulandı. Tüm görsellerin tek tek kalite denetimi bitmedi; raporda açıkça belirtildi.
 - Ürün seçimi/miktar zorunlu değil. Gerçek müşteri talebi gönderilmedi. Yeni görsel üretimi kullanıcı talebiyle durduruldu.
 - Yayın sonucu aşağıya eklenecek.
+
+### Yayın tamamlandı
+5c20431 kaynak commit'i kullanıcının mevcutları canlıya alma talimatıyla yayımlandı.
+Cloudflare sürümü: 43ed425e-799a-4556-ba8a-a48fee41b395.
+Önceki sürüm: 1bda7980-a6f3-489f-b34d-47a43ca367fb.
+103 yeni/değişen statik dosya yüklendi. Panel/Worker kod farkı yok. GitHub codex/visual-refresh dalına gönderildi.
