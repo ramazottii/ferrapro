@@ -440,3 +440,4 @@ Görsel istem seti: square photorealistic product catalogue photo; seamless ligh
 
 ## Klavye grubu tamamlandı
 Genel Klavye · Adet tekrarı kaldırıldı. Kablolu Klavye, Kablosuz Klavye, Klavye Mouse Seti ve Numerik Tuş Takımı olarak dört kayıt bırakıldı; her biri ayrı, açık gri fonlu markasız temsili görsele bağlandı. Kaynak istemler docs/keyboard-image-prompts.json içinde. Eşleştirme ve genişletme betikleri güncellendi. npm run check başarılı; PC46, toplam452 kayıt. Önceki mouse yayın notu fa23cd4 de bu gönderime dahil.
+Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43. Canlı tarayıcıda dört doğru isim, dört ayrı ve yüklenmiş görsel doğrulandı.
