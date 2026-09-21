@@ -423,3 +423,8 @@ Cloudflare sürümü: c4562347-f90a-4cd3-88c3-e252d1635848.
 - Menü alt çizgi geçişi, mobil menü giriş animasyonu, basma geri bildirimi, katalog giriş ve kart yükselme geçişleri eklendi. Reduced-motion kuralları korundu.
 - npm run check başarılı. 1440/390px katalog ve ana sayfa kontrollerinde yatay taşma yok; katalogda kırık yüklenmiş görsel yok. Mobil menü aria-expanded=true ve menu-reveal animasyonu doğrulandı. Gerçek form gönderilmedi. Worker/panel farkı yok.
 - CSS sürümü76. Yayın yapılmadı. Önizleme http://127.0.0.1:8793/ . Cursor kendi kopyasında önce fetch, sonra temiz/kayıtlı durumla fast-forward almalı; kullanıcı değişikliklerini reset etmeyin.
+
+### 21 Eylül — geniş tasarım canlı yayını
+Kullanıcının "canlıda kontrol edelim" talimatıyla 09abd25 yayımlandı.
+Cloudflare sürümü: 3fdec409-1638-4ec3-811a-d156b0289949.
+Yayın öncesi npm run check başarılı (459 kayıt). Canlı kırtasiye/kalem sayfasında CSS v76, 14 kart, 1440px ekranda 1353px içerik ve dört sütun; 390px ekranda tek sütun doğrulandı. Her iki genişlikte yatay taşma yok, yüklenmiş görsellerde kırık yok. Fotoğrafların içine gömülü fonlar değiştirilmedi; gri kart alanı yayımlandı. Önceki bölümün henüz yayımlanmadı notu tarihseldir.
