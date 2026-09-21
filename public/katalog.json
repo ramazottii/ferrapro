@@ -629,12 +629,6 @@
     },
     {
       "kategori": "PC",
-      "satir": "Mouse · Adet",
-      "gorsel": "/img/products/mouse.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "PC",
       "satir": "Klavye · Adet",
       "gorsel": "/img/products/klavye.webp",
       "gorselTuru": "temsili"
@@ -2663,7 +2657,7 @@
       "satir": "Kablosuz Mouse",
       "alt": "mouse",
       "talepTuru": true,
-      "gorsel": "/img/products/mouse.webp",
+      "gorsel": "/img/products/wirelessmouse.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2671,7 +2665,7 @@
       "satir": "Ergonomik Mouse",
       "alt": "mouse",
       "talepTuru": true,
-      "gorsel": "/img/products/mouse.webp",
+      "gorsel": "/img/products/verticalmouse.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2687,7 +2681,7 @@
       "satir": "Bilek Destekli Mouse Pad",
       "alt": "mouse",
       "talepTuru": true,
-      "gorsel": "/img/products/mousepad.webp",
+      "gorsel": "/img/products/wristmousepad.webp",
       "gorselTuru": "temsili"
     },
     {

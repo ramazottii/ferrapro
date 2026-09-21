@@ -431,3 +431,7 @@ Yayın öncesi npm run check başarılı (459 kayıt). Canlı kırtasiye/kalem s
 
 ## 21 Eylül — bilgisayar kategorisi sadeleştirme
 Kullanıcının kaldırma alternatifine göre Ekran ve Çalışma Alanı grubu ve PC/bakim altındaki beş kayıt kaldırıldı (bez, sprey, dizüstü standı, monitör yükseltici, kablo düzenleyici). Monitör ürünü uydurulmadı. Genişletme betiği grubu yeniden eklemeyecek şekilde güncellendi. PC sayısı48, toplam454; minimum kapsam testi buna göre güncellendi. Eski bakim URL'si mevcut kategori görünümüne geri düşer.
+
+## 21 Eylül — mouse isim/görsel eşleştirmesi
+Genel Mouse · Adet tekrarı kaldırıldı. Kablolu Mouse ve düz Mouse Pad mevcut uygun görsellerini korur. Kablosuz Mouse, Ergonomik Mouse ve Bilek Destekli Mouse Pad için ayrı markasız temsili görseller tamamlandı (built-in image_gen). Mouse grubu beş seçenek; PC47, toplam453. Her türün farklı görsele bağlı olduğunu doğrulayan katalog kontrolü eklendi.
+Önceki bilgisayar grubu kaldırma yayını: kaynak8ee1249, Cloudflare1c45190c-15b6-4e9c-8fc6-e58c4794b7b6.
