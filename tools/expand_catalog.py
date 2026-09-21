@@ -49,7 +49,6 @@ families = [
  ('PC','power','Güç ve Şarj','Power Bank|USB Şarj Adaptörü|Dizüstü Bilgisayar Adaptörü|Çoklu Priz|Akım Korumalı Priz'),
  ('PC','depolama','Veri Depolama','Harici SSD|Harici Sabit Disk|SD Hafıza Kartı|Microsd Hafıza Kartı|Kart Okuyucu'),
  ('PC','toplanti','Toplantı Aksesuarları','Kablolu Kulaklık|Mikrofonlu Kulaklık|Web Kamera|USB Mikrofon|Sunum Kumandası'),
- ('PC','bakim','Ekran ve Çalışma Alanı','Ekran Temizleme Bezi|Ekran Temizleme Spreyi|Dizüstü Bilgisayar Standı|Monitör Yükseltici|Kablo Düzenleyici'),
  ('Sağlık','eldiven','Eldivenler','Nitril Muayene Eldiveni|Lateks Muayene Eldiveni|Vinil Muayene Eldiveni|Pudrasız Muayene Eldiveni'),
  ('Sağlık','maske','Maske ve Koruyucu Sarf','Üç Katlı Maske|FFP2 Maske|Tek Kullanımlık Bone|Tek Kullanımlık Galoş|Tek Kullanımlık Önlük|Ziyaretçi Önlüğü|Koruyucu Yüz Siperi'),
  ('Sağlık','masa','Muayene Alanı Örtüleri','Muayene Masa Örtüsü|Lamineli Muayene Masa Örtüsü|Tek Kullanımlık Yastık Kılıfı|Hasta Önlüğü'),

@@ -428,3 +428,6 @@ Cloudflare sürümü: c4562347-f90a-4cd3-88c3-e252d1635848.
 Kullanıcının "canlıda kontrol edelim" talimatıyla 09abd25 yayımlandı.
 Cloudflare sürümü: 3fdec409-1638-4ec3-811a-d156b0289949.
 Yayın öncesi npm run check başarılı (459 kayıt). Canlı kırtasiye/kalem sayfasında CSS v76, 14 kart, 1440px ekranda 1353px içerik ve dört sütun; 390px ekranda tek sütun doğrulandı. Her iki genişlikte yatay taşma yok, yüklenmiş görsellerde kırık yok. Fotoğrafların içine gömülü fonlar değiştirilmedi; gri kart alanı yayımlandı. Önceki bölümün henüz yayımlanmadı notu tarihseldir.
+
+## 21 Eylül — bilgisayar kategorisi sadeleştirme
+Kullanıcının kaldırma alternatifine göre Ekran ve Çalışma Alanı grubu ve PC/bakim altındaki beş kayıt kaldırıldı (bez, sprey, dizüstü standı, monitör yükseltici, kablo düzenleyici). Monitör ürünü uydurulmadı. Genişletme betiği grubu yeniden eklemeyecek şekilde güncellendi. PC sayısı48, toplam454; minimum kapsam testi buna göre güncellendi. Eski bakim URL'si mevcut kategori görünümüne geri düşer.

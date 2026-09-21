@@ -280,7 +280,6 @@ const ALTLAR = {
     { id: "power", ad: "Power Bank", test: (t) => t.includes("power") },
     { id: "depolama", ad: "Veri Depolama", test: () => false },
     { id: "toplanti", ad: "Toplantı Aksesuarları", test: () => false },
-    { id: "bakim", ad: "Ekran ve Çalışma Alanı", test: () => false },
   ],
 };
 

@@ -2987,46 +2987,6 @@
       "gorselTuru": "temsili"
     },
     {
-      "kategori": "PC",
-      "satir": "Ekran Temizleme Bezi",
-      "alt": "bakim",
-      "talepTuru": true,
-      "gorsel": "/img/products/cloth.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "PC",
-      "satir": "Ekran Temizleme Spreyi",
-      "alt": "bakim",
-      "talepTuru": true,
-      "gorsel": "/img/products/cleaner.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "PC",
-      "satir": "Dizüstü Bilgisayar Standı",
-      "alt": "bakim",
-      "talepTuru": true,
-      "gorsel": "/img/products/organizer.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "PC",
-      "satir": "Monitör Yükseltici",
-      "alt": "bakim",
-      "talepTuru": true,
-      "gorsel": "/img/products/organizer.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "PC",
-      "satir": "Kablo Düzenleyici",
-      "alt": "bakim",
-      "talepTuru": true,
-      "gorsel": "/img/products/cableties.webp",
-      "gorselTuru": "temsili"
-    },
-    {
       "kategori": "Sağlık",
       "satir": "Nitril Muayene Eldiveni",
       "alt": "eldiven",
