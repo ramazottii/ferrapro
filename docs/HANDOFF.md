@@ -414,3 +414,12 @@ Cloudflare sürümü: c4562347-f90a-4cd3-88c3-e252d1635848.
 
 
 
+
+## 21 Eylül 2026 — geniş yerleşim ve hareket (yerel/PR, henüz yayımlanmadı)
+- Kullanıcının Cursor kopyası C:/tedarik visual-refresh dalında, GitHub'dan 38 commit ilerideydi. 084a9c9 commit'ine kadar yalnız kayıtlı değişiklikler fast-forward ile alındı. Kartvizit, email_forward, wrangler.email ve tmp-keep gibi kayıt dışı çalışmalara dokunulmadı.
+- Güncel katalog 459 kayıt; bu görevde katalog verisi ve fotoğraf dosyaları değiştirilmedi. Bilgisayar sarf ürünlerinin içerik/görsel düzeltmesi kullanıcının belirttiği kalan iştir.
+- 1120px ortak sınır kaldırıldı; ekranla büyüyen yatay boşluklar ve geniş katalog. 1440px ekranda 1353px katalog, dört sütun; 390px ekranda tek sütun. Ana sayfa da genişletildi.
+- Tüm ürün kartlarının görsel alanı #e4e7eb gri, 14px kenar boşluğu. Fotoğraf içine gömülü krem/beyaz fonlar aynen duruyor; tüm raster fonlar değiştirildi iddiası yapılmamalı. Ürün renklerini değiştiren filtre/blend uygulanmadı. Kullanıcıya fotoğraf içi fonlar için ayrı görsel düzenleme tercihi soruldu.
+- Menü alt çizgi geçişi, mobil menü giriş animasyonu, basma geri bildirimi, katalog giriş ve kart yükselme geçişleri eklendi. Reduced-motion kuralları korundu.
+- npm run check başarılı. 1440/390px katalog ve ana sayfa kontrollerinde yatay taşma yok; katalogda kırık yüklenmiş görsel yok. Mobil menü aria-expanded=true ve menu-reveal animasyonu doğrulandı. Gerçek form gönderilmedi. Worker/panel farkı yok.
+- CSS sürümü76. Yayın yapılmadı. Önizleme http://127.0.0.1:8793/ . Cursor kendi kopyasında önce fetch, sonra temiz/kayıtlı durumla fast-forward almalı; kullanıcı değişikliklerini reset etmeyin.

@@ -447,3 +447,6 @@
 @media(max-width:768px) { .home .cat-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } .home .cats,.home .business-paths { padding:60px 0; } }
 @media(max-width:520px) { .home .cat-grid { grid-template-columns:1fr; } .home .hero h1 { font-size:2.7rem; } .home .hero-visual { padding-left:12px; } .home .hero-actions .btn { justify-content:center; width:100%; } .home .hero-frame { border-top-left-radius:70px; } }
 @media(prefers-reduced-motion:reduce) { .home .cat-grid a:hover { transform:none; } }
+
+/* Let photography share the available desktop width. */
+@media(min-width:1100px) { .home .hero-grid { grid-template-columns:1fr 1.1fr; gap:5vw; } .home .cat-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } }

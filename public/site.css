@@ -810,3 +810,15 @@ img { max-width: 100%; }
  *, *::before, *::after { animation: none !important; transition: none !important; }
  .btn:hover, .directory-card:hover, .business-grid a:hover { transform:none; }
 }
+
+/* 2026-09: edge-to-edge public layout and consistent catalogue surfaces. */
+:root { --product-stage: #e4e7eb; }
+.wrap { width:calc(100% - clamp(32px,5vw,96px)); max-width:none; }
+.head nav a { position:relative; transition:color .2s ease,background .2s ease; }
+.head nav a::after { content:''; position:absolute; left:0; right:0; bottom:-7px; height:2px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .24s ease; }
+.head nav a:hover::after,.head nav a:focus-visible::after { transform:scaleX(1); }
+.btn:active { transform:translateY(0) scale(.97); }
+.head nav.is-open { animation:menu-reveal .24s ease both; }
+@keyframes menu-reveal { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:none; } }
+@media(max-width:768px) { .head nav a::after { left:14px; right:14px; bottom:3px; } }
+@media(prefers-reduced-motion:reduce) { .btn:active { transform:none; } }
