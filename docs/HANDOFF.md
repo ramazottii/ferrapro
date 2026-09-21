@@ -384,6 +384,13 @@ Ambalaj alt sekmeleri kalktı; 36 ürün tek listede. Kraft’ta yalnızca kraft
 Cloudflare sürümü: c5dc2c0c-85ca-48c8-9cbd-e2539db6f0c3.
 Önceki sürüm: 47629b57-d1ed-4eae-8320-73ab892d4606.
 
+## 21 Eylül — Yağlı kese çıktı, ambalaj stüdyo zemini
+Yağlı kese kâğıdı kaldırıldı. Ambalaj görselleri krem/beyaz karışımı yerine aynı açık gri stüdyo fonuna alındı. npm run check: 459 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c4562347-f90a-4cd3-88c3-e252d1635848.
+Önceki sürüm: c5dc2c0c-85ca-48c8-9cbd-e2539db6f0c3.
+
 
 
 
