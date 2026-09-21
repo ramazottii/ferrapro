@@ -24,7 +24,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:80,Temizlik:90,Mutfak:50,Ambalaj:45,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:80,Temizlik:90,Mutfak:50,Ambalaj:30,PC:50,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -226,6 +226,22 @@ assert.ok(data.urunler.some(r=>r.satir==='Soğuk Çay'&&r.gorsel.endsWith('icedt
 assert.ok(data.urunler.some(r=>r.satir==='Süt'&&r.gorsel.endsWith('milkcarton.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Bulaşık Makinesi Tableti'&&r.gorsel.endsWith('dishtablet.webp')));
 assert.ok(data.urunler.some(r=>r.satir==='Kahve Filtre Kâğıdı'&&r.gorsel.endsWith('filterpaper.webp')));
+const pack=data.urunler.filter(r=>r.kategori==='Ambalaj');
+assert.equal(pack.length,36);
+assert.equal(new Set(pack.map(r=>r.gorsel)).size,36);
+assert.equal(pack.filter(r=>r.alt==='kraft').length,2);
+assert.ok(pack.some(r=>r.satir==='Kraft Çanta'&&r.gorsel.endsWith('kraft.webp')));
+assert.ok(pack.some(r=>r.satir==='Bez Taşıma Çantası'&&r.gorsel.endsWith('bag.webp')));
+assert.equal(pack.filter(r=>r.alt==='kese').length,3);
+assert.ok(pack.some(r=>r.satir==='Kese Kâğıdı'&&r.gorsel.endsWith('kese.webp')));
+assert.ok(pack.some(r=>r.satir==='Yağlı Kese Kâğıdı'&&r.gorsel.endsWith('greasebag.webp')));
+assert.ok(pack.some(r=>r.satir==='Pencereli Kese Kâğıdı'&&r.gorsel.endsWith('windowbag.webp')));
+assert.equal(pack.filter(r=>r.alt==='kasa').length,3);
+assert.ok(pack.some(r=>r.satir==='Kasa Poşeti'&&r.gorsel.endsWith('kasa.webp')));
+assert.ok(pack.some(r=>r.satir==='Kilitli Poşet'&&r.gorsel.endsWith('ziplock.webp')));
+assert.ok(pack.some(r=>r.satir==='Kargo Poşeti'&&r.gorsel.endsWith('cargobag.webp')));
+assert.equal(pack.filter(r=>/buzdolabı|düz saplı|büküm saplı|paket servis|şeffaf ambalaj poşet|güvenlik bantlı/i.test(r.satir)).length,0);
+assert.ok(!vm.runInContext('ALTLAR.Ambalaj.map(x=>x.id).join(",")',context).split(',').includes('buz'));
 
 
 

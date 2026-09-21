@@ -3,8 +3,8 @@
   --accent: #B74918;
   --ink: #202B36;
   --mute: #5A6876;
-  --mist: #F5F2EB;
-  --paper: #F5F2EB;
+  --mist: #F2F3F5;
+  --paper: #F2F3F5;
   --line: #D7DEE4;
   --white: #ffffff;
   --font: "DM Sans", system-ui, sans-serif;
@@ -790,7 +790,7 @@ img { max-width: 100%; }
   .brand span { font-size: 0.82rem; }
 }
 /* Corporate visual system: warm surfaces, generous type, restrained motion. */
-.head { background: #fffdf9f5; backdrop-filter: blur(16px); box-shadow: 0 2px 18px #14223806; }
+.head { background: #f7f8f9f5; backdrop-filter: blur(16px); box-shadow: 0 2px 18px #14223806; }
 .head .wrap { min-height: 82px; }
 .btn { border-radius: 6px; transition: transform .22s ease, box-shadow .22s ease, background .22s ease; }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px #14223820; }

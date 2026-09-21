@@ -377,6 +377,13 @@ AAA ince kalem pil sigara görünümlü çubuk yerine bakır başlıklı 4’lü
 Cloudflare sürümü: 47629b57-d1ed-4eae-8320-73ab892d4606.
 Önceki sürüm: c471f341-0c5c-47de-ad9d-abd9c3bdc405.
 
+## 21 Eylül — Ambalaj düz liste ve gri zemin
+Ambalaj alt sekmeleri kalktı; 36 ürün tek listede. Kraft’ta yalnızca kraft çanta ve bez çanta; kese kâğıdı / yağlı / pencereli ayrı görseller; poşetlerde kasa, kilitli ve kargo. Tekrarlayan SKU ve görseller çıkarıldı. Krem arka planlar açık griye (#F2F3F5) alındı. npm run check: 460 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c5dc2c0c-85ca-48c8-9cbd-e2539db6f0c3.
+Önceki sürüm: 47629b57-d1ed-4eae-8320-73ab892d4606.
+
 
 
 

@@ -18,6 +18,7 @@
   const el = (tag, text, cls) => { const n=document.createElement(tag); if(text)n.textContent=text; if(cls)n.className=cls; return n; };
   const link = (text, href, cls) => { const n=el('a',text,cls); n.href=href; return n; };
   const url = (g='', a='', q=query) => katalogYol({g,a,q});
+  const FLAT = { Ambalaj: true };
   const brandPicker = (subId) => {
     const brands = MARKA_TERCIHLERI[subId];
     if (!brands?.length) return null;
@@ -50,7 +51,7 @@
       return {...g,items,subs:[...buckets.values()].sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id))};
     });
     const current=groups.find(g=>g.g===group);
-    const selected=current?.subs.find(s=>s.id===sub);
+    const selected=FLAT[group]?null:current?.subs.find(s=>s.id===sub);
     const nav=document.getElementById('kat-nav');
     const select=document.getElementById('kat-sec');
     const all=link('Tüm kategoriler',url(),'category-all'+(!group?' is-on':''));
@@ -58,15 +59,17 @@
     nav.replaceChildren(all);
     select.replaceChildren(new Option('Tüm kategoriler',''));
     groups.forEach(g=>{
-      const branch=el('div',null,'cat-branch'+(current===g?' is-open':''));
+      const branch=el('div',null,'cat-branch'+(current===g&&!FLAT[g.g]?' is-open':''));
       const a=link('',url(g.g),'cat-parent'+(current===g?' is-on':''));
       a.append(el('span',g.ad,'cat-parent-name'));
-      const chev=el('span',null,'cat-chevron');
-      chev.setAttribute('aria-hidden','true');
-      a.append(chev);
+      if(!FLAT[g.g]){
+        const chev=el('span',null,'cat-chevron');
+        chev.setAttribute('aria-hidden','true');
+        a.append(chev);
+      }
       if(current===g&&!selected)a.setAttribute('aria-current','page');
       branch.append(a);
-      if(g.subs.length){
+      if(!FLAT[g.g]&&g.subs.length){
         const leaves=el('div',null,'cat-leaves');
         const inner=el('div',null,'cat-leaves-inner');
         g.subs.forEach(s=>{
@@ -112,14 +115,18 @@
         const imageLink=link('',url(g.g)); imageLink.tabIndex=-1; imageLink.setAttribute('aria-hidden','true');
         const img=el('img'); img.src='/img/collection/'+meta[g.g][0]+'.webp'; img.alt=''; img.width=1536; img.height=1024; img.loading='lazy'; imageLink.append(img);
         const body=el('div',null,'directory-body'); const h=el('h2');h.append(link(g.ad,url(g.g)));
-        body.append(h,el('p',meta[g.g][1]),el('small',g.subs.length+' alt grup · '+g.items.length+' ürün seçeneği'));
-        const list=el('ul');g.subs.slice(0,4).forEach(s=>{const li=el('li');li.append(link(s.ad,url(g.g,s.id)));list.append(li);});
-        body.append(list,link('Tüm alt grupları incele →',url(g.g),'directory-more'));card.append(imageLink,body);grid.append(card);
+        body.append(h,el('p',meta[g.g][1]),el('small',FLAT[g.g]?g.items.length+' ürün seçeneği':g.subs.length+' alt grup · '+g.items.length+' ürün seçeneği'));
+        if(!FLAT[g.g]){
+          const list=el('ul');g.subs.slice(0,4).forEach(s=>{const li=el('li');li.append(link(s.ad,url(g.g,s.id)));list.append(li);});
+          body.append(list,link('Tüm alt grupları incele →',url(g.g),'directory-more'));
+        } else {
+          body.append(link('Ürünleri incele →',url(g.g),'directory-more'));
+        }card.append(imageLink,body);grid.append(card);
       });
       root.append(grid);
       return;
     }
-    if(current&&!selected&&!query) {
+    if(current&&!selected&&!query&&!FLAT[group]) {
       info.textContent=current.subs.length+' alt grup · '+current.items.length+' ürün seçeneği';
       const grid=el('div',null,'subcategory-grid');
       current.subs.forEach(s=>{
@@ -139,7 +146,7 @@
     })));
     info.textContent=results.length+' ürün seçeneği'+(query?' · Arama: '+query:'');
     if(query)info.append(link('Aramayı temizle',url(group,selected?.id||'',''),'cat-clear'));
-    if(current){
+    if(current&&!FLAT[group]){
       const label=el('label','Alt grup','subcategory-select');const select=el('select');
       select.append(new Option('Tüm alt gruplar',''));current.subs.forEach(s=>select.append(new Option(s.ad,s.id)));select.value=selected?.id||'';
       select.addEventListener('change',()=>location.assign(url(group,select.value)));label.append(select);root.append(label);
@@ -154,7 +161,7 @@
       if(item.gorselTuru==='kategori')image.alt=g.ad+' — kategori görseli';
       figure.append(image,el('figcaption',item.gorselTuru==='kategori'?'Kategori görseli':'Temsili görsel'));
       const parts=titled.split(' · ');
-      body.append(link(g.ad+' / '+s.ad,url(g.g,s.id,''),'product-path'),el('h2',parts[0]));
+      body.append(link(FLAT[g.g]?g.ad:g.ad+' / '+s.ad,url(g.g,FLAT[g.g]?'':s.id,''),'product-path'),el('h2',parts[0]));
       if(parts.length>1)body.append(el('p',parts.slice(1).join(' · '),'product-spec'));
       const picker=brandPicker(s.id);
       if(picker)body.append(picker);

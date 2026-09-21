@@ -265,13 +265,12 @@ const ALTLAR = {
   Ambalaj: [
     { id: "strec", ad: "Streç", test: (t) => t.includes("streç") },
     { id: "bant", ad: "Koli Bandı", test: (t) => t.includes("band") },
-    { id: "kraft", ad: "Kraft Çanta", test: (t) => t.includes("kraft") },
+    { id: "kraft", ad: "Kraft Çanta", test: (t) => t.includes("kraft çanta") || t.includes("bez taşıma") },
     { id: "kese", ad: "Kese Kağıdı", test: (t) => t.includes("kese") },
-    { id: "kasa", ad: "Kasa Poşeti", test: (t) => t.includes("kasa") },
-    { id: "buz", ad: "Buzdolabı Poşeti", test: (t) => t.includes("buzdolabı") },
-    { id: "koli", ad: "Koli ve Kutular", test: () => false },
-    { id: "koruma", ad: "Koruyucu Ambalaj", test: () => false },
-    { id: "etiket", ad: "Etiket ve Sevkiyat", test: () => false },
+    { id: "kasa", ad: "Poşetler", test: (t) => t.includes("poşet") },
+    { id: "koli", ad: "Koli ve Kutular", test: (t) => /koli|kutu|separatör|köşe koruyucu/.test(t) },
+    { id: "koruma", ad: "Koruyucu Ambalaj", test: (t) => /balonlu|köpük ambalaj|hava yastığı|dolgu kâğıdı|mukavva rulo/.test(t) },
+    { id: "etiket", ad: "Etiket ve Sevkiyat", test: (t) => /etiket|evrak cebi/.test(t) },
   ],
   PC: [
     { id: "mouse", ad: "Mouse", test: (t) => t.includes("mouse") },

@@ -664,42 +664,6 @@
       "gorselTuru": "temsili"
     },
     {
-      "kategori": "Ambalaj",
-      "satir": "Streç 30 cm · Adet",
-      "gorsel": "/img/products/strec.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Koli Bandı 45×100 · Adet",
-      "gorsel": "/img/products/taperolls.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Kraft Çanta · Adet",
-      "gorsel": "/img/products/kraft.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Kese Kağıdı · Adet",
-      "gorsel": "/img/products/kese.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Kasa Poşeti 30×60 · Adet",
-      "gorsel": "/img/products/kasa.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Buzdolabı Poşeti Orta · Paket",
-      "gorsel": "/img/products/buz.webp",
-      "gorselTuru": "temsili"
-    },
-    {
       "kategori": "Temizlik",
       "satir": "Jumbo Çöp Poşeti 80×110 End. Siyah 700 gr · Paket",
       "gorsel": "/img/products/copblack.webp",
@@ -758,18 +722,6 @@
       "kategori": "Temizlik",
       "satir": "Sıvı El Sabunu 5 L · 5 Litre Bidon",
       "gorsel": "/img/products/soap5l.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Koli Bandı 45 mm × 100 m · Adet / Rulo",
-      "gorsel": "/img/products/taperolls.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Streç Film 45 cm × 300 m · 1 Rulo",
-      "gorsel": "/img/products/strec.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2431,7 +2383,7 @@
       "satir": "Çift Oluklu Koli",
       "alt": "koli",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/boxdouble.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2439,7 +2391,7 @@
       "satir": "Kargo Kutusu",
       "alt": "koli",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/boxcargo.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2447,7 +2399,7 @@
       "satir": "Arşiv Taşıma Kolisi",
       "alt": "koli",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/boxarchive.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2455,7 +2407,7 @@
       "satir": "Kilitli Karton Kutu",
       "alt": "koli",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/boxlock.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2463,7 +2415,7 @@
       "satir": "Karton Separatör",
       "alt": "koli",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/boxdivider.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2471,7 +2423,7 @@
       "satir": "Köşe Koruyucu",
       "alt": "koli",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/boxcorner.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2487,7 +2439,7 @@
       "satir": "Makine Tipi Streç Film",
       "alt": "strec",
       "talepTuru": true,
-      "gorsel": "/img/products/strec.webp",
+      "gorsel": "/img/products/strecmachine.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2495,7 +2447,7 @@
       "satir": "Mini Streç Film",
       "alt": "strec",
       "talepTuru": true,
-      "gorsel": "/img/products/strec.webp",
+      "gorsel": "/img/products/strecmini.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2503,7 +2455,7 @@
       "satir": "Siyah Streç Film",
       "alt": "strec",
       "talepTuru": true,
-      "gorsel": "/img/products/strec.webp",
+      "gorsel": "/img/products/strecblack.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2511,7 +2463,7 @@
       "satir": "Streç Sarma Aparatı",
       "alt": "strec",
       "talepTuru": true,
-      "gorsel": "/img/products/strec.webp",
+      "gorsel": "/img/products/strectool.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2527,7 +2479,7 @@
       "satir": "Kahverengi Koli Bandı",
       "alt": "bant",
       "talepTuru": true,
-      "gorsel": "/img/products/taperolls.webp",
+      "gorsel": "/img/products/tapebrown.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2535,7 +2487,7 @@
       "satir": "Kraft Kâğıt Bant",
       "alt": "bant",
       "talepTuru": true,
-      "gorsel": "/img/products/taperolls.webp",
+      "gorsel": "/img/products/tapekraft.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2551,7 +2503,7 @@
       "satir": "Maskeleme Bandı",
       "alt": "bant",
       "talepTuru": true,
-      "gorsel": "/img/products/taperolls.webp",
+      "gorsel": "/img/products/tapemask.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2575,7 +2527,7 @@
       "satir": "Köpük Ambalaj Şiltesi",
       "alt": "koruma",
       "talepTuru": true,
-      "gorsel": "/img/products/bubble.webp",
+      "gorsel": "/img/products/foamwrap.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2583,7 +2535,7 @@
       "satir": "Hava Yastığı Ambalaj",
       "alt": "koruma",
       "talepTuru": true,
-      "gorsel": "/img/products/bubble.webp",
+      "gorsel": "/img/products/airpillow.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2591,7 +2543,7 @@
       "satir": "Kraft Dolgu Kâğıdı",
       "alt": "koruma",
       "talepTuru": true,
-      "gorsel": "/img/products/kese.webp",
+      "gorsel": "/img/products/kraftfill.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2599,28 +2551,12 @@
       "satir": "Oluklu Mukavva Rulo",
       "alt": "koruma",
       "talepTuru": true,
-      "gorsel": "/img/products/box.webp",
+      "gorsel": "/img/products/corrugateroll.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Ambalaj",
       "satir": "Kraft Çanta",
-      "alt": "kraft",
-      "talepTuru": true,
-      "gorsel": "/img/products/kraft.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Düz Saplı Kâğıt Çanta",
-      "alt": "kraft",
-      "talepTuru": true,
-      "gorsel": "/img/products/kraft.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Büküm Saplı Kâğıt Çanta",
       "alt": "kraft",
       "talepTuru": true,
       "gorsel": "/img/products/kraft.webp",
@@ -2647,7 +2583,7 @@
       "satir": "Yağlı Kese Kâğıdı",
       "alt": "kese",
       "talepTuru": true,
-      "gorsel": "/img/products/kese.webp",
+      "gorsel": "/img/products/greasebag.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2655,15 +2591,7 @@
       "satir": "Pencereli Kese Kâğıdı",
       "alt": "kese",
       "talepTuru": true,
-      "gorsel": "/img/products/kese.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Kraft Paket Servis Çantası",
-      "alt": "kese",
-      "talepTuru": true,
-      "gorsel": "/img/products/kraft.webp",
+      "gorsel": "/img/products/windowbag.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2671,7 +2599,7 @@
       "satir": "Kargo Poşeti",
       "alt": "kasa",
       "talepTuru": true,
-      "gorsel": "/img/products/kasa.webp",
+      "gorsel": "/img/products/cargobag.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2679,28 +2607,12 @@
       "satir": "Kilitli Poşet",
       "alt": "kasa",
       "talepTuru": true,
-      "gorsel": "/img/products/buz.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Şeffaf Ambalaj Poşeti",
-      "alt": "kasa",
-      "talepTuru": true,
-      "gorsel": "/img/products/buz.webp",
+      "gorsel": "/img/products/ziplock.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "Ambalaj",
       "satir": "Kasa Poşeti",
-      "alt": "kasa",
-      "talepTuru": true,
-      "gorsel": "/img/products/kasa.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "Ambalaj",
-      "satir": "Güvenlik Bantlı Poşet",
       "alt": "kasa",
       "talepTuru": true,
       "gorsel": "/img/products/kasa.webp",
@@ -2719,7 +2631,7 @@
       "satir": "Termal Barkod Etiketi",
       "alt": "etiket",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/barcodelabels.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2727,7 +2639,7 @@
       "satir": "Kırılabilir Uyarı Etiketi",
       "alt": "etiket",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/warnlabel.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2735,7 +2647,7 @@
       "satir": "Sevkiyat Evrak Cebi",
       "alt": "etiket",
       "talepTuru": true,
-      "gorsel": "/img/products/buz.webp",
+      "gorsel": "/img/products/docpouch.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2743,7 +2655,7 @@
       "satir": "Palet Etiketi",
       "alt": "etiket",
       "talepTuru": true,
-      "gorsel": "/img/products/labels.webp",
+      "gorsel": "/img/products/palletlabel.webp",
       "gorselTuru": "temsili"
     },
     {
