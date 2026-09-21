@@ -53,17 +53,33 @@
     const selected=current?.subs.find(s=>s.id===sub);
     const nav=document.getElementById('kat-nav');
     const select=document.getElementById('kat-sec');
-    nav.replaceChildren(link('Tüm kategoriler',url(),'category-all'));
+    const all=link('Tüm kategoriler',url(),'category-all'+(!group?' is-on':''));
+    if(!group) all.setAttribute('aria-current','page');
+    nav.replaceChildren(all);
     select.replaceChildren(new Option('Tüm kategoriler',''));
     groups.forEach(g=>{
-      const a=link(g.ad,url(g.g),current===g?'is-on':'');
+      const branch=el('div',null,'cat-branch'+(current===g?' is-open':''));
+      const a=link('',url(g.g),'cat-parent'+(current===g?' is-on':''));
+      a.append(el('span',g.ad,'cat-parent-name'));
+      const chev=el('span',null,'cat-chevron');
+      chev.setAttribute('aria-hidden','true');
+      a.append(chev);
       if(current===g&&!selected)a.setAttribute('aria-current','page');
-      nav.append(a); select.append(new Option(g.ad,g.g));
-      if(current===g) g.subs.forEach(s=>{
-        const b=link(s.ad+' ('+s.items.length+')',url(g.g,s.id),'subnav-link');
-        if(selected===s)b.setAttribute('aria-current','page');
-        nav.append(b);
-      });
+      branch.append(a);
+      if(g.subs.length){
+        const leaves=el('div',null,'cat-leaves');
+        const inner=el('div',null,'cat-leaves-inner');
+        g.subs.forEach(s=>{
+          const b=link('',url(g.g,s.id),'subnav-link');
+          b.append(el('span',s.ad,'subnav-name'),el('span',String(s.items.length),'subnav-count'));
+          if(selected===s)b.setAttribute('aria-current','page');
+          inner.append(b);
+        });
+        leaves.append(inner);
+        branch.append(leaves);
+      }
+      nav.append(branch);
+      select.append(new Option(g.ad,g.g));
     });
     select.value=group;
     select.addEventListener('change',()=>location.assign(url(select.value)));

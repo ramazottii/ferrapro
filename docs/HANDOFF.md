@@ -370,6 +370,13 @@ AA ve AAA piller ayrı görseller aldı. Mutfak/ikramdaki koli SKU satırları k
 Cloudflare sürümü: c471f341-0c5c-47de-ad9d-abd9c3bdc405.
 Önceki sürüm: c08d741f-8b33-40d2-acd1-359f18c27373.
 
+## 21 Eylül — AAA pil görseli ve katalog ağacı
+AAA ince kalem pil sigara görünümlü çubuk yerine bakır başlıklı 4’lü blister paket oldu. Sol kategori menüsü kartlı accordion: açık grup lacivert, chevron, alt grup sayaçları ve hover kayması. inner.css v70, catalog-ui.js v71. npm run check: 473 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 47629b57-d1ed-4eae-8320-73ab892d4606.
+Önceki sürüm: c471f341-0c5c-47de-ad9d-abd9c3bdc405.
+
 
 
 

@@ -215,7 +215,7 @@ const zarf=data.urunler.filter(r=>r.kategori==='Kırtasiye'&&r.alt==='zarf');
 assert.equal(zarf.length,8);
 assert.equal(new Set(zarf.map(r=>r.gorsel)).size,8);
 assert.ok(data.urunler.some(r=>r.satir==='AA Kalem Pil'&&r.gorsel.endsWith('aa.webp')));
-assert.ok(data.urunler.some(r=>r.satir==='AAA Ince Kalem Pil'&&r.gorsel.endsWith('aaa.webp')));
+assert.ok(data.urunler.some(r=>r.satir==='AAA Ince Kalem Pil'&&r.gorsel.endsWith('aaapack.webp')));
 const mutfak=data.urunler.filter(r=>r.kategori==='Mutfak');
 assert.equal(mutfak.length,53);
 assert.ok(mutfak.every(r=>r.talepTuru&&r.alt));
