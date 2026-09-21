@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "check": "node --check public/site.js && node --check public/interest.js && node --check public/catalog-ui.js && node tools/check_catalog.mjs && node tools/check_quote_flow.mjs",
     "dev": "npx --yes wrangler@4.131.2 dev --port 8788",
     "preview": "node tools/preview_site.mjs",
     "deploy": "npx --yes wrangler@4 deploy"

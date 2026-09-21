@@ -10,30 +10,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/site.css?v=60" />
+  <link rel="stylesheet" href="/site.css?v=76" />
+  <link rel="stylesheet" href="/inner.css?v=76" />
+  <link rel="canonical" href="https://ferrapro.com/siparis" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:title" content="Teklif Talebi · FerraPro" />
+  <meta property="og:description" content="İşletmeniz için teklif isteyin. İhtiyaç duyduğunuz ürünleri ve miktarlarını paylaşın." />
+  <meta property="og:url" content="https://ferrapro.com/siparis" />
+  <meta property="og:image" content="https://ferrapro.com/img/collection/hero.webp" />
+  <meta name="robots" content="noindex, follow" />
 </head>
-<body>
+<body class="inner">
   <header class="head" data-head="/siparis"></header>
-  <main class="wrap page">
-    <h1>İşletmeniz için teklif isteyin</h1>
-    <p class="lead">İhtiyaç duyduğunuz ürünleri ve miktarlarını paylaşın.</p>
+  <main><section class="page-banner"><div class="wrap">
+      <a class="breadcrumb" href="/">Ana sayfa</a><span class="breadcrumb-divider"> / </span><span class="breadcrumb-current">Teklif talebi</span>
+      <h1>İşletmeniz için teklif isteyin</h1><p>İlgilendiğiniz ürünleri seçin veya yalnızca iletişim bilgilerinizi bırakın. İhtiyacınızı birlikte netleştirelim.</p>
+    </div></section><div class="wrap page quote-layout"><div class="quote-main">
     <p id="wa-wrap" hidden><a class="btn" id="wa" href="#">WhatsApp</a></p>
-    <form class="form" id="siparis-form">
+    <section id="interest-review" aria-label="İlgilendiğiniz ürünler"></section>
+    <form class="form" id="siparis-form"><h2 class="full form-title">Teklif talebiniz</h2>
       <p class="full form-hint">Zorunlu alanlar yıldız (*) ile işaretlidir.</p>
       <label>
         <span class="etiket">Firma adı <span class="gerekli" aria-hidden="true">*</span></span>
-        <input name="firma" required autocomplete="organization" />
+        <input name="firma" minlength="2" maxlength="120" required autocomplete="organization" />
       </label>
       <label>
         <span class="etiket">Yetkili adı</span>
-        <input name="yetkili" autocomplete="name" />
+        <input name="yetkili" maxlength="80" autocomplete="name" />
       </label>
       <label>
         <span class="etiket">Telefon <span class="gerekli" aria-hidden="true">*</span></span>
-        <input name="tel" required autocomplete="tel" />
+        <input name="tel" type="tel" inputmode="tel" required autocomplete="tel" />
       </label>
       <label>
-        <span class="etiket">Ürün kategorisi</span>
+        <span class="etiket">Görüşmek istediğiniz kategori (isteğe bağlı)</span>
         <select name="grup">
           <option value="">Seçin</option>
           <option value="Hijyen">Temizlik Kâğıt Ürünleri</option>
@@ -41,7 +52,7 @@
           <option value="Temizlik">Temizlik Ürünleri</option>
           <option value="Mutfak / İkram">Mutfak / İkram</option>
           <option value="Ambalaj">Ambalaj</option>
-          <option value="Kırtasiye">Kırtasiye Ürünleri</option>
+          <option value="Kırtasiye">Kırtasiye ve Ofis Malzemeleri</option>
           <option value="PC Sarf">Bilgisayar ve Yazıcı Sarf Malzemeleri</option>
         </select>
       </label>
@@ -50,17 +61,23 @@
         <input name="ilce" maxlength="80" autocomplete="address-level2" />
       </label>
       <label class="full">
-        <span class="etiket">İhtiyaç duyduğunuz ürünler ve miktarlar&nbsp;<span class="gerekli" aria-hidden="true">*</span></span>
-        <textarea name="not" rows="4" required placeholder="Ürün ve miktar"></textarea>
+        <span class="etiket">Eklemek istediğiniz not (isteğe bağlı)</span>
+        <textarea name="not" rows="4" placeholder="Örnek: Z kat havlu, 10 koli. Tercih ettiğiniz ölçü veya ambalajı da belirtebilirsiniz."></textarea>
       </label>
       <p class="full form-kvkk">Kişisel verileriniz <a href="/kvkk">KVKK aydınlatma metni</a> kapsamında işlenir.</p>
       <div class="full">
-        <button class="btn" type="submit">Teklif Talebi Gönder</button>
+        <button class="btn" type="submit">Teklif ve Görüşme Talebi Gönder</button>
         <p id="msg" class="note" role="status"></p>
       </div>
-    </form>
+    </form></div><aside class="contact-panel"><p class="eyebrow">Birlikte netleştirelim</p>
+<h2>İhtiyacınızı anlatın,<br>teklifinizi hazırlayalım.</h2>
+<p>Ürün adı, miktar ve varsa ölçü ya da ambalaj tercihinizi paylaşabilirsiniz.</p>
+<ol><li>Talebinizi iletin.</li><li>Ürün seçeneklerini değerlendirelim.</li><li>Tedarik detaylarını netleştirelim.</li></ol>
+<div class="contact-details"><span>İletişim</span><a href="tel:+905307161877">0530 716 18 77</a><a href="mailto:info@ferrapro.com">info@ferrapro.com</a><p>Ataşehir / İstanbul</p></div></aside></div>
   </main>
   <footer class="foot" data-foot></footer>
-  <script src="/site.js?v=60"></script>
+  <script src="/interest.js?v=67"></script>
+  <script src="/site.js?v=77"></script>
+  <script>FerraInterest.mount();</script>
 </body>
 </html>
