@@ -629,12 +629,6 @@
     },
     {
       "kategori": "PC",
-      "satir": "Klavye · Adet",
-      "gorsel": "/img/products/klavye.webp",
-      "gorselTuru": "temsili"
-    },
-    {
-      "kategori": "PC",
       "satir": "Toner / Kartuş · Adet",
       "gorsel": "/img/products/toner.webp",
       "gorselTuru": "temsili"
@@ -2689,7 +2683,7 @@
       "satir": "Kablolu Klavye",
       "alt": "klavye",
       "talepTuru": true,
-      "gorsel": "/img/products/klavye.webp",
+      "gorsel": "/img/products/keyboardwired.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2697,7 +2691,7 @@
       "satir": "Kablosuz Klavye",
       "alt": "klavye",
       "talepTuru": true,
-      "gorsel": "/img/products/klavye.webp",
+      "gorsel": "/img/products/keyboardwireless.webp",
       "gorselTuru": "temsili"
     },
     {
@@ -2705,15 +2699,15 @@
       "satir": "Klavye Mouse Seti",
       "alt": "klavye",
       "talepTuru": true,
-      "gorsel": "/img/products/mouse.webp",
+      "gorsel": "/img/products/keyboardset.webp",
       "gorselTuru": "temsili"
     },
     {
       "kategori": "PC",
-      "satir": "Sayısal Tuş Takımı",
+      "satir": "Numerik Tuş Takımı",
       "alt": "klavye",
       "talepTuru": true,
-      "gorsel": "/img/products/klavye.webp",
+      "gorsel": "/img/products/numerickeypad.webp",
       "gorselTuru": "temsili"
     },
     {

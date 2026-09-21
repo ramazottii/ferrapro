@@ -24,7 +24,7 @@ for(const row of data.urunler){
   assert.ok(existsSync(new URL('../public'+row.gorsel,import.meta.url)),row.gorsel);
   assert.ok(['temsili','kategori'].includes(row.gorselTuru));
 }
-for(const [group,min] of Object.entries({Hijyen:80,Temizlik:90,Mutfak:50,Ambalaj:30,PC:47,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
+for(const [group,min] of Object.entries({Hijyen:80,Temizlik:90,Mutfak:50,Ambalaj:30,PC:46,Sağlık:45}))assert.ok(data.urunler.filter(r=>r.kategori===group).length>=min,group);
 
 const stationery=data.urunler.filter(r=>r.kategori==='Kırtasiye');
 assert.ok(stationery.length >= 50);
@@ -270,3 +270,7 @@ console.log(`PASS: ${data.urunler.length} catalogue rows classified; cleaning/te
 const mice=data.urunler.filter(r=>r.kategori==='PC' && r.alt==='mouse');
 assert.equal(mice.length,5);
 assert.equal(new Set(mice.map(r=>r.gorsel)).size,5,'Mouse types require distinct matching photos');
+
+const keyboards=data.urunler.filter(r=>r.kategori==='PC' && r.alt==='klavye');
+assert.deepEqual(keyboards.map(r=>r.satir),['Kablolu Klavye','Kablosuz Klavye','Klavye Mouse Seti','Numerik Tuş Takımı']);
+assert.equal(new Set(keyboards.map(r=>r.gorsel)).size,4);

@@ -437,3 +437,6 @@ Genel Mouse · Adet tekrarı kaldırıldı. Kablolu Mouse ve düz Mouse Pad mevc
 Önceki bilgisayar grubu kaldırma yayını: kaynak8ee1249, Cloudflare1c45190c-15b6-4e9c-8fc6-e58c4794b7b6.
 Mouse güncellemesi canlıya alındı: kaynak1b8e8a4; Cloudflare ed67e0e4-1747-45d2-8b4b-d3ad35da1131. npm run check başarılı (453 kayıt). Üç yeni WebP public/img/products içinde.
 Görsel istem seti: square photorealistic product catalogue photo; seamless light cool gray #e4e7eb background; soft contact shadow; centered entire product; no logo/text/props. wirelessmouse: black wireless office mouse with small USB receiver, no cable. verticalmouse: upright handshake-grip black ergonomic mouse with side thumb buttons. wristmousepad: dark navy pad with clearly raised gel wrist support, no mouse. Built-in image_gen kullanıldı; özgün SKU iddiası yok.
+
+## Klavye grubu tamamlandı
+Genel Klavye · Adet tekrarı kaldırıldı. Kablolu Klavye, Kablosuz Klavye, Klavye Mouse Seti ve Numerik Tuş Takımı olarak dört kayıt bırakıldı; her biri ayrı, açık gri fonlu markasız temsili görsele bağlandı. Kaynak istemler docs/keyboard-image-prompts.json içinde. Eşleştirme ve genişletme betikleri güncellendi. npm run check başarılı; PC46, toplam452 kayıt. Önceki mouse yayın notu fa23cd4 de bu gönderime dahil.

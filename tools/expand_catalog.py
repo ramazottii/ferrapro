@@ -43,7 +43,7 @@ families = [
  ('Ambalaj','kasa','Poşetler','Kargo Poşeti|Kilitli Poşet|Şeffaf Ambalaj Poşeti|Kasa Poşeti|Güvenlik Bantlı Poşet'),
  ('Ambalaj','etiket','Etiket ve Sevkiyat','Kargo Etiketi|Termal Barkod Etiketi|Kırılabilir Uyarı Etiketi|Sevkiyat Evrak Cebi|Palet Etiketi'),
  ('PC','mouse','Mouse ve Aksesuarları','Kablolu Mouse|Kablosuz Mouse|Ergonomik Mouse|Mouse Pad|Bilek Destekli Mouse Pad'),
- ('PC','klavye','Klavye ve Setler','Kablolu Klavye|Kablosuz Klavye|Klavye Mouse Seti|Sayısal Tuş Takımı'),
+ ('PC','klavye','Klavye ve Setler','Kablolu Klavye|Kablosuz Klavye|Klavye Mouse Seti|Numerik Tuş Takımı'),
  ('PC','toner','Yazıcı Sarf Malzemeleri','Siyah Lazer Toner|Renkli Lazer Toner|Siyah Mürekkep Kartuşu|Renkli Mürekkep Kartuşu|Tanklı Yazıcı Mürekkebi|Yazıcı Drum Ünitesi|Atık Toner Kutusu|Nokta Vuruşlu Yazıcı Şeridi'),
  ('PC','usb','Kablo ve Bağlantı','USB Bellek|USB-A USB-C Kablo|USB-C USB-C Kablo|Yazıcı USB Kablosu|HDMI Kablo|Displayport Kablo|Ethernet Kablosu|USB Çoklayıcı|USB-C Görüntü Adaptörü|USB Uzatma Kablosu'),
  ('PC','power','Güç ve Şarj','Power Bank|USB Şarj Adaptörü|Dizüstü Bilgisayar Adaptörü|Çoklu Priz|Akım Korumalı Priz'),
