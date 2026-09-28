@@ -391,6 +391,14 @@ Yağlı kese kâğıdı kaldırıldı. Ambalaj görselleri krem/beyaz karışım
 Cloudflare sürümü: c4562347-f90a-4cd3-88c3-e252d1635848.
 Önceki sürüm: c5dc2c0c-85ca-48c8-9cbd-e2539db6f0c3.
 
+## 24 Eylül — Temizlik kâğıdı yeni grup iskeleti
+Temizlik Kâğıt Ürünleri’nin en üstüne Havlu-Peçete, Islak havlu ve Tuvalet Kağıtları eklendi. Eski alt gruplar silinmedi. Yeni gruplar henüz boş; ürünler sırayla taşınacak. npm run check: 459 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c3cda350-49d6-4a49-a745-3405e51e8126.
+Önceki sürüm: c4562347-f90a-4cd3-88c3-e252d1635848.
+
+
 
 
 

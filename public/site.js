@@ -13,6 +13,9 @@ const GRUPLAR = [
 const SATIR_MAX = 2000;
 
 const GRUP_FOTO = {
+  "havlu-pecete": "/img/ico-pecete.png",
+  "islak-kagit": "/img/ico-pecete.png",
+  "tuvalet-kagit": "/img/ico-tuvalet.png",
   pecete: "/img/ico-pecete.png",
   zkat: "/img/ico-zhavlu.png",
   fotosel: "/img/ico-fotosel.png",
@@ -206,6 +209,9 @@ bindTrust();
 
 const ALTLAR = {
   Hijyen: [
+    { id: "havlu-pecete", ad: "Havlu-Peçete", test: () => false },
+    { id: "islak-kagit", ad: "Islak havlu", test: () => false },
+    { id: "tuvalet-kagit", ad: "Tuvalet Kağıtları", test: () => false },
     { id: "islak", ad: "Islak Havlu", test: (t) => t.includes("ıslak") || /yüzey temizlik havlu/.test(t) },
     { id: "pecete", ad: "Peçete", test: (t) => /peçete/.test(t) },
     { id: "fotosel", ad: "Fotoselli Havlu", test: (t) => t.includes("fotosel") },

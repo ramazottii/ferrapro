@@ -42,6 +42,9 @@
     const groups = GRUPLAR.map(g=>{
       const items=data.urunler.filter(u=>grupAnahtar(g.g).includes(u.kategori));
       const buckets=new Map();
+      (ALTLAR[g.g]||[]).forEach(tip=>{
+        if(!buckets.has(tip.id))buckets.set(tip.id,{...tip,items:[]});
+      });
       items.forEach(item=>{
         const tip=altBul(g.g,item.satir||item.ad,item.alt);
         if(!buckets.has(tip.id))buckets.set(tip.id,{...tip,items:[]});

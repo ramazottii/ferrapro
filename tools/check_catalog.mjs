@@ -43,6 +43,9 @@ assert.equal(classify('Hijyen','Masaüstü peçete dispenseri','dispenser'),'dis
 assert.equal(classify('Hijyen','Rulo havlu 6’lı','havlu'),'havlu');
 assert.equal(classify('Hijyen','Dev rulo havlu','havlu'),'havlu');
 assert.equal(vm.runInContext('MARKA_TERCIHLERI.havlu.join(",")',context),'Solo,Selpak,Papia,Familia,Focus,Forest,Rulopak');
+assert.equal(vm.runInContext('ALTLAR.Hijyen.slice(0,3).map(x=>x.id).join(",")',context),'havlu-pecete,islak-kagit,tuvalet-kagit');
+assert.ok(vm.runInContext('ALTLAR.Hijyen.map(x=>x.id)',context).includes('islak'));
+assert.equal(classify('Hijyen','Islak havlu 90’lı','havlu-pecete'),'havlu-pecete');
 assert.ok(!vm.runInContext('ALTLAR.Hijyen.map(x=>x.id).join(",")',context).split(',').includes('mendil'));
 assert.equal(data.urunler.filter(r=>r.alt==='mendil').length,0);
 for (const row of data.urunler.filter(r=>/çöp poşet/i.test(r.satir))) {
