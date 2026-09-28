@@ -41,7 +41,13 @@ window.FerraInterest = (() => {
     notify(persistent ? 'Teklif listenize eklendi. Ürün seçmeye devam edebilirsiniz.' : 'Eklendi. Tarayıcı kaydı kapalı; sayfadan ayrılmadan önce listeyi gönderin.');
   }
   function mount() {
-    document.querySelectorAll('[data-interest-count]').forEach(el => { el.textContent = rows.length; });
+    document.querySelectorAll('[data-interest-count]').forEach(el => {
+      const n = rows.length;
+      el.hidden = n === 0;
+      el.textContent = n ? `(${n})` : "";
+      const host = el.closest("a");
+      if (host) host.setAttribute("aria-label", n ? `Teklif Listem (${n})` : "Teklif Listem");
+    });
     const review = document.getElementById('interest-review');
     if (!review) return;
     review.replaceChildren();

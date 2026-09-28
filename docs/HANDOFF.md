@@ -398,19 +398,807 @@ Temizlik Kâğıt Ürünleri’nin en üstüne Havlu-Peçete, Islak havlu ve Tuv
 Cloudflare sürümü: c3cda350-49d6-4a49-a745-3405e51e8126.
 Önceki sürüm: c4562347-f90a-4cd3-88c3-e252d1635848.
 
+## 24 Eylül — Katalog sıfırlandı
+Tüm halka açık ürünler, ana kategoriler ve alt gruplar silindi. Katalog baştan anlatılacak. npm run check: 0 satır. Canlıya alınmadı.
+
+## 24 Eylül — Yuvarlak kategori düzeni
+Ürünler sayfasındaki ağaç menü kaldırıldı. Üstte isimsiz 5 boş daire bekliyor; isimler kullanıcıdan gelecek.
+
+### Yayın tamamlandı
+Cloudflare sürümü: faa193fd-da96-4ca8-ad44-108efe490093.
+Önceki sürüm: c3cda350-49d6-4a49-a745-3405e51e8126.
+
+## 24 Eylül — Ofix kurgusu
+Katalog daire bandı tam sayfa genişliğinde; daireler büyütüldü.
+
+### Yayın tamamlandı
+Cloudflare sürümü: eafc8c7d-d5f1-47ed-b464-78aa0a6039c2.
+Önceki sürüm: 294f99d3-e872-4365-bfdc-6615aafd072d.
+
+## 24 Eylül — Sıvı temizlik daire görseli
+Sıvı Temizlik Ürünleri dairesine Yumoş Extra Lilyum markalı şişe grubu kondu. GRUP_FOTO.Temizlik = /img/products/sivi-yumos.webp. site.js v=82. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 35089324-91bf-4cc2-8c0b-11728ea18abf.
+Önceki sürüm: ed220635-d0c3-4a3a-a64a-89245f189aff.
+
+## 24 Eylül — Ofix tarzi daire ve popüler markalar
+Kategori daireleri markasız yüksek ışıklı stüdyo grup fotoğraflarıyla dolduruldu. Altına kayan “Popüler markalar” şeridi eklendi (metin, logo kopyası yok). site.js v=83, catalog-ui v=79, inner.css v=78. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b63354a3-3419-446e-a794-f0e72b1b0284.
+Önceki sürüm: 35089324-91bf-4cc2-8c0b-11728ea18abf.
+
+## 24 Eylül — Marka şeridi daire rozet
+Popüler markalar Ofix gibi beyaz daire içinde renkli rozetle kayıyor; daireler büyütüldü. site.js v=84, catalog-ui v=80, inner.css v=79. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 5cdbdf62-5fc8-4d02-b3e9-a5dc1bb3ea61.
+Önceki sürüm: b63354a3-3419-446e-a794-f0e72b1b0284.
+
+## 24 Eylül — Grup bazlı marka şeridi
+Marka daireleri seçilen ana kategoriye göre değişiyor (temizlik / kâğıt / gıda vb.). Ürünler özetinde şerit gizli. site.js v=85, catalog-ui v=81. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 53a8ff6d-7b9e-4ce0-9922-63c3bc60dbdb.
+Önceki sürüm: 5cdbdf62-5fc8-4d02-b3e9-a5dc1bb3ea61.
+
+## 24 Eylül — Bilgisayar sarf markaları
+PC şeridine Logitech, Everest, Canon, Epson, Anker, Syrox, Baseus, Spigen kondu. site.js v=86. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 3b5e0a61-652e-4303-8c16-3e7740efa43e.
+Önceki sürüm: 53a8ff6d-7b9e-4ce0-9922-63c3bc60dbdb.
+
+## 24 Eylül — Kağıt ve aparat markaları
+Hijyen: Espiga, Sleepy, Papia, Solo, Familia, Teno, Rulopak. Aparat: Vileda, Parex, Palex, Vialli, Flosoft, Scotch-Brite. site.js v=87. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d9160394-a456-4460-a63e-3a55f57757ea.
+Önceki sürüm: 3b5e0a61-652e-4303-8c16-3e7740efa43e.
+
+## 24 Eylül — Kırtasiye markaları
+Kırtasiye şeridine Faber-Castell, Pilot, uni-ball, BIC, edding, Navigator, Pritt, UHU, Leitz, noki kondu. site.js v=88. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 217190e8-0d3e-41f6-bc35-46873a2f9ec7.
+Önceki sürüm: 6f727b51-e228-49b1-abe8-35693dccbe7b.
+
+## 24 Eylül — Gerçek marka logoları
+Popüler marka dairelerine internetteki gerçek logolar kondu (Wikimedia Commons + resmi siteler). Edding kırmızı plaka, BIC, Pritt, Faber-Castell, Noki, Leitz, Nestlé, Lipton, Eti, Familia, Solo, Cif, Yumoş, Vernel, Tesa vb. resmi dosyalar. Palex, Everest, Rulopak, Erikli, Teno, Ozopak, Flosoft, Espiga, Syrox için net resmi dosya bulunamadı.
+
+## 24 Eylül — Ana sayfa slogan bandı
+Sarı şerit slogan: “İŞLETMEYE UYGUN TEKLİF FerraPro'da!”. Altında kırtasiye, bilgisayar sarf ve gıda kartları; fiyat/indirim/hemen-al yok, teklif ve incele. home.css v=70, site.js v=89. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 913fba00-144d-4ca9-a7ce-c883e1593bbb.
+Önceki sürüm: 217190e8-0d3e-41f6-bc35-46873a2f9ec7.
+
+## 24 Eylül — Slogan rengi ve metni
+Şerit lacivert + turuncu plaka. Metin: “İşletmelere En uygun Fiyat Teklifleri FerraPro'da!”. home.css v=71.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 7946dd2e-8340-4f5f-9b86-001d8e1f4b05.
+Önceki sürüm: 913fba00-144d-4ca9-a7ce-c883e1593bbb.
+
+## 24 Eylül — Slogan turuncu şerit
+Banner yükseltildi, zemin turuncu, yazı lacivert. “en uygun” sarı ve yanıp sönüyor. home.css v=72.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 7210cc87-6a7a-44f6-9f85-3da7da155bd2.
+Önceki sürüm: 7946dd2e-8340-4f5f-9b86-001d8e1f4b05.
+
+## 24 Eylül — Ana sayfa kampanyalar
+Tanışma kampanyası %10 ve 10.000 TL üzeri siparişte Tchibo 1 kg çekirdek kahve hediye kartları. CTA Teklif Al (/siparis). home.css v=73, site.js v=90.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 5e69c96a-2a5b-4d49-b439-d6dd02d52028.
+Önceki sürüm: 7210cc87-6a7a-44f6-9f85-3da7da155bd2.
+
+## 24 Eylül — Header logo
+FerraPro işareti 58px, yazı büyütüldü, şerit sola genişletildi. site.css v=69.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 0d09a45b-9018-4c4f-b3c0-220571bba6f4.
+Önceki sürüm: 5e69c96a-2a5b-4d49-b439-d6dd02d52028.
+
+## 24 Eylül — Kampanya kaydırıcı
+Tanışma ve Tchibo kartları ok ve nokta ile sayfa sayfa kayıyor. home.css v=74, site.js v=91.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 65efd5bd-ef89-4e72-9156-ca403197025a.
+Önceki sürüm: 0d09a45b-9018-4c4f-b3c0-220571bba6f4.
+
+## 24 Eylül — Header logo büyütme
+İşaret 84px, FR yakınlaştırıldı, yazı 1.55rem. site.css v=70, site.js v=92.
+
+## 24 Eylül — Ana sayfa genişlik denemesi geri alındı
+Tam sayfa ve 1200px sütun denemesi kaldırıldı. Ana sayfa önceki genişliğe döndü. home.css v=74. Canlıya alınmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b68ef632-8449-444a-b017-c4372f084a43.
+Önceki sürüm: 65efd5bd-ef89-4e72-9156-ca403197025a.
+
+## 24 Eylül — Header tam logo
+Kesme kaldırıldı. Bant 136px, tam hex 108px, FerraPro yazısı 2.05rem. site.css v=71.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 461d2853-98a0-458a-9089-7152a590a12f.
+Önceki sürüm: b68ef632-8449-444a-b017-c4372f084a43.
+
+## 24 Eylül — Sayfa genişliği
+İçerik 1280px. Header 96px, logo 72px tam, yazı 1.5rem. site.css v=72, home.css v=75, inner.css v=81.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d2366858-9ff2-4718-8376-8f0eb4c2d7b3.
+Önceki sürüm: 461d2853-98a0-458a-9089-7152a590a12f.
+
+## 24 Eylül — Kampanya yüksekliği
+Slider 220px’e sabitlendi; görsel bandı şişirmiyor. home.css v=76.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ce6eafc1-1ff0-4d9b-a81e-8eee9031e954.
+Önceki sürüm: d2366858-9ff2-4718-8376-8f0eb4c2d7b3.
+
+## 24 Eylül — Hero görsel
+Yığma kompozisyon ve lacivert şerit kaldırıldı. Düz katalog fotoğraf, 16px çerçeve. home.css v=77.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2b31c986-36ed-4c77-9dda-a89d63fed27e.
+Önceki sürüm: ce6eafc1-1ff0-4d9b-a81e-8eee9031e954.
+
+## 24 Eylül — Hero gerçek ofis fotoğrafı
+Yapay ürün yığını kaldırıldı; lacivert ofis koridoru fotoğrafı kondu.
+
+### Yayın tamamlandı
+Cloudflare sürümü: cd50e8ea-43fb-44f5-83fd-f0795d8f4808.
+Önceki sürüm: 2b31c986-36ed-4c77-9dda-a89d63fed27e.
+
+## 24 Eylül — Palet ve hero
+Ana renk #0F172A, vurgu #0EA5E9. Hero: kullanıcının depo/taşıma görseli. site.css v=73, home.css v=78.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 1e4ee6ff-5eff-4b3d-9270-f3e7d0ccc3dc.
+Önceki sürüm: cd50e8ea-43fb-44f5-83fd-f0795d8f4808.
+
+## 24 Eylül — Hero yan boşluk
+Fotoğraf çerçeveyi dolduruyor, contain/max-height kaldırıldı. home.css v=79.
 
 
 
 
+## 24 Eylül — Canva ana sayfa metni
+Canva `homePageContent` canlıya alındı. Yer tutucu kategori yok; 7 gerçek ürün grubu dolduruluyor. Kampanyalar ve referanslar duruyor. Ana sayfa formu mevcut `/api/teklif` ile (firma+telefon zorunlu; e-posta/ürün/miktar isteğe bağlı not’a yazılıyor). Panel ve kimlik doğrulama değişmedi.
+`npm run check`: katalog ve form gönderimi geçti. `check_quote_flow` ferrapro.com `/panel/` 302 yönlendirmesinde 404 bekliyor; bu Worker davranışı bu işte değiştirilmedi.
+Cloudflare sürümü: 6cc984d3-b080-4aaf-8beb-63e74a914dd5.
+Önceki sürüm: 1e4ee6ff-5eff-4b3d-9270-f3e7d0ccc3dc.
 
+## 24 Eylül — Katalog yönetim paneli
+Ferranoi paneline dokunulmadı. Yeni iç araç: `/yonetim` (noindex). 3 ana kategori, 11 alt kategori, 157 ayrı ürün kaydı. Çöp Poşetleri ve Kullan At Ürünler, Sıvı Temizlik altında bağımsız. Teyitsiz ölçüler (3,2 / 4 / 2,5 / 400 / 30 × 45) not alanında duruyor. Düzenlemeler tarayıcıda saklanır; kaynak dosya `public/yonetim/catalog.json`. Müşteri `/urunler` boş katalog olarak duruyor.
+Cloudflare sürümü: 58a2833b-2e5a-4c46-baf7-1f2c11976b75.
+Önceki sürüm: 6cc984d3-b080-4aaf-8beb-63e74a914dd5.
 
+## 24 Eylül — Vitrin katalog
+Canva ürün ağacı müşteri sitesine bağlandı. `/urunler`: 3 ana grup, alt grup kartları, 157 varyant, ürün detay (`?u=`). Fiyat yok. Çöp Poşetleri ve Kullan At, Sıvı Temizlik altında. Eski `?g=Hijyen|Temizlik|Aparat` adresleri duruyor. Ana sayfa yalnızca bu 3 dolu grubu gösteriyor.
+Cloudflare sürümü: eacd2aee-bb6e-463d-ac9f-fbba1ff1390e.
+Önceki sürüm: 58a2833b-2e5a-4c46-baf7-1f2c11976b75.
 
+## 24 Eylül — Hero altı Canva carousel
+8 Canva banner, hero’nun hemen altında. Canva dışa aktarımı 1024×512 (2:1) geldiği için kırpılmadan gösteriliyor; 24:5 kesilmedi. Görsel üzerindeki yazı tekrar edilmiyor; şeffaf tıklama alanları ürünler/teklif formuna gidiyor. WhatsApp numarası hâlâ boş; ilgili buton `#teklif-al`. Eski tanışma/Tchibo kampanya şeridi kaldırıldı. Panel değişmedi.
+`npm run check`: katalog geçti; `check_quote_flow` ferrapro.com `/panel/` 302≠404 önceden var, bu işte dokunulmadı.
 
+### Yayın tamamlandı
+Cloudflare sürümü: b66c5b76-af44-456a-9855-398e84930550.
+Önceki sürüm: eacd2aee-bb6e-463d-ac9f-fbba1ff1390e.
 
+## 25 Eylül — Carousel ölçü ve kalite
+Canva kaynakları 1024×512 (2:1 JPEG). Yapay 1440 büyütme kaldırıldı; PNG native ölçüde, `width:100%; height:auto; object-fit:contain`. Kutu max 1200px, görsel native 1024px üstüne çıkarılmıyor. Noktalar görselin altında. `cover` yok. 2400×1200 (veya 2x) Canva dışa aktarımı yok; keskin retina için yeniden indirme gerekir. Panel değişmedi.
 
+### Yayın tamamlandı
+Cloudflare sürümü: f80b3145-8d65-40cf-8fc7-214512a41852.
+Önceki sürüm: b66c5b76-af44-456a-9855-398e84930550.
 
+## 25 Eylül — Üç katmanlı header
+Üst bilgi 30px, ana nav 72px, lacivert teklif bandı 46px (toplam 148px). İçerik 1200px, carousel ile aynı hiza. Ürünler dropdown; mobilde hamburger. Teklif Listem boşken sayı yok. WhatsApp wa.me/905307161877 (kullanıcı verdi). Carousel görselleri değişmedi. Panel dokunulmadı.
 
+### Yayın tamamlandı
+Cloudflare sürümü: 4d96f953-1a6b-4eec-b567-e0535f3be488.
+Önceki sürüm: f80b3145-8d65-40cf-8fc7-214512a41852.
 
+## 25 Eylül — Ana sayfa carousel altı bölümler
+Header, duyuru bandı ve hero carousel değişmedi (görsel, sıra, ölçü, metin, cover yok). Carousel sonrası: keşfet (4 kart), sektörler (6), öne çıkan ürün grupları (10), Neden FerraPro (4), lacivert CTA, lacivert footer. İçerik 1200px, carousel ile aynı hiza. Fiyat/kampanya yok. WhatsApp wa.me/905307161877. Panel dokunulmadı.
+
+Kontrol: node --check site.js geçti. npm run check katalog/teklif geçti; panel 302≠404 önceden var. Tarayıcı 1920/768/390: yatay taşma yok. Masaüstü 4 sütun kategori/avantaj/grup; tablet 2; mobil 1. CTA ve footer bağlantıları /urunler, /siparis, /sektorler, mailto, tel.
+
+### Yayın tamamlandı
+Cloudflare sürümü: fded0ffc-af20-4afe-937e-42c74088ae6c.
+Önceki sürüm: 4d96f953-1a6b-4eec-b567-e0535f3be488.
+
+## 25 Eylül — Header WhatsApp CTA
+Üç katman korundu. Üst bar 30px; ana nav 76px, petrol “WhatsApp’tan Yazın” (beyaz yazı) + “Teklif Listem”. Duyuru 56px: “İhtiyacınızı iletin, uygun ürünleri birlikte bulalım.” ve “WhatsApp’tan Teklif Al” (wa.me/905307161877). Mobil: logo + WhatsApp + Liste + menü; bant kısa metin + aynı buton. Taşma yok. Carousel değişmedi. Panel dokunulmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: cd55db25-35ba-4281-9740-ae6676a75467.
+Önceki sürüm: fded0ffc-af20-4afe-937e-42c74088ae6c.
+
+## 25 Eylül — Header WhatsApp sadeleştirme
+Header içinde tek WhatsApp: ana nav “WhatsApp’tan Yazın” (wa.me/905307161877). Üst barda telefon tel: bağlantısı; duyuru bandında “Teklif İste”. Carousel ve panel değişmedi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d87efa01-5b80-4b36-b9f5-589513926df0.
+Önceki sürüm: cd55db25-35ba-4281-9740-ae6676a75467.
+
+## 25 Eylül — Kategori kart görselleri
+Carousel altı 4 kart: Ofis, Temizlik, Gıda ve İkram, İçecek ve Kırtasiye — verilen still-life görseller sırayla. `object-fit: contain`. Carousel değişmedi. Panel dokunulmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 38feab5e-b6ba-4914-9238-0f00a58e2692.
+Önceki sürüm: d87efa01-5b80-4b36-b9f5-589513926df0.
+
+## 25 Eylül — Sektör görselleri
+Altı sektör fotoğrafı doğru başlığa yerleştirildi (ana sayfa kartları ve `/sektorler`): Oteller/konaklama, Site ve Tesis Yönetimi, Ofisler, Hastaneler ve Klinikler, Okullar, Kafe ve Restoranlar. 4:3 kapak. Carousel ve panel değişmedi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 4c660aa6-07ec-4591-b0bf-c74eaf520314.
+Önceki sürüm: 38feab5e-b6ba-4914-9238-0f00a58e2692.
+
+## 25 Eylül — Yeni logo
+Kullanıcının stacked FR + FERRAPRO görseli şeffaf PNG olarak alındı (kaynak 1024², kırpma, kalite kayıpsız). Header’da aynı çizimden yatay kilit; footer’da stacked kilit beyaz plaka üzerinde (lacivert zemin). Favicon/apple ikon dairesel FR. Ferranoi paneline dokunulmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 7493506d-2ba1-471b-810e-35115e0e74be.
+Önceki sürüm: 4c660aa6-07ec-4591-b0bf-c74eaf520314.
+
+## 25 Eylül — Neden FerraPro görseli
+Ana sayfa altındaki “Neden FerraPro” ikon kartları, verilen 1024×341 grafikle değiştirildi. Büyütme yok (`max-width: 1024px`, native ölçü). Carousel, kategori ve sektör görsellerine dokunulmadı. Panel değişmedi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b519a9ff-73e4-4b90-a6d1-aff7c24085cb.
+Önceki sürüm: 7493506d-2ba1-471b-810e-35115e0e74be.
+
+## 25 Eylül — Yeni ana kategoriler
+Ürünler menüsü 7 grup: Temizlik Kağıtları, Sıvı Temizlik Ürünleri, Aparat ve Ekipmanlar, Kırtasiye ve Ofis Ürünleri, Sarf ve Ambalaj Ürünleri, Gıda, Bilgisayar Sarf Ürünleri. Son 4 grup Canva ağacında boş alt grupla açıldı; 157 mevcut ürün ve 11 alt grup değişmedi. Panel (Ferranoi) dokunulmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 6b0483c6-d6c0-4a27-98db-ad31f9644265.
+Önceki sürüm: b519a9ff-73e4-4b90-a6d1-aff7c24085cb.
+
+## 25 Eylül — İlk ürün fotoğrafı (p-001)
+Fotoselli Havlu Kağıdı (Espiga, 21 cm, 6'lı) kategori still-life yerine gerçek paket fotoğrafı. `gorselTuru: urun`; kartta “Kategori görseli” etiketi yok. Diğer 156 ürün aynı. Panel kimliği değişmedi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2f1fc4aa-ecb0-4993-abc0-d13ada154d65.
+Önceki sürüm: 6b0483c6-d6c0-4a27-98db-ad31f9644265.
+
+## 25 Eylül — Paket fotoğrafı daireye kesilmez
+Ürün fotoğrafı kare stüdyo karesinde tam paket; daire overlay kırpılmaz. Toplu foto eşleştirme kabul (paket yazısı / dosya adı).
+
+### Yayın tamamlandı
+Cloudflare sürümü: 00436631-b2bc-46e5-88e7-d4e9416b5e5b.
+Önceki sürüm: 2f1fc4aa-ecb0-4993-abc0-d13ada154d65.
+
+## 25 Eylül — p-002 İçten Çekmeli Havlu fotoğrafı
+Espiga İçten Çekmeli Havlu (6'lı) gerçek paket görseli. Daire stüdyo diski, paket kesik değil.
+
+### Yayın tamamlandı
+Cloudflare sürümü: dadb647c-1ce3-40b5-8444-778f74d89142.
+Önceki sürüm: 00436631-b2bc-46e5-88e7-d4e9416b5e5b.
+
+## 25 Eylül — Havlu alt grubu paket fotoğrafları
+p-003..p-007: Espiga Z 100/200, Bellino 24'lü, Solo ve Selpak dev rulo. Kart kromu yok, daire stüdyo diski.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 097e1dd8-f95d-4e63-8724-c2147a07c194.
+Önceki sürüm: dadb647c-1ce3-40b5-8444-778f74d89142.
+
+## 25 Eylül — Havlu ve Peçeteler grup görseli
+Alt grup kartı verilen daire still-life. Temizlik Kağıtları ana dairesi (daire-hijyen) değişmedi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 11205abb-8893-427a-9dba-43b9fb869515.
+Önceki sürüm: 097e1dd8-f95d-4e63-8724-c2147a07c194.
+
+## 25 Eylül — Islak Havlu ve Tuvalet Kağıdı alt görselleri
+Islak Havlular ve Tuvalet Kağıtları alt kartları verilen daire still-life. Paketi olmayan ürünlerde kategori görseli de bu daireler.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 8102db0b-aad0-4f39-bfaf-6bb808702ff6.
+Önceki sürüm: 11205abb-8893-427a-9dba-43b9fb869515.
+
+## 25 Eylül — Temizlik Kağıtları ana daire
+Hijyen ana grup dairesi yeni mermer still-life. Alt grup görselleri aynı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 415ab3a7-bd4e-4c34-ad13-6b96b08454ef.
+Önceki sürüm: 8102db0b-aad0-4f39-bfaf-6bb808702ff6.
+
+## 25 Eylül — Kayar menü ana daireler
+Sıvı, aparat, kırtasiye, ambalaj, gıda daireleri yeni still-life. Hijyen önceki mermer daire. PC görseli henüz yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2f0b4fab-29a0-4ea6-a797-e2d099099641.
+Önceki sürüm: 415ab3a7-bd4e-4c34-ad13-6b96b08454ef.
+
+## 25 Eylül — /yonetim şifre
+ferrapro.com/yonetim şifre kapısı (2112, cookie). catalog.json 401. Ferranoi paneli değişmedi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: f6dc0026-7279-419f-b64d-6294347ebe4d.
+Önceki sürüm: 2f0b4fab-29a0-4ea6-a797-e2d099099641.
+
+## 26 Eylül — Yeni kategori kodları
+Kullanıcı 6 ana grubu ve A1–F5 altlarını verdi. Kayar menü kalktı; sabit 6 daire, hover ile alt grup ve ürün listesi.
+- A Temizlik Kağıt ürünleri: A1 Havlu ve Peçeteler, A2 Islak Havlular, A3 Tuvalet Kağıtları
+- B Sıvı Temizlik Ürünleri: B1 Endüstriyel, B2 Genel
+- C Aparatlar ve Ekipmanlar: C1 Havlu aparatları, C2 Sabun/köpük aparatları, C3 Çöp kovaları, C4 Mop aparatları (boş)
+- D Temizlik Sarf Ürünleri: D1 Çöp poşetleri, D2 Sarf malzemeleri, D3 Kullan at
+- E Gıda ve Atıştırmalıklar: E1–E4 henüz ürün yok
+- F Kırtasiye ve Ofis Sarf: F1–F5 henüz ürün yok (eski Ambalaj→F4, PC→F5)
+Eski `/urunler?g=Hijyen` ve slug altlar yönlenir. Görseller şimdilik mevcut daireler. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ed6125b8-9c63-4e4e-bdff-6dc1cc22dcec.
+Önceki sürüm: f6dc0026-7279-419f-b64d-6294347ebe4d.
+
+## 26 Eylül — Ürün listesi adları
+Hover ve kart başlığı verdiğiniz ad + marka/ölçü/ambalaj ayrımını gösterir. Domestos Çamaşır Suyu 750 mililitre ve 3,2 litre. Çam kokulu adı kaldırıldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d478ae8f-31fb-4756-b4f0-28374f0ba35e.
+Önceki sürüm: ed6125b8-9c63-4e4e-bdff-6dc1cc22dcec.
+
+## 26 Eylül — Ad ve ölçü standardı
+Liste adı: Marka + ürün,ölçü. Örnek: Domestos Çamaşır Suyu,750ML. Marka başa alındı. İlk harfler büyük. Çıplak rakamlara birim: 4→4Lt, 2,5→2,5Lt, 400→400ML. mililitre→ML, litre→Lt, santimetre→Cm, kilogram→Kg. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 191a00ef-02ec-4942-996d-00cae6446d18.
+Önceki sürüm: d478ae8f-31fb-4756-b4f0-28374f0ba35e.
+
+## 26 Eylül — Çay ve şeker
+E1 Çay ve Şekerler: 19 ürün (Doğuş, Lipton, Çaykur, Balküpü, Irmak). Ad kuralı aynı: marka başta, 100'lü / 40Gr / 1Kg / 125Gr / 5Kg. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 75f26468-8bf6-480e-a79b-3a4f9b70d9ec.
+Önceki sürüm: 191a00ef-02ec-4942-996d-00cae6446d18.
+
+## 26 Eylül — Kahve ve içecek
+E2 Kahve: 12 ürün (Nescafe, Cafemate, Tchibo, Mehmet Efendi). E3 İçecek: 16 ürün (soda, kola, ice tea, enerji, meyve suyu, süt). Ad kuralı aynı: 900Gr, 250ML, 24'lü, 72'li. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ca1fb7ba-634d-401b-8a90-8474400ade73.
+Önceki sürüm: 75f26468-8bf6-480e-a79b-3a4f9b70d9ec.
+
+## 26 Eylül — Su
+E3’e Sırmakeş Su,0,5Lt 12'li ve Bardak Su,200ML 12'li eklendi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d0aac3df-efa5-41aa-8c3b-56ae58542fed.
+Önceki sürüm: ca1fb7ba-634d-401b-8a90-8474400ade73.
+
+## 26 Eylül — Atıştırmalık
+E4 Atıştırmalıklar: 15 ürün (Ülker, Eti, Fellas). 30Gr 24'lü, 12'li bar paketleri.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b41f0a97-cecb-490b-b758-4fdf17fab423.
+Önceki sürüm: d0aac3df-efa5-41aa-8c3b-56ae58542fed.
+
+## 26 Eylül — Atıştırmalık paket
+Çubuk Kraker 36'lı, Topkek 24'lü, Browni 20'li, Lifalif 12'li.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 6d8ddbf4-ad63-4b57-9673-d2db05d93770.
+Önceki sürüm: b41f0a97-cecb-490b-b758-4fdf17fab423.
+
+## 26 Eylül — Kalem
+F1 Kalem ve Yazı Gereçleri: 22 ürün (Pensan 50'li üç renk, BIC, Edding, Noki, Pilot, Faber-Castell, kurşun/kopya).
+
+### Yayın tamamlandı
+Cloudflare sürümü: 5d4d3b4f-14bf-4cad-a75e-d111b69aab77.
+Önceki sürüm: 6d8ddbf4-ad63-4b57-9673-d2db05d93770.
+
+## 26 Eylül — Dosyalama
+F3 Dosya ve Arşivleme: 16 ürün (klasör, Noki/Leitz poşet, sekreterlik, separatör, sunum/imza dosyası).
+
+### Yayın tamamlandı
+Cloudflare sürümü: 1a53d75f-7784-427d-adc4-fa7ec612fd98.
+Önceki sürüm: 5d4d3b4f-14bf-4cad-a75e-d111b69aab77.
+
+## 26 Eylül — Kırtasiye sıfırlandı
+F grubu ürünler silindi (38 satır). F1–F5 kategorileri boş duruyor; yeni bayi listesiyle yeniden yazılacak.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 4633b88f-ba5f-487a-8053-99b504903cec.
+Önceki sürüm: 1a53d75f-7784-427d-adc4-fa7ec612fd98.
+
+## 26 Eylül — Kırtasiye test ürünü
+MAS 0937 Omega Kıskaç,51Mm Çelik 12'li F2 Masaüstü. Bayi görseli ürün fotoğrafı olarak alındı; stok/teslimat yazılmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ab132fd6-0e7b-483c-8dc2-975d0955a6b3.
+Önceki sürüm: 4633b88f-ba5f-487a-8053-99b504903cec.
+
+## 26 Eylül — Kıskaç görsel/ad
+Bayi kodu (0937) addan çıkarıldı. Görsel native boyutta lossless webp; kartta küçük gösteriliyor, büyütme yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ad0c168a-d10c-4556-b10e-036a113e4125.
+Önceki sürüm: ab132fd6-0e7b-483c-8dc2-975d0955a6b3.
+
+## 26 Eylül — Masaüstü 4 ürün
+MAS Toplu İğne, Harita Çivisi; Rio Silindirik Harita Çivisi; MAS Omega Kıskaç 32Mm. 51Mm kıskaç zaten vardı, tekrarlanmadı. Kod ve min. sipariş yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 86a61120-3dd4-4b46-8ff7-626dfed5410a.
+Önceki sürüm: ad0c168a-d10c-4556-b10e-036a113e4125.
+
+## 26 Eylül — Fotoğraf büyütme ve bant/ajanda
+Ürün fotoğrafına tıklayınca native görsel en fazla 2,5× açılıyor (640’a zorlanmıyor). F2’ye Panfix/Noki bant, MAS kesici ve Liz ajanda; F4’e MAS koli bandı eklendi. Kod ve min. sipariş yok. npm run check: 238 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 1001f610-9e9c-4495-961c-868420cc73df.
+Önceki sürüm: 178a2853-1c18-4b8b-9ec5-6dfd64077ae6.
+
+## 26 Eylül — Görsel kalite
+Bayi liste karesi büyütülemez. MAS Omega Kıskaç ve Escrito imha makinesi üretici/stüdyo fotoğrafıyla değiştirildi; Leitz laminasyon kutu görseli eklendi. Gıpta ajanda, Sinerji kalem, telli/halkalı dosyalar da katalogda. npm run check: 251 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: f7fb3415-f45e-47c3-9e08-02b1a9df73b3.
+Önceki sürüm: 1001f610-9e9c-4495-961c-868420cc73df.
+
+## 26 Eylül — Kırtasiye stüdyo fotoğrafları
+Bayi liste kareleri büyütülemez; aynı ürünlerin üretici/stüdyo paketi bulundu (Ofix, Ofma, Garantiofis, Yıldız Büro, OfiseAl, ofisostim, Garboly). Yanlış yıl/SKU ve Avansas filigranı atıldı. Gıpta 102-ECK 2026 ve Noki 4 halkalı için doğrulanmış net stüdyo yok; bayi karesi duruyor. npm run check: 251 satır.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b1dca412-f0f1-4ebb-840a-653bf32b0e16.
+Önceki sürüm: f7fb3415-f45e-47c3-9e08-02b1a9df73b3.
+
+## 26 Eylül — F1 Kalem ve Yazı Gereçleri
+Pensan / BIC / Pilot / Faber-Castell / Edding stüdyo paket görselleri (Ofix CDN). Tükenmez renkleri, Pilot roller, kurşun HB/2B, versatil, kalem ucu 0,7Mm 2B, Edding tahta dört renk, asetat (Edding 3000 ve Faber silgili), fosforlu renkleri. MAS kalem üretmiyor, eklenmedi. İstenen markalarda doğrulanmış dolma kalem stüdyosu yok, eklenmedi. Bayi sitesi taranmadı. Fiyat yok. npm run check: 283 satır, F1=33.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 9c9c2c24-7387-4fe1-a50a-05d4fc3e4d37.
+Önceki sürüm: b1dca412-f0f1-4ebb-840a-653bf32b0e16.
+
+## 26 Eylül — F2 Masaüstü zımba ve gereçler
+MAS zımba No:10 / 24/6 ve uyumlu tel, delgeç, makas, metal kalemlik; Leitz tel sökücü. Stüdyo ürün çekimi (Ofma/Ofix). Kutu/kod karesi kullanılmadı. Fiyat yok. npm run check: 291 satır, F2=27.
+
+### Yayın tamamlandı
+Cloudflare sürümü: af37957e-6912-47b5-8894-55f6b6fb62f3.
+Önceki sürüm: 9c9c2c24-7387-4fe1-a50a-05d4fc3e4d37.
+
+## 26 Eylül — F2 Istampa
+MAS mürekkepsiz ıstampa 8×9 ve 10×13, açık stüdyo çekimi. MAS mürekkep şişesi görseli 181px kaldı, eklenmedi. npm run check: 293 satır, F2=29.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2400911a-ee72-4748-9782-46b2b7880136.
+Önceki sürüm: af37957e-6912-47b5-8894-55f6b6fb62f3.
+
+## 26 Eylül — Kartvizit alternatifleri
+Ayfer Adatepe için üç 85×55 ön/arka taslak: site FR logosu, ferrapro.com karekodu, 0530 716 18 77 ve info@ferrapro.com. Eski altıgen R markası kullanılmadı. Önizleme: /kartvizit/onizleme.html
+
+### Yayın tamamlandı
+Cloudflare sürümü: 5ac2bd16-2604-40c5-bcc7-ceaaa0bc9f5c.
+Önceki sürüm: 2400911a-ee72-4748-9782-46b2b7880136.
+
+## 26 Eylül — Kartvizit titanyum gri
+Ortadaki tekrarlayan FR kaldırıldı. 55×85 mm fırçalı titanyum; ön yüzde gerçek logo plakası, arka yüzde ferrapro.com karekodu.
+
+### Yayın tamamlandı
+Cloudflare sürümü: cda12121-2664-4543-abda-d36a04f7415b.
+Önceki sürüm: 670b240c-8bb9-47e1-bb3b-835bbef28ff2.
+
+## 26 Eylül — F3 Dosya ve Arşivleme
+Klasör (Noki geniş/dar, Esselte geniş/dar), çıtçıtlı, sekreterlik (Kraf kapaksız, Esselte kapaklı), Noki separatör A-Z / 1-31 / renkli, sunum 40 yaprak, Noki eco poşet, Esselte sıkıştırmalı. Dilman imza dosyası kaldırıldı. Stüdyo çekimi (Ofix/Ofma). Yarım kapak stüdyosu yok, eklenmedi. Kod ve fiyat yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ba185e03-952a-47cb-8699-83166305d305.
+Önceki sürüm: c4af4274-ae66-419c-bd91-81c3feed8fac.
+
+## 26 Eylül — F3 üretici görselleri
+Noki F3 görselleri noki.com.tr ürün sayfalarından alındı. Esselte sıkıştırmalı, telli mavi, klasör ve Leitz poşet esselte.com / leitz.com. Noki 4 halkalı resmi sitede yok, 2 halkalı ile değiştirildi; separatör 1-31 resmi sitede 1-20. Kraf sitesi bakımda; Kraf sekreterlik ve bazı Esselte/Leitz telli renkleri hâlâ bayi karesi. Fiyat yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: f44c7da8-e926-4fe3-8ee7-00e6d513158a.
+Önceki sürüm: ba185e03-952a-47cb-8699-83166305d305.
+
+## 26 Eylül — F3 çapraz marka ve ofis genişletme
+Kraf sekreterlik ve resmi görseli olmayan Esselte/Leitz telli-halkalı satırlar çıkarıldı. Yerine Noki (kapaklı sekreterlik, lastikli, çift sıkıştırmalı, eco telli kırmızı/siyah, 2 halkalı siyah, ay ayraç, HD poşet), Leitz (kutu dosya, körüklü, evrak çantası, arşiv kutusu) ve Esselte Recycle poşet eklendi. Görseller noki.com.tr / leitz.com / esselte.com. Neon asorti lastikli setler eklenmedi. F3=28, katalog=312. Fiyat ve ürün kodu yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d0beddb2-8d82-4abf-87a1-241837233215.
+Önceki sürüm: f44c7da8-e926-4fe3-8ee7-00e6d513158a.
+
+## 26 Eylül — A1 Havlu ve Peçete üretici görselleri
+A1 pazaryeri kırpımları Başak Kağıt (Espiga), selpak.com.tr ve solo.com.tr görselleriyle değiştirildi. Bellino’nun üretici sitesi yok; ev tipi rulo Selpak 12’li resmi paketle çaprazlandı. Espiga Z 150’li, dispenser peçete ve Solo peçete 100’lü eklendi. A1=10, katalog=315. Fiyat ve ürün kodu yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: cd8c194a-05c7-4a17-a081-e7327d9a8c2b.
+Önceki sürüm: d0beddb2-8d82-4abf-87a1-241837233215.
+
+## 26 Eylül — A1 Belinno ev tipi / endüstriyel ayrımı
+Bellino slotu Aktül Belinno Deluxe ev tipi 6’lı resmi paketle düzeltildi. Selpak 12’li ev tipi korundu. Belinno Professional hareketli havlu, Z 200’lü paket ve dispenser peçete eklendi (endüstriyel). Espiga koli/shrink endüstriyel, Selpak/Solo market paketi ev tipi. A1=14, katalog=319.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 51b86105-c8aa-4c53-ab4b-d7885087b649.
+Önceki sürüm: cd8c194a-05c7-4a17-a081-e7327d9a8c2b.
+
+## 26 Eylül — A2 Islak Havlular
+Kategori diski kaldırıldı; üretici paket görselleri. Sleepy kişisel bakım / Easy Clean yüzey / süper mutfak; Solo ıslak mendil (okyanus, zeytinyağlı) ve yüzey (beyaz sabun, AquaBlock); Polente Extra Soft 100’lü. Selpak resmi sitede ıslak havlu yok, Komili sitesi 500 ve Soft SKU bebek; A2’ye alınmadı. Familia, DeepFresh, Freshmaker resmi paketleriyle eklendi. A2=13, katalog=328. Alt grup dairesi marka paket karışımı (Solo, Sleepy, Polente, DeepFresh, Familia, Freshmaker). A grubu ana fotoğrafı A1+A2 marka paket karışımı (Espiga, Selpak, Solo, Polente, Sleepy). Grup açılınca üst daireler A1/A2/A3 (148px); Islak Havlular karışımı orada. Havlu ve Peçeteler dairesi Espiga, Selpak, Solo, Belinno paket karışımı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: e0a2c6f2-dcd3-4931-a7f2-92053a0a3f09.
+Önceki sürüm: 333943c0-bb51-4c18-a08b-a5320e03d1cd.
+
+## 26 Eylül — A3 Tuvalet Kağıtları ve B Sıvı Temizlik
+A popüler markalara Polente, DeepFresh, Freshmaker eklendi (Belinno A1’den duruyor). A3=15, tümü üretici paket görseli: Espiga jumbo/içten çekmeli/Extra Soft, Selpak 12/Deluxe/Extra/Premium, Solo Ultra 12/48, Polente compact/mini jumbo, Familia Saf Su/Plus, Papia 32. A3 dairesi bu paketlerin karışımı. Belinno tuvalet tekil paket yok, eklenmedi.
+
+B popüler: Yumoş, Vernel, Ozopak, Fairy, Domestos, Cif, Pril, Finish, Asperox, Porçöz. B2=19; 12 satır üretici paketi (Cif krem/Power & Shine, Domestos 750/püskürtme, Pril Ultra Güç, Finish 50/parlatıcı/tuz, Asperox Sarı Güç, Yumoş Sakura/Nergis). B1 Ozopak 5Kg gül yüzey ve limon bulaşık bidonları bravodetergent.com (Tempak). Yumoş Professional 5Lt Yasemin ve Tekstil Parfümü Lilyum unileverprofessional.com; Vernel 5Lt Hassas & Yumuşak Henkel B2B. B1 dairesi dört bidon. Katalog=337.
+
+Ozopak derin tarama (bravodetergent.com 38 ürün + medya kütüphanesi, tempak.com.tr arama ve ürün CPT): resmi Ozopak paket fotoğrafı yalnızca 5Kg gül yüzey ve 5Kg limon bulaşık. Ultra çamaşır suyu / beyaz sabun yüzey satırları Bravo logosu yer tutucu. 20Kg, el sabunu, cam, kireç, yağ çözücü, arap sabunu, köpük, ahşap ve bulaşık makinesi kimyasalları için üretici paket yok. Perakende karesi alınmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: b0ed6076-d6be-4dd7-8a95-c4ac7f269d27.
+Önceki sürüm: 4054f8bd-a1d0-41c9-b4ff-4d870ac8fff8.
+
+## 27 Eylül — B2 Genel Temizlik üretici paketleri (tekrar tarama)
+Henkel ürün görselleri portalı, Asperox CDN, Cif/Domestos resmi katalog, Porçöz ürün sayfaları ve Bref paketi bulundu. B2=19; 18 satır üretici paketi. Pril 4Kg Limon henkelurungorselleri.com; Asperox Mavi Güç cdn.asperox.com.tr; Cif krem 750ML cif.com.tr (500/750/1500 aynı resmi packshot); Domestos 3,2Lt Dağ Esintisi domestos.com (3,5kg boyutu aynı ürün ailesi); Porçöz Jel Lavabo Açıcı 1Lt porcoz.com; Bred satırı resmi Bref 2’li Rezervuar Küpleri Okyanus packshot ile düzeltildi. B2 dairesi bu paketlerin karışımı.
+
+Bingo 2,5Lt: bingo.com.tr 404; Hayat kurumsal sitede ürün packshot yok. Wayback’te ürün listesi HTML’i var (Fresh Mutlu Yuvam 2,5Lt vb.) ama paket PNG dosyaları arşivde 404. Perakende karesi alınmadı; p-048 kategori görseli duruyor.
+
+Ozopak bu turda dokunulmadı (kullanıcı bakacak).
+
+Katalog=337. Fiyat ve ürün kodu yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2b7b8e8d-7004-428b-b7f6-9b0d959710c7.
+Önceki sürüm: b0ed6076-d6be-4dd7-8a95-c4ac7f269d27.
+
+## 27 Eylül — Kullanıcı packshotları ve eşit görsel kare
+Kartlarda ürün fotoğrafı 112px’e sıkışıyordu; tüm ürün kareleri aynı oranla dolduruluyor. Kullanıcının verdiği görseller: Ozopak sıvı el sabunu 5Kg, Ozopak kıvamlı çamaşır suyu 5Kg, Domestos 3,2Lt bidon (Çam Ferahlığı), Pril 4Kg Limon, Bingo Fresh Masal 2,5Lt. Mevcut üretici paketleri de aynı 640 kare / %88 doldurma ile hizalandı. B2=19 tümü ürün görseli. B1’e sabun ve çamaşır suyu eklendi.
+
+Katalog=337. Fiyat ve ürün kodu yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 97907aef-c84b-4c45-89cb-4fb7ee3a2335.
+Önceki sürüm: 2b7b8e8d-7004-428b-b7f6-9b0d959710c7.
+
+## 27 Eylül — Ozopak tamamlayıcı görseller ve küçük kartlar
+B1’de resmi paketi olmayan Ozopak satırları mevcut bidon fotoğraflarından türetildi: 20Kg aynı ürün ailesinin 5Kg görseli; cam / kireç / yağ / arap sabunu / ahşap / makine kimyasalları renk ayrımı + ürün adı. Köpük sabun, sıvı sabun görselini kullanır. Ürün kartı fotoğrafı ~92px; tıklanınca büyür. Ozopak B1=20, tümü ürün görseli.
+
+Katalog=337. Fiyat ve ürün kodu yok.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 8bed3f8e-e112-4f80-8cfc-cb6bcf79be45.
+Önceki sürüm: 97907aef-c84b-4c45-89cb-4fb7ee3a2335.
+
+## 27 Eylül — C Aparat ve ekipman daireleri + Palex ürün görselleri
+C grubu sırası: ana daire, alt daireler, sonra ürün. Ana daire Palex gold fotoselli + Z havlu + mavi sabun + jumbo gold + Vialli krom + Palex pedal + Parex Tornado karışımı. Alt daireler: C1 havlu aparatları, C2 sabun/köpük (Palex + Vialli), C3 Palex krom kova ailesi, C4 Parex Extra Power + Tornado (C4 hâlâ ürünsüz).
+
+C1–C3 = 30 satır, Palex resmi görsel, gorselTuru=urun. C4 ürün yok. Vileda.com.tr 403; Flosoft/Çetin Plastik görselsiz placeholder. Palex klozet örtüsü resmi bulunamadı (Z peçete kutusuna en yakın duvar kutusu). Ev tipi metal için Palex ahşap görünümlü içten çekmeli; 120/240/800Lt için Palex bahçe / geri dönüşüm istasyonu. Palex pedal/sallanır kovalar krom; plastik gövde resmi yok.
+
+Katalog=337. Fiyat ve ürün kodu yok. site.js v=113.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 67e36f5f-3558-4d98-9d5d-67c63d5c08cc.
+Önceki sürüm: 8bed3f8e-e112-4f80-8cfc-cb6bcf79be45.
+
+## 27 Eylül — Yönetim fiyatları + C4 mop + D/E görseller
+Yönetim `/yonetim` ürün listesini her açılışta `katalog.json` üzerinden kurar. Ürün eklenince/silinince/güncellenince sayfa kendiliğinden aynı içeriği gösterir. Görsel yok. Birim, maliyet, liste, ideal satış, dip satış ve kârlılık % tarayıcıda saklanır; kamu kataloguna fiyat yazılmaz.
+
+C4 mop: 8 Parex resmi ürün (Extra Power, Tornado, Wondero, Pedallı, Twister, Clipster, yedek mop). D: Koroplast poşet/folyo/streç + Parex sünger/bez/süpürge + Ceymop mop. E: Ülker Halley ve Mehmet Efendi kahve resmi; çay/içecek şişe görselleri üretici siteden alınamadı, alt daire karışımı kullanıldı.
+
+Katalog=361. Fiyat ve ürün kodu yok. site.js v=114. Yönetim yonetim.js v=2.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 6297f474-77f7-4f55-8bea-c53934b2fc72.
+Önceki sürüm: 67e36f5f-3558-4d98-9d5d-67c63d5c08cc.
+
+## 27 Eylül — D3 Kullan At ürün görselleri
+Folyo karışım diski (daire-kullan-at.webp) tabak/çatal/hijyen kartlarına basılmıştı. D3 ürün kartları üretici fotoğrafına çekildi: Nur-Nil tabak/kase/çatal/kaşık/bıçak/pipet, Damas kraft karton tabak, Koroplast büyük boy buzdolabı poşeti, şeffaf eldiven, tela bone/kolluk, aşçı kepi, bambu kürdan. Alt daire karışımı tabak + kaşık + pipet + karton + folyo.
+
+Salata kasesi Nur-Nil resmi beyaz kase (katalogda kapaklı siyah yazıyor; siyah kapaklı üretici fotoğrafı yok). Aşçı Kepçesi satırı hijyen grubunda; görsel aşçı kepi.
+
+Katalog=361. Fiyat yok. npm run check geçti.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c5cc3d9c-ae8d-4c73-8b2f-d56bbe794fd8.
+Önceki sürüm: 6297f474-77f7-4f55-8bea-c53934b2fc72.
+
+## 27 Eylül — Komili ıslak havlu + 80/800 lt konteyner
+A2: Komili Islak Temizlik Havlusu 90'lı, kullanıcının paket görseli, 640 kare webp. C3: 800Lt metal galvaniz çöp konteyneri ve 80Lt tekerlekli plastik çöp konteyneri. Palex 800Lt kova satırları duruyor. Katalog=364. site.js v=115.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 3adb2ab5-5c51-4522-bdb1-5a1f7563b013.
+Önceki sürüm: c5cc3d9c-ae8d-4c73-8b2f-d56bbe794fd8.
+
+## 27 Eylül — MAS masa altı + plastik pedal / sallanır kova
+C3: MAS Masa Altı Çöp Kovası (tel örgü, kullanıcının görseli), markasız plastik pedallı kova ve markasız sallanır kapaklı plastik kova. Palex pedal/sallanır/masa altı satırları duruyor. Katalog=367. site.js v=115.
+
+### Yayın tamamlandı
+Cloudflare sürümü: dbf2b0fd-99d2-429d-98b7-2a06113231e2.
+Önceki sürüm: 3adb2ab5-5c51-4522-bdb1-5a1f7563b013.
+
+## 27 Eylül — C3 yanlış Palex satırları silindi
+Plastik yazıp metal görünen pedal/sallanır/pratik, lobi kovasına masa altı diyen, 120/240/800 litre yazıp sokak kovası veya geri dönüşüm üçlüsü gösteren Palex satırları kaldırıldı. Kullanıcının 80/800 konteyner, MAS masa altı, plastik pedal ve sallanır kovaları duruyor. Palex metal pedal ve Palex metal sallanır görseli ad/malzeme ile uyduğu için kaldı. Katalog=358.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 445908d6-7149-4615-811c-5051fa9d0005.
+Önceki sürüm: dbf2b0fd-99d2-429d-98b7-2a06113231e2.
+
+## 27 Eylül — MRP çöp poşeti görselleri
+MRP Marin D1 satırlarındaki Koroplast paket fotoğrafları kaldırıldı. Standart/mini boylara renkli poşet grubu, endüstriyel ve jumbo/konteyner boylara siyah rulo görseli. Koroplast satırları kendi görsellerinde kaldı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 041db389-ae79-4a27-a1b1-856b6336979b.
+Önceki sürüm: 445908d6-7149-4615-811c-5051fa9d0005.
+
+## 27 Eylül — Ceymop mop görselleri
+D2 Ceymop satırları üretici mop-grubu fotoğraflarına çekildi: Islak Mop extra ıslak, Nemli Mop extra nemli, Orlon Mop zincirdikiş orlon. 50/60/80 cm varyantları aynı aile görselini kullanıyor; CYP kodu kataloga yazılmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 7d6aac0f-8e85-45a1-acc8-1de29ddeb9a6.
+Önceki sürüm: 041db389-ae79-4a27-a1b1-856b6336979b.
+
+## 27 Eylül — Parex cam / temizlik bezi görselleri
+D2 Parex Mikrofiber Cam Bezi üretici cam bezi paket fotoğrafına alındı; temizlik bezi satırları Parex 2'li mikrofiber temizlik bezi paketine çekildi. Aynı 2'li görsel cam bezinde kullanılmıyor.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 6878ee29-626a-4866-990d-76664c456a59.
+Önceki sürüm: 7d6aac0f-8e85-45a1-acc8-1de29ddeb9a6.
+
+## 27 Eylül — Parex Ovma Teli
+D2 Bulaşık Teli satırı Ovma Teli olarak düzeltildi; mercan sünger görseli kalktı, kullanıcının 3'lü Parex Ovma Teli paket fotoğrafı eklendi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 7a04dfe9-bc11-4ec6-922d-0ba3cbc5b7c6.
+Önceki sürüm: 6878ee29-626a-4866-990d-76664c456a59.
+
+## 27 Eylül — Yer çekme aparatı görselleri
+D2 yer çekme aparatları: metal 55/75 cm alüminyum çekçek fotoğrafları, plastik satırlar beyaz plastik çekçek fotoğrafı. Metal görsel plastik satıra konmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 1516aad0-c06c-4bc6-81fb-387bfc9ab0c0.
+Önceki sürüm: 7a04dfe9-bc11-4ec6-922d-0ba3cbc5b7c6.
+
+## 27 Eylül — Parex 35 cm plastik cam sileceği
+p-075 Cam Çek-Sil Aparatı (Parex, 35Cm, Plastik) ekran bezi görselinden çıkarıldı; kullanıcının Parex Cam Sileceği paket fotoğrafı kondu. 45 cm ve metal satırlara basılmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 4c2be98b-e09e-4ec4-9fdc-ee575ca2cf5f.
+Önceki sürüm: 1516aad0-c06c-4bc6-81fb-387bfc9ab0c0.
+
+## 27 Eylül — Parex cam sileceği 24 cm
+Cam çek-sil 35/45 cm satırları kalktı. Parex Cam Sileceği iki seçenek: 24Cm plastik ve 24Cm metal. Cam peluşu duruyor. Katalog=356.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 8a00b73b-a252-4e87-b1dd-19c466f37e5e.
+Önceki sürüm: 4c2be98b-e09e-4ec4-9fdc-ee575ca2cf5f.
+
+## 27 Eylül — Ceymop cam peluşu
+Cam peluşu iki seçenek (35Cm ve 45Cm), marka Ceymop, ortak üretici peluş görseli. Parex ekran bezi fotoğrafı kalktı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 9c5fa098-a83f-4f55-8553-5bf55bfd6a6a.
+Önceki sürüm: 8a00b73b-a252-4e87-b1dd-19c466f37e5e.
+
+## 27 Eylül — Parex plastik klozet fırçası
+D2 plastik klozet fırçası Parex markası ve WC fırça görseliyle güncellendi. Metal klozet fırçası satırına basılmadı.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 0efe4a5e-e412-4bd3-8474-8f58ded89a1e.
+Önceki sürüm: 9c5fa098-a83f-4f55-8553-5bf55bfd6a6a.
+
+## 27 Eylül — Ceymop klozet fırçası + eldiven görselleri
+D2'ye Ceymop plastik klozet fırçası eklendi. Nitril ve pudralı muayene eldivenlerine ürün görseli kondu. Parex plastik fırça duruyor. Katalog=357.
+
+### Yayın tamamlandı
+Cloudflare sürümü: c0e02c27-0b89-4a73-965e-d04b5e0b4ea4.
+Önceki sürüm: 0efe4a5e-e412-4bd3-8474-8f58ded89a1e.
+
+## 27 Eylül — Ceymop çift kovalı temizlik arabası
+D2 Çift Kovalı Temizlik Arabası Ceymop markası ve üretici görseliyle güncellendi.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 981ca1da-0d54-4d75-8498-1811a3dbcc05.
+Önceki sürüm: c0e02c27-0b89-4a73-965e-d04b5e0b4ea4.
+
+## 27 Eylül — Ceymop kat arabası ve tek kovalı set
+D2: Ceymop plastik kat arabası, krom kat arabası ve tek kovalı temizlik seti. Çift kovalı satır duruyor. Katalog=359.
+
+### Yayın tamamlandı
+Cloudflare sürümü: ee1bd1a1-a1bb-4a46-9ad7-0275964b7d3f.
+Önceki sürüm: 981ca1da-0d54-4d75-8498-1811a3dbcc05.
+
+## 27 Eylül — Oto fırçası ve D2 temizlik
+Parex Mega Oto Fırçası 20 cm görseli kondu. Metal klozet fırçası, pudrasız muayene eldiveni ve temizlik kovası silindi. Katalog=356.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 47d4b6f5-9a88-4c0e-ad5d-8f9ec5281397.
+Önceki sürüm: ee1bd1a1-a1bb-4a46-9ad7-0275964b7d3f.
+
+## 27 Eylül — Parex pedallı ve Extra Power
+Parex Pedallı Otomatik Temizlik Seti ve Extra Power Temizlik Seti görselleri üretici fotoğraflarıyla yenilendi. Katalog=356.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 0b4565ba-48c3-4987-9de5-0f3499114986.
+Önceki sürüm: 47d4b6f5-9a88-4c0e-ad5d-8f9ec5281397.
+
+## 27 Eylül — Kullan at kaseler
+Salata kasesi markasız 25'li olarak güncellendi. Siyah kapaklı ve kraft çorba kaseleri 16 oz / 25'li olarak ayrıldı. Katalog=357.
+
+### Yayın tamamlandı
+Cloudflare sürümü: d4605634-5e68-4305-97ea-9d15e44721cd.
+Önceki sürüm: 0b4565ba-48c3-4987-9de5-0f3499114986.
+
+## 27 Eylül — Kullan at tabaklar
+19-21-23 cm plastik tabak tek üründe birleştirildi. Kağıt tabak 17-21-23 cm olarak güncellendi. Katalog=353.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 089385bd-76f1-4b86-9412-26ce56ce11e2.
+Önceki sürüm: d4605634-5e68-4305-97ea-9d15e44721cd.
+
+## 27 Eylül — Aşçı kepi
+Aşçı Kepçesi adı Aşçı Kepi olarak düzeltildi. Katalog=353.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 6416b213-d60d-4f45-9706-21a2d2642f30.
+Önceki sürüm: 089385bd-76f1-4b86-9412-26ce56ce11e2.
+
+## 27 Eylül — Parex mutfak yardımcıları
+Buzdolabı poşeti küçük/orta, streç film 15/33 m ve alüminyum folyo 8/15 m Parex üretici görselleriyle güncellendi. Katalog=352.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 2b701218-571b-47e2-a394-ce7b1422d8e5.
+Önceki sürüm: 6416b213-d60d-4f45-9706-21a2d2642f30.
+
+## 27 Eylül — Doğuş çay görselleri
+Doğuş Earl Grey demlik, Karadeniz demlik/bardak ve Karadeniz 1 kg dökme üretici görselleriyle güncellendi. Katalog=350.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 481424f1-4a73-4ef7-804d-5f833aaeb7ef.
+Önceki sürüm: 2b701218-571b-47e2-a394-ce7b1422d8e5.
+
+## 27 Eylül — Doğuş jumbo demlik
+Doğuş Jumbo Demlik Çay görseli 25x40 g poşet fotoğrafıyla güncellendi. Katalog=350.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 0ebc3242-b2a5-4965-9b0e-5eeaf51c2a74.
+Önceki sürüm: 481424f1-4a73-4ef7-804d-5f833aaeb7ef.
+
+## 27 Eylül — Çaykur çay görselleri
+Çaykur Turist, Filiz, Tomurcuk ve Tiryaki görselleri güncellendi. Katalog=350.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 17da1b54-0024-48a5-9d23-157baedd0c11.
+Önceki sürüm: 0ebc3242-b2a5-4965-9b0e-5eeaf51c2a74.
+
+## 27 Eylül — Lipton çay görselleri
+Lipton demlik, bardak ve Earl Grey 100'lü görselleri güncellendi. Katalog=350.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 1dc63e21-6a8c-4aca-b572-1c67be4f4504.
+Önceki sürüm: 17da1b54-0024-48a5-9d23-157baedd0c11.
+
+## 27 Eylül — Şeker görselleri
+Balküpü 1/5 kg küp, Irmak 1 kg küp, tek sargılı ve stick şeker görselleri güncellendi. Katalog=350.
+
+### Yayın tamamlandı
+Cloudflare sürümü: 5e34c7cc-b799-4a07-8fc3-1da7af06ffef.
+Önceki sürüm: 1dc63e21-6a8c-4aca-b572-1c67be4f4504.
+
+## 27 Eylül — Çay ve şekerler daire
+Çay ve şekerler grup görseli kahve karışımından çıkarıldı; Çaykur, Lipton, Doğuş ve Balküpü ürünleriyle yenilendi. Katalog=350.
+
+### Yayın tamamlandı
+Cloudflare sürümü: fb3598a6-8d1d-4177-b0f8-a875ff9bc2d4.
+Önceki sürüm: 5e34c7cc-b799-4a07-8fc3-1da7af06ffef.
+
+## 27 Eylül — Kahve grubu üretici görselleri
+NESCAFÉ Gold/Classic, Coffee Mate krema, Tchibo çekirdek/filtre ve Mehmet Efendi Türk/çekirdek/filtre ürünleri üretici sitelerinden güncellendi. Cafemate yazımı Coffee Mate olarak düzeltildi. Katalog=354.
+
+### Yayın tamamlandı
+Cloudflare sürümü: caf75aa8-32f2-4693-89b4-63d3c88bbd5f.
+Önceki sürüm: fb3598a6-8d1d-4177-b0f8-a875ff9bc2d4.
 
 
 

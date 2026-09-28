@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /panel
+Disallow: /yonetim
 Disallow: /api/
 
 Sitemap: https://ferrapro.com/sitemap.xml

@@ -15,6 +15,7 @@ const PAGES = {
   "/kvkk": "kvkk.html",
   "/sektorler": "sektorler.html",
   "/iletisim": "iletisim.html",
+  "/yonetim": "yonetim/index.html",
 };
 
 const REDIRECTS = {

@@ -27,9 +27,24 @@ const accepted = await send('ferrapro.com','/api/teklif',post(quote));
 assert.equal(accepted.status,200);
 assert.deepEqual(await accepted.json(),{ok:true});
 assert.equal(JSON.parse(memory.get('state')).vitrin_teklifler.length,1);
-for (const path of ['/api/state','/api/catalog','/panel/']) {
+for (const path of ['/api/state','/api/catalog']) {
   assert.equal((await send('ferrapro.com',path)).status,404);
 }
+assert.equal((await send('ferrapro.com','/panel/')).status,302);
+assert.equal((await send('ferrapro.com','/yonetim/catalog.json')).status,401);
+const yonetimLogin = await send('ferrapro.com','/yonetim/');
+assert.equal(yonetimLogin.status,200);
+assert.match(await yonetimLogin.text(),/Şifre/);
+env.YONETIM_PASSWORD = '2112';
+const yonetimBad = await send('ferrapro.com','/yonetim/giris',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:'password=0000'});
+assert.equal(yonetimBad.status,401);
+const yonetimOk = await send('ferrapro.com','/yonetim/giris',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:'password=2112'});
+assert.equal(yonetimOk.status,302);
+const yonetimCookie = yonetimOk.headers.get('set-cookie');
+assert.match(yonetimCookie,/HttpOnly/);
+assert.match(yonetimCookie,/fp_yonetim=/);
+const yonetimIn = await send('ferrapro.com','/yonetim/catalog.json',{headers:{cookie:yonetimCookie.split(';')[0]}});
+assert.equal(yonetimIn.status,200);
 assert.equal((await send('tedarik.ferranoi.com','/api/state')).status,401);
 assert.equal((await send('tedarik.ferranoi.com','/api/login',post({username:'selcuk',password:'1234'}))).status,401);
 const login = await send('tedarik.ferranoi.com','/api/login',post({username:'ramazan',password:env.RAMAZAN_PASSWORD}));

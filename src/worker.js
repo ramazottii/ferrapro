@@ -26,6 +26,9 @@ function isPanelHost(host) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/yonetim" || url.pathname.startsWith("/yonetim/")) {
+      return handleYonetim(request, env, url);
+    }
     if (isVitrinHost(url.hostname)) {
       if (url.pathname === "/api/teklif" && request.method === "POST") {
         try {
@@ -34,7 +37,10 @@ export default {
           return json({ error: err.message || "Sunucu hatası" }, err.status || 500);
         }
       }
-      if (url.pathname.startsWith("/panel") || url.pathname.startsWith("/api/")) {
+      if (url.pathname.startsWith("/panel")) {
+        return Response.redirect("https://tedarik.ferranoi.com/panel/", 302);
+      }
+      if (url.pathname.startsWith("/api/") && url.pathname !== "/api/teklif") {
         return new Response("Not found", { status: 404 });
       }
       const redirects = {
@@ -65,6 +71,111 @@ export default {
     return env.ASSETS.fetch(request);
   },
 };
+
+const YONETIM_COOKIE = "fp_yonetim";
+
+function yonetimPin(env) {
+  return String(env.YONETIM_PASSWORD || "2112");
+}
+
+function readCookie(request, name) {
+  const raw = request.headers.get("cookie") || "";
+  for (const part of raw.split(";")) {
+    const i = part.indexOf("=");
+    if (i < 0) continue;
+    if (part.slice(0, i).trim() === name) return decodeURIComponent(part.slice(i + 1).trim());
+  }
+  return "";
+}
+
+function yonetimCookieHeader(token, url, clear = false) {
+  const secure = url.protocol === "https:" ? "; Secure" : "";
+  if (clear) {
+    return `${YONETIM_COOKIE}=; Path=/yonetim; Max-Age=0; HttpOnly; SameSite=Lax${secure}`;
+  }
+  return `${YONETIM_COOKIE}=${token}; Path=/yonetim; Max-Age=${SESSION_TTL}; HttpOnly; SameSite=Lax${secure}`;
+}
+
+function timingEqual(a, b) {
+  const x = String(a);
+  const y = String(b);
+  const n = Math.max(x.length, y.length);
+  let diff = x.length ^ y.length;
+  for (let i = 0; i < n; i++) diff |= (x.charCodeAt(i) || 0) ^ (y.charCodeAt(i) || 0);
+  return diff === 0;
+}
+
+function yonetimLoginPage(error) {
+  const msg = error ? `<p class="err">${error}</p>` : "";
+  return new Response(`<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Giriş · FerraPro</title>
+  <style>
+    :root { font-family: "DM Sans", system-ui, sans-serif; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; background:#F4F6F8; color:#0F172A; }
+    form { width:min(92vw,380px); background:#fff; border:1px solid #E2E8F0; border-radius:14px; padding:28px 24px; box-shadow:0 10px 30px #14223812; }
+    img { display:block; height:36px; margin:0 auto 16px; }
+    h1 { margin:0 0 6px; font-size:1.15rem; text-align:center; }
+    p { margin:0 0 16px; color:#64748B; font-size:.9rem; text-align:center; }
+    .err { color:#B91C1C; }
+    label { display:block; font-size:.8rem; font-weight:650; margin-bottom:6px; }
+    input { width:100%; box-sizing:border-box; min-height:44px; padding:10px 12px; border:1px solid #E2E8F0; border-radius:8px; font:inherit; }
+    button { margin-top:14px; width:100%; min-height:44px; border:0; border-radius:8px; background:#0F172A; color:#fff; font:inherit; font-weight:650; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <form method="post" action="/yonetim/giris">
+    <img src="/logo/ferrapro-header.png?v=1" alt="FerraPro">
+    <h1>Ürün kataloğu</h1>
+    <p>Devam etmek için şifre girin.</p>
+    ${msg}
+    <label for="password">Şifre</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+    <button type="submit">Giriş</button>
+  </form>
+</body>
+</html>`, {
+    status: error ? 401 : 200,
+    headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" },
+  });
+}
+
+async function handleYonetim(request, env, url) {
+  const pin = yonetimPin(env);
+  const token = await hmac(env.SESSION_SECRET || pin, "yonetim|" + pin);
+  const path = url.pathname.replace(/\/+$/, "") || "/yonetim";
+
+  if (path === "/yonetim/cikis") {
+    const next = new URL("/yonetim/", url);
+    return new Response(null, {
+      status: 302,
+      headers: { location: next.toString(), "set-cookie": yonetimCookieHeader("", url, true) },
+    });
+  }
+
+  if (path === "/yonetim/giris" && request.method === "POST") {
+    const body = await request.text();
+    const params = new URLSearchParams(body);
+    const given = String(params.get("password") || "");
+    if (!timingEqual(given, pin)) return yonetimLoginPage("Şifre yanlış.");
+    const next = new URL("/yonetim/", url);
+    return new Response(null, {
+      status: 302,
+      headers: { location: next.toString(), "set-cookie": yonetimCookieHeader(token, url) },
+    });
+  }
+
+  if (readCookie(request, YONETIM_COOKIE) === token) {
+    return env.ASSETS.fetch(request);
+  }
+
+  if (path === "/yonetim" || path === "/yonetim/") return yonetimLoginPage("");
+  return new Response("Unauthorized", { status: 401, headers: { "cache-control": "no-store" } });
+}
 
 function json(data, status = 200, extra = {}) {
   return new Response(JSON.stringify(data), {

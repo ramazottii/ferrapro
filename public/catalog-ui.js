@@ -1,24 +1,50 @@
-/* Uses the public catalogue only. Shared taxonomy/helpers are defined in site.js. */
+/* Public catalogue. Shared taxonomy lives in site.js. No prices. */
 (() => {
   const root = document.getElementById('liste');
-  if (!root) return;
+  const discs = document.getElementById('kat-daireler');
+  const brandsEl = document.getElementById('populer-markalar');
+  const brandRail = brandsEl?.closest('.brand-rail');
+  const heading = document.getElementById('baslik');
+  const crumbs = document.getElementById('catalog-crumbs');
+  if (!root || !discs) return;
+
   const params = new URLSearchParams(location.search);
-  const group = gecerliG(params.get('g') || '');
-  const sub = params.get('a') || '';
+  const rawG = params.get('g') || '';
+  const rawA = params.get('a') || '';
+  const sub = gecerliA(rawA);
+  const group = gecerliG(rawG, sub || rawA);
   const query = (params.get('q') || '').trim();
-  const meta = {
-    Hijyen: ['hijyen', 'Havlu, tuvalet kâğıdı ve peçete seçenekleri.'],
-    Temizlik: ['temizlik', 'Kullanım alanınıza göre temizlik ürünleri ve yardımcı malzemeler.'],
-    Kırtasiye: ['ofis', 'Kalemler, kâğıtlar, dosyalama, masaüstü gereçleri ve sunum malzemeleri.'],
-    Mutfak: ['mutfak', 'Servis, içecek, ikram ve bulaşık ihtiyaçları.'],
-    Ambalaj: ['ambalaj', 'Paketleme, taşıma ve saklama ürünleri.'],
-    PC: ['bilgisayar', 'Yazıcı ve bilgisayar için sarf malzemeleri.'],
-    Sağlık: ['saglik', 'Eldiven, maske ve muayene alanı sarf ürünleri.'],
+  const urunId = (params.get('u') || '').trim();
+  const el = (tag, text, cls) => { const n = document.createElement(tag); if (text) n.textContent = text; if (cls) n.className = cls; return n; };
+  const link = (text, href, cls) => { const n = el('a', text, cls); n.href = href; return n; };
+  const url = (g = '', a = '', q = query, u = '') => katalogYol({ g, a, q, u });
+  const spec = (item) => [item.marka, olcuYazi(item.olcu), olcuYazi(item.kapasite), item.malzeme, item.renk, item.ambalajAdedi, item.urunTuru].filter(Boolean).join(' · ');
+  const listeAd = (item) => {
+    let ad = urunAdiYazi(String(item.ad || '').trim());
+    const marka = String(item.marka || '').trim();
+    if (marka && !ad.toLocaleLowerCase('tr').startsWith(marka.toLocaleLowerCase('tr'))) {
+      ad = marka + ' ' + ad;
+    }
+    const extras = [];
+    const blob = () => (ad + ' ' + extras.join(' ')).toLocaleLowerCase('tr');
+    const add = (v, asOlcu) => {
+      const s = asOlcu ? olcuYazi(v) : String(v || '').trim();
+      if (!s || /^belirtilmedi$/i.test(s)) return;
+      const needle = s.toLocaleLowerCase('tr');
+      const tokens = blob().split(/\s+/);
+      if (tokens.includes(needle)) return;
+      extras.push(s);
+    };
+    add(item.olcu, true);
+    if (!/litrelik/i.test(ad)) add(item.kapasite, true);
+    add(item.malzeme, false);
+    add(item.renk, false);
+    add(item.ambalajAdedi, false);
+    add(item.urunTuru, false);
+    return extras.length ? ad + ',' + extras.join(' ') : ad;
   };
-  const el = (tag, text, cls) => { const n=document.createElement(tag); if(text)n.textContent=text; if(cls)n.className=cls; return n; };
-  const link = (text, href, cls) => { const n=el('a',text,cls); n.href=href; return n; };
-  const url = (g='', a='', q=query) => katalogYol({g,a,q});
-  const FLAT = { Ambalaj: true };
+  const teklifAd = (item) => listeAd(item);
+
   const brandPicker = (subId) => {
     const brands = MARKA_TERCIHLERI[subId];
     if (!brands?.length) return null;
@@ -27,150 +53,340 @@
     const select = el('select');
     select.append(new Option('Fark etmez', 'Fark etmez'));
     brands.forEach((brand) => select.append(new Option(brand, brand)));
-    wrap.append(select, el('small', 'İstediğiniz markayı tedarik ederiz.'));
+    wrap.append(select, el('small', 'İstediğiniz markayı tedarik ederiz. Marka henüz ürüne sabitlenmedi.'));
     return wrap;
   };
-  const add = (g, name, label='Teklif listeme ekle', brandSelect) => {
-    const button=el('button',label,'btn ghost'); button.type='button';
-    button.addEventListener('click',()=>{
-      const titled = urunAdiYazi(name);
-      FerraInterest.add(g, brandSelect ? markaTercihSatir(titled, brandSelect.value) : titled);
+  const add = (g, name, label = 'Teklif listeme ekle', brandSelect) => {
+    const button = el('button', label, 'btn ghost');
+    button.type = 'button';
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      FerraInterest.add(g, brandSelect ? markaTercihSatir(name, brandSelect.value) : name);
     });
     return button;
   };
-  fetch('/katalog.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).then(data=>{
-    const groups = GRUPLAR.map(g=>{
-      const items=data.urunler.filter(u=>grupAnahtar(g.g).includes(u.kategori));
-      const buckets=new Map();
-      (ALTLAR[g.g]||[]).forEach(tip=>{
-        if(!buckets.has(tip.id))buckets.set(tip.id,{...tip,items:[]});
+  const TONE = { A: 'kagit', B: 'sivi', C: 'aparat', D: 'ambalaj', E: 'gida', F: 'kirtasiye' };
+
+  const flyout = (g) => {
+    const menu = el('div', null, 'cat-fly');
+    const subs = (g.subs || []).filter((s) => s.id !== 'diger');
+    if (!subs.length) {
+      menu.append(el('p', 'Henüz alt grup yok', 'cat-fly-empty'));
+      return menu;
+    }
+    subs.forEach((s) => {
+      const row = el('div', null, 'cat-fly-row');
+      const subLink = link('', url(g.g, s.id, query), 'cat-fly-sub');
+      subLink.append(el('span', s.ad), el('span', String(s.items.length), 'cat-fly-count'));
+      const prods = el('div', null, 'cat-fly-prods');
+      if (s.items.length) {
+        s.items.slice(0, 28).forEach((item) => {
+          prods.append(link(listeAd(item), url(g.g, s.id, '', item.id), 'cat-fly-item'));
+        });
+      } else {
+        prods.append(el('p', 'Henüz ürün yok', 'cat-fly-empty'));
+      }
+      row.append(subLink, prods);
+      menu.append(row);
+    });
+    return menu;
+  };
+
+  const circle = ({ href, ad, gorsel, on, tone, group: gNode, code }) => {
+    const li = el('li');
+    if (tone) li.className = 'cat-tone-' + tone;
+    const node = href ? link('', href, 'cat-circle-link' + (on ? ' is-on' : '')) : el('span', null, 'cat-circle-link');
+    const disc = el('span', null, 'cat-circle');
+    if (gorsel) {
+      const img = el('img');
+      img.src = gorsel;
+      img.alt = '';
+      disc.append(img);
+    }
+    if (code) node.append(el('span', code, 'cat-code'));
+    node.append(disc, el('span', ad || '', 'cat-circle-ad'));
+    li.append(node);
+    if (gNode) li.append(flyout(gNode));
+    return li;
+  };
+
+  const bindMarquee = (list) => {
+    const rail = list?.closest('.brand-rail-mask');
+    const originals = list ? [...list.children] : [];
+    if (!rail || !originals.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    originals.forEach((node) => {
+      const copy = node.cloneNode(true);
+      copy.querySelectorAll('a').forEach((a) => { a.tabIndex = -1; a.setAttribute('aria-hidden', 'true'); });
+      copy.setAttribute('aria-hidden', 'true');
+      list.append(copy);
+    });
+  };
+
+  const photoZoom = (() => {
+    const root = el('div', null, 'photo-zoom');
+    root.hidden = true;
+    root.setAttribute('role', 'dialog');
+    root.setAttribute('aria-modal', 'true');
+    const img = el('img');
+    const close = el('button', 'Kapat', 'photo-zoom-close');
+    close.type = 'button';
+    root.append(img, close);
+    document.body.append(root);
+    const hide = () => {
+      root.hidden = true;
+      img.removeAttribute('src');
+      img.removeAttribute('style');
+    };
+    close.addEventListener('click', hide);
+    root.addEventListener('click', (e) => { if (e.target === root) hide(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !root.hidden) hide(); });
+    return (src, alt) => {
+      img.alt = alt || '';
+      img.onload = () => {
+        const maxW = Math.min(window.innerWidth * 0.88, img.naturalWidth * 2.5);
+        const scale = maxW / img.naturalWidth;
+        const h = img.naturalHeight * scale;
+        const maxH = window.innerHeight * 0.82;
+        if (h > maxH) {
+          img.style.height = maxH + 'px';
+          img.style.width = 'auto';
+        } else {
+          img.style.width = maxW + 'px';
+          img.style.height = 'auto';
+        }
+      };
+      img.src = src;
+      root.hidden = false;
+      close.focus();
+    };
+  })();
+  const photo = (item, g) => {
+    const figure = el('figure', null, 'product-photo');
+    if (item.gorsel) {
+      const image = el('img');
+      image.src = item.gorsel;
+      const urunFoto = item.gorselTuru === 'urun';
+      if (urunFoto) figure.classList.add('is-product');
+      image.alt = urunFoto ? (item.ad || g.ad) : (item.ad || g.ad) + ' — kategori görseli';
+      image.width = 160;
+      image.height = 160;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      figure.append(image);
+      if (!urunFoto) figure.append(el('figcaption', 'Kategori görseli'));
+      figure.classList.add('is-zoom');
+      figure.tabIndex = 0;
+      figure.setAttribute('role', 'button');
+      figure.setAttribute('aria-label', 'Görseli büyüt');
+      const open = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        photoZoom(item.gorsel, image.alt);
+      };
+      figure.addEventListener('click', open);
+      figure.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') open(e);
       });
-      items.forEach(item=>{
-        const tip=altBul(g.g,item.satir||item.ad,item.alt);
-        if(!buckets.has(tip.id))buckets.set(tip.id,{...tip,items:[]});
+    } else {
+      figure.append(el('div', 'Görsel yok', 'product-ph'));
+    }
+    return figure;
+  };
+
+  fetch('/katalog.json').then((r) => { if (!r.ok) throw new Error(); return r.json(); }).then((data) => {
+    const vitrin = GRUPLAR.filter((g) => VITRIN_GRUPLAR.includes(g.g));
+    const groups = vitrin.map((g) => {
+      const items = (data.urunler || []).filter((u) => u.aktif !== false && grupAnahtar(g.g).includes(u.kategori));
+      const buckets = new Map();
+      (ALTLAR[g.g] || []).forEach((tip) => {
+        buckets.set(tip.id, { ...tip, items: [] });
+      });
+      items.forEach((item) => {
+        const tip = altBul(g.g, item.satir || item.ad, item.alt);
+        if (!buckets.has(tip.id)) buckets.set(tip.id, { ...tip, items: [] });
         buckets.get(tip.id).items.push(item);
       });
-      const order=[...(ALTLAR[g.g]||[]).map(x=>x.id),'diger'];
-      return {...g,items,subs:[...buckets.values()].sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id))};
+      const order = [...(ALTLAR[g.g] || []).map((x) => x.id), 'diger'];
+      return { ...g, items, subs: [...buckets.values()].sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id)) };
     });
-    const current=groups.find(g=>g.g===group);
-    const selected=FLAT[group]?null:current?.subs.find(s=>s.id===sub);
-    const nav=document.getElementById('kat-nav');
-    const select=document.getElementById('kat-sec');
-    const all=link('Tüm kategoriler',url(),'category-all'+(!group?' is-on':''));
-    if(!group) all.setAttribute('aria-current','page');
-    nav.replaceChildren(all);
-    select.replaceChildren(new Option('Tüm kategoriler',''));
-    groups.forEach(g=>{
-      const branch=el('div',null,'cat-branch'+(current===g&&!FLAT[g.g]?' is-open':''));
-      const a=link('',url(g.g),'cat-parent'+(current===g?' is-on':''));
-      a.append(el('span',g.ad,'cat-parent-name'));
-      if(!FLAT[g.g]){
-        const chev=el('span',null,'cat-chevron');
-        chev.setAttribute('aria-hidden','true');
-        a.append(chev);
+    const current = groups.find((g) => g.g === group);
+    const selected = current?.subs.find((s) => s.id === sub);
+    const detail = urunId ? (data.urunler || []).find((u) => u.id === urunId && u.aktif !== false) : null;
+    const detailGroup = detail ? groups.find((g) => grupAnahtar(g.g).includes(detail.kategori)) : null;
+    const detailSub = detailGroup?.subs.find((s) => s.id === detail.alt);
+
+    if (crumbs) {
+      crumbs.replaceChildren(link('Ana sayfa', '/'));
+      crumbs.append(el('span', ' / ', 'breadcrumb-divider'));
+      if (current || detail) crumbs.append(link('Ürünler', url()));
+      else crumbs.append(el('span', 'Ürünler', 'breadcrumb-current'));
+      const gNow = detailGroup || current;
+      if (gNow) {
+        crumbs.append(el('span', ' / ', 'breadcrumb-divider'));
+        if (selected || detailSub || detail) crumbs.append(link(gNow.ad, url(gNow.g)));
+        else crumbs.append(el('span', gNow.ad, 'breadcrumb-current'));
       }
-      if(current===g&&!selected)a.setAttribute('aria-current','page');
-      branch.append(a);
-      if(!FLAT[g.g]&&g.subs.length){
-        const leaves=el('div',null,'cat-leaves');
-        const inner=el('div',null,'cat-leaves-inner');
-        g.subs.forEach(s=>{
-          const b=link('',url(g.g,s.id),'subnav-link');
-          b.append(el('span',s.ad,'subnav-name'),el('span',String(s.items.length),'subnav-count'));
-          if(selected===s)b.setAttribute('aria-current','page');
-          inner.append(b);
-        });
-        leaves.append(inner);
-        branch.append(leaves);
+      const sNow = detailSub || selected;
+      if (sNow) {
+        crumbs.append(el('span', ' / ', 'breadcrumb-divider'));
+        if (detail) crumbs.append(link(sNow.ad, url(gNow.g, sNow.id, '')));
+        else crumbs.append(el('span', sNow.ad, 'breadcrumb-current'));
       }
-      nav.append(branch);
-      select.append(new Option(g.ad,g.g));
-    });
-    select.value=group;
-    select.addEventListener('change',()=>location.assign(url(select.value)));
-    const heading=document.getElementById('baslik');
-    heading.textContent=selected?.ad||current?.ad||'Ürün kategorileri';
-    document.title=heading.textContent+' · FerraPro';
-    const crumbs=document.getElementById('catalog-crumbs');
-    crumbs.append(link('Tüm kategoriler',url('', '', '')));
-    if(current)crumbs.append(el('span',' / '),link(current.ad,url(group,'','')));
-    if(selected)crumbs.append(el('span',' / '),el('span',selected.ad));
-    const intro=document.getElementById('catalog-intro');
-    intro.append(el('p',current?meta[group][1]:'İhtiyacınız olan alanı seçin. Alt grupları keşfedin veya ürün adıyla arayın.'));
-    intro.append(el('p','Fotoğraflar ürün türlerini temsil eder. Marka, model, ambalaj ve tedarik uygunluğu teklif sırasında netleştirilir.','catalog-image-note'));
-    if(current) {
-      const ask=el('div',null,'category-inquiry');
-      const groupBrand=selected ? brandPicker(selected.id) : null;
-      ask.append(el('p','Toplu ürün ve sarf ihtiyaçlarınızı tek talepte iletebilirsiniz. Marka, ambalaj ve tedarik koşulları teklif aşamasında netleştirilir.'));
-      if(groupBrand) ask.append(groupBrand);
-      ask.append(add(current.ad,selected?.ad||'Genel ihtiyaç','Bu grup için görüşelim',groupBrand?.querySelector('select')));
-      intro.append(ask);
+      if (detail) {
+        crumbs.append(el('span', ' / ', 'breadcrumb-divider'));
+        crumbs.append(el('span', detail.ad, 'breadcrumb-current'));
+      }
     }
 
-    const info=document.getElementById('kat-meta');
+    heading.textContent = detail?.ad || selected?.ad || current?.ad || 'Ürünler';
+    document.title = heading.textContent + ' · FerraPro';
+
+    discs.replaceChildren();
+    const discGroup = detailGroup || current;
+    const altDiscs = discGroup ? discGroup.subs.filter((s) => s.id !== 'diger') : [];
+    if (altDiscs.length) {
+      altDiscs.forEach((s) => discs.append(circle({
+        href: url(discGroup.g, s.id, query),
+        ad: s.ad,
+        gorsel: s.gorsel || grupFoto(discGroup.g),
+        on: (selected || detailSub)?.id === s.id,
+        tone: TONE[discGroup.g],
+      })));
+    } else {
+      groups.forEach((g) => discs.append(circle({
+        href: url(g.g, '', query),
+        ad: g.ad,
+        gorsel: grupFoto(g.g),
+        on: false,
+        tone: TONE[g.g],
+        group: g,
+        code: g.g,
+      })));
+    }
+
+    const brandGroup = detailGroup || current;
+    const brands = brandGroup ? (POPULER_MARKALAR[brandGroup.g] || []) : [];
+    if (brandRail) brandRail.hidden = !brands.length;
+    if (brandsEl) {
+      brandsEl.replaceChildren();
+      brandsEl.classList.remove('is-static');
+      brands.forEach((brand) => {
+        const li = el('li');
+        const disc = el('span', null, 'brand-disc');
+        const img = el('img');
+        img.src = brand.logo;
+        img.alt = brand.ad;
+        img.width = 92;
+        img.height = 92;
+        disc.append(img);
+        li.append(disc);
+        brandsEl.append(li);
+      });
+      if (brands.length && brands.length < 8) brandsEl.classList.add('is-static');
+      else bindMarquee(brandsEl);
+    }
+
     root.replaceChildren();
-    if(!group&&!query) {
-      info.textContent=groups.length+' ana kategori';
-      const grid=el('div',null,'category-directory');
-      groups.forEach(g=>{
-        const card=el('article',null,'directory-card');
-        const imageLink=link('',url(g.g)); imageLink.tabIndex=-1; imageLink.setAttribute('aria-hidden','true');
-        const img=el('img'); img.src='/img/collection/'+meta[g.g][0]+'.webp'; img.alt=''; img.width=1536; img.height=1024; img.loading='lazy'; imageLink.append(img);
-        const body=el('div',null,'directory-body'); const h=el('h2');h.append(link(g.ad,url(g.g)));
-        body.append(h,el('p',meta[g.g][1]),el('small',FLAT[g.g]?g.items.length+' ürün seçeneği':g.subs.length+' alt grup · '+g.items.length+' ürün seçeneği'));
-        if(!FLAT[g.g]){
-          const list=el('ul');g.subs.slice(0,4).forEach(s=>{const li=el('li');li.append(link(s.ad,url(g.g,s.id)));list.append(li);});
-          body.append(list,link('Tüm alt grupları incele →',url(g.g),'directory-more'));
-        } else {
-          body.append(link('Ürünleri incele →',url(g.g),'directory-more'));
-        }card.append(imageLink,body);grid.append(card);
+    const needle = query.toLocaleLowerCase('tr');
+
+    if (detail && detailGroup) {
+      const picker = brandPicker(detail.alt);
+      const article = el('article', null, 'product-detail');
+      article.append(photo(detail, detailGroup));
+      const body = el('div', null, 'product-detail-copy');
+      body.append(el('p', [detailGroup.ad, detailSub?.ad].filter(Boolean).join(' / '), 'product-path'));
+      body.append(el('h2', listeAd(detail)));
+      const dl = el('dl', null, 'product-kv');
+      const fields = [
+        ['Marka', detail.marka],
+        ['Ölçü', olcuYazi(detail.olcu)],
+        ['Kapasite', olcuYazi(detail.kapasite)],
+        ['Malzeme', detail.malzeme],
+        ['Renk', detail.renk],
+        ['Ambalaj adedi', detail.ambalajAdedi],
+        ['Ürün türü', detail.urunTuru],
+        ['Açıklama', detail.aciklama],
+        ['Not', detail.not],
+      ];
+      fields.forEach(([label, value]) => {
+        if (!value) return;
+        dl.append(el('dt', label), el('dd', value));
       });
-      root.append(grid);
+      body.append(dl);
+      if (picker) body.append(picker);
+      const actions = el('div', null, 'product-detail-actions');
+      actions.append(add(detailGroup.ad, teklifAd(detail), 'Teklif listeme ekle', picker?.querySelector('select')));
+      actions.append(link('Teklif Al', '/siparis', 'btn'));
+      body.append(actions);
+      article.append(body);
+      root.append(article);
       return;
     }
-    if(current&&!selected&&!query&&!FLAT[group]) {
-      info.textContent=current.subs.length+' alt grup · '+current.items.length+' ürün seçeneği';
-      const grid=el('div',null,'subcategory-grid');
-      current.subs.forEach(s=>{
-        const a=link('',url(group,s.id),'subcategory-card');
-        const image=s.items[0]?.gorsel || grupFoto(s.id);
-        if(image){const img=el('img');img.src=image;img.alt='';img.loading='lazy';a.append(img);}
-        a.append(el('h2',s.ad),el('span',s.aciklama || ''),el('span',s.items.length+' seçenek'),el('b','Ürünleri incele →'));grid.append(a);
+
+    const scan = current ? [current] : groups;
+    const rows = [];
+    scan.forEach((g) => {
+      g.subs.filter((s) => !selected || s.id === selected.id).forEach((s) => {
+        s.items.forEach((item) => {
+          const blob = `${item.ad || ''} ${item.marka || ''} ${item.satir || ''} ${g.ad} ${s.ad}`.toLocaleLowerCase('tr');
+          if (!needle || blob.includes(needle)) rows.push({ g, s, item });
+        });
       });
-      root.append(grid);
-      if(sub)info.append(el('span',' · Önceki alt grup bulunamadı; güncel gruplardan seçim yapabilirsiniz.'));
+    });
+
+    if (query) {
+      const info = el('p', rows.length + ' ürün seçeneği · Arama: ' + query, 'cat-meta');
+      info.append(link('Aramayı temizle', url(group, selected?.id || '', ''), 'cat-clear'));
+      root.append(info);
+      paintProducts(rows);
+      if (!rows.length) root.append(el('p', 'Arama sonucu bulunamadı. Kategoriye dönüp yeniden deneyin.', 'cat-empty'));
       return;
     }
-    const needle=query.toLocaleLowerCase('tr');
-    const results=[];
-    (current?[current]:groups).forEach(g=>g.subs.filter(s=>!selected||s.id===selected.id).forEach(s=>s.items.forEach(item=>{
-      if(!needle || `${item.satir || item.ad || ''} ${g.ad}`.toLocaleLowerCase('tr').includes(needle))results.push({g,s,item});
-    })));
-    info.textContent=results.length+' ürün seçeneği'+(query?' · Arama: '+query:'');
-    if(query)info.append(link('Aramayı temizle',url(group,selected?.id||'',''),'cat-clear'));
-    if(current&&!FLAT[group]){
-      const label=el('label','Alt grup','subcategory-select');const select=el('select');
-      select.append(new Option('Tüm alt gruplar',''));current.subs.forEach(s=>select.append(new Option(s.ad,s.id)));select.value=selected?.id||'';
-      select.addEventListener('change',()=>location.assign(url(group,select.value)));label.append(select);root.append(label);
+
+    if (!current) {
+      root.append(el('p', 'Bir grubun üzerine gelerek alt başlıkları ve ürünleri görün. Tıklayınca ilgili sayfa açılır.', 'cat-hint'));
+      return;
     }
-    if(!results.length)root.append(el('p','Eşleşen ürün bulunamadı. Aramayı değiştirebilir veya genel görüşme talebi bırakabilirsiniz.','cat-empty'));
-    const list=el('div',null,'product-options');
-    results.forEach(({g,s,item})=>{
-      const row=el('article',null,'product-option'); const body=el('div',null,'product-copy');
-      const figure=el('figure',null,'product-photo');
-      const titled=urunAdiYazi(item.satir||item.ad);
-      const image=el('img');image.src=item.gorsel;image.alt=titled.split(' · ')[0]+' — temsili ürün görseli';image.width=480;image.height=480;image.loading='lazy';image.decoding='async';
-      if(item.gorselTuru==='kategori')image.alt=g.ad+' — kategori görseli';
-      figure.append(image,el('figcaption',item.gorselTuru==='kategori'?'Kategori görseli':'Temsili görsel'));
-      const parts=titled.split(' · ');
-      body.append(link(FLAT[g.g]?g.ad:g.ad+' / '+s.ad,url(g.g,FLAT[g.g]?'':s.id,''),'product-path'),el('h2',parts[0]));
-      if(parts.length>1)body.append(el('p',parts.slice(1).join(' · '),'product-spec'));
-      const picker=brandPicker(s.id);
-      if(picker)body.append(picker);
-      row.append(figure,body,add(g.ad,item.satir||item.ad,'Teklif listeme ekle',picker?.querySelector('select')));list.append(row);
-    });root.append(list);
-  }).catch(()=>{
-    root.replaceChildren(el('p','Katalog şu anda yüklenemedi. Lütfen yeniden deneyin veya bizimle iletişime geçin.','cat-empty'),link('İletişime geçin','/iletisim','btn'));
+
+    if (!selected) {
+      const visible = current.subs.filter((s) => s.id !== 'diger');
+      if (!visible.length) {
+        root.append(el('p', 'Bu grupta henüz ürün listelenmedi. İhtiyacınızı teklif formundan iletebilirsiniz.', 'cat-empty'));
+        root.append(link('Teklif isteyin', '/siparis?g=' + encodeURIComponent(current.g), 'btn'));
+        return;
+      }
+      root.append(el('p', 'Üstteki alt gruplardan birini seçin.', 'cat-hint'));
+      return;
+    }
+
+    paintProducts(rows);
+    if (!rows.length) {
+      root.append(el('p', 'Bu alt grupta henüz ürün yok. İhtiyacınızı teklif formundan iletebilirsiniz.', 'cat-empty'));
+      root.append(link('Teklif isteyin', '/siparis?g=' + encodeURIComponent(current.g), 'btn'));
+    }
+  }).catch(() => {
+    root.replaceChildren(el('p', 'Katalog şu anda yüklenemedi. Lütfen yeniden deneyin veya bizimle iletişime geçin.', 'cat-empty'), link('İletişime geçin', '/iletisim', 'btn'));
   });
+
+  function paintProducts(rows) {
+    if (!rows.length) return;
+    const list = el('div', null, 'product-options');
+    rows.forEach(({ g, s, item }) => {
+      const row = el('article', null, 'product-option');
+      const body = el('div', null, 'product-copy');
+      const named = listeAd(item);
+      body.append(el('p', s.ad, 'product-path'));
+      const title = link(named, url(g.g, s.id, '', item.id));
+      title.className = 'product-title';
+      body.append(title);
+      const line = spec(item);
+      if (line) body.append(el('p', line, 'product-spec'));
+      const picker = brandPicker(s.id);
+      if (picker) body.append(picker);
+      row.append(photo(item, g), body, add(g.ad, teklifAd(item), 'Teklif listeme ekle', picker?.querySelector('select')));
+      list.append(row);
+    });
+    root.append(list);
+  }
 })();

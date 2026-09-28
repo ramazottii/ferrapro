@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ürün kataloğu · FerraPro</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0F172A" />
+  <link rel="icon" href="/logo/ferrapro-favicon.png?v=1" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo/ferrapro-apple.png?v=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/yonetim/yonetim.css?v=3" />
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="nav-mask" id="nav-mask" hidden></div>
+    <aside class="nav" id="nav" aria-label="Katalog menüsü">
+      <div class="nav-brand">
+        <img src="/logo/ferrapro-icon.png?v=1" width="36" height="36" alt="">
+        <div>
+          <strong>FerraPro</strong>
+          <span>Ürün kataloğu</span>
+        </div>
+        <button class="nav-close" id="nav-close" type="button" aria-label="Menüyü kapat">×</button>
+      </div>
+      <nav class="nav-scroll" id="nav-tree"></nav>
+    </aside>
+    <div class="shell">
+      <header class="top">
+        <button class="menu-btn" id="nav-open" type="button" aria-label="Kategoriler">☰</button>
+        <div class="search-wrap">
+          <input id="q" type="search" placeholder="Ürün, marka veya kategori ara" autocomplete="off" />
+        </div>
+        <div class="top-actions">
+          <div class="view-toggle" id="view-toggle" role="group" aria-label="Görünüm">
+            <button type="button" data-view="table" aria-pressed="true">Tablo</button>
+            <button type="button" data-view="cards" aria-pressed="false">Kart</button>
+          </div>
+          <button class="btn ghost" id="filter-toggle" type="button">Filtreler</button>
+          <button class="btn" id="btn-new" type="button">Yeni ürün</button>
+          <a class="btn ghost" href="/yonetim/cikis">Çıkış</a>
+        </div>
+      </header>
+      <div class="filters" id="filters" hidden></div>
+      <main class="page" id="page">
+        <div class="skeleton" aria-hidden="true">
+          <div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <header class="drawer-head">
+        <h2 id="drawer-title">Ürün</h2>
+        <button type="button" class="icon-btn" id="drawer-close" aria-label="Kapat">×</button>
+      </header>
+      <div class="drawer-body" id="drawer-body"></div>
+    </div>
+  </aside>
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title">Ürünü sil</h2>
+      <p id="modal-text">Bu ürün kalıcı olarak kaldırılacak.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn ghost" id="modal-cancel">Vazgeç</button>
+        <button type="button" class="btn danger" id="modal-ok">Sil</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" hidden role="status"></div>
+  <script src="/yonetim/yonetim.js?v=2"></script>
+</body>
+</html>

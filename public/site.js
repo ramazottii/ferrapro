@@ -1,52 +1,134 @@
-const WA = ""; /* 90xxxxxxxxxx — numara gelince dolar */
+const WA = "905307161877";
 
 const GRUPLAR = [
-  { g: "Hijyen", ad: "Temizlik Kâğıt Ürünleri" },
-  { g: "Temizlik", ad: "Temizlik Ürünleri" },
-  { g: "Kırtasiye", ad: "Kırtasiye ve Ofis Malzemeleri" },
-  { g: "Mutfak", ad: "Mutfak / İkram" },
-  { g: "Ambalaj", ad: "Ambalaj" },
-  { g: "PC", ad: "Bilgisayar ve Yazıcı Sarf Malzemeleri" },
-  { g: "Sağlık", ad: "Sağlık Sarf" },
+  { g: "A", ad: "Temizlik Kağıt ürünleri" },
+  { g: "B", ad: "Sıvı Temizlik Ürünleri" },
+  { g: "C", ad: "Aparatlar ve Ekipmanlar" },
+  { g: "D", ad: "Temizlik Sarf Ürünleri" },
+  { g: "E", ad: "Gıda ve Atıştırmalıklar" },
+  { g: "F", ad: "Kırtasiye ve Ofis Sarf Ürünleri" },
 ];
+
+const VITRIN_GRUPLAR = ["A", "B", "C", "D", "E", "F"];
+
+const GRUP_SLUG = {
+  Hijyen: "A",
+  "temizlik-kagitlari": "A",
+  Temizlik: "B",
+  "sivi-temizlik-urunleri": "B",
+  Aparat: "C",
+  "aparat-ve-ekipmanlar": "C",
+  Gıda: "E",
+  Mutfak: "E",
+  "Mutfak / İkram": "E",
+  gida: "E",
+  Kırtasiye: "F",
+  "kirtasiye-ve-ofis-urunleri": "F",
+  Ambalaj: "F",
+  "sarf-ve-ambalaj-urunleri": "F",
+  PC: "F",
+  "PC Sarf": "F",
+  "bilgisayar-sarf-urunleri": "F",
+};
+
+const ALT_SLUG = {
+  "havlu-ve-peceteler": "A1",
+  "islak-havlular": "A2",
+  "tuvalet-kagitlari": "A3",
+  "endustriyel-temizlik-urunleri": "B1",
+  "genel-kullanim-temizlik-urunleri": "B2",
+  "havlu-aparatlari": "C1",
+  "sivi-sabun-ve-kopuk-sabun-aparatlari": "C2",
+  "cop-kovalari": "C3",
+  "cop-posetleri": "D1",
+  "temizlik-sarf-urunleri": "D2",
+  "kullan-at-urunler": "D3",
+};
 
 const SATIR_MAX = 2000;
 
 const GRUP_FOTO = {
-  "havlu-pecete": "/img/ico-pecete.png",
-  "islak-kagit": "/img/ico-pecete.png",
-  "tuvalet-kagit": "/img/ico-tuvalet.png",
-  pecete: "/img/ico-pecete.png",
-  zkat: "/img/ico-zhavlu.png",
-  fotosel: "/img/ico-fotosel.png",
-  hareketli: "/img/ico-fotosel.png",
-  "icten-havlu": "/img/ico-fotosel.png",
-  havlu: "/img/ico-fotosel.png",
-  jumbo: "/img/ico-jumbo.png",
-  "icten-tuvalet": "/img/ico-jumbo.png",
-  tuvalet: "/img/ico-tuvalet.png",
-  cop: "/img/ico-cop.png",
-  sivi: "/img/cat-temizlik.png",
-  bardak: "/img/ico-bardak.png",
-  masa: "/img/ico-klinik.png",
-  a4: "/img/th-a4.png",
-  klasor: "/img/th-klasor.png",
-  dosya: "/img/th-dosya.png",
-  pil: "/img/th-pil.png",
-  kalem: "/img/th-kalem.png",
-  zimba: "/img/th-zimba.png",
-  not: "/img/th-not.png",
-  mouse: "/img/th-mouse.png",
-  klavye: "/img/th-klavye.png",
-  toner: "/img/th-toner.png",
-  usb: "/img/th-usb.png",
-  power: "/img/th-power.png",
-  strec: "/img/th-strec.png",
-  bant: "/img/th-bant.png",
-  kraft: "/img/th-kraft.png",
-  kese: "/img/th-kese.png",
-  kasa: "/img/th-kasa.png",
-  buz: "/img/th-buz.png",
+  A: "/img/products/daire-temizlik-kagitlari.webp",
+  B: "/img/products/daire-sivi-temizlik.webp",
+  C: "/img/products/daire-aparat-ekipman.webp",
+  D: "/img/products/daire-temizlik.webp",
+  E: "/img/products/daire-gida-ikram.webp",
+  F: "/img/products/daire-kirtasiye-ofis.webp",
+};
+
+const POPULER_MARKALAR = {
+  A: [
+    { ad: "Espiga", logo: "/img/brands/espiga.webp" },
+    { ad: "Selpak", logo: "/img/brands/selpak.webp" },
+    { ad: "Belinno", logo: "/img/brands/belinno.webp" },
+    { ad: "Sleepy", logo: "/img/brands/sleepy.webp" },
+    { ad: "Papia", logo: "/img/brands/papia.webp" },
+    { ad: "Solo", logo: "/img/brands/solo.webp" },
+    { ad: "Familia", logo: "/img/brands/familia.webp" },
+    { ad: "Polente", logo: "/img/brands/polente.webp" },
+    { ad: "DeepFresh", logo: "/img/brands/deepfresh.webp" },
+    { ad: "Freshmaker", logo: "/img/brands/freshmaker.webp" },
+    { ad: "Komili", logo: "/img/brands/komili.webp" },
+    { ad: "Teno", logo: "/img/brands/teno.webp" },
+    { ad: "Rulopak", logo: "/img/brands/rulopak.webp" },
+  ],
+  B: [
+    { ad: "Yumoş", logo: "/img/brands/yumos.webp" },
+    { ad: "Vernel", logo: "/img/brands/vernel.webp" },
+    { ad: "Ozopak", logo: "/img/brands/ozopak.webp" },
+    { ad: "Fairy", logo: "/img/brands/fairy.webp" },
+    { ad: "Domestos", logo: "/img/brands/domestos.webp" },
+    { ad: "Cif", logo: "/img/brands/cif.webp" },
+    { ad: "Pril", logo: "/img/brands/pril.webp" },
+    { ad: "Finish", logo: "/img/brands/finish.webp" },
+    { ad: "Asperox", logo: "/img/brands/asperox.webp" },
+    { ad: "Porçöz", logo: "/img/brands/porcoz.webp" },
+  ],
+  C: [
+    { ad: "Vileda", logo: "/img/brands/vileda.webp" },
+    { ad: "Parex", logo: "/img/brands/parex.webp" },
+    { ad: "Palex", logo: "/img/brands/palex.webp" },
+    { ad: "Vialli", logo: "/img/brands/vialli.webp" },
+    { ad: "Flosoft", logo: "/img/brands/flosoft.webp" },
+    { ad: "Scotch-Brite", logo: "/img/brands/scotchbrite.webp" },
+  ],
+  D: [
+    { ad: "Koroplast", logo: "/img/brands/koroplast.webp" },
+    { ad: "Parex", logo: "/img/brands/parex.webp" },
+    { ad: "Ceymop", logo: "/img/brands/ceymop.webp" },
+    { ad: "Ozopak", logo: "/img/brands/ozopak.webp" },
+    { ad: "Vileda", logo: "/img/brands/vileda.webp" },
+    { ad: "Scotch-Brite", logo: "/img/brands/scotchbrite.webp" },
+  ],
+  E: [
+    { ad: "Eti", logo: "/img/brands/eti.webp" },
+    { ad: "Lipton", logo: "/img/brands/lipton.webp" },
+    { ad: "Nestlé", logo: "/img/brands/nestle.webp" },
+    { ad: "Pınar", logo: "/img/brands/pinar.webp" },
+    { ad: "Erikli", logo: "/img/brands/erikli.webp" },
+    { ad: "Ülker", logo: "/img/brands/ulker.webp" },
+    { ad: "Çaykur", logo: "/img/brands/caykur.webp" },
+    { ad: "Doğuş", logo: "/img/brands/dogus.webp" },
+    { ad: "Mehmet Efendi", logo: "/img/brands/mehmetefendi.webp" },
+  ],
+  F: [
+    { ad: "Faber-Castell", logo: "/img/brands/faber.webp" },
+    { ad: "Pilot", logo: "/img/brands/pilot.webp" },
+    { ad: "uni-ball", logo: "/img/brands/uniball.webp" },
+    { ad: "BIC", logo: "/img/brands/bic.webp" },
+    { ad: "edding", logo: "/img/brands/edding.webp" },
+    { ad: "Navigator", logo: "/img/brands/navigator.webp" },
+    { ad: "Pritt", logo: "/img/brands/pritt.webp" },
+    { ad: "UHU", logo: "/img/brands/uhu.webp" },
+    { ad: "Leitz", logo: "/img/brands/leitz.webp" },
+    { ad: "noki", logo: "/img/brands/noki.webp" },
+    { ad: "3M", logo: "/img/brands/mmm.webp" },
+    { ad: "tesa", logo: "/img/brands/tesa.webp" },
+    { ad: "Scotch", logo: "/img/brands/scotch.webp" },
+    { ad: "Logitech", logo: "/img/brands/logitech.webp" },
+    { ad: "Canon", logo: "/img/brands/canon.webp" },
+    { ad: "Epson", logo: "/img/brands/epson.webp" },
+  ],
 };
 
 function kacis(s) {
@@ -62,21 +144,26 @@ function kacisAttr(s) {
 
 function grupAnahtar(g) {
   if (g === "Sağlık" || g === "Sağlık Sarf") return ["Sağlık", "Klinik"];
-  if (g === "Mutfak" || g === "Mutfak / İkram") return ["Mutfak"];
-  if (g === "PC" || g === "PC Sarf") return ["PC", "PC Sarf"];
   return g ? [g] : [];
 }
 
-function gecerliG(g) {
-  return GRUPLAR.some((x) => x.g === g) ? g : "";
+function gecerliA(a) {
+  const raw = String(a || "").trim();
+  if (!raw) return "";
+  if (ALT_SLUG[raw]) return ALT_SLUG[raw];
+  if (/^[A-F][1-9]$/.test(raw)) return raw;
+  return "";
+}
+
+function gecerliG(g, a) {
+  const alt = gecerliA(a);
+  if (alt) return alt.charAt(0);
+  const mapped = GRUP_SLUG[g] || g;
+  return GRUPLAR.some((x) => x.g === mapped) ? mapped : "";
 }
 
 function grupFormDeger(g) {
-  const key = gecerliG(g);
-  if (key === "PC") return "PC Sarf";
-  if (key === "Sağlık") return "Sağlık Sarf";
-  if (key === "Mutfak") return "Mutfak / İkram";
-  return key;
+  return gecerliG(g);
 }
 
 function teklifHref(g, satir) {
@@ -88,11 +175,12 @@ function teklifHref(g, satir) {
   return "/siparis?" + p.toString();
 }
 
-function katalogYol({ g, q, a }) {
+function katalogYol({ g, q, a, u }) {
   const p = new URLSearchParams();
   if (g) p.set("g", g);
   if (q) p.set("q", q);
   if (a) p.set("a", a);
+  if (u) p.set("u", u);
   const s = p.toString();
   return "/urunler" + (s ? "?" + s : "");
 }
@@ -101,47 +189,83 @@ function header(active) {
   const params = new URLSearchParams(location.search);
   const qVal = kacisAttr(params.get("q") || "");
   const path = location.pathname.replace(/\.html$/, "");
-  const gKeep = path === "/urunler" ? gecerliG(params.get("g") || "") : "";
-  const items = [
-    ["/urunler", "Ürünler"],
-    ["/hakkimizda", "Hakkımızda"],
-    ["/sektorler", "Sektörler"],
-    ["/iletisim", "İletişim"],
-  ];
-  const links = items
-    .map(([href, label]) => `<a href="${href}" ${active === href ? 'aria-current="page"' : ""} class="${active === href ? "is-on" : ""}">${label}</a>`)
-    .join("");
-  const ctaOn = active === "/siparis" ? " is-on" : "";
+  const gKeep = path === "/urunler" ? gecerliG(params.get("g") || "", params.get("a") || "") : "";
+  const on = (href) => active === href;
+  const link = (href, label) => `<a href="${href}" ${on(href) ? 'aria-current="page"' : ""} class="${on(href) ? "is-on" : ""}">${label}</a>`;
+  const ctaOn = on("/siparis") ? " is-on" : "";
   const gHidden = gKeep ? `<input type="hidden" name="g" value="${kacisAttr(gKeep)}" />` : "";
-  return `<div class="wrap">
-    <a class="brand" href="/"><img src="/logo/ferrapro-hex.png" alt="FerraPro"><span><b>FER</b><i>RA</i><b>PRO</b></span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-    <nav id="site-nav">${links}</nav>
-    <form class="seek" action="/urunler" method="get" role="search">
-      <label class="sr" for="q">Ürün ara</label>
-      ${gHidden}
-      <input id="q" type="search" name="q" placeholder="Ürün ara" value="${qVal}" />
-    </form>
-    <a class="btn btn-head${ctaOn}" href="/siparis">Teklif Listem <span data-interest-count>0</span></a>
+  const bandHref = active === "/" ? "#teklif-al" : "/siparis";
+  const drops = GRUPLAR.map((g) => `<li><a href="${katalogYol({ g: g.g })}">${g.ad}</a></li>`).join("");
+  return `<div class="head-bar">
+    <div class="head-inner">
+      <p class="head-bar-full">İstanbul ve çevresine hızlı ürün tedariki</p>
+      <p class="head-bar-short">Hızlı ürün tedariki</p>
+      <div class="head-bar-links">
+        <a href="tel:+905307161877">+90 530 716 18 77</a>
+      </div>
+    </div>
+  </div>
+  <div class="head-main">
+    <div class="head-inner">
+      <a class="brand" href="/" aria-label="FerraPro"><img class="brand-logo" src="/logo/ferrapro-header.png?v=1" width="1264" height="342" alt="FerraPro"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü"><span></span></button>
+      <nav id="site-nav">
+        <div class="head-drop">
+          <a href="/urunler" class="head-drop-link${on("/urunler") ? " is-on" : ""}" ${on("/urunler") ? 'aria-current="page"' : ""}>Ürünler</a>
+          <button class="head-drop-toggle" type="button" aria-expanded="false" aria-label="Ürün grupları"></button>
+          <ul class="head-drop-menu">${drops}</ul>
+        </div>
+        ${link("/hakkimizda", "Hakkımızda")}
+        ${link("/sektorler", "Sektörler")}
+        ${link("/iletisim", "İletişim")}
+        <form class="seek" action="/urunler" method="get" role="search">
+          <label class="sr" for="q">Ürün ara</label>
+          ${gHidden}
+          <input id="q" type="search" name="q" placeholder="Ürün ara" value="${qVal}" />
+        </form>
+        <a class="head-nav-extra" href="mailto:info@ferrapro.com">E-posta iletişimi</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-head btn-head-wa" href="https://wa.me/${WA}"><span class="head-cta-full">WhatsApp’tan Yazın</span><span class="head-cta-short">WhatsApp</span></a>
+        <a class="btn btn-head btn-head-list${ctaOn}" href="/siparis"><span class="head-list-full">Teklif Listem</span><span class="head-list-short">Liste</span> <span data-interest-count hidden></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="head-band">
+    <div class="head-band-fx" aria-hidden="true"></div>
+    <div class="head-inner">
+      <p class="head-band-full">İhtiyacınızı iletin, uygun ürünleri birlikte bulalım.</p>
+      <p class="head-band-short">İhtiyacınızı iletin, hızlı teklif alın</p>
+      <a class="head-band-btn" href="${bandHref}">Teklif İste</a>
+    </div>
   </div>`;
 }
 
 function footer() {
-  return `<div class="wrap">
-    <p>
-      <strong>FerraPro</strong>
-      <span>Ataşehir / İstanbul</span>
-      <a class="foot-mail" href="mailto:info@ferrapro.com">info@ferrapro.com</a>
-      <a class="foot-mail" href="tel:+905307161877">0530 716 18 77</a>
-    </p>
-    <nav>
-      <a href="/sektorler">Sektörler</a>
-      <a href="/referanslar">Referanslar</a>
-      <a href="/iletisim">İletişim ve sorular</a>
-      <a href="/kvkk">KVKK</a>
-      <a href="/siparis">Teklif Al</a>
+  return `<div class="foot-inner">
+    <div class="foot-brand">
+      <a class="brand brand-stack" href="/" aria-label="FerraPro"><img class="brand-logo-stack" src="/logo/ferrapro.png?v=1" width="901" height="523" alt="FerraPro"></a>
+      <p>Kurumsal ürün tedarikinde güvenilir çözüm ortağınız.</p>
+    </div>
+    <nav class="foot-col" aria-label="Ürünler">
+      <h2>Ürünler</h2>
+      ${GRUPLAR.map((g) => `<a href="${katalogYol({ g: g.g })}">${g.ad}</a>`).join("")}
     </nav>
-  </div>`;
+    <nav class="foot-col" aria-label="Kurumsal">
+      <h2>Kurumsal</h2>
+      <a href="/hakkimizda">Hakkımızda</a>
+      <a href="/sektorler">Sektörler</a>
+      <a href="/iletisim">İletişim</a>
+    </nav>
+    <div class="foot-col">
+      <h2>İletişim</h2>
+      <a href="tel:+905307161877">+90 530 716 18 77</a>
+      <a href="mailto:info@ferrapro.com">info@ferrapro.com</a>
+      <span>ferrapro.com</span>
+      <span>İstanbul</span>
+    </div>
+  </div>
+  <p class="foot-copy">© 2026 FerraPro. Tüm hakları saklıdır.</p>`;
 }
 
 document.querySelectorAll("[data-head]").forEach((el) => {
@@ -154,25 +278,54 @@ document.querySelectorAll("[data-foot]").forEach((el) => {
 function bindNav() {
   const btn = document.querySelector(".nav-toggle");
   const nav = document.getElementById("site-nav");
+  const drop = document.querySelector(".head-drop");
+  const dropBtn = document.querySelector(".head-drop-toggle");
+  const dropLink = document.querySelector(".head-drop-link");
   if (!btn || !nav) return;
 
   const setOpen = (open) => {
     btn.setAttribute("aria-expanded", open ? "true" : "false");
     nav.classList.toggle("is-open", open);
+    if (!open && drop) setDrop(false);
+  };
+  const setDrop = (open) => {
+    if (!drop || !dropBtn) return;
+    drop.classList.toggle("is-open", open);
+    dropBtn.setAttribute("aria-expanded", open ? "true" : "false");
   };
 
   btn.addEventListener("click", () => {
     setOpen(btn.getAttribute("aria-expanded") !== "true");
   });
+  if (dropBtn) {
+    dropBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if (dropLink) {
+    dropLink.addEventListener("click", (e) => {
+      if (!window.matchMedia("(max-width: 768px)").matches) return;
+      e.preventDefault();
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
 
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
+    if (drop?.classList.contains("is-open")) {
+      setDrop(false);
+      dropBtn?.focus();
+      return;
+    }
     if (btn.getAttribute("aria-expanded") !== "true") return;
     setOpen(false);
     btn.focus();
   });
 
   document.addEventListener("click", (e) => {
+    if (drop && !drop.contains(e.target)) setDrop(false);
     if (btn.getAttribute("aria-expanded") !== "true") return;
     if (btn.contains(e.target) || nav.contains(e.target)) return;
     setOpen(false);
@@ -183,6 +336,150 @@ function bindNav() {
   });
 }
 bindNav();
+
+function bindKampSlider() {
+  const root = document.querySelector("[data-kamp-slider]");
+  if (!root) return;
+  const viewport = root.querySelector(".kamp-viewport");
+  const slides = [...root.querySelectorAll(".kamp-slide")];
+  const prev = root.querySelector(".kamp-prev");
+  const next = root.querySelector(".kamp-next");
+  const dots = root.querySelector(".kamp-dots");
+  if (!viewport || slides.length < 2) return;
+  let i = 0;
+  let timer = 0;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  slides.forEach((_, di) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Kampanya ${di + 1}`);
+    b.addEventListener("click", () => go(di, true));
+    dots.appendChild(b);
+  });
+  function go(n, stop) {
+    i = (n + slides.length) % slides.length;
+    viewport.scrollTo({ left: slides[i].offsetLeft, behavior: reduce ? "auto" : "smooth" });
+    dots.querySelectorAll("button").forEach((b, di) => b.setAttribute("aria-current", di === i ? "true" : "false"));
+    if (stop) restart();
+  }
+  function restart() {
+    clearInterval(timer);
+    if (reduce) return;
+    timer = setInterval(() => go(i + 1), 6500);
+  }
+  prev.addEventListener("click", () => go(i - 1, true));
+  next.addEventListener("click", () => go(i + 1, true));
+  viewport.addEventListener("scroll", () => {
+    const nextI = Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1));
+    if (nextI === i || nextI < 0 || nextI >= slides.length) return;
+    i = nextI;
+    dots.querySelectorAll("button").forEach((b, di) => b.setAttribute("aria-current", di === i ? "true" : "false"));
+  }, { passive: true });
+  root.addEventListener("mouseenter", () => clearInterval(timer));
+  root.addEventListener("mouseleave", restart);
+  go(0);
+  restart();
+}
+bindKampSlider();
+
+function bindHeroBanners() {
+  const root = document.querySelector("[data-hero-banners]");
+  if (!root) return;
+  const frame = root.querySelector(".home-banners-frame");
+  const slides = [...root.querySelectorAll(".home-banner")];
+  const prev = root.querySelector(".home-banners-prev");
+  const next = root.querySelector(".home-banners-next");
+  const dots = root.querySelector(".home-banners-dots");
+  if (!frame || slides.length < 2) return;
+  let i = 0;
+  let timer = 0;
+  let startX = 0;
+  let swiped = false;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const labels = slides.map((s) => s.getAttribute("aria-label") || `Slayt ${slides.indexOf(s) + 1}`);
+  if (WA) {
+    root.querySelectorAll("[data-wa]").forEach((a) => {
+      a.href = `https://wa.me/${WA}`;
+    });
+  }
+  root.setAttribute("tabindex", "0");
+  slides.forEach((_, di) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", labels[di]);
+    b.addEventListener("click", () => go(di, true));
+    dots.appendChild(b);
+  });
+  function syncHits() {
+    slides.forEach((s, di) => {
+      const on = di === i;
+      s.classList.toggle("is-active", on);
+      s.setAttribute("aria-hidden", on ? "false" : "true");
+      s.querySelectorAll("a").forEach((a) => {
+        if (on) a.removeAttribute("tabindex");
+        else a.setAttribute("tabindex", "-1");
+      });
+    });
+    dots.querySelectorAll("button").forEach((b, di) => {
+      if (di === i) {
+        b.setAttribute("aria-current", "true");
+        b.setAttribute("aria-selected", "true");
+      } else {
+        b.removeAttribute("aria-current");
+        b.setAttribute("aria-selected", "false");
+      }
+    });
+  }
+  function go(n, stop) {
+    i = (n + slides.length) % slides.length;
+    syncHits();
+    if (stop) restart();
+  }
+  function restart() {
+    clearInterval(timer);
+    if (reduce) return;
+    timer = setInterval(() => go(i + 1), 5000);
+  }
+  prev.addEventListener("click", () => go(i - 1, true));
+  next.addEventListener("click", () => go(i + 1, true));
+  root.addEventListener("mouseenter", () => clearInterval(timer));
+  root.addEventListener("mouseleave", restart);
+  root.addEventListener("focusin", () => clearInterval(timer));
+  root.addEventListener("focusout", (e) => {
+    if (!root.contains(e.relatedTarget)) restart();
+  });
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      go(i - 1, true);
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      go(i + 1, true);
+    }
+  });
+  frame.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].clientX;
+    clearInterval(timer);
+  }, { passive: true });
+  frame.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) {
+      swiped = true;
+      go(dx > 0 ? i - 1 : i + 1, true);
+    } else restart();
+  }, { passive: true });
+  frame.addEventListener("click", (e) => {
+    if (!swiped) return;
+    e.preventDefault();
+    e.stopPropagation();
+    swiped = false;
+  }, true);
+  go(0);
+  restart();
+}
+bindHeroBanners();
 
 function bindTrust() {
   const root = document.querySelector(".trust");
@@ -208,90 +505,43 @@ function bindTrust() {
 bindTrust();
 
 const ALTLAR = {
-  Hijyen: [
-    { id: "havlu-pecete", ad: "Havlu-Peçete", test: () => false },
-    { id: "islak-kagit", ad: "Islak havlu", test: () => false },
-    { id: "tuvalet-kagit", ad: "Tuvalet Kağıtları", test: () => false },
-    { id: "islak", ad: "Islak Havlu", test: (t) => t.includes("ıslak") || /yüzey temizlik havlu/.test(t) },
-    { id: "pecete", ad: "Peçete", test: (t) => /peçete/.test(t) },
-    { id: "fotosel", ad: "Fotoselli Havlu", test: (t) => t.includes("fotosel") },
-    { id: "hareketli", ad: "Hareketli Havlu", test: (t) => t.includes("hareketli") },
-    { id: "icten-havlu", ad: "İçten Çekmeli Havlu", test: (t) => /içten çekmeli/.test(t) && !/tuvalet/.test(t) },
-    { id: "jumbo", ad: "Mini Jumbo", test: (t) => /jumbo|cimri/.test(t) },
-    { id: "icten-tuvalet", ad: "İçten Çekmeli Tuvalet", test: (t) => /içten çekmeli tuvalet/.test(t) },
-    { id: "tuvalet", ad: "Tuvalet Kağıtları", test: (t) => t.includes("tuvalet") },
-    { id: "havlu", ad: "Rulo Havlu", test: (t) => t.includes("havlu") },
-    { id: "dispenser", ad: "Dispenser ve Aparatlar", test: () => false },
+  A: [
+    { id: "A1", ad: "Havlu ve Peçeteler", test: () => false, gorsel: "/img/products/daire-havlu-pecete.webp" },
+    { id: "A2", ad: "Islak Havlular", test: () => false, gorsel: "/img/products/daire-islak-havlu.webp" },
+    { id: "A3", ad: "Tuvalet Kağıtları", test: () => false, gorsel: "/img/products/daire-tuvalet-kagidi.webp" },
   ],
-  Temizlik: [
-    { id: "cop", ad: "Çöp Poşeti", test: (t) => t.includes("çöp") },
-    { id: "sabun", ad: "El Sabunları", test: (t) => /sabun/.test(t) },
-    { id: "camasir-suyu", ad: "Çamaşır Suları", test: (t) => /çamaşır suyu/.test(t) },
-    { id: "camasir", ad: "Çamaşır Deterjanları", test: (t) => /çamaşır|toz deterjan/.test(t) },
-    { id: "yuzey", ad: "Yüzey Temizleyicileri", test: (t) => /yüzey/.test(t) },
-    { id: "kirec", ad: "Kireç ve Pas Çözücüler", test: (t) => /kireç|pas-/.test(t) },
-    { id: "koku", ad: "Ortam Kokuları", test: (t) => /oda parfüm/.test(t) },
-    { id: "bulasik-temizlik", ad: "Bulaşık Temizliği", test: (t) => /bulaşık/.test(t) },
-    { id: "sivi", ad: "Diğer Temizlik Ürünleri", test: (t) => !/bez|mop|süpürge|fırça/.test(t) },
-    { id: "arac", ad: "Bez ve Mop", test: (t) => /bez|mop|süpürge|fırça/.test(t) },
-    { id: "ekipman", ad: "Temizlik Ekipmanları", test: () => false },
-    { id: "atik-yonetimi", ad: "Atık Yönetimi", test: () => false },
+  B: [
+    { id: "B1", ad: "Endüstriyel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-endustriyel-sivi.webp" },
+    { id: "B2", ad: "Genel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-genel-temizlik.webp" },
   ],
-  Mutfak: [
-    { id: "bardak", ad: "Karton Bardak", test: (t) => /karton bardak/.test(t) || (t.includes("bardak") && t.includes("oz")) },
-    { id: "kase", ad: "Çorba Kasesi", test: (t) => /kase|kâse/.test(t) },
-    { id: "icecek", ad: "İçecek", test: (t) => /su |soda|ice tea|süt |enerji|330 ml|250 ml 24/.test(t) },
-    { id: "kahve", ad: "Kahve ve Çay", test: (t) => /kahve|çay|coffee|şeker|gold 200|filtre/.test(t) },
-    { id: "bulasik", ad: "Bulaşık", test: (t) => /bulaşık|çatal/.test(t) },
-    { id: "servis", ad: "Servis ve İkram Gereçleri", test: () => false },
-    { id: "saklama", ad: "Hazırlık ve Saklama", test: () => false },
+  C: [
+    { id: "C1", ad: "Havlu Aparatları", test: () => false, gorsel: "/img/products/daire-havlu-aparat.webp" },
+    { id: "C2", ad: "Sıvı Sabun ve Köpük Sabun Aparatları", test: () => false, gorsel: "/img/products/daire-sabun-aparat.webp" },
+    { id: "C3", ad: "Çöp Kovaları", test: () => false, gorsel: "/img/products/daire-cop-kovasi.webp" },
+    { id: "C4", ad: "Mop Aparatları", test: () => false, gorsel: "/img/products/daire-mop-aparat.webp" },
   ],
-  Sağlık: [
-    { id: "masa", ad: "Muayene Masa Örtüsü", test: (t) => /masa örtü/.test(t) },
-    { id: "klozet", ad: "Klozet Kapak Örtüsü", test: (t) => t.includes("klozet") },
-    { id: "maske", ad: "Maske", test: (t) => t.includes("maske") },
-    { id: "eldiven", ad: "Eldiven", test: (t) => t.includes("eldiven") },
-    { id: "atik", ad: "Tıbbi Atık", test: (t) => /atık/.test(t) },
-    { id: "bakim", ad: "Bakım Sarf Malzemeleri", test: () => false },
-    { id: "duzen", ad: "Klinik Düzen ve Dispenser", test: () => false },
+  D: [
+    { id: "D1", ad: "Çöp Poşetleri", test: () => false, gorsel: "/img/products/daire-cop-poseti.webp" },
+    { id: "D2", ad: "Sarf Malzemeleri", test: () => false, gorsel: "/img/products/daire-sarf.webp" },
+    { id: "D3", ad: "Kullan At Ürünler", test: () => false, gorsel: "/img/products/daire-kullan-at.webp" },
   ],
-  Kırtasiye: [
-    { id: "a4", ad: "Fotokopi ve Özel Kâğıtlar", aciklama: "Ebat, gramaj ve paket adedine göre teklif.", test: (t) => ["a4 fotokopi kâğıdı", "a3 fotokopi kâğıdı", "renkli fotokopi kâğıdı", "gramajlı baskı kâğıdı", "fotoğraf kâğıdı", "plotter kâğıdı", "sürekli form kâğıdı", "karbon kâğıdı", "termal pos rulosu"].includes(t) },
-    { id: "kalem", ad: "Kalemler ve Yazı Gereçleri", aciklama: "Uç tipi, çizgi kalınlığı ve renk tercihinize göre teklif.", test: (t) => ["tükenmez kalem", "jel kalem", "roller kalem", "kurşun kalem", "versatil uçlu kalem", "fosforlu kalem", "permanent marker", "beyaz tahta kalemi", "asetat kalemi", "fineliner kalem", "imza kalemi", "dolma kalem", "kalem ucu", "kalem mürekkebi"].includes(t) },
-    { id: "klasor", ad: "Klasör ve Arşivleme", aciklama: "Belge formatı, sırt genişliği ve arşiv ihtiyacına göre seçenekler.", test: (t) => ["geniş klasör", "dar klasör", "halkalı klasör", "arşiv kutusu", "klasör sırt etiketi"].includes(t) },
-    { id: "dosya", ad: "Dosyalar ve Evrak Düzeni", aciklama: "Belge boyutu, kapasite ve kapama tipine göre seçenekler.", test: (t) => ["poşet dosya", "askılı dosya", "körüklü dosya", "çıtçıtlı dosya", "sunum dosyası", "imza dosyası", "dosya ayracı", "sekreterlik"].includes(t) },
-    { id: "not", ad: "Defter, Ajanda ve Notlar", aciklama: "Ebat, sayfa düzeni ve yaprak sayısına göre seçenekler.", test: (t) => ["spiralli defter", "sert kapaklı defter", "bloknot", "küp not kâğıdı", "yapışkanlı not kâğıdı", "sayfa işaretleyici", "ajandalar", "ticari defter", "masa takvimi"].includes(t) },
-    { id: "zimba", ad: "Zımba, Delgeç ve Sabitleme", aciklama: "Kapasite, ölçü ve kullanım sıklığına göre seçenekler.", test: (t) => ["masaüstü zımba makinesi", "zımba teli", "zımba sökücü", "delgeç", "ataş", "evrak mandalı", "raptiye", "harita çivisi", "paket lastiği"].includes(t) },
-    { id: "masaustu", ad: "Masaüstü Düzenleyiciler", aciklama: "Ölçü, malzeme ve masa düzenine göre seçenekler.", test: (t) => ["kalemlik", "evrak rafı", "magazinlik", "kartvizitlik", "masaüstü organizer", "hesap makinesi", "kaşe", "istampa", "istampa mürekkebi"].includes(t) },
-    { id: "kesim", ad: "Kesim, Yapıştırma ve Düzeltme", aciklama: "Ölçü, uygulama yüzeyi ve kullanım amacına göre seçenekler.", test: (t) => ["ofis makası", "maket bıçağı", "maket bıçağı yedeği", "cetvel", "şeffaf ofis bandı", "çift taraflı bant", "bant kesici", "stick yapıştırıcı", "sıvı yapıştırıcı", "silgi", "kalemtıraş", "şerit düzeltici", "sıvı düzeltici"].includes(t) },
-    { id: "sunum", ad: "Sunum ve Planlama", aciklama: "Ebat ve mevcut ekipmanla uyumluluğa göre seçenekler.", test: (t) => ["beyaz yazı tahtası", "mantar pano", "flipchart", "flipchart kâğıdı", "tahta silgisi", "pano mıknatısı", "laminasyon filmi", "cilt kapağı", "cilt spirali"].includes(t) },
-    { id: "zarf", ad: "Zarflar ve Etiketler", aciklama: "Ebat, malzeme ve baskı ihtiyacına göre seçenekler.", test: (t) => ["diplomat zarf", "torba zarf", "hava kabarcıklı zarf", "mektup zarf", "adres etiketi", "barkod etiketi", "raf etiketi", "nokta etiketi"].includes(t) },
-    { id: "pil", ad: "Piller", aciklama: "Cihazın pil kodu ve paket adedine göre teklif.", test: (t) => ["aa kalem pil", "aaa ince kalem pil", "düğme pil", "9v pil"].includes(t) },
+  E: [
+    { id: "E1", ad: "Çay ve Şekerler", test: () => false, gorsel: "/img/products/daire-cay-seker.webp" },
+    { id: "E2", ad: "Kahve", test: () => false, gorsel: "/img/products/daire-kahve.webp" },
+    { id: "E3", ad: "İçecek Grubu", test: () => false, gorsel: "/img/products/daire-icecek.webp" },
+    { id: "E4", ad: "Atıştırmalıklar", test: () => false, gorsel: "/img/products/daire-atistirmalik.webp" },
   ],
-  Ambalaj: [
-    { id: "strec", ad: "Streç", test: (t) => t.includes("streç") },
-    { id: "bant", ad: "Koli Bandı", test: (t) => t.includes("band") },
-    { id: "kraft", ad: "Kraft Çanta", test: (t) => t.includes("kraft çanta") || t.includes("bez taşıma") },
-    { id: "kese", ad: "Kese Kağıdı", test: (t) => t.includes("kese") },
-    { id: "kasa", ad: "Poşetler", test: (t) => t.includes("poşet") },
-    { id: "koli", ad: "Koli ve Kutular", test: (t) => /koli|kutu|separatör|köşe koruyucu/.test(t) },
-    { id: "koruma", ad: "Koruyucu Ambalaj", test: (t) => /balonlu|köpük ambalaj|hava yastığı|dolgu kâğıdı|mukavva rulo/.test(t) },
-    { id: "etiket", ad: "Etiket ve Sevkiyat", test: (t) => /etiket|evrak cebi/.test(t) },
-  ],
-  PC: [
-    { id: "mouse", ad: "Mouse", test: (t) => t.includes("mouse") },
-    { id: "klavye", ad: "Klavye", test: (t) => t.includes("klavye") },
-    { id: "toner", ad: "Toner / Kartuş", test: (t) => /toner|kartuş/.test(t) },
-    { id: "usb", ad: "USB / Kablo", test: (t) => /usb|hdmi|kablo/.test(t) },
-    { id: "power", ad: "Power Bank", test: (t) => t.includes("power") },
-    { id: "depolama", ad: "Veri Depolama", test: () => false },
-    { id: "toplanti", ad: "Toplantı Aksesuarları", test: () => false },
+  F: [
+    { id: "F1", ad: "Kalem ve Yazı Gereçleri", test: () => false },
+    { id: "F2", ad: "Masaüstü Gereçleri", test: () => false },
+    { id: "F3", ad: "Dosya ve Arşivleme Gereçleri", test: () => false },
+    { id: "F4", ad: "Ambalaj Ürünleri", test: () => false },
+    { id: "F5", ad: "Bilgisayar Sarf Malzemeleri", test: () => false },
   ],
 };
 
 const MARKA_TERCIHLERI = {
-  islak: ["Espiga", "Polente", "Sleepy", "Selpak", "Freshmaker", "Papilion", "Deep Fresh", "Komili"],
-  havlu: ["Solo", "Selpak", "Papia", "Familia", "Focus", "Forest", "Rulopak"],
+  C1: ["Palex", "Vialli", "Flosoft"],
 };
 
 function markaTercihSatir(name, brand) {
@@ -324,6 +574,32 @@ function urunAdiYazi(satir) {
     .join(" · ");
 }
 
+function olcuYazi(raw) {
+  let s = String(raw || "").trim();
+  if (!s || /^belirtilmedi$/i.test(s)) return "";
+  const bare = { "4": "4Lt", "2,5": "2,5Lt", "400": "400ML" };
+  if (bare[s]) return bare[s];
+  if (/^\d+\s*[×xX]\s*\d+$/.test(s)) {
+    const [a, b] = s.split(/\s*[×xX]\s*/);
+    return a + " × " + b + " Cm";
+  }
+  s = s.replace(/\s*mililitre\b/gi, "ML");
+  s = s.replace(/\s*kilogram\b/gi, "Kg");
+  s = s.replace(/\s*santimetre\b/gi, " Cm");
+  s = s.replace(/\s*litre\b/gi, "Lt");
+  s = s.replace(/\s*gram\b/gi, "Gr");
+  s = s.replace(/\s*gr\.?(?=\s|$)/gi, "Gr");
+  s = s.replace(/\s*kg\.?(?=\s|$)/gi, "Kg");
+  s = s.replace(/\s*ml\.?(?=\s|$)/gi, "ML");
+  s = s.replace(/\s*mm\.?(?=\s|$)/gi, "Mm");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Cm$/, "$1Cm");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Gr$/, "$1Gr");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Kg$/, "$1Kg");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+ML$/, "$1ML");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Mm$/, "$1Mm");
+  return s.replace(/\s{2,}/g, " ").trim();
+}
+
 function ebatYazi(satir, altAd) {
   let s = String(satir || "");
   const aday = [altAd, altAd.replace(/ları$|leri$/i, ""), altAd.replace(/ Kağıtları$/i, " Kağıdı")];
@@ -348,6 +624,32 @@ function satirParcalar(satir, altAd) {
 function grupFoto(tipId) {
   return GRUP_FOTO[tipId] || "";
 }
+
+function altFoto(altId, grupId) {
+  const hit = Object.values(ALTLAR).flat().find((x) => x.id === altId);
+  return (hit && hit.gorsel) || grupFoto(grupId);
+}
+
+const GRUP_KISA = {
+  A: "Havlu, peçete ve tuvalet kağıdı.",
+  B: "Endüstriyel ve genel temizlik ürünleri.",
+  C: "Havlu, sabun aparatları, çöp kovaları ve mop.",
+  D: "Çöp poşeti, sarf ve kullan at ürünler.",
+  E: "Çay, kahve, içecek ve atıştırmalık.",
+  F: "Kalem, masaüstü, dosya, ambalaj ve bilgisayar sarfı.",
+};
+
+function bindHomeCats() {
+  const ul = document.querySelector(".cat-grid");
+  if (!ul) return;
+  ul.innerHTML = GRUPLAR.filter((g) => VITRIN_GRUPLAR.includes(g.g)).map((g) => {
+    const foto = grupFoto(g.g);
+    const href = "/urunler?g=" + encodeURIComponent(g.g);
+    const kisa = GRUP_KISA[g.g] || "";
+    return `<li><a href="${href}"><img src="${foto}" alt="${g.ad} ürün görseli" width="640" height="640"><span class="cat-body"><b>${g.ad}</b><small>${kisa}</small><span class="cat-go">İncele</span></span></a></li>`;
+  }).join("");
+}
+bindHomeCats();
 
 const form = document.getElementById("siparis-form");
 if (form) {
@@ -375,13 +677,22 @@ if (form) {
     const msg = document.getElementById("msg");
     const btn = form.querySelector("[type=submit]");
     const ilce = String(form.elements.ilce ? form.elements.ilce.value : "").trim();
+    const eposta = String(form.elements.eposta ? form.elements.eposta.value : "").trim();
+    const urunler = String(form.elements.urunler ? form.elements.urunler.value : "").trim();
+    const miktar = String(form.elements.miktar ? form.elements.miktar.value : "").trim();
     const ihtiyac = [window.FerraInterest?.summary(), String(form.elements.not.value || "").trim()].filter(Boolean).join("\n\n");
     const body = {
       firma: form.elements.firma.value,
       yetkili: form.elements.yetkili.value,
       tel: form.elements.tel.value,
       grup: form.elements.grup.value,
-      not: [ilce && `Teslimat ilçesi: ${ilce}`, ihtiyac].filter(Boolean).join("\n"),
+      not: [
+        ilce && `Teslimat: ${ilce}`,
+        eposta && `E-posta: ${eposta}`,
+        urunler && `Ürünler: ${urunler}`,
+        miktar && `Yaklaşık miktar: ${miktar}`,
+        ihtiyac,
+      ].filter(Boolean).join("\n"),
       urun: "siparis-form",
     };
     msg.className = "note";
@@ -415,7 +726,7 @@ if (form) {
       form.reset();
       window.FerraInterest?.clear();
       msg.className = "note is-ok";
-      msg.textContent = "Talebiniz alındı. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.";
+      msg.textContent = form.dataset.success || "Talebiniz alındı. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.";
     } catch (err) {
       msg.className = "note is-hata";
       msg.textContent = err.message || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.";
@@ -434,5 +745,5 @@ if (form) {
       observer.unobserve(entry.target);
     }
   }, { threshold: .08 });
-  document.querySelectorAll('.hero-copy, .hero-visual, .cats-heading, .cat-grid li, .sales-heading, .business-grid a, .path li, .close .wrap, .contact-method, .sector-card').forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero-copy, .hero-visual, .home-ticker, .home-banners-frame, .spot-card, .cats-heading, .cat-grid li, .sales-heading, .business-grid a, .path li, .close .wrap, .home-quote, .sector-chips, .benefit-grid li, .contact-method, .sector-card').forEach(el => observer.observe(el));
 })();
