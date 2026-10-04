@@ -1271,3 +1271,12 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Panel/index.html, app.js ve app.css canlı kaynakla normalize edilmiş SHA-256 eşitliği doğrulandı. src ve wrangler.toml yayımlanmış 5a58b82 tabanından değişmedi. Otomatik yayın incelemesinin ilk panel yan etkisi itirazı bu kanıtlarla giderildi; ikinci incelemede yayın başarıyla gerçekleşti. Panel, giriş, secret veya müşteri verisi değiştirilmedi.
 - npm run check PASS (448 katalog kaydı, teklif akışı ve yönetim). Canlı ferrapro.com tarayıcı kontrolünde üst şerit, altı kategori, üç hizmet slaydı, katalog dışı tedarik alanı mevcut; ikinci slayta klavyeyle geçiş çalışıyor. 390px mobilde yatay taşma ve tarayıcı hata kaydı yok. Gerçek form/mesaj gönderilmedi.
 - Git: yalnızca üst şerit metin değişiklikleri, ana sayfa sürüm referansı ve bu devir notu mevcut codex/visual-refresh / PR #1'e eklenir; önceki diğer yerel değişiklikler korunur.
+
+
+## 4 Ekim 2026 — Site inceleme raporu
+
+- docs/AUDIT-2026-10-04.md: 24 önceliklendirilmiş bulgu/öneri; canlı gözlemler, kaynak riskleri ve öneriler ayrıldı.
+- 17 URL, 448 ürün, 21 dolu alt grup ve 430 benzersiz ürün görseli URL’si tarandı; görsel URL’leri HTTP 200.
+- npm run check PASS; kısıtlı ortamda alt süreç hatası sonrası izinli tekrar başarılı. Masaüstü ve 390px mobil ürün/arama/sektör kontrolleri yapıldı.
+- Gerçek talep/mesaj gönderilmedi; müşteri kaydı okunmadı. Site/panel kodu değiştirilmedi; yayın yapılmadı.
+- Etkileşimli rapor yerel Codex canvases klasöründe; ham kanıtlar output/site-audit altında.
