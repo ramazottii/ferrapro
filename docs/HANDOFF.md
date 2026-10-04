@@ -1249,3 +1249,15 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Doğrulama: npm run check PASS (448 ürün; teklif akışı; yönetim kontrolü). Sandbox alt süreç kısıtı nedeniyle kontrol izinli ortamda tekrarlandı ve geçti. Yeni JS sözdizimi kontrolü ve diff kontrolü geçti. 1440px masaüstü, 390px ve 320px mobil düzen / yatay taşma, menü, kategori çapası ve talep formuna geçiş tarayıcıda kontrol edildi. Gerçek talep gönderilmedi.
 - Git: ortak dal adı codex/visual-refresh olarak eşleştirildi; mevcut PR #1 üzerinden paylaşılır. Önceden var olan diğer dosya değişiklikleri korunur ve bu commit'e dahil edilmez.
 - Yayın: bu ana sayfa sürümü CANLIYA ALINMADI. Kullanıcının bu sürüme yönelik yayın talimatı beklenir. Yerel önizleme: http://127.0.0.1:8789/.
+
+
+## 4 Ekim 2026 — Hizmet carousel'i ve katalog dışı tedarik
+
+- Kullanıcının onayıyla ana sayfaya üç ayrı hizmet sahnesi eklendi: ürün fotoğrafıyla araştırma, ihtiyaç listesini paylaşma, uygun ürünü birlikte seçme. Gerçek halka açık katalog ürünlerini referans alan temsili kompozisyonlar built-in image_gen ile üretildi; telefon/tablet ekranları gerçek uygulama veya müşteri kaydı değildir.
+- WebP dosyaları public/img/home/story-research.webp, story-list.webp, story-guidance.webp (toplam yaklaşık 310 KB). PNG asılları ve ZIP indirmesi output/home-stories içinde yerelde tutulur. Metin ve düğmeler HTML'dir; görsele gömülmez.
+- Carousel ilk açılışta sabit durur; seçim düğmeleri, önceki/sonraki, klavye okları/Home/End ve isteğe bağlı 8 saniyelik oynatma/duraklatma vardır. Otomatik geçiş hover, görünmeyen sekme/alan sırasında durur; elle seçim ve CTA odağı oynatmayı kapatır. Hareket azaltma tercihinde görsel animasyonu kaldırılır. JS yokken üç mesaj da okunabilir.
+- Kategorilerin altında sabit koyu alan: Aradığınız ürünü bulamadınız mı? Katalogda olmayan ürünler için araştırma ve tedarik desteği açıklandı; WhatsApp fotoğraf paylaşımı ve /siparis üzerinden Beni Arayın bağlantıları eklendi. Stok veya bulunabilirlik garantisi verilmez.
+- WhatsApp bağlantıları doğru iş telefonu ve mesaj taslağıyla açılır; dosyayı ziyaretçi WhatsApp'ta ekler. Sitede dosya yükleme veya otomatik mesaj gönderimi eklenmedi.
+- Doğrulama: npm run check PASS (448 ürün, teklif akışı, yönetim kontrolü); home-refresh.js sözdizimi ve diff kontrolleri geçti. Masaüstü 1440px ve mobil 390/320px yatay taşma yok. Üç görsel yüklendi, tarayıcı hata kaydı yok. Seçim, klavye sağ oku/End, son slayttan ilkine dönüş, otomatik geçiş/duraklatma, gizli slayt bağlantılarının görünmezliği ve /siparis geçişi doğrulandı. Gerçek form veya WhatsApp mesajı gönderilmedi.
+- Paylaşım: codex/visual-refresh, mevcut GitHub PR #1. Diğer önceden var olan değişiklikler bu commit kapsamına alınmaz.
+- Yayın: CANLIYA ALINMADI. Önceki ana sayfa yenilemesiyle birlikte yerel önizlemede; sürüme yönelik yayın talimatı beklenir.
