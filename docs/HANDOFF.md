@@ -1237,3 +1237,15 @@ Görsel istem seti: square photorealistic product catalogue photo; seamless ligh
 ## Klavye grubu tamamlandı
 Genel Klavye · Adet tekrarı kaldırıldı. Kablolu Klavye, Kablosuz Klavye, Klavye Mouse Seti ve Numerik Tuş Takımı olarak dört kayıt bırakıldı; her biri ayrı, açık gri fonlu markasız temsili görsele bağlandı. Kaynak istemler docs/keyboard-image-prompts.json içinde. Eşleştirme ve genişletme betikleri güncellendi. npm run check başarılı; PC46, toplam452 kayıt. Önceki mouse yayın notu fa23cd4 de bu gönderime dahil.
 Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43. Canlı tarayıcıda dört doğru isim, dört ayrı ve yüklenmiş görsel doğrulandı.
+
+
+## 4 Ekim 2026 — Ana sayfa ürün keşfi ve görüşme yenilemesi
+
+- Açılışta gerçek katalog ürünlerini referans alan beyaz zeminli kolaj ve yeni tedarik metni kullanıldı.
+- Tekrarlanan slider / ürün grubu listeleri, A–F gruplarını kapsayan altı görselli kategori kartında birleştirildi. Eski #kesfet, #urun-gruplari ve #teklif-al çapaları korundu.
+- Ana sayfadaki üst teklif bandı kaldırıldı. Teklif / Görüşme Talebi düğmeleri doğrudan /siparis adresine gider. Firma ve telefonun yeterli; ürün ve miktarın isteğe bağlı olduğu açıklandı.
+- Sektör kartlarına ihtiyaç örnekleri eklendi. Mobilde talep düğmesi öne çıkarıldı, logo çakışması düzeltildi.
+- Değişiklikler index.html, yeni home-refresh.css / .js ve ana sayfa görselleriyle sınırlı. Mevcut Neden FerraPro kartları korundu. Panel, giriş, özel kaynaklar ve katalog verisi bu çalışmada değiştirilmedi.
+- Doğrulama: npm run check PASS (448 ürün; teklif akışı; yönetim kontrolü). Sandbox alt süreç kısıtı nedeniyle kontrol izinli ortamda tekrarlandı ve geçti. Yeni JS sözdizimi kontrolü ve diff kontrolü geçti. 1440px masaüstü, 390px ve 320px mobil düzen / yatay taşma, menü, kategori çapası ve talep formuna geçiş tarayıcıda kontrol edildi. Gerçek talep gönderilmedi.
+- Git: ortak dal adı codex/visual-refresh olarak eşleştirildi; mevcut PR #1 üzerinden paylaşılır. Önceden var olan diğer dosya değişiklikleri korunur ve bu commit'e dahil edilmez.
+- Yayın: bu ana sayfa sürümü CANLIYA ALINMADI. Kullanıcının bu sürüme yönelik yayın talimatı beklenir. Yerel önizleme: http://127.0.0.1:8789/.
