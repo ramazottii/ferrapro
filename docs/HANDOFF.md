@@ -1261,3 +1261,13 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Doğrulama: npm run check PASS (448 ürün, teklif akışı, yönetim kontrolü); home-refresh.js sözdizimi ve diff kontrolleri geçti. Masaüstü 1440px ve mobil 390/320px yatay taşma yok. Üç görsel yüklendi, tarayıcı hata kaydı yok. Seçim, klavye sağ oku/End, son slayttan ilkine dönüş, otomatik geçiş/duraklatma, gizli slayt bağlantılarının görünmezliği ve /siparis geçişi doğrulandı. Gerçek form veya WhatsApp mesajı gönderilmedi.
 - Paylaşım: codex/visual-refresh, mevcut GitHub PR #1. Diğer önceden var olan değişiklikler bu commit kapsamına alınmaz.
 - Yayın: CANLIYA ALINMADI. Önceki ana sayfa yenilemesiyle birlikte yerel önizlemede; sürüme yönelik yayın talimatı beklenir.
+
+
+## 4 Ekim 2026 — Ana sayfa ve hizmet görselleri CANLIDA
+
+- Kullanıcının açık canlı yayın talimatıyla önceki iki ana sayfa çalışması ve üst şerit metni yayımlandı. Masaüstü: İşletmenizin ihtiyaçları için tek iletişim noktası. Mobil: İşletmeniz için tek iletişim noktası. Ana sayfa site.js sürümü 137.
+- Aktif Cloudflare sürümü: c989a3ae-7e9e-4147-a850-5d035d8e278e (%100 trafik). Önceki/geri dönüş sürümü: 4356f13e-d8ec-443b-8aba-2c2c2b7d2e47.
+- Yayın versions upload --keep-vars ardından versions deploy ile yapıldı. Yeni yüklenen dosyalar yalnızca index.html, site.js, home-refresh.css/js, refresh-hero.webp ve üç story görseli. Diğer varlıklar zaten yüklüydü; mevcut katalog/görsel güncellemeleri korunur.
+- Panel/index.html, app.js ve app.css canlı kaynakla normalize edilmiş SHA-256 eşitliği doğrulandı. src ve wrangler.toml yayımlanmış 5a58b82 tabanından değişmedi. Otomatik yayın incelemesinin ilk panel yan etkisi itirazı bu kanıtlarla giderildi; ikinci incelemede yayın başarıyla gerçekleşti. Panel, giriş, secret veya müşteri verisi değiştirilmedi.
+- npm run check PASS (448 katalog kaydı, teklif akışı ve yönetim). Canlı ferrapro.com tarayıcı kontrolünde üst şerit, altı kategori, üç hizmet slaydı, katalog dışı tedarik alanı mevcut; ikinci slayta klavyeyle geçiş çalışıyor. 390px mobilde yatay taşma ve tarayıcı hata kaydı yok. Gerçek form/mesaj gönderilmedi.
+- Git: yalnızca üst şerit metin değişiklikleri, ana sayfa sürüm referansı ve bu devir notu mevcut codex/visual-refresh / PR #1'e eklenir; önceki diğer yerel değişiklikler korunur.

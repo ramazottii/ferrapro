@@ -198,8 +198,8 @@ function header(active) {
   const drops = GRUPLAR.map((g) => `<li><a href="${katalogYol({ g: g.g })}">${g.ad}</a></li>`).join("");
   return `<div class="head-bar">
     <div class="head-inner">
-      <p class="head-bar-full">İstanbul ve çevresine hızlı ürün tedariki</p>
-      <p class="head-bar-short">Hızlı ürün tedariki</p>
+      <p class="head-bar-full">İşletmenizin ihtiyaçları için tek iletişim noktası.</p>
+      <p class="head-bar-short">İşletmeniz için tek iletişim noktası.</p>
       <div class="head-bar-links">
         <a href="tel:+905307161877">+90 530 716 18 77</a>
       </div>
