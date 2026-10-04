@@ -1,6 +1,6 @@
 # İnceleme düzeltmeleri — 4 Ekim 2026
 
-Bu paket Ferrapro’nun ürün keşfi ve görüşme talebi akışını düzeltir. Canlıya yayın yapılmadı. Mevcut ortak `codex/visual-refresh` dalı ve PR #1 kullanılır.
+Bu paket Ferrapro’nun ürün keşfi ve görüşme talebi akışını düzeltir. 5 Ekim 2026 tarihinde kullanıcı talimatıyla canlıya yayımlandı (Cloudflare f5818466-36a7-49c3-8abd-a4af85a43ad7). Mevcut ortak `codex/visual-refresh` dalı ve PR #1 kullanılır.
 
 ## Uygulananlar
 

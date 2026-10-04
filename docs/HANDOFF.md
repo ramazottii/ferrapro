@@ -1291,3 +1291,10 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - npm run check hem 448 ürünlü çalışma kopyasında hem yalnız commit kapsamını içeren 354 ürünlü Git kopyasında PASS. 205 eşzamanlı + 1 önceki talebin korunması, eski kayıt birleşimi, sayfalı KV okuma, bozuk istekler, SEO ve 404 testleri geçti. Tarayıcıda 320/390/768/1440px taşma kontrolü, ürün/arama → form, filtre, mobil menü ve dialog odağı doğrulandı; gerçek talep/mesaj gönderilmedi.
 - Önceden var olan katalog/görsel, panel, yönetim ve test genişletmeleri korundu, bu commit’e alınmadı. Git kataloğu 354; yerel/canlı 448. Üretilen metaveri her tabanla ayrı eşleştirildi; canlıya eski Git kataloğu yayımlanmamalı. Yerel sitemap 481, Git sitemap 386 URL.
 - Yayın yapılmadı. Mevcut codex/visual-refresh dalı / PR #1 üzerinden paylaşılır. Bu sürüm için canlı yayın talimatı gerekir.
+
+
+## 5 Ekim 2026 — İnceleme düzeltmeleri CANLIDA
+
+- Kullanıcının canlıya al talimatıyla 3df6473 düzeltmeleri, güncel yerel 448 ürünlü katalog korunarak yayımlandı. Aktif Cloudflare sürümü f5818466-36a7-49c3-8abd-a4af85a43ad7 (%100). Önceki sürüm c989a3ae-7e9e-4147-a850-5d035d8e278e.
+- Yayın öncesi npm run check PASS. Panel/index.html, app.js, app.css ve katalog canlıyla eşit doğrulandı. 20 değişen statik varlık yüklendi; panel/giriş dosyaları ve mevcut katalog değiştirilmedi. Worker yalnızca belgelenen talep saklama/okuma ve public sayfa düzeltmelerini içerir.
+- Canlı HTTP: ürün metaverisi/canonical 200, olmayan sayfa 404, katalog 448 ürün, sitemap 481 URL doğrulandı. 390px tarayıcıda ürün bilgisi forma taşındı; yatay taşma yok. Gerçek talep/mesaj gönderilmedi. KVKK süreç doğrulaması ve diğer açık işler AUDIT-FIXES belgesinde devam eder.
