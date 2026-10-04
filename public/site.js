@@ -1,7 +1,7 @@
 const WA = "905307161877";
 
 const GRUPLAR = [
-  { g: "A", ad: "Temizlik Kağıt ürünleri" },
+  { g: "A", ad: "Temizlik Kâğıtları" },
   { g: "B", ad: "Sıvı Temizlik Ürünleri" },
   { g: "C", ad: "Aparatlar ve Ekipmanlar" },
   { g: "D", ad: "Temizlik Sarf Ürünleri" },
@@ -227,7 +227,7 @@ function header(active) {
       </nav>
       <div class="head-actions">
         <a class="btn btn-head btn-head-wa" href="https://wa.me/${WA}"><span class="head-cta-full">WhatsApp’tan Yazın</span><span class="head-cta-short">WhatsApp</span></a>
-        <a class="btn btn-head btn-head-list${ctaOn}" href="/siparis"><span class="head-list-full">Teklif Listem</span><span class="head-list-short">Liste</span> <span data-interest-count hidden></span></a>
+        <a class="btn btn-head btn-head-list${ctaOn}" href="/siparis"><span class="head-list-full">Teklif / Görüşme Talebi</span><span class="head-list-short">Talep Bırak</span> <span data-interest-count hidden></span></a>
       </div>
     </div>
   </div>
@@ -256,6 +256,7 @@ function footer() {
       <a href="/hakkimizda">Hakkımızda</a>
       <a href="/sektorler">Sektörler</a>
       <a href="/iletisim">İletişim</a>
+      <a href="/kvkk">KVKK aydınlatma metni</a>
     </nav>
     <div class="foot-col">
       <h2>İletişim</h2>
@@ -574,14 +575,16 @@ function urunAdiYazi(satir) {
     .join(" · ");
 }
 
+function aramaMetni(raw) {
+  return String(raw || '').toLocaleLowerCase('tr').replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 function olcuYazi(raw) {
   let s = String(raw || "").trim();
   if (!s || /^belirtilmedi$/i.test(s)) return "";
-  const bare = { "4": "4Lt", "2,5": "2,5Lt", "400": "400ML" };
-  if (bare[s]) return bare[s];
   if (/^\d+\s*[×xX]\s*\d+$/.test(s)) {
     const [a, b] = s.split(/\s*[×xX]\s*/);
-    return a + " × " + b + " Cm";
+    return a + " × " + b;
   }
   s = s.replace(/\s*mililitre\b/gi, "ML");
   s = s.replace(/\s*kilogram\b/gi, "Kg");
@@ -597,7 +600,7 @@ function olcuYazi(raw) {
   s = s.replace(/^(\d+(?:,\d+)?)\s+Kg$/, "$1Kg");
   s = s.replace(/^(\d+(?:,\d+)?)\s+ML$/, "$1ML");
   s = s.replace(/^(\d+(?:,\d+)?)\s+Mm$/, "$1Mm");
-  return s.replace(/\s{2,}/g, " ").trim();
+  return s.replace(/(\d)\s*(cm|mm|kg|gr|ml|lt)\b/gi, (_, n, unit) => n + ' ' + ({gr:'g',lt:'L'}[unit.toLowerCase()] || unit.toLowerCase())).replace(/\s{2,}/g, " ").trim();
 }
 
 function ebatYazi(satir, altAd) {
@@ -662,7 +665,7 @@ if (form) {
 
   const gelen = new URLSearchParams(location.search);
   const gOk = gecerliG((gelen.get("g") || "").trim());
-  const satir = gelen.get("satir") || "";
+  const satir = (gelen.get("satir") || "").slice(0, 1000);
   const grupEl = form.elements.grup;
   const notEl = form.elements.not;
   if (gOk && grupEl && !String(grupEl.value || "").trim()) {
@@ -670,6 +673,15 @@ if (form) {
   }
   if (satir && notEl && !String(notEl.value || "").trim()) {
     notEl.value = satir;
+    const context = document.createElement('section');
+    context.id = 'quote-context';
+    context.className = 'catalog-sourcing';
+    const title = document.createElement('h2'); title.textContent = 'Görüşmek istediğiniz ihtiyaç';
+    const detail = document.createElement('p'); detail.textContent = satir;
+    context.append(title, detail);
+    const review = document.getElementById('interest-review');
+    (review || form).before(context);
+    if (review && !window.FerraInterest?.summary()) review.hidden = true;
   }
 
   form.addEventListener("submit", async (e) => {
@@ -694,6 +706,7 @@ if (form) {
         ihtiyac,
       ].filter(Boolean).join("\n"),
       urun: "siparis-form",
+      website: form.elements.website?.value || "",
     };
     msg.className = "note";
     msg.textContent = "Gönderiliyor…";
@@ -724,6 +737,9 @@ if (form) {
         throw new Error(sunucu || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.");
       }
       form.reset();
+      document.getElementById('quote-context')?.remove();
+      const review = document.getElementById('interest-review');
+      if (review) review.hidden = false;
       window.FerraInterest?.clear();
       msg.className = "note is-ok";
       msg.textContent = form.dataset.success || "Talebiniz alındı. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.";

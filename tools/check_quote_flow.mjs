@@ -14,6 +14,11 @@ const env = {
       return value == null ? null : type === 'json' ? JSON.parse(value) : value;
     },
     async put(key, value) { memory.set(key, value); },
+    async list({prefix, cursor}) {
+      const all = [...memory.keys()].filter(key=>key.startsWith(prefix));
+      const start = Number(cursor || 0), end = start + 37;
+      return {keys:all.slice(start,end).map(name=>({name})),list_complete:end>=all.length,cursor:String(end)};
+    },
   },
   ASSETS: { async fetch() { return new Response('test asset'); } },
 };
@@ -26,7 +31,14 @@ assert.equal(memory.size,0,'Invalid requests must not write data');
 const accepted = await send('ferrapro.com','/api/teklif',post(quote));
 assert.equal(accepted.status,200);
 assert.deepEqual(await accepted.json(),{ok:true});
-assert.equal(JSON.parse(memory.get('state')).vitrin_teklifler.length,1);
+assert.equal([...memory.keys()].filter(key=>key.startsWith('vitrin-quote:')).length,1);
+assert.equal(memory.has('state'),false,'Public quote must not read or write panel state');
+const concurrent = await Promise.all(Array.from({length:205},(_,i)=>send('ferrapro.com','/api/teklif',post({...quote,firma:'TEST '+i}))));
+assert.ok(concurrent.every(response=>response.status===200));
+assert.equal([...memory.keys()].filter(key=>key.startsWith('vitrin-quote:')).length,206,'All concurrent requests, including those beyond 200, must remain stored');
+assert.equal((await send('ferrapro.com','/api/teklif',post({...quote,website:'bot'}))).status,400);
+assert.equal((await send('ferrapro.com','/api/teklif',{...post(quote),headers:{'content-type':'application/json',origin:'https://unrelated.example'}})).status,403);
+assert.equal((await send('ferrapro.com','/api/teklif',{method:'POST',body:'{'})).status,400);
 for (const path of ['/api/state','/api/catalog']) {
   assert.equal((await send('ferrapro.com',path)).status,404);
 }
@@ -54,7 +66,15 @@ assert.match(cookie,/HttpOnly/);
 assert.match(cookie,/Secure/);
 const state = await send('tedarik.ferranoi.com','/api/state',{headers:{cookie:cookie.split(';')[0]}});
 assert.equal(state.status,200);
-assert.equal((await state.json()).vitrin_teklifler[0].not,quote.not,'Panel API must retain full multiline request');
+const panelData = await state.json();
+const panelQuotes = panelData.vitrin_teklifler;
+assert.equal(panelQuotes.length,206,'Panel reads all quote pages');
+assert.ok(panelQuotes.every(q=>q.not===quote.not),'Panel API must retain full multiline request');
+const savedState = memory.has('state') ? JSON.parse(memory.get('state')) : panelData;
+savedState.vitrin_teklifler=[{id:1,firma:'LEGACY',created_at:'2020-01-01',not:'Legacy record'}];
+memory.set('state',JSON.stringify(savedState));
+const merged = await send('tedarik.ferranoi.com','/api/state',{headers:{cookie:cookie.split(';')[0]}});
+assert.equal((await merged.json()).vitrin_teklifler.length,207,'Existing legacy records remain visible');
 env.SELCUK_PASSWORD=randomUUID();
 assert.equal((await send('tedarik.ferranoi.com','/api/login',post({username:'selcuk',password:env.SELCUK_PASSWORD}))).status,200);
 console.log('PASS: validation, isolated quote persistence, panel API readback, public/private routes and configured-password login.');

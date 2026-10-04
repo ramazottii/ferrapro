@@ -22,6 +22,12 @@ Statik önizlemede API yoktur: gönderim 404 döner. Başarılı form gönderimi
 npm run check
 ```
 
+Halka açık katalog veya kategori tanımları değişince önce `npm run build:public`
+çalıştırın. Bu komut kategori/ürün metaverisini ve sitemap'i yalnızca
+`public/katalog.json` ile halka açık sınıflandırmadan üretir. Kontroller, bu
+dosyalar katalogla eşleşmediğinde durur. Yerel/canlı katalog ile Git kataloğu
+farklıysa yayın sırasında güncel kataloğu koruyun; eski Git kopyasıyla ezmeyin.
+
 ## Kod haritası
 
 - public/site.js: ortak menü, kategori eşleme kuralları, teklif formu.

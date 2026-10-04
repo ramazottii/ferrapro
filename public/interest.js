@@ -46,7 +46,7 @@ window.FerraInterest = (() => {
       el.hidden = n === 0;
       el.textContent = n ? `(${n})` : "";
       const host = el.closest("a");
-      if (host) host.setAttribute("aria-label", n ? `Teklif Listem (${n})` : "Teklif Listem");
+      if (host) host.setAttribute("aria-label", n ? `Teklif / Görüşme Talebi (${n} seçim)` : "Teklif / Görüşme Talebi");
     });
     const review = document.getElementById('interest-review');
     if (!review) return;

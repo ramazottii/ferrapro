@@ -12,6 +12,8 @@ import {
 } from "./pricing.js";
 import { buildKiyas } from "./kiyas.js";
 import { selcukMenu, selcukBakis } from "./selcuk.js";
+import { storeQuote, readQuotes } from "./quote-store.js";
+import { publicPage } from "./public-pages.js";
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
 
@@ -56,7 +58,7 @@ export default {
         next.search = url.search;
         return Response.redirect(next, 301);
       }
-      return env.ASSETS.fetch(request);
+      return publicPage(request, env, url);
     }
     if (isPanelHost(url.hostname) && (url.pathname === "/" || url.pathname === "")) {
       return Response.redirect(new URL("/panel/", url), 302);
@@ -343,6 +345,8 @@ async function save(env, state) {
 }
 
 function handleVitrinTeklifReady(body) {
+  if (!body || typeof body !== 'object' || Array.isArray(body)) fail(400, 'Geçersiz talep');
+  if (String(body.website || '').trim()) fail(400, 'Talep doğrulanamadı. Lütfen telefonla iletişime geçin.');
   const firma = String(body.firma || "").trim();
   const tel = String(body.tel || "").trim();
   const yetkili = String(body.yetkili || "").trim();
@@ -350,24 +354,22 @@ function handleVitrinTeklifReady(body) {
   const grup = String(body.grup || "").trim();
   const urun = String(body.urun || "").trim();
   if (firma.length < 2) fail(400, "Firma adı gerekli");
-  if (tel.replace(/\D/g, "").length < 10) fail(400, "Telefon gerekli");
-  if (not.length > 2000 || urun.length > 300 || firma.length > 120 || yetkili.length > 80) {
+  if (!/^[+\d\s().-]+$/.test(tel) || tel.replace(/\D/g, "").length < 10 || tel.replace(/\D/g, "").length > 15 || tel.length > 40) fail(400, "Geçerli bir telefon numarası yazın");
+  if (not.length > 2000 || urun.length > 300 || firma.length > 120 || yetkili.length > 80 || grup.length > 80) {
     fail(400, "Alan çok uzun");
   }
   return { firma, tel, yetkili, not, grup, urun };
 }
 
 async function handleVitrinTeklif(request, env) {
-  const kayit = handleVitrinTeklifReady(await request.json());
-  const state = await load(env);
-  state.vitrin_teklifler = state.vitrin_teklifler || [];
-  state.vitrin_teklifler.unshift({
-    id: ++state.seq,
-    ...kayit,
-    created_at: new Date().toISOString(),
-  });
-  if (state.vitrin_teklifler.length > 200) state.vitrin_teklifler.length = 200;
-  await save(env, state);
+  const origin = request.headers.get('origin');
+  if (origin && !['https://ferrapro.com','https://www.ferrapro.com'].includes(origin)) fail(403, 'Geçersiz kaynak');
+  const text = await request.text();
+  if (text.length > 12000) fail(413, 'Talep çok uzun');
+  let body;
+  try { body = JSON.parse(text); } catch { fail(400, 'Geçersiz talep'); }
+  const kayit = handleVitrinTeklifReady(body);
+  await storeQuote(env, kayit);
   return json({ ok: true });
 }
 
@@ -392,7 +394,7 @@ async function handleApi(request, env, url) {
         catalog_version: state.catalog_version,
       });
     }
-    return json(withAnalytics(state));
+    return json(withAnalytics({ ...state, vitrin_teklifler: await readQuotes(env, state.vitrin_teklifler) }));
   }
   if (path === "/api/maliyet" && method === "POST") {
     const user = await requireUser(request, env);

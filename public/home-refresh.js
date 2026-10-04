@@ -5,8 +5,6 @@
   if (!request) return;
   request.querySelector(".head-list-full").textContent = "Teklif / Görüşme Talebi";
   request.querySelector(".head-list-short").textContent = "Talep Bırak";
-  request.querySelector("[data-interest-count]")?.remove();
-  request.removeAttribute("aria-label");
 })();
 
 // Messages remain readable as stacked cards when JavaScript is unavailable.

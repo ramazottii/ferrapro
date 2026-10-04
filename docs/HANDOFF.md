@@ -1280,3 +1280,14 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - npm run check PASS; kısıtlı ortamda alt süreç hatası sonrası izinli tekrar başarılı. Masaüstü ve 390px mobil ürün/arama/sektör kontrolleri yapıldı.
 - Gerçek talep/mesaj gönderilmedi; müşteri kaydı okunmadı. Site/panel kodu değiştirilmedi; yayın yapılmadı.
 - Etkileşimli rapor yerel Codex canvases klasöründe; ham kanıtlar output/site-audit altında.
+
+
+## 4 Ekim 2026 — İnceleme düzeltmeleri (yerel / PR)
+
+- Ürün ve sonuçsuz arama bağlamı forma taşınır; Türkçe arama, marka filtresi, sıralama, katalog dışı tedarik CTA’ları, mobil ürün detayı ve erişilebilir görsel dialogu düzeltildi. Sektör bağlantıları ve metinleri gerçek kapsama uyarlandı.
+- Yeni talepler ayrı UUID KV anahtarlarına yazılır; ortak panel state kaydı değişmez, 200 kayıt kırpması yoktur. Yetkili GET /api/state eski/yeni talepleri birleştirir. Panel UI, giriş ve yetki kodu değiştirilmedi. KV görünürlük gecikmesi ve yüksek hacimde sayfalama ihtiyacı devam eder.
+- Ürün/kategori metaverisi, başlangıç HTML içeriği, sitemap, BreadcrumbList/Organization ve gerçek 404 eklendi. Katalog değişince npm run build:public çalıştırılmalı.
+- Kullanıcının vergi levhasından unvan/adres; mesajından info@ferrapro.com alındı. Ana sayfa/kurumsal sayfalarda Ümraniye adresi kullanılır. PDF, vergi numarası ve doğrulama kodu commit edilmez. KVKK metni hazırlandı; saklama politikası ve yurt dışı aktarım düzeninin hukuki/operasyonel doğrulaması açık iş. Diğer açık işler docs/AUDIT-FIXES-2026-10-04.md içinde.
+- npm run check hem 448 ürünlü çalışma kopyasında hem yalnız commit kapsamını içeren 354 ürünlü Git kopyasında PASS. 205 eşzamanlı + 1 önceki talebin korunması, eski kayıt birleşimi, sayfalı KV okuma, bozuk istekler, SEO ve 404 testleri geçti. Tarayıcıda 320/390/768/1440px taşma kontrolü, ürün/arama → form, filtre, mobil menü ve dialog odağı doğrulandı; gerçek talep/mesaj gönderilmedi.
+- Önceden var olan katalog/görsel, panel, yönetim ve test genişletmeleri korundu, bu commit’e alınmadı. Git kataloğu 354; yerel/canlı 448. Üretilen metaveri her tabanla ayrı eşleştirildi; canlıya eski Git kataloğu yayımlanmamalı. Yerel sitemap 481, Git sitemap 386 URL.
+- Yayın yapılmadı. Mevcut codex/visual-refresh dalı / PR #1 üzerinden paylaşılır. Bu sürüm için canlı yayın talimatı gerekir.

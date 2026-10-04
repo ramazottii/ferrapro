@@ -1142,3 +1142,16 @@ a.btn.btn-head.btn-head-list:hover { color: #fff; background: var(--navy); }
 @keyframes menu-reveal { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:none; } }
 @media(max-width:768px) { .head nav a::after { left:14px; right:14px; bottom:3px; } }
 @media(prefers-reduced-motion:reduce) { .btn:active { transform:none; } }
+
+/* One contact hierarchy throughout the public site. */
+.head-band { display:none; }
+.head-actions a.btn.btn-head-wa { background:transparent; color:var(--ink); border:1px solid #d9e1e6; box-shadow:none; }
+.head-actions a.btn.btn-head-list { background:#0e7490; color:#fff; border-color:#0e7490; }
+@media(max-width:1200px) {
+ .head-actions .head-list-full,.head-actions .head-cta-full { display:none; }
+ .head-actions .head-list-short,.head-actions .head-cta-short { display:inline; }
+}
+@media(max-width:540px) {
+ .head-actions a.btn.btn-head-wa { display:none; }
+ .head-main .brand-logo { width:140px; max-width:100%; height:auto; }
+}
