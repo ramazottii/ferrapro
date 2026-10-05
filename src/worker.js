@@ -16,6 +16,7 @@ import { storeQuote, readQuotes } from "./quote-store.js";
 import { publicPage } from "./public-pages.js";
 import { guardQuote, readQuoteBody } from "./quote-guard.js";
 import { notifyQuote } from "./quote-notify.js";
+import { validateFollowup, saveFollowup, attachFollowups } from "./quote-tracking.js";
 import { acceptMetric, measure } from "./conversion-metrics.js";
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
@@ -402,7 +403,19 @@ async function handleApi(request, env, url) {
         catalog_version: state.catalog_version,
       });
     }
-    return json(withAnalytics({ ...state, vitrin_teklifler: await readQuotes(env, state.vitrin_teklifler) }));
+    return json(withAnalytics({ ...state, vitrin_teklifler: await attachFollowups(env, await readQuotes(env, state.vitrin_teklifler)) }));
+  }
+  if (path === '/api/vitrin-takip' && method === 'POST') {
+    const user = await requireUser(request, env);
+    if(user.role !== 'ortak') fail(403, 'Yetkisiz');
+    const origin=request.headers.get('origin');
+    if(origin && origin!==url.origin) fail(403,'Geçersiz kaynak');
+    let body;try{body=JSON.parse(await readQuoteBody(request));}catch(err){fail(err.status||400,'Geçersiz talep');}
+    const fields=validateFollowup(body);
+    let exists=await env.KV.get('vitrin-quote:'+fields.quote_id,'json');
+    if(!exists){const state=await load(env);exists=(state.vitrin_teklifler||[]).find(q=>String(q.id)===fields.quote_id);}
+    if(!exists)fail(404,'Talep bulunamadı');
+    return json({ok:true,event:await saveFollowup(env,fields,user)});
   }
   if (path === "/api/maliyet" && method === "POST") {
     const user = await requireUser(request, env);

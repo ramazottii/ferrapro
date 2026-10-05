@@ -24,6 +24,7 @@ Aktif görüşmeler, satışa dönüşen kayıtlar, yasal yükümlülük veya uy
 ## Altyapı ve aktarım envanteri
 
 - Cloudflare Workers/KV: talep firma/telefon, isteğe bağlı kişi/not/grup, kayıt zamanı ve kimliği. Erişim mevcut yetkili panel hesabıyla.
+- Talep takibi: aşama, görüşme notu, sonraki takip tarihi, işlemi yapan yetkili ve işlem zamanı ayrı `vitrin-followup:<talep kimliği>:<olay kimliği>` kayıtlarında tutulur. Aynı talebin saklama değerlendirmesine dahildir. Tek kayıt imha aracı yeni UUID taleplerinin takip geçmişini de kapsar; işlem sırasında bu talepte düzenleme durdurulmalıdır. Araç kısmi başarısızlığı raporlar; gerçek veri silme bu geliştirme kapsamında çalıştırılmadı.
 - Cloudflare Email: yalnız yeni kayıt bildirimi, UUID, tarih ve panel bağlantısı; müşteri telefonu/notu e-postaya eklenmez. İki alıcı kullanıcı tarafından doğrulanmıştır; özel adresler Worker secret'ında tutulur.
 - Cloudflare Analytics Engine: olay adı ve sabit sayfa türü; ad, telefon, form notu, ham arama, ziyaretçi kimliği veya IP veri noktasına yazılmaz. Tarayıcı çerezi/kalıcı kimlik oluşturulmaz. Ağ katmanında IP işlenmesi ayrıca hosting kapsamındadır.
 - WhatsApp ve doğrudan e-posta: ziyaretçi dış hizmete kendi seçimiyle geçer; konuşmalar için şirketin kendi cihaz/hesap saklama düzeni ayrıca uygulanır.

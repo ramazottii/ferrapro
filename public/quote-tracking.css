@@ -1,0 +1,13 @@
+.quote-tracking .quote-filters{display:flex;gap:12px;flex-wrap:wrap}
+.quote-tracking .quote-filters>*{flex:1;min-width:180px}
+.quote-tracking .quote-list{display:grid;gap:20px}
+.quote-tracking .quote-card{padding:20px;border:1px solid #d7dee4;border-radius:12px;min-width:0}
+.quote-tracking .quote-card h3{margin-top:0;overflow-wrap:anywhere}
+.quote-tracking .quote-original,.quote-tracking .quote-history{white-space:pre-wrap;overflow-wrap:anywhere}
+.quote-tracking form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quote-tracking form label{display:grid;gap:6px;min-width:0}
+.quote-tracking form label:nth-child(3),.quote-tracking form [role=status]{grid-column:1/-1}
+.quote-tracking input,.quote-tracking select,.quote-tracking textarea{width:100%;box-sizing:border-box;min-height:44px;font:inherit;padding:9px;border:1px solid #b9c5d1;border-radius:6px}
+.quote-tracking summary{cursor:pointer;padding:12px 0;min-height:24px}
+.quote-tracking .quote-due{color:#8d430b;font-weight:600}
+@media(max-width:600px){.quote-tracking form{grid-template-columns:1fr}.quote-tracking .quote-card{padding:12px}}

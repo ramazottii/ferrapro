@@ -7,7 +7,7 @@ export async function notifyQuote(env, record) {
       from:env.QUOTE_NOTIFY_FROM,
       to,
       subject:'FerraPro — yeni görüşme talebi',
-      text:`Yeni bir görüşme talebi kaydedildi.\nKayıt: ${record.id}\nTarih: ${record.created_at}\n\nAyrıntılar için yetkili hesabınızla paneli açın:\nhttps://tedarik.ferranoi.com/panel/`,
+      text:`Yeni bir görüşme talebi kaydedildi.\nKayıt: ${record.id}\nTarih: ${record.created_at}\n\nAyrıntılar için yetkili hesabınızla paneli açın:\nhttps://tedarik.ferranoi.com/panel/#/vitrin`,
     }))));
   const sent=outcomes.filter(x=>x.status==='fulfilled').length;
   const result = {status:sent===destinations.length?'sent':sent?'partial':'failed', sent, total:destinations.length, at:new Date().toISOString()};
