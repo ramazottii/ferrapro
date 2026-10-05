@@ -112,7 +112,7 @@ function timingEqual(a, b) {
   return diff === 0;
 }
 
-function yonetimLoginPage(error) {
+function yonetimLoginPage(error, next = '') {
   const msg = error ? `<p class="err">${error}</p>` : "";
   return new Response(`<!DOCTYPE html>
 <html lang="tr">
@@ -136,8 +136,9 @@ function yonetimLoginPage(error) {
 </head>
 <body>
   <form method="post" action="/yonetim/giris">
+    <input type="hidden" name="next" value="${next === '/yonetim/talepler' ? next : ''}">
     <img src="/logo/ferrapro-header.png?v=1" alt="FerraPro">
-    <h1>Ürün kataloğu</h1>
+    <h1>FerraPro Yönetim</h1>
     <p>Devam etmek için şifre girin.</p>
     ${msg}
     <label for="password">Şifre</label>
@@ -168,8 +169,9 @@ async function handleYonetim(request, env, url) {
     const body = await request.text();
     const params = new URLSearchParams(body);
     const given = String(params.get("password") || "");
-    if (!timingEqual(given, pin)) return yonetimLoginPage("Şifre yanlış.");
-    const next = new URL("/yonetim/", url);
+    const destination=params.get('next') === '/yonetim/talepler' ? '/yonetim/talepler' : '/yonetim/';
+    if (!timingEqual(given, pin)) return yonetimLoginPage("Şifre yanlış.", destination);
+    const next = new URL(destination, url);
     return new Response(null, {
       status: 302,
       headers: { location: next.toString(), "set-cookie": yonetimCookieHeader(token, url) },
@@ -177,9 +179,38 @@ async function handleYonetim(request, env, url) {
   }
 
   if (readCookie(request, YONETIM_COOKIE) === token) {
+    if (path === '/yonetim/api/talepler' || path === '/yonetim/api/takip') {
+      const headers={'cache-control':'no-store'};
+      // Customer details must never be accessible with the legacy fallback PIN.
+      if (!env.YONETIM_PASSWORD || !env.SESSION_SECRET) return json({error:'Talep erişimi için özel yönetim parolası yapılandırılmalıdır.'},503,headers);
+      try {
+        if (path === '/yonetim/api/talepler' && request.method === 'GET') {
+          const legacy=await env.KV.get('state','json');
+          const quotes=await readQuotes(env,legacy?.vitrin_teklifler||[]);
+          return json({talepler:await attachFollowups(env,quotes)},200,headers);
+        }
+        if (path === '/yonetim/api/takip' && request.method === 'POST') {
+          if(request.headers.get('origin') !== url.origin) fail(403,'Geçersiz kaynak');
+          let body;try{body=JSON.parse(await readQuoteBody(request));}catch(err){fail(err.status||400,'Geçersiz talep');}
+          const fields=validateFollowup(body);
+          const quote=await env.KV.get('vitrin-quote:'+fields.quote_id,'json');
+          const legacy=quote?null:await env.KV.get('state','json');
+          if(!quote && !(legacy?.vitrin_teklifler||[]).some(q=>String(q.id)===fields.quote_id))fail(404,'Talep bulunamadı');
+          return json({ok:true,event:await saveFollowup(env,fields,{name:'FerraPro Yönetim'})},200,headers);
+        }
+        return json({error:'Yöntem desteklenmiyor'},405,headers);
+      }catch(err){return json({error:err.message||'Sunucu hatası'},err.status||500,headers);}
+    }
+    if(path === '/yonetim/talepler') {
+      const asset=new URL('/yonetim/talepler.html',url);
+      const response=await env.ASSETS.fetch(new Request(asset,request));
+      const headers=new Headers(response.headers);headers.set('cache-control','no-store');
+      return new Response(response.body,{status:response.status,headers});
+    }
     return env.ASSETS.fetch(request);
   }
 
+  if (path === '/yonetim/talepler') return yonetimLoginPage('',path);
   if (path === "/yonetim" || path === "/yonetim/") return yonetimLoginPage("");
   return new Response("Unauthorized", { status: 401, headers: { "cache-control": "no-store" } });
 }
@@ -403,19 +434,7 @@ async function handleApi(request, env, url) {
         catalog_version: state.catalog_version,
       });
     }
-    return json(withAnalytics({ ...state, vitrin_teklifler: await attachFollowups(env, await readQuotes(env, state.vitrin_teklifler)) }));
-  }
-  if (path === '/api/vitrin-takip' && method === 'POST') {
-    const user = await requireUser(request, env);
-    if(user.role !== 'ortak') fail(403, 'Yetkisiz');
-    const origin=request.headers.get('origin');
-    if(origin && origin!==url.origin) fail(403,'Geçersiz kaynak');
-    let body;try{body=JSON.parse(await readQuoteBody(request));}catch(err){fail(err.status||400,'Geçersiz talep');}
-    const fields=validateFollowup(body);
-    let exists=await env.KV.get('vitrin-quote:'+fields.quote_id,'json');
-    if(!exists){const state=await load(env);exists=(state.vitrin_teklifler||[]).find(q=>String(q.id)===fields.quote_id);}
-    if(!exists)fail(404,'Talep bulunamadı');
-    return json({ok:true,event:await saveFollowup(env,fields,user)});
+    return json(withAnalytics({ ...state, vitrin_teklifler: await readQuotes(env, state.vitrin_teklifler) }));
   }
   if (path === "/api/maliyet" && method === "POST") {
     const user = await requireUser(request, env);

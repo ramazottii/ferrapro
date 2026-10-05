@@ -17,6 +17,7 @@ env.QUOTE_EMAIL={send:async message=>{sent.push(message);if(message.to.startsWit
 res=await worker.fetch(request(quote),env);assert.equal(res.status,200);
 assert.equal([...stored.keys()].filter(k=>k.startsWith('vitrin-quote:')).length,1);
 assert.equal(sent.length,2);assert.ok(sent.every(m=>!m.text.includes(quote.tel)&&!m.text.includes(quote.firma)));
+assert.ok(sent.every(m=>m.text.includes('https://ferrapro.com/yonetim/talepler')&&!m.text.includes('ferranoi')));
 assert.equal(JSON.parse([...stored.entries()].find(([k])=>k.startsWith('vitrin-notification:'))[1]).status,'partial');
 assert.equal(points.at(-1).blobs[0],'quote_saved');
 env.QUOTE_EMAIL.send=()=>{throw Error('synchronous failure');};

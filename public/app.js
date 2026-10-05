@@ -844,7 +844,6 @@ function fmtWhen(iso) {
 }
 
 function renderVitrinTalepler() {
-  if(window.FerraQuoteTracking) return window.FerraQuoteTracking.mount(main,state.vitrin_teklifler||[],body=>api('/api/vitrin-takip',{method:'POST',body:JSON.stringify(body)}),user?.role==='ortak');
   const rows = state.vitrin_teklifler || [];
   main.innerHTML = `
     <section class="card">

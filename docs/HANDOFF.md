@@ -1328,3 +1328,12 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Yalnız ortak rolü yazabilir; mevcut giriş/parola düzeni değişmedi. Bildirim e-postasındaki bağlantı doğrudan talep ekranını açar. Yeni UUID taleplerinin imha aracı takip geçmişini de kapsar; hiçbir gerçek kayıt silinmedi.
 - npm run check PASS: yetki, kaynak, tarih/not doğrulaması, eşzamanlı geçmiş, eski sayısal kimlikler ve kapanışta tarihin temizlenmesi. Masaüstü 1440px / mobil 390px örnek kayıtlarla kaydetme, geçmiş, filtre ve taslak koruma doğrulandı; yatay taşma ve tarayıcı hatası yok. Kanıtlar yerel output/quote-tracking altında. Gerçek müşteri verisi kullanılmadı.
 - Paylaşım codex/visual-refresh / PR #1. Bu sürüm canlıya alınmadı; ilgili sürüm için yayın talimatı beklenir. Aktif sürüm c30178d5-93eb-4ee3-93ca-0b3f0d54c6a7; Analytics Engine etkinleştirme, posta kutusu teslim teyidi ve saklama süresi kararı hâlâ bekleniyor.
+
+
+## 5 Ekim 2026 — Talep yönetimi Ferrapro alanına taşındı (yayın bekliyor)
+
+- Kullanıcı talep takibini Ferranoi yerine Ferrapro yönetiminde istedi. /yonetim/talepler sayfası, yönetim menüsünde bağlantı, yalnız talep verisi döndüren korumalı GET ve takip güncelleyen POST uçları eklendi. Yeni bildirim bağlantısı https://ferrapro.com/yonetim/talepler oldu. Eski e-postalar değişmez.
+- Önceki yayımlanmamış Ferranoi takip entegrasyonu kaldırıldı; eski panel listesi ve giriş kodu korunur. Mevcut KV talepleri ve takip geçmişi aynı kaynaklardan okunur, kayıt taşıma/kopyalama yapılmaz.
+- Özel YONETIM_PASSWORD canlıda tanımlı değil (yalnız secret adları kontrol edildi). Yeni talep API'leri eski sabit PIN ile açılmaz; özel parola ve SESSION_SECRET gerektirir. Kullanıcıya mevcut Ayfer/Ramazan hesaplarını Ferrapro'da kullanma veya ayrı yönetim parolası seçeneği soruldu; cevap bekleniyor. Kimlik doğrulama seçimi ve yayın tamamlanmadı.
+- npm run check PASS; girişsiz erişim, kaynak kontrolü, özel veri ayrımı, eşzamanlı notlar, eski kimlikler, tarih doğrulama ve fallback PIN engeli test edildi. 1440/390px örnek kayıtlarla kaydetme/tarih/aşama kontrolü geçti, mobil taşma ve konsol hatası yok. Görseller output/ferrapro-talepler altında. Gerçek müşteri kaydı kullanılmadı; e-posta gönderilmedi.
+- Kullanıcı önceki sistem testinin Ayfer'e 15.43'te ulaştığını doğruladı. Ramazan teslim teyidi hâlâ yok. Aktif canlı sürüm değişmedi: c30178d5-93eb-4ee3-93ca-0b3f0d54c6a7.
