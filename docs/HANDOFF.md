@@ -1337,3 +1337,10 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Özel YONETIM_PASSWORD canlıda tanımlı değil (yalnız secret adları kontrol edildi). Yeni talep API'leri eski sabit PIN ile açılmaz; özel parola ve SESSION_SECRET gerektirir. Kullanıcıya mevcut Ayfer/Ramazan hesaplarını Ferrapro'da kullanma veya ayrı yönetim parolası seçeneği soruldu; cevap bekleniyor. Kimlik doğrulama seçimi ve yayın tamamlanmadı.
 - npm run check PASS; girişsiz erişim, kaynak kontrolü, özel veri ayrımı, eşzamanlı notlar, eski kimlikler, tarih doğrulama ve fallback PIN engeli test edildi. 1440/390px örnek kayıtlarla kaydetme/tarih/aşama kontrolü geçti, mobil taşma ve konsol hatası yok. Görseller output/ferrapro-talepler altında. Gerçek müşteri kaydı kullanılmadı; e-posta gönderilmedi.
 - Kullanıcı önceki sistem testinin Ayfer'e 15.43'te ulaştığını doğruladı. Ramazan teslim teyidi hâlâ yok. Aktif canlı sürüm değişmedi: c30178d5-93eb-4ee3-93ca-0b3f0d54c6a7.
+
+## 6 Ekim 2026 — Canlı görsel denetimi (düzeltme/yayın yapılmadı)
+
+- docs/VISUAL-AUDIT-2026-10-06.md: üç krem alt kategori (D1/D2/D3), kumaş zeminli Islak Havlular ve ürün fotoğraflarındaki kesim/fon/ölçek sorunları dahil 20 öncelikli görsel. Krem fon dosyaların içine işlenmiş; inner.css kapsayıcı rengi de #ddd6cc. Yalnız CSS değişikliği yeterli değil.
+- Canlı 448 ürünün 430 benzersiz görseli ve 27 kategori kolajı: 457 URL HTTP 200 ve yerel SHA-256 eşit. 11 karşılaştırma sayfası tarandı, şüpheli örnekler büyütüldü; 10 ana sayfa görseli ayrıca incelendi. Kanıtlar output/visual-audit altında (yerel, Git dışında).
+- npm run check PASS. 14 genel/kategori sayfası 200, olmayan sayfa 404; 1440px masaüstü ve 390px mobil kategori → ürün → görüşme formu doğrulandı. Ürün bağlamı korundu, yalnız firma/telefon zorunlu, kontrol edilen akışta taşma/konsol hatası yok. Form gönderilmedi, e-posta veya gerçek müşteri işlemi yapılmadı.
+- Bu tur yalnız denetim ve raporlamadır. Canlı sürüm değişmedi; yeni yönetim sürümü, kimlik doğrulama kararı ve Analytics Engine etkinleştirmesi bekliyor. Önceden var olan çalışma ağacı değişiklikleri korunmuştur.
