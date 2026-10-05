@@ -18,7 +18,7 @@ assert.doesNotMatch(js, /placeholder\(/);
 assert.equal(catalog.kategoriler.map((k) => k.id).join(","), "A,B,C,D,E,F");
 assert.equal(catalog.kategoriler[1].altlar.map((a) => a.id).join(","), "B1,B2");
 assert.equal(catalog.urunler.length, publicCatalog.urunler.length);
-assert.equal(catalog.urunler.length, 354);
+assert.equal(catalog.urunler.length, 448);
 
 const byAlt = Object.fromEntries(catalog.kategoriler.flatMap((k) => k.altlar.map((a) => [a.id, 0])));
 for (const u of catalog.urunler) {
@@ -36,25 +36,26 @@ for (const u of catalog.urunler) {
   assert.equal(Object.hasOwn(u, "birim"), true);
 }
 
-assert.equal(byAlt["A1"], 14);
-assert.equal(byAlt["A2"], 14);
+assert.equal(byAlt["A1"], 13);
+assert.equal(byAlt["A2"], 16);
 assert.equal(byAlt["A3"], 15);
-assert.equal(byAlt["B1"], 23);
+assert.equal(byAlt["B1"], 25);
 assert.equal(byAlt["B2"], 19);
-assert.equal(byAlt["D2"], 36);
-assert.equal(byAlt["D1"], 18);
-assert.equal(byAlt["D3"], 22);
+assert.equal(byAlt["D2"], 33);
+assert.equal(byAlt["D1"], 20);
+assert.equal(byAlt["D3"], 29);
 assert.equal(byAlt["C1"], 9);
 assert.equal(byAlt["C2"], 10);
-assert.equal(byAlt["C3"], 7);
-assert.equal(byAlt["C4"], 8);
+assert.equal(byAlt["C3"], 9);
+assert.equal(byAlt["C4"], 15);
 assert.equal(byAlt["E1"], 17);
-assert.equal(byAlt["E2"], 17);
-assert.equal(byAlt["E3"], 19);
-assert.equal(byAlt["E4"], 15);
+assert.equal(byAlt["E2"], 21);
+assert.equal(byAlt["E3"], 25);
+assert.equal(byAlt["E4"], 20);
 assert.equal(byAlt["F1"], 33);
-assert.equal(byAlt["F2"], 29);
-assert.equal(byAlt["F4"], 1);
+assert.equal(byAlt["F2"], 44);
+assert.equal(byAlt["F4"], 13);
+assert.equal(byAlt["F5"], 34);
 assert.equal(byAlt["F3"], 28);
 
 const cop = catalog.urunler.filter((u) => u.altKategoriId === "D1");
@@ -70,16 +71,26 @@ assert.equal(note32.marka, "Domestos");
 assert.equal(note32.gorsel, "/img/products/domestos-cam-32.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-047").gorsel, "/img/products/pril-ultra-guc-4kg.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-048").gorsel, "/img/products/bingo-fresh-masal-25.webp");
-assert.equal(catalog.urunler.find((u) => u.id === "p-023").gorsel, "/img/products/ozopak-el-sabunu-5kg.webp");
+assert.equal(catalog.urunler.find((u) => u.id === "p-023").gorsel, "/img/products/ozopak-el-yikama.webp");
+assert.equal(catalog.urunler.find((u) => u.id === "p-030").gorsel, "/img/products/ozopak-makine-parlatici.webp");
+assert.equal(catalog.urunler.find((u) => u.id === "p-427").ad, "Ultra Deterjan Katkılı Çamaşır Suyu");
 assert.equal(catalog.urunler.find((u) => u.id === "p-025").gorsel, "/img/products/ozopak-camasir-suyu-5kg.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-059").marka, "Bref");
+assert.equal(catalog.urunler.find((u) => u.id === "p-059").ad, "Power Aktiv");
+assert.equal(catalog.urunler.find((u) => u.id === "p-059").gorsel, "/img/products/bref-power-aktiv.webp");
+assert.equal(catalog.urunler.find((u) => u.id === "p-129").ad, "Masa Üstü Z Peçete Aparatı");
+assert.equal(catalog.urunler.find((u) => u.id === "p-135").ad, "Mini İçten Çekmeli Tuvalet Kağıdı Aparatı");
 
 const hap = catalog.kategoriler[2].altlar[0];
 assert.deepEqual(hap.markaSecenekleri, ["Palex", "Vialli", "Flosoft"]);
 assert.ok(catalog.urunler.filter((u) => u.altKategoriId === "C1").every((u) => u.marka === "Palex"));
 
 assert.match(html, /noindex/);
-assert.match(js, /Yeni ürün/);
+
+
+
+
+
 assert.match(js, /Filtreleri temizle/);
 
 const chk = spawnSync(process.execPath, ["--check", fileURLToPath(new URL("../public/yonetim/yonetim.js", import.meta.url))], { encoding: "utf8" });

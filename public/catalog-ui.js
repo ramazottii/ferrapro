@@ -367,6 +367,7 @@
       root.append(info);
       paintProducts(rows);
       if (!rows.length) {
+        window.FerraMetrics?.send('search_empty');
         root.append(el('p', 'Bu aramayla eşleşen ürün bulunamadı.', 'cat-empty'));
         if (group) root.append(link('Tüm kategorilerde ara', url('', '', query), 'btn ghost'));
       }

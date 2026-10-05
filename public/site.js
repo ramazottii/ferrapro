@@ -48,41 +48,41 @@ const ALT_SLUG = {
 const SATIR_MAX = 2000;
 
 const GRUP_FOTO = {
-  A: "/img/products/daire-temizlik-kagitlari.webp",
-  B: "/img/products/daire-sivi-temizlik.webp",
-  C: "/img/products/daire-aparat-ekipman.webp",
-  D: "/img/products/daire-temizlik.webp",
-  E: "/img/products/daire-gida-ikram.webp",
-  F: "/img/products/daire-kirtasiye-ofis.webp",
+  A: "/img/products/daire-temizlik-kagitlari.webp?v=2",
+  B: "/img/products/daire-sivi-temizlik.webp?v=3",
+  C: "/img/products/daire-aparat-ekipman.webp?v=4",
+  D: "/img/products/daire-temizlik.webp?v=4",
+  E: "/img/products/daire-gida-ikram.webp?v=2",
+  F: "/img/products/daire-kirtasiye-ofis.webp?v=3",
 };
 
 const POPULER_MARKALAR = {
   A: [
-    { ad: "Espiga", logo: "/img/brands/espiga.webp" },
-    { ad: "Selpak", logo: "/img/brands/selpak.webp" },
-    { ad: "Belinno", logo: "/img/brands/belinno.webp" },
-    { ad: "Sleepy", logo: "/img/brands/sleepy.webp" },
-    { ad: "Papia", logo: "/img/brands/papia.webp" },
-    { ad: "Solo", logo: "/img/brands/solo.webp" },
-    { ad: "Familia", logo: "/img/brands/familia.webp" },
-    { ad: "Polente", logo: "/img/brands/polente.webp" },
-    { ad: "DeepFresh", logo: "/img/brands/deepfresh.webp" },
-    { ad: "Freshmaker", logo: "/img/brands/freshmaker.webp" },
-    { ad: "Komili", logo: "/img/brands/komili.webp" },
-    { ad: "Teno", logo: "/img/brands/teno.webp" },
-    { ad: "Rulopak", logo: "/img/brands/rulopak.webp" },
+    { ad: "Espiga", logo: "/img/brands/espiga.webp?v=2" },
+    { ad: "Selpak", logo: "/img/brands/selpak.webp?v=2" },
+    { ad: "Belinno", logo: "/img/brands/belinno.webp?v=2" },
+    { ad: "Sleepy", logo: "/img/brands/sleepy.webp?v=2" },
+    { ad: "Papia", logo: "/img/brands/papia.webp?v=2" },
+    { ad: "Solo", logo: "/img/brands/solo.webp?v=2" },
+    { ad: "Familia", logo: "/img/brands/familia.webp?v=2" },
+    { ad: "Polente", logo: "/img/brands/polente.webp?v=2" },
+    { ad: "DeepFresh", logo: "/img/brands/deepfresh.webp?v=2" },
+    { ad: "Freshmaker", logo: "/img/brands/freshmaker.webp?v=2" },
+    { ad: "Komili", logo: "/img/brands/komili.webp?v=2" },
+    { ad: "Teno", logo: "/img/brands/teno.webp?v=2" },
+    { ad: "Rulopak", logo: "/img/brands/rulopak.webp?v=2" },
   ],
   B: [
-    { ad: "Yumoş", logo: "/img/brands/yumos.webp" },
-    { ad: "Vernel", logo: "/img/brands/vernel.webp" },
-    { ad: "Ozopak", logo: "/img/brands/ozopak.webp" },
-    { ad: "Fairy", logo: "/img/brands/fairy.webp" },
-    { ad: "Domestos", logo: "/img/brands/domestos.webp" },
-    { ad: "Cif", logo: "/img/brands/cif.webp" },
-    { ad: "Pril", logo: "/img/brands/pril.webp" },
-    { ad: "Finish", logo: "/img/brands/finish.webp" },
-    { ad: "Asperox", logo: "/img/brands/asperox.webp" },
-    { ad: "Porçöz", logo: "/img/brands/porcoz.webp" },
+    { ad: "Yumoş", logo: "/img/brands/yumos.webp?v=2" },
+    { ad: "Vernel", logo: "/img/brands/vernel.webp?v=2" },
+    { ad: "Ozopak", logo: "/img/brands/ozopak.webp?v=2" },
+    { ad: "Fairy", logo: "/img/brands/fairy.webp?v=2" },
+    { ad: "Domestos", logo: "/img/brands/domestos.webp?v=2" },
+    { ad: "Cif", logo: "/img/brands/cif.webp?v=2" },
+    { ad: "Pril", logo: "/img/brands/pril.webp?v=2" },
+    { ad: "Finish", logo: "/img/brands/finish.webp?v=2" },
+    { ad: "Asperox", logo: "/img/brands/asperox.webp?v=2" },
+    { ad: "Porçöz", logo: "/img/brands/porcoz.webp?v=2" },
   ],
   C: [
     { ad: "Vileda", logo: "/img/brands/vileda.webp" },
@@ -96,20 +96,20 @@ const POPULER_MARKALAR = {
     { ad: "Koroplast", logo: "/img/brands/koroplast.webp" },
     { ad: "Parex", logo: "/img/brands/parex.webp" },
     { ad: "Ceymop", logo: "/img/brands/ceymop.webp" },
-    { ad: "Ozopak", logo: "/img/brands/ozopak.webp" },
+    { ad: "Ozopak", logo: "/img/brands/ozopak.webp?v=2" },
     { ad: "Vileda", logo: "/img/brands/vileda.webp" },
     { ad: "Scotch-Brite", logo: "/img/brands/scotchbrite.webp" },
   ],
   E: [
     { ad: "Eti", logo: "/img/brands/eti.webp" },
     { ad: "Lipton", logo: "/img/brands/lipton.webp" },
-    { ad: "Nestlé", logo: "/img/brands/nestle.webp" },
+    { ad: "Nestlé", logo: "/img/brands/nestle.webp?v=2" },
     { ad: "Pınar", logo: "/img/brands/pinar.webp" },
-    { ad: "Erikli", logo: "/img/brands/erikli.webp" },
+    { ad: "Erikli", logo: "/img/brands/erikli.webp?v=2" },
     { ad: "Ülker", logo: "/img/brands/ulker.webp" },
     { ad: "Çaykur", logo: "/img/brands/caykur.webp" },
     { ad: "Doğuş", logo: "/img/brands/dogus.webp" },
-    { ad: "Mehmet Efendi", logo: "/img/brands/mehmetefendi.webp" },
+    { ad: "Mehmet Efendi", logo: "/img/brands/mehmetefendi.webp?v=2" },
   ],
   F: [
     { ad: "Faber-Castell", logo: "/img/brands/faber.webp" },
@@ -255,6 +255,7 @@ function footer() {
       <h2>Kurumsal</h2>
       <a href="/hakkimizda">Hakkımızda</a>
       <a href="/sektorler">Sektörler</a>
+      <a href="/referanslar">Referanslarımız</a>
       <a href="/iletisim">İletişim</a>
       <a href="/kvkk">KVKK aydınlatma metni</a>
     </nav>
@@ -507,37 +508,37 @@ bindTrust();
 
 const ALTLAR = {
   A: [
-    { id: "A1", ad: "Havlu ve Peçeteler", test: () => false, gorsel: "/img/products/daire-havlu-pecete.webp" },
-    { id: "A2", ad: "Islak Havlular", test: () => false, gorsel: "/img/products/daire-islak-havlu.webp" },
-    { id: "A3", ad: "Tuvalet Kağıtları", test: () => false, gorsel: "/img/products/daire-tuvalet-kagidi.webp" },
+    { id: "A1", ad: "Havlu ve Peçeteler", test: () => false, gorsel: "/img/products/daire-havlu-pecete.webp?v=2" },
+    { id: "A2", ad: "Islak Havlular", test: () => false, gorsel: "/img/products/daire-islak-havlu.webp?v=2" },
+    { id: "A3", ad: "Tuvalet Kağıtları", test: () => false, gorsel: "/img/products/daire-tuvalet-kagidi.webp?v=2" },
   ],
   B: [
-    { id: "B1", ad: "Endüstriyel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-endustriyel-sivi.webp" },
-    { id: "B2", ad: "Genel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-genel-temizlik.webp" },
+    { id: "B1", ad: "Endüstriyel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-endustriyel-sivi.webp?v=2" },
+    { id: "B2", ad: "Genel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-genel-temizlik.webp?v=2" },
   ],
   C: [
-    { id: "C1", ad: "Havlu Aparatları", test: () => false, gorsel: "/img/products/daire-havlu-aparat.webp" },
-    { id: "C2", ad: "Sıvı Sabun ve Köpük Sabun Aparatları", test: () => false, gorsel: "/img/products/daire-sabun-aparat.webp" },
-    { id: "C3", ad: "Çöp Kovaları", test: () => false, gorsel: "/img/products/daire-cop-kovasi.webp" },
-    { id: "C4", ad: "Mop Aparatları", test: () => false, gorsel: "/img/products/daire-mop-aparat.webp" },
+    { id: "C1", ad: "Havlu Aparatları", test: () => false, gorsel: "/img/products/daire-havlu-aparat.webp?v=2" },
+    { id: "C2", ad: "Sıvı Sabun ve Köpük Sabun Aparatları", test: () => false, gorsel: "/img/products/daire-sabun-aparat.webp?v=2" },
+    { id: "C3", ad: "Çöp Kovaları", test: () => false, gorsel: "/img/products/daire-cop-kovasi.webp?v=2" },
+    { id: "C4", ad: "Mop Aparatları", test: () => false, gorsel: "/img/products/daire-mop-aparat.webp?v=2" },
   ],
   D: [
-    { id: "D1", ad: "Çöp Poşetleri", test: () => false, gorsel: "/img/products/daire-cop-poseti.webp" },
-    { id: "D2", ad: "Sarf Malzemeleri", test: () => false, gorsel: "/img/products/daire-sarf.webp" },
-    { id: "D3", ad: "Kullan At Ürünler", test: () => false, gorsel: "/img/products/daire-kullan-at.webp" },
+    { id: "D1", ad: "Çöp Poşetleri", test: () => false, gorsel: "/img/products/daire-cop-poseti.webp?v=2" },
+    { id: "D2", ad: "Sarf Malzemeleri", test: () => false, gorsel: "/img/products/daire-sarf.webp?v=2" },
+    { id: "D3", ad: "Kullan At Ürünler", test: () => false, gorsel: "/img/products/daire-kullan-at.webp?v=2" },
   ],
   E: [
-    { id: "E1", ad: "Çay ve Şekerler", test: () => false, gorsel: "/img/products/daire-cay-seker.webp" },
-    { id: "E2", ad: "Kahve", test: () => false, gorsel: "/img/products/daire-kahve.webp" },
-    { id: "E3", ad: "İçecek Grubu", test: () => false, gorsel: "/img/products/daire-icecek.webp" },
-    { id: "E4", ad: "Atıştırmalıklar", test: () => false, gorsel: "/img/products/daire-atistirmalik.webp" },
+    { id: "E1", ad: "Çay ve Şekerler", test: () => false, gorsel: "/img/products/daire-cay-seker.webp?v=2" },
+    { id: "E2", ad: "Kahve", test: () => false, gorsel: "/img/products/daire-kahve.webp?v=2" },
+    { id: "E3", ad: "İçecek Grubu", test: () => false, gorsel: "/img/products/daire-icecek.webp?v=2" },
+    { id: "E4", ad: "Atıştırmalıklar", test: () => false, gorsel: "/img/products/daire-atistirmalik.webp?v=2" },
   ],
   F: [
-    { id: "F1", ad: "Kalem ve Yazı Gereçleri", test: () => false },
-    { id: "F2", ad: "Masaüstü Gereçleri", test: () => false },
-    { id: "F3", ad: "Dosya ve Arşivleme Gereçleri", test: () => false },
-    { id: "F4", ad: "Ambalaj Ürünleri", test: () => false },
-    { id: "F5", ad: "Bilgisayar Sarf Malzemeleri", test: () => false },
+    { id: "F1", ad: "Kalem ve Yazı Gereçleri", test: () => false, gorsel: "/img/products/daire-kalem-yazi.webp?v=2" },
+    { id: "F2", ad: "Masaüstü Gereçleri", test: () => false, gorsel: "/img/products/daire-masaustu.webp?v=2" },
+    { id: "F3", ad: "Dosya ve Arşivleme Gereçleri", test: () => false, gorsel: "/img/products/daire-dosya-arsiv.webp?v=2" },
+    { id: "F4", ad: "Ambalaj Ürünleri", test: () => false, gorsel: "/img/products/daire-ambalaj.webp?v=2" },
+    { id: "F5", ad: "Bilgisayar Sarf Malzemeleri", test: () => false, gorsel: "/img/products/daire-bilgisayar.webp?v=2" },
   ],
 };
 
@@ -685,6 +686,7 @@ if (form) {
   }
 
   form.addEventListener("submit", async (e) => {
+    window.FerraMetrics?.send('form_attempt');
     e.preventDefault();
     const msg = document.getElementById("msg");
     const btn = form.querySelector("[type=submit]");
@@ -744,6 +746,7 @@ if (form) {
       msg.className = "note is-ok";
       msg.textContent = form.dataset.success || "Talebiniz alındı. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.";
     } catch (err) {
+      window.FerraMetrics?.send('form_error');
       msg.className = "note is-hata";
       msg.textContent = err.message || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.";
     } finally {

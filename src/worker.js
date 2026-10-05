@@ -14,6 +14,9 @@ import { buildKiyas } from "./kiyas.js";
 import { selcukMenu, selcukBakis } from "./selcuk.js";
 import { storeQuote, readQuotes } from "./quote-store.js";
 import { publicPage } from "./public-pages.js";
+import { guardQuote, readQuoteBody } from "./quote-guard.js";
+import { notifyQuote } from "./quote-notify.js";
+import { acceptMetric, measure } from "./conversion-metrics.js";
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
 
@@ -26,15 +29,16 @@ function isPanelHost(host) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/yonetim" || url.pathname.startsWith("/yonetim/")) {
       return handleYonetim(request, env, url);
     }
     if (isVitrinHost(url.hostname)) {
+      if (url.pathname === '/api/olcum' && request.method === 'POST') return acceptMetric(request, env);
       if (url.pathname === "/api/teklif" && request.method === "POST") {
         try {
-          return await handleVitrinTeklif(request, env);
+          return await handleVitrinTeklif(request, env, ctx);
         } catch (err) {
           return json({ error: err.message || "Sunucu hatası" }, err.status || 500);
         }
@@ -361,15 +365,19 @@ function handleVitrinTeklifReady(body) {
   return { firma, tel, yetkili, not, grup, urun };
 }
 
-async function handleVitrinTeklif(request, env) {
+async function handleVitrinTeklif(request, env, ctx) {
   const origin = request.headers.get('origin');
   if (origin && !['https://ferrapro.com','https://www.ferrapro.com'].includes(origin)) fail(403, 'Geçersiz kaynak');
-  const text = await request.text();
-  if (text.length > 12000) fail(413, 'Talep çok uzun');
+  const rejected = await guardQuote(request, env);
+  if (rejected) return rejected;
+  const text = await readQuoteBody(request);
   let body;
   try { body = JSON.parse(text); } catch { fail(400, 'Geçersiz talep'); }
   const kayit = handleVitrinTeklifReady(body);
-  await storeQuote(env, kayit);
+  const record = await storeQuote(env, kayit);
+  measure(env, 'quote_saved', 'request');
+  if (ctx?.waitUntil) ctx.waitUntil(notifyQuote(env, record));
+  else await notifyQuote(env, record);
   return json({ ok: true });
 }
 

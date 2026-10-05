@@ -1298,3 +1298,15 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Kullanıcının canlıya al talimatıyla 3df6473 düzeltmeleri, güncel yerel 448 ürünlü katalog korunarak yayımlandı. Aktif Cloudflare sürümü f5818466-36a7-49c3-8abd-a4af85a43ad7 (%100). Önceki sürüm c989a3ae-7e9e-4147-a850-5d035d8e278e.
 - Yayın öncesi npm run check PASS. Panel/index.html, app.js, app.css ve katalog canlıyla eşit doğrulandı. 20 değişen statik varlık yüklendi; panel/giriş dosyaları ve mevcut katalog değiştirilmedi. Worker yalnızca belgelenen talep saklama/okuma ve public sayfa düzeltmelerini içerir.
 - Canlı HTTP: ürün metaverisi/canonical 200, olmayan sayfa 404, katalog 448 ürün, sitemap 481 URL doğrulandı. 390px tarayıcıda ürün bilgisi forma taşındı; yatay taşma yok. Gerçek talep/mesaj gönderilmedi. KVKK süreç doğrulaması ve diğer açık işler AUDIT-FIXES belgesinde devam eder.
+
+
+## 5 Ekim 2026 — Kalan yedi başlık (yerel / PR, canlı değil)
+
+- 448 ürünlü katalog, mevcut görseller ve sıfır finansal yer tutuculu yönetim başlangıç kataloğu Git ile eşitlendi. Panel ve devam eden yönetim UI değişiklikleri korunup kapsam dışında bırakıldı.
+- 448 ürüne mevcut halka açık bilgilerden açıklama; iki ürüne üretici kaynaklı ek bilgi eklendi. Tüm eksik teknik özellikler doğrulanmış değildir; kaynak/eksik listesi docs/product-content-sources.json içinde.
+- Yeni talep e-posta bildirimi iki kullanıcı onaylı alıcıya ayrı gönderilir; görünen gönderen info@ferrapro.com. Alıcılar secret olarak hazırlanmıştır, repoya konulmaz. Başarısız e-posta başarılı talebi bozmaz. Gerçek mail teslimi ve canlı uçtan uca gönderim henüz test edilmedi.
+- Cloudflare hız sınırı (talep 20/dakika, ölçüm 120/dakika), 12 KB akış gövde sınırı, yalnız sabit olay/sayfa türü toplayan çerezsiz Analytics Engine ölçümü eklendi. Ölçüm tekil ziyaretçi veya mesaj teslimi ölçmez.
+- Kullanıcı üç referansın güncel/izinli olduğunu doğruladı; ana sayfa logolu alanı ve footer bağlantısı eklendi.
+- KVKK saklama/imha/aktarım envanteri ve tek kayıt için varsayılan dry-run imha aracı hazır. Kullanıcı süre seçeneklerini istedi; 6/12/24 ay kararı bekleniyor. Aktarım hukuki mekanizması ayrıca teyit edilmeli. Hiçbir gerçek kayıt silinmedi.
+- npm run check temiz PR dosya kopyasında PASS (448 ürün; yeni hizmet ve veri gizliliği kontrolleri dahil). Wrangler dry-run derlemesi PASS. Windows CRLF kontrol farkı giderildi. Masaüstü 1440px ve mobil 390px referans/logolar ve taşma kontrolü; mobil ürün → form bağlamı ve yalnız firma/telefon zorunluluğu doğrulandı.
+- Kapsam/kurulum ayrıntıları docs/SEVEN-ITEMS-2026-10-05.md; saklama kararları docs/PRIVACY-OPERATIONS.md. Önizleme http://127.0.0.1:8789/. Yayın yapılmadı; aktif sürüm f5818466-36a7-49c3-8abd-a4af85a43ad7.

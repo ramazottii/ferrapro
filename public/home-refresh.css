@@ -191,3 +191,13 @@
 @media(prefers-reduced-motion: reduce) {
   .home .contact-carousel.is-ready .contact-story-art img { animation: none; }
 }
+/* Reference names/logos confirmed by the business on 5 October 2026. */
+.home-references{padding:48px 0;text-align:center;background:#fff}
+.home-references h2{font-size:clamp(24px,3vw,36px);color:#17264a}
+.home-references ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:24px;padding:0;margin:28px 0}
+.home-references li{display:grid;place-items:center;width:220px;height:110px;border-radius:16px;background:#17264a;padding:20px}
+.home-references img{max-width:100%;max-height:70px;object-fit:contain}
+.home-references a{font-weight:650;color:#254a82}
+.home-references h2{scroll-margin-top:180px}
+.home-references li:nth-child(2){background:#f5f7fa}
+.home-references li:last-child img{mix-blend-mode:screen}

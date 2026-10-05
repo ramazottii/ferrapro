@@ -21,7 +21,7 @@ for(const g of groups){
 }
 function output(name,content){
  if(process.argv.includes('--check')){
-  if(readFileSync(new URL(name,base),'utf8')!==content)throw new Error(name+' güncel değil. npm run build:public çalıştırın.');
+  if(readFileSync(new URL(name,base),'utf8').replace(/\r\n/g,'\n')!==content.replace(/\r\n/g,'\n'))throw new Error(name+' güncel değil. npm run build:public çalıştırın.');
  }else writeFileSync(new URL(name,base),content);
 }
 output('catalog-pages.json',JSON.stringify(pages));

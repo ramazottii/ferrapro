@@ -8,6 +8,8 @@
   --line: #D7DEE4;
   --white: #ffffff;
   --font: "DM Sans", system-ui, sans-serif;
+  --page-gutter: clamp(32px, 5vw, 96px);
+  --content-max: 1920px;
 }
 .interest-status { position: fixed; z-index: 50; bottom: 16px; left: 50%; transform: translateX(-50%); width: min(560px,calc(100% - 32px)); background: var(--navy); color: white; box-shadow: 0 6px 30px #0003; padding: 18px 22px; margin: 0; font-size: .9rem; pointer-events: none; }
 .interest-status:empty { display: none; }
@@ -1133,7 +1135,8 @@ a.btn.btn-head.btn-head-list:hover { color: #fff; background: var(--navy); }
 
 /* 2026-09: edge-to-edge public layout and consistent catalogue surfaces. */
 :root { --product-stage: #e4e7eb; }
-.wrap { width:calc(100% - clamp(32px,5vw,96px)); max-width:none; }
+.wrap { width: calc(100% - var(--page-gutter)); max-width: none; }
+.head-inner { width: calc(100% - var(--page-gutter)); max-width: none; }
 .head nav a { position:relative; transition:color .2s ease,background .2s ease; }
 .head nav a::after { content:''; position:absolute; left:0; right:0; bottom:-7px; height:2px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .24s ease; }
 .head nav a:hover::after,.head nav a:focus-visible::after { transform:scaleX(1); }

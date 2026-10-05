@@ -11,3 +11,5 @@ scripts/extract_log.txt
 tools/*.local.json
 tools/__pycache__/
 public/image-check.html
+output/
+tmp-keep/
