@@ -5,6 +5,11 @@ export async function publicPage(request,env,url){
  const path=url.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';
  if(!known.has(path) && (!/\.[a-z0-9]+$/i.test(url.pathname) || /\.html$/i.test(url.pathname)))return notFound(request,env);
  const response=await env.ASSETS.fetch(request);
+ if(path==='/kvkk' && response.ok && !env.METRICS){
+  const html=(await response.text()).replace(/<p id="measurement-notice">[\s\S]*?<\/p>/,'<p id="measurement-notice">Bu sürümde site kullanım analitiği toplanmaz. Kötüye kullanımı sınırlamak için bağlantı IP’sinden günlük değişen bir özet üretilir; IP talep kaydına eklenmez.</p>');
+  const headers=new Headers(response.headers);headers.delete('content-length');headers.delete('etag');headers.set('cache-control','no-cache');
+  return new Response(request.method==='HEAD'?null:html,{status:response.status,headers});
+ }
  if(!known.has(path) && (response.headers.get('content-type')||'').includes('text/html'))return notFound(request,env);
  if(path!=='/urunler' || !response.ok)return response;
  const p=url.searchParams;

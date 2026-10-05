@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises';
 import {publicPage} from '../src/public-pages.js';
 const env={ASSETS:{async fetch(request){
  const path=new URL(request.url).pathname;
- const file=path==='/urunler'?'urunler.html':path==='/404'?'404.html':path.slice(1);
+ const file=path==='/kvkk'?'kvkk.html':path==='/urunler'?'urunler.html':path==='/404'?'404.html':path.slice(1);
  try{return new Response(await readFile(new URL('../public/'+file,import.meta.url)),{headers:{'content-type':file.endsWith('.json')?'application/json':'text/html'}});}
  catch{return new Response(await readFile(new URL('../public/index.html',import.meta.url)),{headers:{'content-type':'text/html'}});}
 }}};
@@ -28,3 +28,7 @@ const pages=JSON.parse(await readFile(new URL('../public/catalog-pages.json',imp
 assert.equal((sitemap.match(/<loc>/g)||[]).length,Object.keys(pages).length+6);
 assert.match(sitemap,/g=A&amp;a=A1/);
 console.log('PASS: public product/category metadata, server content, sitemap, 404 and legacy compatibility.');
+
+assert.match(await (await get('/kvkk')).text(), /Bu sürümde site kullanım analitiği toplanmaz/);
+env.METRICS={};
+assert.match(await (await get('/kvkk')).text(), /Cloudflare Analytics Engine/);

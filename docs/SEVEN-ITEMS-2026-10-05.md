@@ -1,6 +1,6 @@
 # Kalan yedi başlık — 5 Ekim 2026
 
-Bu paket yerel/PR aşamasındadır; canlı sürüm halen f5818466-36a7-49c3-8abd-a4af85a43ad7.
+Bu paket ölçüm hariç canlıya alındı. Aktif sürüm c30178d5-93eb-4ee3-93ca-0b3f0d54c6a7. Analytics Engine hesap etkinleştirmesi beklediğinden ölçüm veri toplamıyor. Canlı sistem testi kaydedildi, iki e-posta gönderimi servis tarafından kabul edildi; gelen kutusu teyidi bekleniyor. Aşağıdaki hazırlık notları tarihsel ayrıntıları içerir; güncel yayın kaydı HANDOFF.md son bölümündedir.
 
 ## 1. Talep bildirimi
 
