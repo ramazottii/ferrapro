@@ -741,10 +741,27 @@ if (form) {
       form.reset();
       document.getElementById('quote-context')?.remove();
       const review = document.getElementById('interest-review');
-      if (review) review.hidden = false;
+      if (review) {
+        review.replaceChildren();
+        review.hidden = true;
+      }
       window.FerraInterest?.clear();
-      msg.className = "note is-ok";
-      msg.textContent = form.dataset.success || "Talebiniz alındı. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.";
+      const done = document.createElement('div');
+      done.className = 'quote-success';
+      done.setAttribute('role', 'status');
+      done.tabIndex = -1;
+      const heading = document.createElement('h2');
+      heading.textContent = 'Teklifiniz gönderildi';
+      const detail = document.createElement('p');
+      detail.textContent = form.dataset.success || 'Talebinizi aldık. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.';
+      const back = document.createElement('a');
+      back.className = 'btn';
+      back.href = '/urunler';
+      back.textContent = 'Ürünlere dön';
+      done.append(heading, detail, back);
+      form.replaceWith(done);
+      done.focus();
+      done.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
     } catch (err) {
       window.FerraMetrics?.send('form_error');
       msg.className = "note is-hata";

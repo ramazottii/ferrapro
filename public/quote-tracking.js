@@ -5,7 +5,7 @@
   window.FerraQuoteTracking={mount(root,rows,save,editable){
     const drafts=new Map();
     root.replaceChildren();const section=el('section',null,'card quote-tracking');
-    section.append(el('h2','Görüşme talepleri'),el('p','Talebin aşamasını, görüşme notlarını ve sonraki takip tarihini burada tutun.','muted'));
+    section.append(el('h2','Teklifler'),el('p','Gelen teklif ve görüşme taleplerini burada görün. Aşama, not ve sonraki takip tarihini kaydedin.','muted'));
     const filters=el('div',null,'quote-filters'),search=el('input'),filter=el('select');
     search.type='search';search.placeholder='Firma veya telefon ara';search.setAttribute('aria-label','Firma veya telefon ara');
     filter.setAttribute('aria-label','Talep aşaması');const all=el('option','Tüm aşamalar');all.value='';filter.append(all);

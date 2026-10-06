@@ -410,6 +410,7 @@
     }
     tree.append(
       h("span", { class: "nav-label", text: "Yönetim" }),
+      h("a", { href: "/yonetim/talepler", class: "nav-link", text: "Teklifler" }),
       h("a", { href: "#/maliyet", class: state.page === "maliyet" ? "nav-link is-on" : "nav-link", text: "Maliyet" }),
       h("a", { href: "#/markalar", class: state.page === "markalar" ? "nav-link is-on" : "nav-link", text: "Markalar" }),
       h("a", { href: "#/kategoriler", class: state.page === "kategoriler" ? "nav-link is-on" : "nav-link", text: "Kategoriler" }),

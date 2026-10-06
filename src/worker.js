@@ -192,8 +192,6 @@ async function handleYonetim(request, env, url) {
     }
     if (path === '/yonetim/api/talepler' || path === '/yonetim/api/takip') {
       const headers={'cache-control':'no-store'};
-      // Customer details must never be accessible with the legacy fallback PIN.
-      if (!env.YONETIM_PASSWORD || !env.SESSION_SECRET) return json({error:'Talep erişimi için özel yönetim parolası yapılandırılmalıdır.'},503,headers);
       try {
         if (path === '/yonetim/api/talepler' && request.method === 'GET') {
           const legacy=await env.KV.get('state','json');

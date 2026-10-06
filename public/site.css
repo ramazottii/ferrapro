@@ -906,6 +906,16 @@ a.btn.btn-head.btn-head-list:hover { color: #fff; background: var(--navy); }
 #msg { margin: 8px 0 0; }
 #msg.is-ok { color: var(--accent); }
 #msg.is-hata { color: #8a2b2b; }
+.quote-success {
+  background: #fff;
+  border: 1px solid #d5e7dc;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 32px #14223812;
+}
+.quote-success h2 { margin: 0 0 10px; color: #0f766e; font-size: 1.35rem; }
+.quote-success p { margin: 0 0 18px; color: var(--navy); max-width: 46ch; }
+.quote-success .btn { display: inline-flex; }
 
 .foot {
   border-top: 0;

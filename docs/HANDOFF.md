@@ -1846,3 +1846,12 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Paket `npm run check` PASS (sunucu/istemci fiyat testleri, eşzamanlı 200/409 kazanan varsayımı düzeltilmiş). Wrangler 4.131.2 `--dry-run --keep-vars` PASS. 24 varlık yüklendi, 1141 zaten vardı.
 - Girişsiz canlı `GET`/`PUT` `https://ferrapro.com/yonetim/api/fiyatlar` ve www 401. Katalog 448, ana sayfa ve `/urunler` 200. Kaynak koddan PIN çıkarılmadı. Yetkili kayıt/okuma, CSRF 403, boş sunucuya ilk aktarım ve eski yerelin ezmemesi izole testlerde geçti. Canlı yetkili yazma için Chrome `fp_yonetim` çerezi kilitli Cookies dosyasından okunamadı.
 - Chrome Default `ferrapro.yonetim.fiyat.v2`: 448 satır; dolu maliyet yalnız p-001, p-002, p-003 = 12; extras []. Test 123.45 / 150 yok. Yerel kayıt silinmedi. Sunucuya bu tarayıcıdan yazılmadı; erişilemeyen oturum verisi kurtarıldı denmez. Sunucu boş kaldığı için aynı Chrome’da sonraki girişli `/yonetim` açılışı otomatik aktarır. Test fiyatı sunucuya basılmadı.
+
+## 6 Ekim 2026 — Teklif onayı, Ferranoi mail kesimi, FerraPro teklif paneli
+
+- Müşteri teklif gönderince form yerine görünür “Teklifiniz gönderildi” kartı çıkar; ürünlere dönüş bağlantısı vardır. Küçük yeşil `#msg` satırına bel bağlanmaz. Müşteriye otomatik e-posta gitmez.
+- İç bildirim maili artık `https://tedarik.ferranoi.com/panel/` değil `https://ferrapro.com/yonetim/talepler` açar. Mailde firma/telefon/not yoktur. Ferranoi paneli, giriş kodu ve parolalar değiştirilmedi; `ferrapro.com/panel` hâlâ tedarik.ferranoi.com paneline gider.
+- `/yonetim/talepler` mevcut FerraPro yönetim oturumuyla tüm teklifleri listeler (aşama, not, takip tarihi). Özel `YONETIM_PASSWORD` şartı kaldırıldı; fiyat ekranıyla aynı giriş yeter. Girişsiz API 401.
+- npm run check PASS: teklif kaydı, mailde ferranoi yok, yetkisiz 401, mevcut yönetim oturumuyla teklif listesi, fiyat testleri.
+- GitHub: codex/visual-refresh / PR #1. Canlı e-posta metni Worker yayımlanınca değişir.
+
