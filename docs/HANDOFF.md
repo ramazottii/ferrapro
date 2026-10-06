@@ -1855,3 +1855,8 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - npm run check PASS: teklif kaydı, mailde ferranoi yok, yetkisiz 401, mevcut yönetim oturumuyla teklif listesi, fiyat testleri.
 - GitHub: codex/visual-refresh / PR #1, commit 76324e6. Canlı Cloudflare sürümü 8d0ea37a-313d-43fc-bc7f-7f34f332059f (%100). Önceki 4ae85a7e-dc34-47ab-8ae1-b7bee63b5c29. METRICS yok, `--keep-vars`, PRICE_STORE korundu. Ferranoi panel HTML geri alınmadı. Girişsiz `/yonetim/api/talepler` 401; `/siparis` başarı kartı metni canlı.
 
+## 6 Ekim 2026 — /yonetim/talepler yönlendirme döngüsü
+
+- Girişten sonra Assets `talepler.html` için 307 dönüp `/yonetim/talepler` ile birbirini kovalıyordu (ERR_TOO_MANY_REDIRECTS). Worker artık varlık 307’sini tarayıcıya vermiyor; `/yonetim/talepler/index.html` üzerinden sayfayı 200 döndürür. Ana sayfa/teklif formu girişsiz 200’dü; döngü oturumlu teklif paneline özgüydü.
+- Canlı sürüm 599a5e10-dd30-4d9b-ab33-447601873618 (%100). npm run check PASS. Ana sayfa, sipariş, yönetim girişi 200.
+
