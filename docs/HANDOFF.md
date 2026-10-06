@@ -1853,5 +1853,5 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - İç bildirim maili artık `https://tedarik.ferranoi.com/panel/` değil `https://ferrapro.com/yonetim/talepler` açar. Mailde firma/telefon/not yoktur. Ferranoi paneli, giriş kodu ve parolalar değiştirilmedi; `ferrapro.com/panel` hâlâ tedarik.ferranoi.com paneline gider.
 - `/yonetim/talepler` mevcut FerraPro yönetim oturumuyla tüm teklifleri listeler (aşama, not, takip tarihi). Özel `YONETIM_PASSWORD` şartı kaldırıldı; fiyat ekranıyla aynı giriş yeter. Girişsiz API 401.
 - npm run check PASS: teklif kaydı, mailde ferranoi yok, yetkisiz 401, mevcut yönetim oturumuyla teklif listesi, fiyat testleri.
-- GitHub: codex/visual-refresh / PR #1. Canlı e-posta metni Worker yayımlanınca değişir.
+- GitHub: codex/visual-refresh / PR #1, commit 76324e6. Canlı Cloudflare sürümü 8d0ea37a-313d-43fc-bc7f-7f34f332059f (%100). Önceki 4ae85a7e-dc34-47ab-8ae1-b7bee63b5c29. METRICS yok, `--keep-vars`, PRICE_STORE korundu. Ferranoi panel HTML geri alınmadı. Girişsiz `/yonetim/api/talepler` 401; `/siparis` başarı kartı metni canlı.
 
