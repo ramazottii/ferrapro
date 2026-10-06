@@ -211,10 +211,7 @@ async function handleYonetim(request, env, url) {
       }catch(err){return json({error:err.message||'Sunucu hatası'},err.status||500,headers);}
     }
     if(path === '/yonetim/talepler') {
-      const asset=new URL('/yonetim/talepler.html',url);
-      const response=await env.ASSETS.fetch(new Request(asset,request));
-      const headers=new Headers(response.headers);headers.set('cache-control','no-store');
-      return new Response(response.body,{status:response.status,headers});
+      return serveYonetimPage(env, request, url, ['/yonetim/talepler/index.html', '/yonetim/talepler/', '/yonetim/talepler.html']);
     }
     return env.ASSETS.fetch(request);
   }
@@ -229,6 +226,23 @@ function json(data, status = 200, extra = {}) {
     status,
     headers: { "content-type": "application/json; charset=utf-8", ...extra },
   });
+}
+
+async function serveYonetimPage(env, request, url, candidates) {
+  let response;
+  for (const pathname of candidates) {
+    response = await env.ASSETS.fetch(new Request(new URL(pathname, url), { method: 'GET' }));
+    const loc = response.headers.get('location');
+    if (response.status >= 300 && response.status < 400 && loc) {
+      response = await env.ASSETS.fetch(new Request(new URL(loc, url), { method: 'GET' }));
+    }
+    if (response.ok) break;
+  }
+  const headers = new Headers(response.headers);
+  headers.set('cache-control', 'no-store');
+  headers.delete('location');
+  const status = response.status >= 300 && response.status < 400 ? 200 : response.status;
+  return new Response(response.body, { status, headers });
 }
 
 function fail(status, message) {

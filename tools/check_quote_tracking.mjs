@@ -1,7 +1,11 @@
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import worker from '../src/worker.js';
-const data=new Map(),env={YONETIM_PASSWORD:randomUUID(),SESSION_SECRET:randomUUID(),ASSETS:{fetch:async()=>new Response('asset')},KV:{
+const data=new Map(),env={YONETIM_PASSWORD:randomUUID(),SESSION_SECRET:randomUUID(),ASSETS:{fetch:async request=>{
+  const path=new URL(request.url).pathname;
+  if(path.endsWith('.html')) return new Response(null,{status:307,headers:{location:'/yonetim/talepler/'}});
+  return new Response('<!doctype html><title>Teklifler</title>',{headers:{'content-type':'text/html'}});
+}},KV:{
  async get(k,type){const value=data.get(k);return value==null?null:type==='json'?JSON.parse(value):value;},async put(k,v){data.set(k,v);},
  async list({prefix,cursor}){const keys=[...data.keys()].filter(k=>k.startsWith(prefix)),start=Number(cursor||0),end=start+2;return {keys:keys.slice(start,end).map(name=>({name})),list_complete:end>=keys.length,cursor:String(end)};}
 }};
@@ -13,6 +17,7 @@ assert.equal((await send('/yonetim/api/takip',update)).status,401);
 assert.match(await (await send('/yonetim/talepler')).text(),/name="next" value="\/yonetim\/talepler"/);
 const login=await worker.fetch(new Request('https://ferrapro.com/yonetim/giris',{method:'POST',body:new URLSearchParams({password:env.YONETIM_PASSWORD,next:'/yonetim/talepler'})}),env);
 assert.equal(login.headers.get('location'),'https://ferrapro.com/yonetim/talepler');const cookie=login.headers.get('set-cookie').split(';')[0];
+const page=await send('/yonetim/talepler',null,cookie);assert.equal(page.status,200);assert.equal(page.headers.get('location'),null);assert.match(await page.text(),/Teklifler/);
 assert.equal((await send('/yonetim/api/takip',update,cookie,'https://unrelated.example')).status,403);
 for(const invalid of [{stage:'invalid'},{next_contact:'2026-02-31'},{note:'x'.repeat(2001)}])assert.equal((await send('/yonetim/api/takip',{...update,...invalid},cookie)).status,400);
 assert.equal((await send('/yonetim/api/takip',{...update,id:'missing'},cookie)).status,404);
