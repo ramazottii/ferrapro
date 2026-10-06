@@ -12,15 +12,15 @@ const cookie=login.headers.get('set-cookie').split(';')[0];
 const initial=await (await send('GET',null,cookie)).json();assert.equal(initial.revision,0);
 const body={revision:0,prices:{'p-001':{maliyet:12.5,birim:'Adet',listeFiyat:null}},extras:[]};
 assert.equal((await send('PUT',body,cookie,'https://attacker.invalid')).status,403);
-const results=await Promise.all([send('PUT',body,cookie),send('PUT',{...body,prices:{'p-002':{maliyet:99}}},cookie)]);
+const results=await Promise.all([send('PUT',body,cookie),send('PUT',{...body,prices:{'p-001':{maliyet:99}}},cookie)]);
 assert.deepEqual(results.map(r=>r.status).sort(),[200,409]);
-const fresh=await (await send('GET',null,cookie)).json();assert.equal(fresh.prices['p-001'].maliyet,12.5);
+const fresh=await (await send('GET',null,cookie)).json();const winningPrice=results[0].status===200?12.5:99;assert.equal(fresh.prices['p-001'].maliyet,winningPrice);
 // A new store instance reads persisted data, independent of browser or in-memory object instance.
 const restarted=new PriceStore({storage});assert.equal((await (await restarted.fetch(new Request('https://test'))).json()).revision,1);
 assert.equal((await send('PUT',{...body,revision:1,prices:{'p-001':{maliyet:-1}}},cookie)).status,400);
 assert.equal((await send('PUT',{...body,revision:1,prices:{'p-001':{maliyet:null}}},cookie)).status,200);
 assert.equal((await (await send('GET',null,cookie)).json()).prices['p-001'].maliyet,null);
-assert.equal(data.get('previous').prices['p-001'].maliyet,12.5);
+assert.equal(data.get('previous').prices['p-001'].maliyet,winningPrice);
 const failed=new PriceStore({storage:{get:storage.get,transaction:async()=>{throw Error('disk unavailable')}}});
 env.PRICE_STORE.get=()=>failed;
 assert.equal((await send('PUT',{...body,revision:2},cookie)).status,503);
