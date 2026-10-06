@@ -314,10 +314,79 @@ table.grid tbody tr:hover { background: #F8FAFC; }
 .modal-card p { margin: 0 0 18px; color: var(--mute); }
 .modal-actions { display: flex; justify-content: end; gap: 8px; }
 
+.save-bar {
+  position: fixed;
+  left: var(--nav);
+  right: 0;
+  bottom: 0;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 18px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 24px rgb(15 23 42 / .08);
+}
+.save-bar[hidden] { display: none !important; }
+.save-bar span { font-size: .9rem; font-weight: 650; }
+.page { padding-bottom: 72px; }
+.price-in {
+  width: 7.5rem;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 8px;
+  background: #fff;
+}
+.price-in:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.maliyet-list {
+  display: grid;
+  gap: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.maliyet-head, .maliyet-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(90px, .7fr) 7.8rem;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.maliyet-head {
+  background: #FAFBFC;
+  color: var(--mute);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.maliyet-row:last-child { border-bottom: 0; }
+.maliyet-row:hover { background: #F8FAFC; }
+.maliyet-name {
+  border: 0;
+  background: none;
+  text-align: left;
+  padding: 0;
+  font-weight: 650;
+  cursor: pointer;
+}
+.maliyet-name:hover { color: var(--accent); }
+.maliyet-name small { display: block; color: var(--mute); font-weight: 500; margin-top: 2px; }
+.maliyet-marka { color: var(--mute); font-size: .88rem; overflow-wrap: anywhere; }
+
 .toast {
   position: fixed;
   right: 18px;
-  bottom: 18px;
+  bottom: 72px;
   z-index: 50;
   background: var(--navy);
   color: #fff;
@@ -339,8 +408,14 @@ table.grid tbody tr:hover { background: #F8FAFC; }
 .nav-mask { display: none; }
 
 @media (max-width: 900px) {
+  .top { flex-wrap: wrap; }
+  .search-wrap { min-width: 0; }
+  .top-actions { flex-wrap: wrap; width: 100%; }
   .view-toggle { display: none; }
   .menu-btn { display: inline-flex; }
+  .maliyet-head, .maliyet-row { grid-template-columns: minmax(0, 1fr) 7.2rem; }
+  .maliyet-marka { display: none; }
+  .save-bar { margin: 0; left: 0; }
   .nav {
     position: fixed;
     inset: 0 auto 0 0;

@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import worker from '../src/worker.js';
+import {PriceStore} from '../src/price-store.js';
+const data=new Map();let queue=Promise.resolve();
+const storage={get:async k=>structuredClone(data.get(k)),put:async(k,v)=>data.set(k,structuredClone(v)),transaction(fn){const task=queue.then(()=>fn(storage));queue=task.catch(()=>{});return task;}};
+const store=new PriceStore({storage});
+const env={SESSION_SECRET:'test-only-secret',YONETIM_PASSWORD:'test-only-password',PRICE_STORE:{idFromName:n=>n,get:()=>store}};
+const send=(method='GET',body,cookie='',origin='https://ferrapro.com')=>worker.fetch(new Request('https://ferrapro.com/yonetim/api/fiyatlar',{method,headers:{cookie,origin,'content-type':'application/json'},...(body?{body:JSON.stringify(body)}:{})}),env,{});
+assert.equal((await send()).status,401);
+const login=await worker.fetch(new Request('https://ferrapro.com/yonetim/giris',{method:'POST',body:'password=test-only-password'}),env,{});
+const cookie=login.headers.get('set-cookie').split(';')[0];
+const initial=await (await send('GET',null,cookie)).json();assert.equal(initial.revision,0);
+const body={revision:0,prices:{'p-001':{maliyet:12.5,birim:'Adet',listeFiyat:null}},extras:[]};
+assert.equal((await send('PUT',body,cookie,'https://attacker.invalid')).status,403);
+const results=await Promise.all([send('PUT',body,cookie),send('PUT',{...body,prices:{'p-002':{maliyet:99}}},cookie)]);
+assert.deepEqual(results.map(r=>r.status).sort(),[200,409]);
+const fresh=await (await send('GET',null,cookie)).json();assert.equal(fresh.prices['p-001'].maliyet,12.5);
+// A new store instance reads persisted data, independent of browser or in-memory object instance.
+const restarted=new PriceStore({storage});assert.equal((await (await restarted.fetch(new Request('https://test'))).json()).revision,1);
+assert.equal((await send('PUT',{...body,revision:1,prices:{'p-001':{maliyet:-1}}},cookie)).status,400);
+assert.equal((await send('PUT',{...body,revision:1,prices:{'p-001':{maliyet:null}}},cookie)).status,200);
+assert.equal((await (await send('GET',null,cookie)).json()).prices['p-001'].maliyet,null);
+assert.equal(data.get('previous').prices['p-001'].maliyet,12.5);
+const failed=new PriceStore({storage:{get:storage.get,transaction:async()=>{throw Error('disk unavailable')}}});
+env.PRICE_STORE.get=()=>failed;
+assert.equal((await send('PUT',{...body,revision:2},cookie)).status,503);
+assert.equal(data.get('catalog').revision,2);
+console.log('PASS: private server prices, CSRF, persistence across instances, concurrent stale-write rejection, null clearing, validation, previous snapshot, storage failure.');

@@ -21,6 +21,7 @@
     expanded: {},
     drawer: null,
     pendingDelete: null,
+    drafts: {},
   };
 
   const $ = (id) => document.getElementById(id);
@@ -108,6 +109,40 @@
     return "Adet";
   }
 
+  function olcuYazi(raw) {
+    let s = String(raw || "").trim();
+    if (!s || /^belirtilmedi$/i.test(s)) return "";
+    s = s.replace(/\s*mililitre\b/gi, "ML");
+    s = s.replace(/\s*kilogram\b/gi, "Kg");
+    s = s.replace(/\s*santimetre\b/gi, " Cm");
+    s = s.replace(/\s*litre\b/gi, "Lt");
+    s = s.replace(/\s*gram\b/gi, "Gr");
+    return s.replace(/\s{2,}/g, " ").trim();
+  }
+
+  function listeAd(u) {
+    let ad = String(u.ad || "").trim();
+    const marka = String(u.marka || "").trim();
+    if (marka && !ad.toLocaleLowerCase("tr").startsWith(marka.toLocaleLowerCase("tr"))) {
+      ad = marka + " " + ad;
+    }
+    const extras = [];
+    const blob = () => (ad + " " + extras.join(" ")).toLocaleLowerCase("tr");
+    const add = (v, asOlcu) => {
+      const s = asOlcu ? olcuYazi(v) : String(v || "").trim();
+      if (!s || /^belirtilmedi$/i.test(s)) return;
+      if (blob().split(/\s+/).includes(s.toLocaleLowerCase("tr"))) return;
+      extras.push(s);
+    };
+    add(u.olcu, true);
+    if (!/litrelik/i.test(ad)) add(u.kapasite, true);
+    add(u.malzeme, false);
+    add(u.renk, false);
+    add(u.ambalajAdedi, false);
+    add(u.urunTuru, false);
+    return extras.length ? ad + "," + extras.join(" ") : ad;
+  }
+
   function priceSlice(u) {
     return {
       birim: u.birim || "",
@@ -119,11 +154,113 @@
     };
   }
 
-  function persist() {
+  let serverRevision = null;
+  let saving = false;
+  async function priceRequest(method, body) {
+    const response = await fetch('/yonetim/api/fiyatlar', {
+      method, cache: 'no-store', credentials: 'same-origin',
+      signal: AbortSignal.timeout(30000),
+      headers: { 'Content-Type': 'application/json' },
+      ...(body ? { body: JSON.stringify(body) } : {}),
+    });
+    let data; try { data = await response.json(); } catch { throw Error('Oturum veya sunucu hatası. Yerel yedeğiniz korundu.'); }
+    if (!response.ok) throw Error(data.error || 'Fiyatlar sunucuya kaydedilemedi.');
+    return data;
+  }
+  async function persist() {
     const prices = {};
     for (const u of state.catalog.urunler) prices[u.id] = priceSlice(u);
-    localStorage.setItem(PRICE_STORE, JSON.stringify(prices));
-    localStorage.setItem(EXTRA_STORE, JSON.stringify(state.extras));
+    if (saving) return false;
+    saving = true;
+    document.body.inert = true;
+    try {
+      // Keep a recoverable local snapshot even when the connection fails.
+      try { localStorage.setItem('ferrapro.yonetim.pending.v1', JSON.stringify({ fiyatlar: prices, extras: state.extras })); } catch { /* Storage restrictions must not prevent server persistence. */ }
+      if (serverRevision === null) throw Error('Sunucu fiyatları yüklenemedi; kayıt gönderilmedi. Sayfayı yenileyin.');
+      const saved = await priceRequest('PUT', { revision: serverRevision, prices, extras: state.extras });
+      serverRevision = saved.revision;
+      try {
+        localStorage.setItem(PRICE_STORE, JSON.stringify(prices));
+        localStorage.setItem(EXTRA_STORE, JSON.stringify(state.extras));
+        localStorage.removeItem('ferrapro.yonetim.pending.v1');
+      } catch { /* Server acknowledgement is authoritative. */ }
+      return true;
+    } catch (error) {
+      alert(error.message + '\nKaydetme tamamlanmadı. Girdiğiniz değerleri tekrar deneyebilirsiniz.');
+      return false;
+    } finally { saving = false; document.body.inert = false; }
+  }
+
+  function currentPrice(u, field) {
+    const draft = state.drafts[u.id];
+    if (draft && Object.prototype.hasOwnProperty.call(draft, field)) return draft[field];
+    return u[field] ?? null;
+  }
+
+  function dirtyCount() {
+    return Object.keys(state.drafts).length;
+  }
+
+  function setDraft(id, field, raw) {
+    const u = productById(id);
+    if (!u) return;
+    const next = { ...(state.drafts[id] || priceSlice(u)), [field]: num(raw) };
+    const base = priceSlice(u);
+    const same = ["maliyet", "listeFiyat", "idealSatis", "dipSatis"].every((k) => (next[k] ?? null) === (base[k] ?? null));
+    if (same) delete state.drafts[id];
+    else state.drafts[id] = next;
+    updateSaveBar();
+  }
+
+  async function saveAllPrices() {
+    const n = dirtyCount();
+    if (!n) return;
+    for (const [id, patch] of Object.entries(state.drafts)) {
+      const i = state.catalog.urunler.findIndex((u) => u.id === id);
+      if (i < 0) continue;
+      const row = {
+        ...state.catalog.urunler[i],
+        ...patch,
+        fiyat: patch.listeFiyat,
+      };
+      state.catalog.urunler[i] = row;
+      if (row.kaynak === "local") {
+        const ei = state.extras.findIndex((x) => x.id === id);
+        if (ei >= 0) state.extras[ei] = { ...state.extras[ei], ...patch };
+      }
+    }
+    if (!await persist()) return;
+    state.drafts = {};
+    toast(n === 1 ? "1 ürün kaydedildi." : n + " ürün kaydedildi.");
+    updateSaveBar();
+    render();
+  }
+
+  function updateSaveBar() {
+    const bar = $("save-bar");
+    const text = $("save-bar-text");
+    const n = dirtyCount();
+    if (!bar) return;
+    bar.hidden = n === 0;
+    if (text) text.textContent = n === 0 ? "" : (n === 1 ? "1 ürünün maliyeti değişti." : n + " ürünün maliyeti değişti.");
+  }
+
+  function priceInput(u, field) {
+    const el = h("input", { class: "price-in", type: "number", step: "0.01", min: "0", inputmode: "decimal" });
+    el.dataset.id = u.id;
+    el.dataset.field = field;
+    const v = currentPrice(u, field);
+    if (v != null && v !== "") el.value = String(v);
+    el.addEventListener("click", (e) => e.stopPropagation());
+    el.addEventListener("input", () => setDraft(u.id, field, el.value));
+    el.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      const all = [...document.querySelectorAll(".price-in[data-field='" + field + "']")];
+      const i = all.indexOf(el);
+      all[i + 1]?.focus();
+    });
+    return el;
   }
 
   function mapPublic(row) {
@@ -158,11 +295,11 @@
     return {
       ...row,
       birim: overlay.birim || row.birim || inferBirim(row),
-      maliyet: overlay.maliyet ?? row.maliyet,
-      listeFiyat: overlay.listeFiyat ?? row.listeFiyat,
-      idealSatis: overlay.idealSatis ?? row.idealSatis,
-      dipSatis: overlay.dipSatis ?? row.dipSatis,
-      fiyat: overlay.listeFiyat ?? overlay.fiyat ?? row.fiyat,
+      maliyet: Object.hasOwn(overlay, 'maliyet') ? overlay.maliyet : row.maliyet,
+      listeFiyat: Object.hasOwn(overlay, 'listeFiyat') ? overlay.listeFiyat : row.listeFiyat,
+      idealSatis: Object.hasOwn(overlay, 'idealSatis') ? overlay.idealSatis : row.idealSatis,
+      dipSatis: Object.hasOwn(overlay, 'dipSatis') ? overlay.dipSatis : row.dipSatis,
+      fiyat: Object.hasOwn(overlay, 'listeFiyat') ? overlay.listeFiyat : (overlay.fiyat ?? row.fiyat),
     };
   }
 
@@ -181,7 +318,7 @@
       if (f.aktif === "aktif" && !u.aktif) return false;
       if (f.aktif === "pasif" && u.aktif) return false;
       if (!q) return true;
-      const blob = [u.ad, u.marka, anaAd(u.anaKategoriId), altAd(u.anaKategoriId, u.altKategoriId)]
+      const blob = [u.ad, u.marka, u.olcu, u.kapasite, u.ambalajAdedi, u.urunTuru, listeAd(u), anaAd(u.anaKategoriId), altAd(u.anaKategoriId, u.altKategoriId)]
         .join(" ").toLocaleLowerCase("tr");
       return blob.includes(q);
     });
@@ -194,6 +331,7 @@
     state.ana = "";
     state.alt = "";
     if (parts[0] === "markalar") state.page = "markalar";
+    else if (parts[0] === "maliyet") state.page = "maliyet";
     else if (parts[0] === "kategoriler") state.page = "kategoriler";
     else if (parts[0] === "ayarlar") state.page = "ayarlar";
     else if (parts[0] === "k") {
@@ -272,6 +410,7 @@
     }
     tree.append(
       h("span", { class: "nav-label", text: "Yönetim" }),
+      h("a", { href: "#/maliyet", class: state.page === "maliyet" ? "nav-link is-on" : "nav-link", text: "Maliyet" }),
       h("a", { href: "#/markalar", class: state.page === "markalar" ? "nav-link is-on" : "nav-link", text: "Markalar" }),
       h("a", { href: "#/kategoriler", class: state.page === "kategoriler" ? "nav-link is-on" : "nav-link", text: "Kategoriler" }),
       h("a", { href: "#/ayarlar", class: state.page === "ayarlar" ? "nav-link is-on" : "nav-link", text: "Ayarlar" }),
@@ -288,7 +427,7 @@
 
   function renderFilters(items) {
     const box = $("filters");
-    if (state.page !== "katalog") {
+    if (state.page !== "katalog" && state.page !== "maliyet") {
       box.hidden = true;
       return;
     }
@@ -354,12 +493,20 @@
       const birim = u.birim || inferBirim(u);
       const satis = anaSatis(u);
       const tr = h("tr");
-      tr.addEventListener("click", () => openView(u.id));
+      tr.addEventListener("click", (e) => {
+        if (e.target.closest("input,button,.ops")) return;
+        const cell = e.target.closest("td");
+        if (cell === tr.children[0] || cell === tr.children[3]) {
+          tr.querySelector(".price-in")?.focus();
+          return;
+        }
+        openView(u.id);
+      });
       tr.append(
-        h("td", { text: u.ad }),
+        h("td", { text: listeAd(u) }),
         h("td", { text: dash(u.marka) }),
         h("td", { text: birim }),
-        h("td", { text: money(u.maliyet) }),
+        h("td", {}, priceInput(u, "maliyet")),
         h("td", { text: money(u.listeFiyat) }),
         h("td", { text: money(u.idealSatis) }),
         h("td", { text: money(u.dipSatis) }),
@@ -379,10 +526,10 @@
       const card = h("article", { class: "card" });
       card.addEventListener("click", () => openView(u.id));
       const satis = anaSatis(u);
-      const meta = [u.marka, u.birim || inferBirim(u)].filter(Boolean).join(" · ");
+      const meta = [u.marka, olcuYazi(u.olcu) || u.ambalajAdedi || (u.birim || inferBirim(u))].filter(Boolean).join(" · ");
       card.append(
         h("div", { class: "card-body" },
-          h("b", { text: u.ad }),
+          h("b", { text: listeAd(u) }),
           h("small", { text: meta || altAd(u.anaKategoriId, u.altKategoriId) }),
           h("small", { text: `Maliyet ${money(u.maliyet)} · Ideal ${money(u.idealSatis)}` }),
           h("small", { class: karClass(satis, u.maliyet), text: "Kârlılık " + karText(satis, u.maliyet) }),
@@ -410,6 +557,7 @@
   }
 
   function titleForPage() {
+    if (state.page === "maliyet") return ["Maliyet", "Ürüne tıklayıp maliyeti girin; bitince Kaydet."];
     if (state.page === "markalar") return ["Markalar", "Katalogdaki ürün markaları."];
     if (state.page === "kategoriler") return ["Kategoriler", "Site kataloğundaki ana ve alt gruplar."];
     if (state.page === "ayarlar") return ["Ayarlar", "Fiyat yedekleme ve tarayıcı kayıtları."];
@@ -428,6 +576,38 @@
     const empty = emptyState(items);
     const useCards = state.view === "cards" || mobile();
     const list = empty || (useCards ? renderCards(items) : renderTable(items));
+    return [head, list];
+  }
+
+  function renderMaliyet() {
+    const items = filtered();
+    renderFilters(items);
+    const [title, sub] = titleForPage();
+    const head = h("div", { class: "page-head" },
+      h("div", {}, h("h1", { text: title }), h("p", { text: sub + ` · ${items.length} ürün` })),
+    );
+    const empty = emptyState(items);
+    if (empty) return [head, empty];
+    const list = h("div", { class: "maliyet-list" },
+      h("div", { class: "maliyet-head" },
+        h("span", { text: "Ürün" }),
+        h("span", { class: "maliyet-marka", text: "Marka" }),
+        h("span", { text: "Maliyet" }),
+      ),
+    );
+    for (const u of items) {
+      const name = h("button", { class: "maliyet-name", type: "button" },
+        listeAd(u),
+        h("small", { text: [altAd(u.anaKategoriId, u.altKategoriId), olcuYazi(u.olcu) || u.ambalajAdedi || (u.birim || inferBirim(u))].filter(Boolean).join(" · ") }),
+      );
+      const input = priceInput(u, "maliyet");
+      name.addEventListener("click", () => input.focus());
+      list.append(h("div", { class: "maliyet-row" },
+        name,
+        h("span", { class: "maliyet-marka", text: dash(u.marka) }),
+        input,
+      ));
+    }
     return [head, list];
   }
 
@@ -470,7 +650,7 @@
     });
     const exp = h("button", { class: "btn ghost", type: "button", text: "Fiyatları dışa aktar" });
     exp.addEventListener("click", () => {
-      const blob = new Blob([JSON.stringify({ fiyatlar: JSON.parse(localStorage.getItem(PRICE_STORE) || "{}"), extras: state.extras }, null, 2)], { type: "application/json" });
+      const blob = new Blob([JSON.stringify({ fiyatlar: Object.fromEntries(state.catalog.urunler.map(u => [u.id, priceSlice(u)])), extras: state.extras }, null, 2)], { type: "application/json" });
       const a = h("a", { href: URL.createObjectURL(blob), download: "ferrapro-yonetim-fiyat.json" });
       a.click();
     });
@@ -481,34 +661,44 @@
       try {
         const data = JSON.parse(await f.text());
         const prices = data.fiyatlar || data;
-        localStorage.setItem(PRICE_STORE, JSON.stringify(prices));
+        for (const row of state.catalog.urunler) Object.assign(row, prices[row.id] || {});
         if (Array.isArray(data.extras)) {
           state.extras = data.extras;
-          localStorage.setItem(EXTRA_STORE, JSON.stringify(state.extras));
+          state.catalog.urunler = state.catalog.urunler.filter(row => row.kaynak !== 'local').concat(state.extras);
         }
+        if (!await persist()) return;
         await reloadCatalog();
-        toast("Fiyatlar içe aktarıldı.");
+        toast("Fiyatlar sunucuya aktarıldı.");
         render();
       } catch {
         toast("Dosya okunamadı.");
       }
     });
-    const reset = h("button", { class: "btn danger", type: "button", text: "Fiyat kayıtlarını sil" });
+    const reset = h("button", { class: "btn danger", type: "button", text: "Bu tarayıcıdaki önbelleği temizle" });
     reset.addEventListener("click", async () => {
       localStorage.removeItem(PRICE_STORE);
       localStorage.removeItem(EXTRA_STORE);
       state.extras = [];
       await reloadCatalog();
-      toast("Fiyatlar temizlendi. Ürün listesi siteden yüklendi.");
+      toast("Tarayıcı önbelleği temizlendi. Sunucu fiyatları korundu.");
       render();
+    });
+    const backup = h('button', { class: 'btn ghost', type: 'button', text: 'Eski / gönderilemeyen yerel kayıtları indir' });
+    backup.addEventListener('click', () => {
+      const data = localStorage.getItem('ferrapro.yonetim.pending.v1') || localStorage.getItem('ferrapro.yonetim.legacy-backup.v1');
+      if (!data) return toast('Yerel yedek bulunmuyor.');
+      const url = URL.createObjectURL(new Blob([data], { type: 'application/json' }));
+      h('a', { href: url, download: 'ferrapro-yerel-kurtarma.json' }).click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     });
     return [
       h("div", { class: "page-head" }, h("div", {}, h("h1", { text: title }), h("p", { text: sub }))),
       h("div", { class: "simple-list" },
         h("li", {}, "Vurgu rengi", color),
-        h("li", {}, "Ürün listesi ferrapro.com kataloğundan gelir. Burada yalnızca birim ve fiyatlar saklanır."),
+        h('li', {}, 'Aktarım öncesi veya başarısız kaydetme yedeği', backup),
+        h("li", {}, "Ürün listesi ferrapro.com kataloğundan gelir. Birim ve fiyatlar yetkili sunucu kaydında saklanır."),
         h("li", {}, "Fiyat yedeği", h("div", { class: "add-row" }, exp, file)),
-        h("li", {}, "Tarayıcıdaki fiyatları silip site kataloğuna dönün.", reset),
+        h("li", {}, "Sunucudaki fiyatları koruyarak bu tarayıcının önbelleğini temizleyin.", reset),
       ),
     ];
   }
@@ -525,11 +715,11 @@
   function renderView(u) {
     const birim = u.birim || inferBirim(u);
     const rows = [
-      ["Ürün adı", u.ad],
+      ["Ürün adı", listeAd(u)],
       ["Ana kategori", anaAd(u.anaKategoriId)],
       ["Alt kategori", altAd(u.anaKategoriId, u.altKategoriId)],
       ["Marka", dash(u.marka)],
-      ["Ölçü", dash(u.olcu)],
+      ["Ölçü", dash(olcuYazi(u.olcu) || u.olcu)],
       ["Kapasite", dash(u.kapasite)],
       ["Birim", birim],
       ["Maliyet", money(u.maliyet)],
@@ -614,7 +804,7 @@
     }
     const save = h("button", { class: "btn", type: "submit", text: "Kaydet" });
     form.append(h("div", { class: "form-actions" }, save));
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const name = ad.value.trim();
       if (name.length < 2) {
@@ -647,8 +837,17 @@
           aktif: aktif.value === "1",
           kaynak: "local",
         };
-        state.extras.push(row);
-        state.catalog.urunler.push(row);
+        // A failed attempt may be retried without creating the same product twice.
+        const existing = state.catalog.urunler.findIndex(item => item.id === form.dataset.pendingId);
+        if (existing >= 0) {
+          row.id = form.dataset.pendingId;
+          state.catalog.urunler[existing] = row;
+          state.extras = state.extras.map(item => item.id === row.id ? row : item);
+        } else {
+          form.dataset.pendingId = row.id;
+          state.extras.push(row);
+          state.catalog.urunler.push(row);
+        }
       } else {
         const i = state.catalog.urunler.findIndex((x) => x.id === u.id);
         if (i >= 0) {
@@ -671,8 +870,8 @@
           }
         }
       }
-      persist();
-      toast("Kayıt güncellendi.");
+      if (!await persist()) return;
+      toast("Sunucuya kaydedildi.");
       closeDrawer();
       render();
     });
@@ -731,11 +930,13 @@
     });
     let nodes = [];
     if (state.page === "markalar") nodes = renderMarkalar();
+    else if (state.page === "maliyet") nodes = renderMaliyet();
     else if (state.page === "kategoriler") nodes = renderKategoriler();
     else if (state.page === "ayarlar") nodes = renderAyarlar();
     else nodes = renderKatalog();
     page.replaceChildren(...nodes);
     renderDrawer();
+    updateSaveBar();
   }
 
   async function reloadCatalog() {
@@ -753,6 +954,14 @@
     let localPrices = {};
     try { localPrices = JSON.parse(localStorage.getItem(PRICE_STORE) || "{}"); } catch { localPrices = {}; }
     try { state.extras = JSON.parse(localStorage.getItem(EXTRA_STORE) || "[]"); } catch { state.extras = []; }
+    const server = await priceRequest('GET');
+    serverRevision = server.revision;
+    // Preserve the original browser data before first migration. Never overwrite this backup.
+    if (!localStorage.getItem('ferrapro.yonetim.legacy-backup.v1')) {
+      localStorage.setItem('ferrapro.yonetim.legacy-backup.v1', JSON.stringify({ fiyatlar: localPrices, extras: state.extras }));
+    }
+    const migrate = server.revision === 0 && (Object.values(localPrices).some(row => ['maliyet','listeFiyat','idealSatis','dipSatis','fiyat'].some(k => row[k] != null)) || state.extras.length > 0);
+    if (!migrate) { localPrices = server.prices; state.extras = server.extras; }
     const mapped = (pub.urunler || []).map((row) => {
       const base = mapPublic(row);
       base.birim = inferBirim(base);
@@ -767,9 +976,11 @@
       markalar: unique(mapped, "marka"),
       urunler: mapped.concat(extras),
     };
+    if (migrate && !await persist()) throw Error("Eski fiyatların sunucuya aktarımı tamamlanmadı. Yerel yedek korundu.");
   }
 
   function bind() {
+    $("save-prices").addEventListener("click", saveAllPrices);
     $("q").addEventListener("input", () => { state.q = $("q").value; render(); });
     $("btn-new").addEventListener("click", openCreate);
     $("drawer-close").addEventListener("click", closeDrawer);
@@ -787,7 +998,7 @@
     $("nav-tree").addEventListener("click", (e) => { if (e.target.closest("a")) closeNav(); });
     $("filter-toggle").addEventListener("click", () => {
       const box = $("filters");
-      if (state.page !== "katalog") return;
+      if (state.page !== "katalog" && state.page !== "maliyet") return;
       box.hidden = !box.hidden;
     });
     $("view-toggle").addEventListener("click", (e) => {
@@ -798,11 +1009,11 @@
       render();
     });
     $("modal-cancel").addEventListener("click", () => { state.pendingDelete = null; $("modal").hidden = true; });
-    $("modal-ok").addEventListener("click", () => {
+    $("modal-ok").addEventListener("click", async () => {
       const id = state.pendingDelete;
       state.extras = state.extras.filter((u) => u.id !== id);
       state.catalog.urunler = state.catalog.urunler.filter((u) => u.id !== id);
-      persist();
+      if (!await persist()) return;
       state.pendingDelete = null;
       $("modal").hidden = true;
       if (state.drawer?.id === id) closeDrawer();

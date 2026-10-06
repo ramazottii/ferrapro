@@ -4,6 +4,14 @@ compatibility_date = "2026-08-23"
 account_id = "9f0d39ce0db57f09bc1769c9ddf0c344"
 workers_dev = true
 
+[[durable_objects.bindings]]
+name = "PRICE_STORE"
+class_name = "PriceStore"
+
+[[migrations]]
+tag = "v1-price-store"
+new_sqlite_classes = ["PriceStore"]
+
 [vars]
 QUOTE_NOTIFY_FROM = "info@ferrapro.com"
 # QUOTE_NOTIFY_TO is a Worker secret, never committed personal addresses.

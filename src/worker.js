@@ -18,6 +18,7 @@ import { guardQuote, readQuoteBody } from "./quote-guard.js";
 import { notifyQuote } from "./quote-notify.js";
 import { validateFollowup, saveFollowup, attachFollowups } from "./quote-tracking.js";
 import { acceptMetric, measure } from "./conversion-metrics.js";
+export { PriceStore } from './price-store.js';
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
 
@@ -179,6 +180,16 @@ async function handleYonetim(request, env, url) {
   }
 
   if (readCookie(request, YONETIM_COOKIE) === token) {
+    if (path === '/yonetim/api/fiyatlar') {
+      const headers = { 'cache-control': 'no-store' };
+      if (!['GET', 'PUT'].includes(request.method)) return json({error:'Yöntem desteklenmiyor'},405,headers);
+      if (request.method === 'PUT' && (request.headers.get('origin') !== url.origin || !request.headers.get('content-type')?.startsWith('application/json'))) return json({error:'Geçersiz kaynak'},403,headers);
+      if (!env.PRICE_STORE) return json({error:'Sunucu fiyat kaydı henüz etkin değil. Yerel kayıtlarınız korunuyor.'},503,headers);
+      try {
+        const store = env.PRICE_STORE.get(env.PRICE_STORE.idFromName('ferrapro-private-prices'));
+        return await store.fetch(request);
+      } catch { return json({error:'Fiyat sunucusuna ulaşılamadı. Tekrar deneyin.'},503,headers); }
+    }
     if (path === '/yonetim/api/talepler' || path === '/yonetim/api/takip') {
       const headers={'cache-control':'no-store'};
       // Customer details must never be accessible with the legacy fallback PIN.

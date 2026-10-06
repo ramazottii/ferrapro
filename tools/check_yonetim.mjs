@@ -86,11 +86,11 @@ assert.deepEqual(hap.markaSecenekleri, ["Palex", "Vialli", "Flosoft"]);
 assert.ok(catalog.urunler.filter((u) => u.altKategoriId === "C1").every((u) => u.marka === "Palex"));
 
 assert.match(html, /noindex/);
-
-
-
-
-
+assert.match(js, /#\/maliyet/);
+assert.match(js, /function listeAd/);
+assert.match(js, /function olcuYazi/);
+assert.match(html, /id="save-bar"/);
+assert.match(js, /Maliyet/);
 assert.match(js, /Filtreleri temizle/);
 
 const chk = spawnSync(process.execPath, ["--check", fileURLToPath(new URL("../public/yonetim/yonetim.js", import.meta.url))], { encoding: "utf8" });
