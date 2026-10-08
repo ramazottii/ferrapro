@@ -1,3 +1,4 @@
+import {managementTestEnv} from './management-test-env.mjs';
 // Isolated Node integration check. No network calls or production KV access.
 // Exercises Worker handlers with an in-memory KV adapter, not Cloudflare runtime.
 import assert from 'node:assert/strict';
@@ -6,6 +7,7 @@ import worker from '../src/worker.js';
 
 const memory = new Map();
 const env = {
+  ...managementTestEnv(),
   SESSION_SECRET: randomUUID(),
   RAMAZAN_PASSWORD: randomUUID(),
   KV: {

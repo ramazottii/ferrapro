@@ -1,7 +1,8 @@
+import {managementTestEnv} from './management-test-env.mjs';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import worker from '../src/worker.js';
-const data=new Map(),env={YONETIM_PASSWORD:randomUUID(),SESSION_SECRET:randomUUID(),ASSETS:{fetch:async request=>{
+const data=new Map(),env={...managementTestEnv(),YONETIM_PASSWORD:randomUUID(),SESSION_SECRET:randomUUID(),ASSETS:{fetch:async request=>{
   const path=new URL(request.url).pathname;
   if(path.endsWith('.html')) return new Response(null,{status:307,headers:{location:'/yonetim/talepler/'}});
   return new Response('<!doctype html><title>Teklifler</title>',{headers:{'content-type':'text/html'}});
@@ -28,5 +29,5 @@ assert.deepEqual(Object.keys(result),['talepler']);assert.equal(result.talepler[
 assert.equal((await (await send('/yonetim/api/takip',{...update,stage:'closed'},cookie)).json()).event.next_contact,'');
 data.set('state',JSON.stringify({vitrin_teklifler:[{id:123,firma:'LEGACY TEST'}],privateFinancialData:'never return'}));assert.equal((await send('/yonetim/api/takip',{...update,id:123},cookie)).status,200);assert.doesNotMatch(await (await send('/yonetim/api/talepler',null,cookie)).text(),/never return/);
 const originalPassword=env.YONETIM_PASSWORD;delete env.YONETIM_PASSWORD;
-const fallbackLogin=await worker.fetch(new Request('https://ferrapro.com/yonetim/giris',{method:'POST',body:new URLSearchParams({password:'2112'})}),env);const fallbackCookie=fallbackLogin.headers.get('set-cookie').split(';')[0];assert.equal((await send('/yonetim/api/talepler',null,fallbackCookie)).status,200);env.YONETIM_PASSWORD=originalPassword;
+const fallbackLogin=await worker.fetch(new Request('https://ferrapro.com/yonetim/giris',{method:'POST',body:new URLSearchParams({password:'unconfigured'})}),env);assert.equal(fallbackLogin.status,503);assert.equal(fallbackLogin.headers.get('set-cookie'),null);env.YONETIM_PASSWORD=originalPassword;
 console.log('PASS: Ferrapro management authentication, private-only responses, CSRF, concurrent history, legacy IDs, closed dates and existing yonetim session access.');

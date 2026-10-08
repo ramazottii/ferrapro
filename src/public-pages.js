@@ -42,7 +42,8 @@ export async function publicPage(request,env,url){
  const schema={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:crumbs.map((x,i)=>({'@type':'ListItem',position:i+1,...x}))};
  html=html.replace('</head>',`<script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script>${p.get('q')?'<meta name="robots" content="noindex, follow">':''}</head>`);
  html=html.replace('<h1 id="baslik">Ürünler</h1>',`<h1 id="baslik">${escape(info.name)}</h1>`);
- html=html.replace('<div id="liste"></div>',`<div id="liste"><p>${escape(info.description)}</p><a class="btn" href="/siparis?${escape(new URLSearchParams({satir:info.name}).toString())}">Görüşme talebi bırakın</a></div>`);
+ const links=(info.links||[]).filter(link=>typeof link.path==='string' && link.path.startsWith('/urunler?u=')).map(link=>`<li><a href="${escape(link.path)}">${escape(link.name)}</a></li>`).join('');
+ html=html.replace('<div id="liste"></div>',`<div id="liste"><p>${escape(info.description)}</p>${links?`<ul aria-label="Bu kategorideki ürünler">${links}</ul>`:''}<a class="btn" href="/siparis?${escape(new URLSearchParams({satir:info.name}).toString())}">Görüşme talebi bırakın</a></div>`);
  const headers=new Headers(response.headers); headers.delete('content-length');headers.delete('etag');headers.set('content-type','text/html; charset=utf-8');
  return new Response(request.method==='HEAD'?null:html,{status:200,headers});
 }

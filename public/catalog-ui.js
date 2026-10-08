@@ -294,9 +294,10 @@
     const needles = aramaMetni(query).split(/\s+/).filter(Boolean);
     const sourcing = () => {
       const box = el('section', null, 'catalog-sourcing');
-      box.append(el('h2', query ? 'Aradığınızı birlikte bulalım.' : 'Bu grupta aradığınızı bulamadınız mı?'));
+      const groupName = selected?.ad || current?.ad || '';
+      box.append(el('h2', query ? 'Aradığınızı birlikte bulalım.' : groupName ? 'Bu grupta aradığınızı bulamadınız mı?' : 'Aradığınız ürünü bulamadınız mı?'));
       box.append(el('p', 'Katalogda olmayan ürünler için de araştırma ve tedarik desteği sunuyoruz. Ürün veya miktar seçmeden bize ulaşabilirsiniz.'));
-      const note = query ? 'Aradığım ürün: ' + query : 'İlgilendiğim grup: ' + (selected?.ad || current?.ad || '');
+      const note = query ? 'Aradığım ürün: ' + query : groupName ? 'İlgilendiğim grup: ' + groupName : 'Ürün araştırma ve tedarik desteği almak istiyorum.';
       const actions = el('div', null, 'product-detail-actions');
       actions.append(link('Benim için araştırın', '/siparis?' + new URLSearchParams({g:group, satir:note}), 'btn'));
       actions.append(link('WhatsApp ile sorun', 'https://wa.me/' + WA + '?text=' + encodeURIComponent(note), 'btn ghost'));

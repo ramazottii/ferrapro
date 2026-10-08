@@ -1,10 +1,11 @@
+import {managementTestEnv} from './management-test-env.mjs';
 import assert from 'node:assert/strict';
 import worker from '../src/worker.js';
 import {PriceStore} from '../src/price-store.js';
 const data=new Map();let queue=Promise.resolve();
 const storage={get:async k=>structuredClone(data.get(k)),put:async(k,v)=>data.set(k,structuredClone(v)),transaction(fn){const task=queue.then(()=>fn(storage));queue=task.catch(()=>{});return task;}};
 const store=new PriceStore({storage});
-const env={SESSION_SECRET:'test-only-secret',YONETIM_PASSWORD:'test-only-password',PRICE_STORE:{idFromName:n=>n,get:()=>store}};
+const env={...managementTestEnv(),SESSION_SECRET:'test-only-secret',YONETIM_PASSWORD:'test-only-password',PRICE_STORE:{idFromName:n=>n,get:()=>store}};
 const send=(method='GET',body,cookie='',origin='https://ferrapro.com')=>worker.fetch(new Request('https://ferrapro.com/yonetim/api/fiyatlar',{method,headers:{cookie,origin,'content-type':'application/json'},...(body?{body:JSON.stringify(body)}:{})}),env,{});
 assert.equal((await send()).status,401);
 const login=await worker.fetch(new Request('https://ferrapro.com/yonetim/giris',{method:'POST',body:'password=test-only-password'}),env,{});

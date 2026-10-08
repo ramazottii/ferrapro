@@ -19,6 +19,9 @@ import { notifyQuote } from "./quote-notify.js";
 import { validateFollowup, saveFollowup, attachFollowups } from "./quote-tracking.js";
 import { acceptMetric, measure } from "./conversion-metrics.js";
 export { PriceStore } from './price-store.js';
+import {publicRedirect, publicSecurityHeaders} from './public-security.js';
+import {MANAGEMENT_TTL, managementReady, managementSession, readManagementLogin} from './management-sessions.js';
+export {ManagementSessions} from './management-sessions.js';
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
 
@@ -32,9 +35,19 @@ function isPanelHost(host) {
 
 export default {
   async fetch(request, env, ctx) {
+    const redirect = publicRedirect(request);
+    const response = redirect || await routeRequest(request, env, ctx);
+    return publicSecurityHeaders(request, response);
+  },
+};
+
+async function routeRequest(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/yonetim" || url.pathname.startsWith("/yonetim/")) {
-      return handleYonetim(request, env, url);
+      const response = await handleYonetim(request, env, url);
+      const headers = new Headers(response.headers);
+      headers.set('cache-control','no-store');
+      return new Response(response.body,{status:response.status,statusText:response.statusText,headers});
     }
     if (isVitrinHost(url.hostname)) {
       if (url.pathname === '/api/olcum' && request.method === 'POST') return acceptMetric(request, env);
@@ -77,21 +90,18 @@ export default {
       }
     }
     return env.ASSETS.fetch(request);
-  },
-};
+}
 
 const YONETIM_COOKIE = "fp_yonetim";
-
-function yonetimPin(env) {
-  return String(env.YONETIM_PASSWORD || "2112");
-}
 
 function readCookie(request, name) {
   const raw = request.headers.get("cookie") || "";
   for (const part of raw.split(";")) {
     const i = part.indexOf("=");
     if (i < 0) continue;
-    if (part.slice(0, i).trim() === name) return decodeURIComponent(part.slice(i + 1).trim());
+    if (part.slice(0, i).trim() === name) {
+      try { return decodeURIComponent(part.slice(i + 1).trim()); } catch { return ''; }
+    }
   }
   return "";
 }
@@ -101,7 +111,7 @@ function yonetimCookieHeader(token, url, clear = false) {
   if (clear) {
     return `${YONETIM_COOKIE}=; Path=/yonetim; Max-Age=0; HttpOnly; SameSite=Lax${secure}`;
   }
-  return `${YONETIM_COOKIE}=${token}; Path=/yonetim; Max-Age=${SESSION_TTL}; HttpOnly; SameSite=Lax${secure}`;
+  return `${YONETIM_COOKIE}=${token}; Path=/yonetim; Max-Age=${MANAGEMENT_TTL}; HttpOnly; SameSite=Lax${secure}`;
 }
 
 function timingEqual(a, b) {
@@ -154,11 +164,16 @@ function yonetimLoginPage(error, next = '') {
 }
 
 async function handleYonetim(request, env, url) {
-  const pin = yonetimPin(env);
-  const token = await hmac(env.SESSION_SECRET || pin, "yonetim|" + pin);
+  const pin = String(env.YONETIM_PASSWORD || '');
+  const token = readCookie(request, YONETIM_COOKIE);
+  const unavailable = () => new Response('Yönetim girişi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.',{status:503,headers:{'cache-control':'no-store'}});
   const path = url.pathname.replace(/\/+$/, "") || "/yonetim";
 
   if (path === "/yonetim/cikis") {
+    if (token) {
+      if (!managementReady(env)) return unavailable();
+      try { await managementSession(env,token,'DELETE'); } catch { return unavailable(); }
+    }
     const next = new URL("/yonetim/", url);
     return new Response(null, {
       status: 302,
@@ -167,11 +182,21 @@ async function handleYonetim(request, env, url) {
   }
 
   if (path === "/yonetim/giris" && request.method === "POST") {
-    const body = await request.text();
+    if (!managementReady(env)) return unavailable();
+    if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return new Response('Geçersiz kaynak',{status:403,headers:{'cache-control':'no-store'}});
+    try {
+      const key = await hmac(env.SESSION_SECRET,'management-login|'+(request.headers.get('cf-connecting-ip') || 'unknown'));
+      if (!(await env.YONETIM_RATE_LIMITER.limit({key})).success) return new Response('Çok fazla giriş denemesi. Bir dakika sonra tekrar deneyin.',{status:429,headers:{'cache-control':'no-store','retry-after':'60'}});
+    } catch { return unavailable(); }
+    if (Number(request.headers.get('content-length') || 0) > 4096) return new Response('İstek çok büyük',{status:413});
+    let body;
+    try { body = await readManagementLogin(request); } catch { return new Response('İstek çok büyük',{status:413,headers:{'cache-control':'no-store'}}); }
     const params = new URLSearchParams(body);
     const given = String(params.get("password") || "");
     const destination=params.get('next') === '/yonetim/talepler' ? '/yonetim/talepler' : '/yonetim/';
     if (!timingEqual(given, pin)) return yonetimLoginPage("Şifre yanlış.", destination);
+    const token = crypto.randomUUID() + '-' + crypto.randomUUID();
+    try { if (!await managementSession(env,token,'PUT')) return unavailable(); } catch { return unavailable(); }
     const next = new URL(destination, url);
     return new Response(null, {
       status: 302,
@@ -179,7 +204,11 @@ async function handleYonetim(request, env, url) {
     });
   }
 
-  if (readCookie(request, YONETIM_COOKIE) === token) {
+  let authenticated = false;
+  if (token && managementReady(env)) {
+    try { authenticated = await managementSession(env,token,'POST'); } catch { return unavailable(); }
+  }
+  if (authenticated) {
     if (path === '/yonetim/api/fiyatlar') {
       const headers = { 'cache-control': 'no-store' };
       if (!['GET', 'PUT'].includes(request.method)) return json({error:'Yöntem desteklenmiyor'},405,headers);

@@ -1874,3 +1874,11 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - public/catalog-ui.js A–F kategori rozetleri kaldırıldı; inner.css kullanılmayan cat-code kuralı kaldırıldı; urunler.html script sürümü 101. İç kimlikler/eski URL'ler değişmedi.
 - npm run check PASS. Yerel katalog 1280/390 px: 6 kategori, 0 kod rozeti, yatay taşma yok; mobil menü ve havlu araması (38 sonuç) PASS. Canlı ana sayfa dar ekran ve D grubu masaüstü incelendi.
 - Canlı yayın YAPILMADI. Güvenlik bulguları bu sürümde düzeltilmedi; ayrı inceleme ve regresyon gerektirir. Eşzamanlı Cursor yönetim Excel/panel değişiklikleri bu commit kapsamına alınmadı.
+
+## 8 Ekim 2026 — Güvenlik ve katalog keşif iyileştirmesi (yayınlanmadı)
+
+- Ayrıntılı devam noktası: docs/IMPROVEMENT-PROGRESS-2026-10-08.md. HTTPS/www yönlendirmeleri ve kapsamlı güvenlik başlıkları; yönetimde 8 saat rastgele DO oturumları, çıkışta iptal, 10/60 saniye giriş sınırı, 4KB akış gövde sınırı, no-store. Sabit yönetim şifresi yedeği kaldırıldı. Ferranoi /api/login ve panel verileri değişmedi.
+- Kritik yayın koşulu: SESSION_SECRET gizli ayarı var; YONETIM_PASSWORD gizli ayar adları arasında yok (normal uzak vars incelenmedi). Güçlü yönetim şifresi güvenli tanımlanmadan YAYINLAMAYIN. Yeni MANAGEMENT_SESSIONS DO v2 migration ve YONETIM_RATE_LIMITER gerekli. Eski oturumlar yeniden giriş ister; fiyat/talep deposu korunur.
+- Kategori/alt grup ilk HTML ürün bağlantıları yalnız public katalogdan üretildi; SEO ölçü normalizasyonu, genel katalog boş grup iletişim metni düzeltildi. catalog-ui v102.
+- npm run check PASS; yönetim oturumu, HTTPS, limiter/depoda hata testleri dahil. Wrangler deploy --dry-run PASS. Public-only Worker yerel önizleme 1280/390 px PASS; gerçek üretim DO ortam testi henüz yok.
+- Canlı yayın YAPILMADI. Sonraki işler: güvenli ayar/yayın hazırlığı, üç krem kategori görseli, kategori içerikleri, Search Console/yerel profil/dönüşüm ölçümü. Cursor'un eşzamanlı panel/Excel dosyaları commit kapsamı dışında tutuldu.
