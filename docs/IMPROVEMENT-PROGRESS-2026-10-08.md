@@ -10,6 +10,8 @@
 - Kaynak kodun sabit yönetim şifresi yedeği kaldırıldı. Canlı şifre değiştirilmedi veya okunmadı. Ferranoi kullanıcı şifreleri ve /api/login davranışı değişmedi.
 - Kategori/alt kategori ilk HTML içeriğinde gerçek public ürün bağlantıları var; yalnız public katalog kullanıldı. SEO ölçü bilgileri mevcut arayüz normalizasyonuyla eşitlendi; URL'ler değişmedi.
 - Genel katalogda boş “İlgilendiğim grup” yerine anlamlı araştırma talebi; kategori seçilince kategoriye özgü metin korunur.
+- A/D/E ana kategorilerinde gerçek kapsamla uyumlu üç kısa ürün seçim rehberi eklendi. Açılır alanda hem ilk HTML hem tarayıcı içeriğinde bulunur; ürün detayına ve arama sonuçlarına taşınmaz. site.js v140, catalog-ui v103, inner.css v98.
+- Ana katalog masaüstünde 3+3 düzenine alındı; 1280 px satır konumları üçer eşit, taşma yok. Açık rehber 390 px taşmasız kontrol edildi.
 
 ## Yayın ön koşulları — atlanmamalı
 
@@ -31,7 +33,7 @@
 
 1. Güçlü yönetim ayarının güvenli kurulumu ve yayın öncesi üretim bağlama kontrolü.
 2. Üç krem kategori görseli (daire-cop-poseti, daire-sarf, daire-kullan-at); önceki adaylarda ürün etiketleri değiştiği için doğrudan kullanmayın. public/inner.css ambalaj zemini de krem.
-3. Kategori seçim rehberleri ve gerçek özelliklere dayanan üç öncelikli SEO içerik grubu; Search Console/İşletme Profili yetkili erişimi ve dönüşüm ölçümü.
+3. İlk üç kategori rehberi hazır; daha ayrıntılı ürün/sektör içerikleri, Search Console/İşletme Profili yetkili erişimi ve dönüşüm ölçümü kalan işlerdir.
 4. Mobil gerçek hız ölçümü, dengeli kategori dizilimi; saklama/silme/yedek prosedürleri için işletme kararları.
 
 Tüm iş bitmiş değildir. Bu dosya kullanım hakkı sonrası devam noktasıdır. Canlı yayın yapılmadı.

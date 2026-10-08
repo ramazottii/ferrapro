@@ -1882,3 +1882,10 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Kategori/alt grup ilk HTML ürün bağlantıları yalnız public katalogdan üretildi; SEO ölçü normalizasyonu, genel katalog boş grup iletişim metni düzeltildi. catalog-ui v102.
 - npm run check PASS; yönetim oturumu, HTTPS, limiter/depoda hata testleri dahil. Wrangler deploy --dry-run PASS. Public-only Worker yerel önizleme 1280/390 px PASS; gerçek üretim DO ortam testi henüz yok.
 - Canlı yayın YAPILMADI. Sonraki işler: güvenli ayar/yayın hazırlığı, üç krem kategori görseli, kategori içerikleri, Search Console/yerel profil/dönüşüm ölçümü. Cursor'un eşzamanlı panel/Excel dosyaları commit kapsamı dışında tutuldu.
+
+## 8 Ekim 2026 — Üç kategori rehberi ve masaüstü yerleşimi (yayınlanmadı)
+
+- A/D/E ana kategorilerine kısa, ürün seçimine yardımcı açılır rehberler eklendi. Aynı içerik ilk HTML ve JavaScript arayüzünde; arama/ürün detayında gösterilmez. Gerçek katalog kapsamı kullanıldı, stok/teslimat garantisi yok.
+- Ana katalog 1000 px üstünde 3+3 düzeni. site.js v140, catalog-ui.js v103, inner.css v98. İç bağlantı/kategori kimlikleri korunur.
+- npm run check PASS; rehberin ilk HTML'de olması ve aramada bulunmaması test edildi. 1280 px 3+3 satırlar ve 390 px açık rehber taşmasız. output/kategori-duzeni-son.jpg önizlemesi kaydedildi.
+- YAYIN YOK. Önceki c335675 güvenlik sürümünün gizli yönetim ayarı ve DO/rate limiter ön koşulları devam ediyor. Kalanlar docs/IMPROVEMENT-PROGRESS-2026-10-08.md içinde.

@@ -21,6 +21,11 @@ assert.match(sub,/g=A&amp;a=A1/);
 assert.match(sub,/<ul aria-label="Bu kategorideki ürünler">/);
 assert.match(sub,/href="\/urunler\?u=p-001"/);
 assert.doesNotMatch(html,/21Cm/);
+for(const group of ['A','D','E']) {
+ const guideHtml=await (await get('/urunler?g='+group)).text();
+ assert.match(guideHtml,/<details class="catalog-guide"><summary>/,'Guide is readable in initial HTML without JavaScript');
+ assert.doesNotMatch(await (await get('/urunler?g='+group+'&q=test')).text(),/<details class="catalog-guide">/,'Search results do not carry unrelated category guidance');
+}
 assert.match(await (await get('/urunler?q=kagit')).text(),/noindex, follow/);
 for(const path of ['/does-not-exist','/does-not-exist.html','/missing.webp','/urunler?u=missing'])assert.equal((await get(path)).status,404,path);
 assert.match(await (await get('/does-not-exist')).text(),/Aradığınız sayfa burada değil/);

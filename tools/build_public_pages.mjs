@@ -4,7 +4,7 @@ import vm from 'node:vm';
 const base=new URL('../public/',import.meta.url);
 const context=vm.createContext({document:{querySelectorAll:()=>[],querySelector:()=>null,getElementById:()=>null}});
 vm.runInContext(readFileSync(new URL('site.js',base),'utf8'),context);
-const {groups,subs}=vm.runInContext('({groups:GRUPLAR,subs:ALTLAR})',context);
+const {groups,subs,guides}=vm.runInContext('({groups:GRUPLAR,subs:ALTLAR,guides:KATEGORI_REHBERLERI})',context);
 const products=JSON.parse(readFileSync(new URL('katalog.json',base),'utf8')).urunler.filter(x=>x.aktif!==false);
 const pages={};
 const formatMeasure = value => vm.runInContext(`olcuYazi(${JSON.stringify(value || '')})`,context);
@@ -25,6 +25,7 @@ for(const g of groups){
  }
  const productLinks = list => list.map(p=>({name:formatName(p),path:`/urunler?u=${encodeURIComponent(p.id)}`}));
  pages[`g=${g.g}`].links=productLinks(actual);
+ if(guides[g.g])pages[`g=${g.g}`].guide=guides[g.g];
  for(const s of subs[g.g])if(pages[`g=${g.g}&a=${s.id}`])pages[`g=${g.g}&a=${s.id}`].links=productLinks(actual.filter(p=>p.alt===s.id));
 }
 function output(name,content){

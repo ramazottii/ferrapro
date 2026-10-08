@@ -11,6 +11,33 @@ const GRUPLAR = [
 
 const VITRIN_GRUPLAR = ["A", "B", "C", "D", "E", "F"];
 
+const KATEGORI_REHBERLERI = {
+  A: {
+    title: 'İşletmeniz için temizlik kâğıdı seçimi',
+    paragraphs: [
+      'Havlu ve peçeteler, ıslak havlular ve tuvalet kâğıtları farklı kullanım alanlarına hitap eder. Ofis lavabosu, ortak alan veya servis noktası için seçim yaparken ürünün ambalaj adedini ve kullanım biçimini birlikte değerlendirin.',
+      'Dispenser için havlu ya da tuvalet kâğıdı arıyorsanız aparatın modeli, ürün ölçüsü ve katlama veya rulo biçimi önemlidir. Mevcut ürününüzün ya da aparatınızın fotoğrafını paylaşarak uyumlu seçenekleri birlikte belirleyebiliriz.',
+      'Ürün ya da miktar konusunda karar vermediyseniz firma ve telefon bilginizle görüşme talebi bırakabilirsiniz. Kullanım alanınızı öğrenip katalogdaki seçenekleri birlikte değerlendirelim.'
+    ]
+  },
+  D: {
+    title: 'Temizlik sarf ürünlerini ihtiyacınıza göre seçin',
+    paragraphs: [
+      'Bu grupta çöp poşetleri, temizlik sarf malzemeleri ve kullan-at ürünlerini inceleyebilirsiniz. Ürünü seçerken kullanılacağı alanı, ölçüyü ve ambalaj içindeki adedi karşılaştırın.',
+      'Çöp poşetinde kova ölçüsü ve atığın türü; diğer sarf ürünlerinde kullanım amacı belirleyicidir. Yalnız ürün adına veya rengine bakmak yerine ürün kartındaki özellikleri inceleyin. Eksik kalan özellikleri görüşme sırasında netleştirelim.',
+      'Katalogda aradığınız ürün yoksa adını, fotoğrafını veya mevcut ürün kodunu paylaşabilirsiniz. Size özel araştırma yapıp uygun tedarik seçeneklerini birlikte değerlendirelim.'
+    ]
+  },
+  E: {
+    title: 'Ofis ve işletmeler için gıda ve ikramlık seçimi',
+    paragraphs: [
+      'Çay, kahve, içecek ve atıştırmalık ihtiyaçlarını kullanım noktasına göre planlayabilirsiniz. Ofis mutfağı, toplantı ikramı veya servis alanı için ambalaj biçimi ve tüketim sıklığı farklılaşabilir.',
+      'Ürün kartındaki marka, miktar ve ambalaj bilgilerini karşılaştırın. Gıda alerjisi veya özel beslenme ihtiyacı varsa seçimden önce üreticinin güncel içerik ve alerjen etiketini kontrol edin; katalog fotoğrafı tek başına yeterli olmayabilir.',
+      'İhtiyaç listeniz hazırsa bizimle paylaşın. Henüz ürün veya miktar belirlemediyseniz yalnız firma ve telefon bilginizle görüşme talebi bırakabilir, seçenekleri birlikte netleştirebilirsiniz.'
+    ]
+  }
+};
+
 const GRUP_SLUG = {
   Hijyen: "A",
   "temizlik-kagitlari": "A",

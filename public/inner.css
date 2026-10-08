@@ -23,6 +23,13 @@
 }
 .cat-bar { overflow: visible; width: 100%; margin: 0 0 10px; position: relative; z-index: 4; }
 .cat-circles { display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; list-style: none; margin: 0; padding: 8px 12px 32px; width: auto; animation: none; gap: 10px 28px; }
+@media (min-width: 1000px) {
+  .cat-circles.cat-circles-main { display: grid; grid-template-columns: repeat(3, 188px); gap: 24px 48px; }
+}
+.catalog-guide { margin: 0 0 24px; max-width: 78ch; color: var(--ink); line-height: 1.65; }
+.catalog-guide summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-weight: 600; color: var(--navy); }
+.catalog-guide summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.catalog-guide p { margin: 10px 0; }
 @keyframes cat-kay {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

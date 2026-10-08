@@ -245,10 +245,22 @@
 
     heading.textContent = detail?.ad || selected?.ad || current?.ad || 'Ürünler';
     document.title = heading.textContent + ' · FerraPro';
+    const guideRoot = document.getElementById('catalog-guide');
+    if (guideRoot) {
+      guideRoot.replaceChildren();
+      const guide = !detail && !selected && !query && KATEGORI_REHBERLERI[current?.g];
+      if (guide) {
+        const details = el('details', null, 'catalog-guide');
+        details.append(el('summary', guide.title));
+        guide.paragraphs.forEach(text => details.append(el('p', text)));
+        guideRoot.append(details);
+      }
+    }
 
     discs.replaceChildren();
     const discGroup = detailGroup || current;
     const altDiscs = discGroup ? discGroup.subs.filter((s) => s.id !== 'diger') : [];
+    discs.classList.toggle('cat-circles-main', !altDiscs.length);
     if (altDiscs.length) {
       altDiscs.forEach((s) => discs.append(circle({
         href: url(discGroup.g, s.id, query),
