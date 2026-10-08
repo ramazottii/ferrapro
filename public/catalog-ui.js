@@ -93,7 +93,7 @@
     return menu;
   };
 
-  const circle = ({ href, ad, gorsel, on, tone, group: gNode, code }) => {
+  const circle = ({ href, ad, gorsel, on, tone, group: gNode }) => {
     const li = el('li');
     if (tone) li.className = 'cat-tone-' + tone;
     const node = href ? link('', href, 'cat-circle-link' + (on ? ' is-on' : '')) : el('span', null, 'cat-circle-link');
@@ -104,7 +104,6 @@
       img.alt = '';
       disc.append(img);
     }
-    if (code) node.append(el('span', code, 'cat-code'));
     node.append(disc, el('span', ad || '', 'cat-circle-ad'));
     li.append(node);
     if (gNode) li.append(flyout(gNode));
@@ -266,7 +265,6 @@
         on: false,
         tone: TONE[g.g],
         group: g,
-        code: g.g,
       })));
     }
 

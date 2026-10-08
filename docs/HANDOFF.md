@@ -1867,3 +1867,10 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Yerleşik imagegen kullanıldı. Talimat: yalnız renkli arka planı düz beyaza çevir; ürünü, ambalajı, marka ve ana etiket bilgilerini koru; yeni nesne/metin ekleme. Hareketli havluda tüm banyo ve tezgâhı kaldır, yalnız altılı paket bırak. Kollukta el, parmaklar, kolluk ve sağdaki siyah kıyafeti koru.
 - Üretilen dört çıktı görsel olarak incelendi; PNG kaynakları ve ZIP output/white-products-2026-10-08 altında. Yalnız WebP biçim dönüşümü yapıldı. Görsel üretim çıktıları kaynak fotoğrafların piksel düzeyinde aynı kopyası değildir.
 - npm run check PASS. Bu tur tarayıcıda sayfa yerleşim testi yapılmadı; HTML/CSS değiştirilmedi. Canlı yayın yapılmadı. Önceden var olan panel/app/rule değişiklikleri korunmuştur.
+
+## 8 Ekim 2026 — Site güvenlik/görünürlük denetimi ve kategori kodları
+
+- docs/SITE-AUDIT-2026-10-08.md: canlı HTTP/www davranışı, metadata/site haritası, 401/404, kaynak kod yönetim oturumu riskleri, görsel ve SEO aksiyonları; kapsam sınırları açık. Şifre veya müşteri verisi okunmadı/kaydedilmedi; form gönderilmedi.
+- public/catalog-ui.js A–F kategori rozetleri kaldırıldı; inner.css kullanılmayan cat-code kuralı kaldırıldı; urunler.html script sürümü 101. İç kimlikler/eski URL'ler değişmedi.
+- npm run check PASS. Yerel katalog 1280/390 px: 6 kategori, 0 kod rozeti, yatay taşma yok; mobil menü ve havlu araması (38 sonuç) PASS. Canlı ana sayfa dar ekran ve D grubu masaüstü incelendi.
+- Canlı yayın YAPILMADI. Güvenlik bulguları bu sürümde düzeltilmedi; ayrı inceleme ve regresyon gerektirir. Eşzamanlı Cursor yönetim Excel/panel değişiklikleri bu commit kapsamına alınmadı.
