@@ -2,49 +2,38 @@ Add-Type -AssemblyName System.Drawing
 Add-Type -ReferencedAssemblies System.Drawing -TypeDefinition @"
 using System;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.Runtime.InteropServices;
+using System.Drawing.Drawing2D;
 
-public static class TileInvert {
-  public static Bitmap CreamMosaic(string path, Color navy, Color cream) {
-    Bitmap src = new Bitmap(path);
-    int w = src.Width, h = src.Height;
-    Rectangle rect = new Rectangle(0, 0, w, h);
-    BitmapData sData = src.LockBits(rect, ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-    int stride = Math.Abs(sData.Stride);
-    byte[] buf = new byte[stride * h];
-    Marshal.Copy(sData.Scan0, buf, 0, buf.Length);
-    src.UnlockBits(sData);
-    Bitmap bmp = new Bitmap(w, h, PixelFormat.Format32bppArgb);
-    BitmapData dData = bmp.LockBits(rect, ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
-    for (int y = 0; y < h; y++) {
-      for (int x = 0; x < w; x++) {
-        int i = y * stride + x * 4;
-        byte a = buf[i+3];
-        if (a < 12) continue;
-        byte b = buf[i], g = buf[i+1], r = buf[i+2];
-        int lum = r + g + b;
-        if (lum < 220) { buf[i] = cream.B; buf[i+1] = cream.G; buf[i+2] = cream.R; }
-        else { buf[i] = navy.B; buf[i+1] = navy.G; buf[i+2] = navy.R; }
-      }
+public static class WaveField {
+  public static void FillFromWave(Graphics g, int W, int H, float baseX, float amp, float phase, Brush brush) {
+    GraphicsPath path = new GraphicsPath();
+    PointF[] pts = new PointF[H + 1];
+    for (int y = 0; y <= H; y++) {
+      float t = (float)y / H;
+      pts[y] = new PointF(baseX + amp * (float)Math.Sin(2.0 * Math.PI * t + phase), y);
     }
-    Marshal.Copy(buf, 0, dData.Scan0, buf.Length);
-    bmp.UnlockBits(dData);
-    src.Dispose();
-    return bmp;
+    path.AddLines(pts);
+    path.AddLine(W + 2, H, W + 2, 0);
+    path.CloseFigure();
+    g.FillPath(brush, path);
+    path.Dispose();
   }
 }
 "@
 
 $navy = [System.Drawing.Color]::FromArgb(11, 30, 56)
+$navyDeep = [System.Drawing.Color]::FromArgb(8, 14, 28)
+$wave1 = [System.Drawing.Color]::FromArgb(14, 42, 74)
+$wave2 = [System.Drawing.Color]::FromArgb(22, 58, 96)
+$wave3 = [System.Drawing.Color]::FromArgb(30, 78, 120)
 $cream = [System.Drawing.Color]::FromArgb(245, 241, 232)
 $white = [System.Drawing.Color]::FromArgb(244, 239, 230)
-$muted = [System.Drawing.Color]::FromArgb(190, 205, 220)
 $city = ([char]0x0130).ToString() + "stanbul"
 
 $W = 1280; $H = 720
 $outDir = "C:\tedarik\public\kartvizit"
 $webDir = Join-Path $outDir "web"
+$assetDir = "C:\Users\swsyn\.cursor\projects\c-tedarik\assets"
 New-Item -ItemType Directory -Force -Path $webDir | Out-Null
 
 $hex = [System.Drawing.Image]::FromFile("C:\tedarik\public\logo\ferrapro-hex.png")
@@ -59,75 +48,111 @@ function New-G([System.Drawing.Bitmap]$bmp) {
   return $g
 }
 
-function Draw-Bg([string]$src, [System.Drawing.Graphics]$g) {
+function Draw-FrontWaves([System.Drawing.Graphics]$g) {
+  $rect = New-Object System.Drawing.Rectangle 0, 0, $W, $H
+  $grad = New-Object System.Drawing.Drawing2D.LinearGradientBrush $rect, $navyDeep, $navy, 0.0
+  $g.FillRectangle($grad, $rect)
+  $grad.Dispose()
+  $amp = [single]48
+  $phase = [single]0.35
+  $b1 = New-Object System.Drawing.SolidBrush $wave1
+  $b2 = New-Object System.Drawing.SolidBrush $wave2
+  $b3 = New-Object System.Drawing.SolidBrush $wave3
+  $bC = New-Object System.Drawing.SolidBrush $cream
+  [WaveField]::FillFromWave($g, $W, $H, 798, $amp, $phase, $b1)
+  [WaveField]::FillFromWave($g, $W, $H, 838, $amp, $phase, $b2)
+  [WaveField]::FillFromWave($g, $W, $H, 878, $amp, $phase, $b3)
+  [WaveField]::FillFromWave($g, $W, $H, 918, $amp, $phase, $bC)
+  $b1.Dispose(); $b2.Dispose(); $b3.Dispose(); $bC.Dispose()
+}
+
+function Draw-BackBg([string]$src, [System.Drawing.Graphics]$g) {
   $img = [System.Drawing.Image]::FromFile($src)
   $g.DrawImage($img, 0, 0, $W, $H)
   $img.Dispose()
 }
 
 function Draw-Icon([System.Drawing.Graphics]$g, [string]$kind, [int]$x, [int]$y, [System.Drawing.Font]$iconFont, [System.Drawing.Brush]$brush) {
-  $pen = New-Object System.Drawing.Pen $white, 2.0
-  $g.DrawEllipse($pen, $x, $y, 46, 46)
+  $size = 58
+  $pen = New-Object System.Drawing.Pen $white, 2.4
+  $g.DrawEllipse($pen, $x, $y, $size, $size)
   $ch = switch ($kind) {
     "phone" { [char]0xE13A }
     "mail"  { [char]0xE715 }
     default { [char]0xE707 }
   }
-  $g.DrawString([string]$ch, $iconFont, $brush, $x + 10, $y + 10)
+  $g.DrawString([string]$ch, $iconFont, $brush, $x + 12, $y + 12)
   $pen.Dispose()
 }
 
 $bWhite = New-Object System.Drawing.SolidBrush $white
 $bNavy = New-Object System.Drawing.SolidBrush $navy
-$bCream = New-Object System.Drawing.SolidBrush $cream
-$bMuted = New-Object System.Drawing.SolidBrush $muted
-$fontName = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]36)
-$fontSub = New-Object System.Drawing.Font -ArgumentList @("Segoe UI", [single]18)
-$fontSlogan = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]20)
-$fontLine = New-Object System.Drawing.Font -ArgumentList @("Segoe UI", [single]20)
-$fontBrand = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]32)
-$fontBrandLg = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]48)
-$fontWeb = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]16)
-$fontIcon = New-Object System.Drawing.Font -ArgumentList @("Segoe MDL2 Assets", [single]16)
+$fontName = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]48)
+$fontSlogan = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]26)
+$fontLine = New-Object System.Drawing.Font -ArgumentList @("Segoe UI", [single]26)
+$fontBrand = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]34)
+$fontBrandLg = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]56)
+$fontWeb = New-Object System.Drawing.Font -ArgumentList @("Segoe UI Semibold", [single]18)
+$fontIcon = New-Object System.Drawing.Font -ArgumentList @("Segoe MDL2 Assets", [single]18)
 
-# --- FRONT (contact + logo) ---
+$slogan1 = ([char]0x0130).ToString() + ([char]0x015F).ToString() + "letmelere Kesintisiz"
+$slogan2 = "Tedarik " + ([char]0x00C7).ToString() + ([char]0x00F6).ToString() + "z" + ([char]0x00FC).ToString() + "mleri"
+$slogan = "$slogan1 $slogan2"
+
+# --- FRONT BACKGROUND ---
+$zemin = New-Object System.Drawing.Bitmap $W, $H
+$gz = New-G $zemin
+Draw-FrontWaves $gz
+$zemin.Save("$assetDir\kartvizit-dalga-on-zemin.png", [System.Drawing.Imaging.ImageFormat]::Png)
+$gz.Dispose()
+
+# --- FRONT ---
 $front = New-Object System.Drawing.Bitmap $W, $H
 $g = New-G $front
-Draw-Bg "C:\Users\swsyn\.cursor\projects\c-tedarik\assets\kartvizit-dalga-on-zemin.png" $g
-$slogan = ([char]0x0130).ToString() + ([char]0x015F).ToString() + "letmelere Kesintisiz Tedarik " + ([char]0x00C7).ToString() + ([char]0x00F6).ToString() + "z" + ([char]0x00FC).ToString() + "mleri"
-$g.DrawString("Ayfer Adatepe", $fontName, $bWhite, 64, 72)
-$g.DrawString($slogan, $fontSlogan, $bWhite, 66, 168)
-Draw-Icon $g "phone" 64 430 $fontIcon $bWhite
-Draw-Icon $g "mail" 64 510 $fontIcon $bWhite
-Draw-Icon $g "pin" 64 590 $fontIcon $bWhite
-$g.DrawString("(+90) 532 589 14 36", $fontLine, $bWhite, 128, 438)
-$g.DrawString("info@ferrapro.com", $fontLine, $bWhite, 128, 518)
-$g.DrawString("Tuzla Tepe" + ([char]0x00F6) + "ren, " + $city, $fontLine, $bWhite, 128, 598)
+$g.DrawImage($zemin, 0, 0, $W, $H)
+$zemin.Dispose()
+$g.DrawString("Ayfer Adatepe", $fontName, $bWhite, 52, 54)
+$g.DrawString($slogan1, $fontSlogan, $bWhite, 54, 148)
+$g.DrawString($slogan2, $fontSlogan, $bWhite, 54, 190)
 
-$tw = 148; $th = 148
-$tx = 972; $ty = 108
+Draw-Icon $g "phone" 52 400 $fontIcon $bWhite
+Draw-Icon $g "mail" 52 490 $fontIcon $bWhite
+Draw-Icon $g "pin" 52 580 $fontIcon $bWhite
+$g.DrawString("0530 716 18 77", $fontLine, $bWhite, 128, 408)
+$g.DrawString("info@ferrapro.com", $fontLine, $bWhite, 128, 498)
+$g.DrawString("Ata" + ([char]0x015F) + "ehir/" + $city, $fontLine, $bWhite, 128, 588)
+
+$tw = 128; $th = 128
+$tx = 1048; $ty = 48
 $g.DrawImage($hex, $tx, $ty, $tw, $th)
-$g.DrawString("FerraPro", $fontBrand, $bNavy, 958, 272)
+$g.DrawString("FerraPro", $fontBrand, $bNavy, 1034, 186)
+
+$qrS = 142
+$qrX = 1040
+$qrY = 508
+$g.DrawImage($qr, $qrX, $qrY, $qrS, $qrS)
+$g.DrawString("ferrapro.com", $fontWeb, $bNavy, $qrX + 12, $qrY - 32)
 
 $front.Save("$outDir\kartvizit-navy-on.png", [System.Drawing.Imaging.ImageFormat]::Png)
 $g.Dispose(); $front.Dispose()
 
-# --- BACK (brand + QR) ---
+# --- BACK ---
 $back = New-Object System.Drawing.Bitmap $W, $H
 $g = New-G $back
-Draw-Bg "C:\Users\swsyn\.cursor\projects\c-tedarik\assets\kartvizit-dalga-arka-zemin.png" $g
-$mh = 140
+Draw-BackBg "$assetDir\kartvizit-dalga-arka-zemin.png" $g
+$mh = 152
 $mw = [int]($hex.Width * $mh / $hex.Height)
-$g.DrawImage($hex, 56, 64, $mw, $mh)
-$brandX = 56 + $mw + 28
-$g.DrawString("FerraPro", $fontBrandLg, $bWhite, $brandX, 68)
-$g.DrawString($slogan, $fontSlogan, $bWhite, (New-Object System.Drawing.RectangleF $brandX, 190, 760, 60))
+$g.DrawImage($hex, 48, 48, $mw, $mh)
+$brandX = 48 + $mw + 24
+$g.DrawString("FerraPro", $fontBrandLg, $bWhite, $brandX, 52)
+$g.DrawString($slogan1, $fontSlogan, $bWhite, $brandX, 148)
+$g.DrawString($slogan2, $fontSlogan, $bWhite, $brandX, 190)
 
 $qrS = 168
-$qrX = $W - 72 - $qrS
-$qrY = $H - 88 - $qrS
+$qrX = $W - 64 - $qrS
+$qrY = $H - 72 - $qrS
 $g.DrawImage($qr, $qrX, $qrY, $qrS, $qrS)
-$g.DrawString("ferrapro.com", $fontWeb, $bNavy, $qrX + 22, $qrY - 32)
+$g.DrawString("ferrapro.com", $fontWeb, $bNavy, $qrX + 18, $qrY - 34)
 
 $back.Save("$outDir\kartvizit-navy-arka.png", [System.Drawing.Imaging.ImageFormat]::Png)
 $g.Dispose(); $back.Dispose()
@@ -149,7 +174,7 @@ Save-Jpg "$outDir\kartvizit-navy-on.png" "navy-on.jpg"
 Save-Jpg "$outDir\kartvizit-navy-arka.png" "navy-arka.jpg"
 
 $hex.Dispose(); $qr.Dispose()
-$bWhite.Dispose(); $bNavy.Dispose(); $bCream.Dispose(); $bMuted.Dispose()
-$fontName.Dispose(); $fontSub.Dispose(); $fontSlogan.Dispose(); $fontLine.Dispose()
+$bWhite.Dispose(); $bNavy.Dispose()
+$fontName.Dispose(); $fontSlogan.Dispose(); $fontLine.Dispose()
 $fontBrand.Dispose(); $fontBrandLg.Dispose(); $fontWeb.Dispose(); $fontIcon.Dispose()
 Write-Output "ok"

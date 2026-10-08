@@ -1,0 +1,9 @@
+{
+  "method": "Built-in image_gen, square studio photograph, light gray #e4e7eb, no brand; public/img/products/{key}.webp",
+  "subjects": {
+    "keyboardwired": "One full-size black office keyboard with a clearly visible attached USB cable and USB plug, standard realistic key layout.",
+    "keyboardwireless": "One slim full-size dark gray wireless office keyboard with a small USB receiver alongside, no cable.",
+    "keyboardset": "A matching black wireless full-size office keyboard and separate wireless mouse together, both fully visible, no cables.",
+    "numerickeypad": "One standalone compact numeric keypad only: 4 columns of calculator-style number keys including 0 to 9, Num Lock, decimal, arithmetic keys and Enter. No alphabetic keyboard."
+  }
+}

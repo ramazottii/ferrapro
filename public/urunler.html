@@ -1,31 +1,56 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ürünler · FerraPro</title>
   <meta name="description" content="FerraPro ürün gruplarını inceleyin; ihtiyacınıza uygun teklif isteyin." />
-  <meta name="theme-color" content="#142238" />
-  <link rel="icon" href="/logo/ferrapro-hex.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/site.css?v=60" />
+  <meta name="theme-color" content="#0F172A" />
+  <link rel="icon" href="/logo/ferrapro-favicon.png?v=1" type="image/png" />
+  <link rel="apple-touch-icon" href="/logo/ferrapro-apple.png?v=1" />
+  <link rel="stylesheet" href="/site.css?v=82" />
+  <link rel="stylesheet" href="/inner.css?v=98" />
+  <link rel="canonical" href="https://ferrapro.com/urunler" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:title" content="Ürünler · FerraPro" />
+  <meta property="og:description" content="FerraPro ürün gruplarını inceleyin; ihtiyacınıza uygun teklif isteyin." />
+  <meta property="og:url" content="https://ferrapro.com/urunler" />
+  <meta property="og:image" content="https://ferrapro.com/img/collection/hero.webp" />
 </head>
-<body>
+<body class="inner">
   <header class="head" data-head="/urunler"></header>
-  <main class="wrap page catalog">
-    <h1 id="baslik">Ürünler</h1>
-    <div class="cat-tools">
-      <label class="cat-select" for="kat-sec">Kategori</label>
-      <select id="kat-sec"></select>
-      <nav class="cat-nav" id="kat-nav" aria-label="Ürün kategorileri"></nav>
-      <p class="cat-meta" id="kat-meta"></p>
+  <main>
+    <section class="page-banner page-banner-slim"><div class="wrap">
+      <nav id="catalog-crumbs" class="catalog-path" aria-label="Sayfa yolu">
+        <a href="/">Ana sayfa</a><span class="breadcrumb-divider"> / </span><span class="breadcrumb-current">Ürünler</span>
+      </nav>
+    </div></section>
+    <div class="page catalog catalog-layout">
+      <div class="wrap catalog-head">
+        <h1 id="baslik">Ürünler</h1>
+        <div id="catalog-guide"></div>
+      </div>
+      <div class="cat-bar">
+        <ul class="cat-circles" id="kat-daireler" aria-label="Kategoriler"></ul>
+      </div>
+      <div class="brand-rail" aria-label="Popüler markalar">
+        <p class="brand-rail-label">Popüler markalar</p>
+        <div class="brand-rail-mask">
+          <ul class="brand-track" id="populer-markalar"></ul>
+        </div>
+      </div>
+      <div class="wrap catalog-results">
+        <div id="liste"></div>
+        <noscript>Ürünleri görüntülemek için JavaScript gereklidir. <a href="/iletisim">İletişime geçin</a>.</noscript>
+      </div>
     </div>
-    <div id="liste"></div>
-    <p class="catalog-cta"><a class="btn" href="/siparis">Teklif Al</a></p>
   </main>
   <footer class="foot" data-foot></footer>
-  <script src="/site.js?v=60"></script>
+  <script src="/interest.js?v=69"></script>
+  <script src="/metrics.js?v=1"></script>
+  <script src="/site.js?v=140"></script>
+  <script>FerraInterest.mount();</script>
+  <script src="/catalog-ui.js?v=103"></script>
 </body>
 </html>

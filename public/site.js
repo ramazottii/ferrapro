@@ -1,49 +1,161 @@
-const WA = ""; /* 90xxxxxxxxxx — numara gelince dolar */
+const WA = "905307161877";
 
 const GRUPLAR = [
-  { g: "Hijyen", ad: "Temizlik Kâğıt Ürünleri" },
-  { g: "Temizlik", ad: "Temizlik Ürünleri" },
-  { g: "Kırtasiye", ad: "Kırtasiye Ürünleri" },
-  { g: "Mutfak", ad: "Mutfak / İkram" },
-  { g: "Ambalaj", ad: "Ambalaj" },
-  { g: "PC", ad: "Bilgisayar ve Yazıcı Sarf Malzemeleri" },
-  { g: "Sağlık", ad: "Sağlık Sarf" },
+  { g: "A", ad: "Temizlik Kâğıtları" },
+  { g: "B", ad: "Sıvı Temizlik Ürünleri" },
+  { g: "C", ad: "Aparatlar ve Ekipmanlar" },
+  { g: "D", ad: "Temizlik Sarf Ürünleri" },
+  { g: "E", ad: "Gıda ve Atıştırmalıklar" },
+  { g: "F", ad: "Kırtasiye ve Ofis Sarf Ürünleri" },
 ];
+
+const VITRIN_GRUPLAR = ["A", "B", "C", "D", "E", "F"];
+
+const KATEGORI_REHBERLERI = {
+  A: {
+    title: 'İşletmeniz için temizlik kâğıdı seçimi',
+    paragraphs: [
+      'Havlu ve peçeteler, ıslak havlular ve tuvalet kâğıtları farklı kullanım alanlarına hitap eder. Ofis lavabosu, ortak alan veya servis noktası için seçim yaparken ürünün ambalaj adedini ve kullanım biçimini birlikte değerlendirin.',
+      'Dispenser için havlu ya da tuvalet kâğıdı arıyorsanız aparatın modeli, ürün ölçüsü ve katlama veya rulo biçimi önemlidir. Mevcut ürününüzün ya da aparatınızın fotoğrafını paylaşarak uyumlu seçenekleri birlikte belirleyebiliriz.',
+      'Ürün ya da miktar konusunda karar vermediyseniz firma ve telefon bilginizle görüşme talebi bırakabilirsiniz. Kullanım alanınızı öğrenip katalogdaki seçenekleri birlikte değerlendirelim.'
+    ]
+  },
+  D: {
+    title: 'Temizlik sarf ürünlerini ihtiyacınıza göre seçin',
+    paragraphs: [
+      'Bu grupta çöp poşetleri, temizlik sarf malzemeleri ve kullan-at ürünlerini inceleyebilirsiniz. Ürünü seçerken kullanılacağı alanı, ölçüyü ve ambalaj içindeki adedi karşılaştırın.',
+      'Çöp poşetinde kova ölçüsü ve atığın türü; diğer sarf ürünlerinde kullanım amacı belirleyicidir. Yalnız ürün adına veya rengine bakmak yerine ürün kartındaki özellikleri inceleyin. Eksik kalan özellikleri görüşme sırasında netleştirelim.',
+      'Katalogda aradığınız ürün yoksa adını, fotoğrafını veya mevcut ürün kodunu paylaşabilirsiniz. Size özel araştırma yapıp uygun tedarik seçeneklerini birlikte değerlendirelim.'
+    ]
+  },
+  E: {
+    title: 'Ofis ve işletmeler için gıda ve ikramlık seçimi',
+    paragraphs: [
+      'Çay, kahve, içecek ve atıştırmalık ihtiyaçlarını kullanım noktasına göre planlayabilirsiniz. Ofis mutfağı, toplantı ikramı veya servis alanı için ambalaj biçimi ve tüketim sıklığı farklılaşabilir.',
+      'Ürün kartındaki marka, miktar ve ambalaj bilgilerini karşılaştırın. Gıda alerjisi veya özel beslenme ihtiyacı varsa seçimden önce üreticinin güncel içerik ve alerjen etiketini kontrol edin; katalog fotoğrafı tek başına yeterli olmayabilir.',
+      'İhtiyaç listeniz hazırsa bizimle paylaşın. Henüz ürün veya miktar belirlemediyseniz yalnız firma ve telefon bilginizle görüşme talebi bırakabilir, seçenekleri birlikte netleştirebilirsiniz.'
+    ]
+  }
+};
+
+const GRUP_SLUG = {
+  Hijyen: "A",
+  "temizlik-kagitlari": "A",
+  Temizlik: "B",
+  "sivi-temizlik-urunleri": "B",
+  Aparat: "C",
+  "aparat-ve-ekipmanlar": "C",
+  Gıda: "E",
+  Mutfak: "E",
+  "Mutfak / İkram": "E",
+  gida: "E",
+  Kırtasiye: "F",
+  "kirtasiye-ve-ofis-urunleri": "F",
+  Ambalaj: "F",
+  "sarf-ve-ambalaj-urunleri": "F",
+  PC: "F",
+  "PC Sarf": "F",
+  "bilgisayar-sarf-urunleri": "F",
+};
+
+const ALT_SLUG = {
+  "havlu-ve-peceteler": "A1",
+  "islak-havlular": "A2",
+  "tuvalet-kagitlari": "A3",
+  "endustriyel-temizlik-urunleri": "B1",
+  "genel-kullanim-temizlik-urunleri": "B2",
+  "havlu-aparatlari": "C1",
+  "sivi-sabun-ve-kopuk-sabun-aparatlari": "C2",
+  "cop-kovalari": "C3",
+  "cop-posetleri": "D1",
+  "temizlik-sarf-urunleri": "D2",
+  "kullan-at-urunler": "D3",
+};
 
 const SATIR_MAX = 2000;
 
 const GRUP_FOTO = {
-  pecete: "/img/ico-pecete.png",
-  zkat: "/img/ico-zhavlu.png",
-  fotosel: "/img/ico-fotosel.png",
-  hareketli: "/img/ico-fotosel.png",
-  "icten-havlu": "/img/ico-fotosel.png",
-  havlu: "/img/ico-fotosel.png",
-  jumbo: "/img/ico-jumbo.png",
-  "icten-tuvalet": "/img/ico-jumbo.png",
-  tuvalet: "/img/ico-tuvalet.png",
-  cop: "/img/ico-cop.png",
-  sivi: "/img/cat-temizlik.png",
-  bardak: "/img/ico-bardak.png",
-  masa: "/img/ico-klinik.png",
-  a4: "/img/th-a4.png",
-  klasor: "/img/th-klasor.png",
-  dosya: "/img/th-dosya.png",
-  pil: "/img/th-pil.png",
-  kalem: "/img/th-kalem.png",
-  zimba: "/img/th-zimba.png",
-  not: "/img/th-not.png",
-  mouse: "/img/th-mouse.png",
-  klavye: "/img/th-klavye.png",
-  toner: "/img/th-toner.png",
-  usb: "/img/th-usb.png",
-  power: "/img/th-power.png",
-  strec: "/img/th-strec.png",
-  bant: "/img/th-bant.png",
-  kraft: "/img/th-kraft.png",
-  kese: "/img/th-kese.png",
-  kasa: "/img/th-kasa.png",
-  buz: "/img/th-buz.png",
+  A: "/img/products/daire-temizlik-kagitlari.webp?v=2",
+  B: "/img/products/daire-sivi-temizlik.webp?v=3",
+  C: "/img/products/daire-aparat-ekipman.webp?v=4",
+  D: "/img/products/daire-temizlik.webp?v=4",
+  E: "/img/products/daire-gida-ikram.webp?v=2",
+  F: "/img/products/daire-kirtasiye-ofis.webp?v=3",
+};
+
+const POPULER_MARKALAR = {
+  A: [
+    { ad: "Espiga", logo: "/img/brands/espiga.webp?v=2" },
+    { ad: "Selpak", logo: "/img/brands/selpak.webp?v=2" },
+    { ad: "Belinno", logo: "/img/brands/belinno.webp?v=2" },
+    { ad: "Sleepy", logo: "/img/brands/sleepy.webp?v=2" },
+    { ad: "Papia", logo: "/img/brands/papia.webp?v=2" },
+    { ad: "Solo", logo: "/img/brands/solo.webp?v=2" },
+    { ad: "Familia", logo: "/img/brands/familia.webp?v=2" },
+    { ad: "Polente", logo: "/img/brands/polente.webp?v=2" },
+    { ad: "DeepFresh", logo: "/img/brands/deepfresh.webp?v=2" },
+    { ad: "Freshmaker", logo: "/img/brands/freshmaker.webp?v=2" },
+    { ad: "Komili", logo: "/img/brands/komili.webp?v=2" },
+    { ad: "Teno", logo: "/img/brands/teno.webp?v=2" },
+    { ad: "Rulopak", logo: "/img/brands/rulopak.webp?v=2" },
+  ],
+  B: [
+    { ad: "Yumoş", logo: "/img/brands/yumos.webp?v=2" },
+    { ad: "Vernel", logo: "/img/brands/vernel.webp?v=2" },
+    { ad: "Ozopak", logo: "/img/brands/ozopak.webp?v=2" },
+    { ad: "Fairy", logo: "/img/brands/fairy.webp?v=2" },
+    { ad: "Domestos", logo: "/img/brands/domestos.webp?v=2" },
+    { ad: "Cif", logo: "/img/brands/cif.webp?v=2" },
+    { ad: "Pril", logo: "/img/brands/pril.webp?v=2" },
+    { ad: "Finish", logo: "/img/brands/finish.webp?v=2" },
+    { ad: "Asperox", logo: "/img/brands/asperox.webp?v=2" },
+    { ad: "Porçöz", logo: "/img/brands/porcoz.webp?v=2" },
+  ],
+  C: [
+    { ad: "Vileda", logo: "/img/brands/vileda.webp" },
+    { ad: "Parex", logo: "/img/brands/parex.webp" },
+    { ad: "Palex", logo: "/img/brands/palex.webp" },
+    { ad: "Vialli", logo: "/img/brands/vialli.webp" },
+    { ad: "Flosoft", logo: "/img/brands/flosoft.webp" },
+    { ad: "Scotch-Brite", logo: "/img/brands/scotchbrite.webp" },
+  ],
+  D: [
+    { ad: "Koroplast", logo: "/img/brands/koroplast.webp" },
+    { ad: "Parex", logo: "/img/brands/parex.webp" },
+    { ad: "Ceymop", logo: "/img/brands/ceymop.webp" },
+    { ad: "Ozopak", logo: "/img/brands/ozopak.webp?v=2" },
+    { ad: "Vileda", logo: "/img/brands/vileda.webp" },
+    { ad: "Scotch-Brite", logo: "/img/brands/scotchbrite.webp" },
+  ],
+  E: [
+    { ad: "Eti", logo: "/img/brands/eti.webp" },
+    { ad: "Lipton", logo: "/img/brands/lipton.webp" },
+    { ad: "Nestlé", logo: "/img/brands/nestle.webp?v=2" },
+    { ad: "Pınar", logo: "/img/brands/pinar.webp" },
+    { ad: "Erikli", logo: "/img/brands/erikli.webp?v=2" },
+    { ad: "Ülker", logo: "/img/brands/ulker.webp" },
+    { ad: "Çaykur", logo: "/img/brands/caykur.webp" },
+    { ad: "Doğuş", logo: "/img/brands/dogus.webp" },
+    { ad: "Mehmet Efendi", logo: "/img/brands/mehmetefendi.webp?v=2" },
+  ],
+  F: [
+    { ad: "Faber-Castell", logo: "/img/brands/faber.webp" },
+    { ad: "Pilot", logo: "/img/brands/pilot.webp" },
+    { ad: "uni-ball", logo: "/img/brands/uniball.webp" },
+    { ad: "BIC", logo: "/img/brands/bic.webp" },
+    { ad: "edding", logo: "/img/brands/edding.webp" },
+    { ad: "Navigator", logo: "/img/brands/navigator.webp" },
+    { ad: "Pritt", logo: "/img/brands/pritt.webp" },
+    { ad: "UHU", logo: "/img/brands/uhu.webp" },
+    { ad: "Leitz", logo: "/img/brands/leitz.webp" },
+    { ad: "noki", logo: "/img/brands/noki.webp" },
+    { ad: "3M", logo: "/img/brands/mmm.webp" },
+    { ad: "tesa", logo: "/img/brands/tesa.webp" },
+    { ad: "Scotch", logo: "/img/brands/scotch.webp" },
+    { ad: "Logitech", logo: "/img/brands/logitech.webp" },
+    { ad: "Canon", logo: "/img/brands/canon.webp" },
+    { ad: "Epson", logo: "/img/brands/epson.webp" },
+  ],
 };
 
 function kacis(s) {
@@ -59,21 +171,26 @@ function kacisAttr(s) {
 
 function grupAnahtar(g) {
   if (g === "Sağlık" || g === "Sağlık Sarf") return ["Sağlık", "Klinik"];
-  if (g === "Mutfak" || g === "Mutfak / İkram") return ["Mutfak"];
-  if (g === "PC" || g === "PC Sarf") return ["PC", "PC Sarf"];
   return g ? [g] : [];
 }
 
-function gecerliG(g) {
-  return GRUPLAR.some((x) => x.g === g) ? g : "";
+function gecerliA(a) {
+  const raw = String(a || "").trim();
+  if (!raw) return "";
+  if (ALT_SLUG[raw]) return ALT_SLUG[raw];
+  if (/^[A-F][1-9]$/.test(raw)) return raw;
+  return "";
+}
+
+function gecerliG(g, a) {
+  const alt = gecerliA(a);
+  if (alt) return alt.charAt(0);
+  const mapped = GRUP_SLUG[g] || g;
+  return GRUPLAR.some((x) => x.g === mapped) ? mapped : "";
 }
 
 function grupFormDeger(g) {
-  const key = gecerliG(g);
-  if (key === "PC") return "PC Sarf";
-  if (key === "Sağlık") return "Sağlık Sarf";
-  if (key === "Mutfak") return "Mutfak / İkram";
-  return key;
+  return gecerliG(g);
 }
 
 function teklifHref(g, satir) {
@@ -85,11 +202,12 @@ function teklifHref(g, satir) {
   return "/siparis?" + p.toString();
 }
 
-function katalogYol({ g, q, a }) {
+function katalogYol({ g, q, a, u }) {
   const p = new URLSearchParams();
   if (g) p.set("g", g);
   if (q) p.set("q", q);
   if (a) p.set("a", a);
+  if (u) p.set("u", u);
   const s = p.toString();
   return "/urunler" + (s ? "?" + s : "");
 }
@@ -98,43 +216,85 @@ function header(active) {
   const params = new URLSearchParams(location.search);
   const qVal = kacisAttr(params.get("q") || "");
   const path = location.pathname.replace(/\.html$/, "");
-  const gKeep = path === "/urunler" ? gecerliG(params.get("g") || "") : "";
-  const items = [
-    ["/urunler", "Ürünler"],
-    ["/hakkimizda", "Hakkımızda"],
-    ["/referanslar", "Referanslar"],
-  ];
-  const links = items
-    .map(([href, label]) => `<a href="${href}" class="${active === href ? "is-on" : ""}">${label}</a>`)
-    .join("");
-  const ctaOn = active === "/siparis" ? " is-on" : "";
+  const gKeep = path === "/urunler" ? gecerliG(params.get("g") || "", params.get("a") || "") : "";
+  const on = (href) => active === href;
+  const link = (href, label) => `<a href="${href}" ${on(href) ? 'aria-current="page"' : ""} class="${on(href) ? "is-on" : ""}">${label}</a>`;
+  const ctaOn = on("/siparis") ? " is-on" : "";
   const gHidden = gKeep ? `<input type="hidden" name="g" value="${kacisAttr(gKeep)}" />` : "";
-  return `<div class="wrap">
-    <a class="brand" href="/"><img src="/logo/ferrapro-hex.png" alt="FerraPro"><span><b>FER</b><i>RA</i><b>PRO</b></span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
-    <nav id="site-nav">${links}</nav>
-    <form class="seek" action="/urunler" method="get" role="search">
-      <label class="sr" for="q">Ürün ara</label>
-      ${gHidden}
-      <input id="q" type="search" name="q" placeholder="Ürün ara" value="${qVal}" />
-    </form>
-    <a class="btn btn-head${ctaOn}" href="/siparis">Teklif Al</a>
+  const bandHref = active === "/" ? "#teklif-al" : "/siparis";
+  const drops = GRUPLAR.map((g) => `<li><a href="${katalogYol({ g: g.g })}">${g.ad}</a></li>`).join("");
+  return `<div class="head-bar">
+    <div class="head-inner">
+      <p class="head-bar-full">İşletmenizin ihtiyaçları için tek iletişim noktası.</p>
+      <p class="head-bar-short">İşletmeniz için tek iletişim noktası.</p>
+      <div class="head-bar-links">
+        <a href="tel:+905307161877">+90 530 716 18 77</a>
+      </div>
+    </div>
+  </div>
+  <div class="head-main">
+    <div class="head-inner">
+      <a class="brand" href="/" aria-label="FerraPro"><img class="brand-logo" src="/logo/ferrapro-header.png?v=1" width="1264" height="342" alt="FerraPro"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü"><span></span></button>
+      <nav id="site-nav">
+        <div class="head-drop">
+          <a href="/urunler" class="head-drop-link${on("/urunler") ? " is-on" : ""}" ${on("/urunler") ? 'aria-current="page"' : ""}>Ürünler</a>
+          <button class="head-drop-toggle" type="button" aria-expanded="false" aria-label="Ürün grupları"></button>
+          <ul class="head-drop-menu">${drops}</ul>
+        </div>
+        ${link("/hakkimizda", "Hakkımızda")}
+        ${link("/sektorler", "Sektörler")}
+        ${link("/iletisim", "İletişim")}
+        <form class="seek" action="/urunler" method="get" role="search">
+          <label class="sr" for="q">Ürün ara</label>
+          ${gHidden}
+          <input id="q" type="search" name="q" placeholder="Ürün ara" value="${qVal}" />
+        </form>
+        <a class="head-nav-extra" href="mailto:info@ferrapro.com">E-posta iletişimi</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-head btn-head-wa" href="https://wa.me/${WA}"><span class="head-cta-full">WhatsApp’tan Yazın</span><span class="head-cta-short">WhatsApp</span></a>
+        <a class="btn btn-head btn-head-list${ctaOn}" href="/siparis"><span class="head-list-full">Teklif / Görüşme Talebi</span><span class="head-list-short">Talep Bırak</span> <span data-interest-count hidden></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="head-band">
+    <div class="head-band-fx" aria-hidden="true"></div>
+    <div class="head-inner">
+      <p class="head-band-full">İhtiyacınızı iletin, uygun ürünleri birlikte bulalım.</p>
+      <p class="head-band-short">İhtiyacınızı iletin, hızlı teklif alın</p>
+      <a class="head-band-btn" href="${bandHref}">Teklif İste</a>
+    </div>
   </div>`;
 }
 
 function footer() {
-  return `<div class="wrap">
-    <p>
-      <strong>FerraPro</strong>
-      <span>Ataşehir / İstanbul</span>
-      <a class="foot-mail" href="mailto:info@ferrapro.com">info@ferrapro.com</a>
-      <a class="foot-mail" href="tel:+905325891436">0532 589 14 36</a>
-    </p>
-    <nav>
-      <a href="/kvkk">KVKK</a>
-      <a href="/siparis">Teklif Al</a>
+  return `<div class="foot-inner">
+    <div class="foot-brand">
+      <a class="brand brand-stack" href="/" aria-label="FerraPro"><img class="brand-logo-stack" src="/logo/ferrapro.png?v=1" width="901" height="523" alt="FerraPro"></a>
+      <p>Kurumsal ürün tedarikinde güvenilir çözüm ortağınız.</p>
+    </div>
+    <nav class="foot-col" aria-label="Ürünler">
+      <h2>Ürünler</h2>
+      ${GRUPLAR.map((g) => `<a href="${katalogYol({ g: g.g })}">${g.ad}</a>`).join("")}
     </nav>
-  </div>`;
+    <nav class="foot-col" aria-label="Kurumsal">
+      <h2>Kurumsal</h2>
+      <a href="/hakkimizda">Hakkımızda</a>
+      <a href="/sektorler">Sektörler</a>
+      <a href="/referanslar">Referanslarımız</a>
+      <a href="/iletisim">İletişim</a>
+      <a href="/kvkk">KVKK aydınlatma metni</a>
+    </nav>
+    <div class="foot-col">
+      <h2>İletişim</h2>
+      <a href="tel:+905307161877">+90 530 716 18 77</a>
+      <a href="mailto:info@ferrapro.com">info@ferrapro.com</a>
+      <span>ferrapro.com</span>
+      <span>İstanbul</span>
+    </div>
+  </div>
+  <p class="foot-copy">© 2026 FerraPro. Tüm hakları saklıdır.</p>`;
 }
 
 document.querySelectorAll("[data-head]").forEach((el) => {
@@ -147,25 +307,54 @@ document.querySelectorAll("[data-foot]").forEach((el) => {
 function bindNav() {
   const btn = document.querySelector(".nav-toggle");
   const nav = document.getElementById("site-nav");
+  const drop = document.querySelector(".head-drop");
+  const dropBtn = document.querySelector(".head-drop-toggle");
+  const dropLink = document.querySelector(".head-drop-link");
   if (!btn || !nav) return;
 
   const setOpen = (open) => {
     btn.setAttribute("aria-expanded", open ? "true" : "false");
     nav.classList.toggle("is-open", open);
+    if (!open && drop) setDrop(false);
+  };
+  const setDrop = (open) => {
+    if (!drop || !dropBtn) return;
+    drop.classList.toggle("is-open", open);
+    dropBtn.setAttribute("aria-expanded", open ? "true" : "false");
   };
 
   btn.addEventListener("click", () => {
     setOpen(btn.getAttribute("aria-expanded") !== "true");
   });
+  if (dropBtn) {
+    dropBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
+  if (dropLink) {
+    dropLink.addEventListener("click", (e) => {
+      if (!window.matchMedia("(max-width: 768px)").matches) return;
+      e.preventDefault();
+      setDrop(!drop.classList.contains("is-open"));
+    });
+  }
 
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
+    if (drop?.classList.contains("is-open")) {
+      setDrop(false);
+      dropBtn?.focus();
+      return;
+    }
     if (btn.getAttribute("aria-expanded") !== "true") return;
     setOpen(false);
     btn.focus();
   });
 
   document.addEventListener("click", (e) => {
+    if (drop && !drop.contains(e.target)) setDrop(false);
     if (btn.getAttribute("aria-expanded") !== "true") return;
     if (btn.contains(e.target) || nav.contains(e.target)) return;
     setOpen(false);
@@ -177,16 +366,161 @@ function bindNav() {
 }
 bindNav();
 
+function bindKampSlider() {
+  const root = document.querySelector("[data-kamp-slider]");
+  if (!root) return;
+  const viewport = root.querySelector(".kamp-viewport");
+  const slides = [...root.querySelectorAll(".kamp-slide")];
+  const prev = root.querySelector(".kamp-prev");
+  const next = root.querySelector(".kamp-next");
+  const dots = root.querySelector(".kamp-dots");
+  if (!viewport || slides.length < 2) return;
+  let i = 0;
+  let timer = 0;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  slides.forEach((_, di) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Kampanya ${di + 1}`);
+    b.addEventListener("click", () => go(di, true));
+    dots.appendChild(b);
+  });
+  function go(n, stop) {
+    i = (n + slides.length) % slides.length;
+    viewport.scrollTo({ left: slides[i].offsetLeft, behavior: reduce ? "auto" : "smooth" });
+    dots.querySelectorAll("button").forEach((b, di) => b.setAttribute("aria-current", di === i ? "true" : "false"));
+    if (stop) restart();
+  }
+  function restart() {
+    clearInterval(timer);
+    if (reduce) return;
+    timer = setInterval(() => go(i + 1), 6500);
+  }
+  prev.addEventListener("click", () => go(i - 1, true));
+  next.addEventListener("click", () => go(i + 1, true));
+  viewport.addEventListener("scroll", () => {
+    const nextI = Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1));
+    if (nextI === i || nextI < 0 || nextI >= slides.length) return;
+    i = nextI;
+    dots.querySelectorAll("button").forEach((b, di) => b.setAttribute("aria-current", di === i ? "true" : "false"));
+  }, { passive: true });
+  root.addEventListener("mouseenter", () => clearInterval(timer));
+  root.addEventListener("mouseleave", restart);
+  go(0);
+  restart();
+}
+bindKampSlider();
+
+function bindHeroBanners() {
+  const root = document.querySelector("[data-hero-banners]");
+  if (!root) return;
+  const frame = root.querySelector(".home-banners-frame");
+  const slides = [...root.querySelectorAll(".home-banner")];
+  const prev = root.querySelector(".home-banners-prev");
+  const next = root.querySelector(".home-banners-next");
+  const dots = root.querySelector(".home-banners-dots");
+  if (!frame || slides.length < 2) return;
+  let i = 0;
+  let timer = 0;
+  let startX = 0;
+  let swiped = false;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const labels = slides.map((s) => s.getAttribute("aria-label") || `Slayt ${slides.indexOf(s) + 1}`);
+  if (WA) {
+    root.querySelectorAll("[data-wa]").forEach((a) => {
+      a.href = `https://wa.me/${WA}`;
+    });
+  }
+  root.setAttribute("tabindex", "0");
+  slides.forEach((_, di) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", labels[di]);
+    b.addEventListener("click", () => go(di, true));
+    dots.appendChild(b);
+  });
+  function syncHits() {
+    slides.forEach((s, di) => {
+      const on = di === i;
+      s.classList.toggle("is-active", on);
+      s.setAttribute("aria-hidden", on ? "false" : "true");
+      s.querySelectorAll("a").forEach((a) => {
+        if (on) a.removeAttribute("tabindex");
+        else a.setAttribute("tabindex", "-1");
+      });
+    });
+    dots.querySelectorAll("button").forEach((b, di) => {
+      if (di === i) {
+        b.setAttribute("aria-current", "true");
+        b.setAttribute("aria-selected", "true");
+      } else {
+        b.removeAttribute("aria-current");
+        b.setAttribute("aria-selected", "false");
+      }
+    });
+  }
+  function go(n, stop) {
+    i = (n + slides.length) % slides.length;
+    syncHits();
+    if (stop) restart();
+  }
+  function restart() {
+    clearInterval(timer);
+    if (reduce) return;
+    timer = setInterval(() => go(i + 1), 5000);
+  }
+  prev.addEventListener("click", () => go(i - 1, true));
+  next.addEventListener("click", () => go(i + 1, true));
+  root.addEventListener("mouseenter", () => clearInterval(timer));
+  root.addEventListener("mouseleave", restart);
+  root.addEventListener("focusin", () => clearInterval(timer));
+  root.addEventListener("focusout", (e) => {
+    if (!root.contains(e.relatedTarget)) restart();
+  });
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      go(i - 1, true);
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      go(i + 1, true);
+    }
+  });
+  frame.addEventListener("touchstart", (e) => {
+    startX = e.changedTouches[0].clientX;
+    clearInterval(timer);
+  }, { passive: true });
+  frame.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) {
+      swiped = true;
+      go(dx > 0 ? i - 1 : i + 1, true);
+    } else restart();
+  }, { passive: true });
+  frame.addEventListener("click", (e) => {
+    if (!swiped) return;
+    e.preventDefault();
+    e.stopPropagation();
+    swiped = false;
+  }, true);
+  go(0);
+  restart();
+}
+bindHeroBanners();
+
 function bindTrust() {
   const root = document.querySelector(".trust");
   if (!root) return;
   const btn = root.querySelector(".trust-toggle");
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduced) {
-    root.classList.add("is-static");
-    if (btn) btn.hidden = true;
-    return;
-  }
+  const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const syncMotion = () => {
+    root.classList.toggle("is-static", motion.matches);
+    if (btn) btn.hidden = motion.matches;
+  };
+  syncMotion();
+  motion.addEventListener("change", syncMotion);
   if (!btn) return;
   const setPaused = (paused) => {
     root.classList.toggle("is-paused", paused);
@@ -200,68 +534,101 @@ function bindTrust() {
 bindTrust();
 
 const ALTLAR = {
-  Hijyen: [
-    { id: "islak", ad: "Islak Havlu", test: (t) => t.includes("ıslak") },
-    { id: "pecete", ad: "Peçete", test: (t) => /peçete|mendil/.test(t) },
-    { id: "zkat", ad: "Z Kat Havlu", test: (t) => /z kat/.test(t) },
-    { id: "fotosel", ad: "Fotoselli Havlu", test: (t) => t.includes("fotosel") },
-    { id: "hareketli", ad: "Hareketli Havlu", test: (t) => t.includes("hareketli") },
-    { id: "icten-havlu", ad: "İçten Çekmeli Havlu", test: (t) => /içten çekmeli/.test(t) && !/tuvalet/.test(t) },
-    { id: "jumbo", ad: "Mini Jumbo", test: (t) => /jumbo|cimri/.test(t) },
-    { id: "icten-tuvalet", ad: "İçten Çekmeli Tuvalet", test: (t) => /içten çekmeli tuvalet/.test(t) },
-    { id: "tuvalet", ad: "Tuvalet Kağıtları", test: (t) => t.includes("tuvalet") },
-    { id: "havlu", ad: "Rulo Havlu", test: (t) => t.includes("havlu") },
+  A: [
+    { id: "A1", ad: "Havlu ve Peçeteler", test: () => false, gorsel: "/img/products/daire-havlu-pecete.webp?v=2" },
+    { id: "A2", ad: "Islak Havlular", test: () => false, gorsel: "/img/products/daire-islak-havlu.webp?v=2" },
+    { id: "A3", ad: "Tuvalet Kağıtları", test: () => false, gorsel: "/img/products/daire-tuvalet-kagidi.webp?v=2" },
   ],
-  Temizlik: [
-    { id: "cop", ad: "Çöp Poşeti", test: (t) => t.includes("çöp") },
-    { id: "sivi", ad: "Sıvı ve Deterjan", test: (t) => /sabun|çamaşır|deterjan|yüzey|güç|kireç|sprey|krem|jel|kapsül|parfüm|bidon|dağ esintisi/.test(t) },
-    { id: "arac", ad: "Bez ve Mop", test: (t) => /bez|mop|süpürge|fırça/.test(t) },
+  B: [
+    { id: "B1", ad: "Endüstriyel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-endustriyel-sivi.webp?v=2" },
+    { id: "B2", ad: "Genel Temizlik Ürünleri", test: () => false, gorsel: "/img/products/daire-genel-temizlik.webp?v=2" },
   ],
-  Mutfak: [
-    { id: "bardak", ad: "Karton Bardak", test: (t) => /karton bardak/.test(t) || (t.includes("bardak") && t.includes("oz")) },
-    { id: "kase", ad: "Çorba Kasesi", test: (t) => /kase|kâse/.test(t) },
-    { id: "icecek", ad: "İçecek", test: (t) => /su |soda|ice tea|çay |süt |enerji|330 ml|250 ml 24/.test(t) },
-    { id: "kahve", ad: "Kahve ve Çay", test: (t) => /kahve|coffee|şeker|gold 200|filtre/.test(t) },
-    { id: "bulasik", ad: "Bulaşık", test: (t) => /bulaşık|çatal/.test(t) },
+  C: [
+    { id: "C1", ad: "Havlu Aparatları", test: () => false, gorsel: "/img/products/daire-havlu-aparat.webp?v=2" },
+    { id: "C2", ad: "Sıvı Sabun ve Köpük Sabun Aparatları", test: () => false, gorsel: "/img/products/daire-sabun-aparat.webp?v=2" },
+    { id: "C3", ad: "Çöp Kovaları", test: () => false, gorsel: "/img/products/daire-cop-kovasi.webp?v=2" },
+    { id: "C4", ad: "Mop Aparatları", test: () => false, gorsel: "/img/products/daire-mop-aparat.webp?v=2" },
   ],
-  Sağlık: [
-    { id: "masa", ad: "Muayene Masa Örtüsü", test: (t) => /masa örtü/.test(t) },
-    { id: "klozet", ad: "Klozet Kapak Örtüsü", test: (t) => t.includes("klozet") },
-    { id: "maske", ad: "Maske", test: (t) => t.includes("maske") },
-    { id: "eldiven", ad: "Eldiven", test: (t) => t.includes("eldiven") },
-    { id: "atik", ad: "Tıbbi Atık", test: (t) => /atık/.test(t) },
+  D: [
+    { id: "D1", ad: "Çöp Poşetleri", test: () => false, gorsel: "/img/products/daire-cop-poseti.webp?v=2" },
+    { id: "D2", ad: "Sarf Malzemeleri", test: () => false, gorsel: "/img/products/daire-sarf.webp?v=2" },
+    { id: "D3", ad: "Kullan At Ürünler", test: () => false, gorsel: "/img/products/daire-kullan-at.webp?v=2" },
   ],
-  Kırtasiye: [
-    { id: "a4", ad: "A4 Kağıt", test: (t) => /a4|fotokopi/.test(t) },
-    { id: "klasor", ad: "Klasör", test: (t) => t.includes("klasör") },
-    { id: "dosya", ad: "Poşet Dosya", test: (t) => /dosya/.test(t) },
-    { id: "pil", ad: "Pil", test: (t) => /pil|\baa\b/.test(t) },
-    { id: "kalem", ad: "Kalem", test: (t) => t.includes("kalem") },
-    { id: "zimba", ad: "Zımba", test: (t) => t.includes("zımba") },
-    { id: "not", ad: "Not", test: (t) => t.includes("not") },
+  E: [
+    { id: "E1", ad: "Çay ve Şekerler", test: () => false, gorsel: "/img/products/daire-cay-seker.webp?v=2" },
+    { id: "E2", ad: "Kahve", test: () => false, gorsel: "/img/products/daire-kahve.webp?v=2" },
+    { id: "E3", ad: "İçecek Grubu", test: () => false, gorsel: "/img/products/daire-icecek.webp?v=2" },
+    { id: "E4", ad: "Atıştırmalıklar", test: () => false, gorsel: "/img/products/daire-atistirmalik.webp?v=2" },
   ],
-  Ambalaj: [
-    { id: "strec", ad: "Streç", test: (t) => t.includes("streç") },
-    { id: "bant", ad: "Koli Bandı", test: (t) => t.includes("band") },
-    { id: "kraft", ad: "Kraft Çanta", test: (t) => t.includes("kraft") },
-    { id: "kese", ad: "Kese Kağıdı", test: (t) => t.includes("kese") },
-    { id: "kasa", ad: "Kasa Poşeti", test: (t) => t.includes("kasa") },
-    { id: "buz", ad: "Buzdolabı Poşeti", test: (t) => t.includes("buzdolabı") },
-  ],
-  PC: [
-    { id: "mouse", ad: "Mouse", test: (t) => t.includes("mouse") },
-    { id: "klavye", ad: "Klavye", test: (t) => t.includes("klavye") },
-    { id: "toner", ad: "Toner / Kartuş", test: (t) => /toner|kartuş/.test(t) },
-    { id: "usb", ad: "USB / Kablo", test: (t) => /usb|hdmi|kablo/.test(t) },
-    { id: "power", ad: "Power Bank", test: (t) => t.includes("power") },
+  F: [
+    { id: "F1", ad: "Kalem ve Yazı Gereçleri", test: () => false, gorsel: "/img/products/daire-kalem-yazi.webp?v=2" },
+    { id: "F2", ad: "Masaüstü Gereçleri", test: () => false, gorsel: "/img/products/daire-masaustu.webp?v=2" },
+    { id: "F3", ad: "Dosya ve Arşivleme Gereçleri", test: () => false, gorsel: "/img/products/daire-dosya-arsiv.webp?v=2" },
+    { id: "F4", ad: "Ambalaj Ürünleri", test: () => false, gorsel: "/img/products/daire-ambalaj.webp?v=2" },
+    { id: "F5", ad: "Bilgisayar Sarf Malzemeleri", test: () => false, gorsel: "/img/products/daire-bilgisayar.webp?v=2" },
   ],
 };
 
-function altBul(kat, satir) {
+const MARKA_TERCIHLERI = {
+  C1: ["Palex", "Vialli", "Flosoft"],
+};
+
+function markaTercihSatir(name, brand) {
+  const clean = String(brand || "").trim();
+  if (!clean || /^fark etmez$/i.test(clean)) return `${name} · Marka tercihi: fark etmez`;
+  return `${name} · Marka tercihi: ${clean}`;
+}
+
+function altBul(kat, satir, explicitId) {
+  const explicit = (ALTLAR[kat] || []).find(x => x.id === explicitId);
+  if (explicit) return explicit;
   const t = String(satir || "").toLocaleLowerCase("tr");
   const kurallar = ALTLAR[kat] || [];
   for (const k of kurallar) if (k.test(t)) return k;
   return { id: "diger", ad: "Diğer", test: () => true };
+}
+
+const BIRIM_KELIME = /^(gr|g|kg|ml|mm|cm|m|lt|oz|cl)$/i;
+function urunKelime(word) {
+  if (!word) return word;
+  if (BIRIM_KELIME.test(word)) return word.toLocaleLowerCase("en-US");
+  if (/^[A-Z0-9][A-Z0-9+\-\/]*$/.test(word) && /[A-Z]/.test(word) && word.length > 1) return word;
+  if (/^\d/.test(word)) return word;
+  return word.charAt(0).toLocaleUpperCase("tr") + word.slice(1).toLocaleLowerCase("tr");
+}
+function urunAdiYazi(satir) {
+  return String(satir || "")
+    .split(" · ")
+    .map((part) => part.split(/(\s+)/).map((tok) => /^\s+$/.test(tok) ? tok : urunKelime(tok)).join(""))
+    .join(" · ");
+}
+
+function aramaMetni(raw) {
+  return String(raw || '').toLocaleLowerCase('tr').replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function olcuYazi(raw) {
+  let s = String(raw || "").trim();
+  if (!s || /^belirtilmedi$/i.test(s)) return "";
+  if (/^\d+\s*[×xX]\s*\d+$/.test(s)) {
+    const [a, b] = s.split(/\s*[×xX]\s*/);
+    return a + " × " + b;
+  }
+  s = s.replace(/\s*mililitre\b/gi, "ML");
+  s = s.replace(/\s*kilogram\b/gi, "Kg");
+  s = s.replace(/\s*santimetre\b/gi, " Cm");
+  s = s.replace(/\s*litre\b/gi, "Lt");
+  s = s.replace(/\s*gram\b/gi, "Gr");
+  s = s.replace(/\s*gr\.?(?=\s|$)/gi, "Gr");
+  s = s.replace(/\s*kg\.?(?=\s|$)/gi, "Kg");
+  s = s.replace(/\s*ml\.?(?=\s|$)/gi, "ML");
+  s = s.replace(/\s*mm\.?(?=\s|$)/gi, "Mm");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Cm$/, "$1Cm");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Gr$/, "$1Gr");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Kg$/, "$1Kg");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+ML$/, "$1ML");
+  s = s.replace(/^(\d+(?:,\d+)?)\s+Mm$/, "$1Mm");
+  return s.replace(/(\d)\s*(cm|mm|kg|gr|ml|lt)\b/gi, (_, n, unit) => n + ' ' + ({gr:'g',lt:'L'}[unit.toLowerCase()] || unit.toLowerCase())).replace(/\s{2,}/g, " ").trim();
 }
 
 function ebatYazi(satir, altAd) {
@@ -289,265 +656,31 @@ function grupFoto(tipId) {
   return GRUP_FOTO[tipId] || "";
 }
 
-const liste = document.getElementById("liste");
-if (liste) {
-  const params = new URLSearchParams(location.search);
-  const qHam = (params.get("q") || "").trim();
-  const needle = qHam.toLocaleLowerCase("tr");
-  const grup = gecerliG(params.get("g") || "");
-  let acik = (params.get("a") || "").trim();
-  const baslik = document.getElementById("baslik");
-  const katNav = document.getElementById("kat-nav");
-  const katSec = document.getElementById("kat-sec");
-  const katMeta = document.getElementById("kat-meta");
-
-  function kurKategori() {
-    if (katNav) {
-      katNav.replaceChildren();
-      const tum = document.createElement("a");
-      tum.href = katalogYol({ q: qHam });
-      tum.textContent = "Tümü";
-      if (!grup) {
-        tum.className = "is-on";
-        tum.setAttribute("aria-current", "page");
-      }
-      katNav.append(tum);
-      GRUPLAR.forEach((x) => {
-        const a = document.createElement("a");
-        a.href = katalogYol({ g: x.g, q: qHam });
-        a.textContent = x.ad;
-        if (grup === x.g) {
-          a.className = "is-on";
-          a.setAttribute("aria-current", "page");
-        }
-        katNav.append(a);
-      });
-    }
-    if (katSec) {
-      katSec.replaceChildren();
-      const o0 = document.createElement("option");
-      o0.value = "";
-      o0.textContent = "Tüm kategoriler";
-      katSec.append(o0);
-      GRUPLAR.forEach((x) => {
-        const o = document.createElement("option");
-        o.value = x.g;
-        o.textContent = x.ad;
-        katSec.append(o);
-      });
-      katSec.value = grup;
-      katSec.addEventListener("change", () => {
-        location.assign(katalogYol({ g: gecerliG(katSec.value), q: qHam }));
-      });
-    }
-  }
-  kurKategori();
-
-  fetch("/katalog.json")
-    .then((r) => r.json())
-    .then((data) => {
-      const want = grupAnahtar(grup);
-      let urunler = data.urunler || [];
-      if (want.length) urunler = urunler.filter((u) => want.includes(u.kategori));
-      if (needle) {
-        urunler = urunler.filter((u) =>
-          `${u.satir || ""} ${u.ad || ""} ${u.kategori}`.toLocaleLowerCase("tr").includes(needle),
-        );
-      }
-      const goster = grup ? GRUPLAR.filter((x) => x.g === grup) : GRUPLAR;
-      if (baslik) {
-        const found = GRUPLAR.find((x) => x.g === grup);
-        baslik.textContent = found ? found.ad : "Ürünler";
-      }
-
-      const grupSay = [];
-      goster.forEach((gr) => {
-        const keys = grupAnahtar(gr.g);
-        const hits = urunler.filter((u) => keys.includes(u.kategori));
-        if (!hits.length) return;
-        const buckets = new Map();
-        hits.forEach((u) => {
-          const tip = altBul(gr.g, u.satir || u.ad);
-          if (!buckets.has(tip.id)) buckets.set(tip.id, { tip, items: [] });
-          buckets.get(tip.id).items.push(u);
-        });
-        const sirali = [];
-        (ALTLAR[gr.g] || []).forEach((k) => {
-          if (buckets.has(k.id)) sirali.push(buckets.get(k.id));
-        });
-        if (buckets.has("diger")) sirali.push(buckets.get("diger"));
-        grupSay.push({ gr, sirali, buckets });
-      });
-
-      if (katMeta) {
-        katMeta.replaceChildren();
-        const parca = [];
-        if (grup) {
-          const found = GRUPLAR.find((x) => x.g === grup);
-          if (found) parca.push(found.ad);
-        }
-        if (qHam) parca.push("arama: " + qHam);
-        const n = grupSay.reduce((acc, x) => acc + x.sirali.length, 0);
-        parca.push(n + " ürün grubu");
-        const bilgi = document.createElement("span");
-        bilgi.textContent = parca.join(" · ");
-        katMeta.append(bilgi);
-        if (grup || qHam) {
-          const temiz = document.createElement("a");
-          temiz.href = "/urunler";
-          temiz.className = "cat-clear";
-          temiz.textContent = "Filtreleri temizle";
-          katMeta.append(temiz);
-        }
-      }
-
-      liste.replaceChildren();
-
-      if (!grupSay.length) {
-        const bos = document.createElement("div");
-        bos.className = "cat-empty";
-        const p = document.createElement("p");
-        p.textContent = "Bu süzgeçle eşleşen ürün yok.";
-        bos.append(p);
-        const actions = document.createElement("p");
-        actions.className = "cat-empty-actions";
-        const ara = document.createElement("button");
-        ara.type = "button";
-        ara.className = "btn ghost";
-        ara.textContent = "Aramayı değiştir";
-        ara.addEventListener("click", () => {
-          const qEl = document.getElementById("q");
-          if (qEl) {
-            qEl.focus();
-            if (typeof qEl.select === "function") qEl.select();
-          }
-        });
-        const temiz = document.createElement("a");
-        temiz.className = "btn ghost";
-        temiz.href = "/urunler";
-        temiz.textContent = "Filtreleri temizle";
-        const teklif = document.createElement("a");
-        teklif.className = "btn";
-        teklif.href = "/siparis";
-        teklif.textContent = "Genel teklif iste";
-        actions.append(ara, temiz, teklif);
-        bos.append(actions);
-        liste.append(bos);
-        return;
-      }
-
-      grupSay.forEach(({ gr, sirali, buckets }) => {
-        const art = document.createElement("article");
-        art.className = "grup";
-        if (!grup) {
-          const h2 = document.createElement("h2");
-          h2.textContent = gr.ad;
-          art.append(h2);
-        }
-        const ul = document.createElement("ul");
-        ul.className = "karel";
-        const panel = document.createElement("div");
-        panel.className = "secenekler";
-        panel.hidden = true;
-
-        function kapat() {
-          ul.querySelectorAll(".kart-ac").forEach((btn) => {
-            btn.setAttribute("aria-expanded", "false");
-            btn.textContent = "Seçenekleri göster";
-            btn.closest("li")?.classList.remove("is-on");
-          });
-          panel.hidden = true;
-          panel.replaceChildren();
-        }
-
-        function ac(tip, items, btn) {
-          const ayni = btn.getAttribute("aria-expanded") === "true";
-          kapat();
-          if (ayni) {
-            history.replaceState(null, "", katalogYol({ g: grup, q: qHam }));
-            return;
-          }
-          btn.setAttribute("aria-expanded", "true");
-          btn.textContent = "Seçenekleri gizle";
-          btn.closest("li")?.classList.add("is-on");
-          const bas = document.createElement("h3");
-          bas.id = "sec-" + gr.g + "-" + tip.id;
-          bas.textContent = tip.ad + " · " + items.length + " seçenek";
-          panel.setAttribute("aria-labelledby", bas.id);
-          const eb = document.createElement("ul");
-          items.forEach((u) => {
-            const satir = u.satir || u.ad || "";
-            const li = document.createElement("li");
-            li.className = "opt";
-            const metin = document.createElement("div");
-            metin.className = "opt-bits";
-            satirParcalar(satir, tip.ad).forEach((parca) => {
-              const span = document.createElement("span");
-              span.className = "opt-bit";
-              span.textContent = parca;
-              metin.append(span);
-            });
-            const aksiyon = document.createElement("a");
-            aksiyon.className = "btn ghost opt-teklif";
-            aksiyon.href = teklifHref(gr.g, satir);
-            aksiyon.textContent = "Bu ürün için teklif iste";
-            li.append(metin, aksiyon);
-            eb.append(li);
-          });
-          panel.replaceChildren(bas, eb);
-          panel.hidden = false;
-          history.replaceState(null, "", katalogYol({ g: grup, q: qHam, a: tip.id }));
-        }
-
-        sirali.forEach(({ tip, items }) => {
-          const li = document.createElement("li");
-          const txt = document.createElement("span");
-          txt.className = "txt";
-          txt.textContent = tip.ad;
-          const say = document.createElement("span");
-          say.className = "say";
-          say.textContent = items.length + " seçenek";
-          const govde = document.createElement("div");
-          govde.className = "kart-govde";
-          govde.append(txt, say);
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "kart-ac";
-          btn.setAttribute("aria-expanded", "false");
-          btn.setAttribute("aria-controls", "panel-" + gr.g);
-          btn.textContent = "Seçenekleri göster";
-          btn.addEventListener("click", () => ac(tip, items, btn));
-          const src = grupFoto(tip.id);
-          if (src) {
-            const pic = document.createElement("span");
-            pic.className = "pic";
-            const img = document.createElement("img");
-            img.src = src;
-            img.alt = "";
-            pic.append(img);
-            li.append(pic, govde, btn);
-          } else {
-            li.classList.add("is-metin");
-            li.append(govde, btn);
-          }
-          ul.append(li);
-        });
-
-        panel.id = "panel-" + gr.g;
-        art.append(ul, panel);
-        liste.append(art);
-
-        if (acik) {
-          const secili = buckets.get(acik);
-          if (secili) {
-            const idx = sirali.findIndex((x) => x.tip.id === acik);
-            const btn = ul.querySelectorAll(".kart-ac")[idx];
-            if (btn) ac(secili.tip, secili.items, btn);
-          }
-        }
-      });
-    });
+function altFoto(altId, grupId) {
+  const hit = Object.values(ALTLAR).flat().find((x) => x.id === altId);
+  return (hit && hit.gorsel) || grupFoto(grupId);
 }
+
+const GRUP_KISA = {
+  A: "Havlu, peçete ve tuvalet kağıdı.",
+  B: "Endüstriyel ve genel temizlik ürünleri.",
+  C: "Havlu, sabun aparatları, çöp kovaları ve mop.",
+  D: "Çöp poşeti, sarf ve kullan at ürünler.",
+  E: "Çay, kahve, içecek ve atıştırmalık.",
+  F: "Kalem, masaüstü, dosya, ambalaj ve bilgisayar sarfı.",
+};
+
+function bindHomeCats() {
+  const ul = document.querySelector(".cat-grid");
+  if (!ul) return;
+  ul.innerHTML = GRUPLAR.filter((g) => VITRIN_GRUPLAR.includes(g.g)).map((g) => {
+    const foto = grupFoto(g.g);
+    const href = "/urunler?g=" + encodeURIComponent(g.g);
+    const kisa = GRUP_KISA[g.g] || "";
+    return `<li><a href="${href}"><img src="${foto}" alt="${g.ad} ürün görseli" width="640" height="640"><span class="cat-body"><b>${g.ad}</b><small>${kisa}</small><span class="cat-go">İncele</span></span></a></li>`;
+  }).join("");
+}
+bindHomeCats();
 
 const form = document.getElementById("siparis-form");
 if (form) {
@@ -560,7 +693,7 @@ if (form) {
 
   const gelen = new URLSearchParams(location.search);
   const gOk = gecerliG((gelen.get("g") || "").trim());
-  const satir = gelen.get("satir") || "";
+  const satir = (gelen.get("satir") || "").slice(0, 1000);
   const grupEl = form.elements.grup;
   const notEl = form.elements.not;
   if (gOk && grupEl && !String(grupEl.value || "").trim()) {
@@ -568,21 +701,41 @@ if (form) {
   }
   if (satir && notEl && !String(notEl.value || "").trim()) {
     notEl.value = satir;
+    const context = document.createElement('section');
+    context.id = 'quote-context';
+    context.className = 'catalog-sourcing';
+    const title = document.createElement('h2'); title.textContent = 'Görüşmek istediğiniz ihtiyaç';
+    const detail = document.createElement('p'); detail.textContent = satir;
+    context.append(title, detail);
+    const review = document.getElementById('interest-review');
+    (review || form).before(context);
+    if (review && !window.FerraInterest?.summary()) review.hidden = true;
   }
 
   form.addEventListener("submit", async (e) => {
+    window.FerraMetrics?.send('form_attempt');
     e.preventDefault();
     const msg = document.getElementById("msg");
     const btn = form.querySelector("[type=submit]");
     const ilce = String(form.elements.ilce ? form.elements.ilce.value : "").trim();
-    const ihtiyac = String(form.elements.not.value || "").trim();
+    const eposta = String(form.elements.eposta ? form.elements.eposta.value : "").trim();
+    const urunler = String(form.elements.urunler ? form.elements.urunler.value : "").trim();
+    const miktar = String(form.elements.miktar ? form.elements.miktar.value : "").trim();
+    const ihtiyac = [window.FerraInterest?.summary(), String(form.elements.not.value || "").trim()].filter(Boolean).join("\n\n");
     const body = {
       firma: form.elements.firma.value,
       yetkili: form.elements.yetkili.value,
       tel: form.elements.tel.value,
       grup: form.elements.grup.value,
-      not: [ilce && `Teslimat ilçesi: ${ilce}`, ihtiyac].filter(Boolean).join("\n"),
+      not: [
+        ilce && `Teslimat: ${ilce}`,
+        eposta && `E-posta: ${eposta}`,
+        urunler && `Ürünler: ${urunler}`,
+        miktar && `Yaklaşık miktar: ${miktar}`,
+        ihtiyac,
+      ].filter(Boolean).join("\n"),
       urun: "siparis-form",
+      website: form.elements.website?.value || "",
     };
     msg.className = "note";
     msg.textContent = "Gönderiliyor…";
@@ -613,9 +766,31 @@ if (form) {
         throw new Error(sunucu || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.");
       }
       form.reset();
-      msg.className = "note is-ok";
-      msg.textContent = "Teklif talebiniz alındı.";
+      document.getElementById('quote-context')?.remove();
+      const review = document.getElementById('interest-review');
+      if (review) {
+        review.replaceChildren();
+        review.hidden = true;
+      }
+      window.FerraInterest?.clear();
+      const done = document.createElement('div');
+      done.className = 'quote-success';
+      done.setAttribute('role', 'status');
+      done.tabIndex = -1;
+      const heading = document.createElement('h2');
+      heading.textContent = 'Teklifiniz gönderildi';
+      const detail = document.createElement('p');
+      detail.textContent = form.dataset.success || 'Talebinizi aldık. İhtiyacınızı görüşmek için sizinle iletişime geçeceğiz.';
+      const back = document.createElement('a');
+      back.className = 'btn';
+      back.href = '/urunler';
+      back.textContent = 'Ürünlere dön';
+      done.append(heading, detail, back);
+      form.replaceWith(done);
+      done.focus();
+      done.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
     } catch (err) {
+      window.FerraMetrics?.send('form_error');
       msg.className = "note is-hata";
       msg.textContent = err.message || "Talep gönderilemedi. Lütfen daha sonra yeniden deneyin.";
     } finally {
@@ -623,3 +798,15 @@ if (form) {
     }
   });
 }
+
+// Progressive enhancement: content remains visible without JS or motion support.
+(() => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) if (entry.isIntersecting) {
+      entry.target.classList.add('motion-enter');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: .08 });
+  document.querySelectorAll('.hero-copy, .hero-visual, .home-ticker, .home-banners-frame, .spot-card, .cats-heading, .cat-grid li, .sales-heading, .business-grid a, .path li, .close .wrap, .home-quote, .sector-chips, .benefit-grid li, .contact-method, .sector-card').forEach(el => observer.observe(el));
+})();

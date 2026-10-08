@@ -1,0 +1,10 @@
+---
+description: Ferrapro proje amacı, kapsamı ve araçlar arası devam kuralları
+alwaysApply: true
+---
+
+- İşe başlamadan kökteki AGENTS.md, README.md ve docs/HANDOFF.md dosyalarını oku.
+- Ferrapro bir teklif ve görüşme sitesidir; sipariş/ödeme sistemi kurma.
+- Ferranoi paneli aynı Worker'dadır ancak bu çalışmanın dışındadır. Panel kullanıcılarını ve kimlik doğrulamayı değiştirme.
+- GitHub çalışma dalındaki güncel değişiklikleri esas al. Kayıtsız yerel değişiklikleri ezme.
+- Değişiklikleri test et, commit et ve HANDOFF.md içindeki durum bilgisini güncelle.

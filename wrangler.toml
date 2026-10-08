@@ -4,6 +4,35 @@ compatibility_date = "2026-08-23"
 account_id = "9f0d39ce0db57f09bc1769c9ddf0c344"
 workers_dev = true
 
+[[durable_objects.bindings]]
+name = "PRICE_STORE"
+class_name = "PriceStore"
+
+[[migrations]]
+tag = "v1-price-store"
+new_sqlite_classes = ["PriceStore"]
+
+[[durable_objects.bindings]]
+name = "MANAGEMENT_SESSIONS"
+class_name = "ManagementSessions"
+
+[[migrations]]
+tag = "v2-management-sessions"
+new_sqlite_classes = ["ManagementSessions"]
+
+[[ratelimits]]
+name = "YONETIM_RATE_LIMITER"
+namespace_id = "2026100801"
+simple = { limit = 10, period = 60 }
+
+[vars]
+QUOTE_NOTIFY_FROM = "info@ferrapro.com"
+# QUOTE_NOTIFY_TO is a Worker secret, never committed personal addresses.
+
+[[send_email]]
+name = "QUOTE_EMAIL"
+allowed_sender_addresses = ["info@ferrapro.com"]
+
 [[routes]]
 pattern = "tedarik.ferranoi.com"
 custom_domain = true
@@ -26,3 +55,18 @@ not_found_handling = "single-page-application"
 [[kv_namespaces]]
 binding = "KV"
 id = "cb3d2d882810406285ed1364e4583ec3"
+
+# Anonymous contact attempts, per Cloudflare location. Allows shared office IPs.
+[[ratelimits]]
+name = "QUOTE_RATE_LIMITER"
+namespace_id = "2026100501"
+simple = { limit = 20, period = 60 }
+
+[[analytics_engine_datasets]]
+binding = "METRICS"
+dataset = "ferrapro_events"
+
+[[ratelimits]]
+name = "METRIC_RATE_LIMITER"
+namespace_id = "2026100502"
+simple = { limit = 120, period = 60 }

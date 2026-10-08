@@ -1,0 +1,2883 @@
+{
+  "date": "2026-10-05",
+  "method": "Ürün özetleri mevcut katalog bilgilerini açık cümlelere dönüştürür; eksik teknik özelliklerin doğrulandığı anlamına gelmez.",
+  "verified": [
+    {
+      "id": "p-462",
+      "text": "Logitech M185 kablosuz mouse, 2,4 GHz bağlantı ve 1000 DPI optik izleme sunar. Katalogdaki renk seçeneği mavidir.",
+      "url": "https://support.logi.com/hc/en-za/articles/360023302074-M185-Technical-Specifications"
+    },
+    {
+      "id": "p-478",
+      "text": "Varta Longlife AA, 1,5 V alkalin pildir. Düşük ve sabit enerji ihtiyacı olan saat ve uzaktan kumanda gibi cihazlar için üretici tarafından önerilir. Cihazınızın pil tipiyle uyumunu kontrol edin.",
+      "url": "https://www.varta-ag.com/cz/spotrebitel/kategorie-produktu/baterie/alkaline/longlife-aa"
+    }
+  ],
+  "missing": [
+    {
+      "id": "p-002",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-003",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-004",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-005",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-006",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-007",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-008",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-009",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-010",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-011",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-012",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-013",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-014",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-015",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-016",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-017",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-018",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-019",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-020",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-021",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-022",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-023",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-024",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-025",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-026",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-427",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-428",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-027",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-028",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-029",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-030",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-031",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-032",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-033",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-034",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-035",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-036",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-037",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-038",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-039",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-040",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-041",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-042",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-043",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-044",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-045",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-046",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-047",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-048",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-049",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-050",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-051",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-052",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-053",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-054",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-055",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-056",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-057",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-058",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-059",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-060",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-061",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-062",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-063",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-064",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-065",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-066",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-067",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-068",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-069",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-070",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-071",
+      "fields": [
+        "marka",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-072",
+      "fields": [
+        "marka",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-073",
+      "fields": [
+        "marka",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-074",
+      "fields": [
+        "marka",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-075",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-077",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-079",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-080",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-081",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-082",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-084",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-086",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-089",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-090",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-092",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-093",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-094",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-095",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-096",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-097",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-098",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-099",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-100",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-103",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-104",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-105",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-106",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-107",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-110",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-113",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-114",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-115",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-116",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-118",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-119",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-120",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-121",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-122",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-126",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-127",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-128",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-129",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-130",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-131",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-132",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-133",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-134",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-135",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-136",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-137",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-138",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-139",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-140",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-141",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-142",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-143",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-144",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-145",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-146",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-148",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-150",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-158",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-159",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-160",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-165",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-166",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-167",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-168",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-170",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-172",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-174",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-175",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-176",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-177",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-178",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-179",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-180",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-181",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-182",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-183",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-184",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-185",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-186",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-456",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-450",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-451",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-457",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-388",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-389",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-189",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-190",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-191",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-201",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-202",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-203",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-204",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-207",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-223",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-224",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-225",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-227",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-228",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-229",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-230",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-231",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-232",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-233",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-234",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-235",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-236",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-237",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-238",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-239",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-241",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-242",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-243",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-244",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-248",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-251",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-258",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-259",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-260",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-261",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-262",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-263",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-264",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-265",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-266",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-268",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-269",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-270",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-271",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-272",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-273",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-274",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-275",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-276",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-277",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-278",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-279",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-280",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-281",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-282",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-283",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-284",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-285",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-288",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-289",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-290",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-291",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-292",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-293",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-294",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-295",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-296",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-297",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-298",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-302",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-303",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-304",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-305",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-307",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-308",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-309",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-310",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-311",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-312",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-313",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-314",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-316",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-317",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-318",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-319",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-320",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-321",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-323",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-324",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-328",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-329",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-330",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-331",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-332",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-333",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-334",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-335",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-336",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-337",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-338",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-339",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-340",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-341",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-342",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-343",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-344",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-345",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-346",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-347",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-348",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-349",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-350",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-351",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-352",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-353",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-358",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-360",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-361",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-362",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-363",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-365",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-366",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-367",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-368",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-370",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-371",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-372",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-373",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-374",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-375",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-376",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-377",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-378",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-379",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-380",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-381",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-382",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-383",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-187",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-188",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-384",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-385",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-386",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-387",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-390",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-391",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-392",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-393",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-394",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-395",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-396",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-398",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-399",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-400",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-401",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-402",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-403",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-404",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-405",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-406",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-407",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-408",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-410",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-411",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-412",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-414",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-415",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-416",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-417",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-418",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-419",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-420",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-421",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-422",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-423",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-424",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-425",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-426",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-431",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-432",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-433",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-434",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-435",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-436",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-437",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-438",
+      "fields": [
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-439",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-440",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-441",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-442",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-443",
+      "fields": [
+        "marka",
+        "olcu"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-444",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-445",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-446",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-447",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-448",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-449",
+      "fields": [
+        "marka",
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-452",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-453",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-454",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-455",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-458",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-459",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-460",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-461",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-462",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-463",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-464",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-465",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-466",
+      "fields": [
+        "olcu",
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-467",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-468",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-469",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-470",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-471",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-472",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-473",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-474",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-475",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-476",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-477",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-478",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-479",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-480",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-481",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    },
+    {
+      "id": "p-482",
+      "fields": [
+        "ambalajAdedi"
+      ],
+      "note": "Alan ürüne uygulanıyorsa üretici/tedarikçi teyidi gerekir."
+    }
+  ]
+}

@@ -12,6 +12,16 @@ import {
 } from "./pricing.js";
 import { buildKiyas } from "./kiyas.js";
 import { selcukMenu, selcukBakis } from "./selcuk.js";
+import { storeQuote, readQuotes } from "./quote-store.js";
+import { publicPage } from "./public-pages.js";
+import { guardQuote, readQuoteBody } from "./quote-guard.js";
+import { notifyQuote } from "./quote-notify.js";
+import { validateFollowup, saveFollowup, attachFollowups } from "./quote-tracking.js";
+import { acceptMetric, measure } from "./conversion-metrics.js";
+export { PriceStore } from './price-store.js';
+import {publicRedirect, publicSecurityHeaders} from './public-security.js';
+import {MANAGEMENT_TTL, managementReady, managementSession, readManagementLogin} from './management-sessions.js';
+export {ManagementSessions} from './management-sessions.js';
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
 
@@ -24,17 +34,34 @@ function isPanelHost(host) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
+    const redirect = publicRedirect(request);
+    const response = redirect || await routeRequest(request, env, ctx);
+    return publicSecurityHeaders(request, response);
+  },
+};
+
+async function routeRequest(request, env, ctx) {
     const url = new URL(request.url);
+    if (url.pathname === "/yonetim" || url.pathname.startsWith("/yonetim/")) {
+      const response = await handleYonetim(request, env, url);
+      const headers = new Headers(response.headers);
+      headers.set('cache-control','no-store');
+      return new Response(response.body,{status:response.status,statusText:response.statusText,headers});
+    }
     if (isVitrinHost(url.hostname)) {
+      if (url.pathname === '/api/olcum' && request.method === 'POST') return acceptMetric(request, env);
       if (url.pathname === "/api/teklif" && request.method === "POST") {
         try {
-          return await handleVitrinTeklif(request, env);
+          return await handleVitrinTeklif(request, env, ctx);
         } catch (err) {
           return json({ error: err.message || "Sunucu hatası" }, err.status || 500);
         }
       }
-      if (url.pathname.startsWith("/panel") || url.pathname.startsWith("/api/")) {
+      if (url.pathname.startsWith("/panel")) {
+        return Response.redirect("https://tedarik.ferranoi.com/panel/", 302);
+      }
+      if (url.pathname.startsWith("/api/") && url.pathname !== "/api/teklif") {
         return new Response("Not found", { status: 404 });
       }
       const redirects = {
@@ -50,7 +77,7 @@ export default {
         next.search = url.search;
         return Response.redirect(next, 301);
       }
-      return env.ASSETS.fetch(request);
+      return publicPage(request, env, url);
     }
     if (isPanelHost(url.hostname) && (url.pathname === "/" || url.pathname === "")) {
       return Response.redirect(new URL("/panel/", url), 302);
@@ -63,14 +90,188 @@ export default {
       }
     }
     return env.ASSETS.fetch(request);
-  },
-};
+}
+
+const YONETIM_COOKIE = "fp_yonetim";
+
+function readCookie(request, name) {
+  const raw = request.headers.get("cookie") || "";
+  for (const part of raw.split(";")) {
+    const i = part.indexOf("=");
+    if (i < 0) continue;
+    if (part.slice(0, i).trim() === name) {
+      try { return decodeURIComponent(part.slice(i + 1).trim()); } catch { return ''; }
+    }
+  }
+  return "";
+}
+
+function yonetimCookieHeader(token, url, clear = false) {
+  const secure = url.protocol === "https:" ? "; Secure" : "";
+  if (clear) {
+    return `${YONETIM_COOKIE}=; Path=/yonetim; Max-Age=0; HttpOnly; SameSite=Lax${secure}`;
+  }
+  return `${YONETIM_COOKIE}=${token}; Path=/yonetim; Max-Age=${MANAGEMENT_TTL}; HttpOnly; SameSite=Lax${secure}`;
+}
+
+function timingEqual(a, b) {
+  const x = String(a);
+  const y = String(b);
+  const n = Math.max(x.length, y.length);
+  let diff = x.length ^ y.length;
+  for (let i = 0; i < n; i++) diff |= (x.charCodeAt(i) || 0) ^ (y.charCodeAt(i) || 0);
+  return diff === 0;
+}
+
+function yonetimLoginPage(error, next = '') {
+  const msg = error ? `<p class="err">${error}</p>` : "";
+  return new Response(`<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Giriş · FerraPro</title>
+  <style>
+    :root { font-family: "DM Sans", system-ui, sans-serif; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; background:#F4F6F8; color:#0F172A; }
+    form { width:min(92vw,380px); background:#fff; border:1px solid #E2E8F0; border-radius:14px; padding:28px 24px; box-shadow:0 10px 30px #14223812; }
+    img { display:block; height:36px; margin:0 auto 16px; }
+    h1 { margin:0 0 6px; font-size:1.15rem; text-align:center; }
+    p { margin:0 0 16px; color:#64748B; font-size:.9rem; text-align:center; }
+    .err { color:#B91C1C; }
+    label { display:block; font-size:.8rem; font-weight:650; margin-bottom:6px; }
+    input { width:100%; box-sizing:border-box; min-height:44px; padding:10px 12px; border:1px solid #E2E8F0; border-radius:8px; font:inherit; }
+    button { margin-top:14px; width:100%; min-height:44px; border:0; border-radius:8px; background:#0F172A; color:#fff; font:inherit; font-weight:650; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <form method="post" action="/yonetim/giris">
+    <input type="hidden" name="next" value="${next === '/yonetim/talepler' ? next : ''}">
+    <img src="/logo/ferrapro-header.png?v=1" alt="FerraPro">
+    <h1>FerraPro Yönetim</h1>
+    <p>Devam etmek için şifre girin.</p>
+    ${msg}
+    <label for="password">Şifre</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+    <button type="submit">Giriş</button>
+  </form>
+</body>
+</html>`, {
+    status: error ? 401 : 200,
+    headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" },
+  });
+}
+
+async function handleYonetim(request, env, url) {
+  const pin = String(env.YONETIM_PASSWORD || '');
+  const token = readCookie(request, YONETIM_COOKIE);
+  const unavailable = () => new Response('Yönetim girişi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.',{status:503,headers:{'cache-control':'no-store'}});
+  const path = url.pathname.replace(/\/+$/, "") || "/yonetim";
+
+  if (path === "/yonetim/cikis") {
+    if (token) {
+      if (!managementReady(env)) return unavailable();
+      try { await managementSession(env,token,'DELETE'); } catch { return unavailable(); }
+    }
+    const next = new URL("/yonetim/", url);
+    return new Response(null, {
+      status: 302,
+      headers: { location: next.toString(), "set-cookie": yonetimCookieHeader("", url, true) },
+    });
+  }
+
+  if (path === "/yonetim/giris" && request.method === "POST") {
+    if (!managementReady(env)) return unavailable();
+    if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return new Response('Geçersiz kaynak',{status:403,headers:{'cache-control':'no-store'}});
+    try {
+      const key = await hmac(env.SESSION_SECRET,'management-login|'+(request.headers.get('cf-connecting-ip') || 'unknown'));
+      if (!(await env.YONETIM_RATE_LIMITER.limit({key})).success) return new Response('Çok fazla giriş denemesi. Bir dakika sonra tekrar deneyin.',{status:429,headers:{'cache-control':'no-store','retry-after':'60'}});
+    } catch { return unavailable(); }
+    if (Number(request.headers.get('content-length') || 0) > 4096) return new Response('İstek çok büyük',{status:413});
+    let body;
+    try { body = await readManagementLogin(request); } catch { return new Response('İstek çok büyük',{status:413,headers:{'cache-control':'no-store'}}); }
+    const params = new URLSearchParams(body);
+    const given = String(params.get("password") || "");
+    const destination=params.get('next') === '/yonetim/talepler' ? '/yonetim/talepler' : '/yonetim/';
+    if (!timingEqual(given, pin)) return yonetimLoginPage("Şifre yanlış.", destination);
+    const token = crypto.randomUUID() + '-' + crypto.randomUUID();
+    try { if (!await managementSession(env,token,'PUT')) return unavailable(); } catch { return unavailable(); }
+    const next = new URL(destination, url);
+    return new Response(null, {
+      status: 302,
+      headers: { location: next.toString(), "set-cookie": yonetimCookieHeader(token, url) },
+    });
+  }
+
+  let authenticated = false;
+  if (token && managementReady(env)) {
+    try { authenticated = await managementSession(env,token,'POST'); } catch { return unavailable(); }
+  }
+  if (authenticated) {
+    if (path === '/yonetim/api/fiyatlar') {
+      const headers = { 'cache-control': 'no-store' };
+      if (!['GET', 'PUT'].includes(request.method)) return json({error:'Yöntem desteklenmiyor'},405,headers);
+      if (request.method === 'PUT' && (request.headers.get('origin') !== url.origin || !request.headers.get('content-type')?.startsWith('application/json'))) return json({error:'Geçersiz kaynak'},403,headers);
+      if (!env.PRICE_STORE) return json({error:'Sunucu fiyat kaydı henüz etkin değil. Yerel kayıtlarınız korunuyor.'},503,headers);
+      try {
+        const store = env.PRICE_STORE.get(env.PRICE_STORE.idFromName('ferrapro-private-prices'));
+        return await store.fetch(request);
+      } catch { return json({error:'Fiyat sunucusuna ulaşılamadı. Tekrar deneyin.'},503,headers); }
+    }
+    if (path === '/yonetim/api/talepler' || path === '/yonetim/api/takip') {
+      const headers={'cache-control':'no-store'};
+      try {
+        if (path === '/yonetim/api/talepler' && request.method === 'GET') {
+          const legacy=await env.KV.get('state','json');
+          const quotes=await readQuotes(env,legacy?.vitrin_teklifler||[]);
+          return json({talepler:await attachFollowups(env,quotes)},200,headers);
+        }
+        if (path === '/yonetim/api/takip' && request.method === 'POST') {
+          if(request.headers.get('origin') !== url.origin) fail(403,'Geçersiz kaynak');
+          let body;try{body=JSON.parse(await readQuoteBody(request));}catch(err){fail(err.status||400,'Geçersiz talep');}
+          const fields=validateFollowup(body);
+          const quote=await env.KV.get('vitrin-quote:'+fields.quote_id,'json');
+          const legacy=quote?null:await env.KV.get('state','json');
+          if(!quote && !(legacy?.vitrin_teklifler||[]).some(q=>String(q.id)===fields.quote_id))fail(404,'Talep bulunamadı');
+          return json({ok:true,event:await saveFollowup(env,fields,{name:'FerraPro Yönetim'})},200,headers);
+        }
+        return json({error:'Yöntem desteklenmiyor'},405,headers);
+      }catch(err){return json({error:err.message||'Sunucu hatası'},err.status||500,headers);}
+    }
+    if(path === '/yonetim/talepler') {
+      return serveYonetimPage(env, request, url, ['/yonetim/talepler/index.html', '/yonetim/talepler/', '/yonetim/talepler.html']);
+    }
+    return env.ASSETS.fetch(request);
+  }
+
+  if (path === '/yonetim/talepler') return yonetimLoginPage('',path);
+  if (path === "/yonetim" || path === "/yonetim/") return yonetimLoginPage("");
+  return new Response("Unauthorized", { status: 401, headers: { "cache-control": "no-store" } });
+}
 
 function json(data, status = 200, extra = {}) {
   return new Response(JSON.stringify(data), {
     status,
     headers: { "content-type": "application/json; charset=utf-8", ...extra },
   });
+}
+
+async function serveYonetimPage(env, request, url, candidates) {
+  let response;
+  for (const pathname of candidates) {
+    response = await env.ASSETS.fetch(new Request(new URL(pathname, url), { method: 'GET' }));
+    const loc = response.headers.get('location');
+    if (response.status >= 300 && response.status < 400 && loc) {
+      response = await env.ASSETS.fetch(new Request(new URL(loc, url), { method: 'GET' }));
+    }
+    if (response.ok) break;
+  }
+  const headers = new Headers(response.headers);
+  headers.set('cache-control', 'no-store');
+  headers.delete('location');
+  const status = response.status >= 300 && response.status < 400 ? 200 : response.status;
+  return new Response(response.body, { status, headers });
 }
 
 function fail(status, message) {
@@ -232,6 +433,8 @@ async function save(env, state) {
 }
 
 function handleVitrinTeklifReady(body) {
+  if (!body || typeof body !== 'object' || Array.isArray(body)) fail(400, 'Geçersiz talep');
+  if (String(body.website || '').trim()) fail(400, 'Talep doğrulanamadı. Lütfen telefonla iletişime geçin.');
   const firma = String(body.firma || "").trim();
   const tel = String(body.tel || "").trim();
   const yetkili = String(body.yetkili || "").trim();
@@ -239,24 +442,26 @@ function handleVitrinTeklifReady(body) {
   const grup = String(body.grup || "").trim();
   const urun = String(body.urun || "").trim();
   if (firma.length < 2) fail(400, "Firma adı gerekli");
-  if (tel.replace(/\D/g, "").length < 10) fail(400, "Telefon gerekli");
-  if (not.length > 2000 || urun.length > 300 || firma.length > 120 || yetkili.length > 80) {
+  if (!/^[+\d\s().-]+$/.test(tel) || tel.replace(/\D/g, "").length < 10 || tel.replace(/\D/g, "").length > 15 || tel.length > 40) fail(400, "Geçerli bir telefon numarası yazın");
+  if (not.length > 2000 || urun.length > 300 || firma.length > 120 || yetkili.length > 80 || grup.length > 80) {
     fail(400, "Alan çok uzun");
   }
   return { firma, tel, yetkili, not, grup, urun };
 }
 
-async function handleVitrinTeklif(request, env) {
-  const kayit = handleVitrinTeklifReady(await request.json());
-  const state = await load(env);
-  state.vitrin_teklifler = state.vitrin_teklifler || [];
-  state.vitrin_teklifler.unshift({
-    id: ++state.seq,
-    ...kayit,
-    created_at: new Date().toISOString(),
-  });
-  if (state.vitrin_teklifler.length > 200) state.vitrin_teklifler.length = 200;
-  await save(env, state);
+async function handleVitrinTeklif(request, env, ctx) {
+  const origin = request.headers.get('origin');
+  if (origin && !['https://ferrapro.com','https://www.ferrapro.com'].includes(origin)) fail(403, 'Geçersiz kaynak');
+  const rejected = await guardQuote(request, env);
+  if (rejected) return rejected;
+  const text = await readQuoteBody(request);
+  let body;
+  try { body = JSON.parse(text); } catch { fail(400, 'Geçersiz talep'); }
+  const kayit = handleVitrinTeklifReady(body);
+  const record = await storeQuote(env, kayit);
+  measure(env, 'quote_saved', 'request');
+  if (ctx?.waitUntil) ctx.waitUntil(notifyQuote(env, record));
+  else await notifyQuote(env, record);
   return json({ ok: true });
 }
 
@@ -281,7 +486,7 @@ async function handleApi(request, env, url) {
         catalog_version: state.catalog_version,
       });
     }
-    return json(withAnalytics(state));
+    return json(withAnalytics({ ...state, vitrin_teklifler: await readQuotes(env, state.vitrin_teklifler) }));
   }
   if (path === "/api/maliyet" && method === "POST") {
     const user = await requireUser(request, env);
@@ -424,7 +629,7 @@ async function login(request, env) {
     password === env.RAMAZAN_PASSWORD
   ) {
     user = { id: 2, name: "Ramazan", role: "ortak" };
-  } else if (username === "selcuk" && password && password === (env.SELCUK_PASSWORD || "1234")) {
+  } else if (username === "selcuk" && password && password === env.SELCUK_PASSWORD) {
     user = { id: 4, name: "Selçuk", role: "saha" };
   } else if (username === "sunum" && password && password === env.SUNUM_PASSWORD) {
     user = { id: 3, name: "Sunum", role: "sunum" };
