@@ -1860,3 +1860,10 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Girişten sonra Assets `talepler.html` için 307 dönüp `/yonetim/talepler` ile birbirini kovalıyordu (ERR_TOO_MANY_REDIRECTS). Worker artık varlık 307’sini tarayıcıya vermiyor; `/yonetim/talepler/index.html` üzerinden sayfayı 200 döndürür. Ana sayfa/teklif formu girişsiz 200’dü; döngü oturumlu teklif paneline özgüydü.
 - Canlı sürüm 599a5e10-dd30-4d9b-ab33-447601873618 (%100). npm run check PASS. Ana sayfa, sipariş, yönetim girişi 200.
 
+
+## 8 Ekim 2026 — Dört ürün beyaz fon düzenlemesi (yayınlanmadı)
+
+- Kullanıcının ekran görüntülerindeki belinno-ev-tipi-rulo-6, belinno-hareketli-havlu, sleepy-herbal-lavanta ve tela-kolluk WebP dosyaları düzenlendi. İkinci üründe banyo/tezgâh sahnesi kaldırıldı. Sleepy 100 Adet rozeti korundu.
+- Yerleşik imagegen kullanıldı. Talimat: yalnız renkli arka planı düz beyaza çevir; ürünü, ambalajı, marka ve ana etiket bilgilerini koru; yeni nesne/metin ekleme. Hareketli havluda tüm banyo ve tezgâhı kaldır, yalnız altılı paket bırak. Kollukta el, parmaklar, kolluk ve sağdaki siyah kıyafeti koru.
+- Üretilen dört çıktı görsel olarak incelendi; PNG kaynakları ve ZIP output/white-products-2026-10-08 altında. Yalnız WebP biçim dönüşümü yapıldı. Görsel üretim çıktıları kaynak fotoğrafların piksel düzeyinde aynı kopyası değildir.
+- npm run check PASS. Bu tur tarayıcıda sayfa yerleşim testi yapılmadı; HTML/CSS değiştirilmedi. Canlı yayın yapılmadı. Önceden var olan panel/app/rule değişiklikleri korunmuştur.
