@@ -22,6 +22,9 @@ export { PriceStore } from './price-store.js';
 import {publicRedirect, publicSecurityHeaders} from './public-security.js';
 import {MANAGEMENT_TTL, managementReady, managementSession, readManagementLogin} from './management-sessions.js';
 export {ManagementSessions} from './management-sessions.js';
+import { handleIsleyis } from './isleyis.js';
+import { publicMaintenance } from './public-maintenance.js';
+export { IsleyisStore } from './isleyis-store.js';
 
 const SESSION_TTL = 60 * 60 * 24 * 30;
 
@@ -50,6 +53,10 @@ async function routeRequest(request, env, ctx) {
       return new Response(response.body,{status:response.status,statusText:response.statusText,headers});
     }
     if (isVitrinHost(url.hostname)) {
+      if (!url.pathname.startsWith('/panel')) {
+        const maintenance = publicMaintenance(request,env);
+        if (maintenance) return maintenance;
+      }
       if (url.pathname === '/api/olcum' && request.method === 'POST') return acceptMetric(request, env);
       if (url.pathname === "/api/teklif" && request.method === "POST") {
         try {
@@ -164,6 +171,10 @@ function yonetimLoginPage(error, next = '') {
 }
 
 async function handleYonetim(request, env, url) {
+  const pathEarly = url.pathname.replace(/\/+$/, "") || "/yonetim";
+  if (pathEarly === "/yonetim/isleyis" || pathEarly.startsWith("/yonetim/isleyis/")) {
+    return handleIsleyis(request, env, url);
+  }
   const pin = String(env.YONETIM_PASSWORD || '');
   const token = readCookie(request, YONETIM_COOKIE);
   const unavailable = () => new Response('Yönetim girişi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.',{status:503,headers:{'cache-control':'no-store'}});

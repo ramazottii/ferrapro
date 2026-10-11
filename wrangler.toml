@@ -16,8 +16,17 @@ new_sqlite_classes = ["PriceStore"]
 name = "MANAGEMENT_SESSIONS"
 class_name = "ManagementSessions"
 
+[[durable_objects.bindings]]
+name = "ISLEYIS_STORE"
+class_name = "IsleyisStore"
+
 [[migrations]]
-tag = "v2-management-sessions"
+tag = "v3-isleyis-store"
+new_sqlite_classes = ["IsleyisStore"]
+
+# v3 is already live; management sessions were never deployed as v2.
+[[migrations]]
+tag = "v4-management-sessions"
 new_sqlite_classes = ["ManagementSessions"]
 
 [[ratelimits]]
@@ -26,6 +35,7 @@ namespace_id = "2026100801"
 simple = { limit = 10, period = 60 }
 
 [vars]
+PUBLIC_SITE_CLOSED = "true"
 QUOTE_NOTIFY_FROM = "info@ferrapro.com"
 # QUOTE_NOTIFY_TO is a Worker secret, never committed personal addresses.
 

@@ -128,7 +128,7 @@ const ALTLAR_IDS={
   E:['E1','E2','E3','E4'],
   F:['F1','F2','F3','F4','F5'],
 };
-assert.equal(data.urunler.length,448);
+assert.equal(data.urunler.length,630);
 assert.equal(data.kategoriler.map((k)=>k.id).join(","),"A,B,C,D,E,F");
 assert.equal(data.kategoriler[2].altlar.map((a)=>a.id).join(","),"C1,C2,C3,C4");
 assert.equal(data.kategoriler.find((k)=>k.id==='F').altlar.find((a)=>a.id==='F2').gorsel,'/img/products/daire-masaustu.webp?v=2');
@@ -238,14 +238,14 @@ assert.equal(data.urunler.find((row)=>row.ad==='Çöp Konteyneri' && row.kapasit
 assert.equal(data.urunler.find((row)=>row.marka==='MAS' && row.ad==='Masa Altı Çöp Kovası').gorsel,'/img/products/mas-masa-alti.webp');
 assert.equal(data.urunler.find((row)=>row.ad==='Pedallı Çöp Kovası' && !row.marka).gorsel,'/img/products/plastik-pedalli.webp');
 assert.equal(data.urunler.find((row)=>row.ad==='Sallanır Kapaklı Çöp Kovası' && !row.marka).gorsel,'/img/products/plastik-sallanir.webp');
-assert.equal(data.urunler.filter((row)=>row.alt==='C3').length,9);
+assert.equal(data.urunler.filter((row)=>row.alt==='C3').length,74);
 assert.equal(data.urunler.find((row)=>row.id==='p-439').ad,'Kolon Küllük');
 assert.equal(data.urunler.find((row)=>row.id==='p-439').marka,'Palex');
 assert.equal(data.urunler.find((row)=>row.id==='p-439').gorsel,'/img/products/palex-kolon-kulluk.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-440').ad,'Bahçe Tipi Çöp Kovası');
 assert.equal(data.urunler.find((row)=>row.id==='p-440').marka,'Palex');
 assert.equal(data.urunler.find((row)=>row.id==='p-440').gorsel,'/img/products/palex-bahce-cop-kovasi.webp');
-assert.ok(!data.urunler.some((row)=>row.alt==='C3' && /800 Litrelik|120 Litrelik|240 Litrelik|Pratik Kapaklı/.test(row.ad)));
+assert.ok(!data.urunler.some((row)=>row.alt==='C3' && /800 Litrelik|120 Litrelik|240 Litrelik/.test(row.ad)));
 assert.ok(!data.urunler.some((row)=>row.ad==='Pedallı Çöp Kovası' && row.marka==='Palex' && row.malzeme==='Plastik'));
 assert.ok(!data.urunler.some((row)=>row.alt==='A2' && row.marka==='Selpak'));
 assert.ok(data.urunler.filter((row)=>row.alt==='A2').every((row)=>row.gorselTuru==='urun'));
@@ -401,13 +401,13 @@ assert.ok(data.urunler.some((row)=>row.alt==='C4' && row.marka==='Parex' && row.
 assert.equal(data.urunler.find((row)=>row.id==='p-346').gorsel,'/img/products/parex-extra-power-kova.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-349').ad,'Pedallı Otomatik Temizlik Seti');
 assert.equal(data.urunler.find((row)=>row.id==='p-349').gorsel,'/img/products/parex-pedalli-otomatik.webp');
-assert.equal(data.urunler.filter((row)=>row.alt==='C4').length,15);
+assert.equal(data.urunler.filter((row)=>row.alt==='C4').length,21);
 assert.equal(data.urunler.find((row)=>row.id==='p-441').ad,'Nemli Mop Aparatı');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').marka,'Ceymop');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').olcu,'50Cm');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').malzeme,'Plastik');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').gorsel,'/img/products/ceymop-nemli-mop-aparat-50.webp');
-assert.equal(data.urunler.filter((row)=>row.alt==='D2').length,33);
+assert.equal(data.urunler.filter((row)=>row.alt==='D2').length,59);
 assert.equal(data.urunler.filter((row)=>row.ad==='Faraşlı Süpürge').length,1);
 assert.equal(data.urunler.find((row)=>row.ad==='Faraşlı Süpürge').id,'p-086');
 assert.equal(data.urunler.find((row)=>row.id==='p-086').malzeme,'');

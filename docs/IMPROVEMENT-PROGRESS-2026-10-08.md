@@ -17,7 +17,7 @@
 
 1. Bu sürüme yönelik kullanıcı yayın talimatı alınmalı. Push yayın değildir.
 2. `wrangler secret list` yalnız adlarla incelendi: SESSION_SECRET var, YONETIM_PASSWORD gizli ayar listesinde yok. Normal uzak ortam değişkenleri incelenmedi; hiçbir değer açılmadı. Güçlü ayrı YONETIM_PASSWORD güvenli kanaldan tanımlanıp operatörün bildiği doğrulanmadan bu güvenlik sürümü yayımlanmamalı. Şifreyi sohbete yazdırmayın veya kaynak yedeğinden kopyalamayın.
-3. MANAGEMENT_SESSIONS / ManagementSessions ve v2-management-sessions SQLite DO migration + YONETIM_RATE_LIMITER gerekli. PRICE_STORE / v1 korunmalı. Mevcut oturumlar geçersizleşir, yeniden giriş gerekir; kayıtlar silinmez.
+3. MANAGEMENT_SESSIONS / ManagementSessions ve v4-management-sessions SQLite DO migration + YONETIM_RATE_LIMITER gerekli. 11 Ekim uzlaştırması: canlıya v3-isleyis-store geçmiş, eski v2 oturum migration'ı hiç yayımlanmamış. Sıra artık v1-price-store → v3-isleyis-store → v4-management-sessions. PRICE_STORE ve ISLEYIS_STORE korunmalı. Mevcut yönetim oturumları geçersizleşir, yeniden giriş gerekir; kayıtlar silinmez.
 4. Önceki canlı METRICS yok notu nedeniyle gerçek binding ayarlarını tekrar kontrol edin; repodaki Analytics Engine ayarı otomatik yayına gerekçe değildir. Ortak Worker'da Cursor'un panel/Excel değişiklikleri ve canlı katalog farkı ayrıca uzlaştırılmalı.
 5. Yayından sonra HTTPS/www yolları, fiyat/talep girişsiz 401, gerçek yönetim giriş/çıkış, iptal edilmiş oturum, Ferranoi panel regresyon kontrolü. Müşteri kayıtlarını dışarı aktarmayın; test mesajı göndermeyin.
 
@@ -37,3 +37,9 @@
 4. Mobil gerçek hız ölçümü, dengeli kategori dizilimi; saklama/silme/yedek prosedürleri için işletme kararları.
 
 Tüm iş bitmiş değildir. Bu dosya kullanım hakkı sonrası devam noktasıdır. Canlı yayın yapılmadı.
+
+## 11 Ekim 2026 güncellemesi
+
+630 ürünlük güncel katalog, Palex görselleri ve yönetim Excel/işleyiş değişiklikleri birleştirildi. Kapanış bayrağı kaynakta korunuyor; migration sırası v1 → v3 → v4 olarak düzeltildi. npm run check ve Wrangler dry-run PASS, yerel 1280/390 px public görünüm kontrolü yapıldı. YAYIN YOK.
+
+Yeni somut bulgu: Havlu Aparatları altındaki bazı köpük/koku ve streç/folyo ürünleri yanlış sınıfta. Sıradaki katalog işi bu anlam hatalarının düzeltilmesi. Üç krem kategori görseli, yönetim gizli ayarı/uzak binding kontrolleri ve eşzamanlı panel dosyalarının canlıyla uzlaştırılması tamamlanmadan birleşik sürümü yayımlamayın. Ayrıntı docs/HANDOFF.md, 11 Ekim bölümü.

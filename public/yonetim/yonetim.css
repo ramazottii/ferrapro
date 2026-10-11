@@ -402,7 +402,7 @@ table.grid tbody tr:hover { background: #F8FAFC; }
   border-radius: 10px;
   padding: 12px 14px;
 }
-.add-row { display: flex; gap: 8px; margin-top: 14px; }
+.add-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
 .add-row input { flex: 1; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
 
 .nav-mask { display: none; }

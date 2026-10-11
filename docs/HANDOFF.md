@@ -1861,6 +1861,21 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Canlı sürüm 599a5e10-dd30-4d9b-ab33-447601873618 (%100). npm run check PASS. Ana sayfa, sipariş, yönetim girişi 200.
 
 
+## 8 Ekim 2026 — Ferrapro işleyiş CANLIDA
+
+- `/yonetim/isleyis` ayrı şifre (`ISLEYIS_PASSWORD`), ayrı çerez; fiyat/teklif şifresi burayı açmaz. Ortaklar, gelir/gider/harcama/sipariş hareketleri, şirket evrakları (vergi levhası PDF/JPG). Twilio WhatsApp henüz bağlı değil; hareket kaydında bildirim kancası hazır.
+- Yalıtılmış paket: canlı worker tabanı (ManagementSessions yok) + `ISLEYIS_STORE` / `v3-isleyis-store`. GPT’nin yayımlanmamış yönetim oturumu alınmadı; PRICE_STORE ve Ferranoi `app.js?v=23` korundu. `--keep-vars`, METRICS yok.
+- Wrangler 4.131.2: 17 varlık (işleyiş + yönetim v=8 + birkaç HTML hash), 1157 zaten yüklü. Sürüm b8a8257f-c6db-4efc-aebb-90334d5455a1 (%100). Önceki dd043da8. Giriş ve `/api/durum` canlıda doğrulandı.
+- Tablo iskeleti CANLIDA (e61e07b8): Özet mali tablo (bu ay/yıl/toplam + net), ortak payı, son hareketler; Ortaklar; Gelir / Gider / Harcamalar / Siparişler ayrı defterler; evrakta geçerlilik. Kalem adları sonra değişir. 3 varlık + store alanı. WhatsApp hâlâ bekliyor.
+- Excel fiyat dışa aktarma katalog ve maliyet sayfalarının başında **Excel indir** (v=9, b8656758). Ayarlar’daki JSON yedek aynı. Excel içe aktarılmaz.
+
+## 8 Ekim 2026 — Yönetim Excel fiyat dışa aktarma CANLIDA
+
+- Ayarlar’da Excel indir (.xls) eklendi. JSON indirme/içe aktarma duruyor; Excel içe aktarılmaz.
+- GPT’nin aynı anda ferrapro.com çalışmasıyla çakışmamak için yalıtılmış paket: canlı public (599a5e10) + yalnız `yonetim.js` / `yonetim/index.html` / `yonetim.css`. Worker HEAD (ManagementSessions yok). Panel canlı `app.js?v=23`. Katalog-ui/GPT yayımlanmamış worker/wrangler alınmadı.
+- Wrangler 4 varlık yüklemesi: 4 dosya (3 yönetim + kvkk.html canlı kopyası), 1161 zaten yüklü. `--keep-vars`, METRICS yok, PRICE_STORE korundu.
+- Canlı sürüm dd043da8-27a3-47be-b9f3-5a8e482393ce (%100). Önceki 599a5e10-dd30-4d9b-ab33-447601873618. `yonetim.js?v=7`. Ferranoi paneli ve halka açık sayfalar bu pakette bilinçli olarak canlı kopyadan geldi.
+
 ## 8 Ekim 2026 — Dört ürün beyaz fon düzenlemesi (yayınlanmadı)
 
 - Kullanıcının ekran görüntülerindeki belinno-ev-tipi-rulo-6, belinno-hareketli-havlu, sleepy-herbal-lavanta ve tela-kolluk WebP dosyaları düzenlendi. İkinci üründe banyo/tezgâh sahnesi kaldırıldı. Sleepy 100 Adet rozeti korundu.
@@ -1883,9 +1898,30 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - npm run check PASS; yönetim oturumu, HTTPS, limiter/depoda hata testleri dahil. Wrangler deploy --dry-run PASS. Public-only Worker yerel önizleme 1280/390 px PASS; gerçek üretim DO ortam testi henüz yok.
 - Canlı yayın YAPILMADI. Sonraki işler: güvenli ayar/yayın hazırlığı, üç krem kategori görseli, kategori içerikleri, Search Console/yerel profil/dönüşüm ölçümü. Cursor'un eşzamanlı panel/Excel dosyaları commit kapsamı dışında tutuldu.
 
+## 8 Ekim 2026 — Palex katalog genişletmesi CANLIDA
+
+- Palex 25.03.2026 fiyat listesi ürün tipine göre gruplandı (renk/ölçü alan, ayrı SKU değil). Mevcut 23 Palex satırı korundu; görseli Palex sitesinden alınan 182 yeni tip eklendi. Katalog 448 → 630; halka açık Palex 205. Fiyat `katalog.json` içinde yok.
+- 33 tip (adaptör, boş şişirme, bazı Still sensör ve ZMR yedekleri) Palex sitesinde görsel bulunamadığı için eklenmedi.
+- PDF beyaz/standart maliyetleri PRICE_STORE’a yazıldı (revizyon 14); kırtasiye Derya maliyetleri korundu. Excel içe aktarma bekliyor.
+- Yalıtılmış yayın: canlı worker tabanı (ManagementSessions/METRICS yok) + katalog, sitemap, Palex WebP ve yönetim catalog.json. Ferranoi paneli değişmedi. `--keep-vars`.
+- Aktif Cloudflare sürümü: c42e675c-a39c-4e80-9944-22031ef94210 (%100). ferrapro.com halka açık sayfalar kapanış metnine alındı; /yonetim, katalog JSON ve görseller yönetim için açık. tedarik.ferranoi.com açık. Önceki kapanış denemesi a0883b21; ondan önceki e6925970.
+- npm run check PASS (630). Canlı Havlu Aparatları’nda geri dönüşüm yok; Çöp Kovaları’nda üç Palex geri dönüşüm satırı var. Gerçek talep gönderilmedi.
+
 ## 8 Ekim 2026 — Üç kategori rehberi ve masaüstü yerleşimi (yayınlanmadı)
 
 - A/D/E ana kategorilerine kısa, ürün seçimine yardımcı açılır rehberler eklendi. Aynı içerik ilk HTML ve JavaScript arayüzünde; arama/ürün detayında gösterilmez. Gerçek katalog kapsamı kullanıldı, stok/teslimat garantisi yok.
 - Ana katalog 1000 px üstünde 3+3 düzeni. site.js v140, catalog-ui.js v103, inner.css v98. İç bağlantı/kategori kimlikleri korunur.
 - npm run check PASS; rehberin ilk HTML'de olması ve aramada bulunmaması test edildi. 1280 px 3+3 satırlar ve 390 px açık rehber taşmasız. output/kategori-duzeni-son.jpg önizlemesi kaydedildi.
 - YAYIN YOK. Önceki c335675 güvenlik sürümünün gizli yönetim ayarı ve DO/rate limiter ön koşulları devam ediyor. Kalanlar docs/IMPROVEMENT-PROGRESS-2026-10-08.md içinde.
+
+## 11 Ekim 2026 — Birleşik katalog / yönetim kontrolü (YAYINLANMADI)
+
+- 630 ürün ve 182 yeni Palex görseli, yönetim Excel dışa aktarma ve ayrı işleyiş modülü; mevcut güvenlik, kategori rehberi ve 3+3 düzeniyle aynı dalda birleştirildi. Önceki 448 ürünün kimlikleri korunuyor. Halka açık katalogda fiyat/maliyet yok; yönetim katalog dosyasında gerçek fiyatlar bulunmuyor.
+- Canlı v3-isleyis-store kurulumu HANDOFF kaydına göre korunarak bekleyen ManagementSessions migration'ı v4'e taşındı. Bu sıralama derlendi; gerçek Cloudflare migration uygulaması yapılmadı.
+- PUBLIC_SITE_CLOSED=true kaynak yapılandırmaya eklendi. Ferrapro müşteri sayfaları ve talep API'si 503/no-store/Retry-After verir; yönetim yolları ve yönetimin kullandığı katalog/görseller korunur. Ferranoi yönlendirmesi değişmedi. Bu kapatma, halka açık katalog dosyalarını gizleyen bir gizlilik duvarı değildir.
+- npm run check PASS; yeni birleşim testleri eski kimlikler, görsel dosyaları, sayfa sayıları, rehberler, migration sırası, kapanış ve özel yol erişimini doğrular. Wrangler 4.131.2 deploy --dry-run PASS; 1377 statik dosya, derleme başarılı. Yayın yapılmadı.
+- Yerel public Worker önizlemesi: 1280 px ana katalog 3+3; C/C1 bağlantıları ve 72 ürün görüntüleniyor. 390 px kontrolünde yatay taşma yok (375 px içerik / 375 px scroll), görünür kırık görsel yok. output/integration-mobile-2026-10-11.png. Bu kontrol gerçek telefon veya üretim oturum testi değildir.
+- İncelemede yeni bulgu: C1 Havlu Aparatları altında bazı el temizleme köpükleri, koku ve streç/folyo aparatları var. Sayısal sınıflandırma testi anlam doğruluğunu garanti etmiyor; ürün tiplerini uygun mevcut gruplara taşıma / gerekli gerçek alt grubu oluşturma ayrı sonraki iş. Kimlikler ve fiyat bağlantıları korunmalı.
+- Yayın öncesi hâlâ: YONETIM_PASSWORD güvenli ayarı, uzak METRICS/binding ve migration durumunun doğrulanması, gerçek yönetim giriş/çıkış testi. İşleyiş modülünün ayrı oturumu yeni ManagementSessions korumasını kullanmıyor; ayrı güvenlik değerlendirmesi yapılmalı.
+- Eşzamanlı .cursor/rules/ferrapro.mdc, public/app.js ve public/panel/index.html değişiklikleri düzenlenmedi / bu commit'e alınmadı. docs/VISUAL-FIX-PROGRESS.md ve tmp-d-category-selection.json da dışarıda bırakıldı. Ortak Worker yeniden yayımlanmadan önce panel dosyalarının canlı sürümle farkı ayrıca uzlaştırılmalı; mevcut canlı paneli eski Git kopyasıyla ezmeyin.
+- Sonraki sıra: yanlış ürün sınıfları; üç krem kategori görseli ve ambalaj zemini; kalan güvenlik/yayın koşulları; mobil hız ve Google görünürlük çalışmaları. Siteyi açma veya canlıya yayın talimatı yok.

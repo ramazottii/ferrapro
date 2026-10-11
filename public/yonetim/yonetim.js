@@ -411,6 +411,7 @@
     tree.append(
       h("span", { class: "nav-label", text: "Yönetim" }),
       h("a", { href: "/yonetim/talepler", class: "nav-link", text: "Teklifler" }),
+      h("a", { href: "/yonetim/isleyis/", class: "nav-link", text: "Ferrapro işleyiş" }),
       h("a", { href: "#/maliyet", class: state.page === "maliyet" ? "nav-link is-on" : "nav-link", text: "Maliyet" }),
       h("a", { href: "#/markalar", class: state.page === "markalar" ? "nav-link is-on" : "nav-link", text: "Markalar" }),
       h("a", { href: "#/kategoriler", class: state.page === "kategoriler" ? "nav-link is-on" : "nav-link", text: "Kategoriler" }),
@@ -573,6 +574,7 @@
     const [title, sub] = titleForPage();
     const head = h("div", { class: "page-head" },
       h("div", {}, h("h1", { text: title }), h("p", { text: sub + (state.page === "katalog" ? ` · ${items.length} ürün` : "") })),
+      excelButton(),
     );
     const empty = emptyState(items);
     const useCards = state.view === "cards" || mobile();
@@ -586,6 +588,7 @@
     const [title, sub] = titleForPage();
     const head = h("div", { class: "page-head" },
       h("div", {}, h("h1", { text: title }), h("p", { text: sub + ` · ${items.length} ürün` })),
+      excelButton(),
     );
     const empty = emptyState(items);
     if (empty) return [head, empty];
@@ -641,6 +644,54 @@
     ];
   }
 
+  function xmlEsc(s) {
+    return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function excelCell(value, kind) {
+    if (kind === "n") {
+      const n = num(value);
+      if (n == null) return "<Cell></Cell>";
+      return `<Cell><Data ss:Type="Number">${n}</Data></Cell>`;
+    }
+    return `<Cell><Data ss:Type="String">${xmlEsc(value)}</Data></Cell>`;
+  }
+
+  function downloadBlob(blob, name) {
+    const url = URL.createObjectURL(blob);
+    h("a", { href: url, download: name }).click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function exportFiyatExcel() {
+    const headers = ["Kod", "Kategori", "Alt grup", "Marka", "Ürün", "Ölçü", "Renk", "Ambalaj", "Birim", "Maliyet", "Liste", "Ideal satış", "Dip satış", "Aktif"];
+    const body = state.catalog.urunler.map((u) => "<Row>" + [
+      excelCell(u.id),
+      excelCell(anaAd(u.anaKategoriId)),
+      excelCell(altAd(u.anaKategoriId, u.altKategoriId)),
+      excelCell(u.marka),
+      excelCell(u.ad),
+      excelCell(olcuYazi(u.olcu) || u.olcu),
+      excelCell(u.renk),
+      excelCell(u.ambalajAdedi),
+      excelCell(u.birim || inferBirim(u)),
+      excelCell(currentPrice(u, "maliyet"), "n"),
+      excelCell(currentPrice(u, "listeFiyat"), "n"),
+      excelCell(currentPrice(u, "idealSatis"), "n"),
+      excelCell(currentPrice(u, "dipSatis"), "n"),
+      excelCell(u.aktif ? "Evet" : "Hayır"),
+    ].join("") + "</Row>");
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<?mso-application progid="Excel.Sheet"?>\n<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">\n<Worksheet ss:Name="Fiyatlar"><Table>\n<Row>${headers.map((t) => excelCell(t)).join("")}</Row>\n${body.join("\n")}\n</Table></Worksheet></Workbook>`;
+    const day = new Date().toISOString().slice(0, 10);
+    downloadBlob(new Blob(["\uFEFF" + xml], { type: "application/vnd.ms-excel" }), `ferrapro-yonetim-fiyat-${day}.xls`);
+  }
+
+  function excelButton() {
+    const excel = h("button", { class: "btn", type: "button", text: "Excel indir" });
+    excel.addEventListener("click", exportFiyatExcel);
+    return excel;
+  }
+
   function renderAyarlar() {
     $("filters").hidden = true;
     const [title, sub] = titleForPage();
@@ -649,11 +700,11 @@
       document.documentElement.style.setProperty("--accent", color.value);
       localStorage.setItem(THEME, color.value);
     });
-    const exp = h("button", { class: "btn ghost", type: "button", text: "Fiyatları dışa aktar" });
+    const excel = excelButton();
+    const exp = h("button", { class: "btn ghost", type: "button", text: "JSON indir" });
     exp.addEventListener("click", () => {
       const blob = new Blob([JSON.stringify({ fiyatlar: Object.fromEntries(state.catalog.urunler.map(u => [u.id, priceSlice(u)])), extras: state.extras }, null, 2)], { type: "application/json" });
-      const a = h("a", { href: URL.createObjectURL(blob), download: "ferrapro-yonetim-fiyat.json" });
-      a.click();
+      downloadBlob(blob, "ferrapro-yonetim-fiyat.json");
     });
     const file = h("input", { type: "file", accept: "application/json" });
     file.addEventListener("change", async () => {
@@ -698,7 +749,7 @@
         h("li", {}, "Vurgu rengi", color),
         h('li', {}, 'Aktarım öncesi veya başarısız kaydetme yedeği', backup),
         h("li", {}, "Ürün listesi ferrapro.com kataloğundan gelir. Birim ve fiyatlar yetkili sunucu kaydında saklanır."),
-        h("li", {}, "Fiyat yedeği", h("div", { class: "add-row" }, exp, file)),
+        h("li", {}, "Fiyat yedeği (Excel inceleme, JSON geri yükleme)", h("div", { class: "add-row" }, excel, exp, file)),
         h("li", {}, "Sunucudaki fiyatları koruyarak bu tarayıcının önbelleğini temizleyin.", reset),
       ),
     ];
