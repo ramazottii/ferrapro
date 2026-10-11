@@ -38,9 +38,9 @@ assert.ok(existsSync(new URL('../public/img/products/daire-havlu-aparat.webp',im
 assert.ok(existsSync(new URL('../public/img/products/daire-sabun-aparat.webp',import.meta.url)));
 assert.ok(existsSync(new URL('../public/img/products/daire-cop-kovasi.webp',import.meta.url)));
 assert.ok(existsSync(new URL('../public/img/products/daire-mop-aparat.webp',import.meta.url)));
-assert.equal(vm.runInContext('ALTLAR.D[0].gorsel',context),'/img/products/daire-cop-poseti.webp?v=2');
-assert.equal(vm.runInContext('ALTLAR.D[1].gorsel',context),'/img/products/daire-sarf.webp?v=2');
-assert.equal(vm.runInContext('ALTLAR.D[2].gorsel',context),'/img/products/daire-kullan-at.webp?v=2');
+assert.equal(vm.runInContext('ALTLAR.D[0].gorsel',context),'/img/products/daire-cop-poseti.webp?v=3');
+assert.equal(vm.runInContext('ALTLAR.D[1].gorsel',context),'/img/products/daire-sarf.webp?v=3');
+assert.equal(vm.runInContext('ALTLAR.D[2].gorsel',context),'/img/products/daire-kullan-at.webp?v=3');
 assert.equal(vm.runInContext('ALTLAR.E[0].gorsel',context),'/img/products/daire-cay-seker.webp?v=2');
 assert.equal(vm.runInContext('ALTLAR.E[1].gorsel',context),'/img/products/daire-kahve.webp?v=2');
 assert.equal(vm.runInContext('ALTLAR.E[2].gorsel',context),'/img/products/daire-icecek.webp?v=2');
@@ -117,20 +117,41 @@ assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90�
 assert.equal(vm.runInContext(`markaTercihSatir(${JSON.stringify('Islak havlu 90’lı')},${JSON.stringify('Fark etmez')})`,context),'Islak havlu 90’lı · Marka tercihi: fark etmez');
 
 const data=JSON.parse(readFileSync(new URL('../public/katalog.json',import.meta.url),'utf8'));
+// Product meaning matters as well as a syntactically valid category ID.
+for (const row of data.urunler.filter(row => row.marka === 'Palex')) {
+  if (/El Temizleme Köpüğü|Oda Parfümü|Oda Spreyi|Sabun Kartuşu|Ref[iı]ll? .*Sabun|Nano Hijyen Koku/i.test(row.ad)) {
+    assert.equal(row.kategori, 'B', `Liquid/refill misclassified: ${row.id}`);
+  }
+  if (/Kartuşlu.*Aparatı/i.test(row.ad)) assert.equal(row.alt, 'C2', `Dispenser is not a refill: ${row.id}`);
+  if (/Kurutma Cihazı/i.test(row.ad)) assert.equal(row.alt, 'C5', row.id);
+  if (/Streç.*Aparatı/i.test(row.ad)) assert.equal(row.alt, 'F4', row.id);
+  if (/Klozet Fırçası/i.test(row.ad)) assert.equal(row.alt, 'D2', row.id);
+  if (row.alt === 'C1') assert.doesNotMatch(row.ad, /Köpüğü|Koku|Streç|Bardak|Bone|Galoş|Eldiven|Kurutma|Hijyenik Film/i);
+}
+const management=JSON.parse(readFileSync(new URL('../public/yonetim/catalog.json',import.meta.url),'utf8'));
+assert.deepEqual(management.kategoriler, data.kategoriler);
+for (const row of data.urunler) {
+  const admin=management.urunler.find(p=>p.id===row.id);
+  assert.equal(admin?.anaKategoriId,row.kategori,row.id);
+  assert.equal(admin?.altKategoriId,row.alt,row.id);
+}
+for (const group of data.kategoriler) for (const sub of group.altlar) {
+  assert.ok(data.urunler.some(p=>p.aktif!==false && p.kategori===group.id && p.alt===sub.id), `Empty category: ${sub.id}`);
+}
 assert.equal(data.gruplar.join(','),'A,B,C,D,E,F');
 assert.match(readFileSync(new URL('../public/urunler.html',import.meta.url),'utf8'),/class="cat-bar"/);
 assert.ok(!readFileSync(new URL('../public/urunler.html',import.meta.url),'utf8').includes('cat-rail'));
 const ALTLAR_IDS={
   A:['A1','A2','A3'],
   B:['B1','B2'],
-  C:['C1','C2','C3','C4'],
+  C:['C1','C2','C3','C4','C5','C6'],
   D:['D1','D2','D3'],
   E:['E1','E2','E3','E4'],
   F:['F1','F2','F3','F4','F5'],
 };
 assert.equal(data.urunler.length,630);
 assert.equal(data.kategoriler.map((k)=>k.id).join(","),"A,B,C,D,E,F");
-assert.equal(data.kategoriler[2].altlar.map((a)=>a.id).join(","),"C1,C2,C3,C4");
+assert.equal(data.kategoriler[2].altlar.map((a)=>a.id).join(","),"C1,C2,C3,C4,C5,C6");
 assert.equal(data.kategoriler.find((k)=>k.id==='F').altlar.find((a)=>a.id==='F2').gorsel,'/img/products/daire-masaustu.webp?v=2');
 assert.equal(data.kategoriler.find((k)=>k.id==='F').altlar.find((a)=>a.id==='F3').gorsel,'/img/products/daire-dosya-arsiv.webp?v=2');
 assert.equal(data.kategoriler.find((k)=>k.id==='F').altlar.find((a)=>a.id==='F5').gorsel,'/img/products/daire-bilgisayar.webp?v=2');
@@ -140,11 +161,11 @@ assert.equal(data.urunler.filter((row)=>row.alt==='E1').length,17);
 assert.equal(data.urunler.filter((row)=>row.alt==='E2').length,21);
 assert.equal(data.urunler.filter((row)=>row.alt==='E3').length,25);
 assert.equal(data.urunler.filter((row)=>row.alt==='E4').length,20);
-assert.equal(data.urunler.filter((row)=>row.kategori==='F').length,152);
+assert.equal(data.urunler.filter((row)=>row.kategori==='F').length,162);
 assert.equal(data.urunler.filter((row)=>row.alt==='F1').length,33);
 assert.equal(data.urunler.filter((row)=>row.alt==='F2').length,44);
 assert.equal(data.urunler.filter((row)=>row.alt==='F3').length,28);
-assert.equal(data.urunler.filter((row)=>row.alt==='F4').length,13);
+assert.equal(data.urunler.filter((row)=>row.alt==='F4').length,23);
 assert.equal(data.urunler.filter((row)=>row.alt==='F5').length,34);
 assert.equal(data.urunler.find((row)=>row.ad==='Kablolu Klavye').marka,'Lecoo');
 assert.equal(data.urunler.find((row)=>row.marka==='Philips' && row.ad==='Kablosuz Klavye Mouse Seti').renk,'Siyah');
@@ -238,7 +259,7 @@ assert.equal(data.urunler.find((row)=>row.ad==='Çöp Konteyneri' && row.kapasit
 assert.equal(data.urunler.find((row)=>row.marka==='MAS' && row.ad==='Masa Altı Çöp Kovası').gorsel,'/img/products/mas-masa-alti.webp');
 assert.equal(data.urunler.find((row)=>row.ad==='Pedallı Çöp Kovası' && !row.marka).gorsel,'/img/products/plastik-pedalli.webp');
 assert.equal(data.urunler.find((row)=>row.ad==='Sallanır Kapaklı Çöp Kovası' && !row.marka).gorsel,'/img/products/plastik-sallanir.webp');
-assert.equal(data.urunler.filter((row)=>row.alt==='C3').length,74);
+assert.equal(data.urunler.filter((row)=>row.alt==='C3').length,71);
 assert.equal(data.urunler.find((row)=>row.id==='p-439').ad,'Kolon Küllük');
 assert.equal(data.urunler.find((row)=>row.id==='p-439').marka,'Palex');
 assert.equal(data.urunler.find((row)=>row.id==='p-439').gorsel,'/img/products/palex-kolon-kulluk.webp');
@@ -407,7 +428,7 @@ assert.equal(data.urunler.find((row)=>row.id==='p-441').marka,'Ceymop');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').olcu,'50Cm');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').malzeme,'Plastik');
 assert.equal(data.urunler.find((row)=>row.id==='p-441').gorsel,'/img/products/ceymop-nemli-mop-aparat-50.webp');
-assert.equal(data.urunler.filter((row)=>row.alt==='D2').length,59);
+assert.equal(data.urunler.filter((row)=>row.alt==='D2').length,41);
 assert.equal(data.urunler.filter((row)=>row.ad==='Faraşlı Süpürge').length,1);
 assert.equal(data.urunler.find((row)=>row.ad==='Faraşlı Süpürge').id,'p-086');
 assert.equal(data.urunler.find((row)=>row.id==='p-086').malzeme,'');
@@ -495,7 +516,7 @@ assert.equal(data.urunler.find((row)=>row.id==='p-366').olcu,'33M');
 assert.equal(data.urunler.find((row)=>row.id==='p-366').gorsel,'/img/products/parex-strec-33.webp');
 assert.ok(data.urunler.filter((row)=>row.ad==='Alüminyum Folyo').every((row)=>row.marka==='Parex' && !row.gorsel.includes('koroplast')));
 assert.ok(data.urunler.filter((row)=>row.ad==='Streç Film').every((row)=>row.marka==='Parex' && !row.gorsel.includes('koroplast')));
-assert.equal(data.urunler.filter((row)=>row.alt==='D3').length,29);
+assert.equal(data.urunler.filter((row)=>row.alt==='D3').length,30);
 assert.equal(data.urunler.filter((row)=>row.ad==='Orta Boy Çöp Poşeti').length,7);
 assert.match(readFileSync(new URL('../public/urunler.html',import.meta.url),'utf8'),/id="kat-daireler"/);
 assert.match(readFileSync(new URL('../public/catalog-ui.js',import.meta.url),'utf8'),/kat-daireler/);

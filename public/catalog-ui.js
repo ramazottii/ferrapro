@@ -100,6 +100,10 @@
     const disc = el('span', null, 'cat-circle');
     if (gorsel) {
       const img = el('img');
+      if (/\/daire-(cop-poseti|sarf|kullan-at)\.webp(?:\?|$)/.test(gorsel)) {
+        img.sizes = '188px';
+        img.srcset = `${gorsel.replace('.webp', '-512.webp')} 512w, ${gorsel} 1024w`;
+      }
       img.src = gorsel;
       img.alt = '';
       disc.append(img);

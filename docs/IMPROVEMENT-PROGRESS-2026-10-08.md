@@ -43,3 +43,7 @@ Tüm iş bitmiş değildir. Bu dosya kullanım hakkı sonrası devam noktasıdı
 630 ürünlük güncel katalog, Palex görselleri ve yönetim Excel/işleyiş değişiklikleri birleştirildi. Kapanış bayrağı kaynakta korunuyor; migration sırası v1 → v3 → v4 olarak düzeltildi. npm run check ve Wrangler dry-run PASS, yerel 1280/390 px public görünüm kontrolü yapıldı. YAYIN YOK.
 
 Yeni somut bulgu: Havlu Aparatları altındaki bazı köpük/koku ve streç/folyo ürünleri yanlış sınıfta. Sıradaki katalog işi bu anlam hatalarının düzeltilmesi. Üç krem kategori görseli, yönetim gizli ayarı/uzak binding kontrolleri ve eşzamanlı panel dosyalarının canlıyla uzlaştırılması tamamlanmadan birleşik sürümü yayımlamayın. Ayrıntı docs/HANDOFF.md, 11 Ekim bölümü.
+
+## 11 Ekim 2026 — ikinci aşama tamamlandı
+
+59 ürünün kategori anlamı düzeltildi; 630 kimlik ve diğer ürün alanları korundu. C5 (7 el kurutucu) ve C6 (9 hijyen/servis aparatı) gerçek ürünlerle eklendi. Üç krem D kategorisi görseli kullanıcı onaylı piksel maskeleme ile beyaza alındı; üretim aracının yazıları değiştiren adayları kullanılmadı. Kategori kart zeminleri beyaz, kart görselleri 512 px srcset ile hafifletildi. npm run check ve 1280/390 px kontroller PASS, eski ürün bağlantısı çalışıyor. YAYIN YOK. Ayrıntı ve kalan koşullar HANDOFF son bölümünde; önceki üç krem kategori maddesi tamamlandı.
