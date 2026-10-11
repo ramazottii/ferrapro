@@ -34,11 +34,14 @@ export async function readManagementLogin(request) {
 async function digest(value) {
   return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))].map(x=>x.toString(16).padStart(2,'0')).join('');
 }
-export async function managementSession(env, token, method) {
+export async function managementSession(env, token, method, scope = 'management') {
+  if (!['management', 'isleyis'].includes(scope)) throw new Error('Unknown session scope');
   if (!/^[a-f0-9-]{73}$/.test(token)) return false;
-  const name = await digest(token);
+  const name = await digest(scope === 'management' ? token : `${scope}|${token}`);
   const store = env.MANAGEMENT_SESSIONS.get(env.MANAGEMENT_SESSIONS.idFromName(name));
-  const fingerprint = await digest(JSON.stringify([env.SESSION_SECRET,env.YONETIM_PASSWORD]));
+  const fingerprint = await digest(JSON.stringify(scope === 'management'
+    ? [env.SESSION_SECRET,env.YONETIM_PASSWORD]
+    : [scope,env.SESSION_SECRET,env.ISLEYIS_PASSWORD]));
   const response = await store.fetch(new Request('https://session.internal/',{method,body:method==='DELETE'?undefined:JSON.stringify({fingerprint})}));
   if (response.status >= 500) throw new Error('Session store unavailable');
   return response.ok;

@@ -1,8 +1,10 @@
 import { IsleyisStore } from './isleyis-store.js';
+import { managementSession, readManagementLogin, MANAGEMENT_TTL } from './management-sessions.js';
 export { IsleyisStore };
 
 const COOKIE = 'fp_isleyis';
-const TTL = 8 * 60 * 60;
+const TTL = MANAGEMENT_TTL;
+const session = (env, token, method) => managementSession(env, token, method, 'isleyis');
 
 function readCookie(request, name) {
   const raw = request.headers.get('cookie') || '';
@@ -46,7 +48,7 @@ function loginPage(error = '') {
 <title>Ferrapro işleyiş</title>
 <style>
 body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F4F6F8;color:#0F172A;font-family:"DM Sans",system-ui,sans-serif}
-form{width:min(92vw,380px);background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:28px 24px}
+form{box-sizing:border-box;width:min(92vw,380px);background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:28px 24px}
 img{display:block;height:36px;margin:0 auto 16px}
 h1{margin:0 0 6px;font-size:1.15rem;text-align:center}
 p{margin:0 0 16px;color:#64748B;font-size:.9rem;text-align:center}
@@ -67,23 +69,6 @@ ${msg}
     status: error ? 401 : 200,
     headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' },
   });
-}
-
-async function makeToken(env) {
-  const exp = Math.floor(Date.now() / 1000) + TTL;
-  const stamp = await hmac(env.SESSION_SECRET, 'isleyis-pin|' + env.ISLEYIS_PASSWORD);
-  const sig = await hmac(env.SESSION_SECRET, `isleyis|${exp}|${stamp}`);
-  return `${exp}.${sig}`;
-}
-
-async function validToken(env, token) {
-  const parts = String(token || '').split('.');
-  if (parts.length !== 2) return false;
-  const exp = Number(parts[0]);
-  if (!Number.isFinite(exp) || exp * 1000 < Date.now()) return false;
-  const stamp = await hmac(env.SESSION_SECRET, 'isleyis-pin|' + env.ISLEYIS_PASSWORD);
-  const sig = await hmac(env.SESSION_SECRET, `isleyis|${exp}|${stamp}`);
-  return timingEqual(parts[1], sig);
 }
 
 async function servePage(env, request, url) {
@@ -117,10 +102,13 @@ export async function notifyIsleyis(env, text) {
 export async function handleIsleyis(request, env, url) {
   const path = url.pathname.replace(/\/+$/, '') || '/yonetim/isleyis';
   const pin = String(env.ISLEYIS_PASSWORD || '');
-  const unavailable = () => new Response('İşleyiş girişi henüz tanımlı değil.', { status: 503, headers: { 'cache-control': 'no-store' } });
-  if (!pin || !env.SESSION_SECRET) return unavailable();
+  const unavailable = () => new Response('İşleyiş girişi geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyin.', { status: 503, headers: { 'cache-control': 'no-store' } });
+  if (!pin || !env.SESSION_SECRET || !env.MANAGEMENT_SESSIONS || !env.YONETIM_RATE_LIMITER) return unavailable();
+  const token = readCookie(request, COOKIE);
 
   if (path === '/yonetim/isleyis/cikis') {
+    if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) return new Response('Geçersiz kaynak', { status: 403 });
+    try { if (token) await session(env, token, 'DELETE'); } catch { return unavailable(); }
     return new Response(null, { status: 302, headers: { location: new URL('/yonetim/isleyis/', url).toString(), 'set-cookie': cookieHeader('', url, true) } });
   }
 
@@ -128,16 +116,22 @@ export async function handleIsleyis(request, env, url) {
     if (request.headers.get('origin') && request.headers.get('origin') !== url.origin) {
       return new Response('Geçersiz kaynak', { status: 403, headers: { 'cache-control': 'no-store' } });
     }
+    try {
+      const key = await hmac(env.SESSION_SECRET, 'isleyis-login|' + (request.headers.get('cf-connecting-ip') || 'unknown'));
+      if (!(await env.YONETIM_RATE_LIMITER.limit({key})).success) return new Response('Çok fazla giriş denemesi. Bir dakika sonra tekrar deneyin.', { status: 429, headers: { 'cache-control': 'no-store', 'retry-after': '60' } });
+    } catch { return unavailable(); }
     if (Number(request.headers.get('content-length') || 0) > 4096) return new Response('İstek çok büyük', { status: 413 });
-    const body = await request.text();
+    let body;
+    try { body = await readManagementLogin(request); } catch { return new Response('İstek çok büyük', { status: 413 }); }
     const given = new URLSearchParams(body).get('password') || '';
     if (!timingEqual(given, pin)) return loginPage('Şifre yanlış.');
-    const token = await makeToken(env);
+    const token = crypto.randomUUID() + '-' + crypto.randomUUID();
+    try { if (!await session(env, token, 'PUT')) return unavailable(); } catch { return unavailable(); }
     return new Response(null, { status: 302, headers: { location: new URL('/yonetim/isleyis/', url).toString(), 'set-cookie': cookieHeader(token, url) } });
   }
 
-  const token = readCookie(request, COOKIE);
-  const ok = await validToken(env, token);
+  let ok = false;
+  try { ok = await session(env, token, 'POST'); } catch { return unavailable(); }
   if (!ok) {
     if (path === '/yonetim/isleyis' || path === '/yonetim/isleyis/') return loginPage('');
     return new Response('Unauthorized', { status: 401, headers: { 'cache-control': 'no-store' } });

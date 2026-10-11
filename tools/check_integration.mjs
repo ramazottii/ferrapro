@@ -1,3 +1,4 @@
+import {managementTestEnv} from './management-test-env.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -16,7 +17,7 @@ assert.match(config,/PUBLIC_SITE_CLOSED = "true"/);
 const tags=[...config.matchAll(/^tag = "([^"]+)"/gm)].map(m=>m[1]);
 assert.deepEqual(tags,['v1-price-store','v3-isleyis-store','v4-management-sessions'],'Preserve deployed v3 history, add sessions afterward');
 let assetReads=0;
-const env={PUBLIC_SITE_CLOSED:'true',ISLEYIS_PASSWORD:'isolated-test-password',SESSION_SECRET:'isolated-test-secret',ASSETS:{fetch:async()=>{assetReads++;return new Response('asset');}}};
+const env={...managementTestEnv(),PUBLIC_SITE_CLOSED:'true',ISLEYIS_PASSWORD:'isolated-test-password',SESSION_SECRET:'isolated-test-secret',ASSETS:{fetch:async()=>{assetReads++;return new Response('asset');}}};
 const get=(path,options={},host='ferrapro.com')=>worker.fetch(new Request('https://'+host+path,options),env);
 for(const path of ['/','/urunler?g=A','/urunler.html','/siparis','/sitemap.xml']){
  const before=assetReads;const r=await get(path);assert.equal(r.status,503,path);assert.equal(r.headers.get('retry-after'),'3600');assert.equal(r.headers.get('cache-control'),'no-store');assert.equal(assetReads,before);
