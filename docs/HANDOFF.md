@@ -1961,3 +1961,11 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - npm run check PASS: mevcut işleyiş yükleme/kayıt işlemleri; yeni sonsuz akış iptali, üç endpoint için başlık ve gerçek bayt sınırları; bütün mevcut katalog/yönetim/güvenlik kontrolleri geçti. Gerçek müşteri kaydı, şifre veya bildirim kullanılmadı.
 - Canlı yayın YOK; PUBLIC_SITE_CLOSED=true değişmedi. Cursor panel/app değişiklikleri korunup commit dışında bırakıldı.
 - Kalanlar: diğer marka fonları/ürün görselleri, kontrollü mobil hız ölçümü, Search Console erişimi ve yayın sonrası indeksleme kontrolü; önceki güvenli Cloudflare ayarları ve panel sürüm uzlaştırması; onaylı yayın ve gerçek giriş/fiyat kalıcılığı/bildirim kontrolleri.
+
+## 13 Ekim 2026 — İki Belinno orijinal fotoğrafının beyaz fonu (YAYINLANMADI)
+
+- Kullanıcının gösterdiği ev tipi rulo ve p-325 hareketli havlu eski canlı fotoğraflarında hale/banyo fonu var. Yerel aynı adlı önceki dosyalar üretken görsel denemesiydi; bunların ambalaj yazılarına güvenilmedi.
+- output/visual-audit/live altındaki orijinal 640 px fotoğraflardan yalnız ürün silueti piksel maskesiyle ayrıldı ve beyaz 640 px tuvalde ortalandı. Ürün RGB/etiketleri yeniden üretilmedi; yalnız dış sınır yumuşatıldı. Yeni lossless dosyalar belinno-ev-tipi-rulo-6-white.webp ve belinno-hareketli-havlu-white.webp. Eski dosyalar korunur ama katalog artık yeni dosyalara bağlıdır.
+- Halka açık ve yönetim seed kataloğu birlikte güncellendi; ürün kimlikleri, fiyatlar ve diğer alanlar değişmedi. Public sayfa metaverisi yeniden üretildi. npm run check PASS.
+- Yerel p-325 tarayıcı kontrolünde yeni -white.webp yükleniyor. 1280 px genişlik/scroll 1265/1265; 390 px 375/375. output/belinno-white-2026-10-13/preview.png iki ürün karşılaştırması; mobile.png sayfa kanıtı.
+- CANLI YAYIN YOK. Kullanıcının canlıdaki eski fonları görmesi yerel düzeltmenin yayınlandığı anlamına gelmez. Yayın ön koşulları ve site kapalı ayarı önceki gibi. Cursor'un eşzamanlı dosyaları korunmuştur.

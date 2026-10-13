@@ -576,7 +576,7 @@ for(const row of data.urunler){
     'p-002': '/img/products/espiga-icten-cekmeli-havlu.webp',
     'p-003': '/img/products/espiga-z-katli-havlu-100.webp',
     'p-004': '/img/products/espiga-z-katli-havlu-200.webp',
-    'p-005': '/img/products/belinno-ev-tipi-rulo-6.webp',
+    'p-005': '/img/products/belinno-ev-tipi-rulo-6-white.webp',
     'p-006': '/img/products/solo-dev-rulo-havlu.webp',
     'p-007': '/img/products/selpak-dev-rulo-havlu.webp',
     'p-252': '/img/products/pensan-tukenmez-siyah.webp',
