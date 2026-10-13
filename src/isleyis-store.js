@@ -4,6 +4,24 @@ const TYPES = new Set(['vergi-levhasi', 'imza-sirkuleri', 'ticaret-sicil', 'sozl
 const HAREKET = new Set(['gelir', 'gider', 'harcama', 'siparis']);
 const DURUM = new Set(['beklemede', 'tamamlandi', 'iptal']);
 
+// Bound the actual stream before JSON/multipart parsers allocate the whole body.
+async function boundedRequest(request, limit) {
+  const tooLarge = () => Object.assign(new Error('İstek boyut sınırını aşıyor'), {status:413});
+  if (Number(request.headers.get('content-length') || 0) > limit) throw tooLarge();
+  if (!request.body) return request;
+  const reader=request.body.getReader(), chunks=[];
+  let size=0;
+  while(true){
+    const {done,value}=await reader.read(); if(done) break;
+    size+=value.byteLength;
+    if(size>limit){await reader.cancel();throw tooLarge();}
+    chunks.push(value);
+  }
+  const body=new Uint8Array(size);let offset=0;
+  for(const chunk of chunks){body.set(chunk,offset);offset+=chunk.byteLength;}
+  return new Request(request.url,{method:request.method,headers:request.headers,body});
+}
+
 function emptyState() {
   return { revision: 0, partners: [], movements: [], documents: [] };
 }
@@ -23,6 +41,7 @@ export class IsleyisStore {
       { status, headers: { 'cache-control': 'no-store', ...(extra.headers || { 'content-type': 'application/json; charset=utf-8' }) } },
     );
     try {
+      if (request.method === 'POST') request = await boundedRequest(request, path.endsWith('/evrak') ? MAX_DOC + 64 * 1024 : 64 * 1024);
       if (request.method === 'GET' && path.endsWith('/durum')) {
         const state = await this.storage.get('state') || emptyState();
         return reply({ ...state, documents: (state.documents || []).map(d => ({ ...d, hasFile: true })) });
@@ -148,7 +167,7 @@ export class IsleyisStore {
       }
       return reply({ error: 'Yöntem desteklenmiyor' }, 405);
     } catch (err) {
-      return reply({ error: err.message || 'Kayıt hatası' }, 400);
+      return reply({ error: err.message || 'Kayıt hatası' }, err.status === 413 ? 413 : 400);
     }
   }
 

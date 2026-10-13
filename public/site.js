@@ -124,7 +124,7 @@ const POPULER_MARKALAR = {
   D: [
     { ad: "Koroplast", logo: "/img/brands/koroplast.webp" },
     { ad: "Parex", logo: "/img/brands/parex.webp" },
-    { ad: "Ceymop", logo: "/img/brands/ceymop.webp" },
+    { ad: "Ceymop", logo: "/img/brands/ceymop.webp?v=2" },
     { ad: "Ozopak", logo: "/img/brands/ozopak.webp?v=2" },
     { ad: "Vileda", logo: "/img/brands/vileda.webp" },
     { ad: "Scotch-Brite", logo: "/img/brands/scotchbrite.webp" },

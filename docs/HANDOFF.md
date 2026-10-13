@@ -1904,7 +1904,7 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - 33 tip (adaptör, boş şişirme, bazı Still sensör ve ZMR yedekleri) Palex sitesinde görsel bulunamadığı için eklenmedi.
 - PDF beyaz/standart maliyetleri PRICE_STORE’a yazıldı (revizyon 14); kırtasiye Derya maliyetleri korundu. Excel içe aktarma bekliyor.
 - Yalıtılmış yayın: canlı worker tabanı (ManagementSessions/METRICS yok) + katalog, sitemap, Palex WebP ve yönetim catalog.json. Ferranoi paneli değişmedi. `--keep-vars`.
-- Aktif Cloudflare sürümü: c42e675c-a39c-4e80-9944-22031ef94210 (%100). ferrapro.com halka açık sayfalar kapanış metnine alındı; /yonetim, katalog JSON ve görseller yönetim için açık. tedarik.ferranoi.com açık. Önceki kapanış denemesi a0883b21; ondan önceki e6925970.
+- Aktif Cloudflare sürümü: a5fe1224-a23d-4e6b-bfc6-b59be7bfa975 (%100). Kapanış kaldırıldı; ferrapro.com yine katalog ve teklif sayfalarını gösteriyor. Önceki kapanış: c42e675c.
 - npm run check PASS (630). Canlı Havlu Aparatları’nda geri dönüşüm yok; Çöp Kovaları’nda üç Palex geri dönüşüm satırı var. Gerçek talep gönderilmedi.
 
 ## 8 Ekim 2026 — Üç kategori rehberi ve masaüstü yerleşimi (yayınlanmadı)
@@ -1950,3 +1950,14 @@ Klavye sürümü canlı: cf1ef5e, Cloudflare9be65c92-587f-46f5-8f5d-7c9d95992b43
 - Yayın öncesinde v4 migration / MANAGEMENT_SESSIONS / YONETIM_RATE_LIMITER doğrulanmalı; eski işleyiş çerezleri yeni sürümde geçersizleşir ve yeniden giriş gerekir. Önceki YONETIM_PASSWORD, uzak METRICS ve canlı panel dosyalarını uzlaştırma gereklilikleri devam eder. Gerçek Cloudflare giriş/çıkış ve kayıt okuma kontrolü yayın sonrası ayrıca yapılmalı.
 - Eşzamanlı Cursor dosyaları (.cursor/rules/ferrapro.mdc, public/app.js, public/panel/index.html) ve eski izlenmeyen ilerleme/selection dosyaları bu çalışmaya alınmadı.
 - Sonraki: Ceymop marka görselindeki krem fon ve kalan görsel taraması; mobil hız ölçümü ve Google görünürlük. İşleyiş dosya yükleme boyut sınırının gövde okunmadan uygulanması ayrıca değerlendirilmeli (mevcut 8 MB kontrolü formData sonrasında).
+
+## 13 Ekim 2026 — Logo, mobil görseller ve yükleme sınırı (YAYINLANMADI)
+
+- Ceymop logosunun fotoğraflı arka parçası piksel maskesiyle kaldırıldı. Yeşil yazı ve işaret korundu, zemin beyaz; yeniden çizim/üretken görsel kullanılmadı. Logo v2, site.js v142.
+- 65 marka görseli toplu önizlemede incelendi (output/brand-audit-2026-10-13.jpg). Ceymop tamamlandı; Asperox, Fairy, Finish, Polente ve Pril gibi bazı dosyalarda hafif gri dikdörtgenler, Selpak dosyasında köşe izleri hâlâ var. Bunlar temiz kaynak/maskeyle ayrı ele alınmalı; bütün görsellerin temizliği bitmiş değildir.
+- Ana sayfanın 16 hero/kategori/hizmet/sektör görseline 640 px WebP türevleri ve srcset/sizes eklendi. Tam boy kaynaklar korunur. Bu 16 kaynak toplam 2.388.990 bayt; küçük sürümleri 882.368 bayt (%63,1 azalma). Bu dosya toplamı karşılaştırmasıdır; sayfa yüklenme süresi veya Core Web Vitals sonucu değildir. Yüksek piksel yoğunluğunda tarayıcı büyük sürümü seçebilir.
+- Yerel tarayıcı 390 px: hero ve yüklenen kategori görselleri -640.webp seçiyor; genişlik/scroll 375/375. 1280 px ana sayfa: 1265/1265, yüklenmiş kırık görsel yok; hero tam boy seçiliyor. D kategorisinde Ceymop v2 yüklü, yatay taşma yok. Kanıt: output/home-mobile-2026-10-13.png, output/ceymop-desktop-2026-10-13.png.
+- İşleyiş POST gövdeleri JSON için 64 KiB, evrak için 8 MiB + 64 KiB multipart payıyla gerçek akış okunurken sınırlanır. Aşan akış iptal edilir, parser/depo erişiminden önce 413 döner. Tek dosya 8 MiB sınırı ayrıca korunur. Böylece yanlış veya eksik Content-Length ile sınırsız formData okuma engellenir.
+- npm run check PASS: mevcut işleyiş yükleme/kayıt işlemleri; yeni sonsuz akış iptali, üç endpoint için başlık ve gerçek bayt sınırları; bütün mevcut katalog/yönetim/güvenlik kontrolleri geçti. Gerçek müşteri kaydı, şifre veya bildirim kullanılmadı.
+- Canlı yayın YOK; PUBLIC_SITE_CLOSED=true değişmedi. Cursor panel/app değişiklikleri korunup commit dışında bırakıldı.
+- Kalanlar: diğer marka fonları/ürün görselleri, kontrollü mobil hız ölçümü, Search Console erişimi ve yayın sonrası indeksleme kontrolü; önceki güvenli Cloudflare ayarları ve panel sürüm uzlaştırması; onaylı yayın ve gerçek giriş/fiyat kalıcılığı/bildirim kontrolleri.

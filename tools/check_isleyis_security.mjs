@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import worker from '../src/worker.js';
 import {managementTestEnv} from './management-test-env.mjs';
+import {IsleyisStore} from '../src/isleyis-store.js';
 const env={...managementTestEnv(),YONETIM_PASSWORD:randomUUID(),SESSION_SECRET:randomUUID(),ASSETS:{fetch:async()=>new Response('private')}};
 env.ISLEYIS_PASSWORD=env.YONETIM_PASSWORD; // Isolation must hold even if passwords match.
 const send=(path,options={})=>worker.fetch(new Request('https://ferrapro.com/yonetim/'+path,options),env);
@@ -51,3 +52,14 @@ for(const key of ['ISLEYIS_PASSWORD','SESSION_SECRET','MANAGEMENT_SESSIONS','YON
   const saved=env[key];delete env[key];assert.equal((await login()).status,503);env[key]=saved;
 }
 console.log('PASS: business login throttling, bounded streamed input, isolated random sessions, expiry, rotation, logout revocation and fail-closed outages.');
+// Oversized streams must be rejected before multipart parsing or any storage access.
+const noStorage=new IsleyisStore({storage:new Proxy({}, {get(){throw Error('Storage must not be accessed');}})});
+for(const [path,limit] of [['evrak',8*1024*1024+64*1024],['ortaklar',64*1024],['hareketler',64*1024]]){
+  let cancelled=false;
+  const body=new ReadableStream({pull(c){c.enqueue(new Uint8Array(32768));},cancel(){cancelled=true;}});
+  const response=await noStorage.fetch(new Request('https://internal/yonetim/isleyis/api/'+path,{method:'POST',body,duplex:'half',headers:{'content-type':'multipart/form-data; boundary=test'}}));
+  assert.equal(response.status,413,path);assert.ok(cancelled,'Oversized source stream cancelled');
+  const declared=await noStorage.fetch(new Request('https://internal/yonetim/isleyis/api/'+path,{method:'POST',headers:{'content-length':String(limit+1)},body:'x'}));
+  assert.equal(declared.status,413);
+}
+console.log('PASS: streamed upload and JSON body limits reject before parsing or storage.');
