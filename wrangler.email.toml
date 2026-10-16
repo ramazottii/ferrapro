@@ -1,0 +1,5 @@
+name = "ferrapro-info-mail"
+main = "src/email_forward.js"
+compatibility_date = "2026-08-23"
+account_id = "9f0d39ce0db57f09bc1769c9ddf0c344"
+workers_dev = true

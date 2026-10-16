@@ -1,5 +1,5 @@
 const groups = [
-  { g: "", label: "FerraPro", href: "/", img: "/logo/ferrapro-hex.png", tone: "logo" },
+  { g: "", label: "FerraPro", href: "/", img: "/logo/ferrapro-icon.png?v=1", tone: "logo" },
   { g: "Hijyen", label: "Hijyen", img: "/img/ico-tuvalet.png" },
   { g: "Sağlık", label: "Sağlık", img: "/img/ico-klinik.png" },
   { g: "Temizlik", label: "Temizlik", img: "/img/ico-cop.png" },
@@ -134,7 +134,7 @@ fetch("/katalog.json")
     const homeF = document.getElementById("home-firs");
     const homeC = document.getElementById("home-cok");
     const homeY = document.getElementById("home-yeni");
-    if (homeF) data.urunler.filter((u) => u.kategori === "Hijyen").slice(0, 10).forEach((u) => homeF.append(card(u)));
+    if (homeF) data.urunler.filter((u) => u.kategori === "A").slice(0, 10).forEach((u) => homeF.append(card(u)));
     if (homeC) data.urunler.filter((u) => u.kategori === "Temizlik" || u.kategori === "Mutfak").slice(0, 10).forEach((u) => homeC.append(card(u)));
     if (homeY) data.urunler.slice(-10).forEach((u) => homeY.append(card(u)));
 
