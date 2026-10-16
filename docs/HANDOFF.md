@@ -1,5 +1,7 @@
 # Ortak takip — Cursor ve ChatGPT
 
+- 16 Ekim / ChatGPT CANLI EK DÜZELTME: `7068c0d2-8971-4322-9df3-cc517586cfd0`. p-221 Lifalif kırmızı meyveli 35 g barın dikey görseli, ETİ resmi Atıştırmalık sayfasındaki aynı ürünün yatay görseliyle değiştirildi. Kaynak: https://www.etietieti.com/tr-tr/markalarimiz/lifalif/atistirmalik . Yeni dosya `eti-lifalif-kirmizi-horizontal.webp`; 12'li katalog bilgisi korunuyor. Yayın paketi `output/lifalif-release`; eski fon/kova düzeltmeleri korunmalı. Canlı katalog yolu ve görsel baytları doğrulandı; npm run check geçti. Eski iki ortak paketteki katalog/görsel de eşitlendi. Güncel görsel koruma manifesti 216 kayıt içerir. Yalnız yeni görsel ve üç katalog referansı yayımlandı; Worker aynı kaldı.
+
 - GitHub: katalog işi `ba879ff` commit'iyle `codex/visual-refresh` dalına ve açık PR #1'e gönderildi. CI'nin eski ürün kimliklerini kontrol ederken `c5e6904` geçmişini bulamaması için checkout `fetch-depth: 0` yapıldı; bu yalnız test altyapısıdır, canlı yayına etkisi yoktur.
 
 - 16 Ekim 2026 / ChatGPT TAMAMLANDI VE CANLI: `6351bd23-2cca-4059-a508-b231b5d47466`. Kullanıcının onayıyla tüm 630 ürün / 612 benzersiz görsel tarandı; 34 fon/kenar/gölge temizliği, 178 Palex görselinin üretici koduyla doğrulanması ve Belinno beyaz fonlarının geri yüklenmesi yayımlandı. C3 artık 23 tip örneği; 80 L / 800 L konteynerler dışında ölçüler görünmez, üç küllük tipi sonda. Tüm kayıtlar, fiyat kimlikleri ve eski URL'ler korunur. Canlı 612/612 görsel kaynakla birebir eşleşti (HTTP 200, görsel içerik türü, dosya baytları); ferrapro.com ve www katalogları eşit. Masaüstü/mobil kontroller ve `npm run check` geçti. İlk yayın denemesi kota yüzünden çalışmadı; kullanıcı devam dedikten sonraki yayın başarılıdır.
@@ -10,7 +12,7 @@
 
 İkisinin de ilk okuyacağı ve iş bitince güncelleyeceği yer burasıdır. Çelişirse bu blok, alttaki eski tarih notlarından önce gelir.
 
-- Canlı Worker: `6351bd23-2cca-4059-a508-b231b5d47466` (site açık, kategori harf rozeti yok, `catalog-ui.js?v=105`, `site.js?v=143`). Önceki taban `dec3b456-4f24-49db-878b-f7ad52b724d5`. D alt kategori kareleri ve `-512.webp` dosyaları korunur. METRICS ve ManagementSessions bu yayına eklenmedi. Yerel `src/worker.js` (GPT oturum/güvenlik) canlıya alınmaz.
+- Canlı Worker: `7068c0d2-8971-4322-9df3-cc517586cfd0` (site açık, kategori harf rozeti yok, `catalog-ui.js?v=105`, `site.js?v=143`). Önceki taban `dec3b456-4f24-49db-878b-f7ad52b724d5`. D alt kategori kareleri ve `-512.webp` dosyaları korunur. METRICS ve ManagementSessions bu yayına eklenmedi. Yerel `src/worker.js` (GPT oturum/güvenlik) canlıya alınmaz.
 - Katalog 630 ürün, Palex 205. `katalog.json` içinde fiyat yok. PRICE_STORE revizyon 14 (Derya + Palex maliyet).
 - Ziyaretçiye A–F / C1 gibi harf kodu gösterilmez. İç kimlik ve `?g=C&a=C1` URL’leri durur.
 - Ferranoi paneli, giriş kodu ve parolalar dokunulmaz. Kayıtsız yerel dosyalar ezilmez.

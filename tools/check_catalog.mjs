@@ -349,7 +349,7 @@ assert.deepEqual(data.urunler.filter((row)=>row.alt==='E3').map((row)=>row.id),[
   'p-198','p-199','p-200','p-205','p-206','p-369','p-388','p-389',
   'p-189','p-190','p-191','p-197','p-201','p-202','p-203','p-204',
 ]);
-assert.equal(data.urunler.find((row)=>row.id==='p-221').gorsel,'/img/products/eti-lifalif-kirmizi.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-221').gorsel,'/img/products/eti-lifalif-kirmizi-horizontal.webp');
 assert.equal(data.urunler.filter((row)=>row.marka==='Züber').length,5);
 assert.equal(data.urunler.find((row)=>row.id==='p-452').ad,'Kakaolu ve Fındıklı Meyve Tatlısı');
 assert.equal(data.urunler.find((row)=>row.id==='p-453').ad,'Protein Bar Kakao Parçacıklı');
