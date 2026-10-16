@@ -149,7 +149,7 @@ const ALTLAR_IDS={
   E:['E1','E2','E3','E4'],
   F:['F1','F2','F3','F4','F5'],
 };
-assert.equal(data.urunler.length,630);
+assert.equal(data.urunler.length,627);
 assert.equal(data.kategoriler.map((k)=>k.id).join(","),"A,B,C,D,E,F");
 assert.equal(data.kategoriler[2].altlar.map((a)=>a.id).join(","),"C1,C2,C3,C4,C5,C6");
 assert.equal(data.kategoriler.find((k)=>k.id==='F').altlar.find((a)=>a.id==='F2').gorsel,'/img/products/daire-masaustu.webp?v=2');
@@ -161,9 +161,9 @@ assert.equal(data.urunler.filter((row)=>row.alt==='E1').length,17);
 assert.equal(data.urunler.filter((row)=>row.alt==='E2').length,21);
 assert.equal(data.urunler.filter((row)=>row.alt==='E3').length,25);
 assert.equal(data.urunler.filter((row)=>row.alt==='E4').length,20);
-assert.equal(data.urunler.filter((row)=>row.kategori==='F').length,162);
+assert.equal(data.urunler.filter((row)=>row.kategori==='F').length,159);
 assert.equal(data.urunler.filter((row)=>row.alt==='F1').length,33);
-assert.equal(data.urunler.filter((row)=>row.alt==='F2').length,44);
+assert.equal(data.urunler.filter((row)=>row.alt==='F2').length,41);
 assert.equal(data.urunler.filter((row)=>row.alt==='F3').length,28);
 assert.equal(data.urunler.filter((row)=>row.alt==='F4').length,23);
 assert.equal(data.urunler.filter((row)=>row.alt==='F5').length,34);
@@ -174,7 +174,7 @@ assert.equal(data.urunler.find((row)=>row.marka==='ASUS' && row.ad==='Kablosuz M
 assert.equal(data.urunler.find((row)=>row.marka==='Kodak' && row.ad==='USB-C Şarj Kablosu').olcu,'1M');
 assert.equal(data.urunler.find((row)=>row.marka==='Kensington' && row.renk==='Kırmızı').ad,'Jel Mouse Pad');
 assert.ok(data.urunler.filter((row)=>row.alt==='F5').every((row)=>row.gorselTuru==='urun'));
-assert.equal(data.urunler.filter((row)=>row.ad==='Zooo Plastik Kaplı Ataş').length,3);
+assert.equal(data.urunler.filter((row)=>row.ad==='Zooo Plastik Kaplı Ataş').length,0);
 assert.equal(data.urunler.filter((row)=>row.marka==='Panfix' && row.ad==='Şeffaf Bant').length,2);
 assert.equal(data.urunler.find((row)=>row.marka==='MAS' && row.ad==='Koli Bandı').alt,'F4');
 assert.equal(data.urunler.find((row)=>row.ad==='Koli Bant Makinesi').marka,'MAS');

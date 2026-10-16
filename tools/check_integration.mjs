@@ -7,7 +7,10 @@ const catalog=JSON.parse(fs.readFileSync('public/katalog.json','utf8')).urunler;
 const ids=new Set(catalog.map(p=>p.id));
 assert.equal(ids.size,catalog.length,'No duplicate product ids');
 const baseline=JSON.parse(execFileSync('git',['show','c5e6904:public/katalog.json'],{encoding:'utf8'})).urunler;
-for(const p of baseline)assert.ok(ids.has(p.id),'Existing product retained: '+p.id);
+// MAS Zoo variants explicitly removed at the user's request, 2026-10-16.
+const removedIds=new Set(['p-227','p-228','p-229']);
+for(const id of removedIds)assert.ok(!ids.has(id),'Removed MAS Zoo product: '+id);
+for(const p of baseline.filter(p=>!removedIds.has(p.id)))assert.ok(ids.has(p.id),'Existing product retained: '+p.id);
 for(const p of catalog){const image=p.gorsel?.split('?')[0];if(image?.startsWith('/'))assert.ok(fs.existsSync('public'+image),'Missing image: '+p.id);}
 const pages=JSON.parse(fs.readFileSync('public/catalog-pages.json','utf8'));
 assert.equal(Object.keys(pages).filter(k=>k.startsWith('u=')).length,catalog.filter(p=>p.aktif!==false).length);
@@ -30,4 +33,4 @@ assert.equal((await get('/yonetim/isleyis/api/durum')).status,401,'Business reco
 for(const path of ['/katalog.json','/site.js','/img/products/test.webp'])assert.equal((await get(path)).status,200,'Management assets remain available');
 assert.equal((await get('/',{},'tedarik.ferranoi.com')).status,302,'Ferranoi unchanged');
 env.PUBLIC_SITE_CLOSED='false';assert.equal((await get('/')).status,200,'Opening requires explicit configuration change');
-console.log('PASS: 630-product integration, original ids and images, category guides, deployed migration order, closure and private-route isolation.');
+console.log('PASS: 627-product integration, original ids and images, category guides, deployed migration order, closure and private-route isolation.');

@@ -18,7 +18,7 @@ assert.doesNotMatch(js, /placeholder\(/);
 assert.equal(catalog.kategoriler.map((k) => k.id).join(","), "A,B,C,D,E,F");
 assert.equal(catalog.kategoriler[1].altlar.map((a) => a.id).join(","), "B1,B2");
 assert.equal(catalog.urunler.length, publicCatalog.urunler.length);
-assert.equal(catalog.urunler.length, 630);
+assert.equal(catalog.urunler.length, 627);
 
 const byAlt = Object.fromEntries(catalog.kategoriler.flatMap((k) => k.altlar.map((a) => [a.id, 0])));
 for (const u of catalog.urunler) {
@@ -55,7 +55,7 @@ assert.equal(byAlt["E2"], 21);
 assert.equal(byAlt["E3"], 25);
 assert.equal(byAlt["E4"], 20);
 assert.equal(byAlt["F1"], 33);
-assert.equal(byAlt["F2"], 44);
+assert.equal(byAlt["F2"], 41);
 assert.equal(byAlt["F4"], 23);
 assert.equal(byAlt["F5"], 34);
 assert.equal(byAlt["F3"], 28);
