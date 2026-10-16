@@ -1,0 +1,1080 @@
+{
+  "date": "2026-10-16",
+  "records": [
+    {
+      "id": "p-005",
+      "image": "/img/products/belinno-ev-tipi-rulo-6-white.webp",
+      "sha256": "7e4d82e17fdc0cbdc9a4093c40d979bafe18057ec5037c7debd46ce91c187d44"
+    },
+    {
+      "id": "p-023",
+      "image": "/img/products/ozopak-el-yikama-clean.webp",
+      "sha256": "5719cb18f9fd543a76239ff9c65948f02cae1001a4384bc92eea88d9a2e85e62"
+    },
+    {
+      "id": "p-024",
+      "image": "/img/products/ozopak-el-yikama-clean.webp",
+      "sha256": "5719cb18f9fd543a76239ff9c65948f02cae1001a4384bc92eea88d9a2e85e62"
+    },
+    {
+      "id": "p-030",
+      "image": "/img/products/ozopak-makine-parlatici-clean.webp",
+      "sha256": "4780813f1290163648a0e53c108b09db7052cd70e3ecc38b6e77313f4cca0250"
+    },
+    {
+      "id": "p-039",
+      "image": "/img/products/ozopak-el-sabunu-5kg-clean.webp",
+      "sha256": "8d87487f78876a89197dcb724096613850424faa368d53d2c9b356b91ddac8f2"
+    },
+    {
+      "id": "p-050",
+      "image": "/img/products/finish-parlatici-clean.webp",
+      "sha256": "4a5854ac7e18dceeeea799403d06feadfb0258998f484a18995a13fbfe8e6511"
+    },
+    {
+      "id": "p-128",
+      "image": "/img/products/palex-z-havlu-clean.webp",
+      "sha256": "f5f7460b5d560058583b67ed697fe88640b3ec1e7f6b3735c91e65064124be5a"
+    },
+    {
+      "id": "p-130",
+      "image": "/img/products/palex-fotoselli-havlu-clean.webp",
+      "sha256": "63755ca215b28f1106e1ae8be103e5580cf4c157a52183b47cbfe9216e2788b3"
+    },
+    {
+      "id": "p-133",
+      "image": "/img/products/palex-ev-tipi-metal-clean.webp",
+      "sha256": "08a65334d1b3cb740463335b9aab61bc329ad997bd4202ebebe15ff15ce4ae52"
+    },
+    {
+      "id": "p-135",
+      "image": "/img/products/palex-mini-icten-tuvalet-clean.webp",
+      "sha256": "d9bc867674fd40822e9092f59ea07f407987b58ea34532ac29cea6416d6b9615"
+    },
+    {
+      "id": "p-150",
+      "image": "/img/products/palex-sallanir-metal-clean.webp",
+      "sha256": "f019c6f0725abb7f3d0df495400c67fd326fe2a0e1596ae9b2ccc05a14c5e195"
+    },
+    {
+      "id": "p-170",
+      "image": "/img/products/caykur-tomurcuk-clean.webp",
+      "sha256": "f7cd6aae4e712a256c860ebb1e2a70f16f80225ccdc8bb431786307a1f02346b"
+    },
+    {
+      "id": "p-176",
+      "image": "/img/products/irmak-stick-clean.webp",
+      "sha256": "39a39bad4a744bc01e2b3d03c0b8b27433b3d70c27e9bea95f55b8510c2f6fc0"
+    },
+    {
+      "id": "p-184",
+      "image": "/img/products/mehmetefendi-turk-100-clean.webp",
+      "sha256": "8010d0498f8d26343eecb1e2a657bd19ed8f1b38ca8a02ffd7ff5c103f99d015"
+    },
+    {
+      "id": "p-185",
+      "image": "/img/products/mehmetefendi-turk-500-clean.webp",
+      "sha256": "020a23bb694c19252ce73799ee308ce664e88c71aabf424c35ec91c4f44bfb79"
+    },
+    {
+      "id": "p-457",
+      "image": "/img/products/lipton-ice-tea-seftali-clean.webp",
+      "sha256": "0bc3ba8a5db87d9f99e9c24feb5b6c708d7599f697fada91b0a431d2469b302e"
+    },
+    {
+      "id": "p-228",
+      "image": "/img/products/mas-zooo-atas-no2-mavi-clean.webp",
+      "sha256": "88483e8c0190488c308c0778828571e7284ff83fbb037a5540c8dc2c3c5a5d98"
+    },
+    {
+      "id": "p-284",
+      "image": "/img/products/mas-zimba-no10-siyah-clean.webp",
+      "sha256": "08a914ec6904253b6247262c03079299747272bad63d3ed373772f586647b570"
+    },
+    {
+      "id": "p-285",
+      "image": "/img/products/mas-zimba-246-gri-clean.webp",
+      "sha256": "bf0322f0995a4f1fb7e63da4060f197a722c8b496e26b6effbf6be6735a7ab6b"
+    },
+    {
+      "id": "p-325",
+      "image": "/img/products/belinno-hareketli-havlu-white.webp",
+      "sha256": "935e145f63c9e26cb9e31514c02715d6b90ad5ed747988986b5a2a928e98fa21"
+    },
+    {
+      "id": "p-345",
+      "image": "/img/products/yumos-pro-tekstil-5lt-clean.webp",
+      "sha256": "d566ad7a9b6cdf0bcbf0ae92e836f38792ac16df2e53c46d27d2ba3c49b6ff83"
+    },
+    {
+      "id": "p-368",
+      "image": "/img/products/mehmetefendi-turk-250-clean.webp",
+      "sha256": "dcd2236bdeff18aa58f58fe62fe90c88b5143167feacdd8e5ff8e67403a18ca6"
+    },
+    {
+      "id": "p-382",
+      "image": "/img/products/tchibo-exclusive-250-clean.webp",
+      "sha256": "5824a38d9be71c2a4dbb342c5f4967e0c2e04b3db367722836c1db64454fb71d"
+    },
+    {
+      "id": "p-395",
+      "image": "/img/products/uhu-sivi-20-clean.webp",
+      "sha256": "4fc66e8d7b89a5bbc5ce922aaf4eb82696434c5aec2580404501ac28e5532cf5"
+    },
+    {
+      "id": "p-397",
+      "image": "/img/products/mas-atas-no3-clean.webp",
+      "sha256": "39126f1ca3e9a2c4c1c690c24bdbfde365e06111e19b0a64af9daab5f287f8af"
+    },
+    {
+      "id": "p-398",
+      "image": "/img/products/mas-paket-lastigi-50-clean.webp",
+      "sha256": "2562e31edbe67c59e65078c9ef7284930ccf887e69c15932e330693ffaefab06"
+    },
+    {
+      "id": "p-405",
+      "image": "/img/products/mas-koli-45x100-clean.webp",
+      "sha256": "d03dbd3d2c7389d0cd0d02ab839d3b8f02163b0a95499870a3a2f02dd7c07de0"
+    },
+    {
+      "id": "p-408",
+      "image": "/img/products/mas-koli-bant-makinesi-clean.webp",
+      "sha256": "a7fceed63d574d7c8e44dd7c13187d1189a0c1a357f658a84d0ed28d00434af6"
+    },
+    {
+      "id": "p-411",
+      "image": "/img/products/oyal-obag-37x45-clean.webp",
+      "sha256": "a3102decf4940825267bfcabf44b6dcd42b161a1765b29642c3e75efe4f7f0fd"
+    },
+    {
+      "id": "p-417",
+      "image": "/img/products/lecoo-kb101-siyah-clean.webp",
+      "sha256": "36c8689137383b5d16319d46e6b572d0c720bae51a631d9adf10f7188ad8af73"
+    },
+    {
+      "id": "p-420",
+      "image": "/img/products/lecoo-ms104-siyah-clean.webp",
+      "sha256": "2959966d9caac0a1259bf95f695d160b841edc9bd88f56d6f399b2d129561e09"
+    },
+    {
+      "id": "p-422",
+      "image": "/img/products/asus-wt200-siyah-clean.webp",
+      "sha256": "9d80af2dd994f329de563a340762154f0a6b23f5cf6bf99d22310eac0494db49"
+    },
+    {
+      "id": "p-432",
+      "image": "/img/products/islak-mop-aparat-ekstra-clean.webp",
+      "sha256": "570d8c07cf148c7f7cf26571e3450885f397a6240573172e8b2dfc8db32469aa"
+    },
+    {
+      "id": "p-433",
+      "image": "/img/products/islak-mop-aparat-clean.webp",
+      "sha256": "8514b8001be382da60b9aef570c6e541fc23dd53a8af946882d1082320c9c676"
+    },
+    {
+      "id": "p-435",
+      "image": "/img/products/palet-aparat-clean.webp",
+      "sha256": "546344501736f1dc10080d169c8b0f7c806336b5f5cb531add7b5d209302fe70"
+    },
+    {
+      "id": "p-471",
+      "image": "/img/products/ttec-powerbank-10000-clean.webp",
+      "sha256": "fc84c3baa53a36745a84976f8d0b2eb3bfe7636e344d0156458b97aa94cd269d"
+    },
+    {
+      "id": "p-472",
+      "image": "/img/products/ttec-powerbank-50000-clean.webp",
+      "sha256": "5c18812d3cc5b516e58d91e823f295c18f2d8dff1d38dc6f43e9449237aa5975"
+    },
+    {
+      "id": "p-483",
+      "image": "/img/products/palex-ankastre-kopuk-dispenseri-abs-kaplama-ak-1-verified.webp",
+      "sha256": "2d0971586bbb35f0261f9cef8517207568f0136e335932065839e6c765bb1e77"
+    },
+    {
+      "id": "p-484",
+      "image": "/img/products/palex-ankastre-kopuk-dispenseri-krom-3412-verified.webp",
+      "sha256": "17e412e0218593a6359c4f103f669a88c8498af674ddaa7eae6278f564b50343"
+    },
+    {
+      "id": "p-485",
+      "image": "/img/products/palex-ankastre-kopuk-sabun-kartusu-1000-cc-dolu-3412-01-verified.webp",
+      "sha256": "575c70dbacd269fb2048c6a6c418a5c26cc4106234d9e0ae98d24b9a2ef1ce2e"
+    },
+    {
+      "id": "p-486",
+      "image": "/img/products/palex-ankastre-sivi-sabun-dispenseri-krom-3414-verified.webp",
+      "sha256": "b87fd1305fc5c0cff2da6a4e549b5c7d6af1b4ed8d05d0b9db7a69e6d572a29b"
+    },
+    {
+      "id": "p-487",
+      "image": "/img/products/palex-ankastre-sivi-sabun-kartusu-1000-cc-dolu-3414-01-verified.webp",
+      "sha256": "c9eeb3cd0ad1846ea002d8649aa18fd9a4dc1dab6ea807eb19e957cc71fddf71"
+    },
+    {
+      "id": "p-488",
+      "image": "/img/products/palex-beyaz-fotoselli-el-kurutma-cihazi-2000-w-3808-16-verified.webp",
+      "sha256": "e0b87fc2057f69c50fc9bccb2440dd464cb9fc607900d1b7b32be4a1d7cffb02"
+    },
+    {
+      "id": "p-489",
+      "image": "/img/products/palex-bone-dispenseri-3434-verified.webp",
+      "sha256": "a34cb710f9eb123e659ee5b9a40bcc5692499c4bef7296f78c717b8dd622f3b6"
+    },
+    {
+      "id": "p-490",
+      "image": "/img/products/palex-c-katlama-tuvalet-kagit-dispenseri-3438-0-verified.webp",
+      "sha256": "0679a8b9cc064078e96713d4e24d885e23dd78924095acba6bf3696749f2b445"
+    },
+    {
+      "id": "p-491",
+      "image": "/img/products/palex-camcek-metal-25-cm-zmr027-verified.webp",
+      "sha256": "a88a74d1dcda7e7988eba320a4ac5031fdf9fe4e971e044bab267bf6e626816b"
+    },
+    {
+      "id": "p-492",
+      "image": "/img/products/palex-camcek-metal-35-cm-zmr028-verified.webp",
+      "sha256": "b2d2c0c50e5b4699db6c0021b207edb5c9ada82d08ae6135ffbe511c8ae8b444"
+    },
+    {
+      "id": "p-493",
+      "image": "/img/products/palex-camcek-metal-45-cm-zmr029-verified.webp",
+      "sha256": "5dd7adb9244e763674167a9f105d8c6796d3d77ddb331632811f5b7f1d19607a"
+    },
+    {
+      "id": "p-494",
+      "image": "/img/products/palex-desenli-pecetelik-3474-d-b-verified.webp",
+      "sha256": "1049d91316aea3ba6b716a96336333e9f8f96ae2a9dfd0025b856f3e86f9a827"
+    },
+    {
+      "id": "p-495",
+      "image": "/img/products/palex-dokme-kopuk-sabun-dispenseri-550-cc-3482-verified.webp",
+      "sha256": "2c73b57b13be9996a699da4e11112f0967f5d2eba662ad991d8a24c0f69a7588"
+    },
+    {
+      "id": "p-496",
+      "image": "/img/products/palex-dort-ayakli-bahce-tipi-cop-kovasi-boyali-3560-3-verified.webp",
+      "sha256": "59970738050416fcc33eb89ed0b0f8b5e94633db07ae7a63180b43e6f3b1ef77"
+    },
+    {
+      "id": "p-497",
+      "image": "/img/products/palex-el-yuz-kurutma-cihazi-celik-govde-2500-w-3808-1-yk-verified.webp",
+      "sha256": "ec90b822b2586077ce032df990e756ed988f9242893cefb98e0b86e12d41e1b1"
+    },
+    {
+      "id": "p-498",
+      "image": "/img/products/palex-el-yuz-kurutma-cihazi-celik-govde-beyaz-2500-w-3808-2-b-verified.webp",
+      "sha256": "39bae262865ed67d1257864d3f4e7c0c6e79f3770bf706cce72d82e4e6a61248"
+    },
+    {
+      "id": "p-499",
+      "image": "/img/products/palex-el-kurutma-cihazi-abs-beyaz-2000-w-ep-0-verified.webp",
+      "sha256": "9be5553c1765d347f9f45d2dd5e832c1519f0787b1c45a54325515aa3e3b7d34"
+    },
+    {
+      "id": "p-500",
+      "image": "/img/products/palex-el-kurutma-cihazi-abs-krom-kaplama-2000-w-ep-k-verified.webp",
+      "sha256": "de73a2ffe001ae018a78b9e683748ea75217605f29369f7bcb75d7a02742be29"
+    },
+    {
+      "id": "p-501",
+      "image": "/img/products/palex-el-kurutma-cihazi-abs-siyah-2000-w-ep-s-verified.webp",
+      "sha256": "a21cb28e047824043e7e6381a824301f89a729c0e9a00878d446e731e9335b8c"
+    },
+    {
+      "id": "p-502",
+      "image": "/img/products/palex-el-temizleme-kopugu-30-kg-zmr143-verified.webp",
+      "sha256": "944e510c89d246b571308bfe9b1b2f7be7899839bdd6100b75377a099d5ba59a"
+    },
+    {
+      "id": "p-503",
+      "image": "/img/products/palex-el-temizleme-kopugu-5-kg-zmr178-verified.webp",
+      "sha256": "1b50193cf4d35ab22e41f89fdc711bfaee49a34e2a370c7fc040b45dcf28d00c"
+    },
+    {
+      "id": "p-504",
+      "image": "/img/products/palex-el-temizleme-kopugu-500-cc-tezgah-ustu-3520-verified.webp",
+      "sha256": "2219efed56109be36423a22b52c13dec8f9441279912f18fae0396acd194899c"
+    },
+    {
+      "id": "p-505",
+      "image": "/img/products/palex-endustriyel-ayakli-havlu-dispenseri-3502-verified.webp",
+      "sha256": "bb36a86781db625983678eb1282eddcbacec0f4c78441be6a6143c3b479e3c37"
+    },
+    {
+      "id": "p-506",
+      "image": "/img/products/palex-ev-tipi-tuvalet-kagidi-dispenseri-kutulu-3472-verified.webp",
+      "sha256": "c91d75b67f81192fdda30e1d48636e0572d0bfef7421c3a2183334bedaf7515a"
+    },
+    {
+      "id": "p-507",
+      "image": "/img/products/palex-galos-dispenseri-3436-verified.webp",
+      "sha256": "dbbf092d0da216ca8e58c3b03a324bac935d994a287a919620aaa0a4f02d75ec"
+    },
+    {
+      "id": "p-508",
+      "image": "/img/products/palex-geri-donusum-3-lu-doner-kapakli-3561-3-verified.webp",
+      "sha256": "9109dd2f3ee7f5d56466f4b91aac7d0422c72d98bbeb39562916226536f793b8"
+    },
+    {
+      "id": "p-509",
+      "image": "/img/products/palex-geri-donusum-3-lu-yuvarlak-boyali-3561-0-verified.webp",
+      "sha256": "d369426267ebe247d3d680e0173fb16365b8b19f99775aad0d97c8c50b1567be"
+    },
+    {
+      "id": "p-510",
+      "image": "/img/products/palex-geri-donusum-3-lu-cemberli-3561-5-verified.webp",
+      "sha256": "d6ca473e2786aa2bf612a83663d9c9117f4dca220dbf7e50bc898982faa80992"
+    },
+    {
+      "id": "p-511",
+      "image": "/img/products/palex-hijyenik-film-90-kullanimlik-hr-1-verified.webp",
+      "sha256": "b93f514633e54e217656e066e9eb63bb1540115d8ddc5da5c3c3096c43677c10"
+    },
+    {
+      "id": "p-512",
+      "image": "/img/products/palex-hijyenik-klozet-kapak-ortusu-dipsenseri-h-0-verified.webp",
+      "sha256": "ae004009d14ddbcf7b77b1d54348a93069883cf0be686c79a00071bf9e92aa30"
+    },
+    {
+      "id": "p-513",
+      "image": "/img/products/palex-karton-bardak-dispenseri-miknatisli-s-k-verified.webp",
+      "sha256": "3b1e27a9fd59f9ad4b2a2c230e68878085e204dfd0f3cdf1fe16e4b1829ffe0d"
+    },
+    {
+      "id": "p-514",
+      "image": "/img/products/palex-karton-bardak-dispenseri-vidali-s-k-v-verified.webp",
+      "sha256": "3b1e27a9fd59f9ad4b2a2c230e68878085e204dfd0f3cdf1fe16e4b1829ffe0d"
+    },
+    {
+      "id": "p-515",
+      "image": "/img/products/palex-kartuslu-kopuk-sabun-dispenserleri-500-cc-3480-verified.webp",
+      "sha256": "0cfff4883d717340a413c0ec68a5a45aa84a7873d5bb4ff6a3baa896c75d9d72"
+    },
+    {
+      "id": "p-516",
+      "image": "/img/products/palex-kartuslu-kopuk-sabun-dispenseri-1000-cc-3590-0-verified.webp",
+      "sha256": "4d560e658a10ce06839e9e31162271991289e13c85481de82c0a6e817e972232"
+    },
+    {
+      "id": "p-517",
+      "image": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-renkli-dk-b-verified.webp",
+      "sha256": "44cfe4c7e87a811cec3c0b5e162f2dbeec4b3a18ac6193981b5f31db4081dd18"
+    },
+    {
+      "id": "p-518",
+      "image": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-beyaz-dk-1-verified.webp",
+      "sha256": "71e31413b9240346424c3006dbc587c8f8e318c36b6087656911b4ee87a19509"
+    },
+    {
+      "id": "p-519",
+      "image": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-krom-kapl-dk-k-verified.webp",
+      "sha256": "881c99f67b13c7a0fe4a38bbe878b78344f137b1292838449c149c7655de865b"
+    },
+    {
+      "id": "p-520",
+      "image": "/img/products/palex-kartuslu-sensorlu-kopuk-sabun-dispenseri-renkli-kk-b-verified.webp",
+      "sha256": "44cfe4c7e87a811cec3c0b5e162f2dbeec4b3a18ac6193981b5f31db4081dd18"
+    },
+    {
+      "id": "p-521",
+      "image": "/img/products/palex-kartuslu-sensorlu-kopuk-sabun-dispenseri-krom-kapl-kk-k-verified.webp",
+      "sha256": "881c99f67b13c7a0fe4a38bbe878b78344f137b1292838449c149c7655de865b"
+    },
+    {
+      "id": "p-522",
+      "image": "/img/products/palex-kartuslu-sensorlu-sivi-sabun-dispenseri-renkli-sk-b-verified.webp",
+      "sha256": "44cfe4c7e87a811cec3c0b5e162f2dbeec4b3a18ac6193981b5f31db4081dd18"
+    },
+    {
+      "id": "p-523",
+      "image": "/img/products/palex-kartuslu-sensorlu-sivi-sabun-dispenseri-krom-kapla-sk-k-verified.webp",
+      "sha256": "881c99f67b13c7a0fe4a38bbe878b78344f137b1292838449c149c7655de865b"
+    },
+    {
+      "id": "p-524",
+      "image": "/img/products/palex-kolon-kulluk-no-1-19-60-cm-3700-761-verified.webp",
+      "sha256": "8e81759aee9061a1127f709a9d5c8a505253883a20fecd75f565d6888e99fcb6"
+    },
+    {
+      "id": "p-525",
+      "image": "/img/products/palex-kolon-kulluk-no-2-21-60-cm-3700-762-verified.webp",
+      "sha256": "8eb53a8eddd592d06956e0fcf3b5f4613154e7d23ffef2d3fdc0cae85a8c4932"
+    },
+    {
+      "id": "p-526",
+      "image": "/img/products/palex-kolon-kulluk-no-3-25-60-cm-3700-763-verified.webp",
+      "sha256": "a8220c78ae0c981598ff8a1297f2cae2e454c6842fe54d121c5e98fac2390170"
+    },
+    {
+      "id": "p-527",
+      "image": "/img/products/palex-kolon-kulluk-no-4-28-60-cm-3700-764-verified.webp",
+      "sha256": "a43035db794e24bf18789eecd34298f432b865c45a9cdbf43662fc2feca8df2f"
+    },
+    {
+      "id": "p-528",
+      "image": "/img/products/palex-krom-askili-silindir-sivi-sabunluk-300-cc-3804-4-verified.webp",
+      "sha256": "6575d0d4ae6d03c699f1893e9baae92253d63f3cd577e98d4b5c50354b3bb7cc"
+    },
+    {
+      "id": "p-529",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-11-lt-3834-311-verified.webp",
+      "sha256": "42b80764bba0da0b4a83cca5fef95a9d503122c03efe3370b52e3f81acdcc8ad"
+    },
+    {
+      "id": "p-530",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-16-lt-3834-316-verified.webp",
+      "sha256": "42b80764bba0da0b4a83cca5fef95a9d503122c03efe3370b52e3f81acdcc8ad"
+    },
+    {
+      "id": "p-531",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-25-lt-3834-325-verified.webp",
+      "sha256": "236742a9d15aecc66206bb74203a470d5d0ca1fbf33dcd91dcb77eb093e87a45"
+    },
+    {
+      "id": "p-532",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-36-lt-3834-336-verified.webp",
+      "sha256": "9d6fe7ecefd224178aa979197f214544f756ed536b95a31dcfa0358278e6ee47"
+    },
+    {
+      "id": "p-533",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-45-lt-3834-345-verified.webp",
+      "sha256": "652e51a04286c311bbcc7d892d425fca7ff33ebb93114c2d37d190b0ef4ee1b8"
+    },
+    {
+      "id": "p-534",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-54-lt-3834-354-verified.webp",
+      "sha256": "652e51a04286c311bbcc7d892d425fca7ff33ebb93114c2d37d190b0ef4ee1b8"
+    },
+    {
+      "id": "p-535",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-7-lt-3834-307-verified.webp",
+      "sha256": "7192125dc3b6af6c868daed8e08555e2323f975fd8411023a13c96cf541e3d24"
+    },
+    {
+      "id": "p-536",
+      "image": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-80-lt-3834-380-verified.webp",
+      "sha256": "652e51a04286c311bbcc7d892d425fca7ff33ebb93114c2d37d190b0ef4ee1b8"
+    },
+    {
+      "id": "p-537",
+      "image": "/img/products/palex-krom-buyuk-jumbo-wc-kagit-dispenseri-3802-b-verified.webp",
+      "sha256": "00d699cbf3bd84f3d7ada17d185530ecae18f63d23829eaf0c0b31bdd5b762c8"
+    },
+    {
+      "id": "p-538",
+      "image": "/img/products/palex-krom-ev-tipi-rulo-havlu-kagit-asacagi-3802-5-verified.webp",
+      "sha256": "28d0aebcdea5e54093fdcadb6ed7ee48c894b51e20f6f855ad52f2bc99df7d60"
+    },
+    {
+      "id": "p-539",
+      "image": "/img/products/palex-krom-ev-tipi-rulo-havlu-kagit-asacagi-kapakli-3802-7-verified.webp",
+      "sha256": "0cc6b1aa001df78eadb7ef267795557e6eec0a26476afda6294ec22a430f8621"
+    },
+    {
+      "id": "p-540",
+      "image": "/img/products/palex-krom-ev-tipi-wc-kagit-asacagi-3802-4-verified.webp",
+      "sha256": "11a773d7af63e46bda1c32751a53a1869a8e31b4d2c7df15162239515cff287b"
+    },
+    {
+      "id": "p-541",
+      "image": "/img/products/palex-krom-ev-tipi-wc-kagit-asacagi-kapakli-3802-6-verified.webp",
+      "sha256": "2342923f1c49baf4505a9e5e4822a79c4a0ddb5241ebb1ed27a2daeff880ff54"
+    },
+    {
+      "id": "p-542",
+      "image": "/img/products/palex-krom-fotoselli-el-kurutma-cihazi-2000-w-3808-15-verified.webp",
+      "sha256": "9bd254b7f40e795caed549f5bcee2287a0edaeeb1926f45d998b9b202e395550"
+    },
+    {
+      "id": "p-543",
+      "image": "/img/products/palex-krom-jumbo-wc-kagit-dispenseri-3802-3-verified.webp",
+      "sha256": "a65087ab2d87b1c3d4b6209ed852c877f866fa476c1b8a1d77fe507acfafdc83"
+    },
+    {
+      "id": "p-544",
+      "image": "/img/products/palex-krom-klozet-kapak-ortu-dispenseri-3802-2-verified.webp",
+      "sha256": "c0fa35207da9902595467b5aee32951c222716a87eed6ffb741b722100f5d11f"
+    },
+    {
+      "id": "p-546",
+      "image": "/img/products/palex-krom-kombine-set-kare-400-kagit-kapasiteli-3800-0-verified.webp",
+      "sha256": "0e75a603e7d54cf96975e9f0ff41b498542f8b274efc1204b4b6f8a04e12c66e"
+    },
+    {
+      "id": "p-547",
+      "image": "/img/products/palex-krom-kombine-set-yuvarlak-400-kagit-kapasiteli-3800-1-verified.webp",
+      "sha256": "34c16bb2c57fff9488c7f2db1395ce81fe6a613b920dad55d06f9d8c58622564"
+    },
+    {
+      "id": "p-548",
+      "image": "/img/products/palex-krom-kopuk-sabun-dispenseri-1000-cc-3806-1-verified.webp",
+      "sha256": "9529ed4a9274d3d7de0163f6c9254b580403c2db80fdd47a4e53eba7b9e90bcf"
+    },
+    {
+      "id": "p-549",
+      "image": "/img/products/palex-krom-kure-sivi-sabunluk-275-cc-3804-2-verified.webp",
+      "sha256": "0e399d084444691c9411a0a715917f6f708ea2c7c5630c19b9eea20088ef501e"
+    },
+    {
+      "id": "p-550",
+      "image": "/img/products/palex-krom-mikro-askili-klozet-fircasi-3700-625-verified.webp",
+      "sha256": "eecdc07fe6f6e0438ebcb04a844bb0930762c0f7d9915ce03b0d9865542f2556"
+    },
+    {
+      "id": "p-551",
+      "image": "/img/products/palex-krom-mikro-delikli-klozet-fircasi-3700-700-verified.webp",
+      "sha256": "b1c2e15b98526a8ad02c0a02b553271b2b70c56b33e484f5c4dc78d985f3ea7a"
+    },
+    {
+      "id": "p-552",
+      "image": "/img/products/palex-krom-mikro-klozet-fircasi-3700-621-verified.webp",
+      "sha256": "a4475d70379ab0ac5fe4df2fdaa710db439dcba2e40271676f5d61d7e3d8ff99"
+    },
+    {
+      "id": "p-553",
+      "image": "/img/products/palex-krom-mini-pratik-tuvalet-kagit-dispenseri-3802-9-verified.webp",
+      "sha256": "f96d49cecf5e4a62eb658edaf2aa3d9be994af5f4bea46f23bebeceb17f7c7c4"
+    },
+    {
+      "id": "p-554",
+      "image": "/img/products/palex-krom-neptun-cop-kovasi-34-lt-3821-0-verified.webp",
+      "sha256": "69b91018e3bafd6454cb0ff47e54daa9618a57766ae8264a19cdb8f000005152"
+    },
+    {
+      "id": "p-555",
+      "image": "/img/products/palex-krom-neptun-cop-kovasi-57-lt-3821-1-verified.webp",
+      "sha256": "5977721ad7952425070e6356f0f1e4282de4637b6575e6df4188faa3c2bbe829"
+    },
+    {
+      "id": "p-556",
+      "image": "/img/products/palex-krom-otomatik-havlu-dispenseri-21-cm-3816-0-verified.webp",
+      "sha256": "19995c8ed0dba84593dcbaa27af9fdffedb6b48acbee8bb60483a923132f14c6"
+    },
+    {
+      "id": "p-557",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-12-lt-3700-312-verified.webp",
+      "sha256": "07674c352cc40b5c77c4984173b381226ecf12a5c801edfd67e041ab95852127"
+    },
+    {
+      "id": "p-558",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-16-lt-3700-316-verified.webp",
+      "sha256": "e0756bab66e62b33e7e331c74612278761edb97be49074ce8b55ac6db2916446"
+    },
+    {
+      "id": "p-559",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-3-lt-3700-303-verified.webp",
+      "sha256": "b1f9b79752d3bb6527ee8dc223b498130fbd78c5e5aec47d682a06df4cf9c484"
+    },
+    {
+      "id": "p-560",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-30-lt-3700-330-verified.webp",
+      "sha256": "d2e9bd366af223315afd36ea978113b3e2fcc3d9a35016d478d83a82a73a331c"
+    },
+    {
+      "id": "p-561",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-40-lt-3700-340-verified.webp",
+      "sha256": "535bd8745d1d1fc7d71b5badfc33656f0388ce7510ae9aaaa5047d5fbb83cfdb"
+    },
+    {
+      "id": "p-562",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-5-lt-3700-305-verified.webp",
+      "sha256": "3e090ff127fc5d52d208aebc1369e5af448b7e82b5129cae94d1b6be30d7a03a"
+    },
+    {
+      "id": "p-563",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-50-lt-3700-350-verified.webp",
+      "sha256": "ac1e701fe7fbbf0baa4d82468e6ef5883032528fc2eabec32e22587737bbfb2c"
+    },
+    {
+      "id": "p-564",
+      "image": "/img/products/palex-krom-pedalli-cop-kovasi-8-lt-3700-308-verified.webp",
+      "sha256": "7050759eb5a9d6d508a0818d22c59bf924f820003866e476eb58500cebaaaabe"
+    },
+    {
+      "id": "p-565",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-16-lt-3822-16-verified.webp",
+      "sha256": "d0770e1ff5942908a8aa2f1b1d5cb58d2db82d49cb22336a7977d5d785556181"
+    },
+    {
+      "id": "p-566",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-20-lt-3822-20-verified.webp",
+      "sha256": "c6e67c0ce9932068d5a6029c678aa620571db1447bba2dea07d58238c0bb8391"
+    },
+    {
+      "id": "p-567",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-27-lt-3822-27-verified.webp",
+      "sha256": "158d3de9a6698b87fbff7b81683beaff21747c96f08b1149442fab3dd8b0be35"
+    },
+    {
+      "id": "p-568",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-32-lt-3822-32-verified.webp",
+      "sha256": "a9f290d0c9dc64e30cb778eb882af8202a3a845748a54111903a532f68fe57a0"
+    },
+    {
+      "id": "p-569",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-45-lt-3822-45-verified.webp",
+      "sha256": "99d00d6671998e62d7000aae88e9a5e8a3373a964994ee4be3ab687d59b0d2b8"
+    },
+    {
+      "id": "p-570",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-5-lt-3822-5-verified.webp",
+      "sha256": "cf91d2053050a697e23ecb665b6f0cb5bb45312e0215e446ac26e7dc14a87ca2"
+    },
+    {
+      "id": "p-571",
+      "image": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-8-lt-3822-8-verified.webp",
+      "sha256": "0f0496c15e9a4be16896b5b222329f3bf8fd54703f075bc3344aea09d9168bca"
+    },
+    {
+      "id": "p-572",
+      "image": "/img/products/palex-krom-sivi-sabun-dispenseri-1000-cc-3804-1-verified.webp",
+      "sha256": "8dd068f0fe0dd7311e4bde24054a40f801e32a0cc382164b94ccb6c0b6a7af46"
+    },
+    {
+      "id": "p-573",
+      "image": "/img/products/palex-krom-sivi-sabun-dispenseri-500-cc-3804-0-verified.webp",
+      "sha256": "fdbabc1f6cb23bca439dc8c425a05d6bd865883da31f10e4f0b3b2b4e5b2554f"
+    },
+    {
+      "id": "p-574",
+      "image": "/img/products/palex-krom-silindir-sivi-sabunluk-300-cc-3804-3-verified.webp",
+      "sha256": "04085c67f94945cea18dddda063050b93e8e1044f31fce8fc0494b128bf19f1e"
+    },
+    {
+      "id": "p-575",
+      "image": "/img/products/palex-krom-u-bahce-tipi-cop-kovasi-3560-1-verified.webp",
+      "sha256": "bd16e6ad4bd4729d7fe40bce6f23ac42c5918c3bd7d2bb83346f207a495c7030"
+    },
+    {
+      "id": "p-576",
+      "image": "/img/products/palex-krom-yanmaz-cop-kovasi-13-lt-3824-13-verified.webp",
+      "sha256": "49b37997b9d8eee90b40d46ab0ec7037f170d22eef9fca4211bd5893df0221c3"
+    },
+    {
+      "id": "p-577",
+      "image": "/img/products/palex-krom-yanmaz-cop-kovasi-18-lt-3824-18-verified.webp",
+      "sha256": "3197ccd2fc18129b79b7dd0b59f63dec83f1cadfaa32dc578d3e8e296f3f1637"
+    },
+    {
+      "id": "p-578",
+      "image": "/img/products/palex-krom-yanmaz-cop-kovasi-8-lt-3824-8-verified.webp",
+      "sha256": "bab2a1201f83e07e819d675d5c63931a0ca349b0a7107b42416c5476293b6fd0"
+    },
+    {
+      "id": "p-579",
+      "image": "/img/products/palex-krom-z-katlama-havlu-dispenseri-200-lu-3802-1-verified.webp",
+      "sha256": "7cfa982abfff86d280c9b48df692a997b3fefdfb7340924ad82775421cd8d991"
+    },
+    {
+      "id": "p-580",
+      "image": "/img/products/palex-krom-z-katlama-havlu-dispenseri-400-lu-3802-0-verified.webp",
+      "sha256": "82a9f9c21b2fb4619984ddba16da2e5e853619c6b236c17ba68322e9c74d1db4"
+    },
+    {
+      "id": "p-581",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-11-lt-3800-311-verified.webp",
+      "sha256": "7b38e7ac988b20bfd8b29cb970cac8904e8f1aebfa56d397a1b7ee845fba763a"
+    },
+    {
+      "id": "p-582",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-16-lt-3800-316-verified.webp",
+      "sha256": "58f1240e9b7a03e63c76d1e54fa0451fc95a94b5ab3474fb697c03efae31021a"
+    },
+    {
+      "id": "p-583",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-36-lt-3800-336-verified.webp",
+      "sha256": "ca9cdcb737d79c8bd4aeca575fad841ab0172e5f20cccf39b97e9c4b4bc7378a"
+    },
+    {
+      "id": "p-584",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-45-lt-3800-345-verified.webp",
+      "sha256": "06b47be444d189824b941a4b00e7fbe6cff26f47edc85d7181cfa004708c3ab1"
+    },
+    {
+      "id": "p-585",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-54-lt-3800-354-verified.webp",
+      "sha256": "78952c6a90a0b7768fd274a64d87173816b0b58f0eeed3445a73cc8ab13420d8"
+    },
+    {
+      "id": "p-586",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-6-lt-3800-306-verified.webp",
+      "sha256": "151b8123413be2c8a57c577b5a671106e5a13bc1ef9e7ded3f6a821906769d38"
+    },
+    {
+      "id": "p-587",
+      "image": "/img/products/palex-krom-cati-kapakli-cop-kovasi-80-lt-3800-380-verified.webp",
+      "sha256": "889b1310046c06bda94400fc22c065fd371ac4dc2ea400bcee9d342ab2771698"
+    },
+    {
+      "id": "p-588",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-12-lt-3820-12-verified.webp",
+      "sha256": "64001a9d05fdda1f39641c6beee9729041bef430778e296c52d4314b43153e97"
+    },
+    {
+      "id": "p-589",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-16-lt-3820-16-verified.webp",
+      "sha256": "69ae6700b630a9d2a9f8899ef1d7d1d188adefb5ebb114c24ab0b4c9cd714b5b"
+    },
+    {
+      "id": "p-590",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-20-lt-3820-20-verified.webp",
+      "sha256": "636bdde023789c7fc7f2a888794c20c7148cb2a5c2a406f87d3f0f08762551e6"
+    },
+    {
+      "id": "p-591",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-27-lt-3820-27-verified.webp",
+      "sha256": "eebb2195da32ae3d802629a05197f82265a0a5be7913f7eb3b090bf8e2e68b99"
+    },
+    {
+      "id": "p-592",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-32-lt-3820-32-verified.webp",
+      "sha256": "baafe29909864511792d1a7bbc73937eff90922622d3fd13ff1434a01df9fb75"
+    },
+    {
+      "id": "p-593",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-45-lt-3820-45-verified.webp",
+      "sha256": "62bf035320a2d76296eb9e4a44e03abe7e4892957b7ca4943afed8aac5461964"
+    },
+    {
+      "id": "p-594",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-5-lt-3820-5-verified.webp",
+      "sha256": "6d9cdafd373e055c17626deb538b8e82fda2b4e47e2ecc239aa91a8a7a2577cc"
+    },
+    {
+      "id": "p-595",
+      "image": "/img/products/palex-krom-cemberli-cop-kovasi-8-lt-3820-8-verified.webp",
+      "sha256": "aeda015410b015f500a979f95f93310c81844103c8111932030956dfba3c050e"
+    },
+    {
+      "id": "p-596",
+      "image": "/img/products/palex-krom-cift-ayakli-bahce-tipi-cop-kovasi-3560-6-verified.webp",
+      "sha256": "7d40cd63f8b3066b60fefe9099ac7919a28957b13856a25d94a213f9350973b8"
+    },
+    {
+      "id": "p-597",
+      "image": "/img/products/palex-kopuk-sabun-kartusu-3500-verified.webp",
+      "sha256": "2a60620a7c095e107f43920459f454062fe7c88074deadd2402aed7e86d521f0"
+    },
+    {
+      "id": "p-598",
+      "image": "/img/products/palex-kopuk-sabun-kartusu-500-cc-dolu-3496-verified.webp",
+      "sha256": "19c16c6b181788c332c5b79061889d2edc9e82035f09de8ea79127b52778b5fb"
+    },
+    {
+      "id": "p-599",
+      "image": "/img/products/palex-lobi-kulluk-buyuk-70-cm-3568-1-verified.webp",
+      "sha256": "94e2930a375248467d716a3450c24747b760c6bfe71a30e9e00f199d6a55515a"
+    },
+    {
+      "id": "p-600",
+      "image": "/img/products/palex-masa-ustu-pecete-dispenseri-hafif-3474-h-0-verified.webp",
+      "sha256": "54fbd1c81b5358dc0c86017e270b0b207ac6bb18673d086ceae749991b22ad14"
+    },
+    {
+      "id": "p-601",
+      "image": "/img/products/palex-metal-strec-ve-aluminyum-folyo-disp-35-cm-3830-35-verified.webp",
+      "sha256": "ead14879c2b81af1ba66b3da4295065a0f87f22bc93b8ffde561e3c01655ab87"
+    },
+    {
+      "id": "p-602",
+      "image": "/img/products/palex-metal-strec-ve-aluminyum-folyo-disp-45-cm-3830-45-verified.webp",
+      "sha256": "58b64c6ec40ddf3c305dbaf8048afed82c21d546b37434f09576caae3ce9ce37"
+    },
+    {
+      "id": "p-603",
+      "image": "/img/products/palex-muayene-eldiveni-dispenseri-beyaz-md-01-verified.webp",
+      "sha256": "05e59bba901de84fdf5644e8ff24329f04b868c4d1ad2ad36b94d416a5ea5120"
+    },
+    {
+      "id": "p-604",
+      "image": "/img/products/palex-muayene-masa-ortusu-dispenseri-3486-verified.webp",
+      "sha256": "ed102222189085329763afca8863f9253177d2ae137642bf820f31b96240227f"
+    },
+    {
+      "id": "p-605",
+      "image": "/img/products/palex-mikro-strec-aparati-35-cm-1500-mt-buyuk-3514-3-verified.webp",
+      "sha256": "19051b8ba9c7b19059e9da4c08b4c7cc2ba19d37397bde86d9121b8c6f9fb1a6"
+    },
+    {
+      "id": "p-606",
+      "image": "/img/products/palex-mikro-strec-aparati-35-cm-1500-mt-orta-3514-2-verified.webp",
+      "sha256": "7e1f89df16df3119f9ee71f3e879d05fabaa560f9653c606fa49fd0ffbe2383f"
+    },
+    {
+      "id": "p-607",
+      "image": "/img/products/palex-mikro-strec-aparati-35-cm-300-mt-standart-3514-1-verified.webp",
+      "sha256": "19051b8ba9c7b19059e9da4c08b4c7cc2ba19d37397bde86d9121b8c6f9fb1a6"
+    },
+    {
+      "id": "p-608",
+      "image": "/img/products/palex-mikro-strec-aparati-45-cm-1500-mt-buyuk-4512-3-verified.webp",
+      "sha256": "19051b8ba9c7b19059e9da4c08b4c7cc2ba19d37397bde86d9121b8c6f9fb1a6"
+    },
+    {
+      "id": "p-609",
+      "image": "/img/products/palex-mikro-strec-aparati-45-cm-1500-mt-orta-4512-2-verified.webp",
+      "sha256": "7e1f89df16df3119f9ee71f3e879d05fabaa560f9653c606fa49fd0ffbe2383f"
+    },
+    {
+      "id": "p-610",
+      "image": "/img/products/palex-mikro-strec-aparati-45-cm-300-mt-standart-4512-1-verified.webp",
+      "sha256": "19051b8ba9c7b19059e9da4c08b4c7cc2ba19d37397bde86d9121b8c6f9fb1a6"
+    },
+    {
+      "id": "p-611",
+      "image": "/img/products/palex-mini-sivi-sabun-dispenseri-250-cc-3562-0-verified.webp",
+      "sha256": "87d465c46dd2223ec5057aa690f94de33fa0f26497cbd8e69f299aef5cf68e71"
+    },
+    {
+      "id": "p-612",
+      "image": "/img/products/palex-mini-sivi-sabun-dispenseri-250-cc-2-3564-0-verified.webp",
+      "sha256": "a8e8c5b7e19c89317f5eaf74c6d2da46d6719bef8bceb9e9e4b7d48f616f7d8c"
+    },
+    {
+      "id": "p-613",
+      "image": "/img/products/palex-mini-sivi-sabun-dispenseri-uclu-250-cc-3-3566-0-verified.webp",
+      "sha256": "4581b894427979eb95aa52c60b4190a38b97f48f563e7f56157def51820eaa06"
+    },
+    {
+      "id": "p-614",
+      "image": "/img/products/palex-new-dezenfektan-dispenseri-nd-1-verified.webp",
+      "sha256": "a1446d22962dda26971a6bfe0a7ffabdbb85e7c62aad36c2d3a0216626e94d01"
+    },
+    {
+      "id": "p-615",
+      "image": "/img/products/palex-new-nano-hijyen-dispenseri-3548-0-verified.webp",
+      "sha256": "58fac8a8780da41da41d1af7b9b1e53bd8580e396eddf17ce97a3bb8e934314e"
+    },
+    {
+      "id": "p-616",
+      "image": "/img/products/palex-new-nano-hijyen-koku-300-cc-3548-1-verified.webp",
+      "sha256": "c09035bd1eb51db9813eaa5b65bdcc3b30688750bcec53602d81fdfab8859fc3"
+    },
+    {
+      "id": "p-617",
+      "image": "/img/products/palex-oda-parfumu-5-kg-zmr266-verified.webp",
+      "sha256": "f771403948b3b0d5d699df1c09e14ef3c1a9e84c2b31dccbce1ef9a033881e33"
+    },
+    {
+      "id": "p-618",
+      "image": "/img/products/palex-oda-spreyi-500-cc-zmr146-verified.webp",
+      "sha256": "6d0d17626019bbe5dc092887c1ece73086ea3320cfb8913b87cba828c52afbfe"
+    },
+    {
+      "id": "p-619",
+      "image": "/img/products/palex-plastik-bardak-dispenseri-miknatisli-s-u-verified.webp",
+      "sha256": "3b1e27a9fd59f9ad4b2a2c230e68878085e204dfd0f3cdf1fe16e4b1829ffe0d"
+    },
+    {
+      "id": "p-620",
+      "image": "/img/products/palex-plastik-bardak-dispenseri-vidali-s-u-v-verified.webp",
+      "sha256": "3b1e27a9fd59f9ad4b2a2c230e68878085e204dfd0f3cdf1fe16e4b1829ffe0d"
+    },
+    {
+      "id": "p-621",
+      "image": "/img/products/palex-plastik-strec-ve-alm-folyo-dispenseri-35-cm-s-35-verified.webp",
+      "sha256": "e705f8efa7e11f83c6ab7eb43bfef7d3ae881ae1183cadd2ae456cab40bd3b49"
+    },
+    {
+      "id": "p-622",
+      "image": "/img/products/palex-plastik-strec-ve-alm-folyo-dispenseri-45-cm-s-45-verified.webp",
+      "sha256": "60f5f0615947e20f1732efaf07aa5dc25f3eb81d0d49f872ff85918ac469cf75"
+    },
+    {
+      "id": "p-623",
+      "image": "/img/products/palex-pratik-tuvalet-kagidi-dispenseri-3440-0-verified.webp",
+      "sha256": "0a455766c635a8fbae771810b6db7be3ffcb15bb6de5e79a381248c528ccc977"
+    },
+    {
+      "id": "p-624",
+      "image": "/img/products/palex-prestij-kopuk-sabun-dispenseri-3506-0-verified.webp",
+      "sha256": "793c299cefc2d6fed2d9cf92ccf1a2f2817d7f099e6ee1c5188ddac83e45b9c2"
+    },
+    {
+      "id": "p-625",
+      "image": "/img/products/palex-prestij-otomatik-havlu-dispenseri-21-cm-3491-0-verified.webp",
+      "sha256": "ed59b47d2abd47a3a195bffbaa6b39773f41380fa204964e946bd600f5f05c6a"
+    },
+    {
+      "id": "p-626",
+      "image": "/img/products/palex-prestij-pecetelik-pp-002-verified.webp",
+      "sha256": "3c4e3522854b3942f3cf50b5f69fe1a64b4788298aae01e0e34b2d24df94be91"
+    },
+    {
+      "id": "p-627",
+      "image": "/img/products/palex-prestij-sivi-sabun-dispenseri-3508-0-verified.webp",
+      "sha256": "793c299cefc2d6fed2d9cf92ccf1a2f2817d7f099e6ee1c5188ddac83e45b9c2"
+    },
+    {
+      "id": "p-628",
+      "image": "/img/products/palex-pisuvar-suzgec-3600-0-verified.webp",
+      "sha256": "b3b41ccbc79662b5918560f1c38deadc7a9e6b7c339ed802618eb66488d95ee3"
+    },
+    {
+      "id": "p-629",
+      "image": "/img/products/palex-refill-kopuk-sabun-800-ml-3470-d-verified.webp",
+      "sha256": "caa658ee2b42c6716f4576da2a9d9a39454cb2508db3e6d208d63b97e427125b"
+    },
+    {
+      "id": "p-633",
+      "image": "/img/products/palex-sensorlu-cop-kovasi-13-lt-siyah-sp-13-verified.webp",
+      "sha256": "55dab8d4ecf3696125fc1494d814e936bad3fce0fd73cd3ecde1d7677a1ea65f"
+    },
+    {
+      "id": "p-634",
+      "image": "/img/products/palex-sensorlu-cop-kovasi-22-lt-siyah-sp-22-verified.webp",
+      "sha256": "04c205e91d287e3d6af27fa1c84afce091c9d3ad15a794e67648162c3d57b3e3"
+    },
+    {
+      "id": "p-635",
+      "image": "/img/products/palex-sensorlu-cop-kovasi-30-lt-siyah-sp-30-verified.webp",
+      "sha256": "331afbbbc5342604c75729b68c0d87ffc0057939c156441b0b5a2e7a31d540f0"
+    },
+    {
+      "id": "p-636",
+      "image": "/img/products/palex-standart-jumbo-tuvalet-kagidi-dispenseri-3448-0-verified.webp",
+      "sha256": "3ed455b57edd567062639c47ac7b0c797de31915779572d8e78a79ce7f85fbcb"
+    },
+    {
+      "id": "p-637",
+      "image": "/img/products/palex-standart-z-katli-kagit-havlu-dispenserleri-3570-0-verified.webp",
+      "sha256": "9be89ff36575a379b1ad976f943d516b707422d032ec7c4a69f30857c1a50fbc"
+    },
+    {
+      "id": "p-638",
+      "image": "/img/products/palex-still-autocut-havlu-dispenseri-s-at-0-verified.webp",
+      "sha256": "f9309ebd3fabb1b92f5d8148ee7adb9800c5f9e76b3b9998b495124730d7439a"
+    },
+    {
+      "id": "p-639",
+      "image": "/img/products/palex-still-otomatik-havlu-dispenseri-sh-0-verified.webp",
+      "sha256": "a3a99885597b79628cc36e65155dfd8cfb6209c62af9547bf02f2db0da2e269c"
+    },
+    {
+      "id": "p-640",
+      "image": "/img/products/palex-still-pecetelik-agir-stp-a-verified.webp",
+      "sha256": "156f3b79b7935b4197a262e04c363e22e619841ba71e06839c9cef0e69676eaa"
+    },
+    {
+      "id": "p-641",
+      "image": "/img/products/palex-still-pecetelik-hafif-stp-h-verified.webp",
+      "sha256": "156f3b79b7935b4197a262e04c363e22e619841ba71e06839c9cef0e69676eaa"
+    },
+    {
+      "id": "p-642",
+      "image": "/img/products/palex-trigerli-sivi-puskurtucu-1000-cc-3812-1-verified.webp",
+      "sha256": "61601ae800486ace9870dc172800ec3cb4d5e4dc660e0f39186f0f6579533889"
+    },
+    {
+      "id": "p-643",
+      "image": "/img/products/palex-trigerli-sivi-puskurtucu-500-cc-3812-0-verified.webp",
+      "sha256": "f02eed5e0e506c4123bb7ef7d9fc8e69032287d5294962f8d71dcfeec76f930f"
+    },
+    {
+      "id": "p-644",
+      "image": "/img/products/palex-u-bahce-tipi-cop-kovasi-boyali-3560-4-verified.webp",
+      "sha256": "83dec32ca809ac2ad98dd40bf5dd7f3b7bb8cebea5d610123dab9bf8e01f8775"
+    },
+    {
+      "id": "p-645",
+      "image": "/img/products/palex-yatay-pecetelik-agir-3536-0-verified.webp",
+      "sha256": "60b109940b11acca66e6df4beabbedc4e44c8b4a06ef087de9950bc561ebc7ee"
+    },
+    {
+      "id": "p-646",
+      "image": "/img/products/palex-yatay-pecetelik-hafif-3536-h-verified.webp",
+      "sha256": "60b109940b11acca66e6df4beabbedc4e44c8b4a06ef087de9950bc561ebc7ee"
+    },
+    {
+      "id": "p-647",
+      "image": "/img/products/palex-yatay-z-havlu-dispenseri-3534-0-verified.webp",
+      "sha256": "345d9897a0d8e0f8a8193109ba153d10425200df12239cd080fb0a75cd9b5390"
+    },
+    {
+      "id": "p-648",
+      "image": "/img/products/palex-yercek-metal-45-cm-zmr022-verified.webp",
+      "sha256": "2279f10b739a16bcb84253e2b19436466d6f55913635aac64d373a8aaf26a3a6"
+    },
+    {
+      "id": "p-649",
+      "image": "/img/products/palex-yercek-metal-55-cm-zmr023-verified.webp",
+      "sha256": "36ea60884db995cdf2871a0f2afc1a45407b0cb0afc642cfe8f2db0222a3da51"
+    },
+    {
+      "id": "p-650",
+      "image": "/img/products/palex-yercek-metal-75-cm-zmr024-verified.webp",
+      "sha256": "6ef1b3278296661d8e317dbb72567898aedd9286b05dc119c77c888df22dfb8a"
+    },
+    {
+      "id": "p-651",
+      "image": "/img/products/palex-cop-kovasi-masa-alti-delikli-13-lt-3700-1-verified.webp",
+      "sha256": "0fe89631b632342c169450750a0ebfab49b585eb6842bd38b6232ae415d5d37f"
+    },
+    {
+      "id": "p-652",
+      "image": "/img/products/palex-cop-kovasi-masa-alti-metal-13-lt-3700-0-verified.webp",
+      "sha256": "b683a3dcfa722bd65371f866dbdf8cc99de9af7dd6c91a51fa5702a3a262bb36"
+    },
+    {
+      "id": "p-653",
+      "image": "/img/products/palex-cift-ayakli-bahce-tipi-cop-kovasi-boyali-3560-8-verified.webp",
+      "sha256": "b4765713c90eeb17f45996962f257386d7fc63d59e27730d6b40243bec5f67d8"
+    },
+    {
+      "id": "p-654",
+      "image": "/img/products/palex-ustten-dolmali-kopuk-sabun-dispenseri-3580-0-verified.webp",
+      "sha256": "4d560e658a10ce06839e9e31162271991289e13c85481de82c0a6e817e972232"
+    },
+    {
+      "id": "p-655",
+      "image": "/img/products/palex-inter-dokme-kopuk-dispenseri-550-cc-3450-d-0-verified.webp",
+      "sha256": "acdb9d0ca5f421c7a02cbe5f4871d464c122e808a7f4d567e363d4afba489de3"
+    },
+    {
+      "id": "p-656",
+      "image": "/img/products/palex-inter-kartuslu-kopuk-dispenseri-1000-cc-3450-0-verified.webp",
+      "sha256": "acdb9d0ca5f421c7a02cbe5f4871d464c122e808a7f4d567e363d4afba489de3"
+    },
+    {
+      "id": "p-657",
+      "image": "/img/products/palex-inter-kopuk-sabun-kartusu-1000-cc-3450-b-verified.webp",
+      "sha256": "89f106f4c4105750e17450add54b5673ab214c8b8747c3e25368717e28a5441a"
+    },
+    {
+      "id": "p-658",
+      "image": "/img/products/palex-inter-mini-dokme-kopuk-dispenseri-600-cc-3452-d-1-verified.webp",
+      "sha256": "3895a83ba26ebff3b16e685e6544ddc9106268b3b7198d29e5c4121bdef46aa7"
+    },
+    {
+      "id": "p-659",
+      "image": "/img/products/palex-inter-mini-dokme-sivi-sabun-dispenseri-600-cc-3456-d-0-verified.webp",
+      "sha256": "96f2d44deba5f928601ca3ff16982282f47e94c8b01c178db82c6174b768fc04"
+    },
+    {
+      "id": "p-660",
+      "image": "/img/products/palex-inter-mini-kartuslu-kopuk-dispenseri-800-cc-3452-02-verified.webp",
+      "sha256": "3895a83ba26ebff3b16e685e6544ddc9106268b3b7198d29e5c4121bdef46aa7"
+    },
+    {
+      "id": "p-661",
+      "image": "/img/products/palex-inter-mini-kartuslu-sivi-sabun-dispenseri-800-cc-3456-01-verified.webp",
+      "sha256": "96f2d44deba5f928601ca3ff16982282f47e94c8b01c178db82c6174b768fc04"
+    },
+    {
+      "id": "p-662",
+      "image": "/img/products/palex-inter-mini-kopuk-sabun-kartusu-800-cc-3452-b-verified.webp",
+      "sha256": "7912994ba20e1fca7ff2a7530be22474cddba32de1f5aa70fbde028f591a866b"
+    },
+    {
+      "id": "p-663",
+      "image": "/img/products/palex-inter-mini-sivi-sabun-kartusu-800-cc-3456-b-verified.webp",
+      "sha256": "d4764331de4fc99af6022f920327e14e5e6b66c0dcd80379c260af68c3325b60"
+    },
+    {
+      "id": "p-664",
+      "image": "/img/products/palex-sampanya-kulluk-65-cm-3568-2-verified.webp",
+      "sha256": "72ae4568fc0f88f515ebadc50b23f3fe33883418f59b1c5023c90b8301e13b5c"
+    }
+  ]
+}

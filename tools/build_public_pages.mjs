@@ -5,7 +5,7 @@ const base=new URL('../public/',import.meta.url);
 const context=vm.createContext({document:{querySelectorAll:()=>[],querySelector:()=>null,getElementById:()=>null}});
 vm.runInContext(readFileSync(new URL('site.js',base),'utf8'),context);
 const {groups,subs,guides}=vm.runInContext('({groups:GRUPLAR,subs:ALTLAR,guides:KATEGORI_REHBERLERI})',context);
-const products=JSON.parse(readFileSync(new URL('katalog.json',base),'utf8')).urunler.filter(x=>x.aktif!==false);
+const products=JSON.parse(readFileSync(new URL('katalog.json',base),'utf8')).urunler.filter(x=>x.aktif!==false).map(p=>vm.runInContext(`katalogSunum(${JSON.stringify(p)})`,context));
 const pages={};
 const formatMeasure = value => vm.runInContext(`olcuYazi(${JSON.stringify(value || '')})`,context);
 const formatName = p => {
@@ -23,7 +23,7 @@ for(const g of groups){
   const details=[formatMeasure(p.olcu),formatMeasure(p.kapasite),p.malzeme,p.renk,p.ambalajAdedi].filter(Boolean).join(' · ');
   pages[`u=${p.id}`]={name,description:`${name}${details?' · '+details:''}. Ürün özellikleri ve tedarik seçenekleri için FerraPro ile görüşün.`,path:`/urunler?u=${encodeURIComponent(p.id)}`,image:p.gorsel,group:g.ad,groupPath:`/urunler?g=${g.g}`,sub:subs[g.g].find(s=>s.id===p.alt)?.ad,subPath:`/urunler?g=${g.g}&a=${p.alt}`};
  }
- const productLinks = list => list.map(p=>({name:formatName(p),path:`/urunler?u=${encodeURIComponent(p.id)}`}));
+ const productLinks = list => vm.runInContext(`katalogVitrin(${JSON.stringify(list)})`,context).map(p=>({name:formatName(p),path:`/urunler?u=${encodeURIComponent(p.id)}`}));
  pages[`g=${g.g}`].links=productLinks(actual);
  if(guides[g.g])pages[`g=${g.g}`].guide=guides[g.g];
  for(const s of subs[g.g])if(pages[`g=${g.g}&a=${s.id}`])pages[`g=${g.g}&a=${s.id}`].links=productLinks(actual.filter(p=>p.alt===s.id));

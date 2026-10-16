@@ -90,13 +90,13 @@
           "id": "C5",
           "ad": "El Kurutma Cihazları",
           "sira": 5,
-          "gorsel": "/img/products/palex-beyaz-fotoselli-el-kurutma-cihazi-2000-w-3808-16.webp"
+          "gorsel": "/img/products/palex-beyaz-fotoselli-el-kurutma-cihazi-2000-w-3808-16-verified.webp"
         },
         {
           "id": "C6",
           "ad": "Hijyen ve Servis Aparatları",
           "sira": 6,
-          "gorsel": "/img/products/palex-bone-dispenseri-3434.webp"
+          "gorsel": "/img/products/palex-bone-dispenseri-3434-verified.webp"
         }
       ]
     },
@@ -650,7 +650,7 @@
       "aciklama": "Ozopak Parfümlü Sıvı El Yıkama Maddesi. Ölçü: 5Kg.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/ozopak-el-yikama.webp",
+      "gorsel": "/img/products/ozopak-el-yikama-clean.webp",
       "gorselTuru": "urun",
       "satir": "Sıvı El Yıkama Maddesi · Ozopak · 5Kg · Parfümlü",
       "sira": 23
@@ -670,7 +670,7 @@
       "aciklama": "Ozopak Sıvı El Yıkama Maddesi. Ölçü: 20Kg.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/ozopak-el-yikama.webp",
+      "gorsel": "/img/products/ozopak-el-yikama-clean.webp",
       "gorselTuru": "urun",
       "satir": "Sıvı El Yıkama Maddesi · Ozopak · 20Kg",
       "sira": 24
@@ -830,7 +830,7 @@
       "aciklama": "Ozopak Endüstriyel Bulaşık Makinesi Parlatıcısı. Ölçü: 20Kg.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/ozopak-makine-parlatici.webp",
+      "gorsel": "/img/products/ozopak-makine-parlatici-clean.webp",
       "gorselTuru": "urun",
       "satir": "Endüstriyel Bulaşık Makinesi Parlatıcısı · Ozopak · 20Kg",
       "sira": 30
@@ -1010,7 +1010,7 @@
       "aciklama": "Ozopak Köpük El Sabunu. Ölçü: 5Kg.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/ozopak-el-sabunu-5kg.webp",
+      "gorsel": "/img/products/ozopak-el-sabunu-5kg-clean.webp",
       "gorselTuru": "urun",
       "satir": "Köpük El Sabunu · Ozopak · 5Kg",
       "sira": 39
@@ -1230,7 +1230,7 @@
       "aciklama": "Finish Bulaşık Makinesi Parlatıcısı. Ölçü: 400ML.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/finish-parlatici.webp",
+      "gorsel": "/img/products/finish-parlatici-clean.webp",
       "gorselTuru": "urun",
       "satir": "Bulaşık Makinesi Parlatıcısı · Finish · 400ML",
       "sira": 50
@@ -2530,7 +2530,7 @@
       "aciklama": "Palex Z Havlu Aparatı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-z-havlu.webp",
+      "gorsel": "/img/products/palex-z-havlu-clean.webp",
       "gorselTuru": "urun",
       "satir": "Z Havlu Aparatı · Palex",
       "sira": 128
@@ -2570,7 +2570,7 @@
       "aciklama": "Palex Fotoselli Havlu Aparatı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-fotoselli-havlu.webp",
+      "gorsel": "/img/products/palex-fotoselli-havlu-clean.webp",
       "gorselTuru": "urun",
       "satir": "Fotoselli Havlu Aparatı · Palex",
       "sira": 130
@@ -2630,7 +2630,7 @@
       "aciklama": "Palex Ev Tipi Havlu Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ev-tipi-metal.webp",
+      "gorsel": "/img/products/palex-ev-tipi-metal-clean.webp",
       "gorselTuru": "urun",
       "satir": "Ev Tipi Havlu Aparatı · Palex · Plastik",
       "sira": 133
@@ -2670,7 +2670,7 @@
       "aciklama": "Palex Mini İçten Çekmeli Tuvalet Kağıdı Aparatı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mini-icten-tuvalet.webp",
+      "gorsel": "/img/products/palex-mini-icten-tuvalet-clean.webp",
       "gorselTuru": "urun",
       "satir": "Mini İçten Çekmeli Tuvalet Kağıdı Aparatı · Palex",
       "sira": 135
@@ -2930,7 +2930,7 @@
       "aciklama": "Palex Sallanır Kapaklı Çöp Kovası. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-sallanir-metal.webp",
+      "gorsel": "/img/products/palex-sallanir-metal-clean.webp",
       "gorselTuru": "urun",
       "satir": "Sallanır Kapaklı Çöp Kovası · Palex · Metal",
       "sira": 150
@@ -3170,7 +3170,7 @@
       "aciklama": "Çaykur Tomurcuk Çay. Ölçü: 200Gr.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/caykur-tomurcuk.webp",
+      "gorsel": "/img/products/caykur-tomurcuk-clean.webp",
       "gorselTuru": "urun",
       "satir": "Tomurcuk Çay · Çaykur · 200Gr",
       "sira": 170
@@ -3270,7 +3270,7 @@
       "aciklama": "Irmak Stick Toz Şeker.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/irmak-stick.webp",
+      "gorsel": "/img/products/irmak-stick-clean.webp",
       "gorselTuru": "urun",
       "satir": "Stick Toz Şeker · Irmak",
       "sira": 176
@@ -3430,7 +3430,7 @@
       "aciklama": "Mehmet Efendi Türk Kahvesi. Ölçü: 100Gr.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mehmetefendi-turk-100.webp",
+      "gorsel": "/img/products/mehmetefendi-turk-100-clean.webp",
       "gorselTuru": "urun",
       "satir": "Türk Kahvesi · Mehmet Efendi · 100Gr",
       "sira": 184
@@ -3450,7 +3450,7 @@
       "aciklama": "Mehmet Efendi Türk Kahvesi. Ölçü: 500Gr.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mehmetefendi-turk-500.webp",
+      "gorsel": "/img/products/mehmetefendi-turk-500-clean.webp",
       "gorselTuru": "urun",
       "satir": "Türk Kahvesi · Mehmet Efendi · 500Gr",
       "sira": 185
@@ -3651,7 +3651,7 @@
       "ad": "Ice Tea Şeftali",
       "marka": "Lipton",
       "olcu": "330ML",
-      "gorsel": "/img/products/lipton-ice-tea-seftali.webp",
+      "gorsel": "/img/products/lipton-ice-tea-seftali-clean.webp",
       "sira": 457,
       "satir": "Ice Tea Şeftali · Lipton · 330ML"
     },
@@ -4410,7 +4410,7 @@
       "aciklama": "MAS Zooo Plastik Kaplı Ataş. Ölçü: No:2. Renk: Mavi.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-zooo-atas-no2-mavi.webp",
+      "gorsel": "/img/products/mas-zooo-atas-no2-mavi-clean.webp",
       "gorselTuru": "urun",
       "satir": "Zooo Plastik Kaplı Ataş · MAS · No:2 · Mavi",
       "sira": 228
@@ -5430,7 +5430,7 @@
       "aciklama": "MAS Zımba Makinesi. Ölçü: No:10. Kapasite: 20 Sayfa. Renk: Siyah.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-zimba-no10-siyah.webp",
+      "gorsel": "/img/products/mas-zimba-no10-siyah-clean.webp",
       "gorselTuru": "urun",
       "satir": "Zımba Makinesi · MAS · No:10 · 20 Sayfa · Siyah",
       "sira": 284
@@ -5450,7 +5450,7 @@
       "aciklama": "MAS Zımba Makinesi. Ölçü: 24/6. Kapasite: 30 Sayfa. Renk: Gri.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-zimba-246-gri.webp",
+      "gorsel": "/img/products/mas-zimba-246-gri-clean.webp",
       "gorselTuru": "urun",
       "satir": "Zımba Makinesi · MAS · 24/6 · 30 Sayfa · Gri",
       "sira": 285
@@ -6570,7 +6570,7 @@
       "aciklama": "Yumoş Lilyum Tekstil Parfümü. Ölçü: 5Lt.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/yumos-pro-tekstil-5lt.webp",
+      "gorsel": "/img/products/yumos-pro-tekstil-5lt-clean.webp",
       "gorselTuru": "urun",
       "satir": "Tekstil Parfümü · Yumoş · 5Lt · Lilyum",
       "sira": 345
@@ -7010,7 +7010,7 @@
       "aciklama": "Mehmet Efendi Türk Kahvesi. Ölçü: 250Gr.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mehmetefendi-turk-250.webp",
+      "gorsel": "/img/products/mehmetefendi-turk-250-clean.webp",
       "gorselTuru": "urun",
       "sira": 368,
       "satir": "Türk Kahvesi · Mehmet Efendi · 250Gr"
@@ -7270,7 +7270,7 @@
       "aciklama": "Tchibo Exclusive Filtre. Ölçü: 250Gr.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/tchibo-exclusive-250.webp",
+      "gorsel": "/img/products/tchibo-exclusive-250-clean.webp",
       "gorselTuru": "urun",
       "sira": 382,
       "satir": "Exclusive Filtre · Tchibo · 250Gr"
@@ -7530,7 +7530,7 @@
       "aciklama": "UHU Solventsiz Sıvı Yapıştırıcı. Ölçü: 20ML.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/uhu-sivi-20.webp",
+      "gorsel": "/img/products/uhu-sivi-20-clean.webp",
       "gorselTuru": "urun",
       "satir": "Sıvı Yapıştırıcı · UHU · 20ML · Solventsiz",
       "sira": 395
@@ -7570,7 +7570,7 @@
       "aciklama": "MAS Ataş. Ölçü: No:3. Malzeme: Nikel. Ambalaj: 100'lü.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-atas-no3.webp",
+      "gorsel": "/img/products/mas-atas-no3-clean.webp",
       "gorselTuru": "urun",
       "satir": "Ataş · MAS · No:3 · Nikel · 100'lü",
       "sira": 397
@@ -7590,7 +7590,7 @@
       "aciklama": "MAS Midi Paket Lastiği. Kapasite: 50Gr.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-paket-lastigi-50.webp",
+      "gorsel": "/img/products/mas-paket-lastigi-50-clean.webp",
       "gorselTuru": "urun",
       "satir": "Paket Lastiği · MAS · 50Gr · Midi",
       "sira": 398
@@ -7730,7 +7730,7 @@
       "aciklama": "MAS Koli Bandı. Ölçü: 45Mm × 100M. Renk: Şeffaf.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-koli-45x100.webp",
+      "gorsel": "/img/products/mas-koli-45x100-clean.webp",
       "gorselTuru": "urun",
       "satir": "Koli Bandı · MAS · 45Mm × 100M · Şeffaf",
       "sira": 405
@@ -7790,7 +7790,7 @@
       "aciklama": "MAS Koli Bant Makinesi.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/mas-koli-bant-makinesi.webp",
+      "gorsel": "/img/products/mas-koli-bant-makinesi-clean.webp",
       "gorselTuru": "urun",
       "satir": "Koli Bant Makinesi · MAS",
       "sira": 408
@@ -7850,7 +7850,7 @@
       "aciklama": "Oyal Hava Kabarcıklı Torba Zarf. Ölçü: 37 × 45.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/oyal-obag-37x45.webp",
+      "gorsel": "/img/products/oyal-obag-37x45-clean.webp",
       "gorselTuru": "urun",
       "satir": "Hava Kabarcıklı Torba Zarf · Oyal · 37 × 45",
       "sira": 411
@@ -7970,7 +7970,7 @@
       "aciklama": "Lecoo Q Türkçe Kablolu Klavye. Renk: Siyah.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/lecoo-kb101-siyah.webp",
+      "gorsel": "/img/products/lecoo-kb101-siyah-clean.webp",
       "gorselTuru": "urun",
       "satir": "Kablolu Klavye · Lecoo · Siyah · Q Türkçe",
       "sira": 417
@@ -8030,7 +8030,7 @@
       "aciklama": "Lecoo USB Kablolu Mouse. Renk: Siyah.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/lecoo-ms104-siyah.webp",
+      "gorsel": "/img/products/lecoo-ms104-siyah-clean.webp",
       "gorselTuru": "urun",
       "satir": "Kablolu Mouse · Lecoo · Siyah · USB",
       "sira": 420
@@ -8070,7 +8070,7 @@
       "aciklama": "ASUS Kablosuz Mouse. Renk: Siyah.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/asus-wt200-siyah.webp",
+      "gorsel": "/img/products/asus-wt200-siyah-clean.webp",
       "gorselTuru": "urun",
       "satir": "Kablosuz Mouse · ASUS · Siyah",
       "sira": 422
@@ -8230,7 +8230,7 @@
       "aciklama": "Ekstra Islak Mop Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/islak-mop-aparat-ekstra.webp",
+      "gorsel": "/img/products/islak-mop-aparat-ekstra-clean.webp",
       "gorselTuru": "urun",
       "sira": 432,
       "satir": "Islak Mop Aparatı · Plastik · Ekstra"
@@ -8250,7 +8250,7 @@
       "aciklama": "Islak Mop Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/islak-mop-aparat.webp",
+      "gorsel": "/img/products/islak-mop-aparat-clean.webp",
       "gorselTuru": "urun",
       "sira": 433,
       "satir": "Islak Mop Aparatı · Plastik"
@@ -8290,7 +8290,7 @@
       "aciklama": "Palet Aparatı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palet-aparat.webp",
+      "gorsel": "/img/products/palet-aparat-clean.webp",
       "gorselTuru": "urun",
       "sira": 435,
       "satir": "Palet Aparatı"
@@ -8930,7 +8930,7 @@
       "aciklama": "ttec Powerbank. Ölçü: 10.000mAh.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/ttec-powerbank-10000.webp",
+      "gorsel": "/img/products/ttec-powerbank-10000-clean.webp",
       "gorselTuru": "urun",
       "sira": 471,
       "satir": "Powerbank · ttec · 10.000mAh"
@@ -8950,7 +8950,7 @@
       "aciklama": "ttec Powerbank. Ölçü: 50.000mAh.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/ttec-powerbank-50000.webp",
+      "gorsel": "/img/products/ttec-powerbank-50000-clean.webp",
       "gorselTuru": "urun",
       "sira": 472,
       "satir": "Powerbank · ttec · 50.000mAh"
@@ -9170,7 +9170,7 @@
       "aciklama": "Palex Ankastre Köpük Aparatı Abs Kaplama. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ankastre-kopuk-dispenseri-abs-kaplama-ak-1.webp",
+      "gorsel": "/img/products/palex-ankastre-kopuk-dispenseri-abs-kaplama-ak-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Ankastre Köpük Aparatı Abs Kaplama · Palex · Metal",
       "sira": 483
@@ -9190,7 +9190,7 @@
       "aciklama": "Palex Ankastre Köpük Aparatı Krom. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ankastre-kopuk-dispenseri-krom-3412.webp",
+      "gorsel": "/img/products/palex-ankastre-kopuk-dispenseri-krom-3412-verified.webp",
       "gorselTuru": "urun",
       "satir": "Ankastre Köpük Aparatı Krom · Palex · Krom",
       "sira": 484
@@ -9210,7 +9210,7 @@
       "aciklama": "Palex Ankastre Köpük Sabun Kartuşu 1000 cc Dolu. Kapasite: 1000Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ankastre-kopuk-sabun-kartusu-1000-cc-dolu-3412-01.webp",
+      "gorsel": "/img/products/palex-ankastre-kopuk-sabun-kartusu-1000-cc-dolu-3412-01-verified.webp",
       "gorselTuru": "urun",
       "satir": "Ankastre Köpük Sabun Kartuşu 1000 cc Dolu · Palex · 1000Ml",
       "sira": 485
@@ -9230,7 +9230,7 @@
       "aciklama": "Palex Ankastre Sıvı Sabun Aparatı Krom. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ankastre-sivi-sabun-dispenseri-krom-3414.webp",
+      "gorsel": "/img/products/palex-ankastre-sivi-sabun-dispenseri-krom-3414-verified.webp",
       "gorselTuru": "urun",
       "satir": "Ankastre Sıvı Sabun Aparatı Krom · Palex · Krom",
       "sira": 486
@@ -9250,7 +9250,7 @@
       "aciklama": "Palex Ankastre Sıvı Sabun Kartuşu 1000 cc Dolu. Kapasite: 1000Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ankastre-sivi-sabun-kartusu-1000-cc-dolu-3414-01.webp",
+      "gorsel": "/img/products/palex-ankastre-sivi-sabun-kartusu-1000-cc-dolu-3414-01-verified.webp",
       "gorselTuru": "urun",
       "satir": "Ankastre Sıvı Sabun Kartuşu 1000 cc Dolu · Palex · 1000Ml",
       "sira": 487
@@ -9270,7 +9270,7 @@
       "aciklama": "Palex Beyaz Fotoselli El Kurutma Cihazı 2000 W.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-beyaz-fotoselli-el-kurutma-cihazi-2000-w-3808-16.webp",
+      "gorsel": "/img/products/palex-beyaz-fotoselli-el-kurutma-cihazi-2000-w-3808-16-verified.webp",
       "gorselTuru": "urun",
       "satir": "Beyaz Fotoselli El Kurutma Cihazı 2000 W · Palex · Beyaz",
       "sira": 488
@@ -9290,7 +9290,7 @@
       "aciklama": "Palex Bone Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-bone-dispenseri-3434.webp",
+      "gorsel": "/img/products/palex-bone-dispenseri-3434-verified.webp",
       "gorselTuru": "urun",
       "satir": "Bone Aparatı · Palex · Plastik · Şeffaf-mavi",
       "sira": 489
@@ -9310,7 +9310,7 @@
       "aciklama": "Palex C Katlama Tuvalet Kağıt Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-c-katlama-tuvalet-kagit-dispenseri-3438-0.webp",
+      "gorsel": "/img/products/palex-c-katlama-tuvalet-kagit-dispenseri-3438-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "C Katlama Tuvalet Kağıt Aparatı · Palex · Plastik · Beyaz",
       "sira": 490
@@ -9330,7 +9330,7 @@
       "aciklama": "Palex Camçek Metal 25 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-camcek-metal-25-cm-zmr027.webp",
+      "gorsel": "/img/products/palex-camcek-metal-25-cm-zmr027-verified.webp",
       "gorselTuru": "urun",
       "satir": "Camçek Metal 25 CM · Palex · Metal",
       "sira": 491
@@ -9350,7 +9350,7 @@
       "aciklama": "Palex Camçek Metal 35 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-camcek-metal-35-cm-zmr028.webp",
+      "gorsel": "/img/products/palex-camcek-metal-35-cm-zmr028-verified.webp",
       "gorselTuru": "urun",
       "satir": "Camçek Metal 35 CM · Palex · Metal",
       "sira": 492
@@ -9370,7 +9370,7 @@
       "aciklama": "Palex Camçek Metal 45 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-camcek-metal-45-cm-zmr029.webp",
+      "gorsel": "/img/products/palex-camcek-metal-45-cm-zmr029-verified.webp",
       "gorselTuru": "urun",
       "satir": "Camçek Metal 45 CM · Palex · Metal",
       "sira": 493
@@ -9390,7 +9390,7 @@
       "aciklama": "Palex Desenli Peçetelik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-desenli-pecetelik-3474-d-b.webp",
+      "gorsel": "/img/products/palex-desenli-pecetelik-3474-d-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "Desenli Peçetelik · Palex · Beyaz",
       "sira": 494
@@ -9410,7 +9410,7 @@
       "aciklama": "Palex Dökme Köpük Sabun Aparatı 550 cc. Kapasite: 550Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-dokme-kopuk-sabun-dispenseri-550-cc-3482.webp",
+      "gorsel": "/img/products/palex-dokme-kopuk-sabun-dispenseri-550-cc-3482-verified.webp",
       "gorselTuru": "urun",
       "satir": "Dökme Köpük Sabun Aparatı 550 cc · Palex · 550Ml · Plastik · Beyaz",
       "sira": 495
@@ -9430,7 +9430,7 @@
       "aciklama": "Palex Dört Ayaklı Bahçe Tipi Çöp Kovası Boyalı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-dort-ayakli-bahce-tipi-cop-kovasi-boyali-3560-3.webp",
+      "gorsel": "/img/products/palex-dort-ayakli-bahce-tipi-cop-kovasi-boyali-3560-3-verified.webp",
       "gorselTuru": "urun",
       "satir": "Dört Ayaklı Bahçe Tipi Çöp Kovası Boyalı · Palex · Plastik",
       "sira": 496
@@ -9450,7 +9450,7 @@
       "aciklama": "Palex El & Yüz Kurutma Cihazı Çelik Gövde 2500 W.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-yuz-kurutma-cihazi-celik-govde-2500-w-3808-1-yk.webp",
+      "gorsel": "/img/products/palex-el-yuz-kurutma-cihazi-celik-govde-2500-w-3808-1-yk-verified.webp",
       "gorselTuru": "urun",
       "satir": "El & Yüz Kurutma Cihazı Çelik Gövde 2500 W · Palex",
       "sira": 497
@@ -9470,7 +9470,7 @@
       "aciklama": "Palex El & Yüz Kurutma Cihazı Çelik Gövde Beyaz 2500 W.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-yuz-kurutma-cihazi-celik-govde-beyaz-2500-w-3808-2-b.webp",
+      "gorsel": "/img/products/palex-el-yuz-kurutma-cihazi-celik-govde-beyaz-2500-w-3808-2-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "El & Yüz Kurutma Cihazı Çelik Gövde Beyaz 2500 W · Palex · Beyaz",
       "sira": 498
@@ -9490,7 +9490,7 @@
       "aciklama": "Palex El Kurutma Cihazı Abs Beyaz 2000 W.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-kurutma-cihazi-abs-beyaz-2000-w-ep-0.webp",
+      "gorsel": "/img/products/palex-el-kurutma-cihazi-abs-beyaz-2000-w-ep-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "El Kurutma Cihazı Abs Beyaz 2000 W · Palex · Beyaz",
       "sira": 499
@@ -9510,7 +9510,7 @@
       "aciklama": "Palex El Kurutma Cihazı Abs Krom Kaplama 2000 W. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-kurutma-cihazi-abs-krom-kaplama-2000-w-ep-k.webp",
+      "gorsel": "/img/products/palex-el-kurutma-cihazi-abs-krom-kaplama-2000-w-ep-k-verified.webp",
       "gorselTuru": "urun",
       "satir": "El Kurutma Cihazı Abs Krom Kaplama 2000 W · Palex · Krom · Krom Kaplama",
       "sira": 500
@@ -9530,7 +9530,7 @@
       "aciklama": "Palex El Kurutma Cihazı Abs Siyah 2000 W.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-kurutma-cihazi-abs-siyah-2000-w-ep-s.webp",
+      "gorsel": "/img/products/palex-el-kurutma-cihazi-abs-siyah-2000-w-ep-s-verified.webp",
       "gorselTuru": "urun",
       "satir": "El Kurutma Cihazı Abs Siyah 2000 W · Palex · Siyah",
       "sira": 501
@@ -9550,7 +9550,7 @@
       "aciklama": "Palex El Temizleme Köpüğü 30 KG.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-temizleme-kopugu-30-kg-zmr143.webp",
+      "gorsel": "/img/products/palex-el-temizleme-kopugu-30-kg-zmr143-verified.webp",
       "gorselTuru": "urun",
       "satir": "El Temizleme Köpüğü 30 KG · Palex",
       "sira": 502
@@ -9570,7 +9570,7 @@
       "aciklama": "Palex El Temizleme Köpüğü 5 KG.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-temizleme-kopugu-5-kg-zmr178.webp",
+      "gorsel": "/img/products/palex-el-temizleme-kopugu-5-kg-zmr178-verified.webp",
       "gorselTuru": "urun",
       "satir": "El Temizleme Köpüğü 5 KG · Palex",
       "sira": 503
@@ -9590,7 +9590,7 @@
       "aciklama": "Palex El Temizleme Köpüğü 500 cc (tezgah Üstü). Kapasite: 500Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-el-temizleme-kopugu-500-cc-tezgah-ustu-3520.webp",
+      "gorsel": "/img/products/palex-el-temizleme-kopugu-500-cc-tezgah-ustu-3520-verified.webp",
       "gorselTuru": "urun",
       "satir": "El Temizleme Köpüğü 500 cc (tezgah Üstü) · Palex · 500Ml",
       "sira": 504
@@ -9610,7 +9610,7 @@
       "aciklama": "Palex Endüstriyel Ayaklı Havlu Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-endustriyel-ayakli-havlu-dispenseri-3502.webp",
+      "gorsel": "/img/products/palex-endustriyel-ayakli-havlu-dispenseri-3502-verified.webp",
       "gorselTuru": "urun",
       "satir": "Endüstriyel Ayaklı Havlu Aparatı · Palex · Plastik",
       "sira": 505
@@ -9630,7 +9630,7 @@
       "aciklama": "Palex Ev Tipi Tuvalet Kağıdı Aparatı-kutulu. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ev-tipi-tuvalet-kagidi-dispenseri-kutulu-3472.webp",
+      "gorsel": "/img/products/palex-ev-tipi-tuvalet-kagidi-dispenseri-kutulu-3472-verified.webp",
       "gorselTuru": "urun",
       "satir": "Ev Tipi Tuvalet Kağıdı Aparatı-kutulu · Palex · Plastik",
       "sira": 506
@@ -9650,7 +9650,7 @@
       "aciklama": "Palex Galoş Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-galos-dispenseri-3436.webp",
+      "gorsel": "/img/products/palex-galos-dispenseri-3436-verified.webp",
       "gorselTuru": "urun",
       "satir": "Galoş Aparatı · Palex · Plastik · Şeffaf-mavi",
       "sira": 507
@@ -9670,7 +9670,7 @@
       "aciklama": "Palex Geri Dönüşüm 3'lü Döner Kapaklı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-geri-donusum-3-lu-doner-kapakli-3561-3.webp",
+      "gorsel": "/img/products/palex-geri-donusum-3-lu-doner-kapakli-3561-3-verified.webp",
       "gorselTuru": "urun",
       "satir": "Geri Dönüşüm 3'lü Döner Kapaklı · Palex",
       "sira": 508
@@ -9690,7 +9690,7 @@
       "aciklama": "Palex Geri Dönüşüm 3'lü Yuvarlak Boyalı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-geri-donusum-3-lu-yuvarlak-boyali-3561-0.webp",
+      "gorsel": "/img/products/palex-geri-donusum-3-lu-yuvarlak-boyali-3561-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Geri Dönüşüm 3'lü Yuvarlak Boyalı · Palex",
       "sira": 509
@@ -9710,7 +9710,7 @@
       "aciklama": "Palex Geri Dönüşüm 3'lü Çemberli.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-geri-donusum-3-lu-cemberli-3561-5.webp",
+      "gorsel": "/img/products/palex-geri-donusum-3-lu-cemberli-3561-5-verified.webp",
       "gorselTuru": "urun",
       "satir": "Geri Dönüşüm 3'lü Çemberli · Palex",
       "sira": 510
@@ -9730,7 +9730,7 @@
       "aciklama": "Palex Hijyenik Film 90 Kullanımlık.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-hijyenik-film-90-kullanimlik-hr-1.webp",
+      "gorsel": "/img/products/palex-hijyenik-film-90-kullanimlik-hr-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Hijyenik Film 90 Kullanımlık · Palex",
       "sira": 511
@@ -9750,7 +9750,7 @@
       "aciklama": "Palex Hijyenik Klozet Kapak Örtüsü Aparatı.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-hijyenik-klozet-kapak-ortusu-dipsenseri-h-0.webp",
+      "gorsel": "/img/products/palex-hijyenik-klozet-kapak-ortusu-dipsenseri-h-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Hijyenik Klozet Kapak Örtüsü Aparatı · Palex · Beyaz",
       "sira": 512
@@ -9770,7 +9770,7 @@
       "aciklama": "Palex Karton Bardak Aparatı Mıknatıslı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-karton-bardak-dispenseri-miknatisli-s-k.webp",
+      "gorsel": "/img/products/palex-karton-bardak-dispenseri-miknatisli-s-k-verified.webp",
       "gorselTuru": "urun",
       "satir": "Karton Bardak Aparatı Mıknatıslı · Palex · Plastik · Beyaz",
       "sira": 513
@@ -9790,7 +9790,7 @@
       "aciklama": "Palex Karton Bardak Aparatı Vidalı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-karton-bardak-dispenseri-vidali-s-k-v.webp",
+      "gorsel": "/img/products/palex-karton-bardak-dispenseri-vidali-s-k-v-verified.webp",
       "gorselTuru": "urun",
       "satir": "Karton Bardak Aparatı Vidalı · Palex · Plastik · Beyaz",
       "sira": 514
@@ -9810,7 +9810,7 @@
       "aciklama": "Palex Kartuşlu Köpük Sabun Aparatı 500 CC. Kapasite: 500Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-kopuk-sabun-dispenserleri-500-cc-3480.webp",
+      "gorsel": "/img/products/palex-kartuslu-kopuk-sabun-dispenserleri-500-cc-3480-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Köpük Sabun Aparatı 500 CC · Palex · 500Ml · Plastik · Beyaz",
       "sira": 515
@@ -9830,7 +9830,7 @@
       "aciklama": "Palex Kartuşlu Köpük Sabun Aparatı 1000 CC. Kapasite: 1000Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-kopuk-sabun-dispenseri-1000-cc-3590-0.webp",
+      "gorsel": "/img/products/palex-kartuslu-kopuk-sabun-dispenseri-1000-cc-3590-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Köpük Sabun Aparatı 1000 CC · Palex · 1000Ml · Plastik · Beyaz",
       "sira": 516
@@ -9850,7 +9850,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Dezenfektan Aparatı (renkli). Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-renkli-dk-b.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-renkli-dk-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Dezenfektan Aparatı (renkli) · Palex · Plastik · Gold & Kırmızı & Siyah",
       "sira": 517
@@ -9870,7 +9870,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Dezenfektan Aparatı Beyaz. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-beyaz-dk-1.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-beyaz-dk-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Dezenfektan Aparatı Beyaz · Palex · Plastik · Beyaz",
       "sira": 518
@@ -9890,7 +9890,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Dezenfektan Aparatı Krom Kaplama. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-krom-kapl-dk-k.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-dezenfektan-dispenseri-krom-kapl-dk-k-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Dezenfektan Aparatı Krom Kaplama · Palex · Krom · Krom Kaplama",
       "sira": 519
@@ -9910,7 +9910,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Köpük Sabun Aparatı (renkli). Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-kopuk-sabun-dispenseri-renkli-kk-b.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-kopuk-sabun-dispenseri-renkli-kk-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Köpük Sabun Aparatı (renkli) · Palex · Plastik · Gold & Kırmızı & Siyah",
       "sira": 520
@@ -9930,7 +9930,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Köpük Sabun Aparatı Krom Kaplama. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-kopuk-sabun-dispenseri-krom-kapl-kk-k.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-kopuk-sabun-dispenseri-krom-kapl-kk-k-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Köpük Sabun Aparatı Krom Kaplama · Palex · Krom · Krom Kaplama",
       "sira": 521
@@ -9950,7 +9950,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Sıvı Sabun Aparatı (renkli). Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-sivi-sabun-dispenseri-renkli-sk-b.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-sivi-sabun-dispenseri-renkli-sk-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Sıvı Sabun Aparatı (renkli) · Palex · Plastik · Gold & Kırmızı & Siyah",
       "sira": 522
@@ -9970,7 +9970,7 @@
       "aciklama": "Palex Kartuşlu Sensörlü Sıvı Sabun Aparatı Krom Kaplama. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kartuslu-sensorlu-sivi-sabun-dispenseri-krom-kapla-sk-k.webp",
+      "gorsel": "/img/products/palex-kartuslu-sensorlu-sivi-sabun-dispenseri-krom-kapla-sk-k-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kartuşlu Sensörlü Sıvı Sabun Aparatı Krom Kaplama · Palex · Krom · Krom Kaplama",
       "sira": 523
@@ -9990,7 +9990,7 @@
       "aciklama": "Palex Kolon Küllük No:1 (19*60 Cm).",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kolon-kulluk-no-1-19-60-cm-3700-761.webp",
+      "gorsel": "/img/products/palex-kolon-kulluk-no-1-19-60-cm-3700-761-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kolon Küllük No:1 (19*60 Cm) · Palex",
       "sira": 524
@@ -10010,7 +10010,7 @@
       "aciklama": "Palex Kolon Küllük No:2 (21*60 Cm).",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kolon-kulluk-no-2-21-60-cm-3700-762.webp",
+      "gorsel": "/img/products/palex-kolon-kulluk-no-2-21-60-cm-3700-762-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kolon Küllük No:2 (21*60 Cm) · Palex",
       "sira": 525
@@ -10030,7 +10030,7 @@
       "aciklama": "Palex Kolon Küllük No:3 (25*60 Cm).",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kolon-kulluk-no-3-25-60-cm-3700-763.webp",
+      "gorsel": "/img/products/palex-kolon-kulluk-no-3-25-60-cm-3700-763-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kolon Küllük No:3 (25*60 Cm) · Palex",
       "sira": 526
@@ -10050,7 +10050,7 @@
       "aciklama": "Palex Kolon Küllük No:4 (28*60 Cm).",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kolon-kulluk-no-4-28-60-cm-3700-764.webp",
+      "gorsel": "/img/products/palex-kolon-kulluk-no-4-28-60-cm-3700-764-verified.webp",
       "gorselTuru": "urun",
       "satir": "Kolon Küllük No:4 (28*60 Cm) · Palex",
       "sira": 527
@@ -10070,7 +10070,7 @@
       "aciklama": "Palex Krom Askılı Silindir Sıvı Sabunluk 300 cc. Kapasite: 300Ml. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-askili-silindir-sivi-sabunluk-300-cc-3804-4.webp",
+      "gorsel": "/img/products/palex-krom-askili-silindir-sivi-sabunluk-300-cc-3804-4-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Askılı Silindir Sıvı Sabunluk 300 cc · Palex · 300Ml · Krom",
       "sira": 528
@@ -10090,7 +10090,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 11 LT. Ölçü: 11 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-11-lt-3834-311.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-11-lt-3834-311-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 11 LT · Palex · 11 Lt · Krom",
       "sira": 529
@@ -10110,7 +10110,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 16 LT. Ölçü: 16 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-16-lt-3834-316.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-16-lt-3834-316-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 16 LT · Palex · 16 Lt · Krom",
       "sira": 530
@@ -10130,7 +10130,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 25 LT. Ölçü: 25 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-25-lt-3834-325.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-25-lt-3834-325-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 25 LT · Palex · 25 Lt · Krom",
       "sira": 531
@@ -10150,7 +10150,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 36 LT. Ölçü: 36 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-36-lt-3834-336.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-36-lt-3834-336-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 36 LT · Palex · 36 Lt · Krom",
       "sira": 532
@@ -10170,7 +10170,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 45 LT. Ölçü: 45 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-45-lt-3834-345.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-45-lt-3834-345-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 45 LT · Palex · 45 Lt · Krom",
       "sira": 533
@@ -10190,7 +10190,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 54 LT. Ölçü: 54 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-54-lt-3834-354.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-54-lt-3834-354-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 54 LT · Palex · 54 Lt · Krom",
       "sira": 534
@@ -10210,7 +10210,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 7 LT. Ölçü: 7 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-7-lt-3834-307.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-7-lt-3834-307-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 7 LT · Palex · 7 Lt · Krom",
       "sira": 535
@@ -10230,7 +10230,7 @@
       "aciklama": "Palex Krom Açık Çatı Kapaklı Çöp Kovası 80 LT. Ölçü: 80 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-80-lt-3834-380.webp",
+      "gorsel": "/img/products/palex-krom-acik-cati-kapakli-cop-kovasi-80-lt-3834-380-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Açık Çatı Kapaklı Çöp Kovası 80 LT · Palex · 80 Lt · Krom",
       "sira": 536
@@ -10250,7 +10250,7 @@
       "aciklama": "Palex Krom Büyük Jumbo Wc Kağıt Aparatı. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-buyuk-jumbo-wc-kagit-dispenseri-3802-b.webp",
+      "gorsel": "/img/products/palex-krom-buyuk-jumbo-wc-kagit-dispenseri-3802-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Büyük Jumbo Wc Kağıt Aparatı · Palex · Krom",
       "sira": 537
@@ -10270,7 +10270,7 @@
       "aciklama": "Palex Krom Ev Tipi Rulo Havlu Kağıt Asacağı. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-ev-tipi-rulo-havlu-kagit-asacagi-3802-5.webp",
+      "gorsel": "/img/products/palex-krom-ev-tipi-rulo-havlu-kagit-asacagi-3802-5-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Ev Tipi Rulo Havlu Kağıt Asacağı · Palex · Krom",
       "sira": 538
@@ -10290,7 +10290,7 @@
       "aciklama": "Palex Krom Ev Tipi Rulo Havlu Kağıt Asacağı (kapaklı). Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-ev-tipi-rulo-havlu-kagit-asacagi-kapakli-3802-7.webp",
+      "gorsel": "/img/products/palex-krom-ev-tipi-rulo-havlu-kagit-asacagi-kapakli-3802-7-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Ev Tipi Rulo Havlu Kağıt Asacağı (kapaklı) · Palex · Krom",
       "sira": 539
@@ -10310,7 +10310,7 @@
       "aciklama": "Palex Krom Ev Tipi Wc Kağıt Asacağı. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-ev-tipi-wc-kagit-asacagi-3802-4.webp",
+      "gorsel": "/img/products/palex-krom-ev-tipi-wc-kagit-asacagi-3802-4-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Ev Tipi Wc Kağıt Asacağı · Palex · Krom",
       "sira": 540
@@ -10330,7 +10330,7 @@
       "aciklama": "Palex Krom Ev Tipi Wc Kağıt Asacağı (kapaklı). Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-ev-tipi-wc-kagit-asacagi-kapakli-3802-6.webp",
+      "gorsel": "/img/products/palex-krom-ev-tipi-wc-kagit-asacagi-kapakli-3802-6-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Ev Tipi Wc Kağıt Asacağı (kapaklı) · Palex · Krom",
       "sira": 541
@@ -10350,7 +10350,7 @@
       "aciklama": "Palex Krom Fotoselli El Kurutma Cihazı 2000 W. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-fotoselli-el-kurutma-cihazi-2000-w-3808-15.webp",
+      "gorsel": "/img/products/palex-krom-fotoselli-el-kurutma-cihazi-2000-w-3808-15-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Fotoselli El Kurutma Cihazı 2000 W · Palex · Krom",
       "sira": 542
@@ -10370,7 +10370,7 @@
       "aciklama": "Palex Krom Jumbo Wc Kağıt Aparatı. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-jumbo-wc-kagit-dispenseri-3802-3.webp",
+      "gorsel": "/img/products/palex-krom-jumbo-wc-kagit-dispenseri-3802-3-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Jumbo Wc Kağıt Aparatı · Palex · Krom",
       "sira": 543
@@ -10390,7 +10390,7 @@
       "aciklama": "Palex Krom Klozet Kapak Örtü Aparatı. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-klozet-kapak-ortu-dispenseri-3802-2.webp",
+      "gorsel": "/img/products/palex-krom-klozet-kapak-ortu-dispenseri-3802-2-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Klozet Kapak Örtü Aparatı · Palex · Krom",
       "sira": 544
@@ -10430,7 +10430,7 @@
       "aciklama": "Palex Krom Kombine Set Kare (400 Kağıt Kapasiteli). Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-kombine-set-kare-400-kagit-kapasiteli-3800-0.webp",
+      "gorsel": "/img/products/palex-krom-kombine-set-kare-400-kagit-kapasiteli-3800-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Kombine Set Kare (400 Kağıt Kapasiteli) · Palex · Krom",
       "sira": 546
@@ -10450,7 +10450,7 @@
       "aciklama": "Palex Krom Kombine Set Yuvarlak (400 Kağıt Kapasiteli). Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-kombine-set-yuvarlak-400-kagit-kapasiteli-3800-1.webp",
+      "gorsel": "/img/products/palex-krom-kombine-set-yuvarlak-400-kagit-kapasiteli-3800-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Kombine Set Yuvarlak (400 Kağıt Kapasiteli) · Palex · Krom",
       "sira": 547
@@ -10470,7 +10470,7 @@
       "aciklama": "Palex Krom Köpük Sabun Aparatı 1000 cc. Kapasite: 1000Ml. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-kopuk-sabun-dispenseri-1000-cc-3806-1.webp",
+      "gorsel": "/img/products/palex-krom-kopuk-sabun-dispenseri-1000-cc-3806-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Köpük Sabun Aparatı 1000 cc · Palex · 1000Ml · Krom",
       "sira": 548
@@ -10490,7 +10490,7 @@
       "aciklama": "Palex Krom Küre Sıvı Sabunluk 275 cc. Kapasite: 275Ml. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-kure-sivi-sabunluk-275-cc-3804-2.webp",
+      "gorsel": "/img/products/palex-krom-kure-sivi-sabunluk-275-cc-3804-2-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Küre Sıvı Sabunluk 275 cc · Palex · 275Ml · Krom",
       "sira": 549
@@ -10510,7 +10510,7 @@
       "aciklama": "Palex Krom Mikro Askılı Klozet Fırçası. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-mikro-askili-klozet-fircasi-3700-625.webp",
+      "gorsel": "/img/products/palex-krom-mikro-askili-klozet-fircasi-3700-625-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Mikro Askılı Klozet Fırçası · Palex · Krom",
       "sira": 550
@@ -10530,7 +10530,7 @@
       "aciklama": "Palex Krom Mikro Delikli Klozet Fırçası. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-mikro-delikli-klozet-fircasi-3700-700.webp",
+      "gorsel": "/img/products/palex-krom-mikro-delikli-klozet-fircasi-3700-700-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Mikro Delikli Klozet Fırçası · Palex · Krom",
       "sira": 551
@@ -10550,7 +10550,7 @@
       "aciklama": "Palex Krom Mikro Klozet Fırçası. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-mikro-klozet-fircasi-3700-621.webp",
+      "gorsel": "/img/products/palex-krom-mikro-klozet-fircasi-3700-621-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Mikro Klozet Fırçası · Palex · Krom",
       "sira": 552
@@ -10570,7 +10570,7 @@
       "aciklama": "Palex Krom Mini Pratik Tuvalet Kağıt Aparatı. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-mini-pratik-tuvalet-kagit-dispenseri-3802-9.webp",
+      "gorsel": "/img/products/palex-krom-mini-pratik-tuvalet-kagit-dispenseri-3802-9-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Mini Pratik Tuvalet Kağıt Aparatı · Palex · Krom",
       "sira": 553
@@ -10590,7 +10590,7 @@
       "aciklama": "Palex Krom Neptün Çöp Kovası 34 LT. Ölçü: 34 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-neptun-cop-kovasi-34-lt-3821-0.webp",
+      "gorsel": "/img/products/palex-krom-neptun-cop-kovasi-34-lt-3821-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Neptün Çöp Kovası 34 LT · Palex · 34 Lt · Krom",
       "sira": 554
@@ -10610,7 +10610,7 @@
       "aciklama": "Palex Krom Neptün Çöp Kovası 57 LT. Ölçü: 57 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-neptun-cop-kovasi-57-lt-3821-1.webp",
+      "gorsel": "/img/products/palex-krom-neptun-cop-kovasi-57-lt-3821-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Neptün Çöp Kovası 57 LT · Palex · 57 Lt · Krom",
       "sira": 555
@@ -10630,7 +10630,7 @@
       "aciklama": "Palex Krom Otomatik Havlu Aparatı 21 CM. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-otomatik-havlu-dispenseri-21-cm-3816-0.webp",
+      "gorsel": "/img/products/palex-krom-otomatik-havlu-dispenseri-21-cm-3816-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Otomatik Havlu Aparatı 21 CM · Palex · Krom",
       "sira": 556
@@ -10650,7 +10650,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 12 LT. Ölçü: 12 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-12-lt-3700-312.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-12-lt-3700-312-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 12 LT · Palex · 12 Lt · Krom",
       "sira": 557
@@ -10670,7 +10670,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 16 LT. Ölçü: 16 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-16-lt-3700-316.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-16-lt-3700-316-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 16 LT · Palex · 16 Lt · Krom",
       "sira": 558
@@ -10690,7 +10690,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 3 LT. Ölçü: 3 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-3-lt-3700-303.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-3-lt-3700-303-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 3 LT · Palex · 3 Lt · Krom",
       "sira": 559
@@ -10710,7 +10710,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 30 LT. Ölçü: 30 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-30-lt-3700-330.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-30-lt-3700-330-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 30 LT · Palex · 30 Lt · Krom",
       "sira": 560
@@ -10730,7 +10730,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 40 LT. Ölçü: 40 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-40-lt-3700-340.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-40-lt-3700-340-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 40 LT · Palex · 40 Lt · Krom",
       "sira": 561
@@ -10750,7 +10750,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 5 LT. Ölçü: 5 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-5-lt-3700-305.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-5-lt-3700-305-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 5 LT · Palex · 5 Lt · Krom",
       "sira": 562
@@ -10770,7 +10770,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 50 LT. Ölçü: 50 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-50-lt-3700-350.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-50-lt-3700-350-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 50 LT · Palex · 50 Lt · Krom",
       "sira": 563
@@ -10790,7 +10790,7 @@
       "aciklama": "Palex Krom Pedallı Çöp Kovası 8 LT. Ölçü: 8 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-8-lt-3700-308.webp",
+      "gorsel": "/img/products/palex-krom-pedalli-cop-kovasi-8-lt-3700-308-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pedallı Çöp Kovası 8 LT · Palex · 8 Lt · Krom",
       "sira": 564
@@ -10810,7 +10810,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 16 LT. Ölçü: 16 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-16-lt-3822-16.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-16-lt-3822-16-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 16 LT · Palex · 16 Lt · Krom",
       "sira": 565
@@ -10830,7 +10830,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 20 LT. Ölçü: 20 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-20-lt-3822-20.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-20-lt-3822-20-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 20 LT · Palex · 20 Lt · Krom",
       "sira": 566
@@ -10850,7 +10850,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 27 LT. Ölçü: 27 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-27-lt-3822-27.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-27-lt-3822-27-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 27 LT · Palex · 27 Lt · Krom",
       "sira": 567
@@ -10870,7 +10870,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 32 LT. Ölçü: 32 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-32-lt-3822-32.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-32-lt-3822-32-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 32 LT · Palex · 32 Lt · Krom",
       "sira": 568
@@ -10890,7 +10890,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 45 LT. Ölçü: 45 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-45-lt-3822-45.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-45-lt-3822-45-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 45 LT · Palex · 45 Lt · Krom",
       "sira": 569
@@ -10910,7 +10910,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 5 LT. Ölçü: 5 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-5-lt-3822-5.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-5-lt-3822-5-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 5 LT · Palex · 5 Lt · Krom",
       "sira": 570
@@ -10930,7 +10930,7 @@
       "aciklama": "Palex Krom Pratik Kapaklı Çöp Kovası 8 LT. Ölçü: 8 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-8-lt-3822-8.webp",
+      "gorsel": "/img/products/palex-krom-pratik-kapakli-cop-kovasi-8-lt-3822-8-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Pratik Kapaklı Çöp Kovası 8 LT · Palex · 8 Lt · Krom",
       "sira": 571
@@ -10950,7 +10950,7 @@
       "aciklama": "Palex Krom Sıvı Sabun Aparatı 1000 cc. Kapasite: 1000Ml. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-sivi-sabun-dispenseri-1000-cc-3804-1.webp",
+      "gorsel": "/img/products/palex-krom-sivi-sabun-dispenseri-1000-cc-3804-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Sıvı Sabun Aparatı 1000 cc · Palex · 1000Ml · Krom",
       "sira": 572
@@ -10970,7 +10970,7 @@
       "aciklama": "Palex Krom Sıvı Sabun Aparatı 500 cc. Kapasite: 500Ml. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-sivi-sabun-dispenseri-500-cc-3804-0.webp",
+      "gorsel": "/img/products/palex-krom-sivi-sabun-dispenseri-500-cc-3804-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Sıvı Sabun Aparatı 500 cc · Palex · 500Ml · Krom",
       "sira": 573
@@ -10990,7 +10990,7 @@
       "aciklama": "Palex Krom Silindir Sıvı Sabunluk 300 cc. Kapasite: 300Ml. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-silindir-sivi-sabunluk-300-cc-3804-3.webp",
+      "gorsel": "/img/products/palex-krom-silindir-sivi-sabunluk-300-cc-3804-3-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Silindir Sıvı Sabunluk 300 cc · Palex · 300Ml · Krom",
       "sira": 574
@@ -11010,7 +11010,7 @@
       "aciklama": "Palex Krom U Bahçe Tipi Çöp Kovası. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-u-bahce-tipi-cop-kovasi-3560-1.webp",
+      "gorsel": "/img/products/palex-krom-u-bahce-tipi-cop-kovasi-3560-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom U Bahçe Tipi Çöp Kovası · Palex · Krom",
       "sira": 575
@@ -11030,7 +11030,7 @@
       "aciklama": "Palex Krom Yanmaz Çöp Kovası 13 LT. Ölçü: 13 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-yanmaz-cop-kovasi-13-lt-3824-13.webp",
+      "gorsel": "/img/products/palex-krom-yanmaz-cop-kovasi-13-lt-3824-13-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Yanmaz Çöp Kovası 13 LT · Palex · 13 Lt · Krom",
       "sira": 576
@@ -11050,7 +11050,7 @@
       "aciklama": "Palex Krom Yanmaz Çöp Kovası 18 LT. Ölçü: 18 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-yanmaz-cop-kovasi-18-lt-3824-18.webp",
+      "gorsel": "/img/products/palex-krom-yanmaz-cop-kovasi-18-lt-3824-18-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Yanmaz Çöp Kovası 18 LT · Palex · 18 Lt · Krom",
       "sira": 577
@@ -11070,7 +11070,7 @@
       "aciklama": "Palex Krom Yanmaz Çöp Kovası 8 LT. Ölçü: 8 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-yanmaz-cop-kovasi-8-lt-3824-8.webp",
+      "gorsel": "/img/products/palex-krom-yanmaz-cop-kovasi-8-lt-3824-8-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Yanmaz Çöp Kovası 8 LT · Palex · 8 Lt · Krom",
       "sira": 578
@@ -11090,7 +11090,7 @@
       "aciklama": "Palex Krom Z Katlama Havlu Aparatı 200 Lü. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-z-katlama-havlu-dispenseri-200-lu-3802-1.webp",
+      "gorsel": "/img/products/palex-krom-z-katlama-havlu-dispenseri-200-lu-3802-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Z Katlama Havlu Aparatı 200 Lü · Palex · Krom",
       "sira": 579
@@ -11110,7 +11110,7 @@
       "aciklama": "Palex Krom Z Katlama Havlu Aparatı 400 Lü. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-z-katlama-havlu-dispenseri-400-lu-3802-0.webp",
+      "gorsel": "/img/products/palex-krom-z-katlama-havlu-dispenseri-400-lu-3802-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Z Katlama Havlu Aparatı 400 Lü · Palex · Krom",
       "sira": 580
@@ -11130,7 +11130,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 11 LT. Ölçü: 11 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-11-lt-3800-311.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-11-lt-3800-311-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 11 LT · Palex · 11 Lt · Krom",
       "sira": 581
@@ -11150,7 +11150,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 16 LT. Ölçü: 16 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-16-lt-3800-316.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-16-lt-3800-316-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 16 LT · Palex · 16 Lt · Krom",
       "sira": 582
@@ -11170,7 +11170,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 36 LT. Ölçü: 36 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-36-lt-3800-336.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-36-lt-3800-336-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 36 LT · Palex · 36 Lt · Krom",
       "sira": 583
@@ -11190,7 +11190,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 45 LT. Ölçü: 45 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-45-lt-3800-345.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-45-lt-3800-345-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 45 LT · Palex · 45 Lt · Krom",
       "sira": 584
@@ -11210,7 +11210,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 54 LT. Ölçü: 54 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-54-lt-3800-354.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-54-lt-3800-354-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 54 LT · Palex · 54 Lt · Krom",
       "sira": 585
@@ -11230,7 +11230,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 6 LT. Ölçü: 6 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-6-lt-3800-306.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-6-lt-3800-306-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 6 LT · Palex · 6 Lt · Krom",
       "sira": 586
@@ -11250,7 +11250,7 @@
       "aciklama": "Palex Krom Çatı Kapaklı Çöp Kovası 80 LT. Ölçü: 80 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-80-lt-3800-380.webp",
+      "gorsel": "/img/products/palex-krom-cati-kapakli-cop-kovasi-80-lt-3800-380-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çatı Kapaklı Çöp Kovası 80 LT · Palex · 80 Lt · Krom",
       "sira": 587
@@ -11270,7 +11270,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 12 LT. Ölçü: 12 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-12-lt-3820-12.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-12-lt-3820-12-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 12 LT · Palex · 12 Lt · Krom",
       "sira": 588
@@ -11290,7 +11290,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 16 LT. Ölçü: 16 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-16-lt-3820-16.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-16-lt-3820-16-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 16 LT · Palex · 16 Lt · Krom",
       "sira": 589
@@ -11310,7 +11310,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 20 LT. Ölçü: 20 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-20-lt-3820-20.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-20-lt-3820-20-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 20 LT · Palex · 20 Lt · Krom",
       "sira": 590
@@ -11330,7 +11330,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 27 LT. Ölçü: 27 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-27-lt-3820-27.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-27-lt-3820-27-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 27 LT · Palex · 27 Lt · Krom",
       "sira": 591
@@ -11350,7 +11350,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 32 LT. Ölçü: 32 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-32-lt-3820-32.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-32-lt-3820-32-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 32 LT · Palex · 32 Lt · Krom",
       "sira": 592
@@ -11370,7 +11370,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 45 LT. Ölçü: 45 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-45-lt-3820-45.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-45-lt-3820-45-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 45 LT · Palex · 45 Lt · Krom",
       "sira": 593
@@ -11390,7 +11390,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 5 LT. Ölçü: 5 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-5-lt-3820-5.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-5-lt-3820-5-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 5 LT · Palex · 5 Lt · Krom",
       "sira": 594
@@ -11410,7 +11410,7 @@
       "aciklama": "Palex Krom Çemberli Çöp Kovası 8 LT. Ölçü: 8 Lt. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-8-lt-3820-8.webp",
+      "gorsel": "/img/products/palex-krom-cemberli-cop-kovasi-8-lt-3820-8-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çemberli Çöp Kovası 8 LT · Palex · 8 Lt · Krom",
       "sira": 595
@@ -11430,7 +11430,7 @@
       "aciklama": "Palex Krom Çift Ayaklı Bahçe Tipi Çöp Kovası. Malzeme: Krom.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-krom-cift-ayakli-bahce-tipi-cop-kovasi-3560-6.webp",
+      "gorsel": "/img/products/palex-krom-cift-ayakli-bahce-tipi-cop-kovasi-3560-6-verified.webp",
       "gorselTuru": "urun",
       "satir": "Krom Çift Ayaklı Bahçe Tipi Çöp Kovası · Palex · Krom",
       "sira": 596
@@ -11450,7 +11450,7 @@
       "aciklama": "Palex Köpük Sabun Kartuşu. Kapasite: 1000Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kopuk-sabun-kartusu-3500.webp",
+      "gorsel": "/img/products/palex-kopuk-sabun-kartusu-3500-verified.webp",
       "gorselTuru": "urun",
       "satir": "Köpük Sabun Kartuşu · Palex · 1000Ml",
       "sira": 597
@@ -11470,7 +11470,7 @@
       "aciklama": "Palex Köpük Sabun Kartuşu 500 cc Dolu. Kapasite: 500Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-kopuk-sabun-kartusu-500-cc-dolu-3496.webp",
+      "gorsel": "/img/products/palex-kopuk-sabun-kartusu-500-cc-dolu-3496-verified.webp",
       "gorselTuru": "urun",
       "satir": "Köpük Sabun Kartuşu 500 cc Dolu · Palex · 500Ml",
       "sira": 598
@@ -11490,7 +11490,7 @@
       "aciklama": "Palex Lobi Küllük Büyük 70 CM.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-lobi-kulluk-buyuk-70-cm-3568-1.webp",
+      "gorsel": "/img/products/palex-lobi-kulluk-buyuk-70-cm-3568-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Lobi Küllük Büyük 70 CM · Palex",
       "sira": 599
@@ -11510,7 +11510,7 @@
       "aciklama": "Palex Masa Üstü Peçete Aparatı (hafif). Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-masa-ustu-pecete-dispenseri-hafif-3474-h-0.webp",
+      "gorsel": "/img/products/palex-masa-ustu-pecete-dispenseri-hafif-3474-h-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Masa Üstü Peçete Aparatı (hafif) · Palex · Plastik · Beyaz",
       "sira": 600
@@ -11530,7 +11530,7 @@
       "aciklama": "Palex Metal Streç ve Alüminyum Folyo Aparatı 35 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-metal-strec-ve-aluminyum-folyo-disp-35-cm-3830-35.webp",
+      "gorsel": "/img/products/palex-metal-strec-ve-aluminyum-folyo-disp-35-cm-3830-35-verified.webp",
       "gorselTuru": "urun",
       "satir": "Metal Streç ve Alüminyum Folyo Aparatı 35 CM · Palex · Metal",
       "sira": 601
@@ -11550,7 +11550,7 @@
       "aciklama": "Palex Metal Streç ve Alüminyum Folyo Aparatı 45 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-metal-strec-ve-aluminyum-folyo-disp-45-cm-3830-45.webp",
+      "gorsel": "/img/products/palex-metal-strec-ve-aluminyum-folyo-disp-45-cm-3830-45-verified.webp",
       "gorselTuru": "urun",
       "satir": "Metal Streç ve Alüminyum Folyo Aparatı 45 CM · Palex · Metal",
       "sira": 602
@@ -11570,7 +11570,7 @@
       "aciklama": "Palex Muayene Eldiveni Aparatı Beyaz. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-muayene-eldiveni-dispenseri-beyaz-md-01.webp",
+      "gorsel": "/img/products/palex-muayene-eldiveni-dispenseri-beyaz-md-01-verified.webp",
       "gorselTuru": "urun",
       "satir": "Muayene Eldiveni Aparatı Beyaz · Palex · Plastik",
       "sira": 603
@@ -11590,7 +11590,7 @@
       "aciklama": "Palex Muayene Masa Örtüsü Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-muayene-masa-ortusu-dispenseri-3486.webp",
+      "gorsel": "/img/products/palex-muayene-masa-ortusu-dispenseri-3486-verified.webp",
       "gorselTuru": "urun",
       "satir": "Muayene Masa Örtüsü Aparatı · Palex · Plastik",
       "sira": 604
@@ -11610,7 +11610,7 @@
       "aciklama": "Palex Mikro Streç Aparatı 35 CM 1500 Mt Büyük. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mikro-strec-aparati-35-cm-1500-mt-buyuk-3514-3.webp",
+      "gorsel": "/img/products/palex-mikro-strec-aparati-35-cm-1500-mt-buyuk-3514-3-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mikro Streç Aparatı 35 CM 1500 Mt Büyük · Palex · Plastik · Beyaz",
       "sira": 605
@@ -11630,7 +11630,7 @@
       "aciklama": "Palex Mikro Streç Aparatı 35 CM 1500 Mt Orta. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mikro-strec-aparati-35-cm-1500-mt-orta-3514-2.webp",
+      "gorsel": "/img/products/palex-mikro-strec-aparati-35-cm-1500-mt-orta-3514-2-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mikro Streç Aparatı 35 CM 1500 Mt Orta · Palex · Plastik · Beyaz",
       "sira": 606
@@ -11650,7 +11650,7 @@
       "aciklama": "Palex Mikro Streç Aparatı 35 CM 300 Mt Standart. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mikro-strec-aparati-35-cm-300-mt-standart-3514-1.webp",
+      "gorsel": "/img/products/palex-mikro-strec-aparati-35-cm-300-mt-standart-3514-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mikro Streç Aparatı 35 CM 300 Mt Standart · Palex · Plastik · Beyaz",
       "sira": 607
@@ -11670,7 +11670,7 @@
       "aciklama": "Palex Mikro Streç Aparatı 45 CM 1500 Mt Büyük. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mikro-strec-aparati-45-cm-1500-mt-buyuk-4512-3.webp",
+      "gorsel": "/img/products/palex-mikro-strec-aparati-45-cm-1500-mt-buyuk-4512-3-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mikro Streç Aparatı 45 CM 1500 Mt Büyük · Palex · Plastik · Beyaz",
       "sira": 608
@@ -11690,7 +11690,7 @@
       "aciklama": "Palex Mikro Streç Aparatı 45 CM 1500 Mt Orta. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mikro-strec-aparati-45-cm-1500-mt-orta-4512-2.webp",
+      "gorsel": "/img/products/palex-mikro-strec-aparati-45-cm-1500-mt-orta-4512-2-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mikro Streç Aparatı 45 CM 1500 Mt Orta · Palex · Plastik · Beyaz",
       "sira": 609
@@ -11710,7 +11710,7 @@
       "aciklama": "Palex Mikro Streç Aparatı 45 CM 300 Mt Standart. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mikro-strec-aparati-45-cm-300-mt-standart-4512-1.webp",
+      "gorsel": "/img/products/palex-mikro-strec-aparati-45-cm-300-mt-standart-4512-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mikro Streç Aparatı 45 CM 300 Mt Standart · Palex · Plastik · Beyaz",
       "sira": 610
@@ -11730,7 +11730,7 @@
       "aciklama": "Palex Mini Sıvı Sabun Aparatı 250 cc. Kapasite: 250Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mini-sivi-sabun-dispenseri-250-cc-3562-0.webp",
+      "gorsel": "/img/products/palex-mini-sivi-sabun-dispenseri-250-cc-3562-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mini Sıvı Sabun Aparatı 250 cc · Palex · 250Ml · Plastik · Beyaz",
       "sira": 611
@@ -11750,7 +11750,7 @@
       "aciklama": "Palex Mini Sıvı Sabun Aparatı 250 Cc*2. Kapasite: 250Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mini-sivi-sabun-dispenseri-250-cc-2-3564-0.webp",
+      "gorsel": "/img/products/palex-mini-sivi-sabun-dispenseri-250-cc-2-3564-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mini Sıvı Sabun Aparatı 250 Cc*2 · Palex · 250Ml · Plastik · Beyaz",
       "sira": 612
@@ -11770,7 +11770,7 @@
       "aciklama": "Palex Mini Sıvı Sabun Aparatı Üçlü 250 Cc*3. Kapasite: 250Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-mini-sivi-sabun-dispenseri-uclu-250-cc-3-3566-0.webp",
+      "gorsel": "/img/products/palex-mini-sivi-sabun-dispenseri-uclu-250-cc-3-3566-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Mini Sıvı Sabun Aparatı Üçlü 250 Cc*3 · Palex · 250Ml · Plastik · Beyaz",
       "sira": 613
@@ -11790,7 +11790,7 @@
       "aciklama": "Palex New Dezenfektan Aparatı. Kapasite: 1000Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-new-dezenfektan-dispenseri-nd-1.webp",
+      "gorsel": "/img/products/palex-new-dezenfektan-dispenseri-nd-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "New Dezenfektan Aparatı · Palex · 1000Ml · Plastik",
       "sira": 614
@@ -11810,7 +11810,7 @@
       "aciklama": "Palex New Nano Hijyen Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-new-nano-hijyen-dispenseri-3548-0.webp",
+      "gorsel": "/img/products/palex-new-nano-hijyen-dispenseri-3548-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "New Nano Hijyen Aparatı · Palex · Plastik · Beyaz",
       "sira": 615
@@ -11830,7 +11830,7 @@
       "aciklama": "Palex New Nano Hijyen Koku 300 cc. Kapasite: 300Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-new-nano-hijyen-koku-300-cc-3548-1.webp",
+      "gorsel": "/img/products/palex-new-nano-hijyen-koku-300-cc-3548-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "New Nano Hijyen Koku 300 cc · Palex · 300Ml",
       "sira": 616
@@ -11850,7 +11850,7 @@
       "aciklama": "Palex Oda Parfümü 5 KG.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-oda-parfumu-5-kg-zmr266.webp",
+      "gorsel": "/img/products/palex-oda-parfumu-5-kg-zmr266-verified.webp",
       "gorselTuru": "urun",
       "satir": "Oda Parfümü 5 KG · Palex",
       "sira": 617
@@ -11870,7 +11870,7 @@
       "aciklama": "Palex Oda Spreyi 500 cc. Kapasite: 500Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-oda-spreyi-500-cc-zmr146.webp",
+      "gorsel": "/img/products/palex-oda-spreyi-500-cc-zmr146-verified.webp",
       "gorselTuru": "urun",
       "satir": "Oda Spreyi 500 cc · Palex · 500Ml",
       "sira": 618
@@ -11890,7 +11890,7 @@
       "aciklama": "Palex Plastik Bardak Aparatı Mıknatıslı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-plastik-bardak-dispenseri-miknatisli-s-u.webp",
+      "gorsel": "/img/products/palex-plastik-bardak-dispenseri-miknatisli-s-u-verified.webp",
       "gorselTuru": "urun",
       "satir": "Plastik Bardak Aparatı Mıknatıslı · Palex · Plastik · Beyaz",
       "sira": 619
@@ -11910,7 +11910,7 @@
       "aciklama": "Palex Plastik Bardak Aparatı Vidalı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-plastik-bardak-dispenseri-vidali-s-u-v.webp",
+      "gorsel": "/img/products/palex-plastik-bardak-dispenseri-vidali-s-u-v-verified.webp",
       "gorselTuru": "urun",
       "satir": "Plastik Bardak Aparatı Vidalı · Palex · Plastik · Beyaz",
       "sira": 620
@@ -11930,7 +11930,7 @@
       "aciklama": "Palex Plastik Streç ve Alm. Folyo Aparatı 35 CM. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-plastik-strec-ve-alm-folyo-dispenseri-35-cm-s-35.webp",
+      "gorsel": "/img/products/palex-plastik-strec-ve-alm-folyo-dispenseri-35-cm-s-35-verified.webp",
       "gorselTuru": "urun",
       "satir": "Plastik Streç ve Alm. Folyo Aparatı 35 CM · Palex · Plastik",
       "sira": 621
@@ -11950,7 +11950,7 @@
       "aciklama": "Palex Plastik Streç ve Alm. Folyo Aparatı 45 CM. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-plastik-strec-ve-alm-folyo-dispenseri-45-cm-s-45.webp",
+      "gorsel": "/img/products/palex-plastik-strec-ve-alm-folyo-dispenseri-45-cm-s-45-verified.webp",
       "gorselTuru": "urun",
       "satir": "Plastik Streç ve Alm. Folyo Aparatı 45 CM · Palex · Plastik",
       "sira": 622
@@ -11970,7 +11970,7 @@
       "aciklama": "Palex Pratik Tuvalet Kağıdı Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-pratik-tuvalet-kagidi-dispenseri-3440-0.webp",
+      "gorsel": "/img/products/palex-pratik-tuvalet-kagidi-dispenseri-3440-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Pratik Tuvalet Kağıdı Aparatı · Palex · Plastik · Beyaz",
       "sira": 623
@@ -11990,7 +11990,7 @@
       "aciklama": "Palex Prestij Köpük Sabun Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-prestij-kopuk-sabun-dispenseri-3506-0.webp",
+      "gorsel": "/img/products/palex-prestij-kopuk-sabun-dispenseri-3506-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Prestij Köpük Sabun Aparatı · Palex · Plastik · Beyaz",
       "sira": 624
@@ -12010,7 +12010,7 @@
       "aciklama": "Palex Prestij Otomatik Havlu Aparatı 21 CM. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-prestij-otomatik-havlu-dispenseri-21-cm-3491-0.webp",
+      "gorsel": "/img/products/palex-prestij-otomatik-havlu-dispenseri-21-cm-3491-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Prestij Otomatik Havlu Aparatı 21 CM · Palex · Plastik · Beyaz",
       "sira": 625
@@ -12030,7 +12030,7 @@
       "aciklama": "Palex Prestij Peçetelik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-prestij-pecetelik-pp-002.webp",
+      "gorsel": "/img/products/palex-prestij-pecetelik-pp-002-verified.webp",
       "gorselTuru": "urun",
       "satir": "Prestij Peçetelik · Palex · Beyaz",
       "sira": 626
@@ -12050,7 +12050,7 @@
       "aciklama": "Palex Prestij Sıvı Sabun Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-prestij-sivi-sabun-dispenseri-3508-0.webp",
+      "gorsel": "/img/products/palex-prestij-sivi-sabun-dispenseri-3508-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Prestij Sıvı Sabun Aparatı · Palex · Plastik · Beyaz",
       "sira": 627
@@ -12070,7 +12070,7 @@
       "aciklama": "Palex Pisuvar Süzgeç.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-pisuvar-suzgec-3600-0.webp",
+      "gorsel": "/img/products/palex-pisuvar-suzgec-3600-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Pisuvar Süzgeç · Palex",
       "sira": 628
@@ -12090,7 +12090,7 @@
       "aciklama": "Palex Refıll Köpük Sabun 800 ML. Kapasite: 800Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-refill-kopuk-sabun-800-ml-3470-d.webp",
+      "gorsel": "/img/products/palex-refill-kopuk-sabun-800-ml-3470-d-verified.webp",
       "gorselTuru": "urun",
       "satir": "Refıll Köpük Sabun 800 ML · Palex · 800Ml",
       "sira": 629
@@ -12170,7 +12170,7 @@
       "aciklama": "Palex Sensörlü Çöp Kovası 13 LT Siyah. Ölçü: 13 Lt. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-sensorlu-cop-kovasi-13-lt-siyah-sp-13.webp",
+      "gorsel": "/img/products/palex-sensorlu-cop-kovasi-13-lt-siyah-sp-13-verified.webp",
       "gorselTuru": "urun",
       "satir": "Sensörlü Çöp Kovası 13 LT Siyah · Palex · 13 Lt · Metal",
       "sira": 633
@@ -12190,7 +12190,7 @@
       "aciklama": "Palex Sensörlü Çöp Kovası 22 LT Siyah. Ölçü: 22 Lt. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-sensorlu-cop-kovasi-22-lt-siyah-sp-22.webp",
+      "gorsel": "/img/products/palex-sensorlu-cop-kovasi-22-lt-siyah-sp-22-verified.webp",
       "gorselTuru": "urun",
       "satir": "Sensörlü Çöp Kovası 22 LT Siyah · Palex · 22 Lt · Metal",
       "sira": 634
@@ -12210,7 +12210,7 @@
       "aciklama": "Palex Sensörlü Çöp Kovası 30 LT Siyah. Ölçü: 30 Lt. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-sensorlu-cop-kovasi-30-lt-siyah-sp-30.webp",
+      "gorsel": "/img/products/palex-sensorlu-cop-kovasi-30-lt-siyah-sp-30-verified.webp",
       "gorselTuru": "urun",
       "satir": "Sensörlü Çöp Kovası 30 LT Siyah · Palex · 30 Lt · Metal",
       "sira": 635
@@ -12230,7 +12230,7 @@
       "aciklama": "Palex Standart Jumbo Tuvalet Kağıdı Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-standart-jumbo-tuvalet-kagidi-dispenseri-3448-0.webp",
+      "gorsel": "/img/products/palex-standart-jumbo-tuvalet-kagidi-dispenseri-3448-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Standart Jumbo Tuvalet Kağıdı Aparatı · Palex · Plastik · Beyaz",
       "sira": 636
@@ -12250,7 +12250,7 @@
       "aciklama": "Palex Standart Z Katlı Kağıt Havlu Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-standart-z-katli-kagit-havlu-dispenserleri-3570-0.webp",
+      "gorsel": "/img/products/palex-standart-z-katli-kagit-havlu-dispenserleri-3570-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Standart Z Katlı Kağıt Havlu Aparatı · Palex · Plastik · Beyaz",
       "sira": 637
@@ -12270,7 +12270,7 @@
       "aciklama": "Palex Still Autocut Havlu Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-still-autocut-havlu-dispenseri-s-at-0.webp",
+      "gorsel": "/img/products/palex-still-autocut-havlu-dispenseri-s-at-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Still Autocut Havlu Aparatı · Palex · Plastik · Beyaz",
       "sira": 638
@@ -12290,7 +12290,7 @@
       "aciklama": "Palex Still Otomatik Havlu Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-still-otomatik-havlu-dispenseri-sh-0.webp",
+      "gorsel": "/img/products/palex-still-otomatik-havlu-dispenseri-sh-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Still Otomatik Havlu Aparatı · Palex · Plastik · Beyaz",
       "sira": 639
@@ -12310,7 +12310,7 @@
       "aciklama": "Palex Still Peçetelik Ağır.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-still-pecetelik-agir-stp-a.webp",
+      "gorsel": "/img/products/palex-still-pecetelik-agir-stp-a-verified.webp",
       "gorselTuru": "urun",
       "satir": "Still Peçetelik Ağır · Palex · Beyaz",
       "sira": 640
@@ -12330,7 +12330,7 @@
       "aciklama": "Palex Still Peçetelik Hafif.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-still-pecetelik-hafif-stp-h.webp",
+      "gorsel": "/img/products/palex-still-pecetelik-hafif-stp-h-verified.webp",
       "gorselTuru": "urun",
       "satir": "Still Peçetelik Hafif · Palex · Beyaz",
       "sira": 641
@@ -12350,7 +12350,7 @@
       "aciklama": "Palex Trigerli Sıvı Püskürtücü 1000 CC. Kapasite: 1000Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-trigerli-sivi-puskurtucu-1000-cc-3812-1.webp",
+      "gorsel": "/img/products/palex-trigerli-sivi-puskurtucu-1000-cc-3812-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Trigerli Sıvı Püskürtücü 1000 CC · Palex · 1000Ml",
       "sira": 642
@@ -12370,7 +12370,7 @@
       "aciklama": "Palex Trigerli Sıvı Püskürtücü 500 CC. Kapasite: 500Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-trigerli-sivi-puskurtucu-500-cc-3812-0.webp",
+      "gorsel": "/img/products/palex-trigerli-sivi-puskurtucu-500-cc-3812-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Trigerli Sıvı Püskürtücü 500 CC · Palex · 500Ml",
       "sira": 643
@@ -12390,7 +12390,7 @@
       "aciklama": "Palex U Bahçe Tipi Çöp Kovası Boyalı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-u-bahce-tipi-cop-kovasi-boyali-3560-4.webp",
+      "gorsel": "/img/products/palex-u-bahce-tipi-cop-kovasi-boyali-3560-4-verified.webp",
       "gorselTuru": "urun",
       "satir": "U Bahçe Tipi Çöp Kovası Boyalı · Palex · Plastik",
       "sira": 644
@@ -12410,7 +12410,7 @@
       "aciklama": "Palex Yatay Peçetelik Ağır.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-yatay-pecetelik-agir-3536-0.webp",
+      "gorsel": "/img/products/palex-yatay-pecetelik-agir-3536-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Yatay Peçetelik Ağır · Palex · Beyaz",
       "sira": 645
@@ -12430,7 +12430,7 @@
       "aciklama": "Palex Yatay Peçetelik Hafif.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-yatay-pecetelik-hafif-3536-h.webp",
+      "gorsel": "/img/products/palex-yatay-pecetelik-hafif-3536-h-verified.webp",
       "gorselTuru": "urun",
       "satir": "Yatay Peçetelik Hafif · Palex · Beyaz",
       "sira": 646
@@ -12450,7 +12450,7 @@
       "aciklama": "Palex Yatay Z Havlu Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-yatay-z-havlu-dispenseri-3534-0.webp",
+      "gorsel": "/img/products/palex-yatay-z-havlu-dispenseri-3534-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Yatay Z Havlu Aparatı · Palex · Plastik · Beyaz",
       "sira": 647
@@ -12470,7 +12470,7 @@
       "aciklama": "Palex Yerçek Metal 45 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-yercek-metal-45-cm-zmr022.webp",
+      "gorsel": "/img/products/palex-yercek-metal-45-cm-zmr022-verified.webp",
       "gorselTuru": "urun",
       "satir": "Yerçek Metal 45 CM · Palex · Metal",
       "sira": 648
@@ -12490,7 +12490,7 @@
       "aciklama": "Palex Yerçek Metal 55 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-yercek-metal-55-cm-zmr023.webp",
+      "gorsel": "/img/products/palex-yercek-metal-55-cm-zmr023-verified.webp",
       "gorselTuru": "urun",
       "satir": "Yerçek Metal 55 CM · Palex · Metal",
       "sira": 649
@@ -12510,7 +12510,7 @@
       "aciklama": "Palex Yerçek Metal 75 CM. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-yercek-metal-75-cm-zmr024.webp",
+      "gorsel": "/img/products/palex-yercek-metal-75-cm-zmr024-verified.webp",
       "gorselTuru": "urun",
       "satir": "Yerçek Metal 75 CM · Palex · Metal",
       "sira": 650
@@ -12530,7 +12530,7 @@
       "aciklama": "Palex Çöp Kovası Masa Altı Delikli 13 LT. Ölçü: 13 Lt. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-cop-kovasi-masa-alti-delikli-13-lt-3700-1.webp",
+      "gorsel": "/img/products/palex-cop-kovasi-masa-alti-delikli-13-lt-3700-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "Çöp Kovası Masa Altı Delikli 13 LT · Palex · 13 Lt · Plastik · Siyah",
       "sira": 651
@@ -12550,7 +12550,7 @@
       "aciklama": "Palex Çöp Kovası Masa Altı Metal 13 LT. Ölçü: 13 Lt. Malzeme: Metal.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-cop-kovasi-masa-alti-metal-13-lt-3700-0.webp",
+      "gorsel": "/img/products/palex-cop-kovasi-masa-alti-metal-13-lt-3700-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Çöp Kovası Masa Altı Metal 13 LT · Palex · 13 Lt · Metal · Siyah",
       "sira": 652
@@ -12570,7 +12570,7 @@
       "aciklama": "Palex Çift Ayaklı Bahçe Tipi Çöp Kovası Boyalı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-cift-ayakli-bahce-tipi-cop-kovasi-boyali-3560-8.webp",
+      "gorsel": "/img/products/palex-cift-ayakli-bahce-tipi-cop-kovasi-boyali-3560-8-verified.webp",
       "gorselTuru": "urun",
       "satir": "Çift Ayaklı Bahçe Tipi Çöp Kovası Boyalı · Palex · Plastik",
       "sira": 653
@@ -12590,7 +12590,7 @@
       "aciklama": "Palex Üstten Dolmalı Köpük Sabun Aparatı. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-ustten-dolmali-kopuk-sabun-dispenseri-3580-0.webp",
+      "gorsel": "/img/products/palex-ustten-dolmali-kopuk-sabun-dispenseri-3580-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "Üstten Dolmalı Köpük Sabun Aparatı · Palex · Plastik · Beyaz",
       "sira": 654
@@ -12610,7 +12610,7 @@
       "aciklama": "Palex İnter Dökme Köpük Aparatı 550 CC. Kapasite: 550Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-dokme-kopuk-dispenseri-550-cc-3450-d-0.webp",
+      "gorsel": "/img/products/palex-inter-dokme-kopuk-dispenseri-550-cc-3450-d-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Dökme Köpük Aparatı 550 CC · Palex · 550Ml · Plastik · Beyaz",
       "sira": 655
@@ -12630,7 +12630,7 @@
       "aciklama": "Palex İnter Kartuşlu Köpük Aparatı 1000 CC. Kapasite: 1000Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-kartuslu-kopuk-dispenseri-1000-cc-3450-0.webp",
+      "gorsel": "/img/products/palex-inter-kartuslu-kopuk-dispenseri-1000-cc-3450-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Kartuşlu Köpük Aparatı 1000 CC · Palex · 1000Ml · Plastik · Beyaz",
       "sira": 656
@@ -12650,7 +12650,7 @@
       "aciklama": "Palex İnter Köpük Sabun Kartuşu 1000 CC. Kapasite: 1000Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-kopuk-sabun-kartusu-1000-cc-3450-b.webp",
+      "gorsel": "/img/products/palex-inter-kopuk-sabun-kartusu-1000-cc-3450-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Köpük Sabun Kartuşu 1000 CC · Palex · 1000Ml",
       "sira": 657
@@ -12670,7 +12670,7 @@
       "aciklama": "Palex İnter Mini Dökme Köpük Aparatı 600 CC. Kapasite: 600Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-mini-dokme-kopuk-dispenseri-600-cc-3452-d-1.webp",
+      "gorsel": "/img/products/palex-inter-mini-dokme-kopuk-dispenseri-600-cc-3452-d-1-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Mini Dökme Köpük Aparatı 600 CC · Palex · 600Ml · Plastik · Beyaz",
       "sira": 658
@@ -12690,7 +12690,7 @@
       "aciklama": "Palex İnter Mini Dökme Sıvı Sabun Aparatı 600 CC. Kapasite: 600Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-mini-dokme-sivi-sabun-dispenseri-600-cc-3456-d-0.webp",
+      "gorsel": "/img/products/palex-inter-mini-dokme-sivi-sabun-dispenseri-600-cc-3456-d-0-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Mini Dökme Sıvı Sabun Aparatı 600 CC · Palex · 600Ml · Plastik · Beyaz",
       "sira": 659
@@ -12710,7 +12710,7 @@
       "aciklama": "Palex İnter Mini Kartuşlu Köpük Aparatı 800 CC. Kapasite: 800Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-mini-kartuslu-kopuk-dispenseri-800-cc-3452-02.webp",
+      "gorsel": "/img/products/palex-inter-mini-kartuslu-kopuk-dispenseri-800-cc-3452-02-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Mini Kartuşlu Köpük Aparatı 800 CC · Palex · 800Ml · Plastik · Beyaz",
       "sira": 660
@@ -12730,7 +12730,7 @@
       "aciklama": "Palex İnter Mini Kartuşlu Sıvı Sabun Aparatı 800 CC. Kapasite: 800Ml. Malzeme: Plastik.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-mini-kartuslu-sivi-sabun-dispenseri-800-cc-3456-01.webp",
+      "gorsel": "/img/products/palex-inter-mini-kartuslu-sivi-sabun-dispenseri-800-cc-3456-01-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Mini Kartuşlu Sıvı Sabun Aparatı 800 CC · Palex · 800Ml · Plastik · Beyaz",
       "sira": 661
@@ -12750,7 +12750,7 @@
       "aciklama": "Palex İnter Mini Köpük Sabun Kartuşu 800 CC. Kapasite: 800Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-mini-kopuk-sabun-kartusu-800-cc-3452-b.webp",
+      "gorsel": "/img/products/palex-inter-mini-kopuk-sabun-kartusu-800-cc-3452-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Mini Köpük Sabun Kartuşu 800 CC · Palex · 800Ml",
       "sira": 662
@@ -12770,7 +12770,7 @@
       "aciklama": "Palex İnter Mini Sıvı Sabun Kartuşu 800 CC. Kapasite: 800Ml.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-inter-mini-sivi-sabun-kartusu-800-cc-3456-b.webp",
+      "gorsel": "/img/products/palex-inter-mini-sivi-sabun-kartusu-800-cc-3456-b-verified.webp",
       "gorselTuru": "urun",
       "satir": "İnter Mini Sıvı Sabun Kartuşu 800 CC · Palex · 800Ml",
       "sira": 663
@@ -12790,7 +12790,7 @@
       "aciklama": "Palex Şampanya Küllük 65 CM.",
       "not": "",
       "aktif": true,
-      "gorsel": "/img/products/palex-sampanya-kulluk-65-cm-3568-2.webp",
+      "gorsel": "/img/products/palex-sampanya-kulluk-65-cm-3568-2-verified.webp",
       "gorselTuru": "urun",
       "satir": "Şampanya Küllük 65 CM · Palex",
       "sira": 664

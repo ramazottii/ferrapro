@@ -237,7 +237,7 @@ assert.ok(!data.urunler.some((row)=>row.alt==='A1' && row.marka==='Bellino'));
 assert.ok(data.urunler.filter((row)=>row.alt==='A1').every((row)=>row.gorselTuru==='urun'));
 assert.ok(data.urunler.filter((row)=>row.kategori==='C').every((row)=>row.gorselTuru==='urun'));
 assert.equal(data.urunler.find((row)=>row.id==='p-128').marka,'Palex');
-assert.equal(data.urunler.find((row)=>row.id==='p-128').gorsel,'/img/products/palex-z-havlu.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-128').gorsel,'/img/products/palex-z-havlu-clean.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-145').gorsel,'/img/products/palex-sensor-sivi.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-148').marka,'Palex');
 assert.equal(data.urunler.filter((row)=>row.alt==='A2').length,16);
@@ -311,7 +311,7 @@ assert.equal(data.urunler.find((row)=>row.marka==='Çaykur' && row.ad==='Tiryaki
 assert.equal(data.urunler.find((row)=>row.marka==='Çaykur' && row.ad==='Turist Çay').gorsel,'/img/products/caykur-turist.webp');
 assert.equal(data.urunler.find((row)=>row.marka==='Çaykur' && row.ad==='Filiz Çay').gorsel,'/img/products/caykur-filiz.webp');
 assert.equal(data.urunler.find((row)=>row.marka==='Çaykur' && row.ad==='Tomurcuk Çay').olcu,'200Gr');
-assert.equal(data.urunler.find((row)=>row.marka==='Çaykur' && row.ad==='Tomurcuk Çay').gorsel,'/img/products/caykur-tomurcuk.webp');
+assert.equal(data.urunler.find((row)=>row.marka==='Çaykur' && row.ad==='Tomurcuk Çay').gorsel,'/img/products/caykur-tomurcuk-clean.webp');
 assert.equal(data.urunler.find((row)=>row.marka==='Doğuş' && row.ad==='Jumbo Demlik Çay').olcu,'40Gr');
 assert.equal(data.urunler.find((row)=>row.marka==='Doğuş' && row.ad==='Jumbo Demlik Çay').ambalajAdedi,"25'li");
 assert.equal(data.urunler.find((row)=>row.marka==='Doğuş' && row.ad==='Jumbo Demlik Çay').gorsel,'/img/products/dogus-jumbo-demlik.webp');
@@ -326,7 +326,7 @@ assert.equal(data.urunler.find((row)=>row.ad==='Tek Sargılı Küp Şeker').gors
 assert.ok(!data.urunler.some((row)=>row.ad==='Tek Sargılı Şeker'));
 assert.equal(data.urunler.find((row)=>row.ad==='Stick Toz Şeker').marka,'Irmak');
 assert.equal(data.urunler.find((row)=>row.ad==='Stick Toz Şeker').olcu,'');
-assert.equal(data.urunler.find((row)=>row.ad==='Stick Toz Şeker').gorsel,'/img/products/irmak-stick.webp');
+assert.equal(data.urunler.find((row)=>row.ad==='Stick Toz Şeker').gorsel,'/img/products/irmak-stick-clean.webp');
 assert.equal(data.urunler.find((row)=>row.marka==='Nescafe' && row.ad==='Gold' && row.olcu==='900Gr').gorsel,'/img/products/nescafe-gold-900.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-186').ad,"2'si 1 Arada");
 assert.equal(data.urunler.find((row)=>row.id==='p-186').gorsel,'/img/products/nescafe-2si1.webp');
@@ -343,7 +343,7 @@ assert.equal(data.urunler.find((row)=>row.id==='p-456').olcu,'330ML');
 assert.equal(data.urunler.find((row)=>row.id==='p-456').gorsel,'/img/products/coca-cola-330.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-457').marka,'Lipton');
 assert.equal(data.urunler.find((row)=>row.id==='p-457').ad,'Ice Tea Şeftali');
-assert.equal(data.urunler.find((row)=>row.id==='p-457').gorsel,'/img/products/lipton-ice-tea-seftali.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-457').gorsel,'/img/products/lipton-ice-tea-seftali-clean.webp');
 assert.deepEqual(data.urunler.filter((row)=>row.alt==='E3').map((row)=>row.id),[
   'p-456','p-192','p-193','p-450','p-451','p-194','p-195','p-196','p-457',
   'p-198','p-199','p-200','p-205','p-206','p-369','p-388','p-389',
@@ -537,10 +537,10 @@ assert.equal(data.urunler.find((row)=>row.id==='p-044').gorselTuru,'urun');
 assert.equal(data.urunler.find((row)=>row.id==='p-047').gorsel,'/img/products/pril-ultra-guc-4kg.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-048').gorsel,'/img/products/bingo-fresh-masal-25.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-023').ad,'Sıvı El Yıkama Maddesi');
-assert.equal(data.urunler.find((row)=>row.id==='p-023').gorsel,'/img/products/ozopak-el-yikama.webp');
-assert.equal(data.urunler.find((row)=>row.id==='p-024').gorsel,'/img/products/ozopak-el-yikama.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-023').gorsel,'/img/products/ozopak-el-yikama-clean.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-024').gorsel,'/img/products/ozopak-el-yikama-clean.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-025').gorsel,'/img/products/ozopak-camasir-suyu-5kg.webp');
-assert.equal(data.urunler.find((row)=>row.id==='p-030').gorsel,'/img/products/ozopak-makine-parlatici.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-030').gorsel,'/img/products/ozopak-makine-parlatici-clean.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-427').ad,'Ultra Deterjan Katkılı Çamaşır Suyu');
 assert.equal(data.urunler.find((row)=>row.id==='p-427').olcu,'5Kg');
 assert.equal(data.urunler.find((row)=>row.id==='p-427').gorsel,'/img/products/ozopak-ultra-camasir-suyu.webp');
@@ -556,10 +556,10 @@ assert.equal(data.urunler.find((row)=>row.id==='p-059').ad,'Power Aktiv');
 assert.equal(data.urunler.find((row)=>row.id==='p-059').urunTuru,'Okyanus');
 assert.equal(data.urunler.find((row)=>row.id==='p-059').gorsel,'/img/products/bref-power-aktiv.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-129').ad,'Masa Üstü Z Peçete Aparatı');
-assert.equal(data.urunler.find((row)=>row.id==='p-133').gorsel,'/img/products/palex-ev-tipi-metal.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-133').gorsel,'/img/products/palex-ev-tipi-metal-clean.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-133').malzeme,'Plastik');
 assert.equal(data.urunler.find((row)=>row.id==='p-135').ad,'Mini İçten Çekmeli Tuvalet Kağıdı Aparatı');
-assert.equal(data.urunler.find((row)=>row.id==='p-135').gorsel,'/img/products/palex-mini-icten-tuvalet.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-135').gorsel,'/img/products/palex-mini-icten-tuvalet-clean.webp');
 assert.equal(data.urunler.find((row)=>row.marka==='Yumoş' && row.urunTuru==='Sakura').gorselTuru,'urun');
 assert.ok(!JSON.stringify(data).includes('santimetre'));
 assert.ok(!JSON.stringify(data).includes('mililitre'));
@@ -581,7 +581,7 @@ for(const row of data.urunler){
     'p-007': '/img/products/selpak-dev-rulo-havlu.webp',
     'p-252': '/img/products/pensan-tukenmez-siyah.webp',
     'p-267': '/img/products/faber-min-07-2b.webp',
-    'p-284': '/img/products/mas-zimba-no10-siyah.webp',
+    'p-284': '/img/products/mas-zimba-no10-siyah-clean.webp',
     'p-292': '/img/products/mas-istampa-8x9.webp',
     'p-294': '/img/products/noki-klasor-genis-mavi.webp',
     'p-307': '/img/products/esselte-sikistirmali-siyah.webp',

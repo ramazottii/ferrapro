@@ -1,3 +1,19 @@
+# Ortak takip — Cursor ve ChatGPT
+
+- 16 Ekim 2026 / ChatGPT TAMAMLANDI VE CANLI: `6351bd23-2cca-4059-a508-b231b5d47466`. Kullanıcının onayıyla tüm 630 ürün / 612 benzersiz görsel tarandı; 34 fon/kenar/gölge temizliği, 178 Palex görselinin üretici koduyla doğrulanması ve Belinno beyaz fonlarının geri yüklenmesi yayımlandı. C3 artık 23 tip örneği; 80 L / 800 L konteynerler dışında ölçüler görünmez, üç küllük tipi sonda. Tüm kayıtlar, fiyat kimlikleri ve eski URL'ler korunur. Canlı 612/612 görsel kaynakla birebir eşleşti (HTTP 200, görsel içerik türü, dosya baytları); ferrapro.com ve www katalogları eşit. Masaüstü/mobil kontroller ve `npm run check` geçti. İlk yayın denemesi kota yüzünden çalışmadı; kullanıcı devam dedikten sonraki yayın başarılıdır.
+- Güncel yalıtılmış yayın paketi: `output/catalog-cleanup-2026-10-16/release`. Worker, panel, giriş ve fiyat verileri değiştirilmedi; `--keep-vars`, no_bundle kullanıldı. `output/palex-release/public` da yeni katalog/görsellerle eşitlendi, görsel koruma kontrolü geçti; bu işlem onun Worker/panel kaynaklarını değiştirmez. Yeni yayın öncesi daima son canlı sürümü kontrol edin. Eski `output/belinno-release` paketini yayımlamayın.
+- Cursor devamı: önce `docs/CATALOG-VISUAL-RELEASE-2026-10-16.md` okuyun. `tools/catalog-visual-manifest.json` 215 ürünün beklenen yol/hash bilgisini korur. `node tools/check_catalog_visuals.mjs <paket>/public` geçmeden hiçbir eski paketle yayın yapmayın. Güncel canlı tabana yalnız katalog aktarmak için `node tools/sync_catalog_release.mjs <paket>` kullanın. Yerel kök `src/worker.js` içindeki ayrı oturum/güvenlik işini bu görsel yayınına karıştırmayın. Kanıtlar: `output/catalog-cleanup-2026-10-16/live-verification.json`, `live-bins-desktop.png`, `live-belinno-desktop.png`, `live-belinno-mobile.png`. Önceden var olan app.js/panel/AGENTS/Cursor kuralı değişiklikleri korunmuştur.
+
+- 16 Ekim 2026 / ChatGPT incelemesi: Belinno p-005 ve p-325 beyaz fon düzeltmesi sonraki yayınlarda geri düşmüş. 13 Ekim 23:04 TRT `82ce6396` sürümünde `-white.webp` yolları canlı doğrulanmıştı; sonrasında 14 Ekim 00:32 TRT `9fb4db2c`, 15 Ekim 20:28 TRT `dec3b456` yayımlanmış. Güncel ferrapro.com ve www katalogları (normal ve yeni sorgu parametreli) eski `.webp` yollarını veriyor; indirilen görsellerde hale/banyo fonu mevcut. `output/palex-release/public/katalog.json` da eski yolları taşıyor. Sonraki yayında iki yeni görsel ve public/yönetim katalogları + catalog-pages birlikte güncel yayın paketine taşınmalı; eski paketle yeni düzeltmeyi ezmeyin. Bu tur yalnız teşhis yapıldı; yayın veya uygulama değişikliği yapılmadı. Kanıt: output/belinno-investigation-2026-10-16. Mevcut ortak dosyalardaki diğer değişiklikler korunmuştur.
+
+İkisinin de ilk okuyacağı ve iş bitince güncelleyeceği yer burasıdır. Çelişirse bu blok, alttaki eski tarih notlarından önce gelir.
+
+- Canlı Worker: `6351bd23-2cca-4059-a508-b231b5d47466` (site açık, kategori harf rozeti yok, `catalog-ui.js?v=105`, `site.js?v=143`). Önceki taban `dec3b456-4f24-49db-878b-f7ad52b724d5`. D alt kategori kareleri ve `-512.webp` dosyaları korunur. METRICS ve ManagementSessions bu yayına eklenmedi. Yerel `src/worker.js` (GPT oturum/güvenlik) canlıya alınmaz.
+- Katalog 630 ürün, Palex 205. `katalog.json` içinde fiyat yok. PRICE_STORE revizyon 14 (Derya + Palex maliyet).
+- Ziyaretçiye A–F / C1 gibi harf kodu gösterilmez. İç kimlik ve `?g=C&a=C1` URL’leri durur.
+- Ferranoi paneli, giriş kodu ve parolalar dokunulmaz. Kayıtsız yerel dosyalar ezilmez.
+- Site kapanış sayfası şu an kapalı; tekrar kapatmak/açmak yalıtılmış Worker ile yapılır.
+
 # Devam notları — 18 Eylül 2026
 
 ## Kullanıcının kesinleştirdiği amaç

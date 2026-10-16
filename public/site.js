@@ -11,6 +11,27 @@ const GRUPLAR = [
 
 const VITRIN_GRUPLAR = ["A", "B", "C", "D", "E", "F"];
 
+// C3 is a type showcase. Keep every original ID in the catalogue/management;
+// only discovery lists are condensed. Legacy product links continue to work.
+const COP_VITRIN_IDS = ['p-373','p-651','p-148','p-374','p-150','p-375','p-530','p-566','p-591','p-554','p-576','p-633','p-496','p-575','p-596','p-508','p-509','p-510','p-372','p-371','p-439','p-599','p-664'];
+const COP_BUYUK_IDS = ['p-371','p-372'];
+function katalogSunum(p) {
+  if (p.alt !== 'C3' || COP_BUYUK_IDS.includes(p.id)) return p;
+  const ad = String(p.ad || '').replace(/\s+\d+(?:[.,]\d+)?\s*(?:LT|LİTRE|CM)\b/gi, '').replace(/\s+No\s*\d+/gi, '').replace(/\s+\d+(?:\*\d+)+\s*Cm/gi, '').trim();
+  const shown = {...p, ad, olcu:'', kapasite:'', ambalajAdedi:'', urunTuru:''};
+  // Imported outdoor bins were incorrectly labelled plastic by a name heuristic.
+  if (['p-496','p-575','p-596','p-651'].includes(p.id)) shown.malzeme='';
+  shown.satir = [ad,shown.marka,shown.malzeme,shown.renk].filter(Boolean).join(' · ');
+  shown.aciklama = ad + '. Farklı ölçü seçenekleri için bizimle görüşün.';
+  return shown;
+}
+function katalogVitrin(products) {
+  const result = products.filter(p => p.alt !== 'C3' || COP_VITRIN_IDS.includes(p.id));
+  const bins = result.filter(p => p.alt === 'C3').sort((a,b)=>COP_VITRIN_IDS.indexOf(a.id)-COP_VITRIN_IDS.indexOf(b.id));
+  let next=0;
+  return result.map(p => p.alt === 'C3' ? bins[next++] : p);
+}
+
 const KATEGORI_REHBERLERI = {
   A: {
     title: 'İşletmeniz için temizlik kâğıdı seçimi',

@@ -203,9 +203,11 @@
   };
 
   fetch('/katalog.json').then((r) => { if (!r.ok) throw new Error(); return r.json(); }).then((data) => {
+    data.urunler = (data.urunler || []).map(katalogSunum);
+    const showcase = katalogVitrin(data.urunler);
     const vitrin = GRUPLAR.filter((g) => VITRIN_GRUPLAR.includes(g.g));
     const groups = vitrin.map((g) => {
-      const items = (data.urunler || []).filter((u) => u.aktif !== false && grupAnahtar(g.g).includes(u.kategori));
+      const items = showcase.filter((u) => u.aktif !== false && grupAnahtar(g.g).includes(u.kategori));
       const buckets = new Map();
       (ALTLAR[g.g] || []).forEach((tip) => {
         buckets.set(tip.id, { ...tip, items: [] });
@@ -408,6 +410,7 @@
       return;
     }
 
+    if (selected?.id === 'C3') root.append(el('p', 'Her ürün tipinden bir örnek gösterilmektedir. Farklı ölçü ve kapasite seçenekleri için bizimle görüşebilirsiniz.', 'cat-hint'));
     paintProducts(rows);
     root.append(sourcing());
     if (!rows.length) {
