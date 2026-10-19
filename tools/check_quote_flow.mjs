@@ -1,0 +1,86 @@
+import {managementTestEnv} from './management-test-env.mjs';
+// Isolated Node integration check. No network calls or production KV access.
+// Exercises Worker handlers with an in-memory KV adapter, not Cloudflare runtime.
+import assert from 'node:assert/strict';
+import { randomUUID } from 'node:crypto';
+import worker from '../src/worker.js';
+
+const memory = new Map();
+const env = {
+  ...managementTestEnv(),
+  SESSION_SECRET: randomUUID(),
+  RAMAZAN_PASSWORD: randomUUID(),
+  KV: {
+    async get(key, type) {
+      const value = memory.get(key);
+      return value == null ? null : type === 'json' ? JSON.parse(value) : value;
+    },
+    async put(key, value) { memory.set(key, value); },
+    async list({prefix, cursor}) {
+      const all = [...memory.keys()].filter(key=>key.startsWith(prefix));
+      const start = Number(cursor || 0), end = start + 37;
+      return {keys:all.slice(start,end).map(name=>({name})),list_complete:end>=all.length,cursor:String(end)};
+    },
+  },
+  ASSETS: { async fetch() { return new Response('test asset'); } },
+};
+const send = (host, path, options = {}) => worker.fetch(new Request(`https://${host}${path}`, options), env);
+const post = body => ({method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+const quote = { firma:'YEREL TEST', tel:'00000000000', yetkili:'Test', grup:'Hijyen', not:'Havlu: 3 koli\nPeçete: 2 koli\nTeslimat ilçesi: Ataşehir' };
+assert.equal((await send('ferrapro.com','/api/teklif',post({...quote,tel:'1'}))).status,400);
+assert.equal((await send('ferrapro.com','/api/teklif',post({...quote,not:'x'.repeat(2001)}))).status,400);
+assert.equal(memory.size,0,'Invalid requests must not write data');
+const accepted = await send('ferrapro.com','/api/teklif',post(quote));
+assert.equal(accepted.status,200);
+assert.deepEqual(await accepted.json(),{ok:true});
+assert.equal([...memory.keys()].filter(key=>key.startsWith('vitrin-quote:')).length,1);
+assert.equal(memory.has('state'),false,'Public quote must not read or write panel state');
+const concurrent = await Promise.all(Array.from({length:205},(_,i)=>send('ferrapro.com','/api/teklif',post({...quote,firma:'TEST '+i}))));
+assert.ok(concurrent.every(response=>response.status===200));
+assert.equal([...memory.keys()].filter(key=>key.startsWith('vitrin-quote:')).length,206,'All concurrent requests, including those beyond 200, must remain stored');
+assert.equal((await send('ferrapro.com','/api/teklif',post({...quote,website:'bot'}))).status,400);
+assert.equal((await send('ferrapro.com','/api/teklif',{...post(quote),headers:{'content-type':'application/json',origin:'https://unrelated.example'}})).status,403);
+assert.equal((await send('ferrapro.com','/api/teklif',{method:'POST',body:'{'})).status,400);
+for (const path of ['/api/state','/api/catalog']) {
+  assert.equal((await send('ferrapro.com',path)).status,404);
+}
+assert.equal((await send('ferrapro.com','/panel/')).status,302);
+assert.equal((await send('ferrapro.com','/yonetim/catalog.json')).status,401);
+const yonetimLogin = await send('ferrapro.com','/yonetim/');
+assert.equal(yonetimLogin.status,200);
+assert.match(await yonetimLogin.text(),/Şifre/);
+env.YONETIM_PASSWORD = '2112';
+const yonetimBad = await send('ferrapro.com','/yonetim/giris',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:'password=0000'});
+assert.equal(yonetimBad.status,401);
+const yonetimOk = await send('ferrapro.com','/yonetim/giris',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:'password=2112'});
+assert.equal(yonetimOk.status,302);
+const yonetimCookie = yonetimOk.headers.get('set-cookie');
+assert.match(yonetimCookie,/HttpOnly/);
+assert.match(yonetimCookie,/fp_yonetim=/);
+const yonetimIn = await send('ferrapro.com','/yonetim/catalog.json',{headers:{cookie:yonetimCookie.split(';')[0]}});
+assert.equal(yonetimIn.status,200);
+const yonetimQuotes = await send('ferrapro.com','/yonetim/api/talepler',{headers:{cookie:yonetimCookie.split(';')[0]}});
+assert.equal(yonetimQuotes.status,200);
+assert.equal((await yonetimQuotes.json()).talepler.length,206);
+assert.equal((await send('ferrapro.com','/yonetim/api/talepler')).status,401);
+assert.equal((await send('tedarik.ferranoi.com','/api/state')).status,401);
+assert.equal((await send('tedarik.ferranoi.com','/api/login',post({username:'selcuk',password:'1234'}))).status,401);
+const login = await send('tedarik.ferranoi.com','/api/login',post({username:'ramazan',password:env.RAMAZAN_PASSWORD}));
+assert.equal(login.status,200);
+const cookie = login.headers.get('set-cookie');
+assert.match(cookie,/HttpOnly/);
+assert.match(cookie,/Secure/);
+const state = await send('tedarik.ferranoi.com','/api/state',{headers:{cookie:cookie.split(';')[0]}});
+assert.equal(state.status,200);
+const panelData = await state.json();
+const panelQuotes = panelData.vitrin_teklifler;
+assert.equal(panelQuotes.length,206,'Panel reads all quote pages');
+assert.ok(panelQuotes.every(q=>q.not===quote.not),'Panel API must retain full multiline request');
+const savedState = memory.has('state') ? JSON.parse(memory.get('state')) : panelData;
+savedState.vitrin_teklifler=[{id:1,firma:'LEGACY',created_at:'2020-01-01',not:'Legacy record'}];
+memory.set('state',JSON.stringify(savedState));
+const merged = await send('tedarik.ferranoi.com','/api/state',{headers:{cookie:cookie.split(';')[0]}});
+assert.equal((await merged.json()).vitrin_teklifler.length,207,'Existing legacy records remain visible');
+env.SELCUK_PASSWORD=randomUUID();
+assert.equal((await send('tedarik.ferranoi.com','/api/login',post({username:'selcuk',password:env.SELCUK_PASSWORD}))).status,200);
+console.log('PASS: validation, isolated quote persistence, panel API readback, public/private routes and configured-password login.');
