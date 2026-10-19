@@ -33,4 +33,4 @@ assert.equal((await get('/yonetim/isleyis/api/durum')).status,401,'Business reco
 for(const path of ['/katalog.json','/site.js','/img/products/test.webp'])assert.equal((await get(path)).status,200,'Management assets remain available');
 assert.equal((await get('/',{},'tedarik.ferranoi.com')).status,302,'Ferranoi unchanged');
 env.PUBLIC_SITE_CLOSED='false';assert.equal((await get('/')).status,200,'Opening requires explicit configuration change');
-console.log('PASS: 627-product integration, original ids and images, category guides, deployed migration order, closure and private-route isolation.');
+console.log('PASS: 629-product integration, original ids and images, category guides, deployed migration order, closure and private-route isolation.');

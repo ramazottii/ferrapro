@@ -7,16 +7,6 @@
       "sha256": "7e4d82e17fdc0cbdc9a4093c40d979bafe18057ec5037c7debd46ce91c187d44"
     },
     {
-      "id": "p-023",
-      "image": "/img/products/ozopak-el-yikama-clean.webp",
-      "sha256": "5719cb18f9fd543a76239ff9c65948f02cae1001a4384bc92eea88d9a2e85e62"
-    },
-    {
-      "id": "p-024",
-      "image": "/img/products/ozopak-el-yikama-clean.webp",
-      "sha256": "5719cb18f9fd543a76239ff9c65948f02cae1001a4384bc92eea88d9a2e85e62"
-    },
-    {
       "id": "p-030",
       "image": "/img/products/ozopak-makine-parlatici-clean.webp",
       "sha256": "4780813f1290163648a0e53c108b09db7052cd70e3ecc38b6e77313f4cca0250"
@@ -1075,6 +1065,56 @@
       "id": "p-221",
       "image": "/img/products/eti-lifalif-kirmizi-horizontal.webp",
       "sha256": "2fb37092e9d0b6850030b8030ae6f50b0fcfffee98baf32336b277a01a67f0a5"
+    },
+    {
+      "id": "p-021",
+      "image": "/img/products/ozopak-photo-gul-5kg-white.webp",
+      "sha256": "61b0f4e963f3a46bc22fba6367b5cd32aa649ee5c580aae5b11033580ab25e4e"
+    },
+    {
+      "id": "p-022",
+      "image": "/img/products/ozopak-photo-gul-20kg-white.webp",
+      "sha256": "dad07147900fce566e39633576b45418f8c45206367a83a113ea100c64251ffa"
+    },
+    {
+      "id": "p-023",
+      "image": "/img/products/ozopak-photo-el-5kg-white.webp",
+      "sha256": "c4c05a243714f3ded13df6dd999ca42fd434e93c12c4da1d2dfbdafcbea6dd35"
+    },
+    {
+      "id": "p-024",
+      "image": "/img/products/ozopak-photo-el-20kg-white.webp",
+      "sha256": "cb3432522a779d9e6d7fc176f0c65189b2d8df3d28114def493052d7bd6fccdf"
+    },
+    {
+      "id": "p-027",
+      "image": "/img/products/ozopak-photo-bulasik-5kg-white.webp",
+      "sha256": "bc17d052d929a39f06d7fc257646b14a4fe2873fc08eecab1d7f3fb14a21186e"
+    },
+    {
+      "id": "p-028",
+      "image": "/img/products/ozopak-photo-bulasik-20kg-white.webp",
+      "sha256": "0816dcbf9d7770a082f44e99039d8d28f693a9d3889f96916a8cc8db598419e0"
+    },
+    {
+      "id": "p-427",
+      "image": "/img/products/ozopak-photo-ultra-5kg-white.webp",
+      "sha256": "e09485b29d1f66c33a82639f1561b60ab818db273b1ca5a00c431c9cc010dad8"
+    },
+    {
+      "id": "p-428",
+      "image": "/img/products/ozopak-photo-ultra-20kg-white.webp",
+      "sha256": "157755a4002289221c510c31bd6823838ddf6569d517088bc23e2b88aa48ff58"
+    },
+    {
+      "id": "p-665",
+      "image": "/img/products/ozopak-photo-lavanta-5kg-white.webp",
+      "sha256": "52be44879bdc53cf2a0a89b307f9e2bedfdaf230bd91bfd496b33f4da5bcaa9d"
+    },
+    {
+      "id": "p-666",
+      "image": "/img/products/ozopak-photo-lavanta-20kg-white.webp",
+      "sha256": "3ba8df517fb118d8bf5a461d8b7a3c2587be4a576f5027f9544b4f9075f72afb"
     }
   ]
 }

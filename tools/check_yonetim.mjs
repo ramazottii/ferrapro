@@ -18,7 +18,7 @@ assert.doesNotMatch(js, /placeholder\(/);
 assert.equal(catalog.kategoriler.map((k) => k.id).join(","), "A,B,C,D,E,F");
 assert.equal(catalog.kategoriler[1].altlar.map((a) => a.id).join(","), "B1,B2");
 assert.equal(catalog.urunler.length, publicCatalog.urunler.length);
-assert.equal(catalog.urunler.length, 627);
+assert.equal(catalog.urunler.length, 629);
 
 const byAlt = Object.fromEntries(catalog.kategoriler.flatMap((k) => k.altlar.map((a) => [a.id, 0])));
 for (const u of catalog.urunler) {
@@ -39,7 +39,7 @@ for (const u of catalog.urunler) {
 assert.equal(byAlt["A1"], 13);
 assert.equal(byAlt["A2"], 16);
 assert.equal(byAlt["A3"], 15);
-assert.equal(byAlt["B1"], 25);
+assert.equal(byAlt["B1"], 27);
 assert.equal(byAlt["B2"], 34);
 assert.equal(byAlt["D2"], 41);
 assert.equal(byAlt["D1"], 20);
@@ -73,7 +73,7 @@ assert.equal(note32.marka, "Domestos");
 assert.equal(note32.gorsel, "/img/products/domestos-cam-32.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-047").gorsel, "/img/products/pril-ultra-guc-4kg.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-048").gorsel, "/img/products/bingo-fresh-masal-25.webp");
-assert.equal(catalog.urunler.find((u) => u.id === "p-023").gorsel, "/img/products/ozopak-el-yikama-clean.webp");
+assert.equal(catalog.urunler.find((u) => u.id === "p-023").gorsel, "/img/products/ozopak-photo-el-5kg-white.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-030").gorsel, "/img/products/ozopak-makine-parlatici-clean.webp");
 assert.equal(catalog.urunler.find((u) => u.id === "p-427").ad, "Ultra Deterjan Katkılı Çamaşır Suyu");
 assert.equal(catalog.urunler.find((u) => u.id === "p-025").gorsel, "/img/products/ozopak-camasir-suyu-5kg.webp");

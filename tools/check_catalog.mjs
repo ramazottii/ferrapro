@@ -149,7 +149,7 @@ const ALTLAR_IDS={
   E:['E1','E2','E3','E4'],
   F:['F1','F2','F3','F4','F5'],
 };
-assert.equal(data.urunler.length,627);
+assert.equal(data.urunler.length,629);
 assert.equal(data.kategoriler.map((k)=>k.id).join(","),"A,B,C,D,E,F");
 assert.equal(data.kategoriler[2].altlar.map((a)=>a.id).join(","),"C1,C2,C3,C4,C5,C6");
 assert.equal(data.kategoriler.find((k)=>k.id==='F').altlar.find((a)=>a.id==='F2').gorsel,'/img/products/daire-masaustu.webp?v=2');
@@ -525,8 +525,8 @@ assert.match(readFileSync(new URL('../public/catalog-ui.js',import.meta.url),'ut
 assert.match(readFileSync(new URL('../public/catalog-ui.js',import.meta.url),'utf8'),/photoZoom/);
 assert.equal(data.urunler.find((row)=>row.id==='p-041').gorsel,'/img/products/yumos-pro-yasemin-5lt.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-042').gorsel,'/img/products/vernel-hassas-5lt.webp');
-assert.equal(data.urunler.find((row)=>row.id==='p-021').gorsel,'/img/products/ozopak-yuzey-5kg.webp');
-assert.equal(data.urunler.find((row)=>row.id==='p-027').gorsel,'/img/products/ozopak-bulasik-5kg.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-021').gorsel,'/img/products/ozopak-photo-gul-5kg-white.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-027').gorsel,'/img/products/ozopak-photo-bulasik-5kg-white.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-043').ad,'Çamaşır Suyu');
 assert.equal(data.urunler.find((row)=>row.id==='p-043').olcu,'750ML');
 assert.equal(data.urunler.find((row)=>row.id==='p-043').gorselTuru,'urun');
@@ -537,16 +537,16 @@ assert.equal(data.urunler.find((row)=>row.id==='p-044').gorselTuru,'urun');
 assert.equal(data.urunler.find((row)=>row.id==='p-047').gorsel,'/img/products/pril-ultra-guc-4kg.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-048').gorsel,'/img/products/bingo-fresh-masal-25.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-023').ad,'Sıvı El Yıkama Maddesi');
-assert.equal(data.urunler.find((row)=>row.id==='p-023').gorsel,'/img/products/ozopak-el-yikama-clean.webp');
-assert.equal(data.urunler.find((row)=>row.id==='p-024').gorsel,'/img/products/ozopak-el-yikama-clean.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-023').gorsel,'/img/products/ozopak-photo-el-5kg-white.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-024').gorsel,'/img/products/ozopak-photo-el-20kg-white.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-025').gorsel,'/img/products/ozopak-camasir-suyu-5kg.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-030').gorsel,'/img/products/ozopak-makine-parlatici-clean.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-427').ad,'Ultra Deterjan Katkılı Çamaşır Suyu');
 assert.equal(data.urunler.find((row)=>row.id==='p-427').olcu,'5Kg');
-assert.equal(data.urunler.find((row)=>row.id==='p-427').gorsel,'/img/products/ozopak-ultra-camasir-suyu.webp');
+assert.equal(data.urunler.find((row)=>row.id==='p-427').gorsel,'/img/products/ozopak-photo-ultra-5kg-white.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-428').olcu,'20Kg');
-assert.equal(data.urunler.find((row)=>row.id==='p-428').gorsel,'/img/products/ozopak-ultra-camasir-suyu.webp');
-assert.equal(data.urunler.filter((row)=>row.alt==='B1' && row.marka==='Ozopak').length,22);
+assert.equal(data.urunler.find((row)=>row.id==='p-428').gorsel,'/img/products/ozopak-photo-ultra-20kg-white.webp');
+assert.equal(data.urunler.filter((row)=>row.alt==='B1' && row.marka==='Ozopak').length,24);
 assert.equal(data.urunler.find((row)=>row.id==='p-053').gorsel,'/img/products/asperox-mavi-guc.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-054').gorsel,'/img/products/cif-krem-limon.webp');
 assert.equal(data.urunler.find((row)=>row.id==='p-055').gorsel,'/img/products/cif-krem-limon-750.webp');
